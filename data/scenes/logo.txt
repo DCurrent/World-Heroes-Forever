@@ -1,0 +1,3 @@
+music           data/music/goo.bor
+animation	data/scenes/diskl2.gif 0 0 0 1
+

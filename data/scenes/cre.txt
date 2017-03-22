@@ -1,0 +1,3 @@
+music           data/music/02.bor
+animation	data/scenes/cre.gif 0 0 1 0
+

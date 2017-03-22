@@ -1,0 +1,6 @@
+animation	data/scenes/zart0.gif 0 0 0 1
+music           data/music/ze1.bor
+animation	data/scenes/zart1.gif 0 0 0 1
+animation	data/scenes/zart2.gif 0 0 0 1
+animation	data/scenes/zart3.gif 0 0 0 1
+

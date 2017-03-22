@@ -1,0 +1,12 @@
+name    fg1
+type	none
+facing 1
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   12
+	  offset	10 268
+        frame   data/levels/castle/fg3.gif
+
+

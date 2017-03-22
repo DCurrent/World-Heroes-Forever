@@ -1,0 +1,37 @@
+name	 hab
+health   0
+speed    23
+type     pshot
+counter  9999
+shootnum 9999
+nolife   1
+remove   1
+candamage enemy obstacle pshot
+gfxshadow	1
+alpha    1
+
+anim idle
+	loop	0
+	delay	3
+	offset	26 9
+      hitfx  data/sounds/knife2.wav
+      hitflash  hbfla
+      attack12  40 1 30 16 10 0 0 0 12
+	frame	data/chars/misc/hab01.gif
+	frame	data/chars/misc/hab02.gif
+	frame	data/chars/misc/hab03.gif
+	frame	data/chars/misc/hab04.gif
+      frame	data/chars/misc/hab05.gif
+	frame	data/chars/misc/hab06.gif
+      frame	data/chars/misc/hab07.gif
+	frame	data/chars/misc/hab08.gif
+	frame	data/chars/misc/hab09.gif
+	frame	data/chars/misc/hab10.gif
+      frame	data/chars/misc/hab11.gif
+	frame	data/chars/misc/hab12.gif
+      frame	data/chars/misc/hab13.gif
+	frame	data/chars/misc/hab14.gif
+	frame	data/chars/misc/hab15.gif
+	frame	data/chars/misc/hab16.gif
+      
+

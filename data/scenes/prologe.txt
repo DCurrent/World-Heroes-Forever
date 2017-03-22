@@ -1,0 +1,3 @@
+music           data/music/dr.bor
+animation	data/scenes/pr1.gif 0 0 1 0
+

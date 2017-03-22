@@ -1,0 +1,17 @@
+name    to
+type	none
+
+anim idle
+	loop	1
+        delay   13
+	  offset	168 170
+        frame   data/levels/guinea2/to01.gif
+        frame   data/levels/guinea2/to02.gif
+        frame   data/levels/guinea2/to03.gif
+        frame   data/levels/guinea2/to04.gif
+
+
+
+
+
+

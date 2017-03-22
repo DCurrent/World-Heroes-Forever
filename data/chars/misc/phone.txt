@@ -1,0 +1,29 @@
+name	phone
+type    obstacle
+shadow  0
+gfxshadow  1
+health  20
+diesound  data/sounds/glass.wav
+nolife  1
+flash   obfla
+noatflash 1
+offscreenkill  2000
+
+
+anim idle
+	loop	0
+	delay	5
+	offset	100 164
+	bbox   64 35 66 129
+      platform   55 169 0 0 85 85 10 126
+	frame	data/chars/misc/phone1.gif
+	
+anim fall
+	loop	0
+	delay	5
+	offset	100 164
+	frame	data/chars/misc/phone2.gif
+      frame	data/chars/misc/phone3.gif
+
+
+

@@ -1,0 +1,24 @@
+name	 jab
+health   0
+speed    23
+type     pshot
+counter  9999
+shootnum 9999
+nolife   1
+remove   1
+candamage enemy obstacle pshot
+gfxshadow	1
+
+anim idle
+	loop	1
+	delay	3
+	offset	45 83
+      hitfx  data/sounds/beat2.wav
+      hitflash  jabfl
+      burn  65 62 30 36 10 0 0 0 12
+	frame	data/chars/misc/jab1.gif
+	frame	data/chars/misc/jab2.gif
+	frame	data/chars/misc/jab3.gif
+	frame	data/chars/misc/jab4.gif
+
+

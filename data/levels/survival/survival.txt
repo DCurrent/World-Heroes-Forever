@@ -1,0 +1,335 @@
+music		data/music/survival.bor
+background	data/levels/survival/back.gif
+panel	      data/levels/survival/n011.gif
+order           a
+direction both
+spawn1 130 20 0
+spawn2 130 40 0
+
+wall 10 250 45 -53 222 102 99 278
+
+blocked 1
+
+Group	100 100
+at	0
+
+spawn	backpe
+coords	10 145
+at	0
+
+spawn	phot
+flip 1
+coords	92 162
+at	0
+
+spawn	elrin
+flip 1
+coords	4 164
+at	0
+
+spawn	firerin
+coords	621 164
+at	0
+
+spawn	obstacm1
+flip 1
+coords	-10 174
+at	0
+
+spawn	obstacm1
+flip 1
+coords	-20 200
+at	0
+
+spawn	obstacm1
+flip 1
+coords	-30 226
+at	0
+
+spawn	obstacm1
+flip 1
+coords	-40 252
+at	0
+
+
+#spawn	ob3
+#flip 1
+#coords	55 165
+#at	0
+
+#spawn	ob3
+#flip 1
+#coords	50 175
+#at	0
+
+#spawn	ob3
+#flip 1
+#coords	45 185
+#at	0
+
+#spawn	ob3
+#flip 1
+#coords	35 195
+#at	0
+
+#spawn	ob3
+#flip 1
+#coords	25 205
+#at	0
+
+#spawn	ob3
+#flip 1
+#coords	15 215
+#at	0
+
+#spawn	ob3
+#flip 1
+#coords	5 225
+#at	0
+
+#spawn	ob3
+#flip 1
+#coords	0 235
+#at	0
+
+#spawn	ob3
+#flip 1
+#coords	-5 245
+#at	0
+
+
+spawn	ob4
+coords	570 165
+at	0
+
+spawn	ob4
+coords	575 175
+at	0
+
+spawn	ob4
+coords	580 185
+at	0
+
+spawn	ob4
+coords	590 195
+at	0
+
+spawn	ob4
+coords	600 205
+at	0
+
+spawn	ob4
+coords	610 215
+at	0
+
+spawn	ob4
+coords	620 225
+at	0
+
+spawn	ob4
+coords	625 235
+at	0
+
+spawn	ob4
+coords	630 245
+at	0
+
+
+Group	3 4
+at	0
+
+spawn   delay
+health   20
+coords   140 210
+at   0
+
+spawn   delay
+health   20
+coords   150 210
+at   0
+
+spawn   delay
+health   20
+coords   160 210
+at   0
+
+spawn   delay
+health   20
+coords   170 210
+at   0
+
+spawn	ray4
+map 1
+health   150
+coords	320 175 90
+at	0
+
+spawn	brocken2
+flip 1
+coords	95 215 130
+at	0
+
+spawn	matlock4
+map 4
+flip 1
+health   150
+coords	2 230 145
+at	0
+
+spawn	mpowere2
+map 1
+item  milk
+coords	320 200 130
+at	0
+
+Group	3 4
+at	0
+
+spawn	lee4
+map 5
+flip 1
+health   150
+item  susi
+coords	2 230 145
+at	0
+
+spawn	mudman2
+coords	320 175 90
+at	0
+
+spawn	yungmie4
+map 3
+flip 1
+health   150
+coords	1 215 130
+at	0
+
+spawn	jmax2
+flip 1
+item  pizza
+coords	2 235 150
+at	0
+
+Group	3 4
+at	0
+
+spawn	zazie2
+item  time
+map 3
+health   150
+coords	320 220 135
+at	0
+
+spawn	kidde2
+flip 1
+2pitem  pizza
+coords	3 215 130
+at	0
+
+spawn	assassin
+Health 150
+item  diamond
+coords	130 180
+at	0
+
+spawn	jann
+coords	320 200 115
+at	0
+
+Group	3 4
+at	0
+
+spawn	assass2
+Health 150
+flip 1
+item  time
+coords	220 235
+at	0
+
+spawn	ryofu2
+flip 1
+item  milk
+coords	1 175 90
+at	0
+
+spawn	assassi
+Health 150
+item  gold
+coords	225 225
+at	0
+
+spawn	jcarn2
+coords	320 220 135
+at	0
+
+Group	3 4
+at	0
+
+
+spawn	ninja4
+health   150
+item  susi
+coords	320 225 140
+at	0
+
+spawn	jack2
+flip 1
+coords	1 200 115
+at	0
+
+spawn	ninjasw4
+flip 1
+health   150
+coords	2 180 95
+at	0
+
+spawn	zeus2
+map 1
+item  pizza
+coords	320 210 125
+at	0
+
+Group	3 3
+at	0
+
+spawn	neodio2
+boss 1
+coords	320 190 105
+at	0
+
+spawn	ninja4
+map 3
+health   150
+item  time
+coords	320 220 140
+at	0
+
+spawn	ninja4
+map 4
+flip 1
+health   150
+coords	1 220 140
+at	0
+
+spawn	zazie2
+map 1
+health   150
+coords	320 175 90
+at	0
+
+spawn	ninjasw4
+map 1
+health   150
+item  diamond
+itemmap 2
+coords	320 220 140
+at	0
+
+spawn	zazie2
+map 4
+flip 1
+health   150
+coords	1 200 115
+at	0
+
+

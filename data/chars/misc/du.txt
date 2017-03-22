@@ -1,0 +1,52 @@
+name	du
+type	none
+shadow	0
+toflip 1
+lifespan 6
+
+anim idle
+	loop	0
+	delay	2
+	offset	132 185
+	frame	data/chars/misc/du01.gif
+	frame	data/chars/misc/du02.gif
+	frame	data/chars/misc/du03.gif
+	frame	data/chars/misc/du04.gif
+	frame	data/chars/misc/du05.gif
+	frame	data/chars/misc/du06.gif
+	frame	data/chars/misc/du07.gif
+	frame	data/chars/misc/du08.gif
+      frame	data/chars/misc/du09.gif
+	frame	data/chars/misc/du10.gif
+	frame	data/chars/misc/du11.gif
+	frame	data/chars/misc/du12.gif
+	frame	data/chars/misc/du13.gif
+	frame	data/chars/misc/du14.gif
+	frame	data/chars/misc/du15.gif
+	frame	data/chars/misc/du16.gif
+      frame	data/chars/misc/du17.gif
+	frame	data/chars/misc/du18.gif
+	frame	data/chars/misc/du19.gif
+	frame	data/chars/misc/du20.gif
+	frame	data/chars/misc/du21.gif
+	frame	data/chars/misc/du22.gif
+	frame	data/chars/misc/du23.gif
+	frame	data/chars/misc/du24.gif
+      frame	data/chars/misc/du25.gif
+	frame	data/chars/misc/du26.gif
+	frame	data/chars/misc/du27.gif
+	frame	data/chars/misc/ddu28.gif
+	frame	data/chars/misc/ddu29.gif
+	frame	data/chars/misc/ddu30.gif
+	frame	data/chars/misc/ddu31.gif
+      frame	data/chars/misc/empty.gif
+	
+
+
+
+
+
+
+
+
+

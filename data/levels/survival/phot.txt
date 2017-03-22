@@ -1,0 +1,62 @@
+name    phot
+type	none
+shadow  0
+
+
+anim idle
+	loop	1
+      delay	13
+	offset	4 162
+      frame   data/levels/survival/phot1.gif
+      frame   data/levels/survival/phot2.gif
+      frame   data/levels/survival/phot3.gif
+      frame   data/levels/survival/phot4.gif
+      frame   data/levels/survival/phot5.gif
+      frame   data/levels/survival/phot6.gif
+      frame   data/levels/survival/phot7.gif
+      frame   data/levels/survival/phot8.gif
+      frame   data/levels/survival/phot1.gif
+      frame   data/levels/survival/phot2.gif
+      frame   data/levels/survival/phot3.gif
+      frame   data/levels/survival/phot4.gif
+      frame   data/levels/survival/phot5.gif
+      frame   data/levels/survival/phot6.gif
+      frame   data/levels/survival/phot7.gif
+      frame   data/levels/survival/phot8.gif
+      frame   data/levels/survival/phot1.gif
+      frame   data/levels/survival/phot2.gif
+      frame   data/levels/survival/phot3.gif
+      frame   data/levels/survival/phot4.gif
+      frame   data/levels/survival/phot5.gif
+      frame   data/levels/survival/phot6.gif
+      frame   data/levels/survival/phot7.gif
+      frame   data/levels/survival/phot8.gif
+      frame   data/levels/survival/pphot1.gif
+      frame   data/levels/survival/pphot2.gif
+      frame   data/levels/survival/pphot3.gif
+      frame   data/levels/survival/pphot4.gif
+      frame   data/levels/survival/pphot5.gif
+      frame   data/levels/survival/pphot6.gif
+      frame   data/levels/survival/pphot7.gif
+      frame   data/levels/survival/pphot8.gif
+      frame   data/levels/survival/pphot1.gif
+      frame   data/levels/survival/pphot2.gif
+      frame   data/levels/survival/pphot3.gif
+      frame   data/levels/survival/pphot4.gif
+      frame   data/levels/survival/pphot5.gif
+      frame   data/levels/survival/pphot6.gif
+      frame   data/levels/survival/pphot7.gif
+      frame   data/levels/survival/pphot8.gif
+      frame   data/levels/survival/pphot1.gif
+      frame   data/levels/survival/pphot2.gif
+      frame   data/levels/survival/pphot3.gif
+      frame   data/levels/survival/pphot4.gif
+      frame   data/levels/survival/pphot5.gif
+      frame   data/levels/survival/pphot6.gif
+      frame   data/levels/survival/pphot7.gif
+      frame   data/levels/survival/pphot8.gif
+
+
+
+
+

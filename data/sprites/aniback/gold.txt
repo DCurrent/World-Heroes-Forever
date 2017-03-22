@@ -1,0 +1,33 @@
+name	gold
+health	0
+score	2000
+type	item
+shadow	0
+nolife   1
+facing 1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	32 18
+      jumpframe 0 3 0
+      landframe 2
+      frame	data/sprites/aniback/gold1.gif
+      delay	50
+      frame	data/sprites/aniback/gold1.gif
+      delay	5
+      frame	data/sprites/aniback/gold1.gif
+      offset	32 19
+      frame	data/sprites/aniback/gold1.gif
+
+anim idle
+	loop	1
+	delay	100
+	offset	32 18
+	bbox	18 8 30 12
+	frame	data/sprites/aniback/gold1.gif
+      delay	4
+	frame	data/sprites/aniback/gold2.gif
+
+
+

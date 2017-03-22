@@ -1,0 +1,57 @@
+name    trape
+type	TRAP
+shadow  0
+noatflash 1
+flash   eflash
+hostile enemy player
+candamage enemy player
+
+anim idle
+	loop	1
+      delay	8
+	offset	89 187
+      otg 1
+      followcond 1
+      followanim 1
+      hitfx   data/sounds/go.wav
+      attack  78 167 24 10 0 0 1 1 
+      noreflect 1
+      frame   data/chars/misc/trape1.gif
+      frame   data/chars/misc/trape2.gif
+      frame   data/chars/misc/trape3.gif
+      frame   data/chars/misc/trape4.gif
+      frame   data/chars/misc/trape5.gif
+      frame   data/chars/misc/trape6.gif
+      frame   data/chars/misc/trape7.gif
+      frame   data/chars/misc/trape8.gif
+
+anim  follow1
+      loop	0
+      delay	6
+	offset	89 187
+      otg 1
+      hitfx   data/sounds/go.wav
+      quakeframe 3 3 6
+      frame   data/chars/misc/trape9.gif
+      frame   data/chars/misc/trape10.gif
+      burn  68 130 40 50 15 1
+      dropv 4 1
+      sound  data/sounds/bom.wav
+      frame   data/chars/misc/trape11.gif
+      frame   data/chars/misc/trape12.gif
+      frame   data/chars/misc/trape13.gif
+      frame   data/chars/misc/trape14.gif
+      frame   data/chars/misc/trape15.gif
+      frame   data/chars/misc/trape16.gif
+      burn  0 0 0 0 0 0
+      frame   data/chars/misc/trape17.gif
+      frame   data/chars/misc/trape18.gif
+      frame   data/chars/misc/trape19.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/misc/empty.gif
+
+
+
+
+
+

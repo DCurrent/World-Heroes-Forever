@@ -1,0 +1,31 @@
+name	susi
+health	40
+type	item
+shadow	0
+nolife   1
+facing 1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	11 19
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/susi.gif
+      delay	50
+      frame	data/sprites/aniback/susi.gif
+      delay	5
+      frame	data/sprites/aniback/susi.gif
+      offset	11 20
+      frame	data/sprites/aniback/susi.gif
+
+anim idle
+	loop	1
+	delay	8
+	offset	11 19
+	bbox	1 3 19 16
+	frame	data/sprites/aniback/susi.gif
+	
+
+
+

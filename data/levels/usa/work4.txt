@@ -1,0 +1,41 @@
+name    work4
+type	none
+offscreenkill  2000
+
+anim idle
+	loop	1
+      delay  15
+	offset	145 160
+      flipframe 0
+      jumpframe 0 0 -0.4
+      frame   data/levels/usa/work9.png
+      frame   data/levels/usa/work10.png
+      frame   data/levels/usa/work11.png
+      frame   data/levels/usa/work12.png
+      frame   data/levels/usa/work9.png
+      frame   data/levels/usa/work10.png
+      frame   data/levels/usa/work11.png
+      frame   data/levels/usa/work12.png
+      frame   data/levels/usa/work9.png
+      frame   data/levels/usa/work10.png
+      frame   data/levels/usa/work11.png
+      frame   data/levels/usa/work12.png
+      frame   data/levels/usa/work9.png
+      frame   data/levels/usa/work10.png
+      frame   data/levels/usa/work11.png
+      frame   data/levels/usa/work12.png
+      frame   data/levels/usa/work9.png
+      frame   data/levels/usa/work10.png
+      frame   data/levels/usa/work11.png
+      frame   data/levels/usa/work12.png
+      frame   data/levels/usa/work9.png
+      frame   data/levels/usa/work10.png
+      frame   data/levels/usa/work11.png
+      frame   data/levels/usa/work12.png
+      
+
+
+
+
+
+

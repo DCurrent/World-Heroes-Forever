@@ -1,0 +1,28 @@
+name	obstacc
+type    obstacle
+shadow  0
+gfxshadow  1
+health  14
+diesound  data/sounds/obstacc.wav
+nolife  1
+flash   obfla
+noatflash 1
+offscreenkill  2000
+
+
+anim idle
+	loop	0
+	delay	5
+	offset	100 154
+	bbox    75 42 49 112
+	frame	data/chars/misc/obstacc1.gif
+	
+anim fall
+	loop	0
+	delay	5
+	offset	100 154
+      frame	data/chars/misc/obstacc3.gif
+      frame	data/chars/misc/obstacc4.gif
+
+
+

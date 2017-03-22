@@ -1,0 +1,32 @@
+name	bar
+type    obstacle
+cantgrab 1
+shadow  0
+gfxshadow  1
+health  14
+diesound  data/sounds/bar.wav
+nolife  1
+flash   obfla
+noatflash 1
+offscreenkill  2000
+
+
+anim idle
+	loop	0
+	delay	5
+	offset	98 140
+	bbox    70 60 55 80
+      platform   65 145 0 0 70 70 13 70
+	frame	data/chars/misc/bar1.gif
+	
+anim fall
+	loop	0
+	delay	5
+	offset	98 140
+	frame	data/chars/misc/bar2.gif
+      frame	data/chars/misc/bar2.gif
+
+
+
+
+

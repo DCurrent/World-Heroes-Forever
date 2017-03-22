@@ -1,0 +1,28 @@
+name	obstach
+type    obstacle
+cantgrab 1
+shadow  0
+gfxshadow  1
+health  14
+diesound  data/sounds/barel.wav
+nolife  1
+flash   obfla
+noatflash 1
+
+
+anim idle
+	loop	0
+	delay	5
+	offset	98 173
+	bbox    56 100 73 105
+      platform   60 177 -10 0 95 95 15 65
+	frame	data/chars/misc/obstach1.gif
+	
+anim fall
+	loop	0
+	delay	5
+	offset	98 173
+	frame	data/chars/misc/obstach2.gif
+      frame	data/chars/misc/obstach3.gif
+
+

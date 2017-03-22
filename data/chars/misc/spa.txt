@@ -1,0 +1,110 @@
+name	spa
+type	none
+shadow	0
+lifespan 6
+setlayer	2
+
+anim idle
+	loop	0
+	delay	2
+	offset	101 158
+      drawmethod 286 286 0 0 0 0 0
+      move 6
+      movea 3
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+	frame	data/chars/misc/spa.gif
+      nodrawmethod 
+      frame	data/chars/misc/empty.gif
+
+

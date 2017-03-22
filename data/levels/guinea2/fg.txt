@@ -1,0 +1,11 @@
+name    fg
+type	none
+facing 1
+
+anim idle
+	loop	1
+        delay   12
+	  offset	10 98
+        frame   data/levels/guinea2/fg.gif
+
+

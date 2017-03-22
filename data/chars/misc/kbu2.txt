@@ -1,0 +1,32 @@
+name	kbu2
+type	TRAP
+nolife 1
+shadow  0
+lifespan  	4
+grabdistance 50
+candamage player obstacle
+
+anim idle
+	loop	1
+	delay	2
+	offset	60 182
+      hitfx  data/sounds/beat2.wav
+      hitflash  ffla
+      attack 40 60 38 65 15 1 0 0 25
+      dropv 3.5 1
+      movea 5
+	frame	data/chars/misc/kbu1.gif
+      frame	data/chars/misc/kbu1.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kbu2.gif
+      frame	data/chars/misc/kbu2.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kbu3.gif
+      frame	data/chars/misc/kbu3.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kbu4.gif
+      frame	data/chars/misc/kbu4.gif
+      frame	data/chars/misc/empty.gif
+
+
+

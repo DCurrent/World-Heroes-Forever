@@ -1,0 +1,14 @@
+name	 enddd
+type	 endlevel
+shadow	 0
+subject_to_obstacle 0
+subject_to_platform 0
+
+anim idle
+	loop	1
+	delay	40
+	offset	27 105
+      bbox	1 95 59 5
+	frame   data/levels/japan2/ar.gif
+      
+

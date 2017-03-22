@@ -1,0 +1,58 @@
+name	 rocket2
+health   0
+speed    23
+type     pshot
+counter  9999
+shootnum 9999
+nolife   1
+remove   1
+falldie 1
+nodieblink 1
+candamage player obstacle
+gfxshadow	1
+antigravity     100
+
+load rockfl1
+
+anim idle
+	loop	0
+	delay	3
+	offset	33 104
+      hitflash  rockfl
+      hitfx  data/sounds/bom.wav
+      burn  70 92 30 26 15 1 1 0 12
+	frame	data/chars/misc/rocket1.gif
+	frame	data/chars/misc/rocket2.gif
+	frame	data/chars/misc/rocket3.gif
+	frame	data/chars/misc/rocket4.gif
+      frame	data/chars/misc/rocket5.gif
+	frame	data/chars/misc/rocket2.gif
+	frame	data/chars/misc/rocket3.gif
+	frame	data/chars/misc/rocket4.gif
+      frame	data/chars/misc/rocket5.gif
+	frame	data/chars/misc/rocket2.gif
+	frame	data/chars/misc/rocket3.gif
+	frame	data/chars/misc/rocket4.gif
+      frame	data/chars/misc/rocket5.gif
+	frame	data/chars/misc/rocket2.gif
+	frame	data/chars/misc/rocket3.gif
+	frame	data/chars/misc/rocket4.gif
+      frame	data/chars/misc/rocket5.gif
+      frame	data/chars/misc/rocket2.gif
+	frame	data/chars/misc/rocket3.gif
+	frame	data/chars/misc/rocket4.gif
+      frame	data/chars/misc/rocket5.gif
+
+anim death
+	loop	0
+      delay	5
+	offset	75 122
+      subentity rockfl1
+      spawnframe 0 50 0 0 0
+      sound data/sounds/bom.wav
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/empty.gif
+
+
+
+

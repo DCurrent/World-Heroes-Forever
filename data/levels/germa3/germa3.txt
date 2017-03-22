@@ -1,0 +1,281 @@
+music		data/music/germa3.bor
+background	data/levels/germa3/back.gif
+panel	      data/levels/germa3/n03.gif
+order           a
+direction both
+spawn1 130 20 0
+spawn2 130 40 0
+
+wall  -5 250 0 0 105 35 85 500
+
+blocked 1
+
+Group	100 100
+at	0
+
+spawn	spike
+flip 1
+coords	-73 172
+at	0
+
+spawn	spike
+coords	711 172
+at	0
+
+spawn	obstacm1
+flip 1
+coords	-20 200
+at	0
+
+spawn	obstacm1
+flip 1
+coords	-30 226
+at	0
+
+spawn	obstacm1
+flip 1
+coords	-40 252
+at	0
+
+spawn	ob
+flip 1
+coords	45 185
+at	0
+
+spawn	ob
+flip 1
+coords	35 195
+at	0
+
+spawn	ob
+flip 1
+coords	25 205
+at	0
+
+spawn	ob
+flip 1
+coords	15 215
+at	0
+
+spawn	ob
+flip 1
+coords	5 225
+at	0
+
+spawn	ob
+flip 1
+coords	0 235
+at	0
+
+spawn	ob
+flip 1
+coords	-5 245
+at	0
+
+
+spawn	ob2
+coords	575 180
+at	0
+
+spawn	ob2
+coords	585 190
+at	0
+
+spawn	ob2
+coords	595 200
+at	0
+
+spawn	ob2
+coords	605 210
+at	0
+
+spawn	ob2
+coords	615 220
+at	0
+
+spawn	ob2
+coords	625 230
+at	0
+
+spawn	ob2
+coords	635 240
+at	0
+
+spawn	ob2
+coords	645 250
+at	0
+
+spawn	ca
+coords	100 170
+at	0
+
+spawn	obstach
+item  diamond
+itemmap 1
+coords	95 244
+at	0
+
+spawn	bare
+flip 1
+item  menuu
+coords	275 192
+at	0
+
+spawn	bare
+flip 1
+coords	325 192
+at	0
+
+spawn	bar
+flip 1
+item  time
+coords	375 192
+at	0
+
+spawn	bar
+flip 1
+coords	300 192 70
+at	0
+
+spawn	bare
+flip 1
+2pitem  pizza
+coords	345 192 70
+at	0
+
+
+spawn	obstach
+flip 1
+coords	325 196
+at	0
+
+spawn	obstach
+flip 1
+item  goldkat
+coords	335 208
+at	0
+
+spawn	obstach
+flip 1
+coords	325 196 65
+at	0
+
+Group	3 4
+at	0
+
+spawn   delay
+health   20
+coords   157 210
+at   0
+
+spawn   delay
+health   20
+coords   158 210
+at   0
+
+spawn   delay
+health   20
+coords   159 210
+at   0
+
+spawn   delay
+health   20
+coords   160 210
+at   0
+
+spawn	brocken
+boss 1
+coords	275 220 200
+at	0
+
+spawn   delay
+health   60
+coords   161 210
+at   0
+
+spawn   delay
+health   60
+coords   162 210
+at   0
+
+spawn   delay
+health   60
+coords   163 210
+at   0
+
+spawn	matlock4
+map 5
+coords	320 220 200
+at	0
+
+spawn	matlock4
+map 5
+flip 1
+coords	1 220 200
+at	0
+
+spawn	lee4
+map 4
+flip 1
+coords	2 230 200
+at	0
+
+spawn	ray4
+map 1
+item  milk
+coords	320 225 200
+at	0
+
+spawn	lee4
+map 4
+flip 1
+coords	1 212 200
+at	0
+
+spawn	ray4
+map 1
+flip 1
+coords	2 235 201
+at	0
+
+spawn	matlock4
+map 1
+item  time
+coords	320 223 202
+at	0
+
+spawn	lee4
+map 1
+flip 1
+2pitem  pizza
+coords	3 221 204
+at	0
+
+spawn	lee4
+map 1
+item  time
+coords	320 224 199
+at	0
+
+spawn	matlock4
+map 1
+flip 1
+coords	4 209 198
+at	0
+
+spawn	matlock4
+map 4
+flip 1
+coords	2 231 203
+at	0
+
+spawn	ray4
+map 1
+item  pizza
+coords	320 219 206
+at	0
+
+
+
+
+

@@ -1,0 +1,265 @@
+maxfreespecials 50
+maxfollows 50
+maxattacks 8
+maxattacktypes 20
+ajspecial 1
+nocost 1
+versusdamage 0
+spdirection 1 1 1
+colourselect 1
+lifescore 150000
+
+# Required objects. These must always be loaded.
+load	flash		data/chars/misc/flash.txt
+load	flas		data/chars/misc/flas.txt
+load	eflash	data/chars/misc/eflash.txt
+load	blood	     data/chars/misc/blood.txt
+load	bloo	     data/chars/misc/bloo.txt
+load	blo	     data/chars/misc/blo.txt
+load	obfla		data/chars/misc/obfla.txt
+load  ffla        data/chars/misc/ffla.txt
+load  fffla        data/chars/misc/fffla.txt
+load  hbfla        data/chars/misc/hbfla.txt
+load  fbfla        data/chars/misc/fbfla.txt
+load  bflash        data/chars/misc/bflash.txt
+load  rockfl        data/chars/misc/rockfl.txt
+load  du        data/chars/misc/du.txt
+load  dus        data/chars/misc/dus.txt
+load	hab         data/chars/misc/hab.txt
+load	fub         data/chars/misc/fub.txt
+load	rocket         data/chars/misc/rocket.txt
+load	rocket2        data/chars/misc/rocket2.txt
+load	kna         data/chars/misc/kna.txt
+load	mudb         data/chars/misc/mudb.txt
+load	maxb         data/chars/misc/maxb.txt
+load	jab         data/chars/misc/jab.txt
+load	jab2         data/chars/misc/jab2.txt
+load	maxa         data/chars/misc/maxa.txt
+load	maxfl         data/chars/misc/maxfl.txt
+load	jabfl         data/chars/misc/jabfl.txt
+load	EFlame	   data/chars/misc/eflame.txt
+load	EEFlame	   data/chars/misc/eeflame.txt
+load	kbb	   data/chars/misc/kbb.txt
+load	kbb2	   data/chars/misc/kbb2.txt
+load	kbfl	   data/chars/misc/kbfl.txt
+load	elect	   data/chars/misc/elect.txt
+load	ston	   data/chars/gokuu/ston/ston.txt
+
+# Players must also be loaded.
+load	HANZOU data/chars/hanzou/hanzou.txt
+#load	DRAGON data/chars/dragon/dragon.txt
+#load	RYOKO data/chars/ryoko/ryoko.txt
+#load	shura	data/chars/shura/shura.txt
+load	FUUMA data/chars/fuuma/fuuma.txt
+#load	mpower data/chars/mpower/mpower.txt
+#load	jmaxp data/chars/jmaxp/jmaxp.txt
+#load	janne data/chars/janne/janne.txt
+#load	gokuu data/chars/gokuu/gokuu.txt
+#load	gokuu1 data/chars/gokuu/gokuu1.txt
+#load	kisarah data/chars/kisarah/kisarah.txt
+#load	kidd data/chars/kidd/kidd.txt
+
+# Items and other objects can be loaded when needed.
+know	1up		data/sprites/aniback/1up.txt
+know	time		data/sprites/aniback/time.txt
+know	diamond	data/sprites/aniback/diamond.txt
+know	gold		data/sprites/aniback/gold.txt
+know	goldkat	data/sprites/aniback/goldkat.txt
+know	ring	data/sprites/aniback/ring.txt
+know	meat	data/sprites/aniback/meat.txt
+know	huma	data/sprites/aniback/huma.txt
+know	menuu	data/sprites/aniback/menuu.txt
+know	pizza	data/sprites/aniback/pizza.txt
+know	susi	data/sprites/aniback/susi.txt
+know	milk	data/sprites/aniback/milk.txt
+
+# Enemies
+Know	delay	  data/chars/misc/delay.txt
+Know	assassin	  data/chars/assassin/assassin.txt
+Know	ssassin	  data/chars/assassin/ssassin.txt
+Know	ssassin2	  data/chars/assassin/ssassin2.txt
+Know	assassi	  data/chars/assassin/assassi.txt
+Know	assass	  data/chars/assassin/assass.txt
+Know	assass2	  data/chars/assassin/assass2.txt
+Know	ninja	  data/chars/ninja/ninja.txt
+Know	ninja2	  data/chars/ninja/ninja2.txt
+Know	ninja3	  data/chars/ninja/ninja3.txt
+Know	ninja4	  data/chars/ninja/ninja4.txt
+Know	ninjasw	  data/chars/ninjasw/ninjasw.txt
+Know	ninjasw2	  data/chars/ninjasw/ninjasw2.txt
+Know	ninjasw3	  data/chars/ninjasw/ninjasw3.txt
+Know	ninjasw4	  data/chars/ninjasw/ninjasw4.txt
+Know	lee	  data/chars/lee/lee.txt
+Know	lee2	  data/chars/lee/lee2.txt
+Know	lee3	  data/chars/lee/lee3.txt
+Know	lee4	  data/chars/lee/lee4.txt
+Know	lee5	  data/chars/lee/lee5.txt
+Know	ray	  data/chars/ray/ray.txt
+Know	ray3	  data/chars/ray/ray3.txt
+Know	ray2	  data/chars/ray/ray2.txt
+Know	ray4	  data/chars/ray/ray4.txt
+Know	matlock	  data/chars/matlock/matlock.txt
+Know	matlock2	  data/chars/matlock/matlock2.txt
+Know	matlock3	  data/chars/matlock/matlock3.txt
+Know	matlock4	  data/chars/matlock/matlock4.txt
+Know	mizogu	  data/chars/mizogu/mizogu.txt
+Know	mizogu2	  data/chars/mizogu/mizogu2.txt
+Know	zazie	  data/chars/zazie/zazie.txt
+Know	zazie2  data/chars/zazie/zazie2.txt
+Know	yungmie  data/chars/yungmie/yungmie.txt
+Know	yungmie2  data/chars/yungmie/yungmie2.txt
+Know	yungmie3  data/chars/yungmie/yungmie3.txt
+Know	yungmie4  data/chars/yungmie/yungmie4.txt
+Know	mpowere data/chars/mpower/mpowere.txt
+Know	mpowere2 data/chars/mpower/mpowere2.txt
+Know	brocken data/chars/brocken/brocken.txt
+Know	brocken2 data/chars/brocken/brocken2.txt
+Know	mudman data/chars/mudman/mudman.txt
+Know	mudman2 data/chars/mudman/mudman2.txt
+Know	jann data/chars/jann/jann.txt
+Know	jmax data/chars/jmax/jmax.txt
+Know	jmax2 data/chars/jmax/jmax2.txt
+Know	jca data/chars/jcarn/jca.txt
+Know	jcarn data/chars/jcarn/jcarn.txt
+Know	jcarn2 data/chars/jcarn/jcarn2.txt
+Know	jack data/chars/jack/jack.txt
+Know	jack2 data/chars/jack/jack2.txt
+Know	kidde data/chars/kidde/kidde.txt
+Know	kidde2 data/chars/kidde/kidde2.txt
+Know	ryofu data/chars/ryofu/ryofu.txt
+Know	ryofu2 data/chars/ryofu/ryofu2.txt
+Know	zeus data/chars/zeus/zeus.txt
+Know	zeus2 data/chars/zeus/zeus2.txt
+Know	neodio data/chars/neodio/neodio.txt
+Know	neodio2 data/chars/neodio/neodio2.txt
+Know	bine data/chars/gokuu/bine.txt
+Know	bine2 data/chars/gokuu/bine2.txt
+Know	coul data/chars/misc/coul.txt
+Know	could data/chars/misc/could.txt
+Know	surf data/chars/gokuu/surf/surf.txt
+Know	surf1 data/chars/gokuu/surf/surf1.txt
+Know	surf2 data/chars/gokuu/surf/surf2.txt
+Know	condor  data/chars/kidd/pouli/condor.txt
+Know	kbu  data/chars/misc/kbu.txt
+Know	kbu2  data/chars/misc/kbu2.txt
+Know	kb	   data/chars/misc/kb.txt
+Know	kb2	   data/chars/misc/kb2.txt
+Know	kshifl   data/chars/misc/kshifl.txt
+Know	inv	  data/chars/inv/inv.txt
+
+#enemy shots
+
+# Other stuff
+Know  flasss data/chars/misc/flasss.txt
+Know  bbflash  data/chars/misc/bbflash.txt
+Know  rockfl1 data/chars/misc/rockfl1.txt
+Know	torch	  data/chars/misc/torch.txt
+Know	torchb  data/chars/misc/torchb.txt
+Know	torchc  data/chars/misc/torchc.txt
+Know	torchd  data/chars/misc/torchd.txt
+Know	bacley  data/levels/castle3/bacley.txt
+Know	fila    data/levels/japan/fila.txt
+Know	fg5     data/levels/japan/fg5.txt
+Know	guar    data/levels/japan2/guar.txt
+Know	enddd    data/levels/japan2/enddd.txt
+Know	noct    data/levels/japan2/noct.txt
+Know	aru    data/levels/japan2/aru.txt
+Know	arf    data/levels/japan2/arf.txt
+Know	wfall   data/levels/japan3/wfall.txt
+Know	bus     data/levels/Korea/bus.txt
+Know	fg6     data/levels/Korea/fg6.txt
+Know	flag    data/levels/Korea/flag.txt
+Know	girl    data/levels/Korea/girl.txt
+Know	girl2   data/levels/Korea/girl2.txt
+Know	girl3   data/levels/Korea/girl3.txt
+Know	fire    data/levels/Korea3/fire.txt
+Know	wat     data/levels/Korea3/wat.txt
+Know	fg7     data/levels/Korea3/fg7.txt
+Know	work    data/levels/usa/work.txt
+Know	work2   data/levels/usa/work2.txt
+Know	work3   data/levels/usa/work3.txt
+Know	work4   data/levels/usa/work4.txt
+Know	ca      data/levels/germa3/ca.txt
+Know	spike   data/levels/germa3/spike.txt
+Know	ob   data/levels/germa3/ob.txt
+Know	ob2   data/levels/germa3/ob2.txt
+Know	fi      data/levels/guinea/fi.txt
+Know	ba      data/levels/guinea2/ba.txt
+Know	fg      data/levels/guinea2/fg.txt
+Know	fir     data/levels/guinea2/fir.txt
+Know	fir2    data/levels/guinea2/fir2.txt
+Know	pe      data/levels/guinea2/pe.txt
+Know	peo     data/levels/guinea2/peo.txt
+Know	peop    data/levels/guinea2/peop.txt
+Know	to      data/levels/guinea2/to.txt
+Know	tor     data/levels/guinea2/tor.txt
+Know	fly     data/levels/usa3/fly.txt
+Know	fly2     data/levels/usa3/fly2.txt
+Know	lamp     data/levels/usa3/lamp.txt
+Know	lamp2     data/levels/usa3/lamp2.txt
+Know	fg1      data/levels/castle/fg1.txt
+Know	fg2      data/levels/castle2/fg2.txt
+Know	fg3      data/levels/germa2/fg3.txt
+Know	fg4      data/levels/germael/fg4.txt
+Know	tig     data/levels/castle2/tig.txt
+Know	pouli   data/levels/castle2/pouli.txt
+Know	brani   data/levels/brance/brani.txt
+Know	bam   data/levels/practice/bam.txt
+Know	elrin   data/levels/survival/elrin.txt
+Know	firerin   data/levels/survival/firerin.txt
+Know	ob3   data/levels/survival/ob3.txt
+Know	ob4   data/levels/survival/ob4.txt
+Know	backpe   data/levels/survival/backpe.txt
+Know	phot   data/levels/survival/phot.txt
+Know	spa	  data/chars/misc/spa.txt
+Know	elbac	  data/bgs/elbac/elbac.txt
+Know	empspa	  data/chars/misc/empspa.txt
+Know	empspa1	  data/chars/misc/empspa1.txt
+Know	empspa2	  data/chars/misc/empspa2.txt
+Know	empspa3	  data/chars/misc/empspa3.txt
+Know	empspa4	  data/chars/misc/empspa4.txt
+Know	empspa5	  data/chars/misc/empspa5.txt
+Know	empspa6	  data/chars/misc/empspa6.txt
+Know	empspa7	  data/chars/misc/empspa7.txt
+Know	endd	  data/chars/misc/endd.txt
+Know	endddd  data/chars/misc/endddd.txt
+Know	obst	  data/chars/misc/obst.txt
+Know	obsta	  data/chars/misc/obsta.txt
+Know	obstaa  data/chars/misc/obstaa.txt
+Know	obstaca data/chars/misc/obstaca.txt
+Know	obstacb data/chars/misc/obstacb.txt
+Know	obstacc data/chars/misc/obstacc.txt
+Know	obstace data/chars/misc/obstace.txt
+Know	obstacf data/chars/misc/obstacf.txt
+Know	obstacg data/chars/misc/obstacg.txt
+Know	obstach data/chars/misc/obstach.txt
+Know	obstaci data/chars/misc/obstaci.txt
+Know	obstack data/chars/misc/obstack.txt
+Know	obstacm data/chars/misc/obstacm.txt
+Know	obstacm1 data/chars/misc/obstacm1.txt
+Know	obstacn data/chars/misc/obstacn.txt
+Know	phone   data/chars/misc/phone.txt
+Know	bar	  data/chars/misc/bar.txt
+Know	bare	  data/chars/misc/bare.txt
+Know	barel	  data/chars/misc/barel.txt
+Know	barelex data/chars/misc/barelex.txt
+Know	barelex1 data/chars/misc/barelex1.txt
+Know	expl    data/chars/misc/expl.txt
+Know	trap1	  data/chars/misc/trap1.txt
+Know	trap2	  data/chars/misc/trap2.txt
+Know	trap3	  data/chars/misc/trap3.txt
+Know	trap4	  data/chars/misc/trap4.txt
+Know	trap5	  data/chars/misc/trap5.txt
+Know	trap6	  data/chars/misc/trap6.txt
+Know	trap7	  data/chars/misc/trap7.txt
+Know	trap8   data/chars/misc/trap8.txt
+
+Know	trap9	  data/chars/misc/trap9.txt
+Know	trape	  data/chars/misc/trape.txt
+Know	trapd  data/chars/misc/trapd.txt
+Know	trapd1  data/chars/misc/trapd1.txt
+Know	trapd2  data/chars/misc/trapd2.txt
+Know	trapde1  data/chars/misc/trapde1.txt
+
+know	mesh_neon	data/levels/usa2/pal/mesh_neon.txt #Mesh neon stage panel.
+

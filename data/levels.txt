@@ -1,0 +1,146 @@
+rush 1 1 Hits: 2 5 Max! 2 2
+p1rush 4 46 39 39 4 62 40 62
+p2rush 249 46 284 39 249 62 285 62
+
+lbarsize  50 6 1 1 0 0 0 0 -9999
+mpbarsize 50 6 1 1 0 0 0 0 -9999
+olbarsize 219 6 1 1 0 0 0 0 -9999
+timeloc 151 7 21 20 1
+
+p1smenu 0 -258 999 999
+p2smenu 0 -559 999 999
+
+p1namej      -999 -999   57  3  57   3 7
+p2namej     -999    -999   236  3  236   3 7
+
+p1score -999 -999 51 2 60 2 6
+p2score 999 -999 230 2 239 2 6
+
+p1life     28  27
+p1mp       85  27 
+p2life     204 27
+
+p1icon 2 2
+p2icon 181 2
+
+p1lifen     94  11  4
+p2lifen     273 11  4
+
+p1lifex     84  20 6
+p2lifex     263 20 6
+
+e1icon	39 207
+e1life	62 223
+e1name	1000 1000
+
+e2icon	39 207
+e2life	62 223
+e2name	1000 1000
+
+showcomplete 999 999 999 999 999 999
+
+set  Test:_Metal_Mesh
+equalairpause 0
+noslowfx 1
+maxplayers 2
+credits 8
+cansave 2
+nosame    1
+completebg      1
+z 224 270
+file	data/levels/usa2/usa2.txt
+
+
+set  STORY_MODE
+equalairpause 0
+noslowfx 1
+maxplayers 2
+credits 8
+cansave 2
+nosame    1
+completebg      1
+scene   data/scenes/st1.txt
+z 192 268
+file	data/levels/usa/usa.txt
+z 200 242
+file	data/levels/usa2/usa2.txt
+z 187 244
+file	data/levels/usa3/usa3.txt
+next
+scene   data/scenes/st2.txt
+z 185 265
+file	data/levels/germa2/germa2.txt
+z 196 265
+file	data/levels/germael/germael.txt
+z 185 244
+file	data/levels/germa3/germa3.txt
+next
+scene   data/scenes/st3.txt
+z 185 285
+file	data/levels/guinea/guinea.txt
+z 185 285
+file	data/levels/guinea2/guinea2.txt
+next
+scene   data/scenes/st4.txt
+z 189 285
+file	data/levels/Korea/Korea.txt
+z 185 285
+file	data/levels/Korea2/Korea2.txt
+z 185 265
+file	data/levels/Korea3/Korea3.txt
+next
+scene   data/scenes/st5.txt
+z 185 284
+file	data/levels/japan/japan.txt
+z 175 244
+file	data/levels/japan2/japan2.txt
+z 180 255
+file	data/levels/japan3/japan3.txt
+branch bran
+z 190 262
+file	data/levels/brance/bran.txt
+branch 2
+scene   data/scenes/blank.txt
+next
+scene   data/scenes/st6.txt
+z 198 252
+file	data/levels/castle/castle.txt
+scene   data/scenes/zp.txt
+z 194 245
+file	data/levels/castle2/castle2.txt
+scene   data/scenes/neo.txt
+z 194 245
+file	data/levels/castle3/castle3.txt
+next
+scene   data/scenes/endin.txt
+
+set	PRACTICE
+equalairpause 0
+noslowfx 1
+maxplayers 2
+credits 2
+nosame    1
+completebg      1
+z 180 244
+file	data/levels/practice/practice.txt
+z 180 244
+file	data/levels/practice/practice.txt
+next
+scene   data/scenes/blank.txt
+
+set	SURVIVAL
+equalairpause 0
+noslowfx 1
+maxplayers 2
+credits 2
+nosame    1
+cansave 2
+completebg      1
+ifcomplete 1
+z 167 244
+file	data/levels/survival/survival.txt
+next
+scene   data/scenes/cre.txt
+
+
+

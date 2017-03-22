@@ -1,0 +1,2038 @@
+name	jmaxp
+health	120
+speed	11
+type	player
+shadow  0
+gfxshadow  1
+throw         5 4.2
+throwframewait 1
+grabdistance	65
+running 27	4.0	2	1	0
+icon	data/chars/jmaxp/icon.gif
+jumpheight 4.0
+jumpspeed 14
+antigravity -27
+blockpain 1
+holdblock 1
+makeinv  0
+atchain       1 2 3 4
+com	A2	freespecial
+com  D F A  freespecial2
+com  D F A2	freespecial3
+com  D U A  freespecial19
+com  D U A2	freespecial20
+diesound	data/chars/jmax/die.wav
+bflash bflash
+dust du dus dus 
+projectilehit   obstacle
+hostile enemy 
+candamage enemy obstacle
+subject_to_wall 0
+secret  0 1
+
+load	maxa
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/jmaxp/idle.gif
+alternatepal data/chars/jmaxp/map1.gif
+alternatepal data/chars/jmaxp/map2.gif
+
+anim spawn
+	loop	0
+      delay	2
+      offset	75 170
+      frame	data/chars/jmaxp/idle1.gif
+
+anim respawn
+	loop	0
+      delay	3.5
+      offset	75 206
+      frame	data/chars/jmaxp/spawn1.gif
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn1.gif
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn1.gif
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn1.gif
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn1.gif
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn1.gif
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn1.gif
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn1.gif
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn2.gif
+      delay	2.5
+      sound	data/sounds/spaw.wav
+      frame	data/chars/jmaxp/empty.gif
+      frame	data/chars/jmaxp/spawn2.gif
+      frame	data/chars/jmaxp/spawn3.gif
+      frame	data/chars/jmaxp/spawn4.gif
+      frame	data/chars/jmaxp/spawn5.gif
+      frame	data/chars/jmaxp/spawn6.gif
+      frame	data/chars/jmaxp/spawn6.gif
+      frame	data/chars/jmaxp/spawn6.gif
+      frame	data/chars/jmaxp/spawn7.gif
+      frame	data/chars/jmaxp/spawn8.gif
+      frame	data/chars/jmaxp/spawn9.gif
+      frame	data/chars/jmaxp/spawn10.gif
+      frame	data/chars/jmaxp/spawn11.gif
+      frame	data/chars/jmaxp/spawn12.gif
+      frame	data/chars/jmaxp/spawn13.gif
+      frame	data/chars/jmaxp/spawn14.gif
+      frame	data/chars/jmaxp/spawn15.gif
+      frame	data/chars/jmaxp/spawn16.gif
+      frame	data/chars/jmaxp/spawn17.gif
+      frame	data/chars/jmaxp/spawn18.gif
+      frame	data/chars/jmaxp/spawn19.gif
+      frame	data/chars/jmaxp/spawn20.gif
+      frame	data/chars/jmaxp/spawn21.gif
+      frame	data/chars/jmaxp/spawn22.gif
+      frame	data/chars/jmaxp/spawn23.gif
+      frame	data/chars/jmaxp/spawn24.gif
+      frame	data/chars/jmaxp/spawn25.gif
+      frame	data/chars/jmaxp/spawn26.gif
+      frame	data/chars/jmaxp/spawn27.gif
+      frame	data/chars/jmaxp/spawn28.gif
+      frame	data/chars/jmaxp/spawn29.gif
+      frame	data/chars/jmaxp/spawn30.gif
+      frame	data/chars/jmaxp/spawn31.gif
+      frame	data/chars/jmaxp/spawn32.gif
+      frame	data/chars/jmaxp/spawn33.gif
+      frame	data/chars/jmaxp/spawn34.gif
+      frame	data/chars/jmaxp/spawn35.gif
+      frame	data/chars/jmaxp/spawn36.gif
+      frame	data/chars/jmaxp/spawn37.gif
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/jmaxp/spawn38.gif
+      delay	4
+      frame	data/chars/jmaxp/spawn39.gif
+      frame	data/chars/jmaxp/spawn40.gif
+      frame	data/chars/jmaxp/spawn41.gif
+
+anim waiting
+      loop	1
+	delay	17
+	offset	0 0
+      frame	data/chars/jmaxp/waii1.gif
+      frame	data/chars/jmaxp/waii2.gif
+      frame	data/chars/jmaxp/waii3.gif
+      frame	data/chars/jmaxp/waii4.gif
+
+anim SELECT
+	loop	0
+      delay	12
+	offset	0 0
+      sound	data/chars/jmaxp/jmax.wav
+      frame	data/chars/jmaxp/wai1.gif
+      frame	data/chars/jmaxp/wai2.gif
+      frame	data/chars/jmaxp/wai2.gif
+      frame	data/chars/jmaxp/wai2.gif
+      frame	data/chars/jmaxp/wai2.gif
+      frame	data/chars/jmaxp/wai2.gif
+      delay	30
+      frame	data/chars/jmaxp/wai2.gif
+      sound	data/chars/jmaxp/at4.wav
+      delay	10
+      frame	data/chars/jmaxp/wai3.gif
+      delay	8
+      frame	data/chars/jmaxp/wai5.gif
+      delay	10
+      frame	data/chars/jmaxp/wai4.gif
+      delay	70
+      frame	data/chars/jmaxp/wai5.gif
+
+
+anim idle
+	loop	1
+	delay	14
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd    clearL
+      frame	data/chars/jmaxp/idle.gif
+      frame	data/chars/jmaxp/idle1.gif
+      frame	data/chars/jmaxp/idle2.gif
+      frame	data/chars/jmaxp/idle1.gif
+
+anim get
+      loop	0
+	delay	6
+      offset	75 170
+      frame	data/chars/jmaxp/jl1.gif
+      frame	data/chars/jmaxp/jl22.gif
+      delay	7
+      frame	data/chars/jmaxp/jl22.gif
+      frame	data/chars/jmaxp/jl1.gif
+      
+anim walk
+	loop	1
+      delay   12
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/jmaxp/w1.gif
+	frame	data/chars/jmaxp/w2.gif
+	frame	data/chars/jmaxp/w3.gif
+	frame	data/chars/jmaxp/w4.gif
+	frame	data/chars/jmaxp/w5.gif
+      frame	data/chars/jmaxp/w6.gif
+
+anim run
+	loop	1
+      delay	10
+      offset	105 170
+	bbox	55 78 47 80
+      #include "data/scripts/run0001.h"
+      cancel 1 9 0 A2 freespecial7
+      sound	data/sounds/step.wav
+      frame	data/chars/jmaxp/ru2.gif
+	frame	data/chars/jmaxp/ru3.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/jmaxp/ru4.gif
+	frame	data/chars/jmaxp/ru3.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jmaxp/ru2.gif
+	frame	data/chars/jmaxp/ru3.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jmaxp/ru4.gif
+	frame	data/chars/jmaxp/ru3.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jmaxp/ru2.gif
+      offset	75 170
+      @cmd run0001
+      frame	data/chars/jmaxp/ru1.gif
+
+anim ATTACKUP
+	loop	0
+      delay	2
+      offset	105 170
+	bbox	55 78 47 80
+      cancel 1 20 0 A2 freespecial9
+      cancel 1 20 0 A freespecial10
+      movez -2.7
+      sound	data/sounds/step.wav
+      frame	data/chars/jmaxp/ru2.gif
+      frame	data/chars/jmaxp/ru2.gif
+	frame	data/chars/jmaxp/ru2.gif
+      frame	data/chars/jmaxp/ru2.gif
+	frame	data/chars/jmaxp/ru2.gif
+      frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+      frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/jmaxp/ru4.gif
+      frame	data/chars/jmaxp/ru4.gif
+      frame	data/chars/jmaxp/ru4.gif
+      frame	data/chars/jmaxp/ru4.gif
+	frame	data/chars/jmaxp/ru4.gif
+      frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+      frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+      sound	data/sounds/step.wav
+      offset	75 170
+      frame	data/chars/jmaxp/ru1.gif
+
+anim ATTACKDOWN 
+	loop	0
+      delay	2
+      offset	105 170
+	bbox	55 78 47 80
+      movez 2.7
+      cancel 1 20 0 A2 freespecial11
+      cancel 1 20 0 A freespecial12
+      sound	data/sounds/step.wav
+      frame	data/chars/jmaxp/ru2.gif
+      frame	data/chars/jmaxp/ru2.gif
+	frame	data/chars/jmaxp/ru2.gif
+      frame	data/chars/jmaxp/ru2.gif
+	frame	data/chars/jmaxp/ru2.gif
+      frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+      frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/jmaxp/ru4.gif
+      frame	data/chars/jmaxp/ru4.gif
+      frame	data/chars/jmaxp/ru4.gif
+      frame	data/chars/jmaxp/ru4.gif
+	frame	data/chars/jmaxp/ru4.gif
+      frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+      frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+	frame	data/chars/jmaxp/ru3.gif
+      sound	data/sounds/step.wav
+      offset	75 170
+      frame	data/chars/jmaxp/ru1.gif
+
+anim RUNATTACK
+	loop	0
+      delay	3
+      offset	75 170
+	bbox	55 78 47 80
+      hitflash  ffla
+      move 5
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/ra1.gif
+      frame	data/chars/jmaxp/ra1.gif
+      frame	data/chars/jmaxp/ra2.gif
+      attack4 75 75 40 40 10 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/jmaxp/ra2.gif
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/ra2.gif
+      attack4 0 0 0 0 0 0
+      delay	2
+      move 4
+      frame	data/chars/jmaxp/ra2.gif
+	frame	data/chars/jmaxp/ra3.gif
+      frame	data/chars/jmaxp/ra3.gif
+      attack4 80 95 95 40 15 1 0 0 35  
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+	frame	data/chars/jmaxp/ra4.gif
+	delay	3
+      frame	data/chars/jmaxp/ra4.gif
+      move 3
+      attack4 0 0 0 0 0 0
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      move 2
+      frame	data/chars/jmaxp/ra4.gif
+      move 0
+      delay	6
+      frame	data/chars/jmaxp/ra3.gif
+      frame	data/chars/jmaxp/ra1.gif
+
+anim pain
+	loop	0
+	delay	6
+	offset	75 170
+      bbox	55 78 47 80
+      sound	data/chars/jmaxp/pain.wav
+	frame	data/chars/jmaxp/pain4.gif
+	frame	data/chars/jmaxp/pain5.gif
+	frame	data/chars/jmaxp/pain4.gif
+
+anim pain3
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	55 78 47 80
+	frame	data/chars/jmaxp/pain4.gif
+      offset	77 170
+	frame	data/chars/jmaxp/pain4.gif
+      offset	73 170
+      sound	data/chars/jmaxp/pain.wav
+	frame	data/chars/jmaxp/pain4.gif
+      offset	77 170
+      frame	data/chars/jmaxp/pain4.gif
+      offset	75 170
+      frame	data/chars/jmaxp/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/jmaxp/pain2.gif
+      frame	data/chars/jmaxp/pain2.gif
+      frame	data/chars/jmaxp/pain2.gif
+      frame	data/chars/jmaxp/pain2.gif
+      frame	data/chars/jmaxp/pain2.gif
+      frame	data/chars/jmaxp/pain2.gif
+      frame	data/chars/jmaxp/pain2.gif
+      frame	data/chars/jmaxp/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	55 78 47 80
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/jmaxp/bpain04.gif
+      offset	77 170
+	frame	data/chars/jmaxp/bpain04.gif
+      offset	73 170
+	frame	data/chars/jmaxp/bpain4.gif
+      offset	77 170
+      frame	data/chars/jmaxp/bpain4.gif
+      offset	75 170
+      frame	data/chars/jmaxp/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/jmaxp/bpain02.gif
+      frame	data/chars/jmaxp/bpain02.gif
+      frame	data/chars/jmaxp/bpain2.gif
+      frame	data/chars/jmaxp/bpain2.gif
+      frame	data/chars/jmaxp/bpain02.gif
+      frame	data/chars/jmaxp/bpain02.gif
+      frame	data/chars/jmaxp/bpain2.gif
+      frame	data/chars/jmaxp/bpain2.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	75 170
+      bbox	55 78 47 80
+      frame	data/chars/jmaxp/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+      frame	data/chars/jmaxp/fall01.gif
+	frame	data/chars/jmaxp/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 2
+	frame	data/chars/jmaxp/fall02.gif
+	frame	data/chars/jmaxp/fall02.gif
+      delay   20
+      bbox	0 0 0 0
+	frame	data/chars/jmaxp/fall03.gif
+      delay   40
+	frame	data/chars/jmaxp/fall03.gif
+      delay   8
+	bbox	55 140 45 30
+	frame	data/chars/jmaxp/fall04.gif
+      bbox	0 0 0 0
+      frame	data/chars/jmaxp/fall04.gif
+      delay   10
+	frame	data/chars/jmaxp/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      bouncefactor 2.7
+      landframe 6
+      offset	123 170
+      attack  60 100 60 30 5 1 1 1
+      dropv 2 2
+      frame	data/chars/jmaxp/sla3.gif
+      frame	data/chars/jmaxp/sla3.gif
+      delay   10
+      offset	98 138
+      bbox	55 78 80 57
+      frame	data/chars/jmaxp/fall02.gif
+      frame	data/chars/jmaxp/fall02.gif
+      delay   20
+      bbox	0 0 0 0
+	frame	data/chars/jmaxp/fall03.gif
+      delay   500
+      frame	data/chars/jmaxp/fall03.gif
+      offset	95 170
+      delay   8
+      bbox	55 140 45 30
+	frame	data/chars/jmaxp/fall04.gif
+      bbox	0 0 0 0
+      frame	data/chars/jmaxp/fall04.gif
+      delay   20
+	frame	data/chars/jmaxp/fall05.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	90 145
+	frame	data/chars/jmaxp/gsla3.gif
+      offset	75 170
+      frame	data/chars/jmaxp/pain4.gif
+      offset	75 148
+      frame	data/chars/jmaxp/rjsla4.gif
+      offset	95 170
+      frame	data/chars/jmaxp/ffall05.gif
+      offset	75 143
+      frame	data/chars/jmaxp/hsla2.gif
+      frame	data/chars/jmaxp/hsla4.gif
+      offset	119 170
+      frame	data/chars/jmaxp/pain41.gif
+      frame	data/chars/jmaxp/pain55.gif
+      offset	100 140
+      frame	data/chars/jmaxp/fall066.gif
+      offset	80 80
+      frame	data/chars/jmaxp/ddsla1.gif
+      offset	185 170
+      frame	data/chars/jmaxp/ddsla2.gif
+      offset	195 170
+      frame	data/chars/jmaxp/ddsla2.gif
+      offset	117 80
+      frame	data/chars/jmaxp/ddsla11.gif
+      offset	160 198
+      frame	data/chars/jmaxp/pain41.gif
+      offset	119 170
+      frame	data/chars/jmaxp/pain21.gif
+      offset	105 170
+      frame	data/chars/jmaxp/gfall01.gif
+      offset	105 120
+      frame	data/chars/jmaxp/ggfall04.gif
+      offset	112 145
+	frame	data/chars/jmaxp/sla2.gif
+      offset	123 170
+      frame	data/chars/jmaxp/sla3.gif
+      offset	70 170
+      frame	data/chars/jmaxp/pain5.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+	frame	data/chars/jmaxp/fall03.gif
+      bbox	45 100 50 30
+      frame	data/chars/jmaxp/fall03.gif
+      bbox	0 0 0 0
+      offset	95 170
+      delay   100
+      frame	data/chars/jmaxp/fall04.gif
+      delay   40
+      bbox	55 140 45 30
+	frame	data/chars/jmaxp/fall05.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      sound	data/chars/jmaxp/pain.wav
+      frame	data/chars/jmaxp/fall06.gif
+	frame	data/chars/jmaxp/fall06.gif
+	frame	data/chars/jmaxp/fall07.gif
+	frame	data/chars/jmaxp/fall07.gif
+      delay   20
+	frame	data/chars/jmaxp/fall07.gif
+	frame	data/chars/jmaxp/fall07.gif
+      delay   10
+	bbox	55 140 45 30
+	frame	data/chars/jmaxp/fall04.gif
+      bbox	0 0 0 0
+      frame	data/chars/jmaxp/fall04.gif
+      delay   20
+	frame	data/chars/jmaxp/fall04.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      sound	data/chars/jmaxp/pain.wav
+      frame	data/chars/jmaxp/fall01.gif
+	frame	data/chars/jmaxp/fall01.gif
+	frame	data/chars/jmaxp/fall02.gif
+	frame	data/chars/jmaxp/fall02.gif
+      delay   20
+	frame	data/chars/jmaxp/fall03.gif
+	frame	data/chars/jmaxp/fall03.gif
+      delay   10
+	frame	data/chars/jmaxp/fall04.gif
+      frame	data/chars/jmaxp/fall04.gif
+      delay   20
+	frame	data/chars/jmaxp/fall04.gif
+
+anim fall16
+	loop	0
+      delay   4
+      offset	75 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+	frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif 
+	frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif
+      frame	data/chars/jmaxp/ppain2.gif
+      frame	data/chars/jmaxp/ppain22.gif
+      frame	data/chars/jmaxp/ppain2.gif
+	delay   40
+	frame	data/chars/jmaxp/ppain22.gif
+      delay   10
+      @cmd    degravity -0.27
+      offset	95 170
+	bbox	55 140 45 30
+	frame	data/chars/jmaxp/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/jmaxp/fall04.gif
+	delay   20
+	frame	data/chars/jmaxp/fall05.gif
+
+anim burn
+	loop	0
+      delay   7
+	offset	95 170
+      landframe 15
+      @cmd    degravity 0
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/jmaxp/burn01.gif
+      sound	data/sounds/bur.wav
+	frame	data/chars/jmaxp/burn1.gif
+      frame	data/chars/jmaxp/burn01.gif
+	frame	data/chars/jmaxp/burn1.gif
+	frame	data/chars/jmaxp/burn02.gif
+	frame	data/chars/jmaxp/burn2.gif
+      frame	data/chars/jmaxp/burn02.gif
+	frame	data/chars/jmaxp/burn2.gif
+	frame	data/chars/jmaxp/burn03.gif
+	frame	data/chars/jmaxp/burn3.gif
+      frame	data/chars/jmaxp/burn03.gif
+      frame	data/chars/jmaxp/burn3.gif
+	frame	data/chars/jmaxp/burn03.gif
+      frame	data/chars/jmaxp/burn3.gif
+      delay   40
+	frame	data/chars/jmaxp/burn03.gif
+      @cmd    degravity -0.27
+      delay   7
+      bbox	55 140 45 30
+	frame	data/chars/jmaxp/burn4.gif
+      bbox	0 0 0 0
+      frame	data/chars/jmaxp/burn04.gif
+	frame	data/chars/jmaxp/burn4.gif
+	frame	data/chars/jmaxp/fall05.gif
+
+anim rise
+	loop	0
+      delay   15
+	offset	95 170
+      frame	data/chars/jmaxp/fall05.gif
+      offset	75 170
+	delay	8
+	frame	data/chars/jmaxp/rise1.gif
+	frame	data/chars/jmaxp/rise2.gif
+	frame	data/chars/jmaxp/jl2.gif
+	frame	data/chars/jmaxp/jl1.gif
+
+anim riseb
+	loop	0
+      delay   25
+	offset	95 170
+      frame	data/chars/jmaxp/fall05.gif
+      offset	75 170
+	delay	8
+	frame	data/chars/jmaxp/rise1.gif
+	frame	data/chars/jmaxp/rise2.gif
+	frame	data/chars/jmaxp/jl2.gif
+	frame	data/chars/jmaxp/jl1.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	75 170
+	bbox	55 78 47 80
+	frame	data/chars/jmaxp/bl2.gif
+      frame	data/chars/jmaxp/bl2.gif
+
+
+anim BLOCKPAIN
+      loop	0
+	delay	2
+	bbox	55 78 47 80
+      offset	78 170
+	frame	data/chars/jmaxp/bl1.gif
+      offset	75 170
+      frame	data/chars/jmaxp/bl1.gif
+      offset	72 170
+      frame	data/chars/jmaxp/bl1.gif
+      offset	75 170
+      frame	data/chars/jmaxp/bl1.gif
+      delay	3
+      move -4
+      frame	data/chars/jmaxp/bl1.gif
+      frame	data/chars/jmaxp/bl2.gif
+      frame	data/chars/jmaxp/bl2.gif
+      frame	data/chars/jmaxp/bl2.gif
+      frame	data/chars/jmaxp/bl2.gif
+      
+
+anim attack1
+      loop	0
+	delay	4
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd ani0020 openborconstant("ANI_FOLLOW2") openborconstant("ANI_PAIN2")
+      @cmd ani0020 openborconstant("ANI_FOLLOW3") openborconstant("ANI_FOLLOW8")
+      sound	data/sounds/air5.wav
+	frame	data/chars/jmaxp/a1.gif
+      delay	7
+      attack  80 73 83 40 5 0
+	frame	data/chars/jmaxp/a5.gif
+      delay	5
+      attack  0 0 0 0 0 0
+	frame	data/chars/jmaxp/a5.gif
+      frame	data/chars/jmaxp/a1.gif
+
+anim attack2
+	loop	0
+	delay	6.5
+      offset	75 170
+      bbox	55 78 47 80
+      sound	data/sounds/air5.wav
+      frame	data/chars/jmaxp/a2.gif
+      frame	data/chars/jmaxp/a3.gif
+      sound	data/chars/jmaxp/at2.wav
+      delay	7
+      attack  80 78 83 40 5 0
+      frame	data/chars/jmaxp/a4.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jmaxp/a4.gif
+      delay	7
+      frame	data/chars/jmaxp/a1.gif
+
+anim attack3
+	loop	0
+	delay	6
+      offset	75 170
+      bbox	55 78 47 80
+      hitfx   data/sounds/beat3.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/aa1.gif
+      frame	data/chars/jmaxp/aa2.gif
+      sound	data/chars/jmaxp/at2.wav
+      frame	data/chars/jmaxp/aa3.gif
+      attack2  80 95 83 40 10 0
+	frame	data/chars/jmaxp/aa4.gif
+      delay	7
+      attack2  0 0 0 0 0 0
+      frame	data/chars/jmaxp/aa4.gif
+      frame	data/chars/jmaxp/a1.gif
+     
+
+anim attack4
+	loop	0
+	delay	2
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmaxp/a2.gif
+      move 2
+      frame	data/chars/jmaxp/a2.gif
+      frame	data/chars/jmaxp/a2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/a2.gif
+      frame	data/chars/jmaxp/a3.gif
+      frame	data/chars/jmaxp/a3.gif
+      frame	data/chars/jmaxp/a3.gif
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a6.gif
+      attack  80 40 65 70 15 1 0 0 10
+      dropv 3.5 1.3
+      frame	data/chars/jmaxp/a7.gif
+      delay	3
+      frame	data/chars/jmaxp/a7.gif
+      delay	10
+      attack	0 0 0 0 0 0
+      move 1
+      frame	data/chars/jmaxp/a7.gif
+      frame	data/chars/jmaxp/a7.gif
+      move 0
+      delay	7
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a1.gif
+      
+
+anim  special
+      loop	0
+      delay   10
+      offset	75 170
+      jumpframe 1 3.5 0 0 dus
+      landframe 14 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/sp1.gif
+      delay   4
+      sound	data/sounds/air3.wav
+      offset	75 195
+      @cmd    degravity 0
+      frame	data/chars/jmaxp/sp88.gif
+      attack15  110 60 33 110 20 1 1 0 25
+      frame	data/chars/jmaxp/sp99.gif
+      attack15  0 0 0 0 0 0
+      frame	data/chars/jmaxp/sp100.gif
+      attack15  53 60 33 110 20 1 1 0 25
+      frame	data/chars/jmaxp/sp77.gif
+      attack15  0 0 0 0 0 0
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/sp88.gif
+      attack15  110 60 33 110 20 1 1 0 25
+      frame	data/chars/jmaxp/sp99.gif
+      attack15  0 0 0 0 0 0
+      frame	data/chars/jmaxp/sp100.gif
+      attack15  53 60 33 110 20 1 1 0 25
+      frame	data/chars/jmaxp/sp77.gif
+      attack15  0 0 0 0 0 0
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/sp88.gif
+      attack15  110 60 33 110 20 1 1 0 25
+      frame	data/chars/jmaxp/sp99.gif
+      attack15  0 0 0 0 0 0
+      frame	data/chars/jmaxp/sp100.gif
+      attack15  53 60 33 110 20 1 1 0 25
+      frame	data/chars/jmaxp/sp77.gif
+      attack  0 0 0 0 0 0
+      offset	75 170
+      delay   40
+      @cmd    degravity -0.27
+      frame	data/chars/jmaxp/fsu4.gif
+      sound	data/sounds/step.wav
+      delay   8
+      bbox	55 78 47 80
+      frame	data/chars/jmaxp/jl1.gif
+      frame	data/chars/jmaxp/jl2.gif
+      frame	data/chars/jmaxp/jl1.gif
+
+anim JUMPDELAY
+      loop	0
+	delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      frame	data/chars/jmaxp/jl1.gif
+      
+
+anim JUMPLAND
+      loop	0
+	delay	6
+      offset	75 170
+      bbox	55 78 47 80
+      sound	data/sounds/step.wav
+      frame	data/chars/jmaxp/jl1.gif
+      frame	data/chars/jmaxp/jl2.gif
+      frame	data/chars/jmaxp/jl1.gif
+
+anim jump
+	loop	0
+	delay	4
+      offset	75 170
+      bbox	55 68 47 80
+      cancel 1 13 0 A2 freespecial4
+      frame	data/chars/jmaxp/j2.gif
+      frame	data/chars/jmaxp/j2.gif
+      frame	data/chars/jmaxp/j2.gif
+      frame	data/chars/jmaxp/j3.gif
+      frame	data/chars/jmaxp/j3.gif
+      frame	data/chars/jmaxp/j3.gif
+      frame	data/chars/jmaxp/j4.gif
+      frame	data/chars/jmaxp/j4.gif
+      frame	data/chars/jmaxp/j4.gif
+      frame	data/chars/jmaxp/j3.gif
+      frame	data/chars/jmaxp/j3.gif
+      frame	data/chars/jmaxp/j3.gif
+      frame	data/chars/jmaxp/j2.gif
+      frame	data/chars/jmaxp/j2.gif
+      frame	data/chars/jmaxp/j2.gif
+
+anim FORWARDJUMP
+      loop	0
+	delay	4
+      offset	75 170
+      bbox	55 68 47 80
+      cancel 1 13 0 A2 freespecial5
+      frame	data/chars/jmaxp/jf1.gif
+      frame	data/chars/jmaxp/jf1.gif
+      frame	data/chars/jmaxp/jf1.gif
+      frame	data/chars/jmaxp/jf2.gif
+      frame	data/chars/jmaxp/jf2.gif
+      frame	data/chars/jmaxp/jf2.gif
+      frame	data/chars/jmaxp/jf2.gif
+      frame	data/chars/jmaxp/jf3.gif
+      frame	data/chars/jmaxp/jf3.gif
+      frame	data/chars/jmaxp/jf3.gif
+      frame	data/chars/jmaxp/jf3.gif
+      frame	data/chars/jmaxp/jf4.gif
+      frame	data/chars/jmaxp/jf4.gif
+      frame	data/chars/jmaxp/jf4.gif
+      frame	data/chars/jmaxp/jf4.gif
+
+anim RUNJUMP
+      loop	0
+	delay	4
+      offset	75 170
+      bbox	55 68 47 80
+      cancel 1 13 0 A2 freespecial6
+      frame	data/chars/jmaxp/jf1.gif
+      frame	data/chars/jmaxp/jf1.gif
+      frame	data/chars/jmaxp/jf1.gif
+      frame	data/chars/jmaxp/jf2.gif
+      frame	data/chars/jmaxp/jf2.gif
+      frame	data/chars/jmaxp/jf2.gif
+      frame	data/chars/jmaxp/jf2.gif
+      frame	data/chars/jmaxp/jf3.gif
+      frame	data/chars/jmaxp/jf3.gif
+      frame	data/chars/jmaxp/jf3.gif
+      frame	data/chars/jmaxp/jf3.gif
+      frame	data/chars/jmaxp/jf4.gif
+      frame	data/chars/jmaxp/jf4.gif
+      frame	data/chars/jmaxp/jf4.gif
+      frame	data/chars/jmaxp/jf4.gif
+
+anim jumpattack
+	loop	0
+	delay	8
+      offset	75 170
+      bbox	55 68 47 80
+      sound	data/sounds/air5.wav
+      frame	data/chars/jmaxp/jp1.gif
+      sound	data/chars/jmaxp/at9.wav
+      frame	data/chars/jmaxp/jp2.gif
+      attack	66 78 72 64 12 1 0 0 35
+      frame	data/chars/jmaxp/jp3.gif
+      frame	data/chars/jmaxp/jp3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/j2.gif
+
+
+anim JUMPFORWARD
+      loop	0
+	delay	8
+      offset	75 170
+      bbox	55 68 47 80
+      sound	data/sounds/air5.wav
+      frame	data/chars/jmaxp/jp1.gif
+      sound	data/chars/jmaxp/at9.wav
+      frame	data/chars/jmaxp/jp2.gif
+      attack	66 78 72 64 12 1 0 0 35
+      frame	data/chars/jmaxp/jp3.gif
+      frame	data/chars/jmaxp/jp3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/j2.gif
+
+anim grab
+	loop	0
+	delay	4
+      offset	75 170
+      bbox	55 78 47 80
+      cancel 0 3 0 A2 freespecial13
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+
+anim grabattack
+      loop	0
+	delay	18
+      offset	75 170
+      attackone 0
+      jumpframe 1 4 2 0 dus
+      landframe 8 du
+      quakeframe 8 4 7
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart
+      @cmd    position 32 62 1 0 1
+      frame	data/chars/jmaxp/grab4.gif
+      delay	8
+      sound	data/chars/jmaxp/at3.wav
+      @cmd    position 33 69 24 0 1
+      frame	data/chars/jmaxp/grab5.gif
+      frame	data/chars/jmaxp/grab5.gif
+      @cmd    position 33 69 24 0 1
+      frame	data/chars/jmaxp/grab5.gif
+      @cmd    degravity -0.27
+      frame	data/chars/jmaxp/grab5.gif
+      @cmd    position 33 79 15 0 1
+      delay	7
+      frame	data/chars/jmaxp/grab6.gif
+      @cmd    dasher 2 -3 0
+      frame	data/chars/jmaxp/grab6.gif
+      delay	20
+      @cmd    position 33 80 -23 0 1
+      frame	data/chars/jmaxp/grab7.gif
+      attack10 75 110 100 45 5 1 1 1
+      dropv 2 1.5
+      delay	8
+      @cmd    hurt 25
+      @cmd    position 34 81 1 0 1
+      frame	data/chars/jmaxp/grab7.gif
+      @cmd    antiwall 20 -20 -1
+      @cmd    antiwall 0 -40 -1
+      frame	data/chars/jmaxp/grab7.gif
+      attack10   0 0 0 0 0 0
+      @cmd    antiwall 20 -20 -1
+      @cmd    antiwall 0 -40 -1
+      frame	data/chars/jmaxp/grab7.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 1
+      frame	data/chars/jmaxp/grab7.gif
+      delay	12
+      frame	data/chars/jmaxp/jl2.gif
+      frame	data/chars/jmaxp/jl1.gif
+
+anim grabbackward
+	loop	0
+	delay	20
+      offset	124 170
+      flipframe 0
+      @cmd    slamstart
+      @cmd    position 31 -65 1 0 1
+      frame	data/chars/jmaxp/ggrab4.gif
+      sound	data/sounds/air3.wav
+      delay	9
+      @cmd    position 35 -45 49 0 1
+      frame	data/chars/jmaxp/ggrab8.gif
+      sound	data/chars/jmaxp/at6.wav
+      delay	7
+      @cmd    position 36 -20 119 0 1
+      frame	data/chars/jmaxp/ggrab9.gif
+      delay	4
+      @cmd    hurt 25
+      @cmd    position 17 58 60 0 1
+      frame	data/chars/jmaxp/ggrab10.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 3.5 2.5 0 0
+      frame	data/chars/jmaxp/ggrab10.gif
+      delay	31
+      frame	data/chars/jmaxp/ggrab10.gif
+
+anim grabattack2
+	loop	0
+      offset	75 170
+	delay 9
+      quakeframe 3 3 3
+      @cmd    slamstart
+      @cmd    position 29 65 0 -1 1
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/sppp0.gif
+      delay	6.5
+      sound	data/chars/jmaxp/at9.wav
+      frame	data/chars/jmaxp/sppp2.gif
+	frame	data/chars/jmaxp/sppp3.gif
+      sound	data/sounds/beat2.wav
+      delay	2
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 108 45 1
+	frame	data/chars/jmaxp/sppp4.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 3.5 3 0 1
+      delay	23
+     	frame	data/chars/jmaxp/sppp4.gif
+      delay	7
+      frame	data/chars/jmaxp/sppp3.gif
+      frame	data/chars/jmaxp/aaaaa2.gif
+      frame	data/chars/jmaxp/aaaaa1.gif
+
+anim  freespecial
+	loop	0
+	delay	4
+      offset	75 170
+      bbox	55 78 47 80
+      hitfx   data/sounds/beat3.wav
+      @cmd ani0020 openborconstant("ANI_FOLLOW1") openborconstant("ANI_PAIN2")
+      cancel 7 8 1 A2 freespecial21
+      cancel 7 8 1 A freespecial22
+      sound	data/sounds/air5.wav
+      frame	data/chars/jmaxp/aaaa1.gif
+      sound	data/chars/jmaxp/at2.wav
+	frame	data/chars/jmaxp/aaaa1.gif
+      frame	data/chars/jmaxp/aaaa2.gif
+      delay	8
+      attack2  75 95 85 40 5 0
+	frame	data/chars/jmaxp/aaaa4.gif
+      delay	6
+      attack2  0 0 0 0 0 0
+      frame	data/chars/jmaxp/aaaa4.gif
+	frame	data/chars/jmaxp/aaaa2.gif
+      frame	data/chars/jmaxp/aaaa1.gif
+      delay	1
+      frame	data/chars/jmaxp/idle.gif
+
+anim follow1
+      loop	0
+      offset	75 170
+      bbox	55 78 47 80
+      range -45 175
+      rangez -45 45
+      hitflash  ffla
+      sound	data/sounds/air3.wav
+      hitfx   data/sounds/beat2.wav
+	delay	7
+      frame	data/chars/jmaxp/aaaaa1.gif
+      frame	data/chars/jmaxp/aaaaa2.gif
+      sound	data/chars/jmaxp/at5.wav
+      blast  80 95 84 45 15 0 0 12
+	frame	data/chars/jmaxp/aaaaa4.gif
+      delay	25
+      blast	0 0 0 0 0 0
+	frame	data/chars/jmaxp/aaaaa4.gif
+      delay	7
+      frame	data/chars/jmaxp/aaaaa3.gif
+      frame	data/chars/jmaxp/aaaaa1.gif
+
+anim follow2
+	loop	0
+      range -10 115
+      rangez -40 40
+	delay	2
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmaxp/a2.gif
+      move 2
+      frame	data/chars/jmaxp/a2.gif
+      frame	data/chars/jmaxp/a2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/a2.gif
+      frame	data/chars/jmaxp/a3.gif
+      frame	data/chars/jmaxp/a3.gif
+      frame	data/chars/jmaxp/a3.gif
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a6.gif
+      attack  80 40 65 70 15 1 0 0 10
+      dropv 3.5 1.3
+      frame	data/chars/jmaxp/a7.gif
+      delay	3
+      frame	data/chars/jmaxp/a7.gif
+      delay	10
+      attack	0 0 0 0 0 0
+      move 1
+      frame	data/chars/jmaxp/a7.gif
+      frame	data/chars/jmaxp/a7.gif
+      move 0
+      delay	7
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a1.gif
+
+anim follow3
+      loop	0
+      range 0 70
+      rangez -3 18
+      delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      attackone 1
+      otg 2
+      hitfx   data/sounds/beat2.wav
+      cancel 5 6 1 A freespecial8
+      frame	data/chars/jmaxp/jl1.gif
+      frame	data/chars/jmaxp/get1.gif
+      frame	data/chars/jmaxp/get2.gif
+      delay	10
+      attack3  110 150 30 21 10 0 0 0 0 21
+      forcedirection 99
+      frame	data/chars/jmaxp/get3.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/jmaxp/get3.gif
+      delay	8
+      frame	data/chars/jmaxp/get2.gif
+      delay	10
+      frame	data/chars/jmaxp/jl1.gif
+
+anim  freespecial2
+      loop	0
+      delay	3
+      offset	75 170
+      bbox	55 78 47 80
+      custknife maxa
+	throwframe 10 69
+      sound	data/chars/jmaxp/at10.wav
+      frame	data/chars/jmaxp/spp1.gif
+      frame	data/chars/jmaxp/spp11.gif
+      frame	data/chars/jmaxp/spp1.gif
+      offset	95 170
+      frame	data/chars/jmaxp/spp22.gif
+      offset	75 170
+      frame	data/chars/jmaxp/spp2.gif
+      offset	95 170
+      frame	data/chars/jmaxp/spp22.gif
+      sound	data/sounds/air3.wav
+      offset	75 170
+      frame	data/chars/jmaxp/spp3.gif
+      frame	data/chars/jmaxp/spp33.gif
+      frame	data/chars/jmaxp/spp3.gif
+      frame	data/chars/jmaxp/spp44.gif
+      frame	data/chars/jmaxp/spp44.gif
+      frame	data/chars/jmaxp/spp4.gif
+      delay	16
+      frame	data/chars/jmaxp/spp5.gif
+      frame	data/chars/jmaxp/spp5.gif
+
+anim  freespecial3
+      loop	0
+      range 120 280
+      offset	75 170
+	followcond 1
+      followanim 6
+      jumpframe 7 0 5
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/jmaxp/at4.wav
+      delay	6
+      frame	data/chars/jmaxp/spawnn4.gif
+      frame	data/chars/jmaxp/spawnn1.gif
+      frame	data/chars/jmaxp/spawnn2.gif
+      frame	data/chars/jmaxp/spawnn3.gif
+      frame	data/chars/jmaxp/spawnn2.gif
+      frame	data/chars/jmaxp/spawnn1.gif
+      delay	11
+      frame	data/chars/jmaxp/fsp1.gif
+      sound	data/chars/jmaxp/at7.wav
+      delay	2
+      bbox	55 78 47 80
+	frame	data/chars/jmaxp/fsp2.gif
+	frame	data/chars/jmaxp/fsp2.gif
+      attack12 100 85 65 60 25 1 0 0 45
+      dropv 2 3.5
+      forcedirection -1
+     	frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp4.gif
+	frame	data/chars/jmaxp/fsp4.gif
+      frame	data/chars/jmaxp/fsp5.gif
+      frame	data/chars/jmaxp/fsp5.gif
+	frame	data/chars/jmaxp/fsp4.gif
+	frame	data/chars/jmaxp/fsp4.gif
+	frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp4.gif
+	frame	data/chars/jmaxp/fsp4.gif
+      frame	data/chars/jmaxp/fsp5.gif
+      attack12 0 0 0 0 0 0
+	frame	data/chars/jmaxp/fsp5.gif
+      @cmd    anichange "ANI_FOLLOW7"
+      frame	data/chars/jmaxp/fsp5.gif
+	frame	data/chars/jmaxp/fsp5.gif
+      
+anim  follow6
+      loop	0
+	delay	5
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      quakeframe 1 4 4
+      attack  100 85 65 60 25 1 0 0 30
+      dropv 2 3.5
+      frame	data/chars/jmaxp/fsp3.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp3.gif
+	frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp3.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jmaxp/fsp2.gif
+      frame	data/chars/jmaxp/fsp2.gif
+      frame	data/chars/jmaxp/spawnn4.gif
+      frame	data/chars/jmaxp/spawnn4.gif
+
+anim  follow7
+      loop	0
+	delay	3
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      frame	data/chars/jmaxp/fsp4.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/jmaxp/fsp4.gif
+      delay	2
+      attack  100 85 65 60 25 1 0 0 45
+      dropv 2 3.5
+	frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp3.gif
+      frame	data/chars/jmaxp/fsp3.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jmaxp/fsp2.gif
+      frame	data/chars/jmaxp/fsp2.gif
+      frame	data/chars/jmaxp/fsp2.gif
+      frame	data/chars/jmaxp/fsp2.gif
+      frame	data/chars/jmaxp/spawnn4.gif
+      frame	data/chars/jmaxp/spawnn4.gif
+      frame	data/chars/jmaxp/spawnn4.gif
+      frame	data/chars/jmaxp/spawnn4.gif
+      
+anim  freespecial4
+      loop	0
+	delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      sound	data/chars/jmaxp/at5.wav
+      frame	data/chars/jmaxp/ja2.gif
+      attack	70 85 80 45 12 1 0 0 35
+      frame	data/chars/jmaxp/ja3.gif
+      frame	data/chars/jmaxp/ja3.gif
+      attack 0 0 0 0 0 0
+      delay	7
+      frame	data/chars/jmaxp/ja2.gif
+      frame	data/chars/jmaxp/ja1.gif
+      frame	data/chars/jmaxp/ja1.gif
+      frame	data/chars/jmaxp/j2.gif
+      
+
+anim  freespecial5
+      loop	0
+	delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      jumpframe 0 0 1.4
+      sound	data/chars/jmaxp/at5.wav
+      frame	data/chars/jmaxp/ja2.gif
+      attack	70 85 80 45 12 1 0 0 35
+      frame	data/chars/jmaxp/ja3.gif
+      frame	data/chars/jmaxp/ja3.gif
+      attack 0 0 0 0 0 0
+      delay	7
+      frame	data/chars/jmaxp/ja2.gif
+      frame	data/chars/jmaxp/ja1.gif
+      frame	data/chars/jmaxp/ja1.gif
+      frame	data/chars/jmaxp/j2.gif
+
+
+anim  freespecial6
+      loop	0
+	delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      jumpframe 0 0 2.5
+      sound	data/chars/jmaxp/at5.wav
+      frame	data/chars/jmaxp/ja2.gif
+      attack	70 85 80 45 12 1 0 0 35
+      frame	data/chars/jmaxp/ja3.gif
+      frame	data/chars/jmaxp/ja3.gif
+      attack 0 0 0 0 0 0
+      delay	7
+      frame	data/chars/jmaxp/ja2.gif
+      frame	data/chars/jmaxp/ja1.gif
+      frame	data/chars/jmaxp/ja1.gif
+      frame	data/chars/jmaxp/j2.gif
+
+anim  freespecial7
+      loop	0
+	delay	3
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      move 4
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/aaaaa5.gif
+      frame	data/chars/jmaxp/aaaaa5.gif
+      frame	data/chars/jmaxp/aaaaa5.gif
+      attack 83 110 40 55 20 1 0 0 25
+      dropv 3 3
+      frame	data/chars/jmaxp/aaaaa6.gif
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/aaaaa6.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      move 4
+      attack 83 50 82 70 20 1 0 0 30
+      dropv 3 3
+	frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/aaaaa7.gif
+	delay	3
+      move 3
+	frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      move 2
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa6.gif
+      frame	data/chars/jmaxp/aaaaa6.gif
+	frame	data/chars/jmaxp/aaaaa5.gif
+      frame	data/chars/jmaxp/aaaaa5.gif
+
+anim  freespecial8
+      loop	0
+      delay	4
+      offset	75 170
+      bbox	55 78 47 80
+      attackone 1
+      otg 2
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmaxp/get2.gif
+      delay	8
+      frame	data/chars/jmaxp/get1.gif
+      frame	data/chars/jmaxp/get2.gif
+      delay	12
+      attack3  110 150 30 21 10 0 0 0 0 21
+      forcedirection 99
+      frame	data/chars/jmaxp/get3.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/jmaxp/get3.gif
+      delay	10
+      frame	data/chars/jmaxp/jl1.gif
+
+anim  freespecial9
+      loop	0
+	delay	3
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      movez -2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/aaaaa5.gif
+      frame	data/chars/jmaxp/aaaaa5.gif
+      attack 83 110 40 55 20 1 0 0 25
+      dropv 3 3
+      frame	data/chars/jmaxp/aaaaa6.gif
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/aaaaa6.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      movez -1
+      attack 83 50 82 70 20 1 0 0 30
+      dropv 3 3
+	frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/aaaaa7.gif
+	delay	3
+      movez -1
+	frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa6.gif
+      frame	data/chars/jmaxp/aaaaa6.gif
+    	frame	data/chars/jmaxp/aaaaa5.gif
+      frame	data/chars/jmaxp/aaaaa5.gif
+
+anim  freespecial10
+	loop	0
+      delay	3
+      offset	75 170
+	bbox	55 78 50 80
+      hitflash  ffla
+      movez -2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/ra1.gif
+      frame	data/chars/jmaxp/ra1.gif
+      frame	data/chars/jmaxp/ra2.gif
+      attack4 75 75 40 40 10 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/ra2.gif
+      frame	data/chars/jmaxp/ra2.gif
+      attack4 0 0 0 0 0 0
+      delay	2
+      movez -1
+	frame	data/chars/jmaxp/ra3.gif
+      frame	data/chars/jmaxp/ra3.gif
+      attack4 80 95 95 40 15 1 0 0 35  
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+	frame	data/chars/jmaxp/ra4.gif
+	delay	3
+      frame	data/chars/jmaxp/ra4.gif
+      movez -1
+      attack4 0 0 0 0 0 0
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      movez 0
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      delay	6
+      frame	data/chars/jmaxp/ra3.gif
+      frame	data/chars/jmaxp/ra1.gif
+
+anim  freespecial11
+      loop	0
+	delay	3
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      movez 2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/aaaaa5.gif
+      frame	data/chars/jmaxp/aaaaa5.gif
+      attack 83 110 40 55 20 1 0 0 25
+      dropv 3 3
+      frame	data/chars/jmaxp/aaaaa6.gif
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/aaaaa6.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      movez 1
+      attack 83 50 82 70 20 1 0 0 30
+      dropv 3 3
+	frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/aaaaa7.gif
+	delay	3
+      movez 1
+	frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa7.gif
+      frame	data/chars/jmaxp/aaaaa6.gif
+      frame	data/chars/jmaxp/aaaaa6.gif
+    	frame	data/chars/jmaxp/aaaaa5.gif
+      frame	data/chars/jmaxp/aaaaa5.gif
+
+anim  freespecial12
+	loop	0
+      delay	3
+      offset	75 170
+	bbox	55 78 50 80
+      hitflash  ffla
+      movez 2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/ra1.gif
+      frame	data/chars/jmaxp/ra1.gif
+      frame	data/chars/jmaxp/ra2.gif
+      attack4 75 75 40 40 10 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/ra2.gif
+      frame	data/chars/jmaxp/ra2.gif
+      attack4 0 0 0 0 0 0
+      delay	2
+      movez 1
+	frame	data/chars/jmaxp/ra3.gif
+      frame	data/chars/jmaxp/ra3.gif
+      attack4 80 95 95 40 15 1 0 0 35  
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+	frame	data/chars/jmaxp/ra4.gif
+	delay	3
+      frame	data/chars/jmaxp/ra4.gif
+      movez 1
+      attack4 0 0 0 0 0 0
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      movez 0
+      frame	data/chars/jmaxp/ra4.gif
+      frame	data/chars/jmaxp/ra4.gif
+      delay	6
+      frame	data/chars/jmaxp/ra3.gif
+      frame	data/chars/jmaxp/ra1.gif
+      
+anim freespecial13
+	loop	0
+	delay	6
+      offset	75 170
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      @cmd bind 1 65 -1 0 -1
+      frame	data/chars/jmaxp/grat11.gif
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 83 -10 1
+      @cmd    hurt2 5
+      frame	data/chars/jmaxp/grat333.gif
+      delay	12
+      frame	data/chars/jmaxp/grat333.gif
+      delay	6
+      frame	data/chars/jmaxp/grat11.gif
+      @cmd    anichange "ANI_FOLLOW4"
+      frame	data/chars/jmaxp/grat1.gif
+      frame	data/chars/jmaxp/grat1.gif
+
+anim freespecial14
+	loop	0
+	delay	6
+      offset	75 170
+      @cmd bind 1 65 -1 0 -1
+      frame	data/chars/jmaxp/grat11.gif
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 83 -10 1
+      @cmd    hurt2 5
+      frame	data/chars/jmaxp/grat333.gif
+      delay	13
+      frame	data/chars/jmaxp/grat333.gif
+      delay	6
+      frame	data/chars/jmaxp/grat11.gif
+      @cmd    anichange "ANI_FOLLOW5"
+      frame	data/chars/jmaxp/grat1.gif
+      frame	data/chars/jmaxp/grat1.gif
+
+anim freespecial15
+      loop	0
+      offset	75 170
+	delay 9
+      quakeframe 3 3 3
+      @cmd    slamstart2
+      @cmd    position 29 65 0 -1 1
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/sppp0.gif
+      delay	6.5
+      sound	data/chars/jmaxp/at9.wav
+      frame	data/chars/jmaxp/sppp2.gif
+	frame	data/chars/jmaxp/sppp3.gif
+      sound	data/sounds/beat2.wav
+      delay	2
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 108 45 1
+	frame	data/chars/jmaxp/sppp4.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 3.5 3 0 1
+      delay	23
+     	frame	data/chars/jmaxp/sppp4.gif
+      delay	7
+      frame	data/chars/jmaxp/sppp3.gif
+      frame	data/chars/jmaxp/aaaaa2.gif
+      frame	data/chars/jmaxp/aaaaa1.gif
+
+anim follow4
+      loop	1
+	delay	5
+      offset	75 170
+      cancel 1 3 0 A2 freespecial14
+      @cmd bind 1 65 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 B A freespecial17
+      cancel 0 3 0 J freespecial18
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+
+anim follow5
+      loop	1
+	delay	5
+      offset	75 170
+      cancel 1 3 0 A2 freespecial15
+      @cmd bind 1 65 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 B A freespecial17
+      cancel 0 3 0 J freespecial18
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+      frame	data/chars/jmaxp/grab2.gif
+
+anim freespecial16
+      loop	0
+	delay	18
+      offset	75 170
+      attackone 0
+      jumpframe 1 4 2 0 dus
+      landframe 8 du
+      quakeframe 8 4 7
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart2
+      @cmd    position 32 62 1 0 1
+      frame	data/chars/jmaxp/grab4.gif
+      delay	8
+      sound	data/chars/jmaxp/at3.wav
+      @cmd    position 33 69 24 0 1
+      frame	data/chars/jmaxp/grab5.gif
+      frame	data/chars/jmaxp/grab5.gif
+      @cmd    position 33 69 24 0 1
+      frame	data/chars/jmaxp/grab5.gif
+      @cmd    degravity -0.27
+      frame	data/chars/jmaxp/grab5.gif
+      @cmd    position 33 79 15 0 1
+      delay	7
+      frame	data/chars/jmaxp/grab6.gif
+      @cmd    dasher 2 -3 0
+      frame	data/chars/jmaxp/grab6.gif
+      delay	20
+      @cmd    position 33 80 -23 0 1
+      frame	data/chars/jmaxp/grab7.gif
+      attack10 75 110 100 45 5 1 1 1
+      dropv 2 1.5
+      delay	8
+      @cmd    hurt 25
+      @cmd    position 34 81 1 0 1
+      frame	data/chars/jmaxp/grab7.gif
+      @cmd    antiwall 20 -20 -1
+      @cmd    antiwall 0 -40 -1
+      frame	data/chars/jmaxp/grab7.gif
+      attack10   0 0 0 0 0 0
+      @cmd    antiwall 20 -20 -1
+      @cmd    antiwall 0 -40 -1
+      frame	data/chars/jmaxp/grab7.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 1
+      frame	data/chars/jmaxp/grab7.gif
+      delay	12
+      frame	data/chars/jmaxp/jl2.gif
+      frame	data/chars/jmaxp/jl1.gif
+
+anim freespecial17
+	loop	0
+	delay	20
+      offset	124 170
+      flipframe 0
+      @cmd    slamstart2
+      @cmd    position 31 -65 1 0 1
+      frame	data/chars/jmaxp/ggrab4.gif
+      sound	data/sounds/air3.wav
+      delay	9
+      @cmd    position 35 -45 49 0 1
+      frame	data/chars/jmaxp/ggrab8.gif
+      sound	data/chars/jmaxp/at6.wav
+      delay	7
+      @cmd    position 36 -20 119 0 1
+      frame	data/chars/jmaxp/ggrab9.gif
+      delay	4
+      @cmd    hurt 25
+      @cmd    position 17 58 60 0 1
+      frame	data/chars/jmaxp/ggrab10.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 3.5 2.5 0 0
+      frame	data/chars/jmaxp/ggrab10.gif
+      delay	31
+      frame	data/chars/jmaxp/ggrab10.gif
+
+anim freespecial18
+	loop	0
+      offset	75 170
+	delay 9
+      quakeframe 3 3 3
+      @cmd    slamstart2
+      @cmd    position 29 65 0 -1 1
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/sppp0.gif
+      delay	6.5
+      sound	data/chars/jmaxp/at9.wav
+      frame	data/chars/jmaxp/sppp2.gif
+	frame	data/chars/jmaxp/sppp3.gif
+      sound	data/sounds/beat2.wav
+      delay	2
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 108 45 1
+	frame	data/chars/jmaxp/sppp4.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 3.5 3 0 1
+      delay	23
+     	frame	data/chars/jmaxp/sppp4.gif
+      delay	7
+      frame	data/chars/jmaxp/sppp3.gif
+      frame	data/chars/jmaxp/aaaaa2.gif
+      frame	data/chars/jmaxp/aaaaa1.gif
+
+anim  freespecial19
+      loop	0
+      delay	12
+      offset	75 170
+      followcond 2
+      followanim 9
+      otg 1
+      jumpframe 1 6 3 0 dus
+      landframe 18 du
+      quakeframe 18 4 7
+      hitfx   data/sounds/go.wav
+      frame	data/chars/jmaxp/sp1.gif
+      delay	4
+      sound	data/chars/jmaxp/at8.wav
+      frame	data/chars/jmaxp/sp2.gif
+      frame	data/chars/jmaxp/sp2.gif
+      frame	data/chars/jmaxp/sp3.gif
+      attack  100 60 60 200 0 0 1 1
+      noreflect 1
+      frame	data/chars/jmaxp/sp3.gif
+      frame	data/chars/jmaxp/sp4.gif
+      frame	data/chars/jmaxp/sp4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/sp5.gif
+      frame	data/chars/jmaxp/sp5.gif
+      @cmd    anichange "ANI_FOLLOW8"
+      @cmd    dasher 3 -3 0
+      attack  44 59 106 99 15 0 1 0 40
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp7.gif
+      frame	data/chars/jmaxp/sp8.gif
+      sound	data/sounds/air3.wav
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/sp9.gif
+      frame	data/chars/jmaxp/sp10.gif
+      frame	data/chars/jmaxp/sp7.gif
+      attack  44 59 106 99 15 0 1 0 40
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp8.gif
+      attack 0 0 0 0 0 0
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/sp9.gif
+      attack  44 59 106 99 15 1 1 0 25
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp10.gif
+      delay	40
+      frame	data/chars/jmaxp/sp7.gif
+      attack 0 0 0 0 0 0
+      delay	10
+      offset	75 160
+      sound	data/sounds/beat3.wav
+      attack  44 59 106 99 15 1 1 0 25
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp6.gif
+      attack 0 0 0 0 0 0
+      offset	75 165
+      frame	data/chars/jmaxp/sp5.gif
+      offset	75 170
+      frame	data/chars/jmaxp/sp3.gif
+      delay	8
+      sound	data/sounds/step.wav
+      bbox	55 78 47 80
+      frame	data/chars/jmaxp/jl1.gif
+      delay	16
+      frame	data/chars/jmaxp/jl2.gif
+      delay	8
+      frame	data/chars/jmaxp/jl1.gif
+
+anim  follow9
+      loop	0
+      delay	4
+      offset	75 170
+      otg 1
+      jumpframe 0 6 2 0
+      landframe 13 du
+      quakeframe 13 4 7
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmaxp/sp4.gif
+      frame	data/chars/jmaxp/sp4.gif
+      frame	data/chars/jmaxp/sp5.gif
+      frame	data/chars/jmaxp/sp5.gif
+      @cmd    dasher 2 -3 0
+      attack  44 59 106 99 15 0 1 0 40
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp7.gif
+      frame	data/chars/jmaxp/sp8.gif
+      sound	data/sounds/air3.wav
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/sp9.gif
+      frame	data/chars/jmaxp/sp10.gif
+      frame	data/chars/jmaxp/sp7.gif
+      attack  44 59 106 99 15 0 1 0 40
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp8.gif
+      attack 0 0 0 0 0 0
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/sp9.gif
+      attack  44 59 106 99 15 1 1 0 25
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp10.gif
+      delay	40
+      frame	data/chars/jmaxp/sp7.gif
+      attack 0 0 0 0 0 0
+      delay	10
+      offset	75 160
+      sound	data/sounds/beat3.wav
+      attack  44 59 106 99 15 1 1 0 25
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp6.gif
+      attack 0 0 0 0 0 0
+      offset	75 165
+      frame	data/chars/jmaxp/sp5.gif
+      offset	75 170
+      frame	data/chars/jmaxp/sp3.gif
+      delay	8
+      sound	data/sounds/step.wav
+      bbox	55 78 47 80
+      frame	data/chars/jmaxp/jl1.gif
+      delay	16
+      frame	data/chars/jmaxp/jl2.gif
+      delay	8
+      frame	data/chars/jmaxp/jl1.gif
+ 
+anim  follow8
+      loop	0
+      delay	4
+      offset	75 170
+      otg 1
+      jumpframe 0 0 3 0
+      landframe 10 du
+      quakeframe 10 4 7
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmaxp/sp5.gif
+      @cmd    dasher 3 -3 0
+      attack  44 59 106 99 15 0 1 0 40
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp7.gif
+      frame	data/chars/jmaxp/sp8.gif
+      sound	data/sounds/air3.wav
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/sp9.gif
+      frame	data/chars/jmaxp/sp10.gif
+      frame	data/chars/jmaxp/sp7.gif
+      attack  44 59 106 99 15 0 1 0 40
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp8.gif
+      attack 0 0 0 0 0 0
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/sp9.gif
+      attack  44 59 106 99 15 1 1 0 25
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp10.gif
+      delay	40
+      frame	data/chars/jmaxp/sp7.gif
+      attack 0 0 0 0 0 0
+      delay	10
+      offset	75 160
+      sound	data/sounds/beat3.wav
+      attack  44 59 106 99 15 1 1 0 25
+      dropv 1.5 1.5
+      frame	data/chars/jmaxp/sp6.gif
+      attack 0 0 0 0 0 0
+      offset	75 165
+      frame	data/chars/jmaxp/sp5.gif
+      offset	75 170
+      frame	data/chars/jmaxp/sp3.gif
+      delay	8
+      sound	data/sounds/step.wav
+      bbox	55 78 47 80
+      frame	data/chars/jmaxp/jl1.gif
+      delay	16
+      frame	data/chars/jmaxp/jl2.gif
+      delay	8
+      frame	data/chars/jmaxp/jl1.gif
+
+anim  freespecial20
+      loop	0
+      delay	12
+      offset	75 170
+      jumpframe 1 4 4 0 dus
+      landframe 13 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmaxp/jl1.gif
+      delay	4
+      sound	data/chars/jmaxp/at1.wav
+      attack13  75 90 45 40 15 0 0 0 40
+      forcedirection -1
+      dropv 2 3.5
+      frame	data/chars/jmaxp/fsu1.gif
+      frame	data/chars/jmaxp/fsu1.gif
+      attack13 0 0 0 0 0 0
+      frame	data/chars/jmaxp/fsu2.gif
+      attack  75 80 45 50 20 1 0 0 40
+      forcedirection -1
+      dropv 2 3.5
+      frame	data/chars/jmaxp/fsu2.gif
+      frame	data/chars/jmaxp/fsu2.gif
+      frame	data/chars/jmaxp/fsu2.gif
+      frame	data/chars/jmaxp/fsu2.gif
+      frame	data/chars/jmaxp/fsu2.gif
+      frame	data/chars/jmaxp/fsu2.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmaxp/sp3.gif
+      frame	data/chars/jmaxp/sp3.gif
+      delay	40
+      @cmd    degravity -1
+      frame	data/chars/jmaxp/fsu4.gif
+      @cmd    degravity -0.27
+      delay	8
+      sound	data/sounds/step.wav
+      frame	data/chars/jmaxp/jl1.gif
+      bbox	55 78 47 80
+      frame	data/chars/jmaxp/jl2.gif
+      frame	data/chars/jmaxp/jl1.gif
+
+anim freespecial21
+      loop	0
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      sound	data/sounds/air3.wav
+      hitfx   data/sounds/beat2.wav
+	delay	7
+      frame	data/chars/jmaxp/aaaaa1.gif
+      frame	data/chars/jmaxp/aaaaa2.gif
+      sound	data/chars/jmaxp/at5.wav
+      blast  80 95 80 45 15 0 0 12
+	frame	data/chars/jmaxp/aaaaa4.gif
+      delay	25
+      blast	0 0 0 0 0 0
+	frame	data/chars/jmaxp/aaaaa4.gif
+      delay	7
+      frame	data/chars/jmaxp/aaaaa3.gif
+      frame	data/chars/jmaxp/aaaaa1.gif
+
+anim freespecial22
+	loop	0
+	delay	2
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmaxp/a2.gif
+      move 2
+      frame	data/chars/jmaxp/a2.gif
+      frame	data/chars/jmaxp/a2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmaxp/a2.gif
+      frame	data/chars/jmaxp/a3.gif
+      frame	data/chars/jmaxp/a3.gif
+      frame	data/chars/jmaxp/a3.gif
+      sound	data/chars/jmaxp/at6.wav
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a6.gif
+      attack  80 40 65 70 15 1 0 0 10
+      dropv 3.5 1.3
+      frame	data/chars/jmaxp/a7.gif
+      delay	3
+      frame	data/chars/jmaxp/a7.gif
+      delay	10
+      attack	0 0 0 0 0 0
+      move 1
+      frame	data/chars/jmaxp/a7.gif
+      frame	data/chars/jmaxp/a7.gif
+      move 0
+      delay	7
+      frame	data/chars/jmaxp/a6.gif
+      frame	data/chars/jmaxp/a1.gif
+
+
+
+

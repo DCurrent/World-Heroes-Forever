@@ -1,0 +1,16 @@
+name	 endd
+type	 endlevel
+shadow	 0
+offscreenkill  2500
+subject_to_wall 0
+subject_to_obstacle 0
+subject_to_platform 0
+
+anim idle
+	loop	0
+	delay	1000
+	offset	280 210
+	frame	data/chars/misc/empspa.gif
+
+
+

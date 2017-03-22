@@ -1,0 +1,43 @@
+name	kbfl
+type	none
+shadow	0
+toflip 1
+
+anim idle
+	loop	0
+	delay	2.5
+	offset	50 117
+	frame	data/chars/misc/kbfl1.gif
+	frame	data/chars/misc/kbfl2.gif
+	frame	data/chars/misc/kbfl3.gif
+	frame	data/chars/misc/kbfl4.gif
+      frame	data/chars/misc/kbfl5.gif
+      frame	data/chars/misc/kbfl6.gif
+      frame	data/chars/misc/kbfl7.gif
+      frame	data/chars/misc/kbfl8.gif
+      frame	data/chars/misc/kbfl9.gif
+      frame	data/chars/misc/kbfl10.gif
+      frame	data/chars/misc/kbfl11.gif
+      frame	data/chars/misc/kbfl12.gif
+      frame	data/chars/misc/kbfl13.gif
+      frame	data/chars/misc/kbfl14.gif
+      frame	data/chars/misc/kbfl15.gif
+      frame	data/chars/misc/kbfl16.gif
+      frame	data/chars/misc/kbfl17.gif
+      frame	data/chars/misc/kbfl18.gif
+      frame	data/chars/misc/kbfl19.gif
+      frame	data/chars/misc/kbfl20.gif
+      frame	data/chars/misc/kbfl21.gif
+      frame	data/chars/misc/kbfl22.gif
+      frame	data/chars/misc/kbfl23.gif
+      frame	data/chars/misc/kbfl24.gif
+      delay	5
+      frame	data/chars/misc/kbfl25.gif
+      frame	data/chars/misc/kbfl26.gif
+      frame	data/chars/misc/kbfl27.gif
+      frame	data/chars/misc/kbfl28.gif
+      frame	data/chars/misc/kbfl29.gif
+      frame	data/chars/misc/kbfl30.gif
+
+
+

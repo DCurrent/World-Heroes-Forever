@@ -1,0 +1,31 @@
+name	   time
+health	   0
+type	   item
+shadow	0
+facing     1
+nolife   1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	13 25
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/time.gif
+      delay	50
+      frame	data/sprites/aniback/time.gif
+      delay	5
+      frame	data/sprites/aniback/time.gif
+      offset	6 16
+      frame	data/sprites/aniback/time.gif
+
+anim idle
+	loop	1
+	delay	100
+	offset	13 25
+	bbox	7 6 13 14
+	frame	data/sprites/aniback/time.gif
+      delay	4
+	frame	data/sprites/aniback/time1.gif
+
+

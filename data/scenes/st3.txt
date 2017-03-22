@@ -1,0 +1,6 @@
+music           data/music/st3.bor
+animation	data/scenes/st3.gif 0 0 0 1
+music           data/music/sst.bor
+animation	data/scenes/sst3.gif 0 0 0 1
+
+

@@ -1,0 +1,82 @@
+name	barelex1
+type    obstacle
+shadow  0
+gfxshadow  1
+health  1
+nodrop 1
+diesound  data/sounds/bar.wav
+nolife  1
+flash   obfla
+noatflash 1
+nodieblink 2
+offscreenkill  2000
+
+load expl
+
+anim idle
+	loop	0
+	delay	5
+	offset	98 140
+	bbox    70 60 55 80
+      platform   65 145 0 0 70 70 13 70
+	frame	data/chars/misc/bar1.gif
+	
+anim death
+	loop	0
+	delay	10
+	offset	98 140
+      spawnframe 18 0 0 0 0
+	subentity expl
+      jumpframe 20 7 0.5 0
+	landframe 21
+      platform   65 145 0 0 70 70 13 70
+	frame data/chars/misc/bar1
+	frame data/chars/misc/bar3
+	delay 9
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 8
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 7
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 6
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 5
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 4
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 3
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 2
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 1
+	frame data/chars/misc/bar1   
+	frame data/chars/misc/bar3
+	delay 1000
+	sound data/sounds/bar.wav
+	platform 0 0 0 0 0 0
+	frame data/chars/misc/bar2
+	delay 5
+	movea 5
+	sound data/sounds/indirect.wav
+	frame data/chars/misc/bar2
+	frame data/chars/misc/empty
+	frame data/chars/misc/bar2
+	frame data/chars/misc/empty
+	frame data/chars/misc/bar2
+	frame data/chars/misc/empty
+	frame data/chars/misc/bar2
+
+
+
+
+
+
+

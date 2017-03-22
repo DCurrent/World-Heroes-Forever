@@ -1,0 +1,210 @@
+music		data/music/1-1.bor
+
+background	data/levels/usa/bg_3.png
+#bglayer 	{path} 			{xratio} {zratio} {xposition} {zposition} {xspacing} {zspacing} {xrepeat} {zrepeat} {transparency} {alpha} {watermode} {amplitude} {wavelength} {wavespeed} {bgspeedratio}
+bglayer 	data/levels/usa/bg_2.png        0.4     0.4      0           0           0          0      -1        1        1
+bglayer 	data/levels/usa/bg_1.png        0.2     0.2      0           10          0         0       -1        1        1
+fglayer		data/levels/usa/bg_0_b.png -150 0       0        0           -4          0        0        1         1        6              1
+panel	        data/levels/usa/bg_0.png
+order           a
+bgspeed	    	1
+
+direction both
+cameraoffset 0 -100
+
+#Note: Palette switch is time based. The script is called by "worker" model. 
+palette data/levels/usa/usa1_1.act 1
+palette data/levels/usa/usa1_2.act 1
+palette data/levels/usa/usa1_3.act 1
+palette data/levels/usa/usa1_4.act 1
+palette data/levels/usa/usa1_5.act 1
+palette data/levels/usa/usa1_6.act 1
+palette data/levels/usa/usa1_7.act 1
+palette data/levels/usa/usa1_8.act 1
+palette data/levels/usa/usa1_9.act 1
+palette data/levels/usa/usa1_10.act 1
+
+spawn1 110 20 
+spawn2 120 40
+
+#----------pickups
+
+spawn	work
+coords	280 170
+at	0
+
+spawn	work2
+coords	630 170
+at	0
+
+spawn	work3
+coords	1400 160
+at	0
+
+spawn	work4
+coords	1080 170
+at	0
+
+spawn	bare
+flip 1
+item  ring
+coords	228 268
+at	0
+
+spawn	obstach
+coords	1470 268
+at	0
+
+spawn	obstacg
+flip 1
+item  susi
+coords	1166 198
+at	0
+
+spawn	bar
+coords	1235 198
+at	0
+
+spawn	obstacg
+flip 1
+item  pizza
+coords	1695 198
+at	0
+
+spawn	obstach
+flip 1
+item  diamond
+coords	758 268
+at	0
+
+spawn	obstach
+flip 1
+coords	758 268 65
+at	0
+
+spawn	obstach
+flip 1
+coords	696 268
+at	0
+
+blockade 280
+at	280
+
+spawn	ray
+Health 50
+coords	580 230
+at	260
+
+spawn	ray
+Health 50
+map 2
+coords	600 200
+at	280
+
+wait
+at 480
+
+Group	2 3
+at	480
+
+blockade 480
+at	480
+
+spawn	ray
+Health 70
+map 3
+coords	550 220
+at	480
+
+spawn	matlock
+Health 60
+map 1
+coords	550 200
+at	480
+
+spawn	ray
+Health 50
+flip 1
+coords	-100 245
+at	480
+
+Group	100 100
+at	790
+
+blockade 790
+at	790
+
+spawn	ray
+Health 50
+map 1
+coords	550 250
+at	790
+
+spawn	yungmie
+Health 70
+coords	580 220
+at	825
+
+wait
+at 1150
+
+spawn	ray
+Health 70
+map 2
+flip 1
+coords	-100 200
+at	1150
+
+spawn	matlock
+Health 70
+map 5
+coords	560 220
+at	1150
+
+blockade 1150
+at	1150
+
+Group	2 4
+at	1240
+
+blockade 1240
+at	1240
+
+spawn	yungmie
+Health 70
+map 3
+coords	550 240
+at 1240
+
+spawn	matlock
+Health 70
+flip 1
+coords	-100 230
+at	1240
+
+spawn	ray
+Health 70
+map 3
+coords	-80 250
+at	1240
+
+spawn	ray
+Health 50
+map 3
+coords	580 220
+at	1240
+
+spawn	yungmie
+Health 70
+map 1
+coords	590 235
+at 1240
+
+spawn	matlock
+Health 70
+map 9
+flip 1
+coords	-80 250
+at	1240
+
+

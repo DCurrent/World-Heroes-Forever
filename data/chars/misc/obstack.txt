@@ -1,0 +1,33 @@
+name	obstack
+type    obstacle
+shadow  0
+gfxshadow  1
+health  14
+diesound  data/sounds/obst.wav
+nolife  1
+flash   obfla
+noatflash 1
+offscreenkill  2000
+
+
+anim idle
+	loop	0
+	delay	5
+	offset	113 150
+	bbox    85 90 57 62
+      drawmethod 236 236 0 0 0 0 0
+      platform   78 157 0 0 70 70 12 70
+	frame	data/chars/misc/obstack1.gif
+
+	
+anim fall
+	loop	0
+	delay	5
+	offset	113 150
+      drawmethod 236 236 0 0 0 0 0
+	frame	data/chars/misc/obstack2.gif
+      frame	data/chars/misc/obstack3.gif
+
+
+
+

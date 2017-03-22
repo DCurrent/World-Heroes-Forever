@@ -1,0 +1,69 @@
+// 2016-07-01 Working on alert logs and such.
+void dc_errors_set_argument(char key, void value)
+{
+    array = getlocalvar("error_function_params")
+
+    // Set array cursor to first element.
+    reset(array);
+
+	do
+    {
+        if(key == key())
+
+		set(array, key(), value);
+
+        // Move to next element.
+		cursor = next(array);
+
+	} while(cursor);
+
+	// Destroy array.
+	free(array);
+}
+
+void dc_vars_error_log()
+{
+    void    array;      // Array handle.
+    int     cursor;     // Array cursor.
+    int     type;       // Var type.
+    char    type_str;   // Var type as readable string.
+
+    array = getlocalvar("error_function_params")
+
+    // Set array cursor to first element.
+    reset(array);
+
+	do
+    {
+        // We use the argument's name as array key,
+        // to log the argument's name, we just
+        // need to print the key.
+        log("\n\n");
+        log(key());
+
+        // Get the argument's var type and convert
+        // to a human readable string so we can
+        // add the type to log.
+        type        = typeof(value);
+        type_str    = dc_vars_type_to_string(type);
+
+        log("\n -- Type: ");
+        log(type_str);
+
+        // Now print the value itself to log.
+        log("\n -- Value: ");
+        log(entity);
+
+        // Clear this element. There's no
+        // reason to keep elements we're
+        // only using for log printing.
+		set(array, key(), NULL());
+
+        // Move to next element.
+		cursor = next(array);
+
+	} while(cursor);
+
+	// Destroy array.
+	free(array);
+}

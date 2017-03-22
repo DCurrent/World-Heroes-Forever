@@ -1,0 +1,2039 @@
+name	shura
+health	120
+speed	11
+type	player
+shadow  0
+gfxshadow  1
+throw         5 4.2
+throwframewait 1
+grabdistance	40
+grabback 0
+running 30	4.0	2	1	0
+icon	data/chars/shura/icon.gif
+jumpheight 4.0
+jumpspeed 14
+antigravity -27
+blockpain 1
+holdblock 1
+makeinv  0
+atchain       1 2 3 4
+com	A2	freespecial
+com   D  F  A  freespecial2
+com   D  B  A  freespecial3
+com  D  F  A2  freespecial18
+com  D  U  A2  freespecial19
+com  D  B  A2  freespecial20
+diesound	data/chars/shura/die.wav
+bflash bflash
+dust du dus dus
+projectilehit   obstacle
+hostile enemy 
+candamage enemy obstacle
+subject_to_wall 0
+
+palette   data/chars/shura/idle.gif
+alternatepal data/chars/shura/map5.gif
+alternatepal data/chars/shura/map4.gif
+alternatepal data/chars/shura/map2.gif
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+anim spawn
+	loop	0
+      delay	2
+      offset	70 170
+      frame	data/chars/shura/idle1.gif
+
+anim respawn
+	loop	0
+      delay	3.5
+      offset	60 213
+      frame	data/chars/shura/spawn1.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn1.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn1.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn1.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn1.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn1.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn1.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn1.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn2.gif
+      delay	2.5
+      sound	data/sounds/spaw.wav
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/spawn2.gif
+      frame	data/chars/shura/spawn3.gif
+      frame	data/chars/shura/spawn4.gif
+      frame	data/chars/shura/spawn5.gif
+      frame	data/chars/shura/spawn6.gif
+      frame	data/chars/shura/spawn6.gif
+      frame	data/chars/shura/spawn6.gif
+      frame	data/chars/shura/spawn7.gif
+      frame	data/chars/shura/spawn8.gif
+      frame	data/chars/shura/spawn9.gif
+      frame	data/chars/shura/spawn10.gif
+      frame	data/chars/shura/spawn11.gif
+      frame	data/chars/shura/spawn12.gif
+      frame	data/chars/shura/spawn13.gif
+      frame	data/chars/shura/spawn14.gif
+      frame	data/chars/shura/spawn15.gif
+      frame	data/chars/shura/spawn16.gif
+      frame	data/chars/shura/spawn17.gif
+      frame	data/chars/shura/spawn18.gif
+      frame	data/chars/shura/spawn19.gif
+      frame	data/chars/shura/spawn20.gif
+      frame	data/chars/shura/spawn21.gif
+      frame	data/chars/shura/spawn22.gif
+      frame	data/chars/shura/spawn23.gif
+      frame	data/chars/shura/spawn24.gif
+      frame	data/chars/shura/spawn25.gif
+      frame	data/chars/shura/spawn26.gif
+      frame	data/chars/shura/spawn27.gif
+      frame	data/chars/shura/spawn28.gif
+      frame	data/chars/shura/spawn29.gif
+      frame	data/chars/shura/spawn30.gif
+      frame	data/chars/shura/spawn31.gif
+      frame	data/chars/shura/spawn32.gif
+      frame	data/chars/shura/spawn33.gif
+      frame	data/chars/shura/spawn34.gif
+      frame	data/chars/shura/spawn35.gif
+      frame	data/chars/shura/spawn36.gif
+      frame	data/chars/shura/spawn37.gif
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/shura/spawn38.gif
+      delay	4
+      frame	data/chars/shura/spawn39.gif
+      frame	data/chars/shura/spawn40.gif
+      frame	data/chars/shura/spawn41.gif
+
+anim waiting
+      loop	1
+	delay	10
+	offset	0 0
+      frame	data/chars/shura/waii1.gif
+      frame	data/chars/shura/waii2.gif
+      frame	data/chars/shura/waii3.gif
+      frame	data/chars/shura/waii4.gif
+
+anim SELECT
+	loop	0
+      delay	8
+	offset	0 0
+      sound	data/chars/shura/shura.wav
+      frame	data/chars/shura/wai1.gif
+      frame	data/chars/shura/wai2.gif
+      frame	data/chars/shura/wai2.gif
+      frame	data/chars/shura/wai2.gif
+      frame	data/chars/shura/wai2.gif
+      delay	8
+      frame	data/chars/shura/wai3.gif
+      sound	data/chars/shura/select.wav
+      frame	data/chars/shura/wai4.gif
+      frame	data/chars/shura/wai5.gif
+      frame	data/chars/shura/wai5.gif
+      frame	data/chars/shura/wai5.gif
+      frame	data/chars/shura/wai5.gif
+      frame	data/chars/shura/wai5.gif
+      frame	data/chars/shura/wai5.gif
+      frame	data/chars/shura/wai5.gif
+      frame	data/chars/shura/wai5.gif
+      frame	data/chars/shura/wai5.gif
+
+anim idle
+	loop	1
+	delay	10
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd    clearL
+      frame	data/chars/shura/idle.gif
+      frame	data/chars/shura/idle1.gif
+      frame	data/chars/shura/idle2.gif
+      frame	data/chars/shura/idle1.gif
+
+anim get
+      loop	0
+	delay	6
+      offset	70 170
+      frame	data/chars/shura/get46.gif
+      frame	data/chars/shura/get8.gif
+      delay	7
+      frame	data/chars/shura/get8.gif
+      frame	data/chars/shura/get46.gif
+
+anim walk
+	loop	1
+      delay   10
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/shura/w1.gif
+	frame	data/chars/shura/w2.gif
+	frame	data/chars/shura/w3.gif
+	frame	data/chars/shura/w4.gif
+
+anim run
+	loop	0
+      delay	9
+      offset	95 145
+      bbox	75 53 47 80
+      #include "data/scripts/run0001.h"
+      cancel 1 8 0 A2 freespecial7
+      frame	data/chars/shura/ru1.gif
+	frame	data/chars/shura/ru2.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/shura/ru3.gif
+	frame	data/chars/shura/ru4.gif
+      frame	data/chars/shura/ru1.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/shura/ru2.gif
+	frame	data/chars/shura/ru3.gif
+	frame	data/chars/shura/ru4.gif
+      sound	data/sounds/step.wav
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd run0001
+      frame	data/chars/shura/ru5.gif
+
+anim ATTACKUP
+	loop	0
+      delay	2
+      offset	70 120
+      bbox	55 75 40 40
+      movez -3
+      cancel 1 16 0 A2 freespecial9
+      cancel 1 16 0 A freespecial10
+      sound	data/sounds/dog.wav
+      frame	data/chars/shura/rud1.gif
+      frame	data/chars/shura/rud1.gif
+	frame	data/chars/shura/rud1.gif
+      frame	data/chars/shura/rud2.gif
+	frame	data/chars/shura/rud2.gif
+      frame	data/chars/shura/rud2.gif
+	frame	data/chars/shura/rud3.gif
+      frame	data/chars/shura/rud3.gif
+	frame	data/chars/shura/rud3.gif
+	frame	data/chars/shura/rud4.gif
+	frame	data/chars/shura/rud4.gif
+      frame	data/chars/shura/rud4.gif
+      frame	data/chars/shura/rud1.gif
+      frame	data/chars/shura/rud1.gif
+	frame	data/chars/shura/rud1.gif
+      frame	data/chars/shura/rud2.gif
+	frame	data/chars/shura/rud2.gif
+
+anim ATTACKDOWN 
+	loop	0
+      delay	2
+      offset	70 120
+      bbox	55 75 40 40
+      movez 3
+      cancel 1 16 0 A2 freespecial11
+      cancel 1 16 0 A freespecial12
+      sound	data/sounds/dog.wav
+      frame	data/chars/shura/rud1.gif
+      frame	data/chars/shura/rud1.gif
+	frame	data/chars/shura/rud1.gif
+      frame	data/chars/shura/rud2.gif
+	frame	data/chars/shura/rud2.gif
+      frame	data/chars/shura/rud2.gif
+	frame	data/chars/shura/rud3.gif
+      frame	data/chars/shura/rud3.gif
+	frame	data/chars/shura/rud3.gif
+	frame	data/chars/shura/rud4.gif
+	frame	data/chars/shura/rud4.gif
+      frame	data/chars/shura/rud4.gif
+      frame	data/chars/shura/rud1.gif
+      frame	data/chars/shura/rud1.gif
+	frame	data/chars/shura/rud1.gif
+      frame	data/chars/shura/rud2.gif
+	frame	data/chars/shura/rud2.gif
+
+anim RUNATTACK
+	loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      move 5
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/aa1.gif
+      frame	data/chars/shura/aa2.gif
+      sound	data/chars/shura/at3.wav
+      frame	data/chars/shura/aa3.gif
+      attack4 75 90 19 40 15 1 0 0 25 
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/shura/aa4.gif
+      delay	2
+      move 4
+	frame	data/chars/shura/aa4.gif
+      attack4 0 0 0 0 0 0
+      frame	data/chars/shura/aa5.gif
+      attack4 80 90 62 40 15 1 0 0 23 
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/aa5.gif
+	frame	data/chars/shura/aa5.gif
+	delay	3
+      frame	data/chars/shura/aa5.gif
+      attack4 0 0 0 0 0 0
+      move 3
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/a1.gif
+      frame	data/chars/shura/a1.gif
+      move 0
+      delay	5
+      frame	data/chars/shura/a1.gif
+
+
+anim pain
+	loop	0
+	delay	6
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/shura/pain1.gif
+	frame	data/chars/shura/pain2.gif
+	frame	data/chars/shura/pain1.gif
+
+anim pain3
+	loop	0
+	delay	2
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/shura/pain1.gif
+      offset	72 170
+	frame	data/chars/shura/pain1.gif
+      offset	68 170
+      sound	data/chars/shura/pain.wav
+	frame	data/chars/shura/pain1.gif
+      offset	72 170
+      frame	data/chars/shura/pain1.gif
+      offset	70 170
+      frame	data/chars/shura/pain1.gif
+      delay	3
+      move -4
+      frame	data/chars/shura/ppain1.gif
+      frame	data/chars/shura/ppain1.gif
+      frame	data/chars/shura/ppain1.gif
+      frame	data/chars/shura/ppain1.gif
+      frame	data/chars/shura/ppain1.gif
+      frame	data/chars/shura/ppain1.gif
+      frame	data/chars/shura/ppain1.gif
+      frame	data/chars/shura/ppain1.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/shura/bpain04.gif
+      offset	72 170
+	frame	data/chars/shura/bpain04.gif
+      offset	68 170
+	frame	data/chars/shura/bpain4.gif
+      offset	72 170
+      frame	data/chars/shura/bpain4.gif
+      offset	70 170
+      frame	data/chars/shura/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/shura/bpain02.gif
+      frame	data/chars/shura/bpain02.gif
+      frame	data/chars/shura/bpain2.gif
+      frame	data/chars/shura/bpain2.gif
+      frame	data/chars/shura/bpain02.gif
+      frame	data/chars/shura/bpain02.gif
+      frame	data/chars/shura/bpain2.gif
+      frame	data/chars/shura/bpain2.gif
+
+anim grabbed
+	loop	0
+	delay	6
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/shura/pain1.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	110 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+      sound	data/chars/shura/pain.wav
+	frame	data/chars/shura/fall01.gif
+	attack  54 85 72 50 5 1 1 1
+	frame	data/chars/shura/fall01.gif
+      bbox	55 78 80 57
+	frame	data/chars/shura/fall02.gif
+      bbox	0 0 0 0
+	frame	data/chars/shura/fall02.gif
+      delay   20
+	frame	data/chars/shura/fall03.gif
+	frame	data/chars/shura/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/shura/fall04.gif
+      bbox	0 0 0 0
+	delay   20
+	frame	data/chars/shura/fall04.gif
+
+anim fall5
+	loop	0
+      delay   10
+	offset	85 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+	frame	data/chars/shura/rjsla4.gif
+	frame	data/chars/shura/rjsla4.gif
+      offset	113 133
+      attack  54 85 72 50 20 1 1 1
+      bbox	55 78 80 57
+	frame	data/chars/shura/fall02.gif
+      bbox	0 0 0 0
+	frame	data/chars/shura/fall02.gif
+      delay   20
+	frame	data/chars/shura/fall03.gif
+	frame	data/chars/shura/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/shura/fall04.gif
+      bbox	0 0 0 0
+	delay   20
+	frame	data/chars/shura/fall04.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	90 145
+	frame	data/chars/shura/gsla3.gif
+      offset	70 170
+      frame	data/chars/shura/pain1.gif
+      offset	75 148
+      frame	data/chars/shura/rjsla4.gif
+      offset	95 170
+      frame	data/chars/shura/ffall04.gif
+      offset	75 143
+      frame	data/chars/shura/hsla2.gif
+      frame	data/chars/shura/hsla4.gif
+      offset	124 170
+      frame	data/chars/shura/pain11.gif
+      frame	data/chars/shura/pain22.gif
+      offset	100 140
+      frame	data/chars/shura/fall066.gif
+      offset	80 80
+      frame	data/chars/shura/dsla1.gif
+      offset	185 170
+      frame	data/chars/shura/dsla2.gif
+      offset	195 170
+      frame	data/chars/shura/dsla2.gif
+      offset	117 80
+      frame	data/chars/shura/dsla11.gif
+      offset	165 198
+      frame	data/chars/shura/pain22.gif
+      offset	124 170
+      frame	data/chars/shura/ppain11.gif
+      offset	105 170
+      frame	data/chars/shura/gfall01.gif
+      offset	105 120
+      frame	data/chars/shura/gfall04.gif
+      offset	112 145
+	frame	data/chars/shura/sla2.gif
+      offset	123 170
+      frame	data/chars/shura/sla3.gif
+      offset	70 170
+      frame	data/chars/shura/pain2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	110 138
+      landframe 3
+	frame	data/chars/shura/fall03.gif
+      bbox	60 100 50 30
+      frame	data/chars/shura/fall03.gif
+      bbox	0 0 0 0
+      offset	95 120
+      delay   100
+      frame	data/chars/shura/fall04.gif
+      delay   40
+	bbox	55 90 45 30
+	frame	data/chars/shura/fall04.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      sound	data/chars/shura/pain.wav
+	frame	data/chars/shura/fall06.gif
+	frame	data/chars/shura/fall06.gif
+	frame	data/chars/shura/fall07.gif
+	frame	data/chars/shura/fall07.gif
+      delay   20
+      offset	110 160
+	frame	data/chars/shura/fall03.gif
+	frame	data/chars/shura/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/shura/fall04.gif
+      bbox	0 0 0 0
+	delay   20
+	frame	data/chars/shura/fall04.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      sound	data/chars/shura/pain.wav
+	frame	data/chars/shura/fall01.gif
+	frame	data/chars/shura/fall01.gif
+	frame	data/chars/shura/fall02.gif
+	frame	data/chars/shura/fall02.gif
+      delay   20
+	frame	data/chars/shura/fall03.gif
+	frame	data/chars/shura/fall03.gif
+      delay   10
+      offset	95 120
+	frame	data/chars/shura/fall04.gif
+	delay   20
+	frame	data/chars/shura/fall04.gif
+
+anim fall16
+	loop	0
+      delay   4
+      offset	70 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+	frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif 
+	frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif
+      frame	data/chars/shura/ppain2.gif
+      frame	data/chars/shura/ppain22.gif
+      frame	data/chars/shura/ppain2.gif
+	delay   40
+	frame	data/chars/shura/ppain22.gif
+      delay   10
+      @cmd    degravity -0.27
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/shura/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/shura/fall04.gif
+	delay   20
+	frame	data/chars/shura/fall04.gif
+
+anim burn
+	loop	0
+      delay   6
+	offset	110 170
+      landframe 15
+      @cmd    degravity 0
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/shura/burn01.gif
+      sound	data/sounds/bur.wav
+	frame	data/chars/shura/burn1.gif
+      frame	data/chars/shura/burn01.gif
+	frame	data/chars/shura/burn1.gif
+	frame	data/chars/shura/burn02.gif
+	frame	data/chars/shura/burn2.gif
+      frame	data/chars/shura/burn02.gif
+	frame	data/chars/shura/burn2.gif
+      frame	data/chars/shura/burn03.gif
+      frame	data/chars/shura/burn3.gif
+	frame	data/chars/shura/burn03.gif
+      frame	data/chars/shura/burn3.gif
+      frame	data/chars/shura/burn03.gif
+      frame	data/chars/shura/burn3.gif
+      delay   40
+	frame	data/chars/shura/burn03.gif
+      @cmd    degravity -0.27
+      offset	95 120
+      delay   7
+	bbox	55 90 45 30
+	frame	data/chars/shura/burn4.gif
+      bbox	0 0 0 0
+      frame	data/chars/shura/burn04.gif
+      frame	data/chars/shura/burn4.gif
+	frame	data/chars/shura/fall04.gif
+
+anim rise
+	loop	0
+	offset	95 120
+	delay	7
+	frame	data/chars/shura/rise1.gif
+	frame	data/chars/shura/rise2.gif
+	frame	data/chars/shura/rise3.gif
+	frame	data/chars/shura/rise4.gif
+
+anim riseb
+	loop	0
+	offset	95 120
+      delay   25
+	frame	data/chars/shura/fall04.gif
+	delay	7
+	frame	data/chars/shura/rise1.gif
+	frame	data/chars/shura/rise2.gif
+	frame	data/chars/shura/rise3.gif
+	frame	data/chars/shura/rise4.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/shura/bl1.gif
+      frame	data/chars/shura/bl1.gif
+
+
+anim BLOCKPAIN
+      loop	0
+	delay	2
+	bbox	50 78 47 80
+      offset	73 170
+	frame	data/chars/shura/bl1.gif
+      offset	70 170
+      frame	data/chars/shura/bl1.gif
+      offset	67 170
+      frame	data/chars/shura/bl1.gif
+      offset	70 170
+      frame	data/chars/shura/bl1.gif
+      delay	3
+      move -4
+      frame	data/chars/shura/bl2.gif
+      frame	data/chars/shura/bl2.gif
+      frame	data/chars/shura/bl2.gif
+      frame	data/chars/shura/bl2.gif
+      frame	data/chars/shura/bl2.gif
+      
+
+anim attack1
+      loop	0
+	delay	1
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd ani0020 openborconstant("ANI_FOLLOW2") openborconstant("ANI_PAIN2")
+      @cmd ani0020 openborconstant("ANI_FOLLOW3") openborconstant("ANI_FOLLOW8")
+      sound	data/sounds/air6.wav
+      frame	data/chars/shura/a1.gif
+	frame	data/chars/shura/a2.gif
+      delay	7
+      attack  75 85 60 40 5 0
+	frame	data/chars/shura/a3.gif
+      delay	5
+      attack  0 0 0 0 0 0
+	frame	data/chars/shura/a3.gif
+      frame	data/chars/shura/a2.gif
+
+anim attack2
+      loop	0
+	delay	2
+      offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/air6.wav
+      frame	data/chars/shura/a1.gif
+	frame	data/chars/shura/a2.gif
+      sound	data/chars/shura/at3.wav
+      delay	7
+      attack  75 85 60 40 5 0
+	frame	data/chars/shura/a3.gif
+      delay	5
+      attack  0 0 0 0 0 0
+	frame	data/chars/shura/a3.gif
+      frame	data/chars/shura/a2.gif
+
+anim attack3
+	loop	0
+	delay	5
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat3.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/shura/a2.gif
+	frame	data/chars/shura/aaaaaa2.gif
+      delay	7
+      sound	data/chars/fuuma/at4.wav
+      attack2  75 85 60 40 5 0
+	frame	data/chars/shura/aaaaaa3.gif
+      attack2  0 0 0 0 0 0
+      frame	data/chars/shura/aaaaaa4.gif
+	frame	data/chars/shura/aaaaaa4.gif
+      frame	data/chars/shura/aaaaaa1.gif
+
+
+anim attack4
+	loop	0
+	delay	2
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      move 2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/shura/aaa1.gif
+      frame	data/chars/shura/aaa1.gif
+      sound	data/chars/shura/at2.wav
+      frame	data/chars/shura/aaa2.gif
+      frame	data/chars/shura/aaa3.gif
+      attack  80 70 42 50 15 1 0 0 10
+      frame	data/chars/shura/aaa4.gif
+      move 1
+      delay	3
+      frame	data/chars/shura/aaa5.gif
+      delay	10
+	attack	0 0 0 0 0 0
+      frame	data/chars/shura/aaa5.gif
+      frame	data/chars/shura/aaa5.gif
+      move 0
+      delay	7
+      frame	data/chars/shura/a2.gif
+
+anim  special
+      loop	0
+	delay	9
+      offset	70 170
+      jumpframe 1 3.5 0 0 dus
+      landframe 11 dus
+      frame	data/chars/shura/j1.gif
+      sound	data/sounds/jump.wav
+      delay	8
+      frame	data/chars/shura/j2.gif
+      sound	data/chars/shura/select.wav
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/jaf5.gif
+      sound	data/sounds/air3.wav
+      attack  1 100 75 50 15 1 1 0 30
+      frame	data/chars/shura/jaa3.gif 
+      attack	0 0 0 0 0 0
+      frame	data/chars/shura/jaf1.gif 
+      frame	data/chars/shura/jaf2.gif
+      sound	data/sounds/air3.wav
+      attack  90 100 75 50 15 1 1 0 20
+      frame	data/chars/shura/jaf3.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/shura/jaf4.gif
+      frame	data/chars/shura/jaf5.gif
+      delay	20
+      frame	data/chars/shura/j2.gif
+      delay	6
+      sound	data/sounds/step.wav
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+
+anim JUMPDELAY
+      loop	0
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/shura/j1.gif
+
+anim JUMPLAND
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/step.wav
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+
+anim jump
+	loop	0
+	delay	4
+      offset	70 170
+      bbox	50 68 47 80
+      cancel 1 12 0 A2 freespecial4
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/j3.gif
+      frame	data/chars/shura/j3.gif
+      frame	data/chars/shura/j4.gif
+      frame	data/chars/shura/j4.gif
+      frame	data/chars/shura/j4.gif
+      frame	data/chars/shura/j3.gif
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/j2.gif
+
+anim FORWARDJUMP
+      loop	0
+	delay	9
+      offset	70 170
+      bbox	50 68 47 80
+      cancel 1 7 0 A2 freespecial5
+      frame	data/chars/shura/j2.gif
+      bbox	55 75 40 40
+      frame	data/chars/shura/jf1.gif
+      frame	data/chars/shura/jf2.gif
+      frame	data/chars/shura/jf3.gif
+      frame	data/chars/shura/jf4.gif
+      frame	data/chars/shura/jf5.gif
+      bbox	50 68 47 80
+      frame	data/chars/shura/jf6.gif
+      frame	data/chars/shura/j2.gif
+
+anim RUNJUMP
+      loop	0
+	delay	9
+      offset	70 170
+      bbox	50 68 47 80
+      cancel 1 7 0 A2 freespecial6
+      frame	data/chars/shura/j2.gif
+      bbox	55 75 40 40
+      frame	data/chars/shura/jf1.gif
+      frame	data/chars/shura/jf2.gif
+      frame	data/chars/shura/jf3.gif
+      frame	data/chars/shura/jf4.gif
+      frame	data/chars/shura/jf5.gif
+      bbox	50 68 47 80
+      frame	data/chars/shura/jf6.gif
+      frame	data/chars/shura/j2.gif
+
+anim jumpattack
+	loop	0
+	delay	8
+      offset	70 170
+      bbox	55 78 40 40
+      sound	data/chars/shura/at3.wav
+      frame	data/chars/shura/jpf1.gif
+      attack	75 93 55 45 12 1 0 0 35
+      frame	data/chars/shura/jpf2.gif
+      frame	data/chars/shura/jpf2.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/shura/jpf1.gif
+      frame	data/chars/shura/j2.gif
+
+
+anim JUMPFORWARD
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	55 78 40 40
+      sound	data/chars/shura/at3.wav
+      frame	data/chars/shura/jpf1.gif
+      attack	75 93 55 45 12 1 0 0 35
+      frame	data/chars/shura/jpf2.gif
+      frame	data/chars/shura/jpf2.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/shura/jpf1.gif
+      frame	data/chars/shura/j2.gif
+
+anim grab
+	loop	0
+	delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      cancel 0 3 0 A2 freespecial13
+      cancel 0 3 0 B J  freespecial23
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+
+anim grabattack
+	loop	0
+      offset	70 170
+      delay	21
+      attackone 0
+      quakeframe 4 3 6
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart 
+      @cmd    position 0 -38 0 -1 1
+      sound	data/chars/shura/at5.wav
+      frame	data/chars/shura/th1.gif
+      delay	10
+      @cmd    position 1 -18 27 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th2.gif
+      delay	7
+      @cmd    position 2 35 22 -1 1
+      attack10 65 88 100 80 5 1 1 1
+      dropv 2 1.5
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    position 3 50 9 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    hurt 25
+      @cmd    position 4 95 -2 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 0
+      delay	6
+      attack10   0 0 0 0 0 0
+      frame	data/chars/shura/th3.gif
+      frame	data/chars/shura/ga1.gif
+
+anim grabattack2
+      loop	0
+      offset	70 170
+      delay	16
+      attackone 0
+      quakeframe 9 5 7
+      jumpframe 2 4 2 0 dus
+      landframe 10 dus
+      hitfx   data/sounds/indirect.wav
+      frame	data/chars/shura/grja1.gif
+      delay	8
+      sound	data/chars/shura/select.wav
+      @cmd    slamstart3
+      @cmd    position 0 5 20 0 1
+      frame	data/chars/shura/grja2.gif
+      @cmd    hurt 15
+      @cmd    position 0 5 20 0 1
+      sound	data/sounds/beat2.wav
+      frame	data/chars/shura/grja31.gif
+      frame	data/chars/shura/grja32.gif
+      frame	data/chars/shura/grja33.gif
+      @cmd    position 1 12 20 0 1
+      frame	data/chars/shura/grja4.gif
+      @cmd    position 2 7 7 0 1
+      frame	data/chars/shura/grja5.gif
+      offset	70 165
+      @cmd    position 3 5 0 0 1
+      sound	data/sounds/beat2.wav
+      attack10 65 110 100 45 5 1 1 1
+      dropv 2 1.5
+      @cmd    hurt 10
+      frame	data/chars/shura/grja61.gif
+      @cmd    dasher 3 -3.2 0
+      offset	70 160
+      frame	data/chars/shura/grja62.gif
+      delay	20
+      offset	70 155
+      @cmd    position 4 5 0 0 1
+      frame	data/chars/shura/grja63.gif
+      delay	8
+      frame	data/chars/shura/grja6.gif
+      frame	data/chars/shura/grja6.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 1.5 1.2 0 1
+      delay	2
+      offset	70 168
+      attack10   0 0 0 0 0 0
+      frame	data/chars/shura/jaf5.gif
+      frame	data/chars/shura/jaf5.gif
+      @cmd    anichange "ANI_FOLLOW11"
+      frame	data/chars/shura/jaf5.gif
+
+anim  grabbackward
+      loop	0
+      offset	70 170
+      delay	19
+      attackone 0
+      quakeframe 4 3 6
+      flipframe 0
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart 
+      @cmd    position 0 -38 0 -1 1
+      sound	data/chars/shura/at5.wav
+      frame	data/chars/shura/th1.gif
+      delay	9
+      @cmd    position 1 -18 27 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th2.gif
+      delay	7
+      @cmd    position 2 35 22 -1 1
+      attack10 65 88 100 80 5 1 1 1
+      dropv 2 1.5
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    position 3 50 9 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    hurt 25
+      @cmd    position 4 95 -2 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 0
+      delay	6
+      attack10   0 0 0 0 0 0
+      frame	data/chars/shura/th3.gif
+      frame	data/chars/shura/ga1.gif
+
+anim  freespecial
+	loop	0
+	delay	5
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat3.wav
+      @cmd ani0020 openborconstant("ANI_FOLLOW1") openborconstant("ANI_PAIN2")
+      cancel 6 7 1 A2 freespecial21
+      cancel 6 7 1 A freespecial22
+      sound	data/chars/shura/at3.wav
+      frame	data/chars/shura/aaaa1.gif
+	frame	data/chars/shura/aaaa2.gif
+      sound	data/sounds/air5.wav
+      delay	8
+      attack2  75 95 65 40 5 0
+	frame	data/chars/shura/aaaa3.gif
+      delay	6
+      attack2  0 0 0 0 0 0
+      frame	data/chars/shura/aaaa3.gif
+	frame	data/chars/shura/aaaa2.gif
+      frame	data/chars/shura/aaaa1.gif
+      delay	1
+      frame	data/chars/shura/idle.gif
+
+anim follow1
+      loop	0
+	delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      range -45 180
+      rangez -45 45
+      sound	data/sounds/air5.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/shura/aaaaa1.gif
+	frame	data/chars/shura/aaaaa2.gif
+      sound	data/chars/shura/at1.wav
+      blast  75 95 75 45 15 0 0 12
+	frame	data/chars/shura/aaaaa3.gif
+	frame	data/chars/shura/aaaaa4.gif
+      blast	0 0 0 0 0 0
+      frame	data/chars/shura/aaaaa5.gif
+
+anim follow2
+      loop	0
+      range 0 115
+      rangez -40 40
+      delay	2
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      move 2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/shura/aaa1.gif
+      frame	data/chars/shura/aaa1.gif
+      sound	data/chars/shura/at2.wav
+      frame	data/chars/shura/aaa2.gif
+      frame	data/chars/shura/aaa3.gif
+      attack  80 70 42 50 15 1 0 0 10
+      frame	data/chars/shura/aaa4.gif
+      move 1
+      delay	3
+      frame	data/chars/shura/aaa5.gif
+      delay	10
+	attack	0 0 0 0 0 0
+      frame	data/chars/shura/aaa5.gif
+      frame	data/chars/shura/aaa5.gif
+      move 0
+      delay	7
+      frame	data/chars/shura/a2.gif
+
+anim follow3
+      loop	0
+      range 10 70
+      rangez -3 18
+      delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      attackone 1
+      otg 2
+      cancel 4 6 1 A freespecial8
+      frame	data/chars/shura/a1.gif
+      frame	data/chars/shura/get2.gif
+      attack3  110 150 30 21 10 0 0 0 0 21
+      forcedirection 99
+      frame	data/chars/shura/get3.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/shura/get3.gif
+      frame	data/chars/shura/get2.gif
+      frame	data/chars/shura/get1.gif
+      frame	data/chars/shura/get1.gif
+
+anim  freespecial2
+      loop	0
+	delay	18
+      offset	70 170
+      followcond 1
+      followanim 6
+      jumpframe 1 0 4
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/shura/at7.wav
+      frame	data/chars/shura/j1.gif
+      delay	2
+	frame	data/chars/shura/fsp1.gif
+	frame	data/chars/shura/fsp1.gif
+      attack12  75 85 30 45 13 0 0 0 39
+      forcedirection -1
+      nokill 1
+      bbox	50 78 30 80
+	frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp3.gif
+	frame	data/chars/shura/fsp3.gif
+      frame	data/chars/shura/fsp1.gif
+      frame	data/chars/shura/fsp1.gif
+	frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp3.gif
+	frame	data/chars/shura/fsp3.gif
+      frame	data/chars/shura/fsp1.gif
+      frame	data/chars/shura/fsp1.gif
+	frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp3.gif
+	frame	data/chars/shura/fsp3.gif
+      frame	data/chars/shura/fsp1.gif
+      frame	data/chars/shura/fsp1.gif
+	frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp3.gif
+	frame	data/chars/shura/fsp3.gif
+      frame	data/chars/shura/fsp1.gif
+      frame	data/chars/shura/fsp1.gif
+	frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp2.gif
+      frame	data/chars/shura/fsp3.gif
+	frame	data/chars/shura/fsp3.gif
+      
+      
+
+anim follow6
+      loop	0
+	delay	4
+      offset	70 170
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      jumpframe 0 0 3
+      frame	data/chars/shura/fsp4.gif
+      frame	data/chars/shura/fsp4.gif
+	frame	data/chars/shura/fsp4.gif
+      frame	data/chars/shura/fsp4.gif
+      frame	data/chars/shura/fsp4.gif
+      frame	data/chars/shura/fsp5.gif
+      attack  75 85 60 40 15 1 0 0 46
+      forcedirection -1
+	frame	data/chars/shura/fsp5.gif
+      frame	data/chars/shura/fsp6.gif
+      frame	data/chars/shura/fsp7.gif
+      frame	data/chars/shura/fsp8.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/shura/fsp9.gif
+      frame	data/chars/shura/a2.gif
+
+anim  freespecial3
+      loop	0
+	delay	9
+      offset	70 170
+      followcond 1
+      followanim 7
+      jumpframe 2 0 4
+      hitfx   data/sounds/go.wav
+      @cmd conditionalflip
+      frame	data/chars/shura/j1.gif
+      delay	12
+      sound	data/chars/shura/at6.wav
+      frame	data/chars/shura/fsk1.gif
+      delay	2
+      bbox	60 78 30 80
+	frame	data/chars/shura/fsk2.gif
+	frame	data/chars/shura/fsk2.gif
+      attack12  85 85 30 45 2 0 1 1
+      noreflect 1
+      nokill 1
+	frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk4.gif
+	frame	data/chars/shura/fsk4.gif
+      frame	data/chars/shura/fsk2.gif
+      frame	data/chars/shura/fsk2.gif
+	frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk4.gif
+	frame	data/chars/shura/fsk4.gif
+      frame	data/chars/shura/fsk2.gif
+      frame	data/chars/shura/fsk2.gif
+	frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk4.gif
+	frame	data/chars/shura/fsk4.gif
+      frame	data/chars/shura/fsk2.gif
+      frame	data/chars/shura/fsk2.gif
+	frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk4.gif
+	frame	data/chars/shura/fsk4.gif
+      frame	data/chars/shura/fsk2.gif
+      frame	data/chars/shura/fsk2.gif
+	frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk3.gif
+      frame	data/chars/shura/fsk4.gif
+	frame	data/chars/shura/fsk4.gif
+
+anim follow7
+      loop	0
+	delay	5
+      followcond 1
+      followanim 10
+      offset	70 170
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      frame	data/chars/shura/fsk5.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/fsk6.gif
+	frame	data/chars/shura/fsk7.gif
+      delay	2
+      attack  70 85 65 40 25 1 0 0 45
+	frame	data/chars/shura/fsk8.gif
+      frame	data/chars/shura/fsk9.gif
+      frame	data/chars/shura/fsk10.gif
+      attack  0 0 0 0 0 0
+	frame	data/chars/shura/fsk11.gif
+      frame	data/chars/shura/fsk12.gif
+      frame	data/chars/shura/fsk13.gif
+      frame	data/chars/shura/fsk14.gif
+      frame	data/chars/shura/fsk15.gif
+      frame	data/chars/shura/a2.gif
+
+anim follow10
+      loop	0
+	delay	3
+      offset	70 170
+      hitfx   data/sounds/beat2.wav
+      jumpframe 12 4 -2
+      landframe 20 dus
+      frame	data/chars/shura/fsk8.gif
+      frame	data/chars/shura/fsk9.gif
+      sound	data/sounds/air3.wav
+      attack  70 85 65 40 25 1 0 0 45
+      frame	data/chars/shura/fsk10.gif
+	frame	data/chars/shura/fsk11.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/shura/fsk12.gif
+      frame	data/chars/shura/fsk13.gif
+      frame	data/chars/shura/fsk14.gif
+      frame	data/chars/shura/fsk15.gif
+      frame	data/chars/shura/fsk15.gif
+      frame	data/chars/shura/a2.gif
+      frame	data/chars/shura/a2.gif
+      frame	data/chars/shura/idle.gif
+	delay	9
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/jf6.gif
+      frame	data/chars/shura/jf5.gif
+      frame	data/chars/shura/jf4.gif
+      frame	data/chars/shura/jf3.gif
+      frame	data/chars/shura/jf2.gif
+      frame	data/chars/shura/jf1.gif
+      delay	40
+      frame	data/chars/shura/j2.gif
+      delay	10
+      sound	data/sounds/step.wav
+      frame	data/chars/shura/j1.gif
+
+
+anim  freespecial4
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	55 78 40 40
+      sound	data/chars/shura/at1.wav
+      frame	data/chars/shura/jaf1.gif
+      frame	data/chars/shura/jaf2.gif
+      attack	70 85 80 45 12 1 0 0 35
+      frame	data/chars/shura/jaf3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/shura/jaf4.gif
+      frame	data/chars/shura/jaf5.gif
+      frame	data/chars/shura/j2.gif
+
+
+anim  freespecial5
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	55 78 40 40
+      jumpframe 0 0 1.5
+      sound	data/chars/shura/at1.wav
+      frame	data/chars/shura/ja1.gif
+      attack	75 93 70 45 12 1 0 0 35
+      frame	data/chars/shura/ja3.gif
+      frame	data/chars/shura/ja3.gif
+      attack 0 0 0 0 0 0
+      delay	10
+      frame	data/chars/shura/ja1.gif
+      frame	data/chars/shura/j2.gif
+
+
+anim  freespecial6
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	55 78 40 40
+      jumpframe 0 0 3
+      sound	data/chars/shura/at1.wav
+      frame	data/chars/shura/ja1.gif
+      attack	75 93 70 45 12 1 0 0 35
+      frame	data/chars/shura/ja3.gif
+      frame	data/chars/shura/ja3.gif
+      attack 0 0 0 0 0 0
+      delay	10
+      frame	data/chars/shura/ja1.gif
+      frame	data/chars/shura/j2.gif
+
+
+anim  freespecial7
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      move 4
+      hitflash  ffla
+      sound	data/sounds/air3.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/shura/raa1.gif
+      frame	data/chars/shura/raa1.gif
+      sound	data/chars/shura/select.wav
+      attack 80 90 23 40 15 1 0 0 25
+      dropv 3 3
+      frame	data/chars/shura/raa2.gif
+      frame	data/chars/shura/raa2.gif
+      delay	2
+      move 3
+      attack 0 0 0 0 0 0
+	frame	data/chars/shura/raa3.gif
+      attack 80 90 62 40 15 1 0 0 23
+      dropv 3 3
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/shura/raa3.gif
+	delay	3
+	frame	data/chars/shura/raa4.gif
+      frame	data/chars/shura/raa4.gif
+      frame	data/chars/shura/raa5.gif
+      frame	data/chars/shura/raa5.gif
+	delay	10
+	frame	data/chars/shura/raa5.gif
+
+anim  freespecial8
+      loop	0
+      delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      attackone 1
+      otg 2
+      frame	data/chars/shura/get1.gif
+      frame	data/chars/shura/get1.gif
+      frame	data/chars/shura/get2.gif
+      attack3  110 150 30 21 10 0 0 0 0 21
+      forcedirection 99
+      frame	data/chars/shura/get3.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/shura/get3.gif
+      frame	data/chars/shura/get2.gif
+      frame	data/chars/shura/get1.gif
+      frame	data/chars/shura/a1.gif
+
+anim  freespecial9
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      movez -2
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/raa1.gif
+      frame	data/chars/shura/raa1.gif
+      sound	data/chars/shura/select.wav
+      attack 80 90 23 40 15 1 0 0 25
+      dropv 3 3
+      frame	data/chars/shura/raa2.gif
+      frame	data/chars/shura/raa2.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      movez -1
+	frame	data/chars/shura/raa3.gif
+      attack 80 90 62 40 15 1 0 0 23
+      dropv 3 3
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/shura/raa3.gif
+	delay	3
+	frame	data/chars/shura/raa4.gif
+      frame	data/chars/shura/raa4.gif
+      frame	data/chars/shura/raa5.gif
+      frame	data/chars/shura/raa5.gif
+	delay	10
+	frame	data/chars/shura/raa5.gif
+
+
+anim  freespecial10
+      loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      movez -2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/aa1.gif
+      frame	data/chars/shura/aa2.gif
+      sound	data/chars/shura/at3.wav
+      frame	data/chars/shura/aa3.gif
+      attack4 75 90 19 40 15 1 0 0 25 
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/shura/aa4.gif
+      delay	2
+      movez -1
+	frame	data/chars/shura/aa4.gif
+      attack4 0 0 0 0 0 0
+      frame	data/chars/shura/aa5.gif
+      attack4 80 90 62 40 15 1 0 0 23 
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/aa5.gif
+	frame	data/chars/shura/aa5.gif
+	delay	3
+      frame	data/chars/shura/aa5.gif
+      attack4 0 0 0 0 0 0
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/a1.gif
+      frame	data/chars/shura/a1.gif
+      move 0
+      delay	5
+      frame	data/chars/shura/a1.gif
+
+anim  freespecial11
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      movez 2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/raa1.gif
+      frame	data/chars/shura/raa1.gif
+      sound	data/chars/shura/select.wav
+      attack 80 90 23 40 15 1 0 0 25
+      dropv 3 3
+      frame	data/chars/shura/raa2.gif
+      frame	data/chars/shura/raa2.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      movez 1
+	frame	data/chars/shura/raa3.gif
+      attack 80 90 62 40 15 1 0 0 23
+      dropv 3 3
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      frame	data/chars/shura/raa3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/shura/raa3.gif
+	delay	3
+	frame	data/chars/shura/raa4.gif
+      frame	data/chars/shura/raa4.gif
+      frame	data/chars/shura/raa5.gif
+      frame	data/chars/shura/raa5.gif
+	delay	10
+	frame	data/chars/shura/raa5.gif
+
+
+anim  freespecial12
+      loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      movez 2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/aa1.gif
+      frame	data/chars/shura/aa2.gif
+      sound	data/chars/shura/at3.wav
+      frame	data/chars/shura/aa3.gif
+      attack4 75 90 19 40 15 1 0 0 25 
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/shura/aa4.gif
+      delay	2
+      movez 1
+	frame	data/chars/shura/aa4.gif
+      attack4 0 0 0 0 0 0
+      frame	data/chars/shura/aa5.gif
+      attack4 80 90 62 40 15 1 0 0 23 
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/aa5.gif
+	frame	data/chars/shura/aa5.gif
+	delay	3
+      frame	data/chars/shura/aa5.gif
+      attack4 0 0 0 0 0 0
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/aa5.gif
+      frame	data/chars/shura/a1.gif
+      frame	data/chars/shura/a1.gif
+      move 0
+      delay	5
+      frame	data/chars/shura/a1.gif
+
+anim freespecial13
+	loop	0
+	delay	4
+      offset	70 170
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      @cmd bind 1 40 -1 0 -1
+      frame	data/chars/shura/ga2.gif
+      sound	data/sounds/beat1.wav
+      frame	data/chars/shura/ga3.gif
+      @cmd    spawn01 "flas" 60 0 1
+      @cmd    hurt2 5
+      frame	data/chars/shura/ga4.gif
+      delay	14
+      frame	data/chars/shura/ga4.gif
+      delay	5
+      frame	data/chars/shura/ga3.gif
+      frame	data/chars/shura/ga2.gif
+      @cmd    anichange "ANI_FOLLOW4"
+      frame	data/chars/shura/ga2.gif
+
+anim freespecial14
+	loop	0
+	delay	4
+      offset	70 170
+      @cmd bind 0 40 -1 0 -1
+      frame	data/chars/shura/ga2.gif
+      sound	data/sounds/beat1.wav
+      frame	data/chars/shura/ga3.gif
+      @cmd    spawn01 "flas" 60 0 1
+      @cmd    hurt2 5
+      frame	data/chars/shura/ga4.gif
+      delay	14
+      frame	data/chars/shura/ga4.gif
+      delay	5
+      frame	data/chars/shura/ga3.gif
+      frame	data/chars/shura/ga2.gif
+      @cmd    anichange "ANI_FOLLOW5"
+      frame	data/chars/shura/ga2.gif
+
+anim freespecial15
+	loop	0
+	delay	4
+      offset	70 170
+      @cmd bind 0 40 -1 0 -1
+      frame	data/chars/shura/ga2.gif
+      sound	data/sounds/beat1.wav
+      frame	data/chars/shura/ga3.gif
+      @cmd    spawn01 "flas" 60 0 1
+      @cmd    hurt3 10  
+      frame	data/chars/shura/ga4.gif
+      delay	25
+      frame	data/chars/shura/ga4.gif
+      delay	6
+      frame	data/chars/shura/ga3.gif
+      frame	data/chars/shura/ga2.gif
+
+anim follow4
+      loop	1
+	delay	6
+      offset	70 170
+      cancel 0 3 0 A2 freespecial14
+      @cmd bind 1 40 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 J freespecial17
+      cancel 0 3 0 B J freespecial23
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+
+anim follow5
+      loop	1
+	delay	6
+      offset	70 170
+      cancel 0 3 0 A2 freespecial15
+      @cmd bind 1 40 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 J freespecial17
+      cancel 0 3 0 B J freespecial23
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+      frame	data/chars/shura/ga11.gif
+
+anim freespecial16
+	loop	0
+      offset	70 170
+      delay	21
+      attackone 0
+      quakeframe 4 3 6
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart2 
+      @cmd    position 0 -38 0 -1 1
+      @cmd    keyflip
+      sound	data/chars/shura/at5.wav
+      frame	data/chars/shura/th1.gif
+      delay	10
+      @cmd    position 1 -18 27 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th2.gif
+      delay	7
+      @cmd    position 2 35 22 -1 1
+      attack10 65 88 100 80 5 1 1 1
+      dropv 2 1.5
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    position 3 50 9 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    hurt 25
+      @cmd    position 4 95 -2 -1 1
+      @cmd    antiwall 30 -50 -1
+      @cmd    antiwall 50 -30 -1
+      frame	data/chars/shura/th3.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 0
+      delay	6
+      attack10   0 0 0 0 0 0
+      frame	data/chars/shura/th3.gif
+      frame	data/chars/shura/ga1.gif
+
+anim freespecial17
+      loop	0
+      offset	70 170
+      delay	16
+      attackone 0
+      quakeframe 9 5 7
+      jumpframe 2 4 2 0 dus
+      landframe 10 dus
+      hitfx   data/sounds/indirect.wav
+      frame	data/chars/shura/grja1.gif
+      delay	8
+      sound	data/chars/shura/select.wav
+      @cmd    slamstart4
+      @cmd    position 0 5 20 0 1
+      frame	data/chars/shura/grja2.gif
+      @cmd    hurt 15
+      @cmd    position 0 5 20 0 1
+      sound	data/sounds/beat2.wav
+      frame	data/chars/shura/grja31.gif
+      frame	data/chars/shura/grja32.gif
+      frame	data/chars/shura/grja33.gif
+      @cmd    position 1 12 20 0 1
+      frame	data/chars/shura/grja4.gif
+      @cmd    position 2 7 7 0 1
+      frame	data/chars/shura/grja5.gif
+      offset	70 165
+      @cmd    position 3 5 0 0 1
+      sound	data/sounds/beat2.wav
+      attack10 65 110 100 45 5 1 1 1
+      dropv 2 1.5
+      @cmd    hurt 10
+      frame	data/chars/shura/grja61.gif
+      @cmd    dasher 3 -3.2 0
+      offset	70 160
+      frame	data/chars/shura/grja62.gif
+      delay	20
+      offset	70 155
+      @cmd    position 4 5 0 0 1
+      frame	data/chars/shura/grja63.gif
+      delay	8
+      frame	data/chars/shura/grja6.gif
+      frame	data/chars/shura/grja6.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 1.5 1.2 0 1
+      delay	2
+      offset	70 168
+      attack10   0 0 0 0 0 0
+      frame	data/chars/shura/jaf5.gif
+      frame	data/chars/shura/jaf5.gif
+      @cmd    anichange "ANI_FOLLOW11"
+      frame	data/chars/shura/jaf5.gif
+
+anim freespecial18
+      loop	0
+      delay	14
+      offset	70 170
+      jumpframe 1 2 3 0 dus
+      landframe 18 dus
+      sound	data/chars/shura/at8.wav
+      frame	data/chars/shura/j1.gif
+      delay	5
+      frame	data/chars/shura/j2.gif
+      delay	6
+      frame	data/chars/shura/j3.gif
+      @cmd    degravity 1
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/fskk1.gif
+      attack	90 85 73 45 13 1 0 0 30
+      dropv 3 2
+      nokill 1
+      forcedirection -1
+      frame	data/chars/shura/fskk2.gif
+      delay	4
+      frame	data/chars/shura/fskk3.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/shura/fskk4.gif
+      delay	6
+      frame	data/chars/shura/fskk5.gif
+      attack4	93 93 70 45 15 1 0 0 20
+      dropv 2 1
+      nokill 0
+      forcedirection -1
+      staydown 150 150
+      frame	data/chars/shura/fskk6.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/fskk7.gif
+      @cmd    degravity 0
+      attack4	0 0 0 0 0 0
+      frame	data/chars/shura/fskk8.gif
+      frame	data/chars/shura/fskk9.gif
+      delay	3
+      frame	data/chars/shura/fskk10.gif
+      frame	data/chars/shura/fskk11.gif
+      frame	data/chars/shura/fskk12.gif
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/j2.gif
+      delay	40
+      frame	data/chars/shura/j2.gif
+      delay	2
+      move 4
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+
+anim freespecial19
+      loop	0
+      delay	12
+      offset	70 170
+      jumpframe 2 13 1 0 du
+      landframe 23 du
+      hitflash  ffla
+      hitfx   data/sounds/beat3.wav
+      sound	data/chars/shura/at9.wav
+      frame	data/chars/shura/j1.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/shura/fsu1.gif
+      delay	2
+      move 4
+      attack15 90 90 40 80 30 1 0 0 45
+      dropv 4 1
+      frame	data/chars/shura/fsu2.gif
+      frame	data/chars/shura/fsu3.gif
+      frame	data/chars/shura/fsu4.gif
+      frame	data/chars/shura/fsu2.gif
+      frame	data/chars/shura/fsu3.gif
+      frame	data/chars/shura/fsu4.gif
+      frame	data/chars/shura/fsu2.gif
+      frame	data/chars/shura/fsu3.gif
+      frame	data/chars/shura/fsu4.gif
+      move 0
+      frame	data/chars/shura/fsu2.gif
+      frame	data/chars/shura/fsu3.gif
+      frame	data/chars/shura/fsu4.gif
+      frame	data/chars/shura/fsu2.gif
+      frame	data/chars/shura/fsu3.gif
+      frame	data/chars/shura/fsu4.gif
+      frame	data/chars/shura/fsu2.gif
+      attack15	0 0 0 0 0 0
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/empty.gif
+      frame	data/chars/shura/empty.gif
+      @cmd    degravity -30
+      frame	data/chars/shura/empty.gif
+      delay	500
+      shadowcoords 999 999
+      frame	data/chars/shura/jf6.gif
+      delay	10
+      @cmd    degravity -0.27
+      sound	data/sounds/step.wav
+      frame	data/chars/shura/j1.gif
+
+anim  freespecial20
+      loop	0
+	delay	15
+      offset	70 170
+      followcond 1
+      followanim 8
+      jumpframe 3 2 4 0 dus
+      landframe 19 dus
+      hitfx   data/sounds/beat2.wav
+      @cmd conditionalflip
+      frame	data/chars/shura/grja2.gif
+      delay	7
+      sound	data/chars/shura/at10.wav
+      frame	data/chars/shura/grja1.gif
+      frame	data/chars/shura/grja2.gif
+      delay	3
+      @cmd    degravity 1
+      frame	data/chars/shura/grja4.gif
+      @cmd    degravity 0
+      frame	data/chars/shura/grja4.gif
+      frame	data/chars/shura/grja4.gif
+      delay	2
+      attack  70 80 24 50 13 0 0 0 40
+      nokill 1
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja3.gif 
+      frame	data/chars/shura/grja3.gif
+      frame	data/chars/shura/grja4.gif
+      frame	data/chars/shura/j3.gif
+      attack  0 0 0 0 0 0
+      delay	40
+      frame	data/chars/shura/j2.gif
+      delay	2
+      move 4
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+      frame	data/chars/shura/j1.gif
+
+anim  follow8
+      loop	0
+	delay	5
+      offset	70 170
+      followcond 1
+      followanim 9
+      landframe 7 dus
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/shura/grja4.gif
+      @cmd    degravity -27
+      frame	data/chars/shura/grja4.gif
+      frame	data/chars/shura/j3.gif
+      frame	data/chars/shura/j3.gif
+      attack  70 80 24 50 13 1 0 0 40
+      frame	data/chars/shura/grja55.gif
+      frame	data/chars/shura/grja55.gif
+      delay	40
+      frame	data/chars/shura/j3.gif
+      delay	10
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/shura/j1.gif
+
+anim  follow9
+      loop	0
+	delay	6
+      offset	70 170
+      jumpframe 2 3 -2
+      landframe 10 dus
+      @cmd    degravity -0.27
+      frame	data/chars/shura/grja55.gif
+      frame	data/chars/shura/grja55.gif
+      delay	7
+      offset	70 170
+      frame	data/chars/shura/j2.gif
+      frame	data/chars/shura/jf6.gif
+      frame	data/chars/shura/jf5.gif
+      frame	data/chars/shura/jf4.gif
+      frame	data/chars/shura/jf3.gif
+      frame	data/chars/shura/jf2.gif
+      frame	data/chars/shura/jf1.gif
+      delay	40
+      frame	data/chars/shura/j2.gif
+      delay	10
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/shura/j1.gif
+
+anim freespecial21
+      loop	0
+	delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      sound	data/sounds/air5.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/shura/aaaaa1.gif
+	frame	data/chars/shura/aaaaa2.gif
+      sound	data/chars/shura/at1.wav
+      blast  75 95 75 45 15 0 0 10
+	frame	data/chars/shura/aaaaa3.gif
+	frame	data/chars/shura/aaaaa4.gif
+      blast	0 0 0 0 0 0
+      frame	data/chars/shura/aaaaa5.gif
+
+anim freespecial22
+      loop	0
+      delay	2
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      move 2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/shura/aaa1.gif
+      frame	data/chars/shura/aaa1.gif
+      sound	data/chars/shura/at2.wav
+      frame	data/chars/shura/aaa2.gif
+      frame	data/chars/shura/aaa3.gif
+      attack  80 70 42 50 15 1 0 0 10
+      frame	data/chars/shura/aaa4.gif
+      move 1
+      delay	3
+      frame	data/chars/shura/aaa5.gif
+      delay	10
+	attack	0 0 0 0 0 0
+      frame	data/chars/shura/aaa5.gif
+      frame	data/chars/shura/aaa5.gif
+      move 0
+      delay	7
+      frame	data/chars/shura/a2.gif
+
+
+anim  follow11
+      loop	0
+	delay	2
+      offset	70 170
+      jumpframe 0 1.8 -2
+      landframe 4 dus
+      frame	data/chars/shura/jaf5.gif
+      frame	data/chars/shura/j3.gif
+      frame	data/chars/shura/j3.gif
+      delay	30
+      frame	data/chars/shura/j2.gif
+      delay	10
+      sound	data/sounds/step.wav
+      frame	data/chars/shura/j1.gif
+
+anim freespecial23
+      loop	0
+	delay	9
+      jumpframe 3 3 2
+      landframe 9 du
+      flipframe 3
+      quakeframe 9 5 7
+      offset	70 170
+      hitfx   data/sounds/indirect.wav
+      sound	data/chars/shura/at3.wav
+      @cmd    slamstart2
+      @cmd    position 31 40 0 0 0
+      frame	data/chars/shura/thh1.gif
+      delay	8
+      frame	data/chars/shura/thh2.gif
+      @cmd    hurt 10
+      @cmd    position 6 50 0 -1 0
+      sound	data/sounds/beat3.wav
+      frame	data/chars/shura/thh3.gif
+      offset	129 170
+      @cmd    position 24 -22 50 0 1
+      frame	data/chars/shura/thh4.gif
+      @cmd    position 24 -22 40 0 1
+      frame	data/chars/shura/thh4.gif
+      frame	data/chars/shura/thh4.gif
+      @cmd    position 25 -20 40 0 1
+      sound	data/chars/shura/select.wav
+      frame	data/chars/shura/thh5.gif
+      attack10 100 85 50 45 5 1 1 1
+      dropv 2 1.5
+      @cmd    position 26 5 30 0 1
+      frame	data/chars/shura/thh55.gif
+      delay	20
+      @cmd    position 27 25 20 0 1
+      frame	data/chars/shura/thh6.gif
+      attack10	0 0 0 0 0 0
+      delay	2
+      offset	129 165
+      sound	data/sounds/beat2.wav
+      @cmd    hurt 15
+      @cmd    position 27 30 15 0 1
+      frame	data/chars/shura/thh61.gif
+      offset	129 160
+      frame	data/chars/shura/thh61.gif
+      sound	data/sounds/fall.wav
+      offset	129 155
+      delay	6
+      frame	data/chars/shura/thh62.gif
+      delay	2
+      frame	data/chars/shura/thh63.gif
+      frame	data/chars/shura/thh63.gif
+      offset	129 160
+      frame	data/chars/shura/thh63.gif
+      offset	129 165
+      frame	data/chars/shura/thh6.gif
+      @cmd    depost 0
+      @cmd    throw 5 2 1 1 0 1
+      offset	70 170
+      delay	8
+      frame	data/chars/shura/jaf5.gif
+      @cmd    anichange "ANI_FOLLOW11"
+      frame	data/chars/shura/jaf5.gif
+
+
+
+
+
+
+

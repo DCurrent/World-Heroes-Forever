@@ -1,0 +1,27 @@
+name	obstaca
+type    obstacle
+cantgrab 1
+shadow  0
+gfxshadow  1
+health  20
+diesound  data/sounds/obstaca.wav
+nolife  1
+flash   obfla
+noatflash 1
+offscreenkill  2000
+
+anim idle
+	loop	0
+	delay	5
+	offset	48 266
+	bbox    29 70 36 160
+	frame	data/chars/misc/obstaca1.gif
+	
+anim fall
+	loop	0
+	delay	5
+	offset	48 266
+	frame	data/chars/misc/obstaca2.gif
+      frame	data/chars/misc/obstaca3.gif
+
+

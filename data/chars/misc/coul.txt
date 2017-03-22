@@ -1,0 +1,16 @@
+name	coul
+type	none
+shadow	0
+antigravity     100
+
+anim idle
+	loop	0
+	delay	4
+	offset	48 53
+      frame	data/chars/misc/coul4.gif
+	frame	data/chars/misc/coul3.gif
+	frame	data/chars/misc/coul2.gif
+	frame	data/chars/misc/coul1.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/misc/empty.gif
+

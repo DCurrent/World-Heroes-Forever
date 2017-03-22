@@ -1,0 +1,17 @@
+name    torchc
+health  1
+type	none
+subtype noskip
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   13
+	offset	29 82
+        frame   data/chars/misc/torchc01.gif
+        frame   data/chars/misc/torchc02.gif
+        frame   data/chars/misc/torchc03.gif
+        frame   data/chars/misc/torchc04.gif
+
+
+

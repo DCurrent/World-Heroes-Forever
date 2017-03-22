@@ -1,0 +1,17 @@
+name	jabfl
+type	none
+shadow	0
+toflip 1
+
+anim idle
+	loop	0
+	delay	4
+	offset	105 132
+	frame	data/chars/misc/jabfl1.gif
+	frame	data/chars/misc/jabfl2.gif
+	frame	data/chars/misc/jabfl3.gif
+	frame	data/chars/misc/jabfl4.gif
+	
+	
+
+

@@ -1,0 +1,36 @@
+name	1up
+health	0
+type	item
+shadow	0
+facing 1
+nolife   1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	9 32
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/4up.gif
+      delay	50
+      frame	data/sprites/aniback/4up.gif
+      delay	5
+      frame	data/sprites/aniback/4up.gif
+      offset	9 34
+      frame	data/sprites/aniback/4up.gif
+
+
+anim idle
+	loop	1
+	delay	130
+	offset	9 32
+	bbox	0 0 18 33
+	frame	data/sprites/aniback/4up.gif
+      delay	3
+      frame	data/sprites/aniback/4up1.gif
+      frame	data/sprites/aniback/4up2.gif
+      delay	4
+      frame	data/sprites/aniback/4up3.gif
+	
+
+

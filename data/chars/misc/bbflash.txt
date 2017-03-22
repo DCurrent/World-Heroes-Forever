@@ -1,0 +1,25 @@
+name	bbflash
+type	none
+shadow	0
+lifespan 4
+antigravity     100
+
+anim idle
+	loop	0
+	delay	3
+	offset	115 135
+	frame	data/chars/misc/bflash01.gif
+	frame	data/chars/misc/bflash02.gif
+	frame	data/chars/misc/bflash03.gif
+	frame	data/chars/misc/bflash04.gif
+	frame	data/chars/misc/bflash05.gif
+	frame	data/chars/misc/bflash06.gif
+	frame	data/chars/misc/bflash07.gif
+	frame	data/chars/misc/bflash08.gif
+      frame data/chars/misc/empty.gif
+
+
+
+
+
+

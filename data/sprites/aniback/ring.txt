@@ -1,0 +1,33 @@
+name	ring
+health	0
+score	500
+type	item
+shadow	0
+nolife   1
+facing 1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	19 25
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/ring1.gif
+      delay	50
+      frame	data/sprites/aniback/ring1.gif
+      delay	5
+      frame	data/sprites/aniback/ring1.gif
+      offset	19 26
+      frame	data/sprites/aniback/ring1.gif
+
+anim idle
+	loop	1
+	delay	100
+	offset	19 25
+	bbox	14 15 10 11
+      frame	data/sprites/aniback/ring1.gif
+      delay	4
+	frame	data/sprites/aniback/ring2.gif
+
+
+

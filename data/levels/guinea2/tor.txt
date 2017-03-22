@@ -1,0 +1,18 @@
+name    tor
+type	none
+facing 1
+
+anim idle
+	loop	1
+        delay   13
+	  offset	152 170
+        frame   data/levels/guinea2/tor01.gif
+        frame   data/levels/guinea2/tor02.gif
+        frame   data/levels/guinea2/tor03.gif
+        frame   data/levels/guinea2/tor04.gif
+
+
+
+
+
+

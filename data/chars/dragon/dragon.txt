@@ -1,0 +1,2007 @@
+name	DRAGON
+health	120
+speed	12
+type	player
+shadow  0
+gfxshadow  1
+throw         5 4.2
+throwframewait 1
+grabdistance	40
+running 30	4.5	2	1	0
+icon	data/chars/dragon/icon.gif
+jumpheight 4.5
+jumpspeed 14
+antigravity -27
+blockpain 1
+holdblock 1
+makeinv  0
+atchain       1 2 3 4
+com	A2	freespecial
+com  D  F  A  freespecial2
+com  D  F  A2  freespecial3
+com  D  U  A2  freespecial18
+com  D  B  A  freespecial19
+diesound	data/chars/dragon/die.wav
+bflash bflash
+dust du dus dus
+projectilehit  obstacle
+hostile enemy 
+candamage enemy obstacle
+subject_to_wall 0
+
+palette   data/chars/dragon/idle.gif
+alternatepal data/chars/dragon/map5.gif
+alternatepal data/chars/dragon/map2.gif
+alternatepal data/chars/dragon/map3.gif
+alternatepal data/chars/dragon/map4.gif
+alternatepal data/chars/dragon/map1.gif
+
+load dus
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+anim spawn
+	loop	0
+      delay	2
+      offset	70 170
+      frame	data/chars/dragon/idle1.gif
+
+anim respawn
+	loop	0
+      delay	3.5
+      offset	62 216
+      frame	data/chars/dragon/spawn1.gif
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn1.gif
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn1.gif
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn1.gif
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn1.gif
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn1.gif
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn1.gif
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn1.gif
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn2.gif
+      delay	2.5
+      sound	data/sounds/spaw.wav
+      frame	data/chars/dragon/empty.gif
+      frame	data/chars/dragon/spawn2.gif
+      frame	data/chars/dragon/spawn3.gif
+      frame	data/chars/dragon/spawn4.gif
+      frame	data/chars/dragon/spawn5.gif
+      frame	data/chars/dragon/spawn6.gif
+      frame	data/chars/dragon/spawn6.gif
+      frame	data/chars/dragon/spawn6.gif
+      frame	data/chars/dragon/spawn7.gif
+      frame	data/chars/dragon/spawn8.gif
+      frame	data/chars/dragon/spawn9.gif
+      frame	data/chars/dragon/spawn10.gif
+      frame	data/chars/dragon/spawn11.gif
+      frame	data/chars/dragon/spawn12.gif
+      frame	data/chars/dragon/spawn13.gif
+      frame	data/chars/dragon/spawn14.gif
+      frame	data/chars/dragon/spawn15.gif
+      frame	data/chars/dragon/spawn16.gif
+      frame	data/chars/dragon/spawn17.gif
+      frame	data/chars/dragon/spawn18.gif
+      frame	data/chars/dragon/spawn19.gif
+      frame	data/chars/dragon/spawn20.gif
+      frame	data/chars/dragon/spawn21.gif
+      frame	data/chars/dragon/spawn22.gif
+      frame	data/chars/dragon/spawn23.gif
+      frame	data/chars/dragon/spawn24.gif
+      frame	data/chars/dragon/spawn25.gif
+      frame	data/chars/dragon/spawn26.gif
+      frame	data/chars/dragon/spawn27.gif
+      frame	data/chars/dragon/spawn28.gif
+      frame	data/chars/dragon/spawn29.gif
+      frame	data/chars/dragon/spawn30.gif
+      frame	data/chars/dragon/spawn31.gif
+      frame	data/chars/dragon/spawn32.gif
+      frame	data/chars/dragon/spawn33.gif
+      frame	data/chars/dragon/spawn34.gif
+      frame	data/chars/dragon/spawn35.gif
+      frame	data/chars/dragon/spawn36.gif
+      frame	data/chars/dragon/spawn37.gif
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/dragon/spawn38.gif
+      delay	4
+      frame	data/chars/dragon/spawn39.gif
+      frame	data/chars/dragon/spawn40.gif
+      frame	data/chars/dragon/spawn41.gif
+
+anim waiting
+      loop	1
+	delay	11
+	offset	0 0
+      frame	data/chars/dragon/waii1.gif
+      frame	data/chars/dragon/waii2.gif
+      frame	data/chars/dragon/waii3.gif
+      frame	data/chars/dragon/waii4.gif
+
+anim SELECT
+	loop	0
+      delay	10
+	offset	0 0
+      sound	data/chars/dragon/dragon.wav
+      frame	data/chars/dragon/wai1.gif
+      frame	data/chars/dragon/wai2.gif
+      frame	data/chars/dragon/wai2.gif
+      frame	data/chars/dragon/wai2.gif
+      delay	8
+      sound	data/chars/dragon/select.wav
+      frame	data/chars/dragon/wai3.gif
+      delay	3
+      frame	data/chars/dragon/wai4.gif
+      frame	data/chars/dragon/wai5.gif
+      frame	data/chars/dragon/wai6.gif
+      frame	data/chars/dragon/wai5.gif
+      frame	data/chars/dragon/wai6.gif
+      frame	data/chars/dragon/wai5.gif
+      frame	data/chars/dragon/wai6.gif
+      delay	2
+      frame	data/chars/dragon/wai5.gif
+      frame	data/chars/dragon/wai6.gif
+      frame	data/chars/dragon/wai5.gif
+      frame	data/chars/dragon/wai6.gif
+      frame	data/chars/dragon/wai5.gif
+      frame	data/chars/dragon/wai6.gif
+      frame	data/chars/dragon/wai5.gif
+      frame	data/chars/dragon/wai6.gif
+      delay	10
+      frame	data/chars/dragon/wai6.gif
+
+anim idle
+	loop	1
+	delay	11
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd    clearL
+      frame	data/chars/dragon/idle.gif
+      frame	data/chars/dragon/idle1.gif
+      frame	data/chars/dragon/idle2.gif
+      frame	data/chars/dragon/idle1.gif
+
+anim get
+      loop	0
+	delay	6
+      offset	70 170
+      frame	data/chars/dragon/jl1.gif
+      frame	data/chars/dragon/get8.gif
+      delay	7
+      frame	data/chars/dragon/get8.gif
+      frame	data/chars/dragon/jl1.gif
+
+anim walk
+	loop	1
+      delay   10
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/dragon/w1.gif
+	frame	data/chars/dragon/w2.gif
+	frame	data/chars/dragon/w3.gif
+	frame	data/chars/dragon/w4.gif
+
+anim run
+	loop	0
+      delay	9
+      offset	103 143
+      bbox	83 51 47 80
+      #include "data/scripts/run0001.h"
+      cancel 1 8 0 A2 freespecial7
+      frame	data/chars/dragon/ru1.gif
+	frame	data/chars/dragon/ru2.gif
+	frame	data/chars/dragon/ru3.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/dragon/ru4.gif
+      frame	data/chars/dragon/ru5.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/dragon/ru6.gif
+	frame	data/chars/dragon/ru2.gif
+	frame	data/chars/dragon/ru3.gif
+      sound	data/sounds/step.wav
+      @cmd run0001
+      frame	data/chars/dragon/ru7.gif
+
+anim ATTACKUP
+	loop	0
+      delay	2
+      offset	65 135
+      bbox	50 90 40 40
+      movez -3
+      cancel 1 16 0 A2 freespecial9
+      cancel 1 16 0 A freespecial10
+      sound	data/sounds/dog.wav
+      frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf2.gif
+	frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf3.gif
+	frame	data/chars/dragon/jf3.gif
+      frame	data/chars/dragon/jf3.gif
+	frame	data/chars/dragon/jf4.gif
+      frame	data/chars/dragon/jf4.gif
+	frame	data/chars/dragon/jf4.gif
+	frame	data/chars/dragon/jf5.gif
+	frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf2.gif
+	frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf3.gif
+	frame	data/chars/dragon/jf3.gif
+
+anim ATTACKDOWN 
+	loop	0
+      delay	2
+      offset	65 135
+      bbox	50 90 40 40
+      movez 3
+      cancel 1 16 0 A2 freespecial11
+      cancel 1 16 0 A freespecial12
+      sound	data/sounds/dog.wav
+      frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf2.gif
+	frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf3.gif
+	frame	data/chars/dragon/jf3.gif
+      frame	data/chars/dragon/jf3.gif
+	frame	data/chars/dragon/jf4.gif
+      frame	data/chars/dragon/jf4.gif
+	frame	data/chars/dragon/jf4.gif
+	frame	data/chars/dragon/jf5.gif
+	frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf2.gif
+	frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf3.gif
+	frame	data/chars/dragon/jf3.gif
+
+anim RUNATTACK
+	loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      move 5
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/dragon/ra1.gif
+      frame	data/chars/dragon/ra1.gif
+      sound	data/chars/dragon/select.wav
+      frame	data/chars/dragon/ra1.gif
+      attack4 90 75 30 40 15 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/dragon/ra2.gif
+      frame	data/chars/dragon/ra2.gif
+      attack4	0 0 0 0 0 0
+      delay	2
+      move 4
+     	frame	data/chars/dragon/ra3.gif
+      attack4 95 75 35 40 15 1 0 0 23
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra3.gif
+      attack4	0 0 0 0 0 0
+	delay	3
+      move 3
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra4.gif
+      frame	data/chars/dragon/ra3.gif
+      move 2
+      frame	data/chars/dragon/ra4.gif
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra4.gif
+      move 0
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra2.gif
+
+anim pain
+	loop	0
+	delay	6
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/dragon/pain1.gif
+	frame	data/chars/dragon/pain2.gif
+	frame	data/chars/dragon/pain1.gif
+
+anim pain3
+	loop	0
+	delay	2
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/dragon/pain1.gif
+      offset	72 170
+	frame	data/chars/dragon/pain1.gif
+      sound	data/chars/dragon/pain.wav
+      offset	68 170
+	frame	data/chars/dragon/pain1.gif
+      offset	72 170
+      frame	data/chars/dragon/pain1.gif
+      offset	70 170
+      frame	data/chars/dragon/pain1.gif
+      delay	3
+      move -4
+      frame	data/chars/dragon/ppain1.gif
+      frame	data/chars/dragon/ppain1.gif
+      frame	data/chars/dragon/ppain1.gif
+      frame	data/chars/dragon/ppain1.gif
+      frame	data/chars/dragon/ppain1.gif
+      frame	data/chars/dragon/ppain1.gif
+      frame	data/chars/dragon/ppain1.gif
+      frame	data/chars/dragon/ppain1.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/dragon/bpain04.gif
+      offset	72 170
+	frame	data/chars/dragon/bpain04.gif
+      offset	68 170
+	frame	data/chars/dragon/bpain4.gif
+      offset	72 170
+      frame	data/chars/dragon/bpain4.gif
+      offset	70 170
+      frame	data/chars/dragon/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/dragon/bpain02.gif
+      frame	data/chars/dragon/bpain02.gif
+      frame	data/chars/dragon/bpain2.gif
+      frame	data/chars/dragon/bpain2.gif
+      frame	data/chars/dragon/bpain02.gif
+      frame	data/chars/dragon/bpain02.gif
+      frame	data/chars/dragon/bpain2.gif
+      frame	data/chars/dragon/bpain2.gif
+
+anim grabbed
+	loop	0
+	delay	6
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/dragon/pain1.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	110 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+      sound	data/chars/dragon/pain.wav
+	frame	data/chars/dragon/fall01.gif
+	attack  54 85 72 50 5 1 1 1
+	frame	data/chars/dragon/fall01.gif
+      bbox	55 78 80 57
+	frame	data/chars/dragon/fall02.gif
+      bbox	0 0 0 0
+	frame	data/chars/dragon/fall02.gif
+      delay   20
+	frame	data/chars/dragon/fall03.gif
+	frame	data/chars/dragon/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/dragon/fall04.gif
+      bbox	0 0 0 0
+	delay   20
+	frame	data/chars/dragon/fall04.gif
+
+anim fall5
+	loop	0
+      delay   10
+	offset	85 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+	frame	data/chars/dragon/rjsla4.gif
+	attack  54 85 72 50 20 1 1 1 
+	frame	data/chars/dragon/rjsla4.gif
+      offset	113 133
+      bbox	55 78 80 57
+	frame	data/chars/dragon/fall02.gif
+      bbox	0 0 0 0
+	frame	data/chars/dragon/fall02.gif
+      delay   20
+	frame	data/chars/dragon/fall03.gif
+	frame	data/chars/dragon/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/dragon/fall04.gif
+      bbox	0 0 0 0
+	delay   20
+	frame	data/chars/dragon/fall04.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	90 145
+	frame	data/chars/dragon/gsla3.gif
+      offset	70 170
+      frame	data/chars/dragon/pain1.gif
+      offset	75 148
+      frame	data/chars/dragon/rjsla4.gif
+      offset	95 170
+      frame	data/chars/dragon/ffall04.gif
+      offset	75 143
+      frame	data/chars/dragon/hsla2.gif
+      frame	data/chars/dragon/hsla4.gif
+      offset	124 170
+      frame	data/chars/dragon/pain11.gif
+      frame	data/chars/dragon/pain22.gif
+      offset	100 140
+      frame	data/chars/dragon/fall066.gif
+      offset	80 80
+      frame	data/chars/dragon/dsla1.gif
+      offset	185 170
+      frame	data/chars/dragon/dsla2.gif
+      offset	195 170
+      frame	data/chars/dragon/dsla2.gif
+      offset	117 80
+      frame	data/chars/dragon/dsla11.gif
+      offset	165 198
+      frame	data/chars/dragon/pain22.gif
+      offset	124 170
+      frame	data/chars/dragon/ppain11.gif
+      offset	105 170
+      frame	data/chars/dragon/gfall01.gif
+      offset	105 120
+      frame	data/chars/dragon/gfall04.gif
+      offset	112 145
+	frame	data/chars/dragon/sla2.gif
+      offset	123 170
+      frame	data/chars/dragon/sla3.gif
+      offset	70 170
+      frame	data/chars/dragon/pain2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	110 138
+      landframe 3
+	frame	data/chars/dragon/fall03.gif
+      bbox	60 100 50 30
+      frame	data/chars/dragon/fall03.gif
+      bbox	0 0 0 0
+      offset	95 120
+      delay   100
+      frame	data/chars/dragon/fall04.gif
+      delay   40
+	bbox	55 90 45 30
+	frame	data/chars/dragon/fall04.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      sound	data/chars/dragon/pain.wav
+	frame	data/chars/dragon/fall06.gif
+	frame	data/chars/dragon/fall06.gif
+	frame	data/chars/dragon/fall07.gif
+	frame	data/chars/dragon/fall07.gif
+      delay   20
+	frame	data/chars/dragon/fall07.gif
+	frame	data/chars/dragon/fall07.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/dragon/fall04.gif
+      bbox	0 0 0 0
+	delay   20
+	frame	data/chars/dragon/fall04.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      sound	data/chars/dragon/pain.wav
+	frame	data/chars/dragon/fall01.gif
+	frame	data/chars/dragon/fall01.gif
+	frame	data/chars/dragon/fall02.gif
+	frame	data/chars/dragon/fall02.gif
+      delay   20
+	frame	data/chars/dragon/fall03.gif
+	frame	data/chars/dragon/fall03.gif
+      delay   10
+      offset	95 120
+	frame	data/chars/dragon/fall04.gif
+	delay   20
+	frame	data/chars/dragon/fall04.gif
+
+anim fall16
+	loop	0
+      delay   4
+      offset	70 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" -3 0 1
+	frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif 
+	frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif
+      frame	data/chars/dragon/ppain2.gif
+      frame	data/chars/dragon/ppain22.gif
+      frame	data/chars/dragon/ppain2.gif
+	delay   40
+	frame	data/chars/dragon/ppain22.gif
+      delay   10
+      @cmd    degravity -0.27
+      offset	95 120
+      bbox	55 90 45 30
+	frame	data/chars/dragon/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/dragon/fall04.gif
+	delay   20
+	frame	data/chars/dragon/fall04.gif
+
+anim burn
+	loop	0
+      delay   6
+	offset	110 170
+      landframe 15
+      @cmd    degravity 0
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/dragon/burn01.gif
+      sound	data/sounds/bur.wav
+	frame	data/chars/dragon/burn1.gif
+      frame	data/chars/dragon/burn01.gif
+	frame	data/chars/dragon/burn1.gif
+	frame	data/chars/dragon/burn02.gif
+	frame	data/chars/dragon/burn2.gif
+      frame	data/chars/dragon/burn02.gif
+	frame	data/chars/dragon/burn2.gif
+      frame	data/chars/dragon/burn03.gif
+      frame	data/chars/dragon/burn3.gif
+	frame	data/chars/dragon/burn03.gif
+      frame	data/chars/dragon/burn3.gif
+      frame	data/chars/dragon/burn03.gif
+      frame	data/chars/dragon/burn3.gif
+      delay   40
+	frame	data/chars/dragon/burn03.gif
+      @cmd    degravity -0.27
+      offset	95 120
+      delay   7
+	bbox	55 90 45 30
+	frame	data/chars/dragon/burn4.gif
+      bbox	0 0 0 0
+      frame	data/chars/dragon/burn04.gif
+      frame	data/chars/dragon/burn4.gif
+	frame	data/chars/dragon/fall04.gif
+
+anim rise
+	loop	0
+	offset	95 120
+	delay	7
+	frame	data/chars/dragon/rise1.gif
+	frame	data/chars/dragon/rise2.gif
+	frame	data/chars/dragon/rise3.gif
+	frame	data/chars/dragon/rise4.gif
+      frame	data/chars/dragon/rise5.gif
+
+anim RISEB
+	loop	0
+	offset	95 120
+      delay	25
+      frame	data/chars/dragon/fall04.gif
+	delay	7
+	frame	data/chars/dragon/rise1.gif
+	frame	data/chars/dragon/rise2.gif
+	frame	data/chars/dragon/rise3.gif
+	frame	data/chars/dragon/rise4.gif
+      frame	data/chars/dragon/rise5.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/dragon/bl2.gif
+      frame	data/chars/dragon/bl2.gif
+
+
+anim BLOCKPAIN
+      loop	0
+	delay	2
+	bbox	50 78 47 80
+      offset	73 170
+	frame	data/chars/dragon/bl2.gif
+      offset	70 170
+      frame	data/chars/dragon/bl2.gif
+      offset	67 170
+      frame	data/chars/dragon/bl2.gif
+      offset	70 170
+      frame	data/chars/dragon/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/dragon/bl2.gif
+      frame	data/chars/dragon/bl2.gif
+      frame	data/chars/dragon/bl2.gif
+      frame	data/chars/dragon/bl2.gif
+      frame	data/chars/dragon/bl2.gif
+      
+
+anim attack1
+      loop	0
+	delay	1
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd ani0020 openborconstant("ANI_FOLLOW2") openborconstant("ANI_PAIN2")
+      @cmd ani0020 openborconstant("ANI_FOLLOW3") openborconstant("ANI_FOLLOW8")
+      sound	data/sounds/air6.wav
+      frame	data/chars/dragon/a1.gif
+	frame	data/chars/dragon/a2.gif
+      delay	7
+      attack  80 75 55 40 5 0
+	frame	data/chars/dragon/a3.gif
+      delay	5
+      attack  0 0 0 0 0 0
+	frame	data/chars/dragon/a3.gif
+      frame	data/chars/dragon/a1.gif
+
+anim attack2
+      loop	0
+	delay	1
+      offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/air6.wav
+      frame	data/chars/dragon/a1.gif
+	frame	data/chars/dragon/a2.gif
+      sound	data/chars/dragon/at7.wav
+      delay	7
+      attack  80 75 55 40 5 0
+	frame	data/chars/dragon/a3.gif
+      delay	5
+      attack  0 0 0 0 0 0
+	frame	data/chars/dragon/a3.gif
+      frame	data/chars/dragon/a1.gif
+
+anim attack3
+	loop	0
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat3.wav
+      sound	data/chars/dragon/at6.wav
+      frame	data/chars/dragon/ga1.gif
+      delay	7
+      attack2  83 94 72 40 5 0
+	frame	data/chars/dragon/ga3.gif
+      attack2  0 0 0 0 0 0
+      frame	data/chars/dragon/ga3.gif
+      frame	data/chars/dragon/ga1.gif
+
+anim attack4
+	loop	0
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      delay	8
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/dragon/at1.wav
+      frame	data/chars/dragon/aaa1.gif
+	frame	data/chars/dragon/aaa2.gif
+      sound	data/sounds/air5.wav
+      attack  90 80 70 40 15 1 0 0 10
+      frame	data/chars/dragon/aaa3.gif
+      attack  0 0 0 0 0 0
+	frame	data/chars/dragon/aaa4.gif
+      frame	data/chars/dragon/aa1.gif
+
+anim  special
+      loop	0
+	delay	9
+      offset	70 170
+      jumpframe 1 3.5 0 0 dus
+      landframe 8 dus
+      frame	data/chars/dragon/j1.gif
+      sound	data/sounds/jump.wav
+      delay	8
+      frame	data/chars/dragon/j2.gif
+      frame	data/chars/dragon/j2.gif
+      sound	data/chars/dragon/select.wav
+      frame	data/chars/dragon/sp2.gif
+      attack  9 90 113 50 10 1 1 0 40
+      frame	data/chars/dragon/sp3.gif 
+      attack	0 0 0 0 0 0
+      frame	data/chars/dragon/sp3.gif 
+      frame	data/chars/dragon/sp2.gif
+      delay	20
+      frame	data/chars/dragon/j2.gif
+      delay	6
+      sound	data/sounds/step.wav
+      frame	data/chars/dragon/jl1.gif
+      frame	data/chars/dragon/jl2.gif
+      frame	data/chars/dragon/jl1.gif
+
+anim JUMPDELAY
+      loop	0
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/dragon/j1.gif
+
+anim JUMPLAND
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/step.wav
+      frame	data/chars/dragon/jl1.gif
+      frame	data/chars/dragon/jl2.gif
+      frame	data/chars/dragon/jl1.gif
+
+anim jump
+	loop	0
+	delay	4
+      offset	70 170
+      bbox	48 80 35 65
+      cancel 1 13 0 A2 freespecial4
+      frame	data/chars/dragon/j2.gif
+      frame	data/chars/dragon/j2.gif
+      frame	data/chars/dragon/j2.gif
+      frame	data/chars/dragon/j2.gif
+      frame	data/chars/dragon/j2.gif
+      frame	data/chars/dragon/j3.gif
+      frame	data/chars/dragon/j3.gif
+      frame	data/chars/dragon/j4.gif
+      frame	data/chars/dragon/j4.gif
+      frame	data/chars/dragon/j4.gif
+      frame	data/chars/dragon/j4.gif
+      frame	data/chars/dragon/j3.gif
+      frame	data/chars/dragon/j2.gif
+      frame	data/chars/dragon/j2.gif
+
+anim FORWARDJUMP
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 80 47 65
+      cancel 1 11 0 A2 freespecial5
+      frame	data/chars/dragon/jf1.gif
+      frame	data/chars/dragon/jf1.gif
+      frame	data/chars/dragon/jf1.gif
+      frame	data/chars/dragon/jf1.gif
+      bbox	50 92 40 40
+      delay	6
+      frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf3.gif
+      frame	data/chars/dragon/jf4.gif
+      frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf2.gif
+      delay	4
+      bbox	50 80 47 65
+      frame	data/chars/dragon/jf6.gif
+      frame	data/chars/dragon/j3.gif
+      frame	data/chars/dragon/j2.gif
+
+anim RUNJUMP
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 80 47 65
+      cancel 1 11 0 A2 freespecial6
+      frame	data/chars/dragon/jf1.gif
+      frame	data/chars/dragon/jf1.gif
+      frame	data/chars/dragon/jf1.gif
+      frame	data/chars/dragon/jf1.gif
+      bbox	50 92 40 40
+      delay	6
+      frame	data/chars/dragon/jf2.gif
+      frame	data/chars/dragon/jf3.gif
+      frame	data/chars/dragon/jf4.gif
+      frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf2.gif
+      delay	4
+      bbox	50 80 47 65
+      frame	data/chars/dragon/jf6.gif
+      frame	data/chars/dragon/j3.gif
+      frame	data/chars/dragon/j2.gif
+
+anim jumpattack
+	loop	0
+	delay	8
+      offset	70 170
+      bbox	50 76 40 40
+      sound	data/chars/dragon/at8.wav
+      frame	data/chars/dragon/jp1.gif
+      delay 10
+      attack	70 85 70 45 12 1 0 0 35
+      frame	data/chars/dragon/jp2.gif
+      frame	data/chars/dragon/jp2.gif
+      attack 0 0 0 0 0 0
+      delay	8
+      frame	data/chars/dragon/jp1.gif
+      frame	data/chars/dragon/j2.gif
+
+
+anim JUMPFORWARD
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 76 40 40
+      sound	data/chars/dragon/at8.wav
+      frame	data/chars/dragon/jp1.gif
+      delay 10
+      attack	70 85 70 45 12 1 0 0 35
+      frame	data/chars/dragon/jp2.gif
+      frame	data/chars/dragon/jp2.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/dragon/jp1.gif
+      frame	data/chars/dragon/j2.gif
+
+anim grab
+	loop	0
+	delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      cancel 0 3 0 A2 freespecial13
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+
+anim grabattack
+	loop	0
+	delay	19
+      offset	70 170
+      attackone 0
+      quakeframe 4 3 6
+      jumpframe 0 0 0
+      landframe 5
+      spawnframe 4 75 0 0 0
+      subentity du
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart5 
+      @cmd    position 0 10 0 -1 1
+      frame	data/chars/dragon/th4.gif
+      sound	data/chars/dragon/at3.wav
+      delay	10
+      @cmd    position 1 -8 -12 -1 1
+      frame	data/chars/dragon/th5.gif
+      delay	25
+      @cmd    position 2 -20 -3 -1 1
+      frame	data/chars/dragon/th6.gif
+      delay	10
+      @cmd    position 3 -10 7 -1 1
+      frame	data/chars/dragon/th7.gif
+      delay	10
+      attack10 65 120 85 50 5 1 1 1
+      dropv 2 1.5
+      @cmd    hurt 25
+      @cmd    position 4 75 5 -1 1
+      frame	data/chars/dragon/th8.gif
+      frame	data/chars/dragon/th8.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 0
+      attack10   0 0 0 0 0 0
+      frame	data/chars/dragon/th8.gif
+      delay	5
+      frame	data/chars/dragon/th8.gif
+
+anim grabattack2
+	loop	0
+	delay	5
+      offset	87 184
+      quakeframe 4 3 3
+      @cmd    slamstart
+      @cmd    position 29 40 0 -1 1
+      sound	data/chars/dragon/at11.wav
+      frame	data/chars/dragon/fsk1.gif
+      frame	data/chars/dragon/fsk2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/dragon/fsk7.gif
+      frame	data/chars/dragon/fsk8.gif
+      sound	data/sounds/beat2.wav
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 75 53 1 
+      frame	data/chars/dragon/fsk9.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 1.5 4 0 1
+      delay	20
+      frame	data/chars/dragon/fsk9.gif
+      delay	6
+      frame	data/chars/dragon/fsk8.gif
+      frame	data/chars/dragon/fsk7.gif
+      frame	data/chars/dragon/fsk2.gif
+      frame	data/chars/dragon/fsk1.gif
+
+anim  grabbackward
+      loop	0
+	delay	19
+      offset	70 170
+      attackone 0
+      quakeframe 4 3 6
+      jumpframe 0 0 0
+      landframe 5
+      spawnframe 4 75 0 0 0
+      subentity du
+      flipframe 1
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart5 
+      @cmd    position 0 10 0 -1 1
+      frame	data/chars/dragon/th4.gif
+      sound	data/chars/dragon/at3.wav
+      delay	10
+      @cmd    position 1 -8 -12 -1 1
+      frame	data/chars/dragon/th5.gif
+      delay	25
+      @cmd    position 2 -20 -3 -1 1
+      frame	data/chars/dragon/th6.gif
+      delay	10
+      @cmd    position 3 -10 7 -1 1
+      frame	data/chars/dragon/th7.gif
+      delay	10
+      attack10 65 120 85 50 5 1 1 1
+      dropv 2 1.5
+      @cmd    hurt 25
+      @cmd    position 4 75 5 -1 1
+      frame	data/chars/dragon/th8.gif
+      frame	data/chars/dragon/th8.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 0
+      attack10   0 0 0 0 0 0
+      frame	data/chars/dragon/th8.gif
+      delay	5
+      frame	data/chars/dragon/th8.gif
+
+anim  freespecial
+	loop	0
+	delay	5
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat3.wav
+      @cmd ani0020 openborconstant("ANI_FOLLOW1") openborconstant("ANI_PAIN2")
+      cancel 6 7 1 A2 freespecial21
+      cancel 6 7 1 A freespecial22
+      sound	data/chars/dragon/at55.wav
+      frame	data/chars/dragon/aaaa1.gif
+	frame	data/chars/dragon/aaaa4.gif
+      sound	data/sounds/air5.wav
+      delay	8
+      attack2  75 85 90 40 5 0
+	frame	data/chars/dragon/aaaa3.gif
+      delay	6
+      attack2  0 0 0 0 0 0
+      frame	data/chars/dragon/aaaa3.gif
+	frame	data/chars/dragon/aaaa4.gif
+      frame	data/chars/dragon/aaaa1.gif
+      delay	1
+      frame	data/chars/dragon/idle.gif
+
+anim follow1
+      loop	0
+	delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      range -45 180
+      rangez -45 45
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/dragon/runki5.wav
+      frame	data/chars/dragon/aaaaa1.gif
+	frame	data/chars/dragon/aaaaa2.gif
+      sound	data/sounds/air5.wav
+      blast  75 80 94 45 15 0 0 12
+	frame	data/chars/dragon/aaaaa3.gif
+      blast	0 0 0 0 0 0
+	frame	data/chars/dragon/aaaaa4.gif
+      frame	data/chars/dragon/aaaaa5.gif
+
+anim follow2
+      loop	0
+      range -10 120
+      rangez -40 40
+      delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/dragon/at1.wav
+      frame	data/chars/dragon/aaa1.gif
+	frame	data/chars/dragon/aaa2.gif
+      sound	data/sounds/air5.wav
+      attack  90 80 70 40 15 1 0 0 10
+      frame	data/chars/dragon/aaa3.gif
+      attack	0 0 0 0 0 0
+	frame	data/chars/dragon/aaa4.gif
+      frame	data/chars/dragon/aa1.gif
+
+anim follow3
+      loop	0
+      range 10 70
+      rangez -3 18
+      delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      attackone 1
+      otg 2
+      cancel 3 5 1 A freespecial8
+      frame	data/chars/dragon/get1.gif
+      attack3  110 150 30 21 10 0 0 0 0 21
+      forcedirection 99
+      frame	data/chars/dragon/get2.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/dragon/get2.gif
+      frame	data/chars/dragon/get3.gif
+      frame	data/chars/dragon/get4.gif
+      frame	data/chars/dragon/get4.gif
+
+      
+anim  freespecial2
+      loop	0
+	delay	2
+      offset	77 184
+      hitfx   data/sounds/beat2.wav
+      move 2
+      frame	data/chars/dragon/fsp1.gif
+      frame	data/chars/dragon/fsp1.gif
+      frame	data/chars/dragon/fsp1.gif
+      bbox	50 78 47 80
+      delay	2.5
+      move 0
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp2.gif
+      frame	data/chars/dragon/fsp3.gif
+      frame	data/chars/dragon/fsp4.gif
+      attack12  83 94 72 40 4 0 0 0 30
+      frame	data/chars/dragon/fsp5.gif
+      sound	data/chars/dragon/at9.wav
+      attack12  0 0 0 0 0 0
+      frame	data/chars/dragon/fsp6.gif
+      frame	data/chars/dragon/fsp7.gif
+      frame	data/chars/dragon/fsp8.gif
+      frame	data/chars/dragon/fsp9.gif
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp10.gif
+      attack12  83 94 72 40 4 0 0 0 30
+      frame	data/chars/dragon/fsp11.gif
+      attack12  0 0 0 0 0 0
+      frame	data/chars/dragon/fsp12.gif
+      frame	data/chars/dragon/fsp13.gif
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp14.gif
+      frame	data/chars/dragon/fsp15.gif
+      frame	data/chars/dragon/fsp16.gif
+      attack12  83 94 72 40 4 0 0 0 30
+      frame	data/chars/dragon/fsp17.gif
+      sound	data/chars/dragon/at9.wav
+      attack12  0 0 0 0 0 0
+      frame	data/chars/dragon/fsp18.gif
+      frame	data/chars/dragon/fsp19.gif
+      frame	data/chars/dragon/fsp2.gif
+      frame	data/chars/dragon/fsp3.gif
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp4.gif
+      frame	data/chars/dragon/fsp5.gif
+      frame	data/chars/dragon/fsp6.gif
+      frame	data/chars/dragon/fsp7.gif
+      sound	data/chars/dragon/at9.wav
+      attack12  83 94 72 40 4 0 0 0 30
+      frame	data/chars/dragon/fsp8.gif
+      attack12  0 0 0 0 0 0
+      frame	data/chars/dragon/fsp9.gif
+      frame	data/chars/dragon/fsp10.gif
+      frame	data/chars/dragon/fsp11.gif
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp12.gif
+      frame	data/chars/dragon/fsp13.gif
+      attack12  83 94 72 40 4 0 0 0 30
+      frame	data/chars/dragon/fsp14.gif
+      attack12  0 0 0 0 0 0
+      frame	data/chars/dragon/fsp15.gif
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp16.gif
+      frame	data/chars/dragon/fsp17.gif
+      frame	data/chars/dragon/fsp18.gif
+      frame	data/chars/dragon/fsp19.gif
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp2.gif
+      frame	data/chars/dragon/fsp3.gif
+      frame	data/chars/dragon/fsp4.gif
+      attack12  83 94 72 40 4 0 0 0 30
+      frame	data/chars/dragon/fsp5.gif
+      attack12  0 0 0 0 0 0
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp6.gif
+      frame	data/chars/dragon/fsp7.gif
+      frame	data/chars/dragon/fsp8.gif
+      frame	data/chars/dragon/fsp9.gif
+      sound	data/chars/dragon/at9.wav
+      frame	data/chars/dragon/fsp10.gif
+      attack12  83 94 72 40 4 0 0 0 30
+      frame	data/chars/dragon/fsp11.gif
+      attack12  0 0 0 0 0 0
+      frame	data/chars/dragon/fsp12.gif
+      move 3
+      frame	data/chars/dragon/fsp133.gif
+      sound	data/chars/dragon/pain.wav
+      frame	data/chars/dragon/fsp133.gif
+      delay	2
+      move 4
+      blast  83 94 72 40 10 0 0 25
+      frame	data/chars/dragon/fsp14.gif
+      frame	data/chars/dragon/fsp14.gif
+      frame	data/chars/dragon/fsp14.gif
+      delay	3
+      move 3
+      frame	data/chars/dragon/fsp14.gif
+      blast  0 0 0 0 0 0
+      frame	data/chars/dragon/fsp144.gif
+      frame	data/chars/dragon/fsp14.gif
+      move 2
+      frame	data/chars/dragon/fsp144.gif
+      frame	data/chars/dragon/fsp14.gif
+      frame	data/chars/dragon/fsp144.gif
+      move 0
+      delay	4
+      frame	data/chars/dragon/fsp1.gif
+      offset	70 170
+      frame	data/chars/dragon/a1.gif
+      
+anim  freespecial3
+      loop	0
+	delay	14
+      offset	87 184
+      followcond 1
+      followanim 6
+      hitfx   data/sounds/go.wav
+      jumpframe 1 2 4 0 dus
+      landframe 4 dus
+      sound	data/chars/dragon/at3.wav
+      frame	data/chars/dragon/fsk1.gif
+      attack  90 90 33 90 1 0 1 1
+      nokill 1
+      frame	data/chars/dragon/fsk2.gif
+      frame	data/chars/dragon/fsk2.gif
+      delay	50
+      frame	data/chars/dragon/fsk2.gif 
+      delay	7
+      frame	data/chars/dragon/fsk3.gif
+      frame	data/chars/dragon/fsk1.gif
+
+anim  follow6
+      loop	0
+      offset	87 184
+      jumpframe  0 0 0
+      hitfx   data/sounds/beat2.wav
+      delay	6
+      frame	data/chars/dragon/fsk2.gif
+      @cmd    spawn01 "dus" 0 0 1
+      move 4
+      frame	data/chars/dragon/fsk3.gif
+      sound	data/chars/dragon/at11.wav
+      move 0
+      frame	data/chars/dragon/fsk4.gif
+      attack2  110 105 75 30 5 0 0 0 
+      nokill 1
+      frame	data/chars/dragon/fsk5.gif
+      bbox	70 100 45 60
+      attack2  0 0 0 0 0 0
+      frame	data/chars/dragon/fsk6.gif
+      frame	data/chars/dragon/fsk7.gif
+      sound	data/chars/dragon/at11.wav
+      frame	data/chars/dragon/fsk8.gif
+      attack  110 75 70 40 5 0 0 0 
+      nokill 1
+      frame	data/chars/dragon/fsk9.gif
+      attack2  0 0 0 0 0 0
+      frame	data/chars/dragon/fsk10.gif
+      frame	data/chars/dragon/fsk11.gif
+      sound	data/chars/dragon/at11.wav
+      frame	data/chars/dragon/fsk12.gif
+      attack2  110 145 70 30 5 0 0 0 
+      nokill 1
+      frame	data/chars/dragon/fsk13.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/dragon/fsk14.gif
+      frame	data/chars/dragon/fsk15.gif
+      sound	data/chars/dragon/at11.wav
+      frame	data/chars/dragon/fsk16.gif
+      attack2  110 75 70 40 5 0 0 0 
+      nokill 1
+      frame	data/chars/dragon/fsk17.gif
+      attack2  0 0 0 0 0 0
+      frame	data/chars/dragon/fsk18.gif
+      bbox	55 100 45 60
+      frame	data/chars/dragon/fsk19.gif
+      bbox	0 0 0 0
+      sound	data/chars/dragon/at1.wav
+      frame	data/chars/dragon/fsk20.gif
+      attack  110 105 75 30 15 1 0 0 15
+      dropv 3 3
+      nokill 0
+      frame	data/chars/dragon/fsk21.gif
+      attack  0 0 0 0 0 0
+      delay	18
+      frame	data/chars/dragon/fsk21.gif
+      delay	6
+      frame	data/chars/dragon/fsk22.gif
+      frame	data/chars/dragon/fsk23.gif
+      frame	data/chars/dragon/fsk24.gif
+      frame	data/chars/dragon/fsk25.gif
+
+anim  freespecial4
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 76 40 40
+      sound	data/chars/dragon/at4.wav
+      frame	data/chars/dragon/ja1.gif
+      frame	data/chars/dragon/ja2.gif
+      attack	70 85 80 45 12 1 0 0 35
+      frame	data/chars/dragon/ja3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/dragon/ja4.gif
+      frame	data/chars/dragon/j2.gif
+
+anim  freespecial5
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 76 40 40
+      jumpframe 0 0 1.5
+      sound	data/chars/dragon/at4.wav
+      frame	data/chars/dragon/jaf1.gif
+      attack	75 93 70 45 12 1 0 0 35
+      delay 10
+      frame	data/chars/dragon/jaf2.gif
+      frame	data/chars/dragon/jaf2.gif
+      attack 0 0 0 0 0 0
+      delay	8
+      frame	data/chars/dragon/jaf1.gif
+      frame	data/chars/dragon/j2.gif
+
+
+anim  freespecial6
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 76 40 40
+      jumpframe 0 0 3
+      sound	data/chars/dragon/at4.wav
+      frame	data/chars/dragon/jaf1.gif
+      delay 10
+      attack	75 93 70 45 12 1 0 0 35
+      frame	data/chars/dragon/jaf2.gif
+      frame	data/chars/dragon/jaf2.gif
+      attack 0 0 0 0 0 0
+      delay	8
+      frame	data/chars/dragon/jaf1.gif
+      frame	data/chars/dragon/j2.gif
+
+
+anim  freespecial7
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      move 4
+      sound	data/sounds/air3.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/dragon/raa1.gif
+      frame	data/chars/dragon/raa1.gif
+      sound	data/chars/dragon/runki.wav
+      attack 75 90 43 40 15 1 0 0 25
+      dropv 3 3
+      frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/raa2.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      move 3
+	frame	data/chars/dragon/raa4.gif
+      attack 138 90 15 40 15 1 0 0 23
+      dropv 3 3
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/dragon/raa4.gif
+	delay	3
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+	frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/aaaa1.gif
+	delay	10
+	frame	data/chars/dragon/aaaa1.gif
+
+anim  freespecial8
+      loop	0
+      delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      attackone 1
+      otg 2
+      frame	data/chars/dragon/get1.gif
+      frame	data/chars/dragon/get1.gif
+      attack3  110 150 30 21 10 0 0 0 0 21
+      forcedirection 99
+      frame	data/chars/dragon/get2.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/dragon/get2.gif
+      frame	data/chars/dragon/get3.gif
+      frame	data/chars/dragon/get4.gif
+
+anim  freespecial9
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      movez -2
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/dragon/raa1.gif
+      frame	data/chars/dragon/raa1.gif
+      sound	data/chars/dragon/runki.wav
+      attack 75 90 43 40 15 1 0 0 25
+      dropv 3 3
+      frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/raa2.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      movez -1
+	frame	data/chars/dragon/raa4.gif
+      attack 138 90 15 40 15 1 0 0 23
+      dropv 3 3
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/dragon/raa4.gif
+	delay	3
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+	frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/aaaa1.gif
+	delay	10
+	frame	data/chars/dragon/aaaa1.gif
+
+
+anim  freespecial10
+      loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      movez -3
+      frame	data/chars/dragon/ra1.gif
+      frame	data/chars/dragon/ra1.gif
+      sound	data/chars/dragon/select.wav
+      frame	data/chars/dragon/ra1.gif
+      attack4 90 75 30 40 15 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/dragon/ra2.gif
+      frame	data/chars/dragon/ra2.gif
+      attack4 0 0 0 0 0 0
+      delay	2
+      movez -1
+	frame	data/chars/dragon/ra3.gif
+      attack4 95 75 35 40 15 1 0 0 23
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra3.gif
+      attack4 0 0 0 0 0 0
+	delay	3
+      frame	data/chars/dragon/ra3.gif
+      movez -1
+      frame	data/chars/dragon/ra4.gif
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra4.gif
+      movez 0
+      delay	5
+      frame	data/chars/dragon/ra3.gif
+	frame	data/chars/dragon/ra2.gif
+
+
+anim  freespecial11
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      movez 2
+      frame	data/chars/dragon/raa1.gif
+      frame	data/chars/dragon/raa1.gif
+      sound	data/chars/dragon/runki.wav
+      attack 75 90 43 40 15 1 0 0 25
+      dropv 3 3
+      frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/raa2.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      movez 1
+	frame	data/chars/dragon/raa4.gif
+      attack 138 90 15 40 15 1 0 0 23
+      dropv 3 3
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/dragon/raa4.gif
+	delay	3
+      frame	data/chars/dragon/raa4.gif
+      frame	data/chars/dragon/raa4.gif
+	frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/raa2.gif
+      frame	data/chars/dragon/aaaa1.gif
+	delay	10
+	frame	data/chars/dragon/aaaa1.gif
+
+
+anim  freespecial12
+      loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      movez 3
+      frame	data/chars/dragon/ra1.gif
+      frame	data/chars/dragon/ra1.gif
+      sound	data/chars/dragon/select.wav
+      frame	data/chars/dragon/ra1.gif
+      attack4 90 75 30 40 15 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/dragon/ra2.gif
+      frame	data/chars/dragon/ra2.gif
+      attack4 0 0 0 0 0 0
+      delay	2
+      movez 1
+	frame	data/chars/dragon/ra3.gif
+      attack4 95 75 35 40 15 1 0 0 23
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra3.gif
+      attack4 0 0 0 0 0 0
+	delay	3
+      frame	data/chars/dragon/ra3.gif
+      movez 1
+      frame	data/chars/dragon/ra4.gif
+      frame	data/chars/dragon/ra3.gif
+      frame	data/chars/dragon/ra4.gif
+      movez 0
+      delay	5
+      frame	data/chars/dragon/ra3.gif
+	frame	data/chars/dragon/ra2.gif
+
+anim freespecial13
+	loop	0
+	delay	5.5
+      offset	70 170
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      @cmd bind 1 40 -1 0 -1
+      frame	data/chars/dragon/aaaaa5.gif
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 70 -10 1
+      @cmd    hurt2 5 
+      frame	data/chars/dragon/aaaaa9.gif
+      delay	12
+      frame	data/chars/dragon/aaaaa9.gif
+      delay	6
+      frame	data/chars/dragon/aaaaa5.gif
+      @cmd    anichange "ANI_FOLLOW4"
+      frame	data/chars/dragon/aaaaa5.gif
+      frame	data/chars/dragon/aaaaa5.gif
+
+anim freespecial14
+	loop	0
+	delay	5.5
+      offset	70 170
+      @cmd bind 1 40 -1 0 -1
+      frame	data/chars/dragon/aaaaa5.gif
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 70 -10 1 
+      @cmd    hurt2 5
+      frame	data/chars/dragon/aaaaa9.gif
+      delay	13
+      frame	data/chars/dragon/aaaaa9.gif
+      delay	6
+      frame	data/chars/dragon/aaaaa5.gif
+      @cmd    anichange "ANI_FOLLOW5"
+      frame	data/chars/dragon/aaaaa5.gif
+
+anim freespecial15
+	loop	0
+	delay	6
+      offset	70 184
+      quakeframe 4 3 3
+      @cmd    slamstart2
+      @cmd    position 29 40 0 -1 1
+      sound	data/chars/dragon/at11.wav
+      frame	data/chars/dragon/gr1.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/dragon/gr2.gif
+      sound	data/sounds/beat2.wav
+      @cmd    hurt 5
+      @cmd    spawn01 "flas" 60 30 1 
+      @cmd    position 30 40 0 -1 1
+      delay	6
+      frame	data/chars/dragon/gr3.gif
+      delay	6
+      frame	data/chars/dragon/gr3.gif
+      @cmd    position 29 40 0 -1 1
+      frame	data/chars/dragon/gr3.gif
+      sound	data/sounds/beat2.wav
+      @cmd    hurt 5
+      @cmd    spawn01 "flas" 90 10 1
+      frame	data/chars/dragon/gr4.gif
+      delay	14
+      @cmd    depost 0
+      @cmd    finish 5 1 3.5 2 0 1
+      frame	data/chars/dragon/gr4.gif
+      delay	7
+      frame	data/chars/dragon/gr5.gif
+      frame	data/chars/dragon/gr1.gif
+
+anim follow4
+      loop	1
+	delay	5
+      offset	70 170
+      cancel 1 3 0 A2 freespecial14
+      @cmd bind 1 40 0 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 J freespecial17
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+
+anim follow5
+      loop	1
+	delay	5
+      offset	70 170
+      cancel 1 3 0 A2 freespecial15
+      @cmd bind 1 40 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 J freespecial17
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+      frame	data/chars/dragon/th1.gif
+
+anim freespecial16
+      loop	0
+	delay	19
+      offset	70 170
+      attackone 0
+      quakeframe 4 3 6
+      jumpframe 0 0 0
+      landframe 5
+      spawnframe 4 75 0 0 0
+      subentity du
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart6 
+      @cmd    position 0 10 0 -1 1
+      frame	data/chars/dragon/th4.gif
+      sound	data/chars/dragon/at3.wav
+      delay	10
+      @cmd    keyflip
+      @cmd    position 1 -8 -12 -1 1
+      frame	data/chars/dragon/th5.gif
+      delay	25
+      @cmd    position 2 -20 -3 -1 1
+      frame	data/chars/dragon/th6.gif
+      delay	10
+      @cmd    position 3 -10 7 -1 1
+      frame	data/chars/dragon/th7.gif
+      delay	10
+      attack10 65 120 85 50 5 1 1 1
+      dropv 2 1.5
+      @cmd    hurt 25
+      @cmd    position 4 75 5 -1 1
+      frame	data/chars/dragon/th8.gif
+      frame	data/chars/dragon/th8.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 0
+      attack10   0 0 0 0 0 0
+      frame	data/chars/dragon/th8.gif
+      delay	5
+      frame	data/chars/dragon/th8.gif
+
+anim freespecial17
+      loop	0
+	delay	5
+      offset	87 184
+      quakeframe 4 3 3
+      @cmd    slamstart
+      @cmd    position 29 40 0 -1 1
+      sound	data/chars/dragon/at11.wav
+      frame	data/chars/dragon/fsk1.gif
+      frame	data/chars/dragon/fsk2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/dragon/fsk7.gif
+      frame	data/chars/dragon/fsk8.gif
+      sound	data/sounds/beat2.wav
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 75 53 1 
+      frame	data/chars/dragon/fsk9.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 1.5 4 0 1
+      delay	20
+      frame	data/chars/dragon/fsk9.gif
+      delay	6
+      frame	data/chars/dragon/fsk8.gif
+      frame	data/chars/dragon/fsk7.gif
+      frame	data/chars/dragon/fsk2.gif
+      frame	data/chars/dragon/fsk1.gif
+
+anim freespecial18
+      loop	0
+	delay	15
+      offset	70 170
+      jumpframe 1 4 5 0 du
+      landframe 27 du
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/dragon/fspu1.gif
+      sound	data/chars/dragon/at2.wav
+      delay	2
+      frame	data/chars/dragon/fspu1.gif
+      frame	data/chars/dragon/fspu1.gif
+      frame	data/chars/dragon/fspu2.gif
+      frame	data/chars/dragon/fspu3.gif
+      attack   75 93 70 65 25 1 0 0 40
+      frame	data/chars/dragon/fspu4.gif
+      frame	data/chars/dragon/fspu5.gif
+      frame	data/chars/dragon/fspu6.gif
+      frame	data/chars/dragon/fspu4.gif
+      frame	data/chars/dragon/fspu5.gif
+      frame	data/chars/dragon/fspu6.gif
+      frame	data/chars/dragon/fspu4.gif
+      frame	data/chars/dragon/fspu5.gif
+      frame	data/chars/dragon/fspu6.gif
+      frame	data/chars/dragon/fspu4.gif
+      frame	data/chars/dragon/fspu5.gif
+      frame	data/chars/dragon/fspu6.gif
+      frame	data/chars/dragon/fspu4.gif
+      frame	data/chars/dragon/fspu5.gif
+      attack   0 0 0 0 0 0
+      frame	data/chars/dragon/fspu2.gif
+      delay	3
+      frame	data/chars/dragon/fspu2.gif
+      frame	data/chars/dragon/jf4.gif
+      frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf6.gif
+      frame	data/chars/dragon/jf6.gif
+      delay	80
+      frame	data/chars/dragon/j2.gif
+      delay	6
+      sound data/sounds/step.wav
+      frame	data/chars/dragon/jl1.gif
+      frame	data/chars/dragon/jl2.gif
+      frame	data/chars/dragon/jl1.gif
+      
+anim freespecial19
+      loop	0
+	delay	15
+      offset	70 170
+      followcond 2
+      followanim 9
+      jumpframe 1 3 5 0 du
+      landframe 20 du
+      attackone 1
+      hitfx   data/sounds/go.wav
+      sound	data/chars/dragon/at3.wav
+      @cmd conditionalflip
+      frame	data/chars/dragon/fskk1.gif
+      delay	2
+      frame	data/chars/dragon/fskk2.gif
+      frame	data/chars/dragon/fskk2.gif
+      frame	data/chars/dragon/fskk2.gif
+      frame	data/chars/dragon/fskk2.gif
+      attack   60 100 10 30 0 0 1 1
+      nokill 1
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      delay	80
+      frame	data/chars/dragon/j2.gif
+      attack   0 0 0 0 0 0
+      delay	6
+      sound data/sounds/step.wav
+      frame	data/chars/dragon/jl1.gif
+      frame	data/chars/dragon/jl2.gif
+      frame	data/chars/dragon/jl1.gif
+
+anim follow9
+      loop	0
+	delay	1
+      offset	70 170
+      frame	data/chars/dragon/fskk3.gif
+      @cmd    grabcheckG "ANI_FOLLOW7" "ANI_FOLLOW8" "ANI_FOLLOW8"
+      frame	data/chars/dragon/fskk3.gif
+
+anim follow8
+      loop	0
+	delay	2
+      offset	70 170
+      jumpframe 0 0 5 0
+      landframe 8 du
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      frame	data/chars/dragon/fskk3.gif
+      delay	80
+      frame	data/chars/dragon/j2.gif
+      attack   0 0 0 0 0 0
+      delay	6
+      sound data/sounds/step.wav
+      frame	data/chars/dragon/jl1.gif
+      frame	data/chars/dragon/jl2.gif
+      frame	data/chars/dragon/jl1.gif
+
+anim follow7
+      loop	0
+	delay	8
+      offset	63 190
+      jumpframe 0 0 0
+      hitfx   data/sounds/go.wav
+      cancel 1 15 0 D A freespecial20
+      @cmd    degravity -1
+      frame	data/chars/dragon/fskk4.gif
+      frame	data/chars/dragon/fskk4.gif
+      frame	data/chars/dragon/fskk4.gif
+      @cmd    entergrab
+      @cmd    slamstart2
+      @cmd    position 31 18 0 0 0
+      frame	data/chars/dragon/fskk4.gif
+      frame	data/chars/dragon/fskk5.gif
+      delay	11
+      frame	data/chars/dragon/fskk5.gif
+      sound	data/chars/dragon/at9.wav
+      @cmd    hurt 5
+      @cmd    position 29 15 0 0 1 
+      frame	data/chars/dragon/fskk6.gif
+      sound	data/chars/dragon/at10.wav
+      @cmd    position 30 15 0 0 1
+      frame	data/chars/dragon/fskk5.gif
+      sound	data/chars/dragon/at9.wav
+      @cmd    hurt 5
+      @cmd    position 29 15 0 0 1
+      frame	data/chars/dragon/fskk6.gif
+      @cmd    degravity -0.27
+      sound	data/chars/dragon/at10.wav
+      @cmd    position 30 15 0 0 1
+      frame	data/chars/dragon/fskk5.gif
+      sound	data/chars/dragon/at9.wav
+      @cmd    hurt 5
+      @cmd    position 29 15 0 0 1
+      frame	data/chars/dragon/fskk6.gif
+      sound	data/chars/dragon/at10.wav
+      @cmd    position 30 15 0 0 1
+      frame	data/chars/dragon/fskk5.gif
+      sound	data/chars/dragon/at9.wav
+      @cmd    hurt 5
+      @cmd    position 29 15 0 0 1
+      frame	data/chars/dragon/fskk6.gif
+      sound	data/chars/dragon/at10.wav
+      @cmd    position 30 15 0 0 1
+      frame	data/chars/dragon/fskk5.gif
+      sound	data/chars/dragon/at9.wav
+      @cmd    hurt 5
+      @cmd    position 29 15 0 0 1
+      frame	data/chars/dragon/fskk6.gif
+      sound	data/chars/dragon/at10.wav
+      @cmd    position 30 15 1 0 1
+      frame	data/chars/dragon/fskk5.gif
+      @cmd    depost 0
+      @cmd    finish 2 1 1 3 0 1
+      delay	5
+      frame	data/chars/dragon/fskk4.gif
+      delay	2
+      move -4
+      offset	70 194
+      frame	data/chars/dragon/jf6.gif
+      offset	70 189
+      frame	data/chars/dragon/jf6.gif
+      offset	70 193
+      frame	data/chars/dragon/jf6.gif
+      offset	70 197
+      frame	data/chars/dragon/jf6.gif
+      offset	70 201
+      frame	data/chars/dragon/jf6.gif
+      offset	70 205
+      frame	data/chars/dragon/jf5.gif
+      offset	70 209
+      frame	data/chars/dragon/jf5.gif
+      offset	70 213
+      frame	data/chars/dragon/jf4.gif
+      offset	70 217
+      frame	data/chars/dragon/jf4.gif
+      offset	70 221
+      frame	data/chars/dragon/jf3.gif
+      offset	70 225
+      frame	data/chars/dragon/jf3.gif
+      offset	70 229
+      frame	data/chars/dragon/jf2.gif
+      offset	70 233
+      frame	data/chars/dragon/jf2.gif
+      offset	70 237
+      frame	data/chars/dragon/jf5.gif
+      offset	70 241
+      frame	data/chars/dragon/jf5.gif
+      frame	data/chars/dragon/jf4.gif
+      offset	70 240
+      frame	data/chars/dragon/jf4.gif
+      offset	70 235
+      frame	data/chars/dragon/jf3.gif
+      offset	70 230
+      frame	data/chars/dragon/jf3.gif
+      offset	70 225
+      frame	data/chars/dragon/jf2.gif
+      offset	70 220
+      frame	data/chars/dragon/jf2.gif
+      offset	70 215
+      frame	data/chars/dragon/jf5.gif
+      offset	70 210
+      frame	data/chars/dragon/jf5.gif
+      offset	70 205
+      frame	data/chars/dragon/jf4.gif
+      offset	70 200
+      frame	data/chars/dragon/jf4.gif
+      offset	70 195
+      frame	data/chars/dragon/jf1.gif
+      offset	70 190
+      frame	data/chars/dragon/jf1.gif
+      offset	70 185
+      frame	data/chars/dragon/jf1.gif
+      offset	70 180
+      frame	data/chars/dragon/jf1.gif
+      offset	70 175
+      frame	data/chars/dragon/jf1.gif
+      move 0
+      delay	6
+      offset	70 170
+      sound data/sounds/step.wav
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/dragon/jl1.gif
+      frame	data/chars/dragon/jl2.gif
+      frame	data/chars/dragon/jl1.gif
+
+
+anim freespecial20
+      loop	0
+	delay	20
+      offset	130 190
+      quakeframe 5 5 7
+      spawnframe 5 -75 0 0 0
+      subentity du
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart6
+      @cmd    position 6 18 0 0 0
+      @cmd    degravity -0.27
+      frame	data/chars/dragon/dsp01.gif
+      sound	data/chars/dragon/select.wav
+      delay 8
+      offset	132 180
+      frame	data/chars/dragon/dsp1.gif
+      delay 7
+      offset	102 170
+      @cmd    position 7 27 10 -1 0
+      move -15
+      frame	data/chars/dragon/dsp2.gif
+      move 0
+      @cmd    position 8 22 34 -1 0
+      frame	data/chars/dragon/dsp3.gif
+      @cmd    position 9 10 24 -1 0
+      frame	data/chars/dragon/dsp4.gif
+      attack10 20 90 55 60 5 1 0 1
+      dropv 2 1.5
+      offset	97 170
+      sound	data/sounds/fall.wav
+      delay 8
+      @cmd    position 10 -56 6 -1 0
+      frame	data/chars/dragon/dsp6.gif
+      @cmd    hurt 20
+      @cmd    position 11 -61 5 -1 0
+      frame	data/chars/dragon/dsp6.gif
+      attack10 0 0 0 0 0 0
+      @cmd    depost 0
+      @cmd    finish 5 2 2 2 0 0
+      delay 9
+      frame	data/chars/dragon/dsp6.gif
+      frame	data/chars/dragon/dsp7.gif
+      frame	data/chars/dragon/dsp8.gif
+
+anim freespecial21
+      loop	0
+	delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/dragon/runki5.wav
+      frame	data/chars/dragon/aaaaa1.gif
+	frame	data/chars/dragon/aaaaa2.gif
+      sound	data/sounds/air5.wav
+      blast  75 80 94 45 15 0 0 10
+	frame	data/chars/dragon/aaaaa3.gif
+      blast	0 0 0 0 0 0
+	frame	data/chars/dragon/aaaaa4.gif
+      frame	data/chars/dragon/aaaaa5.gif
+
+anim freespecial22
+      loop	0
+      delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/dragon/at1.wav
+      frame	data/chars/dragon/aaa1.gif
+	frame	data/chars/dragon/aaa2.gif
+      sound	data/sounds/air5.wav
+      attack  90 80 70 40 15 1 0 0 10
+      frame	data/chars/dragon/aaa3.gif
+      attack	0 0 0 0 0 0
+	frame	data/chars/dragon/aaa4.gif
+      frame	data/chars/dragon/aa1.gif
+
+

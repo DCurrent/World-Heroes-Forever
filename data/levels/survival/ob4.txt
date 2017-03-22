@@ -1,0 +1,18 @@
+name    ob4
+type	TRAP
+shadow  0
+noatflash 1
+candamage enemy player
+
+anim idle
+	loop	1
+        delay	5
+	  offset	50 95
+        otg 1
+        hitfx   data/sounds/bur.wav
+        burn  3 0 65 85 5 1 1 1 50
+        dropv 3 1
+        forcedirection 2
+        frame   data/levels/survival/ob.gif
+        frame   data/levels/survival/ob.gif
+

@@ -1,0 +1,65 @@
+name surf1
+nolife 1
+type	none
+shadow 6
+antigravity 100
+
+anim spawn
+      loop	0
+	delay	1.5
+      offset	124 172
+      flipframe 0
+      move -6
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s33.gif
+      frame	data/chars/gokuu/surf/s33.gif
+      frame	data/chars/gokuu/surf/s33.gif
+      frame	data/chars/gokuu/surf/s33.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s33.gif
+      frame	data/chars/gokuu/surf/s33.gif
+      frame	data/chars/gokuu/surf/s33.gif
+      frame	data/chars/gokuu/surf/s33.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      
+
+anim idle
+	loop	0
+	delay	3
+      offset	124 170
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s11.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      frame	data/chars/gokuu/surf/s22.gif
+      shadowcoords 999 999
+      frame	data/chars/gokuu/surf/s22.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/misc/empty.gif
+      
+

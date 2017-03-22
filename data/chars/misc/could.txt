@@ -1,0 +1,24 @@
+name	could
+type	none
+shadow	0
+antigravity     100
+lifespan 6
+
+anim idle
+	loop	0
+	delay	2
+	offset	48 53
+      frame	data/chars/misc/could1.gif
+	frame	data/chars/misc/could2.gif
+	frame	data/chars/misc/could3.gif
+	frame	data/chars/misc/could4.gif
+      frame	data/chars/misc/could5.gif
+	frame	data/chars/misc/could6.gif
+	frame	data/chars/misc/could7.gif
+      frame	data/chars/misc/could8.gif
+	frame	data/chars/misc/could9.gif
+	frame	data/chars/misc/could10.gif
+      frame	data/chars/misc/could11.gif
+      frame	data/chars/misc/empty.gif
+
+

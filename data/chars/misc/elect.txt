@@ -1,0 +1,61 @@
+name    	elect
+type    	none
+shadow  	0
+lifespan  	4
+nomove  	1
+nolife          1
+antigravity     100
+
+
+anim idle
+      loop	0
+	delay	3
+	offset	118 182
+      sound  data/sounds/ellat.wav
+	frame	data/chars/misc/elect1.gif
+	frame	data/chars/misc/elect2.gif
+	frame	data/chars/misc/elect3.gif
+	frame	data/chars/misc/elect4.gif
+      sound  data/sounds/ellat.wav
+      frame	data/chars/misc/elect5.gif
+	frame	data/chars/misc/elect6.gif
+      sound  data/sounds/ellat.wav
+	frame	data/chars/misc/elect1.gif
+	frame	data/chars/misc/elect2.gif
+	frame	data/chars/misc/elect3.gif
+	frame	data/chars/misc/elect4.gif
+      sound  data/sounds/ellat.wav
+      frame	data/chars/misc/elect5.gif
+	frame	data/chars/misc/elect6.gif
+      sound  data/sounds/ellat.wav
+	frame	data/chars/misc/elect1.gif
+	frame	data/chars/misc/elect2.gif
+	frame	data/chars/misc/elect3.gif
+	frame	data/chars/misc/elect4.gif
+      sound  data/sounds/ellat.wav
+      frame	data/chars/misc/elect5.gif
+	frame	data/chars/misc/elect6.gif
+      sound  data/sounds/ellat.wav
+	frame	data/chars/misc/elect1.gif
+	frame	data/chars/misc/elect2.gif
+	frame	data/chars/misc/elect3.gif
+	frame	data/chars/misc/elect4.gif
+      sound  data/sounds/ellat.wav
+      frame	data/chars/misc/elect5.gif
+	frame	data/chars/misc/elect6.gif
+      sound  data/sounds/ellat.wav
+	frame	data/chars/misc/elect1.gif
+	frame	data/chars/misc/elect2.gif
+	frame	data/chars/misc/elect3.gif
+	frame	data/chars/misc/elect4.gif
+      sound  data/sounds/ellat.wav
+      frame	data/chars/misc/elect5.gif
+	frame	data/chars/misc/elect6.gif
+      sound  data/sounds/ellat.wav
+      frame	data/chars/misc/elect1.gif
+	frame	data/chars/misc/elect2.gif
+      frame	data/chars/misc/elect3.gif
+	frame	data/chars/misc/elect4.gif
+      frame	data/chars/misc/empty.gif
+
+

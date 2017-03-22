@@ -1,0 +1,1792 @@
+name	neodio
+health	1200
+speed	12
+type	enemy
+shadow  0
+grabdistance	40
+paingrab 1
+gfxshadow  1
+falldie 2
+nodieblink      1
+dust du
+aggression      50
+diesound	data/chars/neodio/die.wav
+aimove chase
+aimove wander
+thold 40
+blockodds 1
+escapehits 2
+bflash bflash
+projectilehit   enemy obstacle trap
+icon	data/chars/neodio/icon2.gif
+hostile player 
+candamage player obstacle
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/neodio/idle.gif
+
+
+anim spawn
+	loop	0
+	delay	80
+      offset	43 146
+      frame	data/chars/neodio/spawn2.gif
+      delay	10
+      frame	data/chars/neodio/spawn2.gif
+      sound	data/chars/neodio/at6.wav
+      frame	data/chars/neodio/spawn3.gif
+      frame	data/chars/neodio/spawn4.gif
+      frame	data/chars/neodio/spawn5.gif
+      frame	data/chars/neodio/spawn6.gif
+      delay	30
+      frame	data/chars/neodio/spawn6.gif
+      delay	8
+      frame	data/chars/neodio/spawn3.gif
+      frame	data/chars/neodio/spawn2.gif
+      frame	data/chars/neodio/spawn1.gif
+
+anim idle
+	loop	1
+	delay	13
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd    clearL
+      frame	data/chars/neodio/idle.gif
+      frame	data/chars/neodio/idle1.gif
+      frame	data/chars/neodio/idle2.gif
+      frame	data/chars/neodio/idle1.gif
+      
+anim walk
+	loop	1
+      delay   9
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/neodio/w1.gif
+	frame	data/chars/neodio/w2.gif
+	frame	data/chars/neodio/w3.gif
+	frame	data/chars/neodio/w4.gif
+	frame	data/chars/neodio/w3.gif
+      frame	data/chars/neodio/w2.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	75 170
+	bbox	55 78 47 80
+	frame	data/chars/neodio/bl1.gif
+      frame	data/chars/neodio/bl2.gif
+      delay	2
+      offset	78 170
+	frame	data/chars/neodio/bl2.gif
+      offset	75 170
+      frame	data/chars/neodio/bl2.gif
+      offset	72 170
+      frame	data/chars/neodio/bl2.gif
+      offset	75 170
+      frame	data/chars/neodio/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/neodio/bl2.gif
+      frame	data/chars/neodio/bl2.gif
+      frame	data/chars/neodio/bl1.gif
+      frame	data/chars/neodio/bl1.gif
+      frame	data/chars/neodio/bl1.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	75 170
+      frame	data/chars/neodio/pain4.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	66 185
+      frame	data/chars/neodio/pain2.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	75 170
+      bbox	0 0 0 0
+      frame	data/chars/neodio/pain4.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	75 170
+      frame	data/chars/neodio/pain4.gif
+
+
+anim pain
+	loop	0
+	delay	4
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/neodio/pain2.gif
+      offset	77 170
+	frame	data/chars/neodio/pain2.gif
+      offset	74 170
+	frame	data/chars/neodio/pain2.gif
+      offset	76 170
+      frame	data/chars/neodio/pain2.gif
+      offset	75 170
+      frame	data/chars/neodio/pain2.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/neodio/pain2.gif
+      offset	77 170
+	frame	data/chars/neodio/pain2.gif
+      sound	data/chars/neodio/pain.wav
+      offset	73 170
+	frame	data/chars/neodio/pain2.gif
+      offset	77 170
+      frame	data/chars/neodio/pain2.gif
+      offset	75 170
+      frame	data/chars/neodio/pain2.gif
+      delay	45
+      frame	data/chars/neodio/pain4.gif
+      frame	data/chars/neodio/pain4.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	75 170
+      bbox	25 145 100 30
+	frame	data/chars/neodio/fall04.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	75 170
+	frame	data/chars/neodio/fall04.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/neodio/pain4.gif
+      offset	77 170
+	frame	data/chars/neodio/pain4.gif
+      offset	73 170
+	frame	data/chars/neodio/pain4.gif
+      offset	77 170
+      frame	data/chars/neodio/pain4.gif
+      offset	75 170
+      frame	data/chars/neodio/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      move -4
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/neodio/bpain04.gif
+      offset	77 170
+	frame	data/chars/neodio/bpain04.gif
+      offset	73 170
+	frame	data/chars/neodio/bpain4.gif
+      offset	77 170
+      frame	data/chars/neodio/bpain4.gif
+      offset	75 170
+      frame	data/chars/neodio/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/neodio/bpain02.gif
+      frame	data/chars/neodio/bpain02.gif
+      frame	data/chars/neodio/bpain2.gif
+      frame	data/chars/neodio/bpain2.gif
+      frame	data/chars/neodio/bpain02.gif
+      frame	data/chars/neodio/bpain02.gif
+      frame	data/chars/neodio/bpain2.gif
+      frame	data/chars/neodio/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	75 170
+	frame	data/chars/neodio/pain2.gif
+      offset	77 170
+	frame	data/chars/neodio/pain2.gif
+      offset	74 170
+	frame	data/chars/neodio/pain2.gif
+      offset	76 170
+      frame	data/chars/neodio/pain2.gif
+      offset	75 170
+      frame	data/chars/neodio/pain2.gif
+      frame	data/chars/neodio/pain4.gif
+      frame	data/chars/neodio/pain4.gif
+      frame	data/chars/neodio/pain4.gif
+      frame	data/chars/neodio/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      bouncefactor 3.5
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/neodio/fall01.gif
+	frame	data/chars/neodio/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/neodio/fall02.gif
+	frame	data/chars/neodio/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/neodio/fall03.gif
+      delay   40
+	frame	data/chars/neodio/fall03.gif
+      @cmd    degravity 0
+      delay   8
+      bbox	25 145 100 30
+	frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/neodio/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	75 170
+      attack10  50 90 60 70 5 1 1 1
+      dropv 2 1.5
+      move -4
+      frame	data/chars/neodio/pain5.gif
+      frame	data/chars/neodio/pain5.gif
+      frame	data/chars/neodio/pain5.gif
+      delay   2
+      move -5
+      offset	95 155
+      sound	data/sounds/fall.wav
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall02.gif
+      frame	data/chars/neodio/ffall02.gif
+      frame	data/chars/neodio/ffall02.gif
+      move -4
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall02.gif
+      frame	data/chars/neodio/ffall02.gif
+      frame	data/chars/neodio/ffall02.gif
+      move -3
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      offset	95 175
+      @cmd    degravity 0
+      frame	data/chars/neodio/ffall05.gif
+      frame	data/chars/neodio/ffall05.gif
+      frame	data/chars/neodio/ffall05.gif
+      frame	data/chars/neodio/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      move -3
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      move 0
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      move 0
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      frame	data/chars/neodio/dsla1.gif
+	frame	data/chars/neodio/dsla2.gif
+	frame	data/chars/neodio/dsla3.gif
+      frame	data/chars/neodio/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/neodio/sla3.gif
+      offset	125 120
+      frame	data/chars/neodio/sla2.gif
+      offset	75 170
+      frame	data/chars/neodio/pain4.gif
+      offset	83 140
+      frame	data/chars/neodio/sla1.gif
+      frame	data/chars/neodio/sla2.gif
+      frame	data/chars/neodio/rjsla3.gif
+      offset	75 150
+      frame	data/chars/neodio/rjsla4.gif
+      frame	data/chars/neodio/rjsla5.gif
+      offset	95 170
+      frame	data/chars/neodio/fall01.gif
+      frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall05.gif
+      offset	88 170
+      frame	data/chars/neodio/rj0.gif
+      offset	111 175
+      frame	data/chars/neodio/rj00.gif
+      offset	109 160
+      frame	data/chars/neodio/gsla2.gif
+      offset	104 170
+      frame	data/chars/neodio/gfall04.gif
+      frame	data/chars/neodio/gfall05.gif
+      offset	124 175
+      frame	data/chars/neodio/pain41.gif
+      offset	124 170
+      frame	data/chars/neodio/dsla22.gif
+	frame	data/chars/neodio/dsla33.gif
+      offset	75 150
+      frame	data/chars/neodio/rjsla7.gif
+      offset	75 170
+      frame	data/chars/neodio/pain2.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/neodio/sla1.gif
+      offset	112 145
+	frame	data/chars/neodio/sla2.gif
+      offset	90 145
+	frame	data/chars/neodio/sla3.gif
+      frame	data/chars/neodio/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/neodio/fall04.gif
+      offset	85 145
+      frame	data/chars/neodio/sla1.gif
+      frame	data/chars/neodio/sla1.gif
+      offset	98 138
+      frame	data/chars/neodio/ssla3.gif
+      frame	data/chars/neodio/rjsla3.gif
+      frame	data/chars/neodio/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/neodio/rjsla4.gif
+      frame	data/chars/neodio/rjsla5.gif
+      frame	data/chars/neodio/rjsla6.gif
+      frame	data/chars/neodio/sla1.gif
+      frame	data/chars/neodio/sla1.gif
+      frame	data/chars/neodio/ssla3.gif
+      frame	data/chars/neodio/sla2.gif
+      offset	123 170
+      frame	data/chars/neodio/sla3.gif
+      offset	98 138
+      frame	data/chars/neodio/hsla1.gif
+      frame	data/chars/neodio/hsla2.gif
+      frame	data/chars/neodio/hsla3.gif
+      frame	data/chars/neodio/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/neodio/hsla2.gif
+      frame	data/chars/neodio/hsla4.gif
+      frame	data/chars/neodio/rj1.gif
+      frame	data/chars/neodio/gsla3.gif
+      frame	data/chars/neodio/rj3.gif
+      frame	data/chars/neodio/hsla4.gif
+      offset	98 148
+      frame	data/chars/neodio/hsla4.gif
+      offset	120 170
+      frame	data/chars/neodio/pain41.gif
+      frame	data/chars/neodio/pain21.gif
+      offset	75 170
+      frame	data/chars/neodio/pain4.gif
+      offset	122 170
+      frame	data/chars/neodio/pain41.gif
+      frame	data/chars/neodio/pain55.gif
+      offset	100 140
+      frame	data/chars/neodio/fall066.gif
+      offset	75 170
+      frame	data/chars/neodio/pain5.gif
+      offset	105 85
+      frame	data/chars/neodio/dsla3.gif
+      offset	75 170
+      frame	data/chars/neodio/pain4.gif
+      frame	data/chars/neodio/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/neodio/gsla1.gif
+      offset	112 145
+	frame	data/chars/neodio/gsla2.gif
+      offset	90 145
+	frame	data/chars/neodio/gsla3.gif
+      frame	data/chars/neodio/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/neodio/gsla6.gif
+      offset	115 170
+      frame	data/chars/neodio/dsla1.gif
+      offset	115 145
+	frame	data/chars/neodio/gsla3.gif
+      offset	75 170
+      frame	data/chars/neodio/pain4.gif
+      offset	105 170
+      frame	data/chars/neodio/gfall04.gif
+      offset	75 148
+      frame	data/chars/neodio/rjsla4.gif
+      frame	data/chars/neodio/rjsla5.gif
+      offset	95 170
+      frame	data/chars/neodio/fall04.gif
+      offset	75 143
+      frame	data/chars/neodio/hsla2.gif
+      frame	data/chars/neodio/hsla4.gif
+      offset	124 170
+      frame	data/chars/neodio/pain4.gif
+      offset	95 170
+      frame	data/chars/neodio/fall01.gif
+      frame	data/chars/neodio/fall02.gif
+      frame	data/chars/neodio/fall03.gif
+      frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall05.gif
+      offset	104 170
+      frame	data/chars/neodio/gsla2.gif
+      frame	data/chars/neodio/gsla3.gif
+      frame	data/chars/neodio/gsla4.gif
+      frame	data/chars/neodio/gfall04.gif
+      frame	data/chars/neodio/gfall05.gif
+      offset	75 165
+      frame	data/chars/neodio/pain5.gif
+      frame	data/chars/neodio/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity -0.27
+	frame	data/chars/neodio/fall03.gif
+      frame	data/chars/neodio/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/neodio/fall04.gif
+      @cmd    degravity 0
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/neodio/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity -0.27
+	frame	data/chars/neodio/fall03.gif
+      frame	data/chars/neodio/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/neodio/fall04.gif
+      @cmd    degravity 0
+      delay   2
+	frame	data/chars/neodio/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity -0.27
+      frame	data/chars/neodio/sla3.gif
+      frame	data/chars/neodio/sla3.gif
+      delay   10
+      offset	98 138
+      bbox	55 78 80 57
+      frame	data/chars/neodio/fall02.gif
+      frame	data/chars/neodio/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/neodio/fall03.gif
+      delay   500
+      frame	data/chars/neodio/fall03.gif
+      offset	95 170
+      delay   8
+      bbox	25 145 100 30
+      @cmd    degravity 0
+      frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/neodio/fall05.gif
+
+
+anim fall10
+      loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+      frame	data/chars/neodio/fall01.gif
+	frame	data/chars/neodio/fall01.gif
+	frame	data/chars/neodio/fall02.gif
+	frame	data/chars/neodio/fall02.gif
+      delay   20
+	frame	data/chars/neodio/fall03.gif
+      delay   40
+	frame	data/chars/neodio/fall03.gif
+      delay   8
+	frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/neodio/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 170
+      bbox	25 145 100 30
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/neodio/fall04.gif
+	frame	data/chars/neodio/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/neodio/fall01.gif
+	frame	data/chars/neodio/fall01.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/neodio/fall02.gif
+	frame	data/chars/neodio/fall02.gif
+      delay   20
+	frame	data/chars/neodio/fall03.gif
+      delay   40
+	frame	data/chars/neodio/fall03.gif
+      @cmd    degravity 0
+      delay   8
+	frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/neodio/fall05.gif
+
+anim burn
+	loop	0
+      delay   7
+	offset	95 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    degravity -0.27
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/neodio/burn01.gif
+	frame	data/chars/neodio/burn1.gif
+      frame	data/chars/neodio/burn01.gif
+	frame	data/chars/neodio/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/neodio/burn02.gif
+	frame	data/chars/neodio/burn2.gif
+      frame	data/chars/neodio/burn02.gif
+	frame	data/chars/neodio/burn2.gif
+	frame	data/chars/neodio/burn03.gif
+	frame	data/chars/neodio/burn3.gif
+      frame	data/chars/neodio/burn03.gif
+      frame	data/chars/neodio/burn3.gif
+	frame	data/chars/neodio/burn03.gif
+      frame	data/chars/neodio/burn3.gif
+      delay   40
+	frame	data/chars/neodio/burn03.gif
+      delay   7
+      bbox	25 145 100 30
+      @cmd    degravity 0
+	frame	data/chars/neodio/burn4.gif
+      frame	data/chars/neodio/burn04.gif
+      frame	data/chars/neodio/burn4.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/neodio/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 170
+      bbox	25 145 100 30
+      @cmd    degravity 0
+      frame	data/chars/neodio/fall05.gif
+
+anim rise
+	loop	0
+      delay   6
+      offset	75 144
+      @cmd    riseattack 120 40 "ANI_SPECIAL"
+	frame	data/chars/neodio/rise1.gif
+      delay   5
+	frame	data/chars/neodio/rise2.gif
+	frame	data/chars/neodio/rise3.gif
+	frame	data/chars/neodio/rise4.gif
+      frame	data/chars/neodio/rise5.gif
+	frame	data/chars/neodio/rise6.gif
+      frame	data/chars/neodio/rise7.gif
+	frame	data/chars/neodio/rise8.gif
+      delay   8
+      frame	data/chars/neodio/rise9.gif
+	frame	data/chars/neodio/rise10.gif
+	
+anim attack1
+	loop	0
+      range 60 90
+	delay	12
+      offset	75 170
+      bbox	55 78 47 80
+      followcond 2
+      followanim 3
+      attackone 1
+      hitfx   data/sounds/go.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/neodio/grab2.gif
+      attack12  135 85 35 40 0 0 1 1 20
+      nokill 1
+      frame	data/chars/neodio/grab1.gif
+
+anim follow3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      }
+    }
+@end_script
+      loop	0
+      delay	7
+      offset	75 170
+      quakeframe 5 3 3
+      @cmd    slamstart4
+      @cmd    position 14 80 1 -1 1
+      frame	data/chars/neodio/grab1.gif
+      delay	20
+      @cmd    position 14 80 1 -1 1
+      frame	data/chars/neodio/grat1.gif
+      delay	8
+      sound	data/chars/neodio/at5.wav
+      @cmd    position 14 76 1 -1 1
+      frame	data/chars/neodio/grat2.gif
+      @cmd    position 6 76 1 -1 1
+      frame	data/chars/neodio/grat3.gif
+      @cmd    spawn01 "flas" 65 0 0
+      sound	data/sounds/beat3.wav
+      @cmd    position 6 76 1 -1 1
+      frame	data/chars/neodio/grat4.gif
+      @cmd    depost 0
+      @cmd    throw 30 3 2 3 0 1
+      frame	data/chars/neodio/grat5.gif
+      delay	8
+      frame	data/chars/neodio/grat5.gif
+      frame	data/chars/neodio/grat5.gif
+
+anim follow4
+      loop	0
+      delay	16
+      offset	75 170
+      jumpframe 3 4.5 1.5 0 dus
+      quakeframe 15 4 5
+      flipframe 3
+      @cmd    slamstart4
+      @cmd    position 14 80 1 -1 1
+      frame	data/chars/neodio/grab1.gif
+      delay	10
+      @cmd    position 14 76 1 -1 1
+      frame	data/chars/neodio/grab2.gif
+      delay	15
+      offset	60 170
+      @cmd    position 1 58 1 -1 1
+      frame	data/chars/neodio/th1.gif
+      delay	4
+      @cmd    degravity -0.27
+      offset	140 170
+      sound	data/sounds/jump.wav
+      @cmd    position 15 -65 17 -1 1
+      frame	data/chars/neodio/th2.gif
+      frame	data/chars/neodio/th2.gif
+      frame	data/chars/neodio/th2.gif
+      sound	data/chars/neodio/at8.wav
+      delay	3
+      @cmd    position 16 -10 80 -1 1
+      frame	data/chars/neodio/th3.gif
+      frame	data/chars/neodio/th3.gif
+      frame	data/chars/neodio/th3.gif
+      @cmd    degravity 0.01
+      delay	1
+      @cmd    position 5 10 0 0 1
+      frame	data/chars/neodio/j55.gif
+      offset	140 172
+      @cmd    position 5 11 -10 0 1
+      frame	data/chars/neodio/j55.gif
+      offset	140 174
+      @cmd    position 5 12 -20 0 1
+      frame	data/chars/neodio/j55.gif
+      offset	140 176
+      @cmd    position 5 13 -30 0 1
+      frame	data/chars/neodio/j55.gif
+      offset	140 178
+      @cmd    position 5 14 -40 0 1
+      frame	data/chars/neodio/j55.gif
+      offset	140 180
+      @cmd    position 5 15 -50 0 1
+      frame	data/chars/neodio/j66.gif
+      offset	140 182
+      @cmd    position 5 16 -60 0 1
+      frame	data/chars/neodio/j66.gif
+      offset	140 184
+      @cmd    position 5 17 -70 0 1
+      frame	data/chars/neodio/j66.gif
+      offset	140 186
+      delay	2
+      @cmd    position 5 18 -80 0 1
+      frame	data/chars/neodio/j66.gif
+      @cmd    depost 0
+      @cmd    throw 30 2 1 3 0 1
+      delay	5
+      offset	140 179
+      frame	data/chars/neodio/j77.gif
+      @cmd    anichange "ANI_FOLLOW5"
+      frame	data/chars/neodio/upper5.gif
+      
+anim follow5
+      loop	0
+      jumpframe 0 4 -1
+      landframe 16 du
+      flipframe 0
+      delay	4
+      offset	60 186
+      @cmd    degravity 0
+      frame	data/chars/neodio/j8.gif
+      frame	data/chars/neodio/j5.gif
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      frame	data/chars/neodio/j8.gif
+      frame	data/chars/neodio/j5.gif
+      frame	data/chars/neodio/j6.gif 
+      @cmd    degravity -0.27
+      frame	data/chars/neodio/j7.gif
+      offset	60 185
+      frame	data/chars/neodio/j8.gif
+      offset	60 184
+      frame	data/chars/neodio/j5.gif
+      offset	60 183
+      frame	data/chars/neodio/j6.gif
+      offset	60 182
+      frame	data/chars/neodio/j7.gif
+      offset	60 181
+      frame	data/chars/neodio/j8.gif
+      offset	60 180
+      frame	data/chars/neodio/j5.gif
+      offset	60 179
+      @cmd    degravity -30
+      frame	data/chars/neodio/j9.gif
+      offset	75 170
+      delay	80
+      frame	data/chars/neodio/j9.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim follow6
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      }
+    }
+@end_script
+      loop	0
+      delay   6
+      offset	75 170
+      jumpframe 2 0 -3 0.5 du
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/rub1.gif
+      frame	data/chars/neodio/rub2.gif
+      frame	data/chars/neodio/rub21.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/rub22.gif
+      frame	data/chars/neodio/rub21.gif
+      frame	data/chars/neodio/rub2.gif
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      bbox	55 78 47 75
+      frame	data/chars/neodio/rub3.gif
+      frame	data/chars/neodio/rub3.gif
+
+anim follow7
+      loop	0
+      delay   6
+      offset	75 170
+      jumpframe 2 0 -3 -0.5 du
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/rub1.gif
+      frame	data/chars/neodio/rub2.gif
+      frame	data/chars/neodio/rub21.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/rub22.gif
+      frame	data/chars/neodio/rub21.gif
+      frame	data/chars/neodio/rub2.gif
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      bbox	55 78 47 75
+      frame	data/chars/neodio/rub3.gif
+      frame	data/chars/neodio/rub3.gif
+
+anim attack2
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%25;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW11"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+      } else if( r < 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW13"));
+      }
+    }
+@end_script
+	loop	0
+      range 140 280
+	delay	6
+      offset	75 170
+      bbox	55 78 47 80
+      followcond 2
+      followanim 9
+      attackone 1
+      hitfx   data/sounds/go.wav
+      jumpframe 2 0 3 0 du
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j1.gif
+      sound	data/sounds/jumpp.wav
+      attack  90 85 80 45 0 0 0 1
+      noreflect 1
+      nokill 1
+      frame	data/chars/neodio/ru1.gif
+      frame	data/chars/neodio/ru2.gif
+      frame	data/chars/neodio/ru21.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/ru22.gif
+      frame	data/chars/neodio/ru21.gif
+      frame	data/chars/neodio/ru2.gif
+      bbox	55 78 47 75
+      frame	data/chars/neodio/ru1.gif
+      frame	data/chars/neodio/ru3.gif
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/rub3.gif
+
+anim follow9
+      loop	0
+	delay	6
+      offset	75 170
+      hitflash  ffla
+      hitfx   data/sounds/knife2.wav
+      jumpframe 0 0 2
+      sound	data/chars/neodio/at4.wav
+      frame	data/chars/neodio/raaa1.gif
+      frame	data/chars/neodio/raaa1.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/neodio/raaa1.gif
+      delay	2
+      attack3  75 95 85 55 15 0 0 0 45
+	frame	data/chars/neodio/raaa2.gif
+      frame	data/chars/neodio/raaa2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/neodio/raaa3.gif
+	frame	data/chars/neodio/raaa3.gif
+      frame	data/chars/neodio/raaa4.gif
+      frame	data/chars/neodio/raaa4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/raaa5.gif
+      frame	data/chars/neodio/raaa5.gif
+      attack  80 95 80 55 15 1 0 0 35
+      frame	data/chars/neodio/raaa6.gif
+      frame	data/chars/neodio/raaa6.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/neodio/raaa7.gif
+      frame	data/chars/neodio/raaa7.gif
+      frame	data/chars/neodio/raaa8.gif
+      frame	data/chars/neodio/raaa8.gif
+      frame	data/chars/neodio/raaa8.gif
+
+anim follow10
+      loop	0
+      delay   12
+      offset	75 170
+      jumpframe 1 5 2.5 0.5 dus
+      landframe 12 dus
+      hitfx   data/sounds/go.wav
+      frame	data/chars/neodio/j1.gif
+      @cmd    degravity -0.27
+      delay   4
+      frame	data/chars/neodio/j4.gif
+      bbox	55 78 47 75
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/j3.gif
+      @cmd    riseattack 120 20 "ANI_FOLLOW14"
+      frame	data/chars/neodio/j3.gif
+      frame	data/chars/neodio/j5.gif
+      @cmd    riseattack 90 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      frame	data/chars/neodio/j8.gif
+      frame	data/chars/neodio/j5.gif
+      @cmd    degravity -1
+      @cmd    riseattack 100 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      delay   40
+      @cmd    riseattack 145 20 "ANI_FOLLOW12"
+      frame	data/chars/neodio/j9.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim follow11
+      loop	0
+      delay   12
+      offset	75 170
+      jumpframe 1 5 2.5 -0.5 dus
+      landframe 12 dus
+      hitfx   data/sounds/go.wav
+      frame	data/chars/neodio/j1.gif
+      @cmd    degravity -0.27
+      delay   4
+      frame	data/chars/neodio/j4.gif
+      bbox	55 78 47 75
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/j3.gif
+      @cmd    riseattack 120 20 "ANI_FOLLOW14"
+      frame	data/chars/neodio/j3.gif
+      frame	data/chars/neodio/j5.gif
+      @cmd    riseattack 90 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      frame	data/chars/neodio/j8.gif
+      frame	data/chars/neodio/j5.gif
+      @cmd    degravity -1
+      @cmd    riseattack 100 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      delay   40
+      @cmd    riseattack 145 20 "ANI_FOLLOW12"
+      frame	data/chars/neodio/j9.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim follow13
+      loop	0
+      delay   12
+      offset	75 170
+      jumpframe 1 5 2.5 0 dus
+      landframe 12 dus
+      hitfx   data/sounds/go.wav
+      frame	data/chars/neodio/j1.gif
+      @cmd    degravity -0.27
+      delay   4
+      frame	data/chars/neodio/j4.gif
+      bbox	55 78 47 75
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/j3.gif
+      @cmd    riseattack 120 20 "ANI_FOLLOW14"
+      frame	data/chars/neodio/j3.gif
+      frame	data/chars/neodio/j5.gif
+      @cmd    riseattack 90 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      frame	data/chars/neodio/j8.gif
+      frame	data/chars/neodio/j5.gif
+      @cmd    degravity -1
+      @cmd    riseattack 100 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      delay   40
+      @cmd    riseattack 145 20 "ANI_FOLLOW12"
+      frame	data/chars/neodio/j9.gif
+      attack 0 0 0 0 0 0
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim follow12
+      loop	0
+	delay	5
+      offset	75 170
+      jumpframe 0 0 2.5
+      landframe 8 dus
+      @cmd    degravity -0.27
+      hitfx   data/sounds/knife2.wav
+      frame	data/chars/neodio/j4.gif
+      frame	data/chars/neodio/j4.gif
+      frame	data/chars/neodio/ja1.gif
+      sound	data/chars/neodio/at8.wav
+      frame	data/chars/neodio/ja1.gif
+      attack  35 80 100 50 20 1 0 0 40
+      frame	data/chars/neodio/ja2.gif
+      frame	data/chars/neodio/ja2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/neodio/ja3.gif
+      delay	40
+      @cmd    degravity -1
+      frame	data/chars/neodio/ja4.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim follow14
+      loop	0
+	delay	5
+      offset	75 170
+      jumpframe 0 0 2.5
+      landframe 6 dus
+      @cmd    degravity -0.27
+      hitfx   data/sounds/knife2.wav
+      frame	data/chars/neodio/ja1.gif
+      sound	data/chars/neodio/at8.wav
+      frame	data/chars/neodio/ja1.gif
+      attack  35 80 100 50 20 1 0 0 40 40
+      frame	data/chars/neodio/ja2.gif
+      frame	data/chars/neodio/ja2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/neodio/ja3.gif
+      delay	40
+      @cmd    degravity -1
+      frame	data/chars/neodio/ja4.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim follow20
+      loop	0
+	delay	5
+      offset	75 170
+      jumpframe 0 0 2.5
+      landframe 8 dus
+      @cmd    degravity -1
+      hitflash  ffla
+      hitfx   data/sounds/knife2.wav
+      frame	data/chars/neodio/jaa1.gif
+      sound	data/chars/neodio/at8.wav
+      frame	data/chars/neodio/jaa2.gif
+      attack3  65 115 90 55 7 0 0 0 40 40
+      frame	data/chars/neodio/jaa3.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/neodio/jaa4.gif
+      attack3  65 115 90 55 7 0 0 0 40 40
+      frame	data/chars/neodio/jaa5.gif
+      attack  0 0 0 0 0 0
+      @cmd    degravity -0.27
+      frame	data/chars/neodio/jaa6.gif
+      attack  65 115 90 55 7 1 0 0 20 40
+      frame	data/chars/neodio/jaa6.gif
+      attack  0 0 0 0 0 0
+      delay	40
+      @cmd    degravity -1
+      frame	data/chars/neodio/j9.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim attack3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%20;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW6"));
+      }
+    }
+@end_script
+	loop	0
+      range 0 50
+	delay	6
+      offset	75 170
+      followcond 2
+      followanim 15
+      bbox	55 78 47 80
+      hitfx  data/sounds/beat2.wav
+      frame	data/chars/neodio/a1.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/neodio/a2.gif
+      frame	data/chars/neodio/a3.gif
+      attack 75 90 55 30 10 0 0 0 50
+      frame	data/chars/neodio/a4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/neodio/a5.gif
+
+anim follow15
+      loop	0
+	delay	6
+      offset	75 170
+      bbox	55 78 47 80
+      quakeframe 4 4 5
+      hitflash  ffla
+      hitfx  data/sounds/beat2.wav
+      frame	data/chars/neodio/a4.gif
+      delay	8
+      frame	data/chars/neodio/a5.gif
+      sound	data/chars/neodio/at5.wav
+      delay	6
+      frame	data/chars/neodio/aa1.gif
+      frame	data/chars/neodio/aa2.gif
+      delay	5
+      attack 75 30 55 70 10 1 0 0 20
+      dropv 4.5 1
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/aa3.gif
+      frame	data/chars/neodio/aa4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/neodio/aa5.gif
+      frame	data/chars/neodio/aa6.gif
+      delay	7
+      frame	data/chars/neodio/aa2.gif
+      frame	data/chars/neodio/aa7.gif
+
+anim attack4
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%20;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW17"));
+      }
+    }
+@end_script
+	loop	0
+      range 95 120
+	delay	7
+      offset	75 170
+      followcond 2
+      followanim 16
+      bbox	55 78 47 80
+      hitfx  data/sounds/beat2.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/neodio/aaa1.gif
+      frame	data/chars/neodio/aaa2.gif
+      sound	data/chars/neodio/at4.wav
+      attack 95 80 80 30 10 0 0 0 55
+      frame	data/chars/neodio/aaa3.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/neodio/aaa3.gif
+      delay	6
+      frame	data/chars/neodio/aaa4.gif
+      frame	data/chars/neodio/aaa5.gif
+
+anim follow16
+      loop	0
+	delay	10
+      offset	75 170
+      bbox	55 78 47 80
+      quakeframe 6 3 3
+      hitflash  ffla
+      hitfx  data/sounds/beat2.wav
+      frame	data/chars/neodio/aaa3.gif
+      delay	7
+      frame	data/chars/neodio/aaa4.gif
+      frame	data/chars/neodio/aaa5.gif
+      delay	8
+      frame	data/chars/neodio/aaaa1.gif
+      sound	data/chars/neodio/at6.wav
+      delay	6
+      frame	data/chars/neodio/aaaa2.gif
+      frame	data/chars/neodio/aaaa3.gif
+      sound	data/sounds/air3.wav
+      attack 95 80 80 30 15 1 0 0 25
+      dropv 3 3
+      frame	data/chars/neodio/aaaa4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/neodio/aaaa5.gif
+      frame	data/chars/neodio/aaaa6.gif
+      delay	10
+      frame	data/chars/neodio/aaaa1.gif
+
+anim follow17
+      loop	0
+	delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      frame	data/chars/neodio/aaaaa1.gif
+      sound	data/chars/neodio/at6.wav
+      frame	data/chars/neodio/aaaaa2.gif
+      delay	12
+      frame	data/chars/neodio/aaaaa3.gif
+      delay	2.5
+      sound	data/chars/brocken/at11.wav
+      frame	data/chars/neodio/aaaaa4.gif
+      attack16  115 60 65 65 20 1 1 1 50
+      dropv 4 1
+      frame	data/chars/neodio/aaaaa5.gif
+      frame	data/chars/neodio/aaaaa4.gif
+      sound	data/chars/brocken/at11.wav
+      frame	data/chars/neodio/aaaaa5.gif
+      frame	data/chars/neodio/aaaaa4.gif
+      frame	data/chars/neodio/aaaaa5.gif
+      sound	data/chars/brocken/at11.wav
+      frame	data/chars/neodio/aaaaa4.gif
+      frame	data/chars/neodio/aaaaa5.gif
+      frame	data/chars/neodio/aaaaa4.gif
+      sound	data/chars/brocken/at11.wav
+      frame	data/chars/neodio/aaaaa5.gif
+      frame	data/chars/neodio/aaaaa4.gif
+      frame	data/chars/neodio/aaaaa5.gif
+
+anim attack5
+      loop	0
+      range 130 160
+      rangez 15 50
+	delay	6
+      offset	75 170
+      bbox	55 78 47 80
+      followcond 2
+      followanim 18
+      attackone 1
+      hitfx   data/sounds/go.wav
+      jumpframe 2 0 3 0.7 du
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j1.gif
+      sound	data/sounds/jumpp.wav
+      attack  90 85 80 45 0 0 0 1
+      noreflect 1
+      nokill 1
+      frame	data/chars/neodio/ru1.gif
+      frame	data/chars/neodio/ru2.gif
+      frame	data/chars/neodio/ru21.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/ru22.gif
+      frame	data/chars/neodio/ru21.gif
+      frame	data/chars/neodio/ru2.gif
+      bbox	55 78 47 75
+      frame	data/chars/neodio/ru1.gif
+      frame	data/chars/neodio/ru3.gif
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/rub3.gif
+
+anim attack6
+      loop	0
+      range 130 160
+      rangez -50 -15
+	delay	6
+      offset	75 170
+      bbox	55 78 47 80
+      followcond 2
+      followanim 19
+      attackone 1
+      hitfx   data/sounds/go.wav
+      jumpframe 2 0 3 -0.7 du
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j1.gif
+      sound	data/sounds/jumpp.wav
+      attack  90 85 80 45 0 0 0 1
+      noreflect 1
+      nokill 1
+      frame	data/chars/neodio/ru1.gif
+      frame	data/chars/neodio/ru2.gif
+      frame	data/chars/neodio/ru21.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/ru22.gif
+      frame	data/chars/neodio/ru21.gif
+      frame	data/chars/neodio/ru2.gif
+      bbox	55 78 47 75
+      frame	data/chars/neodio/ru1.gif
+      frame	data/chars/neodio/ru3.gif
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/rub3.gif
+
+anim follow18
+      loop	0
+	delay	6
+      offset	75 170
+      hitflash  ffla
+      hitfx   data/sounds/knife2.wav
+      jumpframe 3 0 2 0.7
+      sound	data/chars/neodio/at4.wav
+      frame	data/chars/neodio/ra1.gif
+      frame	data/chars/neodio/ra1.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/neodio/ra1.gif
+      delay	2
+      attack3  75 95 85 55 10 0 0 0 45
+	frame	data/chars/neodio/ra2.gif
+      frame	data/chars/neodio/ra2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/neodio/ra3.gif
+	frame	data/chars/neodio/ra3.gif
+      attack  75 95 85 55 15 1 0 0 35
+      frame	data/chars/neodio/ra4.gif
+      frame	data/chars/neodio/ra4.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/neodio/ra5.gif
+      frame	data/chars/neodio/ra5.gif
+      frame	data/chars/neodio/ra5.gif
+      frame	data/chars/neodio/ra5.gif
+      frame	data/chars/neodio/ra5.gif
+      frame	data/chars/neodio/ra5.gif
+      
+anim follow19
+      loop	0
+	delay	6
+      offset	75 170
+      hitflash  ffla
+      hitfx   data/sounds/knife2.wav
+      jumpframe 3 0 2 -0.7
+      sound	data/chars/neodio/at4.wav
+      frame	data/chars/neodio/raa1.gif
+      frame	data/chars/neodio/raa1.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/neodio/raa1.gif
+      delay	2
+      attack3  75 95 85 55 10 0 0 0 45
+	frame	data/chars/neodio/raa2.gif
+      frame	data/chars/neodio/raa2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/neodio/raa3.gif
+	frame	data/chars/neodio/raa3.gif
+      attack  75 95 85 55 15 1 0 0 35
+      frame	data/chars/neodio/raa4.gif
+      frame	data/chars/neodio/raa4.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/neodio/raa5.gif
+      frame	data/chars/neodio/raa5.gif
+      frame	data/chars/neodio/raa5.gif
+      frame	data/chars/neodio/raa5.gif
+      frame	data/chars/neodio/raa5.gif
+      frame	data/chars/neodio/raa5.gif
+
+anim attack7
+      loop	0
+      range 285 420
+      delay   12
+      offset	75 170
+      jumpframe 1 5 3 0 dus
+      landframe 12 dus
+      hitfx   data/sounds/go.wav
+      frame	data/chars/neodio/j1.gif
+      @cmd    degravity -0.27
+      delay   4
+      frame	data/chars/neodio/j4.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/neodio/j3.gif
+      @cmd    riseattack 120 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j3.gif
+      frame	data/chars/neodio/j5.gif
+      bbox	55 78 47 75
+      @cmd    riseattack 90 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      frame	data/chars/neodio/j8.gif
+      frame	data/chars/neodio/j5.gif
+      @cmd    degravity -1
+      @cmd    riseattack 120 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j6.gif
+      frame	data/chars/neodio/j7.gif
+      delay   40
+      @cmd    riseattack 160 20 "ANI_FOLLOW20"
+      frame	data/chars/neodio/j9.gif
+      attack 0 0 0 0 0 0
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim upper
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW6"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW13"));
+      }
+    }
+@end_script
+      loop	0
+      delay	12
+      offset	75 170
+      jumpframe 1 5 1 0 dus
+      landframe 18 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/neodio/j1.gif
+      delay	2.5
+      @cmd    degravity -0.27
+      sound	data/chars/neodio/at6.wav
+      frame	data/chars/neodio/upper2.gif
+      frame	data/chars/neodio/upper2.gif
+      frame	data/chars/neodio/upper3.gif
+      frame	data/chars/neodio/upper3.gif
+      bbox	45 65 60 70
+      attack  30 55 90 90 15 1 0 0 40
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      frame	data/chars/neodio/upper7.gif
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      frame	data/chars/neodio/upper7.gif
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      @cmd    degravity -1
+      frame	data/chars/neodio/upper7.gif
+      attack 0 0 0 0 0 0
+      delay	80
+      bbox	55 78 47 80
+      frame	data/chars/neodio/j9.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim special
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW6"));
+      }
+    }
+@end_script
+      loop	0
+      delay	12
+      offset	75 170
+      jumpframe 1 5 1 0 dus
+      landframe 18 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/neodio/j1.gif
+      delay	2.5
+      @cmd    degravity -0.27
+      sound	data/chars/neodio/at6.wav
+      frame	data/chars/neodio/upper2.gif
+      frame	data/chars/neodio/upper2.gif
+      frame	data/chars/neodio/upper3.gif
+      frame	data/chars/neodio/upper3.gif
+      bbox	45 65 60 70
+      attack  30 55 90 90 15 1 0 0 40
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      frame	data/chars/neodio/upper7.gif
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      frame	data/chars/neodio/upper7.gif
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      @cmd    degravity -1
+      frame	data/chars/neodio/upper7.gif
+      attack 0 0 0 0 0 0
+      delay	80
+      bbox	55 78 47 80
+      frame	data/chars/neodio/j9.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim special2
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW6"));
+      }
+    }
+@end_script
+      loop	0
+      delay	12
+      offset	75 170
+      jumpframe 1 5 1 0 dus
+      landframe 18 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/neodio/j1.gif
+      delay	2.5
+      @cmd    degravity -0.27
+      sound	data/chars/neodio/at6.wav
+      frame	data/chars/neodio/upper2.gif
+      frame	data/chars/neodio/upper2.gif
+      frame	data/chars/neodio/upper3.gif
+      frame	data/chars/neodio/upper3.gif
+      attack  30 55 90 90 15 1 0 0 40
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      frame	data/chars/neodio/upper7.gif
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      frame	data/chars/neodio/upper7.gif
+      frame	data/chars/neodio/upper4.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/neodio/upper5.gif
+      frame	data/chars/neodio/upper6.gif
+      @cmd    degravity -1
+      frame	data/chars/neodio/upper7.gif
+      attack 0 0 0 0 0 0
+      delay	80
+      bbox	55 78 47 80
+      frame	data/chars/neodio/j9.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/neodio/j1.gif
+      frame	data/chars/neodio/j2.gif
+      frame	data/chars/neodio/j1.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/neodio/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   9
+	offset	95 170
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/neodio/fall04.gif
+      delay   20
+      frame	data/chars/neodio/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+	offset	95 155
+      move -5
+      sound	data/sounds/fall.wav
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall02.gif
+      frame	data/chars/neodio/ffall02.gif
+      frame	data/chars/neodio/ffall02.gif
+      move -4
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall02.gif
+      frame	data/chars/neodio/ffall02.gif
+      frame	data/chars/neodio/ffall02.gif
+      move -3
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall03.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall04.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      frame	data/chars/neodio/ffall01.gif
+      offset	95 175
+      frame	data/chars/neodio/ffall05.gif
+      frame	data/chars/neodio/ffall05.gif
+      frame	data/chars/neodio/ffall05.gif
+      frame	data/chars/neodio/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      frame	data/chars/neodio/fall04.gif
+      move -3
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      move 0
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      move 0
+      frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+      move 0
+      delay   80
+	frame	data/chars/neodio/fall05.gif
+      frame	data/chars/neodio/fall05.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/neodio/fall05.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/neodio/fall05.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/neodio/fall05.gif
+
+

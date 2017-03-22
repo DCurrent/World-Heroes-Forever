@@ -1,0 +1,349 @@
+music		data/music/guinea2.bor
+background	data/levels/guinea2/back3.gif
+panel	      data/levels/guinea2/n09.gif
+order           a
+direction both
+cameraoffset 0 -100
+
+spawn1 90 20 
+spawn2 100 40
+
+#----------pickups
+
+spawn	fg
+coords	10 287
+at	0
+
+spawn	ba
+coords	2 285
+at	0
+
+spawn	ba
+coords	610 285
+at	0
+
+spawn	pe
+coords	155 170
+at	0
+
+spawn	peo
+coords	1630 170
+at	0
+
+spawn	peop
+coords	1317 170
+at	0
+
+spawn	to
+coords	333 170
+at	0
+
+spawn	to
+flip 1
+coords	1393 170
+at	0
+
+spawn	tor
+coords	1698 170
+at	0
+
+spawn	fir
+coords	224 156
+at	0
+
+spawn	fir
+coords	849 152
+at	0
+
+spawn	fir
+coords	1195 149
+at	0
+
+spawn	fir
+coords	1457 149
+at	0
+
+spawn	fir2
+flip 1
+coords	268 151
+at	0
+
+spawn	fir2
+coords	560 151
+at	0
+
+spawn	fir2
+flip 1
+coords	1620 151
+at	0
+
+spawn	obstacm
+flip 1
+item  1up
+coords	1035 200
+at	0
+
+spawn	obstacm
+item  diamond
+itemmap 1
+coords	1046 226
+at	0
+
+spawn	obstacm
+flip 1
+coords	1057 252
+at	0
+
+spawn	obstacm
+item  goldkat
+coords	1068 278
+at	0
+
+spawn	barel
+flip 1
+item  menuu
+coords	139 277
+at	0
+
+spawn	barel
+item  meat
+coords	1197 199
+at	0
+
+spawn	barel
+flip 1
+item  meat
+coords	1713 275
+at	0
+
+spawn	trape
+flip 1
+coords	958 195
+at	0
+
+spawn	trape
+flip 1
+coords	964 215
+at	0
+
+spawn	trape
+flip 1
+coords	970 235
+at	0
+
+spawn	trape
+flip 1
+coords	976 255
+at	0
+
+spawn	trape
+flip 1
+coords	982 275
+at	0
+
+wait
+at 108
+
+Group	3 4
+at	108
+
+blockade 108
+at	108
+
+spawn   delay
+health   15
+coords   161 200
+at   108
+
+spawn   delay
+health   15
+coords   162 200
+at   108
+
+spawn	assass
+coords	115 208
+at	108
+
+spawn	assass
+item  ring
+coords	173 208
+at	108
+
+spawn   delay
+health   20
+coords   163 200
+at   108
+
+spawn   delay
+health   20
+coords   164 200
+at   108
+
+spawn	ninja2
+Health 100
+flip 1
+map 1
+coords	-100 235
+at	108
+
+spawn	ninja2
+Health 100
+item  diamond
+map 1
+coords	420 235
+at	108
+
+Group	100 100
+at	430
+
+blockade 430
+at	430
+
+spawn	lee
+map 4
+coords	380 220
+at	430
+
+spawn	lee
+map 4
+coords	390 255
+at	430
+
+spawn	lee2
+map 2
+flip 1
+coords	-100 235
+at	500
+
+spawn	zazie
+map 4
+coords	380 270
+at	570
+
+wait
+at 720
+
+spawn	ssassin2
+coords	132 208
+at	720
+
+spawn	ssassin2
+item  gold
+coords	185 208
+at	720
+
+blockade 720
+at	720
+
+wait
+at 1158
+
+Group	5 5
+at	1158
+
+blockade 1158
+at	1158
+
+spawn	assassi
+coords	162 200
+at	1158
+
+spawn	assassi
+flip 1
+item  ring
+coords	162 270
+at	1158
+
+spawn	ninja2
+flip 1
+map 1
+coords	-100 230
+at	1158
+
+spawn	ninja2
+map 1
+coords	420 230
+at	1158
+
+blockade 1360
+at	1360
+
+Group	4 4
+at	1360
+
+spawn	mudman
+boss 1
+coords	340 190
+at	1360
+
+spawn	ssassin2
+coords	90 208
+at	1360
+
+spawn   delay
+health   15
+coords   165 200
+at   1360
+
+spawn	lee
+map 1
+coords	380 225
+at	1360
+
+spawn	lee2
+flip 1
+map 1
+coords	-100 260
+at	1360
+
+spawn	zazie
+map 2
+item  time
+coords	380 225
+at	1360
+
+spawn	lee
+map 4
+coords	380 250
+at	1360
+
+spawn	assassi
+flip 1
+item  susi
+coords	50 260
+at	1360
+
+spawn	lee2
+map 1
+coords	420 210
+at	1360
+
+spawn	ninja2
+flip 1
+coords	-100 215
+at	1360
+
+spawn	ninja2
+flip 1
+item  time
+coords	-100 230
+at	1360
+
+spawn	zazie
+map 1
+coords	380 240
+at	1360
+
+spawn	lee
+flip 1
+map 1
+coords	-100 225
+at	1360
+
+spawn	ninja2
+Health 100
+map 1
+coords	420 215
+at	1360
+
+

@@ -1,0 +1,1336 @@
+name	jmax
+health	550
+speed	10
+type	enemy
+shadow  0
+grabdistance	55
+paingrab 1
+gfxshadow  1
+falldie 2
+nodieblink      1
+dust du
+aggression      1
+diesound	data/chars/jmax/die.wav
+aimove chase
+aimove wander
+thold 35
+blockodds 1
+escapehits 3
+bflash bflash
+projectilehit   enemy obstacle trap
+icon	data/chars/jmax/icon2.gif
+hostile player 
+candamage player obstacle
+
+load	maxb
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/jmax/idle.gif
+
+anim spawn
+      @script
+   if(frame == 25){
+      playmusic("DATA/music/koreboss.BOR", 1);
+   }
+   @end_script
+	loop	0
+      delay	11
+      offset	75 170
+      followcond 1
+      followanim 5
+      jumpframe 34 0 5 0 du
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      delay	11
+      frame	data/chars/jmax/aa1.gif
+      sound	data/chars/jmax/at7.wav
+      delay	2
+      bbox	55 78 47 80
+	frame	data/chars/jmax/aa2.gif
+	frame	data/chars/jmax/aa2.gif
+      attack12 100 85 65 60 25 1 0 0 45
+      dropv 2 3.5
+      forcedirection -1
+     	frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa4.gif
+	frame	data/chars/jmax/aa4.gif
+      frame	data/chars/jmax/aa5.gif
+      frame	data/chars/jmax/aa5.gif
+	frame	data/chars/jmax/aa4.gif
+	frame	data/chars/jmax/aa4.gif
+	frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa4.gif
+	frame	data/chars/jmax/aa4.gif
+      frame	data/chars/jmax/aa5.gif
+      attack12 0 0 0 0 0 0
+	frame	data/chars/jmax/aa5.gif
+      @cmd    anichange "ANI_FOLLOW6"
+      frame	data/chars/jmax/aa5.gif
+	frame	data/chars/jmax/aa5.gif
+
+anim idle
+	loop	1
+	delay	14
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd    clearL
+      frame	data/chars/jmax/idle.gif
+      frame	data/chars/jmax/idle1.gif
+      frame	data/chars/jmax/idle2.gif
+      frame	data/chars/jmax/idle1.gif
+      
+anim walk
+	loop	1
+      delay   12
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/jmax/w1.gif
+	frame	data/chars/jmax/w2.gif
+	frame	data/chars/jmax/w3.gif
+	frame	data/chars/jmax/w4.gif
+	frame	data/chars/jmax/w5.gif
+      frame	data/chars/jmax/w6.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	75 170
+	bbox	55 78 47 80
+	frame	data/chars/jmax/bl1.gif
+      frame	data/chars/jmax/bl2.gif
+      delay	2
+      offset	78 170
+	frame	data/chars/jmax/bl2.gif
+      offset	75 170
+      frame	data/chars/jmax/bl2.gif
+      offset	72 170
+      frame	data/chars/jmax/bl2.gif
+      offset	75 170
+      frame	data/chars/jmax/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/jmax/bl2.gif
+      frame	data/chars/jmax/bl2.gif
+      frame	data/chars/jmax/bl1.gif
+      frame	data/chars/jmax/bl1.gif
+      frame	data/chars/jmax/bl1.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	75 170
+      frame	data/chars/jmax/pain4.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	66 191
+      frame	data/chars/jmax/pain2.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	75 170
+      bbox	0 0 0 0
+      frame	data/chars/jmax/pain4.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	75 170
+      frame	data/chars/jmax/pain4.gif
+
+
+anim pain
+	loop	0
+	delay	4
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/jmax/pain2.gif
+      offset	77 170
+	frame	data/chars/jmax/pain2.gif
+      offset	74 170
+	frame	data/chars/jmax/pain2.gif
+      offset	76 170
+      frame	data/chars/jmax/pain2.gif
+      offset	75 170
+      frame	data/chars/jmax/pain2.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/jmax/pain2.gif
+      offset	77 170
+	frame	data/chars/jmax/pain2.gif
+      sound	data/chars/jmax/pain.wav
+      offset	73 170
+	frame	data/chars/jmax/pain2.gif
+      offset	77 170
+      frame	data/chars/jmax/pain2.gif
+      offset	75 170
+      frame	data/chars/jmax/pain2.gif
+      delay	45
+      frame	data/chars/jmax/pain4.gif
+      frame	data/chars/jmax/pain4.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	75 170
+      bbox	25 145 100 30
+	frame	data/chars/jmax/fall04.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	75 170
+	frame	data/chars/jmax/fall04.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/jmax/pain4.gif
+      offset	77 170
+	frame	data/chars/jmax/pain4.gif
+      offset	73 170
+	frame	data/chars/jmax/pain4.gif
+      offset	77 170
+      frame	data/chars/jmax/pain4.gif
+      offset	75 170
+      frame	data/chars/jmax/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      move -4
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/jmax/bpain04.gif
+      offset	77 170
+	frame	data/chars/jmax/bpain04.gif
+      offset	73 170
+	frame	data/chars/jmax/bpain4.gif
+      offset	77 170
+      frame	data/chars/jmax/bpain4.gif
+      offset	75 170
+      frame	data/chars/jmax/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/jmax/bpain02.gif
+      frame	data/chars/jmax/bpain02.gif
+      frame	data/chars/jmax/bpain2.gif
+      frame	data/chars/jmax/bpain2.gif
+      frame	data/chars/jmax/bpain02.gif
+      frame	data/chars/jmax/bpain02.gif
+      frame	data/chars/jmax/bpain2.gif
+      frame	data/chars/jmax/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	75 170
+	frame	data/chars/jmax/pain2.gif
+      offset	77 170
+	frame	data/chars/jmax/pain2.gif
+      offset	74 170
+	frame	data/chars/jmax/pain2.gif
+      offset	76 170
+      frame	data/chars/jmax/pain2.gif
+      offset	75 170
+      frame	data/chars/jmax/pain2.gif
+      frame	data/chars/jmax/pain4.gif
+      frame	data/chars/jmax/pain4.gif
+      frame	data/chars/jmax/pain4.gif
+      frame	data/chars/jmax/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      bouncefactor 3.5
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/jmax/fall01.gif
+	frame	data/chars/jmax/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jmax/fall02.gif
+	frame	data/chars/jmax/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/jmax/fall03.gif
+      delay   40
+	frame	data/chars/jmax/fall03.gif
+      @cmd    degravity 0
+      delay   8
+      bbox	25 145 100 30
+	frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jmax/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	75 170
+      attack10  50 90 60 70 5 1 1 1
+      dropv 2 1.5
+      move -4
+      frame	data/chars/jmax/pain5.gif
+      frame	data/chars/jmax/pain5.gif
+      frame	data/chars/jmax/pain5.gif
+      delay   2
+      move -5
+      offset	95 155
+      sound	data/sounds/fall.wav
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall02.gif
+      frame	data/chars/jmax/ffall02.gif
+      frame	data/chars/jmax/ffall02.gif
+      move -4
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall02.gif
+      frame	data/chars/jmax/ffall02.gif
+      frame	data/chars/jmax/ffall02.gif
+      move -3
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      offset	95 175
+      frame	data/chars/jmax/ffall05.gif
+      frame	data/chars/jmax/ffall05.gif
+      frame	data/chars/jmax/ffall05.gif
+      frame	data/chars/jmax/ffall05.gif
+      @cmd    degravity 0
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      move -3
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      move 0
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      move 0
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      frame	data/chars/jmax/dsla1.gif
+	frame	data/chars/jmax/dsla2.gif
+	frame	data/chars/jmax/dsla3.gif
+      frame	data/chars/jmax/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/jmax/sla3.gif
+      offset	125 120
+      frame	data/chars/jmax/sla2.gif
+      offset	75 170
+      frame	data/chars/jmax/pain4.gif
+      offset	83 140
+      frame	data/chars/jmax/sla1.gif
+      frame	data/chars/jmax/sla2.gif
+      frame	data/chars/jmax/rjsla3.gif
+      offset	75 150
+      frame	data/chars/jmax/rjsla4.gif
+      frame	data/chars/jmax/rjsla5.gif
+      offset	95 170
+      frame	data/chars/jmax/fall01.gif
+      frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall05.gif
+      offset	88 170
+      frame	data/chars/jmax/rj0.gif
+      offset	110 174
+      frame	data/chars/jmax/rj00.gif
+      offset	104 165
+      frame	data/chars/jmax/gsla2.gif
+      offset	104 165
+      frame	data/chars/jmax/gfall04.gif
+      frame	data/chars/jmax/gfall05.gif
+      offset	124 175
+      frame	data/chars/jmax/pain41.gif
+      offset	124 170
+      frame	data/chars/jmax/dsla22.gif
+	frame	data/chars/jmax/dsla33.gif
+      offset	75 150
+      frame	data/chars/jmax/rjsla7.gif
+      offset	75 170
+      frame	data/chars/jmax/pain2.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/jmax/sla1.gif
+      offset	112 145
+	frame	data/chars/jmax/sla2.gif
+      offset	90 145
+	frame	data/chars/jmax/sla3.gif
+      frame	data/chars/jmax/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/jmax/fall04.gif
+      offset	85 145
+      frame	data/chars/jmax/sla1.gif
+      frame	data/chars/jmax/sla1.gif
+      offset	98 138
+      frame	data/chars/jmax/ssla3.gif
+      frame	data/chars/jmax/rjsla3.gif
+      frame	data/chars/jmax/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jmax/rjsla4.gif
+      frame	data/chars/jmax/rjsla5.gif
+      frame	data/chars/jmax/rjsla6.gif
+      frame	data/chars/jmax/sla1.gif
+      frame	data/chars/jmax/sla1.gif
+      frame	data/chars/jmax/ssla3.gif
+      frame	data/chars/jmax/sla2.gif
+      offset	123 170
+      frame	data/chars/jmax/sla3.gif
+      offset	98 138
+      frame	data/chars/jmax/hsla1.gif
+      frame	data/chars/jmax/hsla2.gif
+      frame	data/chars/jmax/hsla3.gif
+      frame	data/chars/jmax/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jmax/hsla2.gif
+      frame	data/chars/jmax/hsla4.gif
+      frame	data/chars/jmax/rj1.gif
+      frame	data/chars/jmax/gsla3.gif
+      frame	data/chars/jmax/rj3.gif
+      frame	data/chars/jmax/hsla4.gif
+      offset	98 148
+      frame	data/chars/jmax/hsla4.gif
+      offset	120 170
+      frame	data/chars/jmax/pain41.gif
+      frame	data/chars/jmax/pain21.gif
+      offset	75 170
+      frame	data/chars/jmax/pain4.gif
+      offset	122 170
+      frame	data/chars/jmax/pain41.gif
+      frame	data/chars/jmax/pain55.gif
+      offset	100 140
+      frame	data/chars/jmax/fall066.gif
+      offset	75 170
+      frame	data/chars/jmax/pain5.gif
+      offset	105 85
+      frame	data/chars/jmax/dsla3.gif
+      offset	75 170
+      frame	data/chars/jmax/pain4.gif
+      frame	data/chars/jmax/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/jmax/gsla1.gif
+      offset	112 145
+	frame	data/chars/jmax/gsla2.gif
+      offset	90 145
+	frame	data/chars/jmax/gsla3.gif
+      frame	data/chars/jmax/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jmax/gsla6.gif
+      offset	115 170
+      frame	data/chars/jmax/dsla1.gif
+      offset	115 145
+	frame	data/chars/jmax/gsla3.gif
+      offset	75 170
+      frame	data/chars/jmax/pain4.gif
+      offset	105 170
+      frame	data/chars/jmax/gfall04.gif
+      offset	75 148
+      frame	data/chars/jmax/rjsla4.gif
+      frame	data/chars/jmax/rjsla5.gif
+      offset	95 170
+      frame	data/chars/jmax/fall04.gif
+      offset	75 143
+      frame	data/chars/jmax/hsla2.gif
+      frame	data/chars/jmax/hsla4.gif
+      offset	124 170
+      frame	data/chars/jmax/pain4.gif
+      offset	95 170
+      frame	data/chars/jmax/fall01.gif
+      frame	data/chars/jmax/fall02.gif
+      frame	data/chars/jmax/fall03.gif
+      frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall05.gif
+      offset	104 170
+      frame	data/chars/jmax/gsla2.gif
+      frame	data/chars/jmax/gsla3.gif
+      frame	data/chars/jmax/gsla4.gif
+      frame	data/chars/jmax/gfall04.gif
+      frame	data/chars/jmax/gfall05.gif
+      offset	75 165
+      frame	data/chars/jmax/pain5.gif
+      frame	data/chars/jmax/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity -0.27
+	frame	data/chars/jmax/fall03.gif
+      frame	data/chars/jmax/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/jmax/fall04.gif
+      @cmd    degravity 0
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jmax/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity -0.27
+	frame	data/chars/jmax/fall03.gif
+      frame	data/chars/jmax/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/jmax/fall04.gif
+      @cmd    degravity 0
+      delay   2
+	frame	data/chars/jmax/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity -0.27
+      frame	data/chars/jmax/sla3.gif
+      frame	data/chars/jmax/sla3.gif
+      delay   10
+      offset	98 138
+      bbox	55 78 80 57
+      frame	data/chars/jmax/fall02.gif
+      frame	data/chars/jmax/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/jmax/fall03.gif
+      delay   500
+      frame	data/chars/jmax/fall03.gif
+      offset	95 170
+      delay   8
+      bbox	25 145 100 30
+      @cmd    degravity 0
+      frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jmax/fall05.gif
+
+
+anim fall10
+      loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+      frame	data/chars/jmax/fall01.gif
+	frame	data/chars/jmax/fall01.gif
+	frame	data/chars/jmax/fall02.gif
+	frame	data/chars/jmax/fall02.gif
+      delay   20
+	frame	data/chars/jmax/fall03.gif
+      delay   40
+	frame	data/chars/jmax/fall03.gif
+      delay   8
+	frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jmax/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 170
+      bbox	25 145 100 30
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/jmax/fall04.gif
+	frame	data/chars/jmax/fall05.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/jmax/fall01.gif
+	frame	data/chars/jmax/fall01.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jmax/fall07.gif
+	frame	data/chars/jmax/fall07.gif
+      delay   20
+	frame	data/chars/jmax/fall07.gif
+      delay   40
+	frame	data/chars/jmax/fall07.gif
+      delay   8
+      @cmd    degravity 0
+	frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jmax/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/jmax/fall01.gif
+	frame	data/chars/jmax/fall01.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jmax/fall02.gif
+	frame	data/chars/jmax/fall02.gif
+      delay   20
+	frame	data/chars/jmax/fall03.gif
+      delay   40
+	frame	data/chars/jmax/fall03.gif
+      @cmd    degravity 0
+      delay   8
+	frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jmax/fall05.gif
+
+anim burn
+	loop	0
+      delay   7
+	offset	95 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/jmax/burn01.gif
+	frame	data/chars/jmax/burn1.gif
+      frame	data/chars/jmax/burn01.gif
+	frame	data/chars/jmax/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jmax/burn02.gif
+	frame	data/chars/jmax/burn2.gif
+      frame	data/chars/jmax/burn02.gif
+	frame	data/chars/jmax/burn2.gif
+	frame	data/chars/jmax/burn03.gif
+	frame	data/chars/jmax/burn3.gif
+      frame	data/chars/jmax/burn03.gif
+      frame	data/chars/jmax/burn3.gif
+	frame	data/chars/jmax/burn03.gif
+      frame	data/chars/jmax/burn3.gif
+      delay   40
+	frame	data/chars/jmax/burn03.gif
+      delay   7
+      bbox	25 145 100 30
+	frame	data/chars/jmax/burn4.gif
+      frame	data/chars/jmax/burn04.gif
+      frame	data/chars/jmax/burn4.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jmax/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 170
+      bbox	25 145 100 30
+      @cmd    degravity 0
+      frame	data/chars/jmax/fall05.gif
+
+anim rise
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jmax/fall05.gif
+      offset	75 170
+	delay	8
+	frame	data/chars/jmax/rise1.gif
+	frame	data/chars/jmax/rise2.gif
+	frame	data/chars/jmax/jl2.gif
+	frame	data/chars/jmax/jl1.gif
+	
+anim attack1
+	loop	0
+      range 0 60
+	delay	11
+      offset	75 170
+      bbox	55 78 47 80
+      followcond 2
+      followanim 4
+      attackone 1
+      hitfx   data/sounds/go.wav
+      sound	data/chars/jmax/at2.wav
+      frame	data/chars/jmax/grab1.gif
+      attack12  75 90 75 40 0 0 1 1 20
+      nokill 1
+      frame	data/chars/jmax/grab2.gif
+      frame	data/chars/jmax/grab3.gif
+
+anim attack2
+	loop	0
+      range 70 110
+	delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/jmax/a2.gif
+      frame	data/chars/jmax/a3.gif
+      sound	data/chars/jmax/at9.wav
+      attack  110 80 52 40 15 1 0 0 25
+      dropv 2 3.5
+      frame	data/chars/jmax/a4.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jmax/a4.gif
+      frame	data/chars/jmax/a3.gif
+      frame	data/chars/jmax/a1.gif
+
+anim attack3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      }
+    }
+@end_script
+      loop	0
+      range 120 280
+      delay	9
+      offset	75 170
+	followcond 1
+      followanim 5
+      jumpframe 7 0 5
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/jmax/at4.wav
+      frame	data/chars/jmax/spawn4.gif
+      frame	data/chars/jmax/spawn1.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn3.gif
+      frame	data/chars/jmax/spawn2.gif
+      frame	data/chars/jmax/spawn1.gif
+      delay	11
+      frame	data/chars/jmax/aa1.gif
+      sound	data/chars/jmax/at7.wav
+      delay	2
+      bbox	55 78 47 80
+	frame	data/chars/jmax/aa2.gif
+	frame	data/chars/jmax/aa2.gif
+      attack12 100 85 65 60 25 1 0 0 45
+      dropv 2 3.5
+      forcedirection -1
+     	frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa4.gif
+	frame	data/chars/jmax/aa4.gif
+      frame	data/chars/jmax/aa5.gif
+      frame	data/chars/jmax/aa5.gif
+	frame	data/chars/jmax/aa4.gif
+	frame	data/chars/jmax/aa4.gif
+	frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa4.gif
+	frame	data/chars/jmax/aa4.gif
+      frame	data/chars/jmax/aa5.gif
+      attack12 0 0 0 0 0 0
+	frame	data/chars/jmax/aa5.gif
+      @cmd    anichange "ANI_FOLLOW6"
+      frame	data/chars/jmax/aa5.gif
+	frame	data/chars/jmax/aa5.gif
+      
+
+anim  follow5
+      loop	0
+	delay	5
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      quakeframe 1 4 4
+      attack  100 85 65 60 25 1 0 0 30
+      dropv 2 3.5
+      frame	data/chars/jmax/aa3.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+	frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jmax/aa2.gif
+      frame	data/chars/jmax/aa2.gif
+      frame	data/chars/jmax/spawn4.gif
+      frame	data/chars/jmax/spawn4.gif
+      @cmd    stop
+      delay	14
+      frame	data/chars/jmax/idle.gif
+      frame	data/chars/jmax/idle1.gif
+      
+      
+anim  follow6
+      loop	0
+	delay	3
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      frame	data/chars/jmax/aa4.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/jmax/aa4.gif
+      delay	2
+      attack  100 85 65 60 25 1 0 0 45
+      dropv 2 3.5
+	frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      frame	data/chars/jmax/aa3.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jmax/aa2.gif
+      frame	data/chars/jmax/aa2.gif
+      frame	data/chars/jmax/aa2.gif
+      frame	data/chars/jmax/aa2.gif
+      frame	data/chars/jmax/spawn4.gif
+      frame	data/chars/jmax/spawn4.gif
+      frame	data/chars/jmax/spawn4.gif
+      frame	data/chars/jmax/spawn4.gif
+
+anim follow4
+      loop	0
+	delay	18
+      offset	75 170
+      jumpframe 1 4 2 0 dus
+      landframe 8 du
+      quakeframe 8 4 7
+      @cmd    slamstart4
+      @cmd    position 6 62 1 0 1
+      frame	data/chars/jmax/grab4.gif
+      delay	8
+      sound	data/chars/jmax/at3.wav
+      @cmd    position 7 69 24 0 1
+      frame	data/chars/jmax/grab5.gif
+      frame	data/chars/jmax/grab5.gif
+      @cmd    position 7 69 24 0 1
+      frame	data/chars/jmax/grab5.gif
+      @cmd    degravity -0.27
+      frame	data/chars/jmax/grab5.gif
+      @cmd    position 7 79 15 0 1
+      delay	7
+      frame	data/chars/jmax/grab6.gif
+      @cmd    dasher 2 -3 0
+      frame	data/chars/jmax/grab6.gif
+      delay	20
+      @cmd    position 7 80 -23 0 1
+      frame	data/chars/jmax/grab7.gif
+      delay	8
+      @cmd    position 8 81 1 0 1
+      frame	data/chars/jmax/grab7.gif
+      frame	data/chars/jmax/grab7.gif
+      frame	data/chars/jmax/grab7.gif
+      @cmd    depost 0
+      @cmd    finish 30 2 2 2 0 1
+      frame	data/chars/jmax/grab7.gif
+      delay	12
+      frame	data/chars/jmax/jl2.gif
+      frame	data/chars/jmax/jl1.gif
+
+
+anim attack4
+      loop	0
+      range 100 300
+      rangez 20 50
+      delay	12
+      offset	75 170
+      jumpframe 1 6 3 0 dus
+      landframe 18 du
+      quakeframe 18 4 7
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmax/sp1.gif
+      delay	4
+      movez 2
+      sound	data/chars/jmax/at8.wav
+      frame	data/chars/jmax/sp2.gif
+      frame	data/chars/jmax/sp2.gif
+      frame	data/chars/jmax/sp3.gif
+      frame	data/chars/jmax/sp3.gif
+      frame	data/chars/jmax/sp4.gif
+      frame	data/chars/jmax/sp4.gif
+      @cmd    degravity -0.27
+      frame	data/chars/jmax/sp5.gif
+      frame	data/chars/jmax/sp5.gif
+      @cmd    dasher 3 -3 0.2
+      attack  45 105 105 45 15 0 1 0 40
+      frame	data/chars/jmax/sp7.gif
+      frame	data/chars/jmax/sp8.gif
+      sound	data/sounds/air3.wav
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmax/sp9.gif
+      frame	data/chars/jmax/sp10.gif
+      frame	data/chars/jmax/sp7.gif
+      attack  45 105 105 45 15 0 1 0 40
+      frame	data/chars/jmax/sp8.gif
+      attack 0 0 0 0 0 0
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmax/sp9.gif
+      attack  45 105 105 45 15 1 1 0 25
+      frame	data/chars/jmax/sp10.gif
+      delay	40
+      frame	data/chars/jmax/sp7.gif
+      movez 0
+      attack 0 0 0 0 0 0
+      @cmd    degravity 0
+      delay	10
+      offset	75 160
+      sound	data/sounds/beat3.wav
+      frame	data/chars/jmax/sp6.gif
+      offset	75 165
+      frame	data/chars/jmax/sp5.gif
+      offset	75 170
+      frame	data/chars/jmax/sp3.gif
+      delay	8
+      sound	data/sounds/step.wav
+      bbox	55 78 47 80
+      frame	data/chars/jmax/jl1.gif
+      frame	data/chars/jmax/jl2.gif
+      frame	data/chars/jmax/jl1.gif
+      frame	data/chars/jmax/sp11.gif
+      frame	data/chars/jmax/sp12.gif
+      frame	data/chars/jmax/sp13.gif
+      frame	data/chars/jmax/sp14.gif
+      frame	data/chars/jmax/sp13.gif
+      frame	data/chars/jmax/sp12.gif
+      frame	data/chars/jmax/sp11.gif
+
+anim attack5
+      loop	0
+      range 100 300
+      rangez -50 -20
+      delay	12
+      offset	75 170
+      jumpframe 1 6 3 0 dus
+      landframe 18 du
+      quakeframe 18 4 7
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmax/sp1.gif
+      delay	4
+      movez -2
+      sound	data/chars/jmax/at8.wav
+      frame	data/chars/jmax/sp2.gif
+      frame	data/chars/jmax/sp2.gif
+      frame	data/chars/jmax/sp3.gif
+      frame	data/chars/jmax/sp3.gif
+      frame	data/chars/jmax/sp4.gif
+      frame	data/chars/jmax/sp4.gif
+      @cmd    degravity -0.27
+      frame	data/chars/jmax/sp5.gif
+      frame	data/chars/jmax/sp5.gif
+      @cmd    dasher 3 -3 -0.2
+      attack  45 105 105 45 15 0 1 0 40
+      frame	data/chars/jmax/sp7.gif
+      frame	data/chars/jmax/sp8.gif
+      sound	data/sounds/air3.wav
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmax/sp9.gif
+      frame	data/chars/jmax/sp10.gif
+      frame	data/chars/jmax/sp7.gif
+      attack  45 105 105 45 15 0 1 0 40
+      frame	data/chars/jmax/sp8.gif
+      attack 0 0 0 0 0 0
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmax/sp9.gif
+      attack  45 105 105 45 15 1 1 0 25
+      frame	data/chars/jmax/sp10.gif
+      delay	40
+      frame	data/chars/jmax/sp7.gif
+      movez 0
+      attack 0 0 0 0 0 0
+      @cmd    degravity 0
+      delay	10
+      offset	75 160
+      sound	data/sounds/beat3.wav
+      frame	data/chars/jmax/sp6.gif
+      offset	75 165
+      frame	data/chars/jmax/sp5.gif
+      offset	75 170
+      frame	data/chars/jmax/sp3.gif
+      delay	8
+      sound	data/sounds/step.wav
+      bbox	55 78 47 80
+      frame	data/chars/jmax/jl1.gif
+      frame	data/chars/jmax/jl2.gif
+      frame	data/chars/jmax/jl1.gif
+      frame	data/chars/jmax/sp11.gif
+      frame	data/chars/jmax/sp12.gif
+      frame	data/chars/jmax/sp13.gif
+      frame	data/chars/jmax/sp14.gif
+      frame	data/chars/jmax/sp13.gif
+      frame	data/chars/jmax/sp12.gif
+      frame	data/chars/jmax/sp11.gif
+
+anim follow7
+      loop	0
+      delay	3
+      offset	75 170
+      bbox	55 78 50 80
+      custknife maxb
+	throwframe 10 65
+      sound	data/chars/jmax/at10.wav
+      frame	data/chars/jmax/spp1.gif
+      frame	data/chars/jmax/spp11.gif
+      frame	data/chars/jmax/spp1.gif
+      offset	95 170
+      frame	data/chars/jmax/spp22.gif
+      offset	75 170
+      frame	data/chars/jmax/spp2.gif
+      offset	95 170
+      frame	data/chars/jmax/spp22.gif
+      sound	data/sounds/air3.wav
+      offset	75 170
+      frame	data/chars/jmax/spp3.gif
+      frame	data/chars/jmax/spp33.gif
+      frame	data/chars/jmax/spp3.gif
+      frame	data/chars/jmax/spp44.gif
+      frame	data/chars/jmax/spp44.gif
+      frame	data/chars/jmax/spp4.gif
+      delay	8
+      frame	data/chars/jmax/spp5.gif
+      frame	data/chars/jmax/spp5.gif
+
+anim upper
+      loop	0
+      delay	12
+      offset	75 170
+      jumpframe 1 4 3 0 dus
+      landframe 13 dus
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jmax/jl1.gif
+      delay	4
+      @cmd    degravity -0.27
+      sound	data/chars/jmax/at6.wav
+      frame	data/chars/jmax/aaa1.gif
+      frame	data/chars/jmax/aaa1.gif
+      bbox	50 60 40 61
+      attack  75 80 45 40 20 1 0 0 40
+      dropv 2 3.5
+      frame	data/chars/jmax/aaa2.gif
+      frame	data/chars/jmax/aaa2.gif
+      frame	data/chars/jmax/aaa2.gif
+      frame	data/chars/jmax/aaa2.gif
+      frame	data/chars/jmax/aaa2.gif
+      frame	data/chars/jmax/aaa2.gif
+      frame	data/chars/jmax/aaa2.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jmax/sp3.gif
+      frame	data/chars/jmax/sp3.gif
+      delay	40
+      frame	data/chars/jmax/aaa4.gif
+      bbox	55 78 47 80
+      @cmd    degravity 0
+      delay	8
+      sound	data/sounds/step.wav
+      frame	data/chars/jmax/jl1.gif
+      frame	data/chars/jmax/jl2.gif
+      frame	data/chars/jmax/jl1.gif
+      
+anim special
+      loop	0
+	delay	11
+      offset	75 170
+      bbox	55 78 47 80
+      followcond 2
+      followanim 4
+      attackone 1
+      hitfx   data/sounds/go.wav
+      sound	data/chars/jmax/at2.wav
+      frame	data/chars/jmax/grab1.gif
+      attack12  75 90 75 40 0 0 1 1 20
+      nokill 1
+      frame	data/chars/jmax/grab2.gif
+      frame	data/chars/jmax/grab3.gif
+
+anim special2
+      loop	0
+      delay   10
+      offset	75 170
+      jumpframe 1 3.5 0 0 dus
+      landframe 14 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/jmax/at6.wav
+      frame	data/chars/jmax/sp1.gif
+      delay   4
+      sound	data/sounds/air3.wav
+      attack15  45 60 105 110 20 1
+      dropv 4 3
+      offset	75 195
+      frame	data/chars/jmax/sp88.gif
+      frame	data/chars/jmax/sp99.gif
+      frame	data/chars/jmax/sp100.gif
+      frame	data/chars/jmax/sp77.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmax/sp88.gif
+      frame	data/chars/jmax/sp99.gif
+      frame	data/chars/jmax/sp100.gif
+      frame	data/chars/jmax/sp77.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jmax/sp88.gif
+      frame	data/chars/jmax/sp99.gif
+      frame	data/chars/jmax/sp100.gif
+      frame	data/chars/jmax/sp77.gif
+      attack15  0 0 0 0 0 0
+      offset	75 170
+      delay   40
+      bbox	55 78 47 80
+      frame	data/chars/jmax/aaa4.gif
+      sound	data/sounds/step.wav
+      delay   8
+      frame	data/chars/jmax/jl1.gif
+      frame	data/chars/jmax/jl2.gif
+      frame	data/chars/jmax/jl1.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jmax/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   9
+	offset	95 170
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/jmax/fall04.gif
+      delay   20
+      frame	data/chars/jmax/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+	offset	95 155
+      move -5
+      sound	data/sounds/fall.wav
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall02.gif
+      frame	data/chars/jmax/ffall02.gif
+      frame	data/chars/jmax/ffall02.gif
+      move -4
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall02.gif
+      frame	data/chars/jmax/ffall02.gif
+      frame	data/chars/jmax/ffall02.gif
+      move -3
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall03.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall04.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      frame	data/chars/jmax/ffall01.gif
+      offset	95 175
+      frame	data/chars/jmax/ffall05.gif
+      frame	data/chars/jmax/ffall05.gif
+      frame	data/chars/jmax/ffall05.gif
+      frame	data/chars/jmax/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      frame	data/chars/jmax/fall04.gif
+      move -3
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      move 0
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      move 0
+      frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+      move 0
+      delay   80
+	frame	data/chars/jmax/fall05.gif
+      frame	data/chars/jmax/fall05.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jmax/fall05.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jmax/fall05.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jmax/fall05.gif
+
+

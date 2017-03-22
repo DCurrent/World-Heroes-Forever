@@ -1,0 +1,1032 @@
+name		elbac
+type		none
+facing		1
+setlayer	-10
+
+anim idle
+      loop 1
+	delay	90
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      frame	data/bgs/elbac/nn000.gif
+      frame	data/bgs/elbac/nn000.gif
+      frame	data/bgs/elbac/nn000.gif
+      frame	data/bgs/elbac/nn000.gif
+      frame	data/bgs/elbac/nn000.gif
+      frame	data/bgs/elbac/nn000.gif
+      frame	data/bgs/elbac/nn000.gif
+      frame	data/bgs/elbac/nn000.gif
+      delay	2
+      sound	data/bgs/elbac/Elec.wav
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      delay	6
+      frame	data/bgs/elbac/n290.gif
+      frame	data/bgs/elbac/n289.gif
+      frame	data/bgs/elbac/n288.gif
+      frame	data/bgs/elbac/n287.gif
+      frame	data/bgs/elbac/n286.gif
+      delay	3
+      frame	data/bgs/elbac/n285.gif
+      frame	data/bgs/elbac/n284.gif
+      frame	data/bgs/elbac/n283.gif
+      frame	data/bgs/elbac/n282.gif
+      frame	data/bgs/elbac/n281.gif
+      frame	data/bgs/elbac/n280.gif
+      frame	data/bgs/elbac/n279.gif
+      frame	data/bgs/elbac/n278.gif
+      frame	data/bgs/elbac/n277.gif
+      frame	data/bgs/elbac/n276.gif
+      frame	data/bgs/elbac/n275.gif
+      frame	data/bgs/elbac/n274.gif
+      frame	data/bgs/elbac/n273.gif
+      frame	data/bgs/elbac/n272.gif
+      frame	data/bgs/elbac/n271.gif
+      frame	data/bgs/elbac/n270.gif
+      frame	data/bgs/elbac/n269.gif
+      frame	data/bgs/elbac/n268.gif
+      frame	data/bgs/elbac/n267.gif
+      frame	data/bgs/elbac/n266.gif
+      frame	data/bgs/elbac/n265.gif
+      frame	data/bgs/elbac/n264.gif
+      frame	data/bgs/elbac/n263.gif
+      frame	data/bgs/elbac/n262.gif
+      frame	data/bgs/elbac/n261.gif
+      frame	data/bgs/elbac/n260.gif
+      frame	data/bgs/elbac/n259.gif
+      frame	data/bgs/elbac/n258.gif
+      frame	data/bgs/elbac/n257.gif
+      frame	data/bgs/elbac/n256.gif
+      frame	data/bgs/elbac/n255.gif
+      frame	data/bgs/elbac/n254.gif
+      frame	data/bgs/elbac/n253.gif
+      frame	data/bgs/elbac/n252.gif
+      frame	data/bgs/elbac/n251.gif
+      frame	data/bgs/elbac/n250.gif
+      frame	data/bgs/elbac/n249.gif
+      frame	data/bgs/elbac/n248.gif
+      frame	data/bgs/elbac/n247.gif
+      frame	data/bgs/elbac/n246.gif
+      frame	data/bgs/elbac/n245.gif
+      frame	data/bgs/elbac/n244.gif
+      frame	data/bgs/elbac/n243.gif
+      frame	data/bgs/elbac/n242.gif
+      frame	data/bgs/elbac/n241.gif
+      frame	data/bgs/elbac/n240.gif
+      frame	data/bgs/elbac/n239.gif
+      frame	data/bgs/elbac/n238.gif
+      frame	data/bgs/elbac/n237.gif
+      frame	data/bgs/elbac/n236.gif
+      frame	data/bgs/elbac/n235.gif
+      frame	data/bgs/elbac/n234.gif
+      frame	data/bgs/elbac/n233.gif
+      frame	data/bgs/elbac/n232.gif
+      frame	data/bgs/elbac/n231.gif
+      frame	data/bgs/elbac/n230.gif
+      frame	data/bgs/elbac/n229.gif
+      frame	data/bgs/elbac/n228.gif
+      frame	data/bgs/elbac/n227.gif
+      frame	data/bgs/elbac/n226.gif
+      frame	data/bgs/elbac/n225.gif
+      frame	data/bgs/elbac/n224.gif
+      frame	data/bgs/elbac/n223.gif
+      frame	data/bgs/elbac/n222.gif
+      frame	data/bgs/elbac/n221.gif
+      frame	data/bgs/elbac/n220.gif
+      frame	data/bgs/elbac/n219.gif
+      frame	data/bgs/elbac/n218.gif
+      frame	data/bgs/elbac/n217.gif
+      frame	data/bgs/elbac/n216.gif
+      frame	data/bgs/elbac/n215.gif
+      frame	data/bgs/elbac/n214.gif
+      frame	data/bgs/elbac/n213.gif
+      frame	data/bgs/elbac/n212.gif
+      frame	data/bgs/elbac/n211.gif
+      frame	data/bgs/elbac/n210.gif
+      frame	data/bgs/elbac/n209.gif
+      frame	data/bgs/elbac/n208.gif
+      frame	data/bgs/elbac/n207.gif
+      frame	data/bgs/elbac/n206.gif
+      frame	data/bgs/elbac/n205.gif
+      frame	data/bgs/elbac/n204.gif
+      frame	data/bgs/elbac/n203.gif
+      frame	data/bgs/elbac/n202.gif
+      delay	6
+      frame	data/bgs/elbac/n201.gif
+      frame	data/bgs/elbac/n200.gif
+      frame	data/bgs/elbac/n199.gif
+      frame	data/bgs/elbac/n198.gif
+      frame	data/bgs/elbac/n197.gif
+      delay	2
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 192
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 196
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 192
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 196
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 192
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 196
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 192
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      delay	90
+      frame	data/bgs/elbac/n196.gif
+      frame	data/bgs/elbac/n196.gif
+      frame	data/bgs/elbac/n196.gif
+      frame	data/bgs/elbac/n196.gif
+      frame	data/bgs/elbac/n196.gif
+      frame	data/bgs/elbac/n196.gif
+      frame	data/bgs/elbac/n196.gif
+      frame	data/bgs/elbac/n196.gif
+      frame	data/bgs/elbac/n196.gif
+      delay	2
+      sound	data/bgs/elbac/Elec.wav
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 192
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 196
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 192
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 196
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 192
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 196
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      offset	3 192
+      frame	data/bgs/elbac/n196.gif
+      offset	3 194
+      frame	data/bgs/elbac/n196.gif
+      delay	6
+      frame	data/bgs/elbac/n195.gif
+      frame	data/bgs/elbac/n194.gif
+      frame	data/bgs/elbac/n193.gif
+      frame	data/bgs/elbac/n192.gif
+      frame	data/bgs/elbac/n191.gif
+      delay	3
+      frame	data/bgs/elbac/n190.gif
+      frame	data/bgs/elbac/n189.gif
+      frame	data/bgs/elbac/n188.gif
+      frame	data/bgs/elbac/n187.gif
+      frame	data/bgs/elbac/n186.gif
+      frame	data/bgs/elbac/n185.gif
+      frame	data/bgs/elbac/n184.gif
+      frame	data/bgs/elbac/n183.gif
+      frame	data/bgs/elbac/n182.gif
+      frame	data/bgs/elbac/n181.gif
+      frame	data/bgs/elbac/n180.gif
+      frame	data/bgs/elbac/n179.gif
+      frame	data/bgs/elbac/n178.gif
+      frame	data/bgs/elbac/n177.gif
+      frame	data/bgs/elbac/n176.gif
+      frame	data/bgs/elbac/n175.gif
+      frame	data/bgs/elbac/n174.gif
+      frame	data/bgs/elbac/n173.gif
+      frame	data/bgs/elbac/n172.gif
+      frame	data/bgs/elbac/n171.gif
+      frame	data/bgs/elbac/n170.gif
+      frame	data/bgs/elbac/n169.gif
+      frame	data/bgs/elbac/n168.gif
+      frame	data/bgs/elbac/n167.gif
+      frame	data/bgs/elbac/n166.gif
+      frame	data/bgs/elbac/n165.gif
+      frame	data/bgs/elbac/n164.gif
+      frame	data/bgs/elbac/n163.gif
+      frame	data/bgs/elbac/n162.gif
+      frame	data/bgs/elbac/n161.gif
+      frame	data/bgs/elbac/n160.gif
+      frame	data/bgs/elbac/n159.gif
+      frame	data/bgs/elbac/n158.gif
+      frame	data/bgs/elbac/n157.gif
+      frame	data/bgs/elbac/n156.gif
+      frame	data/bgs/elbac/n155.gif
+      frame	data/bgs/elbac/n154.gif
+      frame	data/bgs/elbac/n153.gif
+      frame	data/bgs/elbac/n152.gif
+      frame	data/bgs/elbac/n151.gif
+      frame	data/bgs/elbac/n150.gif
+      frame	data/bgs/elbac/n149.gif
+      frame	data/bgs/elbac/n148.gif
+      frame	data/bgs/elbac/n147.gif
+      frame	data/bgs/elbac/n146.gif
+      frame	data/bgs/elbac/n145.gif
+      frame	data/bgs/elbac/n144.gif
+      frame	data/bgs/elbac/n143.gif
+      frame	data/bgs/elbac/n142.gif
+      frame	data/bgs/elbac/n141.gif
+      frame	data/bgs/elbac/n140.gif
+      frame	data/bgs/elbac/n139.gif
+      frame	data/bgs/elbac/n138.gif
+      frame	data/bgs/elbac/n137.gif
+      frame	data/bgs/elbac/n136.gif
+      frame	data/bgs/elbac/n135.gif
+      frame	data/bgs/elbac/n134.gif
+      frame	data/bgs/elbac/n133.gif
+      frame	data/bgs/elbac/n132.gif
+      frame	data/bgs/elbac/n131.gif
+      frame	data/bgs/elbac/n130.gif
+      frame	data/bgs/elbac/n129.gif
+      frame	data/bgs/elbac/n128.gif
+      frame	data/bgs/elbac/n127.gif
+      frame	data/bgs/elbac/n126.gif
+      frame	data/bgs/elbac/n125.gif
+      frame	data/bgs/elbac/n124.gif
+      frame	data/bgs/elbac/n123.gif
+      frame	data/bgs/elbac/n122.gif
+      frame	data/bgs/elbac/n121.gif
+      frame	data/bgs/elbac/n120.gif
+      frame	data/bgs/elbac/n119.gif
+      frame	data/bgs/elbac/n118.gif
+      frame	data/bgs/elbac/n117.gif
+      frame	data/bgs/elbac/n116.gif
+      frame	data/bgs/elbac/n115.gif
+      frame	data/bgs/elbac/n114.gif
+      frame	data/bgs/elbac/n113.gif
+      frame	data/bgs/elbac/n112.gif
+      frame	data/bgs/elbac/n111.gif
+      frame	data/bgs/elbac/n110.gif
+      frame	data/bgs/elbac/n109.gif
+      frame	data/bgs/elbac/n108.gif
+      frame	data/bgs/elbac/n107.gif
+      delay	6
+      frame	data/bgs/elbac/n106.gif
+      frame	data/bgs/elbac/n105.gif
+      frame	data/bgs/elbac/n104.gif
+      frame	data/bgs/elbac/n103.gif
+      frame	data/bgs/elbac/n102.gif
+      delay	2
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 192
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 196
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 192
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 196
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 192
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 196
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 192
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      delay	90
+      frame	data/bgs/elbac/n101.gif
+      frame	data/bgs/elbac/n101.gif
+      frame	data/bgs/elbac/n101.gif
+      frame	data/bgs/elbac/n101.gif
+      frame	data/bgs/elbac/n101.gif
+      frame	data/bgs/elbac/n101.gif
+      frame	data/bgs/elbac/n101.gif
+      frame	data/bgs/elbac/n101.gif
+      frame	data/bgs/elbac/n101.gif
+      delay	2
+      sound	data/bgs/elbac/Elec.wav
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 192
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 196
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 192
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 196
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 192
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 196
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      offset	3 192
+      frame	data/bgs/elbac/n101.gif
+      offset	3 194
+      frame	data/bgs/elbac/n101.gif
+      delay	6
+      frame	data/bgs/elbac/n100.gif
+      frame	data/bgs/elbac/n099.gif
+      frame	data/bgs/elbac/n098.gif
+      frame	data/bgs/elbac/n097.gif
+      frame	data/bgs/elbac/n096.gif
+      delay	3
+      frame	data/bgs/elbac/n095.gif
+      frame	data/bgs/elbac/n094.gif
+      frame	data/bgs/elbac/n093.gif
+      frame	data/bgs/elbac/n092.gif
+      frame	data/bgs/elbac/n091.gif
+      frame	data/bgs/elbac/n090.gif
+      frame	data/bgs/elbac/n089.gif
+      frame	data/bgs/elbac/n088.gif
+      frame	data/bgs/elbac/n087.gif
+      frame	data/bgs/elbac/n086.gif
+      frame	data/bgs/elbac/n085.gif
+      frame	data/bgs/elbac/n084.gif
+      frame	data/bgs/elbac/n083.gif
+      frame	data/bgs/elbac/n082.gif
+      frame	data/bgs/elbac/n081.gif
+      frame	data/bgs/elbac/n080.gif
+      frame	data/bgs/elbac/n079.gif
+      frame	data/bgs/elbac/n078.gif
+      frame	data/bgs/elbac/n077.gif
+      frame	data/bgs/elbac/n076.gif
+      frame	data/bgs/elbac/n075.gif
+      frame	data/bgs/elbac/n074.gif
+      frame	data/bgs/elbac/n073.gif
+      frame	data/bgs/elbac/n072.gif
+      frame	data/bgs/elbac/n071.gif
+      frame	data/bgs/elbac/n070.gif
+      frame	data/bgs/elbac/n069.gif
+      frame	data/bgs/elbac/n068.gif
+      frame	data/bgs/elbac/n067.gif
+      frame	data/bgs/elbac/n066.gif
+      frame	data/bgs/elbac/n065.gif
+      frame	data/bgs/elbac/n064.gif
+      frame	data/bgs/elbac/n063.gif
+      frame	data/bgs/elbac/n062.gif
+      frame	data/bgs/elbac/n061.gif
+      frame	data/bgs/elbac/n060.gif
+      frame	data/bgs/elbac/n059.gif
+      frame	data/bgs/elbac/n058.gif
+      frame	data/bgs/elbac/n057.gif
+      frame	data/bgs/elbac/n056.gif
+      frame	data/bgs/elbac/n055.gif
+      frame	data/bgs/elbac/n054.gif
+      frame	data/bgs/elbac/n053.gif
+      frame	data/bgs/elbac/n052.gif
+      frame	data/bgs/elbac/n051.gif
+      frame	data/bgs/elbac/n050.gif
+      frame	data/bgs/elbac/n049.gif
+      frame	data/bgs/elbac/n048.gif
+      frame	data/bgs/elbac/n047.gif
+      frame	data/bgs/elbac/n046.gif
+      frame	data/bgs/elbac/n045.gif
+      frame	data/bgs/elbac/n044.gif
+      frame	data/bgs/elbac/n043.gif
+      frame	data/bgs/elbac/n042.gif
+      frame	data/bgs/elbac/n041.gif
+      frame	data/bgs/elbac/n040.gif
+      frame	data/bgs/elbac/n039.gif
+      frame	data/bgs/elbac/n038.gif
+      frame	data/bgs/elbac/n037.gif
+      frame	data/bgs/elbac/n036.gif
+      frame	data/bgs/elbac/n035.gif
+      frame	data/bgs/elbac/n034.gif
+      frame	data/bgs/elbac/n033.gif
+      frame	data/bgs/elbac/n032.gif
+      frame	data/bgs/elbac/n031.gif
+      frame	data/bgs/elbac/n030.gif
+      frame	data/bgs/elbac/n029.gif
+      frame	data/bgs/elbac/n028.gif
+      frame	data/bgs/elbac/n027.gif
+      frame	data/bgs/elbac/n026.gif
+      frame	data/bgs/elbac/n025.gif
+      frame	data/bgs/elbac/n024.gif
+      frame	data/bgs/elbac/n023.gif
+      frame	data/bgs/elbac/n022.gif
+      frame	data/bgs/elbac/n021.gif
+      frame	data/bgs/elbac/n020.gif
+      frame	data/bgs/elbac/n019.gif
+      frame	data/bgs/elbac/n018.gif
+      frame	data/bgs/elbac/n017.gif
+      frame	data/bgs/elbac/n016.gif
+      frame	data/bgs/elbac/n015.gif
+      frame	data/bgs/elbac/n014.gif
+      frame	data/bgs/elbac/n013.gif
+      delay	6
+      frame	data/bgs/elbac/n012.gif
+      frame	data/bgs/elbac/n011.gif
+      frame	data/bgs/elbac/n010.gif
+      frame	data/bgs/elbac/n009.gif
+      frame	data/bgs/elbac/n008.gif
+      delay	2
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 192
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 196
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 192
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 196
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 192
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 196
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 192
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      delay	90
+      frame	data/bgs/elbac/n007.gif
+      frame	data/bgs/elbac/n007.gif
+      frame	data/bgs/elbac/n007.gif
+      frame	data/bgs/elbac/n007.gif
+      frame	data/bgs/elbac/n007.gif
+      frame	data/bgs/elbac/n007.gif
+      frame	data/bgs/elbac/n007.gif
+      frame	data/bgs/elbac/n007.gif
+      frame	data/bgs/elbac/n007.gif
+      delay	2
+      sound	data/bgs/elbac/Elec.wav
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 192
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 196
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 192
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 196
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 192
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 196
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      offset	3 192
+      frame	data/bgs/elbac/n007.gif
+      offset	3 194
+      frame	data/bgs/elbac/n007.gif
+      delay	6
+      frame	data/bgs/elbac/n006.gif
+      frame	data/bgs/elbac/n005.gif
+      frame	data/bgs/elbac/n004.gif
+      frame	data/bgs/elbac/n003.gif
+      frame	data/bgs/elbac/n002.gif
+      delay	3
+      frame	data/bgs/elbac/n001.gif
+      frame	data/bgs/elbac/nn275.gif
+      frame	data/bgs/elbac/nn274.gif
+      frame	data/bgs/elbac/nn273.gif
+      frame	data/bgs/elbac/nn272.gif
+      frame	data/bgs/elbac/nn271.gif
+      frame	data/bgs/elbac/nn270.gif
+      frame	data/bgs/elbac/nn269.gif
+      frame	data/bgs/elbac/nn268.gif
+      frame	data/bgs/elbac/nn267.gif
+      frame	data/bgs/elbac/nn266.gif
+      frame	data/bgs/elbac/nn265.gif
+      frame	data/bgs/elbac/nn264.gif
+      frame	data/bgs/elbac/nn263.gif
+      frame	data/bgs/elbac/nn262.gif
+      frame	data/bgs/elbac/nn261.gif
+      frame	data/bgs/elbac/nn260.gif
+      frame	data/bgs/elbac/nn259.gif
+      frame	data/bgs/elbac/nn258.gif
+      frame	data/bgs/elbac/nn257.gif
+      frame	data/bgs/elbac/nn256.gif
+      frame	data/bgs/elbac/nn255.gif
+      frame	data/bgs/elbac/nn254.gif
+      frame	data/bgs/elbac/nn253.gif
+      frame	data/bgs/elbac/nn252.gif
+      frame	data/bgs/elbac/nn251.gif
+      frame	data/bgs/elbac/nn250.gif
+      frame	data/bgs/elbac/nn249.gif
+      frame	data/bgs/elbac/nn248.gif
+      frame	data/bgs/elbac/nn247.gif
+      frame	data/bgs/elbac/nn246.gif
+      frame	data/bgs/elbac/nn245.gif
+      frame	data/bgs/elbac/nn244.gif
+      frame	data/bgs/elbac/nn243.gif
+      frame	data/bgs/elbac/nn242.gif
+      frame	data/bgs/elbac/nn241.gif
+      frame	data/bgs/elbac/nn240.gif
+      frame	data/bgs/elbac/nn239.gif
+      frame	data/bgs/elbac/nn238.gif
+      frame	data/bgs/elbac/nn237.gif
+      frame	data/bgs/elbac/nn236.gif
+      frame	data/bgs/elbac/nn235.gif
+      frame	data/bgs/elbac/nn234.gif
+      frame	data/bgs/elbac/nn233.gif
+      frame	data/bgs/elbac/nn232.gif
+      frame	data/bgs/elbac/nn231.gif
+      frame	data/bgs/elbac/nn230.gif
+      frame	data/bgs/elbac/nn229.gif
+      frame	data/bgs/elbac/nn228.gif
+      frame	data/bgs/elbac/nn227.gif
+      frame	data/bgs/elbac/nn226.gif
+      frame	data/bgs/elbac/nn225.gif
+      frame	data/bgs/elbac/nn224.gif
+      frame	data/bgs/elbac/nn223.gif
+      frame	data/bgs/elbac/nn222.gif
+      frame	data/bgs/elbac/nn221.gif
+      frame	data/bgs/elbac/nn220.gif
+      frame	data/bgs/elbac/nn219.gif
+      frame	data/bgs/elbac/nn218.gif
+      frame	data/bgs/elbac/nn217.gif
+      frame	data/bgs/elbac/nn216.gif
+      frame	data/bgs/elbac/nn215.gif
+      frame	data/bgs/elbac/nn214.gif
+      frame	data/bgs/elbac/nn213.gif
+      frame	data/bgs/elbac/nn212.gif
+      frame	data/bgs/elbac/nn211.gif
+      frame	data/bgs/elbac/nn210.gif
+      frame	data/bgs/elbac/nn209.gif
+      frame	data/bgs/elbac/nn208.gif
+      frame	data/bgs/elbac/nn207.gif
+      frame	data/bgs/elbac/nn206.gif
+      frame	data/bgs/elbac/nn205.gif
+      frame	data/bgs/elbac/nn204.gif
+      frame	data/bgs/elbac/nn203.gif
+      frame	data/bgs/elbac/nn202.gif
+      frame	data/bgs/elbac/nn201.gif
+      frame	data/bgs/elbac/nn200.gif
+      frame	data/bgs/elbac/nn199.gif
+      frame	data/bgs/elbac/nn198.gif
+      frame	data/bgs/elbac/nn197.gif
+      frame	data/bgs/elbac/nn196.gif
+      frame	data/bgs/elbac/nn195.gif
+      frame	data/bgs/elbac/nn194.gif
+      frame	data/bgs/elbac/nn193.gif
+      frame	data/bgs/elbac/nn192.gif
+      frame	data/bgs/elbac/nn191.gif
+      frame	data/bgs/elbac/nn190.gif
+      frame	data/bgs/elbac/nn189.gif
+      frame	data/bgs/elbac/nn188.gif
+      delay	6
+      frame	data/bgs/elbac/nn187.gif
+      frame	data/bgs/elbac/nn186.gif
+      frame	data/bgs/elbac/nn185.gif
+      frame	data/bgs/elbac/nn184.gif
+      frame	data/bgs/elbac/nn183.gif
+      delay	2
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      delay	90
+      frame	data/bgs/elbac/nn182.gif
+      frame	data/bgs/elbac/nn182.gif
+      frame	data/bgs/elbac/nn182.gif
+      frame	data/bgs/elbac/nn182.gif
+      frame	data/bgs/elbac/nn182.gif
+      frame	data/bgs/elbac/nn182.gif
+      frame	data/bgs/elbac/nn182.gif
+      frame	data/bgs/elbac/nn182.gif
+      frame	data/bgs/elbac/nn182.gif
+      delay	2
+      sound	data/bgs/elbac/Elec.wav
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn182.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn182.gif
+      delay	6
+      frame	data/bgs/elbac/nn181.gif
+      frame	data/bgs/elbac/nn180.gif
+      frame	data/bgs/elbac/nn179.gif
+      frame	data/bgs/elbac/nn178.gif
+      frame	data/bgs/elbac/nn177.gif
+      delay	3
+      frame	data/bgs/elbac/nn176.gif
+      frame	data/bgs/elbac/nn175.gif
+      frame	data/bgs/elbac/nn174.gif
+      frame	data/bgs/elbac/nn173.gif
+      frame	data/bgs/elbac/nn172.gif
+      frame	data/bgs/elbac/nn171.gif
+      frame	data/bgs/elbac/nn170.gif
+      frame	data/bgs/elbac/nn169.gif
+      frame	data/bgs/elbac/nn168.gif
+      frame	data/bgs/elbac/nn167.gif
+      frame	data/bgs/elbac/nn166.gif
+      frame	data/bgs/elbac/nn165.gif
+      frame	data/bgs/elbac/nn164.gif
+      frame	data/bgs/elbac/nn163.gif
+      frame	data/bgs/elbac/nn162.gif
+      frame	data/bgs/elbac/nn161.gif
+      frame	data/bgs/elbac/nn160.gif
+      frame	data/bgs/elbac/nn159.gif
+      frame	data/bgs/elbac/nn158.gif
+      frame	data/bgs/elbac/nn157.gif
+      frame	data/bgs/elbac/nn156.gif
+      frame	data/bgs/elbac/nn155.gif
+      frame	data/bgs/elbac/nn154.gif
+      frame	data/bgs/elbac/nn153.gif
+      frame	data/bgs/elbac/nn152.gif
+      frame	data/bgs/elbac/nn151.gif
+      frame	data/bgs/elbac/nn150.gif
+      frame	data/bgs/elbac/nn149.gif
+      frame	data/bgs/elbac/nn148.gif
+      frame	data/bgs/elbac/nn147.gif
+      frame	data/bgs/elbac/nn146.gif
+      frame	data/bgs/elbac/nn145.gif
+      frame	data/bgs/elbac/nn144.gif
+      frame	data/bgs/elbac/nn143.gif
+      frame	data/bgs/elbac/nn142.gif
+      frame	data/bgs/elbac/nn141.gif
+      frame	data/bgs/elbac/nn140.gif
+      frame	data/bgs/elbac/nn139.gif
+      frame	data/bgs/elbac/nn138.gif
+      frame	data/bgs/elbac/nn137.gif
+      frame	data/bgs/elbac/nn136.gif
+      frame	data/bgs/elbac/nn135.gif
+      frame	data/bgs/elbac/nn134.gif
+      frame	data/bgs/elbac/nn133.gif
+      frame	data/bgs/elbac/nn132.gif
+      frame	data/bgs/elbac/nn131.gif
+      frame	data/bgs/elbac/nn130.gif
+      frame	data/bgs/elbac/nn129.gif
+      frame	data/bgs/elbac/nn128.gif
+      frame	data/bgs/elbac/nn127.gif
+      frame	data/bgs/elbac/nn126.gif
+      frame	data/bgs/elbac/nn125.gif
+      frame	data/bgs/elbac/nn124.gif
+      frame	data/bgs/elbac/nn123.gif
+      frame	data/bgs/elbac/nn122.gif
+      frame	data/bgs/elbac/nn121.gif
+      frame	data/bgs/elbac/nn120.gif
+      frame	data/bgs/elbac/nn119.gif
+      frame	data/bgs/elbac/nn118.gif
+      frame	data/bgs/elbac/nn117.gif
+      frame	data/bgs/elbac/nn116.gif
+      frame	data/bgs/elbac/nn115.gif
+      frame	data/bgs/elbac/nn114.gif
+      frame	data/bgs/elbac/nn113.gif
+      frame	data/bgs/elbac/nn112.gif
+      frame	data/bgs/elbac/nn111.gif
+      frame	data/bgs/elbac/nn110.gif
+      frame	data/bgs/elbac/nn109.gif
+      frame	data/bgs/elbac/nn108.gif
+      frame	data/bgs/elbac/nn107.gif
+      frame	data/bgs/elbac/nn106.gif
+      frame	data/bgs/elbac/nn105.gif
+      frame	data/bgs/elbac/nn104.gif
+      frame	data/bgs/elbac/nn103.gif
+      frame	data/bgs/elbac/nn102.gif
+      frame	data/bgs/elbac/nn101.gif
+      frame	data/bgs/elbac/nn100.gif
+      frame	data/bgs/elbac/nn099.gif
+      frame	data/bgs/elbac/nn098.gif
+      frame	data/bgs/elbac/nn097.gif
+      frame	data/bgs/elbac/nn096.gif
+      frame	data/bgs/elbac/nn095.gif
+      frame	data/bgs/elbac/nn094.gif
+      frame	data/bgs/elbac/nn093.gif
+      delay	6
+      frame	data/bgs/elbac/nn092.gif
+      frame	data/bgs/elbac/nn091.gif
+      frame	data/bgs/elbac/nn090.gif
+      frame	data/bgs/elbac/nn089.gif
+      frame	data/bgs/elbac/nn088.gif
+      delay	2
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      delay	90
+      frame	data/bgs/elbac/nn087.gif
+      frame	data/bgs/elbac/nn087.gif
+      frame	data/bgs/elbac/nn087.gif
+      frame	data/bgs/elbac/nn087.gif
+      frame	data/bgs/elbac/nn087.gif
+      frame	data/bgs/elbac/nn087.gif
+      frame	data/bgs/elbac/nn087.gif
+      frame	data/bgs/elbac/nn087.gif
+      frame	data/bgs/elbac/nn087.gif
+      delay	2
+      sound	data/bgs/elbac/Elec.wav
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn087.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn087.gif
+      delay	6
+      frame	data/bgs/elbac/nn086.gif
+      frame	data/bgs/elbac/nn085.gif
+      frame	data/bgs/elbac/nn084.gif
+      frame	data/bgs/elbac/nn083.gif
+      frame	data/bgs/elbac/nn082.gif
+      delay	3
+      frame	data/bgs/elbac/nn081.gif
+      frame	data/bgs/elbac/nn080.gif
+      frame	data/bgs/elbac/nn079.gif
+      frame	data/bgs/elbac/nn078.gif
+      frame	data/bgs/elbac/nn077.gif
+      frame	data/bgs/elbac/nn076.gif
+      frame	data/bgs/elbac/nn075.gif
+      frame	data/bgs/elbac/nn074.gif
+      frame	data/bgs/elbac/nn073.gif
+      frame	data/bgs/elbac/nn072.gif
+      frame	data/bgs/elbac/nn071.gif
+      frame	data/bgs/elbac/nn070.gif
+      frame	data/bgs/elbac/nn069.gif
+      frame	data/bgs/elbac/nn068.gif
+      frame	data/bgs/elbac/nn067.gif
+      frame	data/bgs/elbac/nn066.gif
+      frame	data/bgs/elbac/nn065.gif
+      frame	data/bgs/elbac/nn064.gif
+      frame	data/bgs/elbac/nn063.gif
+      frame	data/bgs/elbac/nn062.gif
+      frame	data/bgs/elbac/nn061.gif
+      frame	data/bgs/elbac/nn060.gif
+      frame	data/bgs/elbac/nn059.gif
+      frame	data/bgs/elbac/nn058.gif
+      frame	data/bgs/elbac/nn057.gif
+      frame	data/bgs/elbac/nn056.gif
+      frame	data/bgs/elbac/nn055.gif
+      frame	data/bgs/elbac/nn054.gif
+      frame	data/bgs/elbac/nn053.gif
+      frame	data/bgs/elbac/nn052.gif
+      frame	data/bgs/elbac/nn051.gif
+      frame	data/bgs/elbac/nn050.gif
+      frame	data/bgs/elbac/nn049.gif
+      frame	data/bgs/elbac/nn048.gif
+      frame	data/bgs/elbac/nn047.gif
+      frame	data/bgs/elbac/nn046.gif
+      frame	data/bgs/elbac/nn045.gif
+      frame	data/bgs/elbac/nn044.gif
+      frame	data/bgs/elbac/nn043.gif
+      frame	data/bgs/elbac/nn042.gif
+      frame	data/bgs/elbac/nn041.gif
+      frame	data/bgs/elbac/nn040.gif
+      frame	data/bgs/elbac/nn039.gif
+      frame	data/bgs/elbac/nn038.gif
+      frame	data/bgs/elbac/nn037.gif
+      frame	data/bgs/elbac/nn036.gif
+      frame	data/bgs/elbac/nn035.gif
+      frame	data/bgs/elbac/nn034.gif
+      frame	data/bgs/elbac/nn033.gif
+      frame	data/bgs/elbac/nn032.gif
+      frame	data/bgs/elbac/nn031.gif
+      frame	data/bgs/elbac/nn030.gif
+      frame	data/bgs/elbac/nn029.gif
+      frame	data/bgs/elbac/nn028.gif
+      frame	data/bgs/elbac/nn027.gif
+      frame	data/bgs/elbac/nn026.gif
+      frame	data/bgs/elbac/nn025.gif
+      frame	data/bgs/elbac/nn024.gif
+      frame	data/bgs/elbac/nn023.gif
+      frame	data/bgs/elbac/nn022.gif
+      frame	data/bgs/elbac/nn021.gif
+      frame	data/bgs/elbac/nn020.gif
+      frame	data/bgs/elbac/nn019.gif
+      frame	data/bgs/elbac/nn018.gif
+      frame	data/bgs/elbac/nn017.gif
+      frame	data/bgs/elbac/nn016.gif
+      frame	data/bgs/elbac/nn015.gif
+      frame	data/bgs/elbac/nn014.gif
+      frame	data/bgs/elbac/nn013.gif
+      frame	data/bgs/elbac/nn012.gif
+      frame	data/bgs/elbac/nn011.gif
+      frame	data/bgs/elbac/nn010.gif
+      frame	data/bgs/elbac/nn009.gif
+      frame	data/bgs/elbac/nn008.gif
+      frame	data/bgs/elbac/nn007.gif
+      frame	data/bgs/elbac/nn006.gif
+      frame	data/bgs/elbac/nn005.gif
+      frame	data/bgs/elbac/nn004.gif
+      frame	data/bgs/elbac/nn003.gif
+      frame	data/bgs/elbac/nn002.gif
+      frame	data/bgs/elbac/nn001.gif
+      delay	2
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 196
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 192
+      frame	data/bgs/elbac/nn000.gif
+      offset	3 194
+      frame	data/bgs/elbac/nn000.gif
+
+
+
+
+
+
+
+
+

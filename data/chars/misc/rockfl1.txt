@@ -1,0 +1,23 @@
+name	rockfl1
+type	none
+shadow	0
+antigravity     100
+
+lifespan 4
+
+anim idle
+	loop	0
+	delay	5
+	offset	105 122
+	frame	data/chars/misc/rockfl1.gif
+	frame	data/chars/misc/rockfl2.gif
+	frame	data/chars/misc/rockfl3.gif
+	frame	data/chars/misc/rockfl4.gif
+      frame	data/chars/misc/rockfl5.gif
+	frame	data/chars/misc/rockfl6.gif
+      frame	data/chars/misc/empty.gif
+
+
+
+
+

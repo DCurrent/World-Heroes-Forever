@@ -1,0 +1,19 @@
+name    work
+type	none
+facing 1
+offscreenkill  5000
+
+animationscript data/scripts/dc_sundown/main.c
+
+anim idle
+	loop	1
+        delay   15
+	  offset	88 170
+	@cmd dc_level_palette 1000
+        frame   data/levels/usa/work01.png
+        frame   data/levels/usa/work02.png
+        
+
+
+
+

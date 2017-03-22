@@ -1,0 +1,23 @@
+name	flasss
+type	none
+shadow	0
+lifespan 6
+antigravity     100
+
+anim idle
+	loop	0
+	delay	3
+	offset	107 122
+	frame	data/chars/misc/fla01.gif
+	frame	data/chars/misc/fla02.gif
+	frame	data/chars/misc/fla03.gif
+	frame	data/chars/misc/fla04.gif
+	frame	data/chars/misc/fla05.gif
+	frame	data/chars/misc/fla06.gif
+	frame	data/chars/misc/fla07.gif
+	frame	data/chars/misc/fla08.gif
+      frame	data/chars/misc/empty.gif
+
+
+
+

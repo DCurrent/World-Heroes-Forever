@@ -1,0 +1,124 @@
+name	trap4
+type	enemy
+subtype arrow
+health	1
+speed	0
+shadow  4
+cantgrab  1
+nolife  1
+nomove 1
+flash   obfla
+noatflash 1
+antigravity -30
+diesound  data/sounds/obst.wav
+jumpheight 0.5 0.5
+candamage player enemy
+no_adjust_base 0
+
+load	trap5
+
+anim spawn
+	loop	0
+      delay	8
+	offset	85 178
+      bbox    47 120 70 60
+      otg 1
+      jumpframe 0 0 0.5
+      subentity trap5
+      spawnframe 5 55 200 170 1
+      followcond 1
+      followanim 1
+      drawmethod 266 266 0 0 0 0 0
+      attack  65 142 35 28 10 1
+      hitfx   data/sounds/beat2.wav
+      sound  data/sounds/airpu.wav
+      frame	data/chars/misc/trap5.gif
+      frame	data/chars/misc/trap5.gif
+      frame	data/chars/misc/trap5.gif
+      frame	data/chars/misc/trap5.gif
+      frame	data/chars/misc/trap5.gif
+      frame	data/chars/misc/trap5.gif
+      frame	data/chars/misc/trap5.gif
+
+
+anim idle
+	loop	0
+	delay	4
+	offset	85 178
+      jumpframe 0 2 0
+      drawmethod 266 266 0 0 0 0 0
+      sound  data/sounds/obst.wav
+      move 3
+      frame	data/chars/misc/trap116.gif
+      frame	data/chars/misc/trap116.gif
+      frame	data/chars/misc/trap117.gif
+      frame	data/chars/misc/trap117.gif
+      frame	data/chars/misc/trap118.gif
+      frame	data/chars/misc/trap118.gif
+      frame	data/chars/misc/trap119.gif
+      frame	data/chars/misc/trap119.gif
+      delay	8
+      move 0
+      frame	data/chars/misc/trap120.gif
+      frame	data/chars/misc/trap121.gif
+      frame	data/chars/misc/trap122.gif
+      frame	data/chars/misc/trap123.gif
+      delay	6
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/trap123.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/trap123.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/trap123.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/misc/empty.gif
+
+
+anim fall
+	loop	0
+	delay	8
+	offset	85 178
+      landframe 4
+      drawmethod 266 266 0 0 0 0 0
+      frame	data/chars/misc/trap116.gif
+      frame	data/chars/misc/trap117.gif
+      frame	data/chars/misc/trap118.gif
+      delay	40
+      frame	data/chars/misc/trap119.gif
+      delay	8
+      frame	data/chars/misc/trap120.gif
+      frame	data/chars/misc/trap121.gif
+      frame	data/chars/misc/trap122.gif
+      frame	data/chars/misc/trap123.gif
+
+
+anim  follow1
+      loop	0
+      delay	8
+	offset	85 178
+      jumpframe 0 1 0.5
+      landframe 4
+      drawmethod 266 266 0 0 0 0 0
+      sound  data/sounds/obst.wav
+      frame	data/chars/misc/trap116.gif
+      frame	data/chars/misc/trap117.gif
+      frame	data/chars/misc/trap118.gif
+      delay	40
+      frame	data/chars/misc/trap119.gif
+      delay	8
+      frame	data/chars/misc/trap120.gif
+      frame	data/chars/misc/trap121.gif
+      frame	data/chars/misc/trap122.gif
+      frame	data/chars/misc/trap123.gif
+      delay	6
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/trap123.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/trap123.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/trap123.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/misc/empty.gif
+
+
+

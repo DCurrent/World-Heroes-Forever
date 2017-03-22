@@ -1,0 +1,1344 @@
+name	brocken
+health	550
+speed	9
+type	enemy
+shadow  0
+throw         5 2
+grabdistance	40
+paingrab 1
+grabfinish 1
+gfxshadow  1
+falldie 2
+nodieblink      1
+dust du
+aggression      30
+diesound	data/chars/brocken/die.wav
+aimove chase
+aimove wander
+thold 35
+blockodds 1
+escapehits 3
+bflash bflash
+projectilehit   enemy obstacle trap
+icon	data/chars/brocken/icon2.gif
+hostile player 
+candamage player obstacle
+subject_to_wall 0
+
+load	rocket
+load	endd
+
+animationscript 	data/scripts/ani0020.h
+
+palette   data/chars/brocken/idle.gif
+
+anim spawn
+	loop	0
+      delay   5
+	offset	75 170
+      landframe 34 dus
+      @cmd    degravity 0.9
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/spawn1.gif
+      frame	data/chars/brocken/spawn2.gif
+      frame	data/chars/brocken/spawn1.gif
+      @cmd    degravity -1
+      delay   40
+      frame	data/chars/brocken/spawn3.gif
+      sound data/sounds/step.wav
+      delay   12
+      @cmd    degravity 0
+      frame	data/chars/brocken/j1.gif
+      frame	data/chars/brocken/aaa1.gif
+
+anim idle
+	loop	1
+	delay	12
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd    clearL
+      frame	data/chars/brocken/idle.gif
+      frame	data/chars/brocken/idle1.gif
+      frame	data/chars/brocken/idle2.gif
+      frame	data/chars/brocken/idle3.gif
+      frame	data/chars/brocken/idle4.gif
+      frame	data/chars/brocken/idle3.gif
+      frame	data/chars/brocken/idle2.gif
+      frame	data/chars/brocken/idle1.gif
+      frame	data/chars/brocken/idle5.gif
+      frame	data/chars/brocken/idle6.gif
+      frame	data/chars/brocken/idle7.gif
+      frame	data/chars/brocken/idle8.gif
+      
+anim walk
+	loop	1
+      delay   10
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/brocken/w8.gif
+      move -3
+	frame	data/chars/brocken/w1.gif
+	frame	data/chars/brocken/w2.gif
+      move 0
+	frame	data/chars/brocken/w3.gif
+	frame	data/chars/brocken/w4.gif
+      move -3
+      frame	data/chars/brocken/w5.gif
+	frame	data/chars/brocken/w6.gif
+      move 0
+	frame	data/chars/brocken/w7.gif
+
+anim backwalk
+	loop	1
+      delay   10
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/brocken/w7.gif
+      move 3
+	frame	data/chars/brocken/w6.gif
+	frame	data/chars/brocken/w5.gif
+      move 0
+	frame	data/chars/brocken/w4.gif
+	frame	data/chars/brocken/w3.gif
+      move 3
+      frame	data/chars/brocken/w2.gif
+	frame	data/chars/brocken/w1.gif
+      move 0
+	frame	data/chars/brocken/w8.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	75 170
+	bbox	55 78 47 80
+	frame	data/chars/brocken/bl2.gif
+      frame	data/chars/brocken/bl2.gif
+      delay	2
+      offset	78 170
+	frame	data/chars/brocken/bl2.gif
+      offset	75 170
+      frame	data/chars/brocken/bl2.gif
+      offset	72 170
+      frame	data/chars/brocken/bl2.gif
+      offset	75 170
+      frame	data/chars/brocken/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/brocken/bl2.gif
+      frame	data/chars/brocken/bl1.gif
+      frame	data/chars/brocken/bl1.gif
+      frame	data/chars/brocken/bl1.gif
+      frame	data/chars/brocken/bl1.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	75 170
+      frame	data/chars/brocken/pain4.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	66 191
+      frame	data/chars/brocken/pain2.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	75 170
+      bbox	0 0 0 0
+      frame	data/chars/brocken/pain4.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	75 170
+      frame	data/chars/brocken/pain4.gif
+
+anim follow3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      }
+    }
+@end_script
+      loop	0
+      delay   4
+      offset	75 170
+      jumpframe 0 0 -3
+      flipframe 0
+      movez 3
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/rub1.gif
+      frame	data/chars/brocken/rub2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/rub3.gif
+      frame	data/chars/brocken/rub4.gif
+      frame	data/chars/brocken/rub1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/rub2.gif
+      frame	data/chars/brocken/rub3.gif
+      frame	data/chars/brocken/rub4.gif
+
+anim follow4
+      loop	0
+      delay   4
+      offset	75 170
+      jumpframe 0 0 -3
+      flipframe 0
+      movez -3
+      sound	data/chars/brocken/at13.wav
+      frame	data/chars/brocken/rub1.gif
+      frame	data/chars/brocken/rub2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/rub3.gif
+      frame	data/chars/brocken/rub4.gif
+      frame	data/chars/brocken/rub1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/rub2.gif
+      frame	data/chars/brocken/rub3.gif
+      frame	data/chars/brocken/rub4.gif
+
+
+anim pain
+	loop	0
+	delay	4
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/brocken/pain2.gif
+      offset	77 170
+	frame	data/chars/brocken/pain2.gif
+      offset	74 170
+	frame	data/chars/brocken/pain2.gif
+      offset	76 170
+      frame	data/chars/brocken/pain2.gif
+      offset	75 170
+      frame	data/chars/brocken/pain2.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/brocken/pain2.gif
+      offset	77 170
+	frame	data/chars/brocken/pain2.gif
+      sound	data/chars/brocken/pain.wav
+      offset	73 170
+	frame	data/chars/brocken/pain2.gif
+      offset	77 170
+      frame	data/chars/brocken/pain2.gif
+      offset	75 170
+      frame	data/chars/brocken/pain2.gif
+      delay	45
+      frame	data/chars/brocken/pain4.gif
+      frame	data/chars/brocken/pain4.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	75 170
+      bbox	25 145 100 30
+	frame	data/chars/brocken/fall04.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	75 170
+	frame	data/chars/brocken/fall04.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/brocken/pain4.gif
+      offset	77 170
+	frame	data/chars/brocken/pain4.gif
+      offset	73 170
+	frame	data/chars/brocken/pain4.gif
+      offset	77 170
+      frame	data/chars/brocken/pain4.gif
+      offset	75 170
+      frame	data/chars/brocken/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      move -4
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/brocken/bpain04.gif
+      offset	77 170
+	frame	data/chars/brocken/bpain04.gif
+      offset	73 170
+	frame	data/chars/brocken/bpain4.gif
+      offset	77 170
+      frame	data/chars/brocken/bpain4.gif
+      offset	75 170
+      frame	data/chars/brocken/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/brocken/bpain02.gif
+      frame	data/chars/brocken/bpain02.gif
+      frame	data/chars/brocken/bpain2.gif
+      frame	data/chars/brocken/bpain2.gif
+      frame	data/chars/brocken/bpain02.gif
+      frame	data/chars/brocken/bpain02.gif
+      frame	data/chars/brocken/bpain2.gif
+      frame	data/chars/brocken/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	75 170
+	frame	data/chars/brocken/pain2.gif
+      offset	77 170
+	frame	data/chars/brocken/pain2.gif
+      offset	74 170
+	frame	data/chars/brocken/pain2.gif
+      offset	76 170
+      frame	data/chars/brocken/pain2.gif
+      offset	75 170
+      frame	data/chars/brocken/pain2.gif
+      frame	data/chars/brocken/pain4.gif
+      frame	data/chars/brocken/pain4.gif
+      frame	data/chars/brocken/pain4.gif
+      frame	data/chars/brocken/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      bouncefactor 3.5
+      landframe 6
+      frame	data/chars/brocken/fall01.gif
+	frame	data/chars/brocken/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/brocken/fall02.gif
+	frame	data/chars/brocken/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/brocken/fall03.gif
+      delay   40
+	frame	data/chars/brocken/fall03.gif
+      delay   8
+      bbox	25 145 100 30
+	frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/brocken/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	75 170
+      attack10  50 90 60 70 5 1 1 1
+      dropv 2 1.5
+      move -4
+      frame	data/chars/brocken/pain5.gif
+      frame	data/chars/brocken/pain5.gif
+      frame	data/chars/brocken/pain5.gif
+      delay   2
+      move -5
+      offset	95 155
+      sound	data/sounds/fall.wav
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall02.gif
+      frame	data/chars/brocken/ffall02.gif
+      frame	data/chars/brocken/ffall02.gif
+      move -4
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall02.gif
+      frame	data/chars/brocken/ffall02.gif
+      frame	data/chars/brocken/ffall02.gif
+      move -3
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      offset	95 175
+      frame	data/chars/brocken/ffall05.gif
+      frame	data/chars/brocken/ffall05.gif
+      frame	data/chars/brocken/ffall05.gif
+      frame	data/chars/brocken/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      move -3
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      move 0
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      move 0
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      frame	data/chars/brocken/dsla1.gif
+	frame	data/chars/brocken/dsla2.gif
+	frame	data/chars/brocken/dsla3.gif
+      frame	data/chars/brocken/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/brocken/sla3.gif
+      offset	125 120
+      frame	data/chars/brocken/sla2.gif
+      offset	75 170
+      frame	data/chars/brocken/pain4.gif
+      offset	83 140
+      frame	data/chars/brocken/sla1.gif
+      frame	data/chars/brocken/sla2.gif
+      frame	data/chars/brocken/rjsla3.gif
+      offset	75 150
+      frame	data/chars/brocken/rjsla4.gif
+      frame	data/chars/brocken/rjsla5.gif
+      offset	95 170
+      frame	data/chars/brocken/fall01.gif
+      frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall05.gif
+      offset	100 170
+      frame	data/chars/brocken/rj0.gif
+      offset	100 170
+      frame	data/chars/brocken/rj00.gif
+      offset	113 161
+      frame	data/chars/brocken/gsla2.gif
+      offset	104 170
+      frame	data/chars/brocken/gfall04.gif
+      frame	data/chars/brocken/gfall05.gif
+      offset	124 183
+      frame	data/chars/brocken/pain41.gif
+      offset	124 166
+      frame	data/chars/brocken/dsla22.gif
+      offset	121 170
+	frame	data/chars/brocken/dsla33.gif
+      offset	75 150
+      frame	data/chars/brocken/rjsla7.gif
+      offset	75 170
+      frame	data/chars/brocken/pain2.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/brocken/sla1.gif
+      offset	112 145
+	frame	data/chars/brocken/sla2.gif
+      offset	90 145
+	frame	data/chars/brocken/sla3.gif
+      frame	data/chars/brocken/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/brocken/fall04.gif
+      offset	85 145
+      frame	data/chars/brocken/sla1.gif
+      frame	data/chars/brocken/sla1.gif
+      offset	98 138
+      frame	data/chars/brocken/ssla3.gif
+      frame	data/chars/brocken/rjsla3.gif
+      frame	data/chars/brocken/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/brocken/rjsla4.gif
+      frame	data/chars/brocken/rjsla5.gif
+      frame	data/chars/brocken/rjsla6.gif
+      frame	data/chars/brocken/sla1.gif
+      frame	data/chars/brocken/sla1.gif
+      frame	data/chars/brocken/ssla3.gif
+      frame	data/chars/brocken/sla2.gif
+      offset	123 170
+      frame	data/chars/brocken/sla3.gif
+      offset	98 138
+      frame	data/chars/brocken/hsla1.gif
+      frame	data/chars/brocken/hsla2.gif
+      frame	data/chars/brocken/hsla3.gif
+      frame	data/chars/brocken/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/brocken/hsla2.gif
+      frame	data/chars/brocken/hsla4.gif
+      frame	data/chars/brocken/rj1.gif
+      frame	data/chars/brocken/gsla3.gif
+      frame	data/chars/brocken/rj3.gif
+      frame	data/chars/brocken/hsla4.gif
+      offset	98 148
+      frame	data/chars/brocken/hsla4.gif
+      offset	120 170
+      frame	data/chars/brocken/pain41.gif
+      frame	data/chars/brocken/pain21.gif
+      offset	75 170
+      frame	data/chars/brocken/pain4.gif
+      offset	122 170
+      frame	data/chars/brocken/pain41.gif
+      frame	data/chars/brocken/pain55.gif
+      offset	100 140
+      frame	data/chars/brocken/fall066.gif
+      offset	75 170
+      frame	data/chars/brocken/pain5.gif
+      offset	105 85
+      frame	data/chars/brocken/dsla3.gif
+      offset	75 170
+      frame	data/chars/brocken/pain4.gif
+      frame	data/chars/brocken/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/brocken/gsla1.gif
+      offset	112 145
+	frame	data/chars/brocken/gsla2.gif
+      offset	90 145
+	frame	data/chars/brocken/gsla3.gif
+      frame	data/chars/brocken/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/brocken/gsla6.gif
+      offset	115 170
+      frame	data/chars/brocken/dsla1.gif
+      offset	115 145
+	frame	data/chars/brocken/gsla3.gif
+      offset	75 170
+      frame	data/chars/brocken/pain4.gif
+      offset	105 170
+      frame	data/chars/brocken/gfall04.gif
+      offset	75 148
+      frame	data/chars/brocken/rjsla4.gif
+      frame	data/chars/brocken/rjsla5.gif
+      offset	95 170
+      frame	data/chars/brocken/fall04.gif
+      offset	75 143
+      frame	data/chars/brocken/hsla2.gif
+      frame	data/chars/brocken/hsla4.gif
+      offset	124 170
+      frame	data/chars/brocken/pain4.gif
+      offset	95 170
+      frame	data/chars/brocken/fall01.gif
+      frame	data/chars/brocken/fall02.gif
+      frame	data/chars/brocken/fall03.gif
+      frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall05.gif
+      offset	104 170
+      frame	data/chars/brocken/gsla2.gif
+      frame	data/chars/brocken/gsla3.gif
+      frame	data/chars/brocken/gsla4.gif
+      frame	data/chars/brocken/gfall04.gif
+      frame	data/chars/brocken/gfall05.gif
+      offset	75 165
+      frame	data/chars/brocken/pain5.gif
+      frame	data/chars/brocken/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/brocken/fall03.gif
+      frame	data/chars/brocken/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/brocken/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/brocken/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/brocken/fall03.gif
+      frame	data/chars/brocken/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/brocken/fall04.gif
+      delay   2
+	frame	data/chars/brocken/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      frame	data/chars/brocken/sla3.gif
+      frame	data/chars/brocken/sla3.gif
+      delay   10
+      offset	98 138
+      bbox	55 78 80 57
+      frame	data/chars/brocken/fall02.gif
+      frame	data/chars/brocken/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/brocken/fall03.gif
+      delay   500
+      frame	data/chars/brocken/fall03.gif
+      offset	95 170
+      delay   8
+      bbox	25 145 100 30
+      frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/brocken/fall05.gif
+
+
+anim fall10	
+      loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      frame	data/chars/brocken/fall01.gif
+	frame	data/chars/brocken/fall01.gif
+	frame	data/chars/brocken/fall02.gif
+	frame	data/chars/brocken/fall02.gif
+      delay   20
+	frame	data/chars/brocken/fall03.gif
+      delay   40
+	frame	data/chars/brocken/fall03.gif
+      delay   8
+	frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/brocken/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 170
+      bbox	25 145 100 30
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/brocken/fall04.gif
+	frame	data/chars/brocken/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      frame	data/chars/brocken/fall01.gif
+	frame	data/chars/brocken/fall01.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/brocken/fall02.gif
+	frame	data/chars/brocken/fall02.gif
+      delay   20
+	frame	data/chars/brocken/fall03.gif
+      delay   40
+	frame	data/chars/brocken/fall03.gif
+      delay   8
+	frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/brocken/fall05.gif
+
+anim burn
+	loop	0
+      delay   7
+	offset	95 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/brocken/burn01.gif
+	frame	data/chars/brocken/burn1.gif
+      frame	data/chars/brocken/burn01.gif
+	frame	data/chars/brocken/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/brocken/burn02.gif
+	frame	data/chars/brocken/burn2.gif
+      frame	data/chars/brocken/burn02.gif
+	frame	data/chars/brocken/burn2.gif
+	frame	data/chars/brocken/burn03.gif
+	frame	data/chars/brocken/burn3.gif
+      frame	data/chars/brocken/burn03.gif
+      frame	data/chars/brocken/burn3.gif
+	frame	data/chars/brocken/burn03.gif
+      frame	data/chars/brocken/burn3.gif
+      delay   40
+	frame	data/chars/brocken/burn03.gif
+      delay   7
+      bbox	25 145 100 30
+	frame	data/chars/brocken/burn4.gif
+      frame	data/chars/brocken/burn04.gif
+      frame	data/chars/brocken/burn4.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/brocken/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 170
+      bbox	25 145 100 30
+      frame	data/chars/brocken/fall05.gif
+
+anim rise
+	loop	0
+	offset	95 170
+	delay	6
+	frame	data/chars/brocken/rise1.gif
+	frame	data/chars/brocken/rise2.gif
+      @cmd    riseattack 120 40 "ANI_FOLLOW3"
+	frame	data/chars/brocken/rise3.gif
+	frame	data/chars/brocken/rise4.gif
+      frame	data/chars/brocken/rise5.gif
+	frame	data/chars/brocken/rise6.gif
+      delay	3
+      offset	91 166
+      frame	data/chars/brocken/rise6.gif
+      offset	89 162
+      frame	data/chars/brocken/rise6.gif
+	
+anim attack1
+	loop	0
+      range 150 250
+      delay   8
+	offset	75 170
+      bbox	55 78 50 80
+      custknife rocket
+	throwframe 20 65
+      sound	data/chars/brocken/at1.wav
+      frame	data/chars/brocken/aaa1.gif
+	frame	data/chars/brocken/aaa2.gif
+	frame	data/chars/brocken/aaa3.gif
+      frame	data/chars/brocken/aaa4.gif
+      delay   6
+      frame	data/chars/brocken/aaa5.gif
+      frame	data/chars/brocken/aaa6.gif
+	frame	data/chars/brocken/aaa7.gif
+      sound	data/chars/brocken/at10.wav
+      delay   2
+	frame	data/chars/brocken/aaa8.gif
+      move -2
+      frame	data/chars/brocken/aaa9.gif
+      frame	data/chars/brocken/aaa9.gif
+      move -3
+      frame	data/chars/brocken/aaa10.gif
+      frame	data/chars/brocken/aaa10.gif
+      move -2
+      frame	data/chars/brocken/aaa11.gif
+      frame	data/chars/brocken/aaa11.gif
+      move 0
+	frame	data/chars/brocken/aaa12.gif
+      frame	data/chars/brocken/aaa12.gif
+	frame	data/chars/brocken/aaa13.gif
+      frame	data/chars/brocken/aaa13.gif
+      frame	data/chars/brocken/aaa14.gif
+      frame	data/chars/brocken/aaa14.gif
+      move 0
+      delay   8
+      frame	data/chars/brocken/aaa15.gif
+      frame	data/chars/brocken/aaa16.gif
+	frame	data/chars/brocken/aaa17.gif
+	frame	data/chars/brocken/aaa18.gif
+      frame	data/chars/brocken/aaa19.gif
+      frame	data/chars/brocken/aaa20.gif
+      frame	data/chars/brocken/aaa21.gif
+      frame	data/chars/brocken/aaa1.gif
+
+anim attack2
+	loop	0
+      range 80 280
+      rangez 20 50
+      delay   12
+	offset	75 170
+      bbox	55 78 50 80
+      jumpframe 7 0 4
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/brocken/j1.gif
+      delay   3
+      offset	75 172
+      sound	data/sounds/jumpp.wav
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/brocken/j2.gif
+      offset	75 174
+	frame	data/chars/brocken/j2.gif
+      offset	75 176
+	frame	data/chars/brocken/j3.gif
+      sound	data/sounds/jumpp.wav
+      offset	75 178
+      frame	data/chars/brocken/j3.gif
+      offset	75 180
+      frame	data/chars/brocken/j2.gif
+      offset	75 182
+      frame	data/chars/brocken/j2.gif
+      delay   6
+      frame	data/chars/brocken/j4.gif
+      movez 3
+      sound	data/chars/brocken/at3.wav
+      frame	data/chars/brocken/ja3.gif
+      bbox	55 78 60 48
+      delay   4
+      attack12 80 85 70 35 25 1 0 0 45
+      dropv 2 3.5
+      forcedirection -1
+      frame	data/chars/brocken/ja1.gif
+      sound	data/chars/brocken/at12.wav
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      bbox	55 78 50 80
+      attack12 0 0 0 0 0 0
+      movez 1
+	frame	data/chars/brocken/ja3.gif
+      delay   4
+      offset	75 178
+	frame	data/chars/brocken/ja3.gif
+      offset	75 174
+      frame	data/chars/brocken/j4.gif
+      offset	75 170
+      frame	data/chars/brocken/j4.gif
+      @cmd    stop
+      sound data/sounds/step.wav
+      @cmd    spawn01 "du" 0 0 1
+      delay   12
+      frame	data/chars/brocken/j1.gif
+      bbox	55 78 50 80
+      frame	data/chars/brocken/aaa1.gif
+
+anim attack3
+	loop	0
+      range 80 280
+      rangez -50 -20
+      delay   12
+	offset	75 170
+      bbox	55 78 50 80
+      jumpframe 7 0 4
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/brocken/j1.gif
+      delay   3
+      offset	75 172
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/j2.gif
+      offset	75 174
+	frame	data/chars/brocken/j2.gif
+      offset	75 176
+	frame	data/chars/brocken/j3.gif
+      sound	data/sounds/jumpp.wav
+      offset	75 178
+      frame	data/chars/brocken/j3.gif
+      offset	75 180
+      frame	data/chars/brocken/j2.gif
+      offset	75 182
+      frame	data/chars/brocken/j2.gif
+      delay   6
+      frame	data/chars/brocken/j4.gif
+      movez -3
+      sound	data/chars/brocken/at3.wav
+      frame	data/chars/brocken/ja3.gif
+      bbox	55 78 60 48
+      delay   4
+      attack12 80 85 70 35 25 1 0 0 45
+      dropv 2 3.5
+      forcedirection -1
+      frame	data/chars/brocken/ja1.gif
+      sound	data/chars/brocken/at12.wav
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      frame	data/chars/brocken/ja1.gif
+	frame	data/chars/brocken/ja2.gif
+      bbox	55 78 50 80
+      attack12 0 0 0 0 0 0
+      movez -1
+	frame	data/chars/brocken/ja3.gif
+      delay   4
+      offset	75 178
+	frame	data/chars/brocken/ja3.gif
+      offset	75 174
+      frame	data/chars/brocken/j4.gif
+      offset	75 170
+      frame	data/chars/brocken/j4.gif
+      @cmd    stop
+      sound data/sounds/step.wav
+      @cmd    spawn01 "du" 0 0 1
+      delay   12
+      frame	data/chars/brocken/j1.gif
+      bbox	55 78 50 80
+      frame	data/chars/brocken/aaa1.gif
+
+anim attack4
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW5"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      }
+    }
+@end_script
+	loop	0
+      range 70 110
+      delay   9
+	offset	75 170
+      bbox	55 78 50 80
+      sound	data/chars/brocken/at6.wav
+      frame	data/chars/brocken/aa1.gif
+	frame	data/chars/brocken/aa2.gif
+      frame	data/chars/brocken/aa1.gif
+      delay	2.5
+	frame	data/chars/brocken/aa3.gif
+      frame	data/chars/brocken/aa4.gif
+      sound	data/chars/brocken/at11.wav
+      attack16  115 75 60 65 20 1 1 1 50
+      dropv 4 1
+	frame	data/chars/brocken/aa5.gif
+      frame	data/chars/brocken/aa6.gif
+	frame	data/chars/brocken/aa7.gif
+      sound	data/chars/brocken/at11.wav
+      frame	data/chars/brocken/aa8.gif
+	frame	data/chars/brocken/aa9.gif
+      frame	data/chars/brocken/aa6.gif
+      sound	data/chars/brocken/at11.wav
+	frame	data/chars/brocken/aa7.gif
+      frame	data/chars/brocken/aa8.gif
+	frame	data/chars/brocken/aa9.gif
+      sound	data/chars/brocken/at11.wav
+      frame	data/chars/brocken/aa6.gif
+	frame	data/chars/brocken/aa7.gif
+      frame	data/chars/brocken/aa8.gif
+      sound	data/chars/brocken/at11.wav
+	frame	data/chars/brocken/aa9.gif
+      frame	data/chars/brocken/aa6.gif
+	frame	data/chars/brocken/aa7.gif
+      sound	data/chars/brocken/at11.wav
+      frame	data/chars/brocken/aa8.gif
+	frame	data/chars/brocken/aa9.gif
+
+anim follow5
+      followcond 2
+      followanim 6
+      loop	0
+	delay	6
+	offset	75 170
+      bbox	55 78 47 80
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/brocken/aaa1.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/brocken/grat1.gif
+      delay	14
+      attack  90 100 52 35 10 0 
+      frame	data/chars/brocken/grat2.gif
+      attack  0 0 0 0 0 0
+      delay	6
+      frame	data/chars/brocken/grat1.gif
+      frame	data/chars/brocken/aaa1.gif
+
+anim follow6
+      loop	0
+      offset	75 170
+      bbox	55 78 47 80
+      delay	15 
+      quakeframe 7 2 2
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/brocken/grat2.gif
+      delay	6
+      frame	data/chars/brocken/grat1.gif
+      frame	data/chars/brocken/aaa1.gif
+      frame	data/chars/brocken/a1.gif
+      frame	data/chars/brocken/a2.gif
+      frame	data/chars/brocken/a3.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/brocken/a5.gif
+      delay	10
+      attack  90 90 70 35 5 0 
+      nokill 1
+      frame	data/chars/brocken/a6.gif
+      attack  0 0 0 0 0 0
+      sound	data/sounds/air3.wav
+      frame	data/chars/brocken/a7.gif
+      attack  90 90 70 35 5 1
+      nokill 0
+      dropv 2 3.5
+      frame	data/chars/brocken/a8.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/brocken/a1.gif
+
+anim attack5
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW5"));
+      }
+    }
+@end_script
+	loop	0
+      range 15 68
+      delay   9
+	offset	75 170
+      bbox	55 78 50 80
+      hitfx   data/sounds/bur.wav
+      frame	data/chars/brocken/br1.gif
+      sound	data/sounds/air5.wav
+	frame	data/chars/brocken/br2.gif
+      delay	4
+      sound	data/chars/brocken/at12.wav
+	frame	data/chars/brocken/br3.gif
+      burn  90 75 125 55 15 1 1 1 10
+      frame	data/chars/brocken/br4.gif
+	frame	data/chars/brocken/br5.gif
+      frame	data/chars/brocken/br6.gif
+	frame	data/chars/brocken/br7.gif
+      frame	data/chars/brocken/br5.gif
+      frame	data/chars/brocken/br6.gif
+	frame	data/chars/brocken/br7.gif
+      frame	data/chars/brocken/br5.gif
+      frame	data/chars/brocken/br6.gif
+	frame	data/chars/brocken/br7.gif
+      frame	data/chars/brocken/br8.gif
+	frame	data/chars/brocken/br9.gif
+      burn  0 0 0 0 0 0
+      frame	data/chars/brocken/br10.gif
+	frame	data/chars/brocken/br11.gif
+      frame	data/chars/brocken/br3.gif
+      delay   9
+	frame	data/chars/brocken/br2.gif
+      frame	data/chars/brocken/br1.gif
+
+anim follow7
+      loop	0
+      delay   9
+	offset	75 170
+      bbox	55 78 50 80
+      hitfx   data/sounds/bur.wav
+      frame	data/chars/brocken/br1.gif
+      sound	data/sounds/air5.wav
+	frame	data/chars/brocken/br2.gif
+      delay	4
+      sound	data/chars/brocken/at12.wav
+	frame	data/chars/brocken/br3.gif
+      burn  90 75 125 55 15 1 1 1 10
+      frame	data/chars/brocken/br4.gif
+	frame	data/chars/brocken/br5.gif
+      frame	data/chars/brocken/br6.gif
+	frame	data/chars/brocken/br7.gif
+      frame	data/chars/brocken/br5.gif
+      frame	data/chars/brocken/br6.gif
+	frame	data/chars/brocken/br7.gif
+      frame	data/chars/brocken/br5.gif
+      frame	data/chars/brocken/br6.gif
+	frame	data/chars/brocken/br7.gif
+      frame	data/chars/brocken/br8.gif
+	frame	data/chars/brocken/br9.gif
+      burn  0 0 0 0 0 0
+      frame	data/chars/brocken/br10.gif
+	frame	data/chars/brocken/br11.gif
+      frame	data/chars/brocken/br3.gif
+      delay   9
+	frame	data/chars/brocken/br2.gif
+      frame	data/chars/brocken/br1.gif
+
+anim special
+      loop	0
+      delay   4
+      offset	75 170
+      jumpframe 0 0 -3
+      movez 3
+      sound	data/chars/brocken/at5.wav
+      frame	data/chars/brocken/rub1.gif
+      frame	data/chars/brocken/rub2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/rub3.gif
+      frame	data/chars/brocken/rub4.gif
+      frame	data/chars/brocken/rub1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/rub2.gif
+      frame	data/chars/brocken/rub3.gif
+      frame	data/chars/brocken/rub4.gif
+
+anim special2
+      loop	0
+      delay   4
+      offset	75 170
+      jumpframe 0 0 -3
+      movez 3
+      sound	data/chars/brocken/at5.wav
+      frame	data/chars/brocken/rub1.gif
+      frame	data/chars/brocken/rub2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/rub3.gif
+      frame	data/chars/brocken/rub4.gif
+      frame	data/chars/brocken/rub1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/brocken/rub2.gif
+      frame	data/chars/brocken/rub3.gif
+      frame	data/chars/brocken/rub4.gif
+
+anim death
+	loop	0
+      delay   120
+	offset	95 170
+      subentity endd
+      spawnframe 1 280 210 0 1
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   9
+	offset	95 170
+      subentity endd
+      spawnframe 2 280 210 0 1
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/brocken/fall04.gif
+      delay   240
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+	offset	95 155
+      subentity endd
+      spawnframe 48 280 210 0 1
+      move -5
+      sound	data/sounds/fall.wav
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall02.gif
+      frame	data/chars/brocken/ffall02.gif
+      frame	data/chars/brocken/ffall02.gif
+      move -4
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall02.gif
+      frame	data/chars/brocken/ffall02.gif
+      frame	data/chars/brocken/ffall02.gif
+      move -3
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall03.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall04.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      frame	data/chars/brocken/ffall01.gif
+      offset	95 175
+      frame	data/chars/brocken/ffall05.gif
+      frame	data/chars/brocken/ffall05.gif
+      frame	data/chars/brocken/ffall05.gif
+      frame	data/chars/brocken/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      frame	data/chars/brocken/fall04.gif
+      move -3
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      move 0
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      move 0
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+      move 0
+      delay   40
+	frame	data/chars/brocken/fall05.gif
+      delay   120
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+
+anim death9
+	loop	0
+      delay   120
+	offset	95 170
+      subentity endd
+      spawnframe 1 280 210 0 1
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+
+anim death15
+	loop	0
+      delay   120
+	offset	95 170
+      subentity endd
+      spawnframe 1 280 210 0 1
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+
+anim bdie
+	loop	0
+      delay   120
+	offset	95 170
+      subentity endd
+      spawnframe 1 280 210 0 1
+      frame	data/chars/brocken/fall05.gif
+      frame	data/chars/brocken/fall05.gif
+
+

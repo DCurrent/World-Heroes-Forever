@@ -1,0 +1,32 @@
+name	milk
+health	30
+type	item
+shadow	0
+nolife   1
+facing 1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	9 18
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/milk.gif
+      delay	50
+      frame	data/sprites/aniback/milk.gif
+      delay	5
+      frame	data/sprites/aniback/milk.gif
+      offset	9 19
+      frame	data/sprites/aniback/milk.gif
+
+anim idle
+	loop	1
+	delay	8
+	offset	9 18
+	bbox	3 2 11 16
+	frame	data/sprites/aniback/milk.gif
+	
+
+
+
+

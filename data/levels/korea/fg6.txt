@@ -1,0 +1,14 @@
+name    fg6
+speedf  -0.3
+type		panel
+facing 1
+setlayer	210
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   12
+	  offset	10 236
+        frame   data/levels/Korea/fg2.gif
+
+

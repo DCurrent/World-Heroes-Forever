@@ -1,0 +1,26 @@
+name	 kna
+health   0
+speed    21
+type     pshot
+counter  9999
+shootnum 9999
+nolife   1
+remove   1
+candamage player obstacle
+gfxshadow	1
+
+anim idle
+	loop	1
+	delay	5
+	offset  30 123
+      hitfx  data/sounds/knife2.wav
+      hitflash  ffla
+      attack3  55 115 20 17 10 0 0 0 12
+	frame	data/chars/misc/kna1.gif
+	frame	data/chars/misc/kna2.gif
+	frame	data/chars/misc/kna3.gif
+	frame	data/chars/misc/kna4.gif
+      
+      
+
+

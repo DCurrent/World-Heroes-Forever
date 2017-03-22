@@ -1,0 +1,10 @@
+music           data/music/zp.bor
+animation	data/scenes/zp1.gif 0 0 0 1
+animation	data/scenes/zp2.gif 0 0 0 1
+animation	data/scenes/zp3.gif 0 0 0 1
+animation	data/scenes/zp4.gif 0 0 0 1
+animation	data/scenes/zp5.gif 0 0 0 1
+animation	data/scenes/zp6.gif 0 0 0 1
+
+
+

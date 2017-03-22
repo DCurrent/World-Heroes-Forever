@@ -1,0 +1,82 @@
+music		data/music/1-1.bor
+background	data/levels/test/bac.gif
+panel	      data/levels/test/n02.gif
+order           a
+settime         0
+notime          1
+type            1 0 1
+direction both
+
+#----------pickups
+
+spawn	barel
+item  1up
+coords	650 270
+at	0
+
+spawn	barel
+item  1up
+coords	250 220
+at	0
+
+Group	1 1
+at	0
+
+spawn	matlock
+Health 1000
+flip 1
+coords	160 220
+at	0
+
+
+spawn	jcarn
+Health 150
+map 2
+coords	420 230
+at	0
+
+spawn	jmax
+Health 150
+flip 1
+map 3
+coords	-100 220
+at	0
+
+spawn	mudman
+Health 150
+flip 1
+coords	130 200
+at	0
+
+spawn	neodio
+Health 150
+flip 1
+coords	50 200
+at	0
+
+spawn	ryofu
+Health 150
+map 5
+coords	250 230
+at	0
+
+spawn	zeus
+Health 150
+flip 1
+map 6
+coords	50 200
+at	0
+
+spawn	brocken
+Health 150
+coords	250 230
+at	0
+
+spawn	jack
+Health 150
+flip 1
+coords	50 200
+at	0
+
+
+

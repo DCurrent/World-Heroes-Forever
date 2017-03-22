@@ -1,0 +1,19 @@
+name	fbfla
+type	none
+shadow	0
+toflip 1
+
+anim idle
+	loop	0
+	delay	5
+	offset	105 122
+	frame	data/chars/misc/fbfla01.gif
+	frame	data/chars/misc/fbfla02.gif
+	frame	data/chars/misc/fbfla03.gif
+	frame	data/chars/misc/fbfla04.gif
+
+
+
+
+
+

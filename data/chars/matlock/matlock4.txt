@@ -1,0 +1,1016 @@
+name	matlock4
+health	150
+speed	10
+type	enemy
+shadow  0
+nolife        1
+paingrab 1
+grabback 1
+grabdistance 40
+gfxshadow  1
+falldie 2
+nodieblink      1
+dust du
+aggression      20
+diesound	data/chars/matlock/die.wav
+projectilehit   enemy obstacle trap
+subject_to_wall 0
+hostile player 
+candamage player obstacle
+
+animationscript 	data/scripts/ani0020.h
+
+palette   data/chars/matlock/idle.gif
+alternatepal data/chars/matlock/map1.gif
+alternatepal data/chars/matlock/map2.gif
+alternatepal data/chars/matlock/map3.gif
+alternatepal data/chars/matlock/map4.gif
+alternatepal data/chars/matlock/map5.gif
+alternatepal data/chars/matlock/map6.gif
+alternatepal data/chars/matlock/map7.gif
+alternatepal data/chars/matlock/map8.gif
+alternatepal data/chars/matlock/map9.gif
+
+anim spawn
+	loop	0
+      offset	75 170
+      jumpframe 0 0 2
+      landframe 7 dus
+      delay   4
+      @cmd    degravity -0.27
+      bbox	55 78 47 75
+      sound	data/sounds/jump.wav
+      frame	data/chars/matlock/j5.gif
+      frame	data/chars/matlock/j5.gif
+      frame	data/chars/matlock/j4.gif
+      frame	data/chars/matlock/j4.gif
+      frame	data/chars/matlock/j3.gif
+      frame	data/chars/matlock/j3.gif
+      delay   40
+      frame	data/chars/matlock/j2.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/matlock/j1.gif
+      frame	data/chars/matlock/jl1.gif
+      frame	data/chars/matlock/j1.gif
+
+anim idle
+	loop	1
+	delay	15
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd    clearL
+      frame	data/chars/matlock/idle.gif
+      frame	data/chars/matlock/idle1.gif
+      frame	data/chars/matlock/idle2.gif
+      frame	data/chars/matlock/idle3.gif
+      frame	data/chars/matlock/idle2.gif
+      frame	data/chars/matlock/idle1.gif
+
+anim walk
+	loop	1
+      delay   10
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/matlock/w1.gif
+	frame	data/chars/matlock/w2.gif
+	frame	data/chars/matlock/w3.gif
+	frame	data/chars/matlock/w4.gif
+	frame	data/chars/matlock/w5.gif
+      frame	data/chars/matlock/w6.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	75 170
+      frame	data/chars/matlock/pain4.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	70 186
+      frame	data/chars/matlock/pain2.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	75 170
+      bbox	0 0 0 0
+      frame	data/chars/matlock/pain4.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	75 170
+      frame	data/chars/matlock/pain4.gif
+
+anim follow3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      }
+    }
+@end_script
+      loop	0
+      delay   4
+	offset	75 170
+	bbox	55 78 50 80
+      move -3
+      movez 1
+	frame	data/chars/matlock/w5.gif
+      frame	data/chars/matlock/w5.gif
+	frame	data/chars/matlock/w5.gif
+	frame	data/chars/matlock/w4.gif
+      frame	data/chars/matlock/w4.gif
+	frame	data/chars/matlock/w4.gif
+	frame	data/chars/matlock/w3.gif
+      frame	data/chars/matlock/w3.gif
+      frame	data/chars/matlock/w3.gif
+      frame	data/chars/matlock/w2.gif
+      frame	data/chars/matlock/w2.gif
+      frame	data/chars/matlock/w2.gif
+      movez 0
+      frame	data/chars/matlock/w1.gif
+      frame	data/chars/matlock/w1.gif
+      frame	data/chars/matlock/w1.gif
+
+anim follow4
+      loop	0
+      delay   4
+	offset	75 170
+	bbox	55 78 50 80
+      move -3
+      movez -1
+	frame	data/chars/matlock/w5.gif
+      frame	data/chars/matlock/w5.gif
+	frame	data/chars/matlock/w5.gif
+	frame	data/chars/matlock/w4.gif
+      frame	data/chars/matlock/w4.gif
+	frame	data/chars/matlock/w4.gif
+	frame	data/chars/matlock/w3.gif
+      frame	data/chars/matlock/w3.gif
+      frame	data/chars/matlock/w3.gif
+      frame	data/chars/matlock/w2.gif
+      frame	data/chars/matlock/w2.gif
+      frame	data/chars/matlock/w2.gif
+      movez 0
+      frame	data/chars/matlock/w1.gif
+      frame	data/chars/matlock/w1.gif
+      frame	data/chars/matlock/w1.gif
+
+anim pain
+	loop	0
+	delay	4
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/matlock/pain2.gif
+      offset	77 170
+	frame	data/chars/matlock/pain2.gif
+      offset	74 170
+	frame	data/chars/matlock/pain2.gif
+      offset	76 170
+      frame	data/chars/matlock/pain2.gif
+      offset	75 170
+      frame	data/chars/matlock/pain2.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/matlock/pain2.gif
+      offset	77 170
+	frame	data/chars/matlock/pain2.gif
+      sound	data/chars/assassin/pain.wav
+      offset	73 170
+	frame	data/chars/matlock/pain2.gif
+      offset	77 170
+      frame	data/chars/matlock/pain2.gif
+      offset	75 170
+      frame	data/chars/matlock/pain2.gif
+      delay	45
+      frame	data/chars/matlock/pain4.gif
+      frame	data/chars/matlock/pain4.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	75 170
+      bbox	25 145 100 30
+	frame	data/chars/matlock/fall04.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	75 170
+	frame	data/chars/matlock/fall04.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/matlock/pain4.gif
+      offset	77 170
+	frame	data/chars/matlock/pain4.gif
+      offset	73 170
+	frame	data/chars/matlock/pain4.gif
+      offset	77 170
+      frame	data/chars/matlock/pain4.gif
+      offset	75 170
+      frame	data/chars/matlock/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      move -4
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/matlock/bpain04.gif
+      offset	77 170
+	frame	data/chars/matlock/bpain04.gif
+      offset	73 170
+	frame	data/chars/matlock/bpain4.gif
+      offset	77 170
+      frame	data/chars/matlock/bpain4.gif
+      offset	75 170
+      frame	data/chars/matlock/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/matlock/bpain02.gif
+      frame	data/chars/matlock/bpain02.gif
+      frame	data/chars/matlock/bpain2.gif
+      frame	data/chars/matlock/bpain2.gif
+      frame	data/chars/matlock/bpain02.gif
+      frame	data/chars/matlock/bpain02.gif
+      frame	data/chars/matlock/bpain2.gif
+      frame	data/chars/matlock/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	75 170
+	frame	data/chars/matlock/pain2.gif
+      offset	77 170
+	frame	data/chars/matlock/pain2.gif
+      offset	74 170
+	frame	data/chars/matlock/pain2.gif
+      offset	76 170
+      frame	data/chars/matlock/pain2.gif
+      offset	75 170
+      frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/pain4.gif
+      frame	data/chars/matlock/pain4.gif
+      frame	data/chars/matlock/pain4.gif
+      frame	data/chars/matlock/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      bouncefactor 3.5
+      landframe 6
+      @cmd    degravity 0
+      frame	data/chars/matlock/fall01.gif
+	frame	data/chars/matlock/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/matlock/fall02.gif
+	frame	data/chars/matlock/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/matlock/fall03.gif
+      delay   40
+	frame	data/chars/matlock/fall03.gif
+      delay   8
+      bbox	25 145 100 30
+	frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	75 170
+      attack10  50 90 60 70 5 1 1 1
+      dropv 2 1.5
+      move -4
+      @cmd    degravity 0
+      frame	data/chars/matlock/pain5.gif
+      frame	data/chars/matlock/pain5.gif
+      frame	data/chars/matlock/pain5.gif
+      delay   2
+      move -5
+      offset	95 155
+      sound	data/sounds/fall.wav
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall02.gif
+      frame	data/chars/matlock/ffall02.gif
+      frame	data/chars/matlock/ffall02.gif
+      move -4
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall02.gif
+      frame	data/chars/matlock/ffall02.gif
+      frame	data/chars/matlock/ffall02.gif
+      move -3
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      offset	95 175
+      frame	data/chars/matlock/ffall05.gif
+      frame	data/chars/matlock/ffall05.gif
+      frame	data/chars/matlock/ffall05.gif
+      frame	data/chars/matlock/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      move -3
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      move 0
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      move 0
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      frame	data/chars/matlock/dsla1.gif
+	frame	data/chars/matlock/dsla2.gif
+	frame	data/chars/matlock/dsla3.gif
+      frame	data/chars/matlock/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/matlock/sla3.gif
+      offset	125 120
+      frame	data/chars/matlock/sla2.gif
+      offset	75 170
+      frame	data/chars/matlock/pain4.gif
+      offset	83 140
+      frame	data/chars/matlock/sla1.gif
+      frame	data/chars/matlock/sla2.gif
+      frame	data/chars/matlock/rjsla3.gif
+      offset	75 150
+      frame	data/chars/matlock/rjsla4.gif
+      frame	data/chars/matlock/rjsla5.gif
+      offset	95 170
+      frame	data/chars/matlock/fall01.gif
+      frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/rj0.gif
+      offset	104 170
+      frame	data/chars/matlock/rj00.gif
+      frame	data/chars/matlock/gsla2.gif
+      frame	data/chars/matlock/gfall04.gif
+      frame	data/chars/matlock/gfall05.gif
+      offset	124 170
+      frame	data/chars/matlock/pain41.gif
+      frame	data/chars/matlock/dsla22.gif
+	frame	data/chars/matlock/dsla33.gif
+      offset	75 150
+      frame	data/chars/matlock/rjsla7.gif
+      offset	75 170
+      frame	data/chars/matlock/pain2.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/matlock/sla1.gif
+      offset	112 145
+	frame	data/chars/matlock/sla2.gif
+      offset	90 145
+	frame	data/chars/matlock/sla3.gif
+      frame	data/chars/matlock/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/matlock/fall04.gif
+      offset	85 145
+      frame	data/chars/matlock/sla1.gif
+      frame	data/chars/matlock/sla1.gif
+      offset	98 138
+      frame	data/chars/matlock/ssla3.gif
+      frame	data/chars/matlock/rjsla3.gif
+      frame	data/chars/matlock/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/matlock/rjsla4.gif
+      frame	data/chars/matlock/rjsla5.gif
+      frame	data/chars/matlock/rjsla6.gif
+      frame	data/chars/matlock/sla1.gif
+      frame	data/chars/matlock/sla1.gif
+      frame	data/chars/matlock/ssla3.gif
+      frame	data/chars/matlock/sla2.gif
+      offset	123 170
+      frame	data/chars/matlock/sla3.gif
+      offset	98 138
+      frame	data/chars/matlock/hsla1.gif
+      frame	data/chars/matlock/hsla2.gif
+      frame	data/chars/matlock/hsla3.gif
+      frame	data/chars/matlock/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/matlock/hsla2.gif
+      frame	data/chars/matlock/hsla4.gif
+      frame	data/chars/matlock/rj1.gif
+      frame	data/chars/matlock/gsla3.gif
+      frame	data/chars/matlock/rj3.gif
+      frame	data/chars/matlock/hsla4.gif
+      offset	98 148
+      frame	data/chars/matlock/hsla4.gif
+      offset	120 170
+      frame	data/chars/matlock/pain41.gif
+      frame	data/chars/matlock/pain21.gif
+      offset	75 170
+      frame	data/chars/matlock/pain4.gif
+      offset	122 170
+      frame	data/chars/matlock/pain41.gif
+      frame	data/chars/matlock/pain55.gif
+      offset	100 140
+      frame	data/chars/matlock/fall066.gif
+      offset	75 170
+      frame	data/chars/matlock/pain5.gif
+      offset	105 85
+      frame	data/chars/matlock/dsla3.gif
+      offset	75 170
+      frame	data/chars/matlock/pain4.gif
+      frame	data/chars/matlock/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/matlock/gsla1.gif
+      offset	112 145
+	frame	data/chars/matlock/gsla2.gif
+      offset	90 145
+	frame	data/chars/matlock/gsla3.gif
+      frame	data/chars/matlock/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/matlock/gsla6.gif
+      offset	115 170
+      frame	data/chars/matlock/dsla1.gif
+      offset	115 145
+	frame	data/chars/matlock/gsla3.gif
+      offset	75 170
+      frame	data/chars/matlock/pain4.gif
+      offset	105 170
+      frame	data/chars/matlock/gfall04.gif
+      offset	75 148
+      frame	data/chars/matlock/rjsla4.gif
+      frame	data/chars/matlock/rjsla5.gif
+      offset	95 170
+      frame	data/chars/matlock/fall04.gif
+      offset	75 143
+      frame	data/chars/matlock/hsla2.gif
+      frame	data/chars/matlock/hsla4.gif
+      offset	124 170
+      frame	data/chars/matlock/pain4.gif
+      offset	95 170
+      frame	data/chars/matlock/fall01.gif
+      frame	data/chars/matlock/fall02.gif
+      frame	data/chars/matlock/fall03.gif
+      frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall05.gif
+      offset	104 170
+      frame	data/chars/matlock/gsla2.gif
+      frame	data/chars/matlock/gsla3.gif
+      frame	data/chars/matlock/gsla4.gif
+      frame	data/chars/matlock/gfall04.gif
+      frame	data/chars/matlock/gfall05.gif
+      offset	75 165
+      frame	data/chars/matlock/pain5.gif
+      frame	data/chars/matlock/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	98 138
+      bbox	30 90 95 45
+      landframe 3
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/matlock/fall03.gif
+      frame	data/chars/matlock/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/matlock/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	98 138
+      bbox	30 90 95 45
+      landframe 3
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/matlock/fall03.gif
+      frame	data/chars/matlock/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/matlock/fall04.gif
+      delay   2
+	frame	data/chars/matlock/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity 0
+      frame	data/chars/matlock/sla3.gif
+      frame	data/chars/matlock/sla3.gif
+      delay   10
+      offset	98 138
+      bbox	55 78 80 57
+      frame	data/chars/matlock/fall02.gif
+      frame	data/chars/matlock/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/matlock/fall03.gif
+      delay   500
+      frame	data/chars/matlock/fall03.gif
+      offset	95 170
+      delay   8
+      bbox	25 145 100 30
+      frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+
+anim fall10
+      loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+      frame	data/chars/matlock/fall01.gif
+	frame	data/chars/matlock/fall01.gif
+	frame	data/chars/matlock/fall02.gif
+	frame	data/chars/matlock/fall02.gif
+      delay   20
+	frame	data/chars/matlock/fall03.gif
+      delay   40
+	frame	data/chars/matlock/fall03.gif
+      delay   8
+	frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 170
+      bbox	25 145 100 30
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+	frame	data/chars/matlock/fall04.gif
+      @cmd    degravity 0
+      frame	data/chars/matlock/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 170
+      bbox	25 145 100 30
+	frame	data/chars/matlock/fall05.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/matlock/fall09.gif
+	frame	data/chars/matlock/fall09.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/matlock/fall02.gif
+	frame	data/chars/matlock/fall02.gif
+      delay   20
+	frame	data/chars/matlock/fall03.gif
+      delay   40
+	frame	data/chars/matlock/fall03.gif
+      delay   8
+      @cmd    degravity 0
+	frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity 0
+      frame	data/chars/matlock/fall01.gif
+	frame	data/chars/matlock/fall01.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/matlock/fall02.gif
+	frame	data/chars/matlock/fall02.gif
+      delay   20
+	frame	data/chars/matlock/fall03.gif
+      delay   40
+	frame	data/chars/matlock/fall03.gif
+      delay   8
+	frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+
+anim fall16
+	loop	0
+      delay   4
+	offset	75 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 4 0 1
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+	frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+	frame	data/chars/matlock/pain2.gif
+      frame	data/chars/matlock/shock1.gif
+      frame	data/chars/matlock/pain2.gif
+      delay   40
+	frame	data/chars/matlock/shock1.gif
+      offset	95 170
+      delay   8
+	frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+
+anim burn
+	loop	0
+      delay   7
+	offset	95 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    degravity 0
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/matlock/burn01.gif
+	frame	data/chars/matlock/burn1.gif
+      frame	data/chars/matlock/burn01.gif
+	frame	data/chars/matlock/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/matlock/burn02.gif
+	frame	data/chars/matlock/burn2.gif
+      frame	data/chars/matlock/burn02.gif
+	frame	data/chars/matlock/burn2.gif
+	frame	data/chars/matlock/burn03.gif
+	frame	data/chars/matlock/burn3.gif
+      frame	data/chars/matlock/burn03.gif
+      frame	data/chars/matlock/burn3.gif
+	frame	data/chars/matlock/burn03.gif
+      frame	data/chars/matlock/burn3.gif
+      delay   40
+	frame	data/chars/matlock/burn03.gif
+      delay   7
+      bbox	25 145 100 30
+	frame	data/chars/matlock/burn4.gif
+      frame	data/chars/matlock/burn04.gif
+      frame	data/chars/matlock/burn4.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/matlock/fall05.gif
+
+anim rise
+	loop	0
+      delay   20
+      offset	95 170
+	frame	data/chars/matlock/fall05.gif
+	offset	95 120
+	delay	8
+	frame	data/chars/matlock/rise1.gif
+	frame	data/chars/matlock/rise3.gif
+	frame	data/chars/matlock/rise4.gif
+      frame	data/chars/matlock/rise5.gif
+	
+anim attack1
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
+      }
+    }
+@end_script
+      range	0 70
+      followcond 1
+      followanim 5
+	loop	0
+      delay   9
+	offset	75 170
+      bbox	55 78 50 80
+      sound	data/sounds/air6.wav
+      frame	data/chars/matlock/aaa1.gif
+      attack  75 75 59 35 5 0 0 0 18
+      frame	data/chars/matlock/aaa2.gif
+      delay   7
+      attack 0 0 0 0 0 0
+      frame	data/chars/matlock/aaa2.gif
+      delay   8
+      frame	data/chars/matlock/aaa1.gif
+
+anim follow5
+      loop	0
+      followcond 1
+      followanim 6
+      delay   16
+	offset	75 170
+      bbox	55 78 50 80
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/matlock/aaa2.gif
+      delay   8
+      frame	data/chars/matlock/aaa1.gif
+      sound	data/sounds/air5.wav
+      delay   9
+      frame	data/chars/matlock/aaaa1.gif
+      frame	data/chars/matlock/aaaa2.gif
+      delay   9
+      attack  75 90 59 35 5 0 0 0 18
+      frame	data/chars/matlock/aaaa3.gif
+      delay   7
+      attack 0 0 0 0 0 0
+      frame	data/chars/matlock/aaaa3.gif
+      delay   8
+      frame	data/chars/matlock/aaaa2.gif
+      frame	data/chars/matlock/aaaa1.gif
+
+anim follow6
+      loop	0
+      delay   16
+	offset	75 170
+      bbox	55 78 50 80
+      hitfx   data/sounds/beat3.wav
+      frame	data/chars/matlock/aaaa3.gif
+      delay   8
+      frame	data/chars/matlock/aaaa2.gif
+      frame	data/chars/matlock/aaaa1.gif
+      delay   15
+      sound	data/sounds/air5.wav
+      frame	data/chars/matlock/aa1.gif
+      delay   9
+      attack  75 85 59 35 5 1 0 0 20
+      frame	data/chars/matlock/aa2.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/matlock/aa2.gif
+      frame	data/chars/matlock/j1.gif
+
+anim attack2
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
+      }
+    }
+@end_script
+      range	75 100
+	loop	0
+      delay   9
+	offset	75 170
+      bbox	55 78 50 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/matlock/a1.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/matlock/a2.gif
+      frame	data/chars/matlock/a3.gif
+      sound	data/chars/matlock/at2.wav
+      frame	data/chars/matlock/a4.gif
+      attack  110 105 65 35 10 1 0 0 20
+      frame	data/chars/matlock/a5.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/matlock/a6.gif
+      frame	data/chars/matlock/a7.gif
+      frame	data/chars/matlock/a8.gif
+      frame	data/chars/matlock/a9.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/matlock/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   20
+	offset	95 170
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/matlock/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+	offset	95 155
+      move -5
+      sound	data/sounds/fall.wav
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall02.gif
+      frame	data/chars/matlock/ffall02.gif
+      frame	data/chars/matlock/ffall02.gif
+      move -4
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall02.gif
+      frame	data/chars/matlock/ffall02.gif
+      frame	data/chars/matlock/ffall02.gif
+      move -3
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall03.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall04.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      frame	data/chars/matlock/ffall01.gif
+      offset	95 175
+      frame	data/chars/matlock/ffall05.gif
+      frame	data/chars/matlock/ffall05.gif
+      frame	data/chars/matlock/ffall05.gif
+      frame	data/chars/matlock/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      frame	data/chars/matlock/fall04.gif
+      move -3
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      move 0
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      move 0
+      frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+      move 0
+      delay   40
+	frame	data/chars/matlock/fall05.gif
+      frame	data/chars/matlock/fall05.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/matlock/fall05.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/matlock/fall05.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/matlock/fall05.gif
+
+
+
+
+
+
+

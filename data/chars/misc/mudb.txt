@@ -1,0 +1,90 @@
+name	 mudb
+health   0
+speed    21
+type     pshot
+counter  9999
+shootnum 9999
+nolife   1
+remove   0
+candamage player obstacle
+shadow 0
+alpha    1
+
+anim idle
+	loop	0
+	delay	2
+	offset	36 132
+      hitfx  data/sounds/beat3.wav
+      hitflash  maxfl
+      attack 90 60 30 70 15 1 0 0 18 20
+	frame	data/chars/misc/mudb1.gif
+	frame	data/chars/misc/mudb2.gif
+      frame	data/chars/misc/mudb3.gif
+	frame	data/chars/misc/mudb4.gif
+      frame	data/chars/misc/mudb5.gif
+	frame	data/chars/misc/mudb6.gif
+	frame	data/chars/misc/mudb7.gif
+	frame	data/chars/misc/mudb8.gif
+      frame	data/chars/misc/mudb9.gif
+	frame	data/chars/misc/mudb10.gif
+	frame	data/chars/misc/mudb11.gif
+	frame	data/chars/misc/mudb12.gif
+      frame	data/chars/misc/mudb13.gif
+	frame	data/chars/misc/mudb14.gif
+	frame	data/chars/misc/mudb15.gif
+	frame	data/chars/misc/mudb16.gif
+      frame	data/chars/misc/mudb17.gif
+      frame	data/chars/misc/mudb18.gif
+	frame	data/chars/misc/mudb19.gif
+	frame	data/chars/misc/mudb4.gif
+      frame	data/chars/misc/mudb5.gif
+	frame	data/chars/misc/mudb6.gif
+	frame	data/chars/misc/mudb7.gif
+	frame	data/chars/misc/mudb8.gif
+      frame	data/chars/misc/mudb9.gif
+	frame	data/chars/misc/mudb10.gif
+	frame	data/chars/misc/mudb11.gif
+	frame	data/chars/misc/mudb12.gif
+      frame	data/chars/misc/mudb13.gif
+	frame	data/chars/misc/mudb14.gif
+	frame	data/chars/misc/mudb15.gif
+	frame	data/chars/misc/mudb16.gif
+      frame	data/chars/misc/mudb17.gif
+      frame	data/chars/misc/mudb18.gif
+	frame	data/chars/misc/mudb19.gif
+      frame	data/chars/misc/mudb4.gif
+      frame	data/chars/misc/mudb5.gif
+	frame	data/chars/misc/mudb6.gif
+	frame	data/chars/misc/mudb7.gif
+	frame	data/chars/misc/mudb8.gif
+      frame	data/chars/misc/mudb9.gif
+	frame	data/chars/misc/mudb10.gif
+	frame	data/chars/misc/mudb11.gif
+	frame	data/chars/misc/mudb12.gif
+      frame	data/chars/misc/mudb13.gif
+	frame	data/chars/misc/mudb14.gif
+	frame	data/chars/misc/mudb15.gif
+	frame	data/chars/misc/mudb16.gif
+      frame	data/chars/misc/mudb17.gif
+      frame	data/chars/misc/mudb18.gif
+	frame	data/chars/misc/mudb19.gif
+      frame	data/chars/misc/mudb4.gif
+      frame	data/chars/misc/mudb5.gif
+	frame	data/chars/misc/mudb6.gif
+	frame	data/chars/misc/mudb7.gif
+	frame	data/chars/misc/mudb8.gif
+      frame	data/chars/misc/mudb9.gif
+	frame	data/chars/misc/mudb10.gif
+	frame	data/chars/misc/mudb11.gif
+	frame	data/chars/misc/mudb12.gif
+      frame	data/chars/misc/mudb13.gif
+	frame	data/chars/misc/mudb14.gif
+	frame	data/chars/misc/mudb15.gif
+	frame	data/chars/misc/mudb16.gif
+      frame	data/chars/misc/mudb17.gif
+      frame	data/chars/misc/mudb18.gif
+	frame	data/chars/misc/mudb19.gif
+      frame	data/chars/misc/mudb4.gif
+
+
+

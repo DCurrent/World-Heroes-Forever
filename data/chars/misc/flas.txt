@@ -1,0 +1,23 @@
+name	flas
+type	none
+shadow	0
+lifespan 6
+antigravity     100
+
+anim idle
+	loop	0
+	delay	3
+	offset	100 180
+	frame	data/chars/misc/fla011.gif
+	frame	data/chars/misc/fla021.gif
+	frame	data/chars/misc/fla031.gif
+	frame	data/chars/misc/fla041.gif
+	frame	data/chars/misc/fla051.gif
+	frame	data/chars/misc/fla061.gif
+	frame	data/chars/misc/fla071.gif
+	frame	data/chars/misc/fla081.gif
+      frame	data/chars/misc/empty.gif
+
+
+
+

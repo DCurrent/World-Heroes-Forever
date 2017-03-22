@@ -1,0 +1,1220 @@
+name	yungmie4
+health	150
+speed	11
+type	enemy
+shadow  0
+nolife        1
+paingrab 1
+grabback 1
+grabdistance 40
+gfxshadow  1
+falldie 2
+nodieblink      1
+dust du
+aggression      20
+diesound	data/chars/yungmie/die.wav
+aimove Chasez
+projectilehit   enemy obstacle trap
+subject_to_wall 0
+hostile player 
+candamage player obstacle
+
+animationscript 	data/scripts/ani0020.h
+
+palette   data/chars/yungmie/idle.gif
+alternatepal data/chars/yungmie/map1.gif
+alternatepal data/chars/yungmie/map2.gif
+alternatepal data/chars/yungmie/map3.gif
+
+anim spawn
+      loop	0
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 0 0 2.5 0 dus
+      landframe 7 dus
+      delay   5
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf5.gif
+      frame	data/chars/yungmie/jf5.gif
+      delay   40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim idle
+	loop	1
+	delay	13
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd    clearL
+      frame	data/chars/yungmie/idle.gif
+      frame	data/chars/yungmie/idle1.gif
+      frame	data/chars/yungmie/idle2.gif
+      frame	data/chars/yungmie/idle3.gif
+      frame	data/chars/yungmie/idle2.gif
+      frame	data/chars/yungmie/idle1.gif
+
+anim walk
+	loop	1
+      delay   10
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/yungmie/w1.gif
+	frame	data/chars/yungmie/w2.gif
+	frame	data/chars/yungmie/w3.gif
+	frame	data/chars/yungmie/w4.gif
+	frame	data/chars/yungmie/w5.gif
+      frame	data/chars/yungmie/w6.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	75 170
+      frame	data/chars/yungmie/pain4.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	66 191
+      frame	data/chars/yungmie/pain2.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	75 170
+      bbox	0 0 0 0
+      frame	data/chars/yungmie/pain4.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	75 170
+      frame	data/chars/yungmie/pain4.gif
+
+anim pain
+	loop	0
+	delay	4
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/yungmie/pain2.gif
+      offset	77 170
+	frame	data/chars/yungmie/pain2.gif
+      offset	74 170
+	frame	data/chars/yungmie/pain2.gif
+      offset	76 170
+      frame	data/chars/yungmie/pain2.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain2.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/yungmie/pain2.gif
+      offset	77 170
+	frame	data/chars/yungmie/pain2.gif
+      sound	data/chars/yungmie/pain.wav
+      offset	73 170
+	frame	data/chars/yungmie/pain2.gif
+      offset	77 170
+      frame	data/chars/yungmie/pain2.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain2.gif
+      delay	45
+      frame	data/chars/yungmie/pain4.gif
+      frame	data/chars/yungmie/pain4.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	75 170
+      bbox	25 145 100 30
+	frame	data/chars/yungmie/fall04.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	75 170
+	frame	data/chars/yungmie/fall04.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/yungmie/pain4.gif
+      offset	77 170
+	frame	data/chars/yungmie/pain4.gif
+      offset	73 170
+	frame	data/chars/yungmie/pain4.gif
+      offset	77 170
+      frame	data/chars/yungmie/pain4.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      move -4
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/yungmie/bpain04.gif
+      offset	77 170
+	frame	data/chars/yungmie/bpain04.gif
+      offset	73 170
+	frame	data/chars/yungmie/bpain4.gif
+      offset	77 170
+      frame	data/chars/yungmie/bpain4.gif
+      offset	75 170
+      frame	data/chars/yungmie/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/yungmie/bpain02.gif
+      frame	data/chars/yungmie/bpain02.gif
+      frame	data/chars/yungmie/bpain2.gif
+      frame	data/chars/yungmie/bpain2.gif
+      frame	data/chars/yungmie/bpain02.gif
+      frame	data/chars/yungmie/bpain02.gif
+      frame	data/chars/yungmie/bpain2.gif
+      frame	data/chars/yungmie/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	75 170
+	frame	data/chars/yungmie/pain2.gif
+      offset	77 170
+	frame	data/chars/yungmie/pain2.gif
+      offset	74 170
+	frame	data/chars/yungmie/pain2.gif
+      offset	76 170
+      frame	data/chars/yungmie/pain2.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain2.gif
+      frame	data/chars/yungmie/pain4.gif
+      frame	data/chars/yungmie/pain4.gif
+      frame	data/chars/yungmie/pain4.gif
+      frame	data/chars/yungmie/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      bouncefactor 3.5
+      landframe 6
+      @cmd    degravity 0
+      frame	data/chars/yungmie/fall01.gif
+	frame	data/chars/yungmie/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/yungmie/fall02.gif
+	frame	data/chars/yungmie/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/yungmie/fall03.gif
+      delay   40
+	frame	data/chars/yungmie/fall03.gif
+      delay   8
+      bbox	25 145 100 30
+	frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	75 170
+      attack10  50 90 60 70 5 1 1 1
+      dropv 2 1.5
+      move -4
+      @cmd    degravity 0
+      frame	data/chars/yungmie/pain5.gif
+      frame	data/chars/yungmie/pain5.gif
+      frame	data/chars/yungmie/pain5.gif
+      delay   2
+      move -5
+      offset	95 155
+      sound	data/sounds/fall.wav
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall02.gif
+      frame	data/chars/yungmie/ffall02.gif
+      frame	data/chars/yungmie/ffall02.gif
+      move -4
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall02.gif
+      frame	data/chars/yungmie/ffall02.gif
+      frame	data/chars/yungmie/ffall02.gif
+      move -3
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      offset	95 175
+      frame	data/chars/yungmie/ffall05.gif
+      frame	data/chars/yungmie/ffall05.gif
+      frame	data/chars/yungmie/ffall05.gif
+      frame	data/chars/yungmie/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      move -3
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      move 0
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      move 0
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      frame	data/chars/yungmie/dsla1.gif
+	frame	data/chars/yungmie/dsla2.gif
+	frame	data/chars/yungmie/dsla3.gif
+      frame	data/chars/yungmie/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/yungmie/sla3.gif
+      offset	125 120
+      frame	data/chars/yungmie/sla2.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain4.gif
+      offset	83 140
+      frame	data/chars/yungmie/sla1.gif
+      frame	data/chars/yungmie/sla2.gif
+      frame	data/chars/yungmie/rjsla3.gif
+      offset	75 150
+      frame	data/chars/yungmie/rjsla4.gif
+      frame	data/chars/yungmie/rjsla5.gif
+      offset	95 170
+      frame	data/chars/yungmie/fall01.gif
+      frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/rj0.gif
+      offset	106 170
+      frame	data/chars/yungmie/rj00.gif
+      offset	111 166
+      frame	data/chars/yungmie/gsla2.gif
+      offset	104 173
+      frame	data/chars/yungmie/gfall04.gif
+      frame	data/chars/yungmie/gfall05.gif
+      offset	124 178
+      frame	data/chars/yungmie/pain41.gif
+      offset	124 166
+      frame	data/chars/yungmie/dsla22.gif
+      offset	124 170
+	frame	data/chars/yungmie/dsla33.gif
+      offset	75 150
+      frame	data/chars/yungmie/rjsla7.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain2.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/yungmie/sla1.gif
+      offset	112 145
+	frame	data/chars/yungmie/sla2.gif
+      offset	90 145
+	frame	data/chars/yungmie/sla3.gif
+      frame	data/chars/yungmie/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/yungmie/fall04.gif
+      offset	85 145
+      frame	data/chars/yungmie/sla1.gif
+      frame	data/chars/yungmie/sla1.gif
+      offset	98 138
+      frame	data/chars/yungmie/ssla3.gif
+      frame	data/chars/yungmie/rjsla3.gif
+      frame	data/chars/yungmie/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/yungmie/rjsla4.gif
+      frame	data/chars/yungmie/rjsla5.gif
+      frame	data/chars/yungmie/rjsla6.gif
+      frame	data/chars/yungmie/sla1.gif
+      frame	data/chars/yungmie/sla1.gif
+      frame	data/chars/yungmie/ssla3.gif
+      frame	data/chars/yungmie/sla2.gif
+      offset	123 170
+      frame	data/chars/yungmie/sla3.gif
+      offset	98 138
+      frame	data/chars/yungmie/hsla1.gif
+      frame	data/chars/yungmie/hsla2.gif
+      frame	data/chars/yungmie/hsla3.gif
+      frame	data/chars/yungmie/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/yungmie/hsla2.gif
+      frame	data/chars/yungmie/hsla4.gif
+      frame	data/chars/yungmie/rj1.gif
+      frame	data/chars/yungmie/gsla3.gif
+      frame	data/chars/yungmie/rj3.gif
+      frame	data/chars/yungmie/hsla4.gif
+      offset	98 148
+      frame	data/chars/yungmie/hsla4.gif
+      offset	120 170
+      frame	data/chars/yungmie/pain41.gif
+      frame	data/chars/yungmie/pain21.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain4.gif
+      offset	122 170
+      frame	data/chars/yungmie/pain41.gif
+      frame	data/chars/yungmie/pain55.gif
+      offset	100 140
+      frame	data/chars/yungmie/fall066.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain5.gif
+      offset	105 85
+      frame	data/chars/yungmie/dsla3.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain4.gif
+      frame	data/chars/yungmie/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/yungmie/gsla1.gif
+      offset	112 145
+	frame	data/chars/yungmie/gsla2.gif
+      offset	90 145
+	frame	data/chars/yungmie/gsla3.gif
+      frame	data/chars/yungmie/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/yungmie/gsla6.gif
+      offset	115 170
+      frame	data/chars/yungmie/dsla1.gif
+      offset	115 145
+	frame	data/chars/yungmie/gsla3.gif
+      offset	75 170
+      frame	data/chars/yungmie/pain4.gif
+      offset	105 170
+      frame	data/chars/yungmie/gfall04.gif
+      offset	75 148
+      frame	data/chars/yungmie/rjsla4.gif
+      frame	data/chars/yungmie/rjsla5.gif
+      offset	95 170
+      frame	data/chars/yungmie/fall04.gif
+      offset	75 143
+      frame	data/chars/yungmie/hsla2.gif
+      frame	data/chars/yungmie/hsla4.gif
+      offset	124 170
+      frame	data/chars/yungmie/pain4.gif
+      offset	95 170
+      frame	data/chars/yungmie/fall01.gif
+      frame	data/chars/yungmie/fall02.gif
+      frame	data/chars/yungmie/fall03.gif
+      frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall05.gif
+      offset	104 170
+      frame	data/chars/yungmie/gsla2.gif
+      frame	data/chars/yungmie/gsla3.gif
+      frame	data/chars/yungmie/gsla4.gif
+      frame	data/chars/yungmie/gfall04.gif
+      frame	data/chars/yungmie/gfall05.gif
+      offset	75 165
+      frame	data/chars/yungmie/pain5.gif
+      frame	data/chars/yungmie/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/yungmie/fall03.gif
+      frame	data/chars/yungmie/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/yungmie/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/yungmie/fall03.gif
+      frame	data/chars/yungmie/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/yungmie/fall04.gif
+      delay   2
+	frame	data/chars/yungmie/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity 0
+      frame	data/chars/yungmie/sla3.gif
+      frame	data/chars/yungmie/sla3.gif
+      delay   10
+      offset	98 138
+      bbox	55 78 80 57
+      frame	data/chars/yungmie/fall02.gif
+      frame	data/chars/yungmie/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/yungmie/fall03.gif
+      delay   500
+      frame	data/chars/yungmie/fall03.gif
+      offset	95 170
+      delay   8
+      bbox	25 145 100 30
+      frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+
+anim fall10
+      loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+      frame	data/chars/yungmie/fall01.gif
+	frame	data/chars/yungmie/fall01.gif
+	frame	data/chars/yungmie/fall02.gif
+	frame	data/chars/yungmie/fall02.gif
+      delay   20
+	frame	data/chars/yungmie/fall03.gif
+      delay   40
+	frame	data/chars/yungmie/fall03.gif
+      delay   8
+	frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 170
+      bbox	25 145 100 30
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/yungmie/fall04.gif
+	frame	data/chars/yungmie/fall05.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/yungmie/fall08.gif
+	frame	data/chars/yungmie/fall08.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/yungmie/fall09.gif
+	frame	data/chars/yungmie/fall09.gif
+      delay   20
+	frame	data/chars/yungmie/fall09.gif
+      delay   40
+	frame	data/chars/yungmie/fall09.gif
+      delay   8
+      @cmd    degravity 0
+	frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity 0
+      frame	data/chars/yungmie/fall01.gif
+	frame	data/chars/yungmie/fall01.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/yungmie/fall02.gif
+	frame	data/chars/yungmie/fall02.gif
+      delay   20
+	frame	data/chars/yungmie/fall03.gif
+      delay   40
+	frame	data/chars/yungmie/fall03.gif
+      delay   8
+	frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+
+anim fall16
+	loop	0
+      delay   4
+	offset	75 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+	frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+	frame	data/chars/yungmie/pain6.gif
+      frame	data/chars/yungmie/shock1.gif
+      frame	data/chars/yungmie/pain6.gif
+      delay   40
+	frame	data/chars/yungmie/shock1.gif
+      offset	95 170
+      delay   8
+	frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+
+anim burn
+	loop	0
+      delay   7
+	offset	95 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    degravity 0
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/yungmie/burn01.gif
+	frame	data/chars/yungmie/burn1.gif
+      frame	data/chars/yungmie/burn01.gif
+	frame	data/chars/yungmie/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/yungmie/burn02.gif
+	frame	data/chars/yungmie/burn2.gif
+      frame	data/chars/yungmie/burn02.gif
+	frame	data/chars/yungmie/burn2.gif
+	frame	data/chars/yungmie/burn03.gif
+	frame	data/chars/yungmie/burn3.gif
+      frame	data/chars/yungmie/burn03.gif
+      frame	data/chars/yungmie/burn3.gif
+	frame	data/chars/yungmie/burn03.gif
+      frame	data/chars/yungmie/burn3.gif
+      delay   40
+	frame	data/chars/yungmie/burn03.gif
+      delay   7
+      bbox	25 145 100 30
+	frame	data/chars/yungmie/burn4.gif
+      frame	data/chars/yungmie/burn04.gif
+      frame	data/chars/yungmie/burn4.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/yungmie/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 170
+      bbox	25 145 100 30
+      frame	data/chars/yungmie/fall05.gif
+
+anim rise
+	loop	0
+      delay   8
+	offset	95 170
+      frame	data/chars/yungmie/fall05.gif
+	delay	7
+      frame	data/chars/yungmie/rise0.gif
+	frame	data/chars/yungmie/rise1.gif
+	frame	data/chars/yungmie/rise2.gif
+	frame	data/chars/yungmie/rise3.gif
+	frame	data/chars/yungmie/rise4.gif
+      frame	data/chars/yungmie/rise5.gif
+	
+anim attack1
+	loop	0
+      range	180 220
+      delay   12
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 1 4.5 2.5 0 dus
+      landframe 14 dus
+      frame	data/chars/yungmie/jl1.gif
+      delay   5
+      frame	data/chars/yungmie/j1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/yungmie/j1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf4.gif
+      @cmd    riseattack2 125 20 "ANI_FOLLOW3"
+      frame	data/chars/yungmie/jf5.gif
+      frame	data/chars/yungmie/jf5.gif
+      delay   40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim follow3
+      loop	0
+	delay	5
+      offset	75 170
+      bbox	55 78 47 75
+      followcond 1
+      followanim 4
+      jumpframe 0 0 2.5
+      landframe 7 dus
+      hitfx   data/sounds/beat2.wav
+      @cmd    degravity -0.27
+      frame	data/chars/yungmie/jf5.gif
+      sound	data/chars/yungmie/at4.wav
+      frame	data/chars/yungmie/ja1.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/yungmie/ja1.gif
+      attack  75 115 30 27 5 0 0 0 40
+      nokill 1
+      frame	data/chars/yungmie/ja2.gif
+      frame	data/chars/yungmie/ja2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/yungmie/ja1.gif
+      delay	40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim follow4
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 60);
+    }
+@end_script
+      loop	0
+	delay	8
+      offset	75 170
+      jumpframe 3 4.5 2.5 
+      landframe 16 dus
+      hitfx   data/sounds/beat2.wav
+      @cmd    degravity -0.27
+      frame	data/chars/yungmie/ja2.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/yungmie/ja1.gif
+      attack  75 115 40 27 5 1 0 0 30
+      nokill 0
+      frame	data/chars/yungmie/ja3.gif
+      attack  0 0 0 0 0 0
+      delay   5
+      frame	data/chars/yungmie/j1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/yungmie/j1.gif
+      bbox	55 78 47 75
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf5.gif
+      frame	data/chars/yungmie/jf5.gif
+      delay   40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim attack2
+	loop	0
+      range	160 210
+      rangez 15 50
+      delay   12
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 1 4.5 2.5 0.7 dus
+      landframe 14 dus
+      frame	data/chars/yungmie/jl1.gif
+      delay   5
+      frame	data/chars/yungmie/j1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/yungmie/j1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf4.gif
+      @cmd    riseattack2 125 20 "ANI_FOLLOW5"
+      frame	data/chars/yungmie/jf5.gif
+      frame	data/chars/yungmie/jf5.gif
+      delay   40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim follow5
+      loop	0
+	delay	5
+      offset	75 170
+      bbox	55 78 47 75
+      followcond 1
+      followanim 4
+      jumpframe 0 0 2.5 0.7
+      landframe 7 dus
+      hitfx   data/sounds/beat2.wav
+      @cmd    degravity -0.27
+      frame	data/chars/yungmie/jf5.gif
+      sound	data/chars/yungmie/at4.wav
+      frame	data/chars/yungmie/ja1.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/yungmie/ja1.gif
+      attack  75 115 30 27 5 0 0 0 40
+      nokill 1
+      frame	data/chars/yungmie/ja2.gif
+      frame	data/chars/yungmie/ja2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/yungmie/ja1.gif
+      delay	40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim attack3
+	loop	0
+      range	160 210
+      rangez -50 -15
+      delay   12
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 1 4.5 2.5 -0.7 dus
+      landframe 14 dus
+      frame	data/chars/yungmie/jl1.gif
+      delay   5
+      frame	data/chars/yungmie/j1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/yungmie/j1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf4.gif
+      @cmd    riseattack2 125 20 "ANI_FOLLOW6"
+      frame	data/chars/yungmie/jf5.gif
+      frame	data/chars/yungmie/jf5.gif
+      delay   40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim follow6
+      loop	0
+	delay	5
+      offset	75 170
+      bbox	55 78 47 75
+      followcond 1
+      followanim 4
+      jumpframe 0 0 2.5 -0.7
+      landframe 7 dus
+      hitfx   data/sounds/beat2.wav
+      @cmd    degravity -0.27
+      frame	data/chars/yungmie/jf5.gif
+      sound	data/chars/yungmie/at4.wav
+      frame	data/chars/yungmie/ja1.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/yungmie/ja1.gif
+      attack  75 115 30 27 5 0 0 0 40
+      nokill 1
+      frame	data/chars/yungmie/ja2.gif
+      frame	data/chars/yungmie/ja2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/yungmie/ja1.gif
+      delay	40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim attack4
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+      if( r > 11){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
+      }
+    }
+@end_script
+	loop	0
+      range	30 90
+      delay   7
+      offset	75 170
+      bbox	55 78 47 75
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/yungmie/at3.wav
+      frame	data/chars/yungmie/aaa1.gif
+      frame	data/chars/yungmie/aaa2.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/yungmie/aaa3.gif
+      frame	data/chars/yungmie/aaa4.gif
+      frame	data/chars/yungmie/aaa5.gif
+      frame	data/chars/yungmie/aaa6.gif
+      sound	data/chars/yungmie/at2.wav
+      frame	data/chars/yungmie/aaa6.gif
+      frame	data/chars/yungmie/aaa7.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/yungmie/aaa8.gif
+      delay  3.5
+      frame	data/chars/yungmie/aaa9.gif
+      attack  85 60 55 60 10 1 0 0 20
+      dropv 3 1
+      frame	data/chars/yungmie/aaa10.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/yungmie/aaa11.gif
+      frame	data/chars/yungmie/aaa12.gif
+      delay   11
+      frame	data/chars/yungmie/aaa13.gif
+
+anim follow7
+      loop	0
+      delay   8
+      offset	75 170
+      bbox	55 78 47 75
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/yungmie/a1.gif
+      frame	data/chars/yungmie/a2.gif
+      sound	data/chars/yungmie/at1.wav
+      frame	data/chars/yungmie/a3.gif
+      attack  85 60 55 60 10 1 0 0 20
+      dropv 5 1
+      frame	data/chars/yungmie/a4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/yungmie/a5.gif
+      frame	data/chars/yungmie/a6.gif
+      frame	data/chars/yungmie/a7.gif
+
+anim follow9
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+      }
+    }
+@end_script
+      loop	0
+      delay   12
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 1 4.5 2.5 0.7 dus
+      landframe 14 dus
+      frame	data/chars/yungmie/jl1.gif
+      delay   5
+      frame	data/chars/yungmie/j1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/yungmie/j1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf4.gif
+      @cmd    riseattack2 125 20 "ANI_FOLLOW5"
+      frame	data/chars/yungmie/jf5.gif
+      frame	data/chars/yungmie/jf5.gif
+      delay   40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim follow10
+      loop	0
+      delay   12
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 1 4.5 2.5 -0.7 dus
+      landframe 14 dus
+      frame	data/chars/yungmie/jl1.gif
+      delay   5
+      frame	data/chars/yungmie/j1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/yungmie/j1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf1.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf2.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf3.gif
+      frame	data/chars/yungmie/jf4.gif
+      frame	data/chars/yungmie/jf4.gif
+      @cmd    riseattack2 125 20 "ANI_FOLLOW6"
+      frame	data/chars/yungmie/jf5.gif
+      frame	data/chars/yungmie/jf5.gif
+      delay   40
+      frame	data/chars/yungmie/j7.gif
+      delay   9
+      sound	data/sounds/step.wav
+      frame	data/chars/yungmie/jl1.gif
+      frame	data/chars/yungmie/jl2.gif
+      frame	data/chars/yungmie/jl1.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/yungmie/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   20
+	offset	95 170
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/yungmie/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+	offset	95 155
+      move -5
+      sound	data/sounds/fall.wav
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall02.gif
+      frame	data/chars/yungmie/ffall02.gif
+      frame	data/chars/yungmie/ffall02.gif
+      move -4
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall02.gif
+      frame	data/chars/yungmie/ffall02.gif
+      frame	data/chars/yungmie/ffall02.gif
+      move -3
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall03.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall04.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      frame	data/chars/yungmie/ffall01.gif
+      offset	95 175
+      frame	data/chars/yungmie/ffall05.gif
+      frame	data/chars/yungmie/ffall05.gif
+      frame	data/chars/yungmie/ffall05.gif
+      frame	data/chars/yungmie/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      frame	data/chars/yungmie/fall04.gif
+      move -3
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      move 0
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      move 0
+      frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+      move 0
+      delay   40
+	frame	data/chars/yungmie/fall05.gif
+      frame	data/chars/yungmie/fall05.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/yungmie/fall05.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/yungmie/fall05.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/yungmie/fall05.gif
+
+
+

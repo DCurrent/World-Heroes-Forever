@@ -1,0 +1,20 @@
+name		ba
+speed		6
+type		panel
+facing		1
+setlayer	-10
+
+
+anim idle
+      loop 1
+	delay	15
+	offset	2 285
+	frame	data/levels/guinea2/ba01.gif
+      frame	data/levels/guinea2/ba02.gif
+      frame	data/levels/guinea2/ba03.gif
+      frame	data/levels/guinea2/ba04.gif
+      
+
+
+
+

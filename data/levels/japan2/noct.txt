@@ -1,0 +1,18 @@
+name	 noct
+type	 endlevel
+shadow	 0
+grabdistance	70
+subject_to_obstacle 0
+subject_to_platform 0
+branch bran
+
+anim idle
+	loop	1
+	delay	40
+	offset	27 130
+      bbox	50 95 59 70 70
+	frame   data/levels/japan2/ar.gif
+      
+
+
+

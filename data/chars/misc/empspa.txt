@@ -1,0 +1,31 @@
+name    empspa
+type	none
+facing 1
+
+load	empspa1
+load	ssassin2
+
+anim spawn
+	loop	0
+	delay	7242
+	offset	1 195
+      subentity empspa1
+      spawnframe 1 0 0 0 0
+	frame	data/chars/misc/empspa.gif
+      delay	2
+      frame	data/chars/misc/empspa.gif
+      frame	data/chars/misc/empspa.gif
+
+anim idle
+	loop	0
+	delay	2
+	offset	1 195
+      subentity ssassin2
+      spawnframe 1 170 0 0 0
+	frame	data/chars/misc/empspa.gif
+      frame	data/chars/misc/empspa.gif
+      frame	data/chars/misc/empspa.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/misc/empspa.gif
+      frame	data/chars/misc/empspa.gif
+

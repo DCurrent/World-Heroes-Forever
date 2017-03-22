@@ -1,0 +1,24 @@
+name	surf
+health   0
+type	item
+subtype weapon
+counter 999
+weapnum 1
+nolife 1
+shadow 0    
+
+anim idle
+	loop	0
+	delay	2
+	offset	48 53
+      frame	data/chars/misc/empty.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/misc/empty.gif
+
+
+
+      
+
+
+
+

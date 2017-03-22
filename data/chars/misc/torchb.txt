@@ -1,0 +1,17 @@
+name    torchb
+health  1
+type	none
+subtype noskip
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   13
+	offset	269 260
+        frame   data/chars/misc/torchb01.gif
+        frame   data/chars/misc/torchb02.gif
+        frame   data/chars/misc/torchb03.gif
+        frame   data/chars/misc/torchb04.gif
+
+
+

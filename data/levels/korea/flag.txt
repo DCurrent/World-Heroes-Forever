@@ -1,0 +1,16 @@
+name    flag
+type	none
+facing 1
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   12
+	  offset	37 170
+        frame   data/levels/Korea/flag01.gif
+        frame   data/levels/Korea/flag02.gif
+        frame   data/levels/Korea/flag03.gif
+        frame   data/levels/Korea/flag04.gif
+
+
+

@@ -1,0 +1,16 @@
+name    peo
+type	none
+facing 1
+
+anim idle
+	loop	1
+        delay   12
+	  offset	81 170
+        frame   data/levels/guinea2/peo01.gif
+        frame   data/levels/guinea2/peo02.gif
+        frame   data/levels/guinea2/peo03.gif
+        frame   data/levels/guinea2/peo04.gif
+
+
+
+

@@ -1,0 +1,2 @@
+animation	data/scenes/blank.gif 0 0 1 0
+

@@ -1,0 +1,25 @@
+name	ffla
+type	none
+shadow	0
+toflip 1
+
+anim idle
+	loop	0
+	delay	3
+	offset	105 132
+	frame	data/chars/misc/ffla01.gif
+	frame	data/chars/misc/ffla02.gif
+	frame	data/chars/misc/ffla03.gif
+	frame	data/chars/misc/ffla04.gif
+	frame	data/chars/misc/ffla05.gif
+	frame	data/chars/misc/ffla06.gif
+	frame	data/chars/misc/ffla07.gif
+	frame	data/chars/misc/ffla08.gif
+      frame	data/chars/misc/ffla09.gif
+	frame	data/chars/misc/ffla10.gif
+	frame	data/chars/misc/ffla11.gif
+	frame	data/chars/misc/ffla12.gif
+
+
+
+

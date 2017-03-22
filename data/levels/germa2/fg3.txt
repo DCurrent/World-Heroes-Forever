@@ -1,0 +1,12 @@
+name    fg3
+type	none
+facing 1
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   12
+	  offset	10 98
+        frame   data/levels/germa2/fg2.gif
+
+

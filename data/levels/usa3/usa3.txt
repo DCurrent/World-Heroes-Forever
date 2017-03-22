@@ -1,0 +1,135 @@
+music		data/music/usa3.bor
+background	data/levels/usa3/back2.gif
+panel	      data/levels/usa3/n05.gif
+order           a
+direction both
+
+spawn1 110 20 
+spawn2 120 40
+
+#----------pickups
+
+spawn	fly
+coords	650 170
+at	0
+
+spawn	lamp2
+coords	93 184
+at	0
+
+spawn	lamp
+flip 1
+coords	401 184
+at	0
+
+spawn	bar
+flip 1
+item  menuu
+coords	420 247
+at	0
+
+Group	2 3
+at	0
+
+spawn   delay
+health   20
+coords   160 200
+at   0
+
+spawn   delay
+health   20
+coords   161 200
+at   0
+
+spawn   delay
+health   20
+coords   162 200
+at   0
+
+spawn   delay
+health   20
+coords   163 200
+at   0
+
+
+spawn	mpowere
+boss 1
+coords	320 215 130
+at	0
+
+spawn   delay
+health   60
+coords   164 200
+at   0
+
+spawn   delay
+health   60
+coords   165 200
+at   0
+
+spawn	ray
+Health 100
+map 1
+flip 1
+coords	-100 210
+at	0
+
+spawn	matlock
+map 2
+Health 100
+coords	380 200
+at	0
+
+spawn	matlock2
+map 6
+Health 100
+flip 1
+coords	-100 230
+at	0
+
+spawn	lee2
+map 2
+item  ring
+Health 100
+coords	420 220
+at	0
+
+spawn	ray
+map 1
+Health 100
+coords	-100  230
+at	0
+
+spawn	lee2
+map 1
+Health 100
+flip 1
+coords	400  210
+at	0
+
+spawn	matlock
+Health 100
+item  time
+flip 1
+coords	-120 230
+at	0
+
+spawn	ray2
+map 3
+item  milk
+Health 100
+coords	400 200
+at	0
+
+spawn	ray2
+Health 100
+flip 1
+coords	-100 220
+at	0
+
+spawn	lee
+map 4
+Health 100
+coords	400 210
+at	0
+

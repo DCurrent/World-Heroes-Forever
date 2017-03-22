@@ -1,0 +1,51 @@
+name	kshifl
+type	none
+shadow	0
+lifespan 4
+
+anim idle
+	loop	0
+	delay	2
+	offset	42 188
+      quakeframe 1 3 4
+	frame	data/chars/misc/kshifl1.gif
+      frame	data/chars/misc/kshifl1.gif
+      frame	data/chars/misc/kshifl1.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kshifl1.gif
+      frame	data/chars/misc/kshifl2.gif
+      frame	data/chars/misc/kshifl2.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kshifl2.gif
+      frame	data/chars/misc/kshifl2.gif
+      frame	data/chars/misc/kshifl3.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kshifl3.gif
+      frame	data/chars/misc/kshifl3.gif
+      frame	data/chars/misc/kshifl3.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kshifl4.gif
+      frame	data/chars/misc/kshifl4.gif
+      frame	data/chars/misc/kshifl4.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kshifl4.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/kshifl5.gif
+      frame	data/chars/misc/empty.gif
+      
+
+
+
+

@@ -1,0 +1,195 @@
+name	jca
+health	10
+speed	0
+type	npc
+shadow  0
+grabdistance	55
+antigravity -27
+gfxshadow  1
+nomove 1 1
+cantgrab 1
+facing 1
+diesound	data/chars/jcarn/die.wav
+projectilehit enemy obstacle
+icon	data/chars/jcarn/icon2.gif
+hostile enemy 
+candamage player obstacle
+
+
+anim spawn
+	loop	0
+      delay	12
+      quakeframe 4 5 7
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      offset	75 170
+      frame	data/chars/jcarn/idle.gif
+      delay   9
+      offset	109 181
+      sound	data/chars/jcarn/at5.wav
+      frame	data/chars/jcarn/sp0.gif
+      frame	data/chars/jcarn/sp1.gif
+      frame	data/chars/jcarn/sp2.gif
+      sound	data/sounds/beat3.wav
+      frame	data/chars/jcarn/sp3.gif
+      delay   4
+      frame	data/chars/jcarn/sp4.gif
+      sound	data/sounds/indirect.wav
+      frame	data/chars/jcarn/sp5.gif
+      burn  55 100 105 60 20 1 1
+      dropv 3 2
+      frame	data/chars/jcarn/sp6.gif
+      frame	data/chars/jcarn/sp7.gif
+      sound	data/sounds/indirect.wav
+      frame	data/chars/jcarn/sp8.gif
+      frame	data/chars/jcarn/sp9.gif
+      frame	data/chars/jcarn/sp10.gif
+      frame	data/chars/jcarn/sp11.gif
+      burn  0 0 0 0 0 0
+      frame	data/chars/jcarn/sp12.gif
+      offset	75 170
+      delay   9
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+      delay	6
+      frame	data/chars/jcarn/idle.gif
+	delay	4
+	offset	75 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	74 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	76 170
+      frame	data/chars/jcarn/pain2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+      delay	14
+      frame	data/chars/jcarn/idle.gif
+      delay	4
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	74 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	76 170
+      frame	data/chars/jcarn/pain2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+      delay	14
+      frame	data/chars/jcarn/idle.gif
+      delay	8
+      sound	data/chars/jcarn/at3.wav
+      frame	data/chars/jcarn/a1.gif
+      frame	data/chars/jcarn/a2.gif
+      sound	data/sounds/air3.wav
+      delay	9
+      frame	data/chars/jcarn/a3.gif
+      frame	data/chars/jcarn/a4.gif
+      frame	data/chars/jcarn/a5.gif
+      delay	8
+      frame	data/chars/jcarn/a0.gif
+      delay	3
+      frame	data/chars/jcarn/idle.gif
+	delay	4
+	offset	75 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	74 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	76 170
+      frame	data/chars/jcarn/pain2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+      delay	14
+      frame	data/chars/jcarn/idle.gif
+      delay	4
+	offset	75 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+      bbox	49 80 50 70
+	frame	data/chars/jcarn/pain2.gif
+      sound	data/chars/jcarn/pain.wav
+      offset	74 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	76 170
+      frame	data/chars/jcarn/pain2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+      delay	45
+      frame	data/chars/jcarn/pain4.gif
+      frame	data/chars/jcarn/pain4.gif
+
+anim idle
+	loop	1
+	delay	14
+      offset	75 170
+      bbox	55 78 47 80
+      frame	data/chars/jcarn/idle.gif
+      frame	data/chars/jcarn/idle1.gif
+      frame	data/chars/jcarn/idle2.gif
+      frame	data/chars/jcarn/idle1.gif
+
+anim walk
+	loop	1
+      delay   12
+	offset	75 170
+	frame	data/chars/jcarn/w1.gif
+	frame	data/chars/jcarn/w2.gif
+	frame	data/chars/jcarn/w3.gif
+	frame	data/chars/jcarn/w4.gif
+	frame	data/chars/jcarn/w5.gif
+      frame	data/chars/jcarn/w6.gif
+
+anim pain
+	loop	0
+	delay	4
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	74 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	76 170
+      frame	data/chars/jcarn/pain2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      frame	data/chars/jcarn/fall01.gif
+	frame	data/chars/jcarn/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+	frame	data/chars/jcarn/fall02.gif
+	frame	data/chars/jcarn/fall02.gif
+      delay   20
+      bbox	45 90 85 45
+	frame	data/chars/jcarn/fall03.gif
+      delay   40
+	frame	data/chars/jcarn/fall03.gif
+      delay   8
+      bbox	55 140 45 30
+	frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      delay   60
+	frame	data/chars/jcarn/fall05.gif
+
+anim rise
+	loop	0
+      offset	95 170
+	delay	8
+	frame	data/chars/jcarn/rise1.gif
+	frame	data/chars/jcarn/rise2.gif
+      offset	75 170
+	frame	data/chars/jcarn/rise3.gif
+	frame	data/chars/jcarn/jl1.gif
+
+
+
+

@@ -1,0 +1,17 @@
+name	blo
+type	none
+shadow	0
+toflip 1
+
+anim idle
+	loop	0
+	delay	4
+	offset	105 132
+	frame	data/chars/misc/blo1.gif
+	frame	data/chars/misc/blo2.gif
+	frame	data/chars/misc/blo3.gif
+	frame	data/chars/misc/blo4.gif
+	frame	data/chars/misc/blo5.gif
+	
+	
+

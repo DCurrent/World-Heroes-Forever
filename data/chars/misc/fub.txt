@@ -1,0 +1,39 @@
+name	 fub
+health   0
+speed    23
+type     pshot
+counter  9999
+shootnum 9999
+nolife   1
+remove   1
+candamage enemy obstacle pshot
+gfxshadow	1
+
+anim idle
+	loop	0
+	delay	3
+	offset	51 70
+      hitfx  data/sounds/beat3.wav
+      hitflash  fbfla
+      attack12  60 55 30 40 10 0 0 0 12
+	frame	data/chars/misc/fub01.gif
+	frame	data/chars/misc/fub02.gif
+	frame	data/chars/misc/fub03.gif
+	frame	data/chars/misc/fub04.gif
+      frame	data/chars/misc/fub05.gif
+	frame	data/chars/misc/fub06.gif
+      frame	data/chars/misc/fub07.gif
+	frame	data/chars/misc/fub08.gif
+	frame	data/chars/misc/fub09.gif
+	frame	data/chars/misc/fub10.gif
+      frame	data/chars/misc/fub07.gif
+	frame	data/chars/misc/fub08.gif
+	frame	data/chars/misc/fub09.gif
+	frame	data/chars/misc/fub10.gif
+      frame	data/chars/misc/fub07.gif
+	frame	data/chars/misc/fub08.gif
+	frame	data/chars/misc/fub09.gif
+	frame	data/chars/misc/fub10.gif
+      
+
+

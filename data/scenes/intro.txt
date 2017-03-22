@@ -1,0 +1,7 @@
+music           data/music/intr4.bor
+animation	data/scenes/pro111.gif 0 0 1 0
+music           data/music/intr5.bor
+animation	data/scenes/part3.gif 0 0 1 0
+animation	data/scenes/part4.gif 0 0 1 0
+animation	data/scenes/int.gif 0 0 1 0
+

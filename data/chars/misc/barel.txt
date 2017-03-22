@@ -1,0 +1,35 @@
+name	barel
+type    obstacle
+cantgrab 1
+shadow  0
+gfxshadow  1
+health  14
+diesound  data/sounds/barel.wav
+nolife  1
+flash   obfla
+noatflash 1
+offscreenkill  2000
+
+
+anim idle
+	loop	0
+	delay	5
+	offset	101 169
+	bbox    85 102 56 67
+      drawmethod 256 296 0 0 0 0 0
+      platform   70 171 0 0 63 63 9 69
+	frame	data/chars/misc/barel1.gif
+
+	
+anim fall
+	loop	0
+	delay	5
+	offset	101 169
+      drawmethod 256 296 0 0 0 0 0
+	frame	data/chars/misc/barel2.gif
+      frame	data/chars/misc/barel4.gif
+
+
+
+
+

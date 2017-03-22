@@ -1,0 +1,2168 @@
+name	gokuu
+health	120
+speed	14
+type	player
+shadow  0
+gfxshadow  1
+throw         5 4.2
+grabdistance	50
+running 30	5.3	2	1	0
+icon	data/chars/gokuu/icon.gif
+jumpheight 5.5
+jumpspeed 15
+antigravity -27
+blockpain 1
+holdblock 1
+makeinv  0
+atchain       1 2 3 4
+com	A2	freespecial
+com	D F A freespecial2
+com	D F A2 freespecial3
+com	D B A freespecial20
+com	D B A2 freespecial23
+diesound	data/chars/gokuu/die.wav
+bflash bflash
+dust du dus dus 
+projectilehit   obstacle
+hostile enemy 
+candamage enemy obstacle
+subject_to_wall 0
+secret  0 2
+
+weapons     gokuu1 gokuu
+
+load bine
+load coul
+load could
+load surf1
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/gokuu/idle.gif
+alternatepal data/chars/gokuu/map1.gif
+alternatepal data/chars/gokuu/map2.gif
+
+anim spawn
+	loop	0
+      delay	2
+      offset	70 170
+      frame	data/chars/gokuu/idle1.gif
+
+anim respawn
+	loop	0
+      delay	3
+      offset	134 280
+      jumpframe 15 6 2 0 dus
+      landframe 40 du
+      shadowcoords 999 999
+      frame	data/chars/gokuu/spawn1.gif
+      offset	132 278
+      frame	data/chars/gokuu/spawn2.gif
+      offset	130 276
+      frame	data/chars/gokuu/spawn3.gif
+      offset      128 274
+      frame	data/chars/gokuu/spawn4.gif
+      offset	126 272
+      frame	data/chars/gokuu/spawn5.gif
+      offset	124 270
+      frame	data/chars/gokuu/spawn6.gif
+      offset	122 268
+      frame	data/chars/gokuu/spawn6.gif
+      offset	120 266
+      frame	data/chars/gokuu/spawn6.gif
+      offset	118 264
+      frame	data/chars/gokuu/spawn7.gif
+      offset	116 262
+      frame	data/chars/gokuu/spawn8.gif
+      offset	114 260
+      frame	data/chars/gokuu/spawn9.gif
+      offset	112 258
+      frame	data/chars/gokuu/spawn10.gif
+      offset	110 256
+      frame	data/chars/gokuu/spawn11.gif
+      offset	108 254
+      frame	data/chars/gokuu/spawn12.gif
+      offset	106 252
+      frame	data/chars/gokuu/spawn13.gif
+      offset	104 250
+      delay	2.5
+      frame	data/chars/gokuu/spawn14.gif
+      frame	data/chars/gokuu/spawn14.gif
+      frame	data/chars/gokuu/spawn14.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      @cmd    degravity 1
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      frame	data/chars/gokuu/spawn15.gif
+      delay	4
+      offset	70 170
+      @cmd    stop
+      @cmd    degravity -1
+      frame	data/chars/gokuu/j5.gif
+      sound	data/sounds/jump.wav
+      frame	data/chars/gokuu/j5.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j3.gif
+      delay	80
+      frame	data/chars/gokuu/j2.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/j1.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim waiting
+      loop	1
+	delay	11
+	offset	0 0
+      frame	data/chars/gokuu/waii1.gif
+      frame	data/chars/gokuu/waii2.gif
+      frame	data/chars/gokuu/waii3.gif
+      delay	14
+      frame	data/chars/gokuu/waii4.gif
+      delay	11
+      frame	data/chars/gokuu/waii3.gif
+      frame	data/chars/gokuu/waii2.gif
+
+anim SELECT
+	loop	0
+      delay	10
+	offset	0 0
+      sound	data/chars/gokuu/gokuu.wav
+      frame	data/chars/gokuu/wai1.gif
+      frame	data/chars/gokuu/wai1.gif
+      frame	data/chars/gokuu/wai1.gif
+      frame	data/chars/gokuu/wai1.gif
+      delay	9
+      frame	data/chars/gokuu/wai2.gif
+      sound	data/chars/gokuu/select.wav
+      frame	data/chars/gokuu/wai3.gif
+      frame	data/chars/gokuu/wai4.gif
+      delay	8
+      frame	data/chars/gokuu/wai5.gif
+      frame	data/chars/gokuu/wai5.gif
+      frame	data/chars/gokuu/wai6.gif
+      frame	data/chars/gokuu/wai7.gif
+      frame	data/chars/gokuu/wai7.gif
+      frame	data/chars/gokuu/wai7.gif
+      frame	data/chars/gokuu/wai7.gif
+
+anim idle
+	loop	1
+	delay	11
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd    clearL
+      frame	data/chars/gokuu/idle.gif
+      frame	data/chars/gokuu/idle1.gif
+      frame	data/chars/gokuu/idle2.gif
+      delay	14
+      frame	data/chars/gokuu/idle3.gif
+      delay	11
+      frame	data/chars/gokuu/idle2.gif
+      frame	data/chars/gokuu/idle1.gif
+
+anim turn
+      loop	0
+	delay	1
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/idle1.gif
+
+anim get
+      loop	0
+	delay	3
+      offset	70 170
+      frame	data/chars/gokuu/j1.gif
+      frame	data/chars/gokuu/aaaa0.gif
+      frame	data/chars/gokuu/get4.gif
+      delay	12
+      frame	data/chars/gokuu/get4.gif
+      delay	4
+      frame	data/chars/gokuu/aaaa0.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim walk
+	loop	1
+      delay   8
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/gokuu/w1.gif
+	frame	data/chars/gokuu/w2.gif
+	frame	data/chars/gokuu/w3.gif
+	frame	data/chars/gokuu/w4.gif
+	frame	data/chars/gokuu/w5.gif
+	frame	data/chars/gokuu/w6.gif
+
+anim run
+	loop	1
+      delay	8
+      offset	70 170
+	bbox	50 78 47 80
+      #include "data/scripts/run0001.h"
+      cancel 0 11 0 A2 freespecial7
+      frame	data/chars/gokuu/ru6.gif
+	frame	data/chars/gokuu/ru1.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/gokuu/ru2.gif
+	frame	data/chars/gokuu/ru3.gif
+      frame	data/chars/gokuu/ru4.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/gokuu/ru5.gif
+	frame	data/chars/gokuu/ru6.gif
+	frame	data/chars/gokuu/ru1.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/gokuu/ru2.gif
+	frame	data/chars/gokuu/ru3.gif
+	frame	data/chars/gokuu/ru4.gif
+      sound	data/sounds/step.wav
+      @cmd run0001
+	frame	data/chars/gokuu/ru5.gif
+
+anim ATTACKUP
+	loop	0
+      delay	2
+      offset	70 170
+      bbox	55 105 40 60
+      cancel 0 17 0 A2 freespecial9
+      cancel 0 17 0 A freespecial10
+      frame	data/chars/gokuu/ruu1.gif
+      bbox	55 75 40 40
+      offset	70 122
+      movez -3
+      sound	data/sounds/dog.wav
+      frame	data/chars/gokuu/rudd1.gif
+      frame	data/chars/gokuu/rudd1.gif
+	frame	data/chars/gokuu/rudd1.gif
+      frame	data/chars/gokuu/rudd2.gif
+	frame	data/chars/gokuu/rudd2.gif
+      frame	data/chars/gokuu/rudd2.gif
+	frame	data/chars/gokuu/rudd3.gif
+      frame	data/chars/gokuu/rudd3.gif
+	frame	data/chars/gokuu/rudd3.gif
+	frame	data/chars/gokuu/rudd4.gif
+	frame	data/chars/gokuu/rudd4.gif
+      frame	data/chars/gokuu/rudd4.gif
+      frame	data/chars/gokuu/rudd1.gif
+      frame	data/chars/gokuu/rudd1.gif
+	frame	data/chars/gokuu/rudd1.gif
+      frame	data/chars/gokuu/rudd2.gif
+	frame	data/chars/gokuu/rudd2.gif
+      bbox	55 105 40 60
+      offset	70 170
+      movez 0
+      frame	data/chars/gokuu/ruu1.gif
+
+anim ATTACKDOWN 
+	loop	0
+      delay	2
+      offset	70 170
+      bbox	55 105 40 60
+      cancel 0 17 0 A2 freespecial11
+      cancel 0 17 0 A freespecial12
+      frame	data/chars/gokuu/ruu1.gif
+      bbox	55 75 40 40
+      offset	70 122
+      movez 3
+      sound	data/sounds/dog.wav
+      frame	data/chars/gokuu/rudd1.gif
+      frame	data/chars/gokuu/rudd1.gif
+	frame	data/chars/gokuu/rudd1.gif
+      frame	data/chars/gokuu/rudd2.gif
+	frame	data/chars/gokuu/rudd2.gif
+      frame	data/chars/gokuu/rudd2.gif
+	frame	data/chars/gokuu/rudd3.gif
+      frame	data/chars/gokuu/rudd3.gif
+	frame	data/chars/gokuu/rudd3.gif
+	frame	data/chars/gokuu/rudd4.gif
+	frame	data/chars/gokuu/rudd4.gif
+      frame	data/chars/gokuu/rudd4.gif
+      frame	data/chars/gokuu/rudd1.gif
+      frame	data/chars/gokuu/rudd1.gif
+	frame	data/chars/gokuu/rudd1.gif
+      frame	data/chars/gokuu/rudd2.gif
+	frame	data/chars/gokuu/rudd2.gif
+      bbox	55 105 40 60
+      offset	70 170
+      movez 0
+      frame	data/chars/gokuu/ruu1.gif
+
+anim RUNATTACK
+	loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      move 5
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/gokuu/raa1.gif
+      frame	data/chars/gokuu/raa1.gif
+      sound	data/chars/gokuu/at2.wav
+      attack4 75 95 25 40 15 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/gokuu/raa2.gif
+      frame	data/chars/gokuu/raa2.gif
+      frame	data/chars/gokuu/raa2.gif
+      attack4 0 0 0 0 0 0
+      delay	2
+      move 4
+	frame	data/chars/gokuu/raa3.gif
+      attack4 105 90 45 40 15 1 0 0 23 
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/gokuu/raa3.gif
+      frame	data/chars/gokuu/raa3.gif
+      frame	data/chars/gokuu/raa3.gif
+	frame	data/chars/gokuu/raa3.gif
+	delay	3
+      frame	data/chars/gokuu/raa4.gif
+      attack4 0 0 0 0 0 0
+      move 3
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      move 0
+      delay	5
+      frame	data/chars/gokuu/raa4.gif
+	frame	data/chars/gokuu/raa2.gif
+
+
+anim pain
+	loop	0
+	delay	6
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/gokuu/pain1.gif
+	frame	data/chars/gokuu/pain2.gif
+	frame	data/chars/gokuu/pain1.gif
+
+anim pain3
+	loop	0
+	delay	2
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/gokuu/pain1.gif
+      offset	72 170
+	frame	data/chars/gokuu/pain1.gif
+      offset	68 170
+      sound	data/chars/gokuu/pain.wav
+	frame	data/chars/gokuu/pain1.gif
+      offset	72 170
+      frame	data/chars/gokuu/pain1.gif
+      offset	70 170
+      frame	data/chars/gokuu/pain1.gif
+      delay	3
+      move -4
+      frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain1.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/gokuu/bpain04.gif
+      offset	72 170
+	frame	data/chars/gokuu/bpain04.gif
+      offset	68 170
+	frame	data/chars/gokuu/bpain4.gif
+      offset	72 170
+      frame	data/chars/gokuu/bpain4.gif
+      offset	70 170
+      frame	data/chars/gokuu/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/gokuu/bpain02.gif
+      frame	data/chars/gokuu/bpain02.gif
+      frame	data/chars/gokuu/bpain2.gif
+      frame	data/chars/gokuu/bpain2.gif
+      frame	data/chars/gokuu/bpain02.gif
+      frame	data/chars/gokuu/bpain02.gif
+      frame	data/chars/gokuu/bpain2.gif
+      frame	data/chars/gokuu/bpain2.gif
+
+anim grabbed
+	loop	0
+	delay	6
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/gokuu/pain1.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	110 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/gokuu/fall01.gif 
+	frame	data/chars/gokuu/fall01.gif
+      attack  54 85 72 50 5 1 1 1
+      bbox	55 78 80 57
+	frame	data/chars/gokuu/fall02.gif
+      bbox	0 0 0 0
+	frame	data/chars/gokuu/fall02.gif
+      delay   20
+	frame	data/chars/gokuu/fall03.gif
+	frame	data/chars/gokuu/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/gokuu/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/gokuu/fall04.gif
+	delay   20
+	frame	data/chars/gokuu/fall05.gif
+
+anim fall5
+	loop	0
+      delay   10
+	offset	85 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/gokuu/rjsla4.gif
+      attack  54 85 72 50 20 1 1 1
+	frame	data/chars/gokuu/rjsla4.gif
+      offset	113 133
+      bbox	55 78 80 57
+	frame	data/chars/gokuu/fall02.gif
+      bbox	0 0 0 0
+	frame	data/chars/gokuu/fall02.gif
+      delay   20
+	frame	data/chars/gokuu/fall03.gif
+	frame	data/chars/gokuu/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/gokuu/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/gokuu/fall04.gif
+	delay   20
+	frame	data/chars/gokuu/fall05.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	90 145
+      @cmd    degravity -0.27
+	frame	data/chars/gokuu/gsla3.gif
+      offset	70 170
+      frame	data/chars/gokuu/pain1.gif
+      offset	75 148
+      frame	data/chars/gokuu/rjsla4.gif
+      offset	95 170
+      frame	data/chars/gokuu/ffall04.gif
+      offset	75 143
+      frame	data/chars/gokuu/hsla2.gif
+      frame	data/chars/gokuu/hsla4.gif
+      offset	124 170
+      frame	data/chars/gokuu/pain11.gif
+      frame	data/chars/gokuu/pain22.gif
+      offset	100 140
+      frame	data/chars/gokuu/fall066.gif
+      offset	80 80
+      frame	data/chars/gokuu/dsla1.gif
+      offset	185 170
+      frame	data/chars/gokuu/dsla2.gif
+      offset	195 170
+      frame	data/chars/gokuu/dsla2.gif
+      offset	117 80
+      frame	data/chars/gokuu/dsla11.gif
+      offset	165 198
+      frame	data/chars/gokuu/pain22.gif
+      offset	124 170
+      frame	data/chars/gokuu/ppain11.gif
+      offset	105 170
+      frame	data/chars/gokuu/gfall01.gif
+      offset	105 120
+      frame	data/chars/gokuu/gfall04.gif
+      offset	112 145
+	frame	data/chars/gokuu/sla2.gif
+      offset	123 170
+      frame	data/chars/gokuu/sla3.gif
+      offset	70 170
+      frame	data/chars/gokuu/pain2.gif
+      
+anim fall9
+	loop	0
+      delay   20
+	offset	110 138
+      landframe 3
+      @cmd    degravity -0.27
+	frame	data/chars/gokuu/fall03.gif
+      bbox	60 100 50 30
+      frame	data/chars/gokuu/fall03.gif
+      bbox	0 0 0 0
+      offset	95 120
+      delay   100
+      frame	data/chars/gokuu/fall04.gif
+      delay   40
+      bbox	55 90 45 30
+	frame	data/chars/gokuu/fall05.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      sound	data/chars/gokuu/pain.wav
+      @cmd    degravity -0.27
+	frame	data/chars/gokuu/fall06.gif 
+	frame	data/chars/gokuu/fall06.gif
+     	frame	data/chars/gokuu/fall07.gif
+	frame	data/chars/gokuu/fall07.gif
+      delay   20
+	frame	data/chars/gokuu/fall07.gif
+	frame	data/chars/gokuu/fall07.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/gokuu/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/gokuu/fall04.gif
+	delay   20
+	frame	data/chars/gokuu/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      sound	data/chars/gokuu/pain.wav
+      @cmd    degravity -0.27
+	frame	data/chars/gokuu/fall01.gif 
+	frame	data/chars/gokuu/fall01.gif
+     	frame	data/chars/gokuu/fall02.gif
+	frame	data/chars/gokuu/fall02.gif
+      delay   20
+	frame	data/chars/gokuu/fall03.gif
+	frame	data/chars/gokuu/fall03.gif
+      delay   10
+      offset	95 120
+	frame	data/chars/gokuu/fall04.gif
+	frame	data/chars/gokuu/fall04.gif
+	delay   20
+	frame	data/chars/gokuu/fall05.gif
+
+anim fall16
+	loop	0
+      delay   4
+      offset	70 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+	frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif 
+	frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif
+      frame	data/chars/gokuu/ppain1.gif
+      frame	data/chars/gokuu/ppain22.gif
+      frame	data/chars/gokuu/ppain1.gif
+	delay   40
+	frame	data/chars/gokuu/ppain22.gif
+      delay   10
+      @cmd    degravity -0.27
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/gokuu/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/gokuu/fall04.gif
+	delay   20
+	frame	data/chars/gokuu/fall05.gif
+      
+
+anim burn
+	loop	0
+      delay   6
+	offset	110 170
+      landframe 15
+      @cmd    degravity 0
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/gokuu/burn01.gif
+      sound	data/sounds/bur.wav
+	frame	data/chars/gokuu/burn1.gif
+      frame	data/chars/gokuu/burn01.gif
+	frame	data/chars/gokuu/burn1.gif
+	frame	data/chars/gokuu/burn02.gif
+	frame	data/chars/gokuu/burn2.gif
+      frame	data/chars/gokuu/burn02.gif
+	frame	data/chars/gokuu/burn2.gif
+      frame	data/chars/gokuu/burn03.gif
+      frame	data/chars/gokuu/burn3.gif
+	frame	data/chars/gokuu/burn03.gif
+      frame	data/chars/gokuu/burn3.gif
+      frame	data/chars/gokuu/burn03.gif
+      frame	data/chars/gokuu/burn3.gif
+      delay   40
+	frame	data/chars/gokuu/burn03.gif
+      @cmd    degravity -0.27
+      offset	95 120
+      delay   7
+	bbox	55 90 45 30
+	frame	data/chars/gokuu/burn4.gif
+      bbox	0 0 0 0
+      frame	data/chars/gokuu/burn04.gif
+      frame	data/chars/gokuu/burn4.gif
+	frame	data/chars/gokuu/fall05.gif
+
+anim rise
+	loop	0
+	offset	95 120
+	delay	15
+      frame	data/chars/gokuu/fall05.gif
+      delay	8
+	frame	data/chars/gokuu/rise1.gif
+	frame	data/chars/gokuu/rise2.gif
+	frame	data/chars/gokuu/rise3.gif
+      offset	70 170
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim RISEB
+	loop	0
+	offset	95 120
+      delay	25
+      frame	data/chars/gokuu/fall05.gif
+	delay	8
+	frame	data/chars/gokuu/rise1.gif
+	frame	data/chars/gokuu/rise2.gif
+	frame	data/chars/gokuu/rise3.gif
+      offset	70 170
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/gokuu/bl1.gif
+      frame	data/chars/gokuu/bl2.gif
+
+
+anim BLOCKPAIN
+      loop	0
+	delay	2
+	bbox	50 78 47 80
+      offset	73 170
+	frame	data/chars/gokuu/bl2.gif
+      offset	70 170
+      frame	data/chars/gokuu/bl2.gif
+      offset	67 170
+      frame	data/chars/gokuu/bl2.gif
+      offset	70 170
+      frame	data/chars/gokuu/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/gokuu/bl2.gif
+      frame	data/chars/gokuu/bl2.gif
+      frame	data/chars/gokuu/bl2.gif
+      frame	data/chars/gokuu/bl1.gif
+      frame	data/chars/gokuu/bl1.gif
+      
+
+anim attack1
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd ani0020 openborconstant("ANI_FOLLOW2") openborconstant("ANI_PAIN2")
+      @cmd ani0020 openborconstant("ANI_FOLLOW3") openborconstant("ANI_FOLLOW8")
+      sound	data/sounds/air6.wav
+      frame	data/chars/gokuu/a0.gif
+      delay	7
+      attack  75 85 60 40 5 0
+	frame	data/chars/gokuu/a3.gif
+      delay	5
+      attack  0 0 0 0 0 0
+	frame	data/chars/gokuu/a3.gif
+      frame	data/chars/gokuu/a0.gif
+
+anim attack2
+	loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/air6.wav
+      frame	data/chars/gokuu/aaaaaa1.gif
+	frame	data/chars/gokuu/aaaaaa2.gif
+      sound	data/chars/gokuu/at8.wav
+      delay	7
+      attack  75 85 60 40 5 0
+	frame	data/chars/gokuu/aaaaaa3.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/gokuu/aaaaaa4.gif
+	frame	data/chars/gokuu/aaaaaa2.gif
+      delay	5
+      frame	data/chars/gokuu/a0.gif
+
+anim attack3
+	loop	0
+	delay	2
+      offset	70 170
+      bbox	50 78 47 80
+      cancel 7 7 1 A freespecial22
+      hitfx   data/sounds/beat3.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/gokuu/a0.gif
+      delay	3
+      bbox	65 78 47 80
+      frame	data/chars/gokuu/aa1.gif
+      bbox	72 78 47 80
+      sound	data/chars/gokuu/at6.wav
+      frame	data/chars/gokuu/aa2.gif
+      bbox	92 78 40 80
+      attack2 85 98 66 43 15 0
+      frame	data/chars/gokuu/aa3.gif
+      delay	10
+	attack2	0 0 0 0 0 0
+      frame	data/chars/gokuu/aa3.gif
+      bbox	72 78 47 80
+      delay	5
+      frame	data/chars/gokuu/aa2.gif
+      bbox	65 78 47 80
+      frame	data/chars/gokuu/aa1.gif
+      delay	4
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/a0.gif
+
+anim attack4
+	loop	0
+	delay	2
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/gokuu/at4.wav
+      move 2
+      frame	data/chars/gokuu/raa1.gif
+      frame	data/chars/gokuu/raa1.gif
+      bbox	60 78 47 80
+      sound	data/sounds/air5.wav
+      frame	data/chars/gokuu/aaaa1.gif
+      frame	data/chars/gokuu/aaaa1.gif
+      frame	data/chars/gokuu/aaaa1.gif
+      move 1
+      attack  85 60 65 80 15 1 0 0 10
+      dropv 3.5 1.1
+      bbox	85 78 47 80
+      frame	data/chars/gokuu/aaaa2.gif
+      delay	3
+      frame	data/chars/gokuu/aaaa2.gif
+      delay	10
+      attack	0 0 0 0 0 0
+      frame	data/chars/gokuu/aaaa3.gif
+      frame	data/chars/gokuu/aaaa3.gif
+      move 0
+      delay	7
+      bbox	60 78 47 80
+      frame	data/chars/gokuu/aaaa1.gif
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/a0.gif
+
+anim  special
+      loop	0
+	delay	9
+      offset	97 170
+      sound	data/chars/gokuu/at9.wav
+      frame	data/chars/gokuu/sp1.gif
+      delay	7
+      sound	data/sounds/air3.wav
+      frame	data/chars/gokuu/sp2.gif
+      attack  37 50 47 100 25 1 1 0 10
+      dropv 2.5 2.5
+      frame	data/chars/gokuu/sp3.gif
+      delay	6
+      attack  0 0 0 0 0 0
+      frame	data/chars/gokuu/sp4.gif
+      delay	5
+      sound	data/sounds/air3.wav
+      attack  113 50 40 100 25 1 1 0 10
+      dropv 2.5 2.5
+      frame	data/chars/gokuu/sp5.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/gokuu/sp6.gif
+      frame	data/chars/gokuu/sp5.gif 
+      frame	data/chars/gokuu/sp6.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/gokuu/sp5.gif
+      attack  0 0 0 0 0 0
+      delay	6
+      frame	data/chars/gokuu/sp7.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/gokuu/sp8.gif
+      delay	5
+      attack  12 50 80 65 25 1 1 0 10
+      dropv 2.5 2.5
+      frame	data/chars/gokuu/sp9.gif
+      frame	data/chars/gokuu/sp10.gif
+      frame	data/chars/gokuu/sp9.gif
+      frame	data/chars/gokuu/sp10.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/gokuu/sp3.gif
+      delay	7
+      frame	data/chars/gokuu/sp2.gif
+      frame	data/chars/gokuu/sp1.gif
+
+anim JUMPDELAY
+      loop	0
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/j1.gif
+
+anim JUMPLAND
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/j1.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim jump
+	loop	0
+	delay	4
+      offset	70 170
+      bbox	50 68 47 80
+      cancel 1 13 0 A2 freespecial4
+      cancel 1 13 0 D A freespecial19
+      @cmd    degravity -0.7
+      frame	data/chars/gokuu/j2.gif
+      frame	data/chars/gokuu/j2.gif
+      frame	data/chars/gokuu/j2.gif
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j5.gif
+      frame	data/chars/gokuu/j5.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j2.gif
+
+anim FORWARDJUMP
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 75 47 70
+      cancel 1 12 0 A2 freespecial5
+      cancel 1 13 0 D A freespecial19
+      @cmd    degravity -0.7
+      frame	data/chars/gokuu/jf1.gif
+      frame	data/chars/gokuu/jf1.gif
+      frame	data/chars/gokuu/jf1.gif
+      frame	data/chars/gokuu/jf1.gif
+      frame	data/chars/gokuu/jf2.gif
+      frame	data/chars/gokuu/jf2.gif
+      frame	data/chars/gokuu/jf3.gif
+      frame	data/chars/gokuu/jf3.gif
+      frame	data/chars/gokuu/jf4.gif
+      frame	data/chars/gokuu/jf4.gif
+      frame	data/chars/gokuu/jf5.gif
+      frame	data/chars/gokuu/jf5.gif
+      frame	data/chars/gokuu/jf6.gif
+
+anim RUNJUMP
+      loop	0
+	delay	5
+      offset	70 170
+      bbox	50 75 47 70
+      cancel 1 12 0 A2 freespecial6
+      cancel 1 13 0 D A freespecial19
+      @cmd    degravity -0.7
+      frame	data/chars/gokuu/jf1.gif
+      frame	data/chars/gokuu/jf1.gif
+      frame	data/chars/gokuu/jf1.gif
+      frame	data/chars/gokuu/jf2.gif
+      frame	data/chars/gokuu/jf2.gif
+      frame	data/chars/gokuu/jf3.gif
+      frame	data/chars/gokuu/jf3.gif
+      frame	data/chars/gokuu/jf4.gif
+      frame	data/chars/gokuu/jf4.gif
+      frame	data/chars/gokuu/jf5.gif
+      frame	data/chars/gokuu/jf5.gif
+      frame	data/chars/gokuu/jf6.gif
+      frame	data/chars/gokuu/jf6.gif
+
+anim jumpattack
+	loop	0
+	delay	8
+      offset	70 170
+      bbox	50 85 40 50
+      @cmd    degravity -0.7
+      sound	data/chars/gokuu/at12.wav
+      frame	data/chars/gokuu/jp1.gif
+      delay	4
+      attack12	70 110 45 35 10 0 0 0 25
+      frame	data/chars/gokuu/jp3.gif
+      attack12 0 0 0 0 0 0
+      delay	2
+      frame	data/chars/gokuu/jp3.gif
+      delay	8
+      attack	70 110 45 35 10 1 0 0 35
+      frame	data/chars/gokuu/jp4.gif
+      frame	data/chars/gokuu/jp5.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/gokuu/j2.gif
+
+
+anim JUMPFORWARD
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 85 40 50
+      @cmd    degravity -0.7
+      sound	data/chars/gokuu/at12.wav
+      frame	data/chars/gokuu/jp1.gif
+      delay	4
+      attack12	70 110 45 35 10 0 0 0 25
+      frame	data/chars/gokuu/jp3.gif
+      attack12 0 0 0 0 0 0
+      delay	2
+      frame	data/chars/gokuu/jp3.gif
+      delay	8
+      attack	70 110 45 35 10 1 0 0 35
+      frame	data/chars/gokuu/jp4.gif
+      frame	data/chars/gokuu/jp5.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/gokuu/j2.gif
+
+anim grab
+	loop	0
+	delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      cancel 0 3 0 A2 freespecial13
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+
+anim grabattack
+	loop	0
+	delay	10
+      offset	70 170
+      sound	data/chars/gokuu/at17.wav
+      @cmd    slamstart
+      @cmd    position 37 11 1 -1 1
+      frame	data/chars/gokuu/aaaaa5.gif
+      delay	15
+      frame	data/chars/gokuu/thh2.gif
+      delay	9
+      @cmd    position 15 35 1 -1 1
+      frame	data/chars/gokuu/thh3.gif
+      delay	12
+      @cmd    position 16 38 -2 -1 1
+      frame	data/chars/gokuu/thh4.gif
+      delay	8
+      sound	data/sounds/air5.wav
+      @cmd    hurt 25
+      @cmd    position 17 110 -7 -1 1
+      frame	data/chars/gokuu/thh5.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 2.5 3 0 0
+      delay	9
+      frame	data/chars/gokuu/thh5.gif
+      frame	data/chars/gokuu/thh5.gif
+      frame	data/chars/gokuu/thh5.gif
+      delay	8
+      frame	data/chars/gokuu/thh6.gif
+      frame	data/chars/gokuu/thh7.gif
+      frame	data/chars/gokuu/thh8.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+
+anim grabbackward
+	loop	0
+	delay	10
+      offset	70 170
+      flipframe 2
+      sound	data/chars/gokuu/at17.wav
+      @cmd    slamstart
+      @cmd    position 37 50 0 -1 0
+      frame	data/chars/gokuu/thhh1.gif
+      delay	15
+      frame	data/chars/gokuu/thhh2.gif
+      offset	130 170
+      delay	9
+      @cmd    position 15 -25 1 -1 1
+      frame	data/chars/gokuu/thh3.gif
+      delay	12
+      @cmd    position 16 -22 -2 -1 1
+      frame	data/chars/gokuu/thh4.gif
+      delay	8
+      sound	data/sounds/air5.wav
+      @cmd    hurt 25
+      @cmd    position 17 50 -7 -1 1
+      frame	data/chars/gokuu/thh5.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 2.5 3 0 0
+      delay	9
+      frame	data/chars/gokuu/thh5.gif
+      frame	data/chars/gokuu/thh5.gif
+      frame	data/chars/gokuu/thh5.gif
+      delay	8
+      frame	data/chars/gokuu/thh6.gif
+      frame	data/chars/gokuu/thh7.gif
+      offset	126 170
+      frame	data/chars/gokuu/thh8.gif
+      offset	70 170
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim grabattack2
+	loop	0
+	delay	11
+      offset	70 170
+      attackone 0
+      jumpframe 3 5.5 2 0 dus
+      landframe 9 du
+      quakeframe 9 4 7
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart5 
+      @cmd    degravity -0.7
+      @cmd    position 15 20 0 -1 0
+      frame	data/chars/gokuu/th0.gif
+      delay	15
+      @cmd    keyflip
+      @cmd    position 21 6 -16 -1 1
+      frame	data/chars/gokuu/th1.gif
+      delay	8
+      sound	data/chars/gokuu/at1.wav
+      @cmd    position 22 28 -6 -1 1
+      frame	data/chars/gokuu/th2.gif
+      @cmd    position 22 28 -3 -1 1
+      frame	data/chars/gokuu/th3.gif
+      frame	data/chars/gokuu/th3.gif
+      delay	9
+      @cmd    position 16 20 0 -1 1
+      frame	data/chars/gokuu/th4.gif
+      @cmd    position 20 42 0 -1 1
+      frame	data/chars/gokuu/th5.gif
+      @cmd    position 17 30 -11 -1 1
+      frame	data/chars/gokuu/th6.gif
+      delay	40
+      @cmd    degravity -1.5
+      @cmd    position 19 1 -3 -1 1
+      frame	data/chars/gokuu/th7.gif
+      delay	5
+      attack10 44 105 58 50 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/th7.gif
+      sound	data/sounds/fall.wav
+      @cmd    hurt 30
+      @cmd    position 18 1 -3 -1 1
+      frame	data/chars/gokuu/th8.gif
+      attack10   0 0 0 0 0 0
+      frame	data/chars/gokuu/th8.gif
+      frame	data/chars/gokuu/th8.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 0 1.5 0 1
+      delay	1
+      frame	data/chars/gokuu/th8.gif
+      @cmd    anichange "ANI_FOLLOW6"
+      frame	data/chars/gokuu/th8.gif
+      
+
+anim  follow6
+      loop	0
+	delay	8
+      offset	70 170
+      jumpframe 0 3.2 1.7 0 dus
+      landframe 3 dus
+      flipframe 3
+      quakeframe 0 2 7
+      @cmd    degravity -0.7
+      frame	data/chars/gokuu/jf5.gif
+      frame	data/chars/gokuu/jf5.gif
+      delay	30
+      @cmd    degravity -1
+      frame	data/chars/gokuu/jf6.gif
+      delay	4
+      move 15
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/j1.gif
+      move 0
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+
+anim  freespecial
+	loop	0
+	delay	4
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat3.wav
+      @cmd ani0020 openborconstant("ANI_FOLLOW1") openborconstant("ANI_PAIN2")
+      cancel 6 7 1 A2 freespecial21
+      cancel 6 7 1 A freespecial22
+      sound	data/chars/gokuu/at8.wav
+      frame	data/chars/gokuu/grat1.gif
+      delay	5
+	frame	data/chars/gokuu/grat2.gif
+      sound	data/sounds/air5.wav
+      delay	7
+      attack2  85 95 65 40 5 0
+	frame	data/chars/gokuu/grat7.gif
+      delay	6
+      attack2  0 0 0 0 0 0
+      frame	data/chars/gokuu/grat7.gif
+	frame	data/chars/gokuu/grat2.gif
+      frame	data/chars/gokuu/grat1.gif
+      delay	1
+      frame	data/chars/gokuu/idle3.gif
+
+anim  freespecial2
+      loop	0
+	delay	14
+      offset	70 170
+      followcond 1
+      followanim 7
+      jumpframe 2 4 4.5 0 dus
+      landframe 11 dus
+      hitflash  ffla
+      hitfx   data/sounds/sword3.wav
+      frame	data/chars/gokuu/j1.gif
+      delay	7
+      frame	data/chars/gokuu/jl1.gif
+      delay	3
+      sound	data/chars/gokuu/at15.wav
+      @cmd    degravity -0.7
+      frame	data/chars/gokuu/fsp1.gif
+      frame	data/chars/gokuu/fsp1.gif
+      frame	data/chars/gokuu/fsp2.gif
+      delay	2
+      @cmd    degravity -3
+      frame	data/chars/gokuu/fsp2.gif
+      sound	data/sounds/air3.wav
+      delay	3
+      frame	data/chars/gokuu/fsp2.gif
+      frame	data/chars/gokuu/fsp2.gif
+      attack12  70 80 88 40 13 0 0 0 37
+      dropv 1.5 2.5
+      forcedirection -1
+      frame	data/chars/gokuu/fsp2.gif
+      frame	data/chars/gokuu/fsp2.gif
+      attack12  0 0 0 0 0 0
+      @cmd    anichange "ANI_FOLLOW8"
+      delay	30
+      frame	data/chars/gokuu/fsp3.gif
+      delay	3
+      sound	data/sounds/beat3.wav
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/fsp4.gif
+      frame	data/chars/gokuu/fsp4.gif
+      delay	6
+      frame	data/chars/gokuu/fsp5.gif
+      delay	5
+      frame	data/chars/gokuu/fsp6.gif
+      frame	data/chars/gokuu/fsp6.gif
+      delay	6
+      frame	data/chars/gokuu/fsp7.gif
+
+anim  follow7
+      loop	0
+	delay	40
+      offset	70 170
+      otg 1
+      jumpframe 0 0 2.5
+      landframe 1 dus
+      quakeframe 0 4 5
+      hitflash  ffla
+      hitfx   data/sounds/sword3.wav
+      @cmd    degravity -3
+      frame	data/chars/gokuu/fsp3.gif
+      delay	6
+      sound	data/sounds/beat3.wav
+      attack  70 119 105 51 15 1 0 0 30
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/fsp4.gif
+      frame	data/chars/gokuu/fsp5.gif
+      attack  0 0 0 0 0 0
+      delay	5
+      frame	data/chars/gokuu/fsp6.gif
+      frame	data/chars/gokuu/fsp6.gif
+      delay	9
+      frame	data/chars/gokuu/fsp7.gif
+      delay	7
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/aaaa0.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim  follow8
+      loop	0
+	delay	30
+      offset	70 170
+      otg 1
+      jumpframe 0 0 4.5
+      landframe 1 dus
+      quakeframe 1 4 5
+      hitflash  ffla
+      hitfx   data/sounds/sword3.wav
+      @cmd    degravity -3
+      frame	data/chars/gokuu/fsp3.gif
+      delay	6
+      sound	data/sounds/beat3.wav
+      attack  70 119 105 51 15 1 0 0 30
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/fsp4.gif
+      frame	data/chars/gokuu/fsp5.gif
+      attack  0 0 0 0 0 0
+      delay	5
+      frame	data/chars/gokuu/fsp6.gif
+      frame	data/chars/gokuu/fsp6.gif
+      delay	9
+      frame	data/chars/gokuu/fsp7.gif
+      delay	7
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/aaaa0.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim  freespecial3
+	loop	0
+	delay	12
+      offset	70 170
+      followcond 1
+      followanim 9
+      jumpframe 7 2.5 4 0 dus
+      landframe 11 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat3.wav
+      frame	data/chars/gokuu/j1.gif
+      delay	7
+      sound	data/chars/gokuu/at2.wav
+      frame	data/chars/gokuu/fsk1.gif
+      delay	2
+      @cmd    degravity -0.7
+      move 4
+      frame	data/chars/gokuu/fsk2.gif
+      frame	data/chars/gokuu/fsk2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/gokuu/fsk2.gif
+      frame	data/chars/gokuu/fsk3.gif
+      frame	data/chars/gokuu/fsk3.gif
+      move 0
+      frame	data/chars/gokuu/fsk3.gif
+      burn  80 40 70 80 25 1 0 0 30
+      dropv 2.5 2.5
+      forcedirection -1
+      frame	data/chars/gokuu/fsk3.gif
+      frame	data/chars/gokuu/fsk3.gif
+      delay	30
+      @cmd    degravity -3
+      frame	data/chars/gokuu/fsk4.gif
+      burn  0 0 0 0 0 0
+      delay	2
+      move 4
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/fsk5.gif
+      frame	data/chars/gokuu/fsk5.gif
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/fsk5.gif
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/gokuu/fsk6.gif
+      frame	data/chars/gokuu/fsk6.gif
+      move 3
+      frame	data/chars/gokuu/fsk7.gif
+      frame	data/chars/gokuu/fsk7.gif
+      move 0
+      delay	7
+      frame	data/chars/gokuu/j1.gif
+
+anim  follow9
+      loop	0
+	delay	40
+      offset	70 170
+      otg 1
+      jumpframe 0 0 2.5
+      landframe 1 dus
+      quakeframe 0 4 4
+      hitflash  ffla
+      hitfx   data/sounds/beat3.wav
+      @cmd    degravity -3
+      burn  80 40 70 80 25 1 0 0 30
+      dropv 2.5 2.5
+      forcedirection -1
+      frame	data/chars/gokuu/fsk4.gif
+      burn  0 0 0 0 0 0
+      delay	2
+      move 4
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/fsk5.gif
+      frame	data/chars/gokuu/fsk5.gif
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/fsk5.gif
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/gokuu/fsk6.gif
+      frame	data/chars/gokuu/fsk6.gif
+      move 3
+      frame	data/chars/gokuu/fsk7.gif
+      frame	data/chars/gokuu/fsk7.gif
+      move 0
+      delay	7
+      frame	data/chars/gokuu/j1.gif
+
+anim follow1
+      loop	0
+	delay	6.5
+      offset	70 170
+      bbox	50 78 47 80
+      range -45 185
+      rangez -45 45
+      hitflash  ffla
+      sound	data/sounds/air5.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/gokuu/a0.gif
+      frame	data/chars/gokuu/aaaaaaa1.gif
+      sound	data/chars/gokuu/at13.wav
+      blast  85 73 70 65 15 0 0 12
+	frame	data/chars/gokuu/aaaaaaa2.gif
+      delay	15
+      blast	0 0 0 0 0 0
+	frame	data/chars/gokuu/aaaaaaa3.gif
+      delay	7
+	frame	data/chars/gokuu/aaaaaaa4.gif
+      frame	data/chars/gokuu/aaaaaaa5.gif
+      frame	data/chars/gokuu/a0.gif
+
+anim follow2
+      loop	0
+      range -10 115
+      rangez -40 40
+      rangeb -1000 1000
+      delay	2
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/gokuu/at4.wav
+      move 2
+      frame	data/chars/gokuu/raa1.gif
+      frame	data/chars/gokuu/raa1.gif
+      bbox	60 78 47 80
+      sound	data/sounds/air5.wav
+      frame	data/chars/gokuu/aaaa1.gif
+      frame	data/chars/gokuu/aaaa1.gif
+      frame	data/chars/gokuu/aaaa1.gif
+      move 1
+      attack  85 60 65 80 15 1 0 0 10
+      dropv 3.5 1.1
+      bbox	85 78 47 80
+      frame	data/chars/gokuu/aaaa2.gif
+      delay	3
+      frame	data/chars/gokuu/aaaa2.gif
+      delay	10
+      attack	0 0 0 0 0 0
+      frame	data/chars/gokuu/aaaa3.gif
+      frame	data/chars/gokuu/aaaa3.gif
+      move 0
+      delay	7
+      bbox	60 78 47 80
+      frame	data/chars/gokuu/aaaa1.gif
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/a0.gif
+
+anim follow3
+      loop	0
+      range 0 70
+      rangez -3 18
+      delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      attackone 1
+      otg 2
+      cancel 5 7 1 A freespecial8
+      frame	data/chars/gokuu/j1.gif
+      frame	data/chars/gokuu/aaaa0.gif
+      sound	data/sounds/air6.wav
+      delay	9
+      frame	data/chars/gokuu/ge1.gif
+      delay	7
+      attack3  72 150 38 21 10 1 0 0 0 21
+      forcedirection 99
+      frame	data/chars/gokuu/ge2.gif
+      attack3  0 0 0 0 0 0
+      delay	4
+      frame	data/chars/gokuu/ge3.gif
+      delay	9
+      frame	data/chars/gokuu/ge4.gif
+      frame	data/chars/gokuu/aaaa0.gif
+      frame	data/chars/gokuu/j1.gif
+      
+anim  freespecial4
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 40 85 45
+      @cmd    degravity -0.7
+      sound	data/chars/gokuu/at1.wav
+      frame	data/chars/gokuu/ja1.gif
+      attack	70 85 54 50 12 1 0 0 35
+      frame	data/chars/gokuu/ja2.gif
+      frame	data/chars/gokuu/ja3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j2.gif
+      
+
+anim  freespecial5
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 40 85 45
+      jumpframe 0 0 1.5
+      @cmd    degravity -0.7
+      sound	data/chars/gokuu/at1.wav
+      frame	data/chars/gokuu/jaf1.gif
+      delay	10
+      attack	70 120 54 40 12 1 0 0 35
+      frame	data/chars/gokuu/jaf2.gif
+      frame	data/chars/gokuu/jaf2.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/gokuu/jaf1.gif
+      frame	data/chars/gokuu/j2.gif
+
+
+anim  freespecial6
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 40 85 45
+      jumpframe 0 0 3
+      @cmd    degravity -0.7
+      sound	data/chars/gokuu/at1.wav
+      frame	data/chars/gokuu/jaf1.gif
+      delay	10
+      attack	70 120 54 40 12 1 0 0 35
+      frame	data/chars/gokuu/jaf2.gif
+      frame	data/chars/gokuu/jaf2.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/gokuu/jaf1.gif
+      frame	data/chars/gokuu/j2.gif
+
+
+anim  freespecial7
+      loop	0
+	delay	2.5
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      jumpframe 3 2 2.7 0 dus
+      landframe 16 du
+      sound	data/sounds/air3.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra3.gif
+      frame	data/chars/gokuu/ra3.gif
+      frame	data/chars/gokuu/ra3.gif
+      sound	data/chars/gokuu/at3.wav
+      frame	data/chars/gokuu/ra4.gif
+      frame	data/chars/gokuu/ra4.gif
+      frame	data/chars/gokuu/ra4.gif
+      attack13 75 70 43 60 10 0 0 0 23
+      dropv 2.5 3
+      forcedirection -1
+      frame	data/chars/gokuu/ra5.gif
+      frame	data/chars/gokuu/ra5.gif
+      attack13 0 0 0 0 0 0
+      frame	data/chars/gokuu/ra5.gif
+      attack 85 70 65 60 15 1 0 0 23
+      dropv 2.5 3
+      forcedirection -1
+	frame	data/chars/gokuu/ra6.gif
+      frame	data/chars/gokuu/ra6.gif
+      frame	data/chars/gokuu/ra6.gif
+      attack 0 0 0 0 0 0
+      delay	20
+      frame	data/chars/gokuu/ra7.gif
+      sound	data/sounds/step.wav
+      delay	3
+      move 4
+	frame	data/chars/gokuu/aaaaa6.gif
+      frame	data/chars/gokuu/aaaaa6.gif
+      frame	data/chars/gokuu/j1.gif
+	frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/jl1.gif
+	frame	data/chars/gokuu/j1.gif
+      frame	data/chars/gokuu/j1.gif
+      
+
+anim  freespecial8
+      loop	0
+      delay	12
+      offset	70 170
+      bbox	50 78 47 80
+      attackone 1
+      otg 2
+      frame	data/chars/gokuu/aaaa0.gif
+      sound	data/sounds/air6.wav
+      delay	10
+      frame	data/chars/gokuu/ge1.gif
+      sound	data/chars/gokuu/at8.wav
+      delay	7
+      attack3  72 150 38 21 10 1 0 0 0 21
+      forcedirection 99
+      frame	data/chars/gokuu/ge2.gif
+      attack3  0 0 0 0 0 0
+      delay	4
+      frame	data/chars/gokuu/ge3.gif
+      delay	12
+      frame	data/chars/gokuu/ge4.gif
+      delay	8
+      frame	data/chars/gokuu/aaaa0.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim  freespecial9
+      loop	0
+	delay	2.5
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      jumpframe 3 2 0 -0.7 dus
+      landframe 16 du
+      sound	data/sounds/air3.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra3.gif
+      frame	data/chars/gokuu/ra3.gif
+      frame	data/chars/gokuu/ra3.gif
+      sound	data/chars/gokuu/at3.wav
+      frame	data/chars/gokuu/ra4.gif
+      frame	data/chars/gokuu/ra4.gif
+      frame	data/chars/gokuu/ra4.gif
+      attack13 75 70 43 60 10 0 0 0 23
+      dropv 2.5 3
+      forcedirection -1
+      frame	data/chars/gokuu/ra5.gif
+      frame	data/chars/gokuu/ra5.gif
+      attack13 0 0 0 0 0 0
+      frame	data/chars/gokuu/ra5.gif
+      attack 85 70 65 60 15 1 0 0 23
+      dropv 2.5 3
+      forcedirection -1
+	frame	data/chars/gokuu/ra6.gif
+      frame	data/chars/gokuu/ra6.gif
+      frame	data/chars/gokuu/ra6.gif
+      attack 0 0 0 0 0 0
+      delay	20
+      frame	data/chars/gokuu/ra7.gif
+      sound	data/sounds/step.wav
+      delay	3
+	movez -1
+	frame	data/chars/gokuu/aaaaa6.gif
+      frame	data/chars/gokuu/aaaaa6.gif
+      frame	data/chars/gokuu/j1.gif
+	frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/jl1.gif
+	frame	data/chars/gokuu/j1.gif
+      frame	data/chars/gokuu/j1.gif
+
+
+anim  freespecial10
+      loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      movez -3
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/gokuu/raa1.gif
+      frame	data/chars/gokuu/raa1.gif
+      sound	data/chars/gokuu/at2.wav
+      attack4 75 95 25 40 15 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/gokuu/raa2.gif
+      frame	data/chars/gokuu/raa2.gif
+      frame	data/chars/gokuu/raa2.gif
+      attack4 0 0 0 0 0 0
+      delay	2
+      movez -1
+	frame	data/chars/gokuu/raa3.gif
+      attack4 105 90 45 40 15 1 0 0 23
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/gokuu/raa3.gif
+      frame	data/chars/gokuu/raa3.gif
+      frame	data/chars/gokuu/raa3.gif
+	frame	data/chars/gokuu/raa3.gif
+	delay	3
+      frame	data/chars/gokuu/raa4.gif
+      attack4 0 0 0 0 0 0
+      movez -1
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      movez 0
+      delay	5
+      frame	data/chars/gokuu/raa4.gif
+	frame	data/chars/gokuu/raa2.gif
+
+anim  freespecial11
+      loop	0
+	delay	2.5
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      jumpframe 3 2 0 0.7 dus
+      landframe 16 du
+      sound	data/sounds/air3.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra2.gif
+      frame	data/chars/gokuu/ra3.gif
+      frame	data/chars/gokuu/ra3.gif
+      frame	data/chars/gokuu/ra3.gif
+      sound	data/chars/gokuu/at3.wav
+      frame	data/chars/gokuu/ra4.gif
+      frame	data/chars/gokuu/ra4.gif
+      frame	data/chars/gokuu/ra4.gif
+      attack13 75 70 43 60 10 0 0 0 23
+      dropv 2.5 3
+      forcedirection -1
+      frame	data/chars/gokuu/ra5.gif
+      frame	data/chars/gokuu/ra5.gif
+      attack13 0 0 0 0 0 0
+      frame	data/chars/gokuu/ra5.gif
+      attack 85 70 65 60 15 1 0 0 23
+      dropv 2.5 3
+      forcedirection -1
+	frame	data/chars/gokuu/ra6.gif
+      frame	data/chars/gokuu/ra6.gif
+      frame	data/chars/gokuu/ra6.gif
+      attack 0 0 0 0 0 0
+      delay	20
+      frame	data/chars/gokuu/ra7.gif
+      sound	data/sounds/step.wav
+      delay	3
+	movez 1
+	frame	data/chars/gokuu/aaaaa6.gif
+      frame	data/chars/gokuu/aaaaa6.gif
+      frame	data/chars/gokuu/j1.gif
+	frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/jl1.gif
+	frame	data/chars/gokuu/j1.gif
+      frame	data/chars/gokuu/j1.gif
+
+
+anim  freespecial12
+      loop	0
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      movez 3
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/gokuu/raa1.gif
+      frame	data/chars/gokuu/raa1.gif
+      sound	data/chars/gokuu/at2.wav
+      attack4 75 95 25 40 15 1 0 0 25
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/gokuu/raa2.gif
+      frame	data/chars/gokuu/raa2.gif
+      frame	data/chars/gokuu/raa2.gif
+      attack4 0 0 0 0 0 0
+      delay	2
+      movez 1
+	frame	data/chars/gokuu/raa3.gif
+      attack4 105 90 45 40 15 1 0 0 23
+      dropv 0 0
+      staydown 150 150
+      frame	data/chars/gokuu/raa3.gif
+      frame	data/chars/gokuu/raa3.gif
+      frame	data/chars/gokuu/raa3.gif
+	frame	data/chars/gokuu/raa3.gif
+	delay	3
+      frame	data/chars/gokuu/raa4.gif
+      attack4 0 0 0 0 0 0
+      movez 1
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      frame	data/chars/gokuu/raa4.gif
+      movez 0
+      delay	5
+      frame	data/chars/gokuu/raa4.gif
+	frame	data/chars/gokuu/raa2.gif
+
+anim freespecial13
+	loop	0
+	delay	6
+      offset	70 170
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      @cmd bind 1 50 -1 0 -1
+      frame	data/chars/gokuu/grat0.gif
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 60 0 1
+      @cmd    hurt2 5 
+      frame	data/chars/gokuu/grat2.gif
+      delay	12
+      frame	data/chars/gokuu/grat2.gif
+      delay	6
+      frame	data/chars/gokuu/grat0.gif
+      @cmd    anichange "ANI_FOLLOW4"
+      frame	data/chars/gokuu/grab.gif
+
+anim freespecial14
+	loop	0
+	delay	6
+      offset	70 170
+      @cmd bind 0 50 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      frame	data/chars/gokuu/grat0.gif
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 60 0 1 
+      @cmd    hurt2 5
+      frame	data/chars/gokuu/grat2.gif
+      delay	13
+      frame	data/chars/gokuu/grat2.gif
+      delay	6
+      frame	data/chars/gokuu/grat0.gif
+      @cmd    anichange "ANI_FOLLOW5"
+      frame	data/chars/gokuu/grab.gif
+
+
+anim freespecial15
+	loop	0
+	delay	9
+      offset	70 170
+      quakeframe 6 3 3
+      @cmd    slamstart2
+      @cmd    position 29 43 0 -1 1
+      sound	data/sounds/air5.wav
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/gokuu/j1.gif
+      delay	3
+      sound	data/chars/gokuu/at2.wav
+      frame	data/chars/gokuu/gk1.gif
+      frame	data/chars/gokuu/gk11.gif
+      frame	data/chars/gokuu/gk2.gif
+      frame	data/chars/gokuu/gk22.gif
+      delay	7
+      frame	data/chars/gokuu/gk3.gif
+      sound	data/sounds/beat2.wav
+      delay	4
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 72 16 1
+      frame	data/chars/gokuu/gk4.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 2.5 3 0 1
+      delay	10
+      frame	data/chars/gokuu/gk4.gif
+      delay	3
+      frame	data/chars/gokuu/gk5.gif
+      frame	data/chars/gokuu/gk51.gif
+      frame	data/chars/gokuu/gk52.gif
+      frame	data/chars/gokuu/gk55.gif
+      delay	9
+      sound	data/sounds/step.wav
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/gokuu/gk6.gif
+      frame	data/chars/gokuu/gk7.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim follow4
+      loop	1
+	delay	5
+      offset	70 170
+      cancel 1 3 0 A2 freespecial14
+      @cmd bind 1 50 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 J freespecial17
+      cancel 0 3 0 B A freespecial18
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+
+
+anim follow5
+      loop	1
+	delay	5
+      offset	70 170
+      cancel 1 3 0 A2 freespecial15
+      @cmd bind 1 50 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 J freespecial17
+      cancel 0 3 0 B A freespecial18
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+      frame	data/chars/gokuu/grab.gif
+
+anim freespecial16
+      loop	0
+	delay	10
+      offset	70 170
+      sound	data/chars/gokuu/at17.wav
+      @cmd    slamstart2
+      @cmd    position 37 11 1 -1 1
+      frame	data/chars/gokuu/aaaaa5.gif
+      delay	15
+      frame	data/chars/gokuu/thh2.gif
+      delay	9
+      @cmd    position 15 35 1 -1 1
+      frame	data/chars/gokuu/thh3.gif
+      delay	12
+      @cmd    position 16 38 -2 -1 1
+      frame	data/chars/gokuu/thh4.gif
+      delay	8
+      sound	data/sounds/air5.wav
+      @cmd    hurt 25
+      @cmd    position 17 110 -7 -1 1
+      frame	data/chars/gokuu/thh5.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 2.5 3 0 0
+      delay	9
+      frame	data/chars/gokuu/thh5.gif
+      frame	data/chars/gokuu/thh5.gif
+      frame	data/chars/gokuu/thh5.gif
+      delay	8
+      frame	data/chars/gokuu/thh6.gif
+      frame	data/chars/gokuu/thh7.gif
+      frame	data/chars/gokuu/thh8.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim freespecial17
+      loop	0
+	delay	11
+      offset	70 170
+      attackone 0
+      jumpframe 3 5.5 2 0 dus
+      landframe 9 du
+      quakeframe 9 4 7
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart6
+      @cmd    degravity -0.7
+      @cmd    position 15 20 0 -1 0
+      frame	data/chars/gokuu/th0.gif
+      delay	15
+      @cmd    keyflip
+      @cmd    position 21 6 -16 -1 1
+      frame	data/chars/gokuu/th1.gif
+      delay	8
+      sound	data/chars/gokuu/at1.wav
+      @cmd    position 22 28 -6 -1 1
+      frame	data/chars/gokuu/th2.gif
+      @cmd    position 22 28 -3 -1 1
+      frame	data/chars/gokuu/th3.gif
+      frame	data/chars/gokuu/th3.gif
+      delay	9
+      @cmd    position 16 20 0 -1 1
+      frame	data/chars/gokuu/th4.gif
+      @cmd    position 20 42 0 -1 1
+      frame	data/chars/gokuu/th5.gif
+      @cmd    position 17 30 -11 -1 1
+      frame	data/chars/gokuu/th6.gif
+      delay	40
+      @cmd    degravity -1.5
+      @cmd    position 19 1 -3 -1 1
+      frame	data/chars/gokuu/th7.gif
+      delay	5
+      attack10 44 105 58 50 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/th7.gif
+      sound	data/sounds/fall.wav
+      @cmd    hurt 30
+      @cmd    position 18 1 -3 -1 1
+      frame	data/chars/gokuu/th8.gif
+      attack10   0 0 0 0 0 0
+      frame	data/chars/gokuu/th8.gif
+      frame	data/chars/gokuu/th8.gif
+      @cmd    depost 0
+      @cmd    finish 5 2 0 1.5 0 1
+      delay	1
+      frame	data/chars/gokuu/th8.gif
+      @cmd    anichange "ANI_FOLLOW6"
+      frame	data/chars/gokuu/th8.gif
+
+anim freespecial18
+      loop	0
+	delay	10
+      offset	70 170
+      flipframe 2
+      sound	data/chars/gokuu/at17.wav
+      @cmd    slamstart2
+      @cmd    position 37 50 0 -1 0
+      frame	data/chars/gokuu/thhh1.gif
+      delay	15
+      frame	data/chars/gokuu/thhh2.gif
+      offset	130 170
+      delay	9
+      @cmd    position 15 -25 1 -1 1
+      frame	data/chars/gokuu/thh3.gif
+      delay	12
+      @cmd    position 16 -22 -2 -1 1
+      frame	data/chars/gokuu/thh4.gif
+      delay	8
+      sound	data/sounds/air5.wav
+      @cmd    hurt 25
+      @cmd    position 17 50 -7 -1 1
+      frame	data/chars/gokuu/thh5.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 2.5 3 0 0
+      delay	9
+      frame	data/chars/gokuu/thh5.gif
+      frame	data/chars/gokuu/thh5.gif
+      frame	data/chars/gokuu/thh5.gif
+      delay	8
+      frame	data/chars/gokuu/thh6.gif
+      frame	data/chars/gokuu/thh7.gif
+      offset	126 170
+      frame	data/chars/gokuu/thh8.gif
+      offset	70 170
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+
+anim freespecial19
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 38);
+    }
+@end_script
+      loop	0
+	delay	3
+      offset	70 170
+      otg 1
+      landframe 5 du
+      quakeframe 5 3 6
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      @cmd    degravity -4.5
+      sound	data/sounds/air5.wav
+      frame	data/chars/gokuu/jst0.gif
+      delay	30
+      frame	data/chars/gokuu/jst1.gif
+      delay	2
+      attack 40 90 73 80 20 1 0 0 35
+      dropv 1.5 2.5
+      frame	data/chars/gokuu/jst2.gif
+      frame	data/chars/gokuu/jst3.gif
+      delay	150
+      frame	data/chars/gokuu/jst4.gif
+      delay	8
+      sound	data/sounds/ston1.wav
+      @cmd    degravity -0.27
+      @cmd    spawn01 "ston" 0 80 1
+      frame	data/chars/gokuu/jst4.gif
+      attack 0 0 0 0 0 0
+      delay	7
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+anim freespecial20
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd conditionalflip
+      frame	data/chars/gokuu/fsb1.gif
+      delay	18
+      frame	data/chars/gokuu/fsb2.gif
+      delay	9
+      sound	data/chars/gokuu/at11.wav
+      frame	data/chars/gokuu/fsb3.gif
+      @cmd    spawn01 "bine" 38 0 0
+      frame	data/chars/gokuu/fsb4.gif
+      @cmd    spawn01 "bine" 38 0 0
+      frame	data/chars/gokuu/fsb4.gif
+      @cmd    spawn01 "bine" 38 0 0
+      frame	data/chars/gokuu/fsb4.gif
+      @cmd    spawn01 "bine" 38 0 0
+      frame	data/chars/gokuu/fsb4.gif
+      delay	8
+      frame	data/chars/gokuu/fsb4.gif
+
+
+anim freespecial21
+      loop	0
+	delay	6.5
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      sound	data/sounds/air5.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/gokuu/a0.gif
+      frame	data/chars/gokuu/aaaaaaa1.gif
+      sound	data/chars/gokuu/at13.wav
+      blast  85 73 70 65 15 0 0 12
+	frame	data/chars/gokuu/aaaaaaa2.gif
+      delay	15
+      blast	0 0 0 0 0 0
+	frame	data/chars/gokuu/aaaaaaa3.gif
+      delay	7
+	frame	data/chars/gokuu/aaaaaaa4.gif
+      frame	data/chars/gokuu/aaaaaaa5.gif
+      frame	data/chars/gokuu/a0.gif
+
+anim freespecial22
+      loop	0
+      delay	2
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/gokuu/at4.wav
+      move 2
+      frame	data/chars/gokuu/raa1.gif
+      frame	data/chars/gokuu/raa1.gif
+      bbox	60 78 47 80
+      sound	data/sounds/air5.wav
+      frame	data/chars/gokuu/aaaa1.gif
+      frame	data/chars/gokuu/aaaa1.gif
+      frame	data/chars/gokuu/aaaa1.gif
+      move 1
+      attack  85 60 65 80 15 1 0 0 10
+      dropv 3.5 1.1
+      bbox	85 78 47 80
+      frame	data/chars/gokuu/aaaa2.gif
+      delay	3
+      frame	data/chars/gokuu/aaaa2.gif
+      delay	10
+      attack	0 0 0 0 0 0
+      frame	data/chars/gokuu/aaaa3.gif
+      frame	data/chars/gokuu/aaaa3.gif
+      move 0
+      delay	7
+      bbox	60 78 47 80
+      frame	data/chars/gokuu/aaaa1.gif
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/a0.gif
+
+anim freespecial23
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==7){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 31);
+    }
+@end_script
+      loop	0
+	delay	8
+      offset	70 170
+      jumpframe 1 6.5 0
+      landframe 16 dus
+      shadowcoords 999 999
+      weaponframe 10 1
+      @cmd    spawn01 "surf1" 200 120 2
+      @cmd conditionalflip
+      frame	data/chars/gokuu/idle.gif
+      delay	6
+      frame	data/chars/gokuu/j1.gif
+      sound	data/sounds/jump.wav
+      delay	4
+      @cmd    degravity -0.7
+      frame	data/chars/gokuu/j2.gif
+      frame	data/chars/gokuu/j2.gif
+      frame	data/chars/gokuu/j2.gif
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j4.gif
+      delay	8
+      @cmd    degravity 0
+      frame	data/chars/gokuu/j2.gif
+      frame	data/chars/gokuu/j1.gif
+      delay	11
+      frame	data/chars/gokuu/idle.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j5.gif
+      frame	data/chars/gokuu/j5.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j4.gif
+      frame	data/chars/gokuu/j3.gif
+      frame	data/chars/gokuu/j3.gif
+      delay	50
+      frame	data/chars/gokuu/j2.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/gokuu/j1.gif
+      frame	data/chars/gokuu/jl1.gif
+      frame	data/chars/gokuu/j1.gif
+
+

@@ -1,0 +1,33 @@
+name	meat
+health	120
+type	item
+shadow	0
+nolife   1
+facing 1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	29 44
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/meat3.gif
+      delay	50
+      frame	data/sprites/aniback/meat1.gif
+      delay	5
+      frame	data/sprites/aniback/meat2.gif
+      offset	29 45
+      frame	data/sprites/aniback/meat3.gif
+
+anim idle
+	loop	1
+	delay	9
+	offset	29 44
+	bbox	15 25 30 20
+	frame	data/sprites/aniback/meat1.gif
+	frame	data/sprites/aniback/meat2.gif
+      frame	data/sprites/aniback/meat3.gif
+	
+
+
+

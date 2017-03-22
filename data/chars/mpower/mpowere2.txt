@@ -1,0 +1,1480 @@
+name	mpowere2
+health	300
+speed	11
+type	enemy
+shadow  0
+throw         5 2
+paingrab 1
+grabback 1
+grabdistance	54
+gfxshadow  1
+jumpheight 4.0
+falldie 2
+nodieblink      1
+dust du
+diesound	data/chars/mpower/die.wav
+aimove chase
+aimove wander
+thold 25
+blockodds 1
+escapehits 4
+bflash bflash
+projectilehit   enemy obstacle trap
+icon	data/chars/mpower/icon2.gif
+hostile player 
+candamage player obstacle
+subject_to_wall 0
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/mpower/map1.gif
+
+anim spawn
+      loop	0
+      delay	6
+      offset	70 170
+      jumpframe 0 0 2
+      landframe 7 dus
+      quakeframe 7 4 4
+      @cmd    degravity -0.27
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/mpower/jback1.gif
+      frame	data/chars/mpower/jback1.gif
+      frame	data/chars/mpower/jback2.gif
+      frame	data/chars/mpower/jback2.gif
+      frame	data/chars/mpower/jback3.gif
+      frame	data/chars/mpower/jback3.gif
+      delay	40
+      frame	data/chars/mpower/j2.gif
+      delay	10
+      @cmd    degravity 0
+      sound	data/sounds/indirect.wav
+      frame	data/chars/mpower/j1.gif
+      delay	15
+      frame	data/chars/mpower/jl3.gif
+      delay	10
+      frame	data/chars/mpower/j1.gif
+      delay	10
+      frame	data/chars/mpower/idle1.gif
+      frame	data/chars/mpower/idle2.gif
+      frame	data/chars/mpower/spawn1.gif
+      sound	data/chars/mpower/at77.wav
+      frame	data/chars/mpower/spawn2.gif
+      frame	data/chars/mpower/spawn3.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn5.gif
+      frame	data/chars/mpower/spawn6.gif
+      sound	data/chars/mpower/at2.wav
+      frame	data/chars/mpower/spawn7.gif
+      frame	data/chars/mpower/spawn7.gif
+      frame	data/chars/mpower/spawn7.gif
+      delay	10
+      frame	data/chars/mpower/spawn1.gif
+      delay	17
+      bbox	50 78 47 80
+      frame	data/chars/mpower/idle2.gif
+      frame	data/chars/mpower/idle1.gif
+
+anim idle
+	loop	1
+	delay	17
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd    clearL
+      frame	data/chars/mpower/idle.gif
+      frame	data/chars/mpower/idle1.gif
+      frame	data/chars/mpower/idle2.gif
+      frame	data/chars/mpower/idle1.gif
+
+anim walk
+	loop	1
+      delay   14
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/mpower/w1.gif
+	frame	data/chars/mpower/w2.gif
+	frame	data/chars/mpower/w3.gif
+	frame	data/chars/mpower/w4.gif
+	frame	data/chars/mpower/w5.gif
+	frame	data/chars/mpower/w6.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/mpower/bl1.gif
+      frame	data/chars/mpower/bl1.gif
+      delay	2
+      offset	73 170
+	frame	data/chars/mpower/bl1.gif
+      offset	70 170
+      frame	data/chars/mpower/bl1.gif
+      offset	67 170
+      frame	data/chars/mpower/bl1.gif
+      offset	70 170
+      frame	data/chars/mpower/bl1.gif
+      delay	3
+      move -4
+      frame	data/chars/mpower/bl1.gif
+      frame	data/chars/mpower/bl2.gif
+      frame	data/chars/mpower/bl2.gif
+      frame	data/chars/mpower/bl3.gif
+      frame	data/chars/mpower/bl3.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	70 170
+      frame	data/chars/mpower/pain4.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	65 186
+      frame	data/chars/mpower/pain2.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	70 170
+      bbox	0 0 0 0
+      frame	data/chars/mpower/pain4.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	70 170
+      frame	data/chars/mpower/pain4.gif
+
+anim pain
+	loop	0
+	delay	4
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/mpower/pain2.gif
+      offset	72 170
+	frame	data/chars/mpower/pain2.gif
+      offset	69 170
+	frame	data/chars/mpower/pain2.gif
+      offset	71 170
+      frame	data/chars/mpower/pain2.gif
+      offset	70 170
+      frame	data/chars/mpower/pain2.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/mpower/pain2.gif
+      offset	72 170
+	frame	data/chars/mpower/pain2.gif
+      offset	68 170
+	frame	data/chars/mpower/pain2.gif
+      offset	72 170
+      frame	data/chars/mpower/pain2.gif
+      offset	70 170
+      frame	data/chars/mpower/pain2.gif
+      delay	45
+      frame	data/chars/mpower/pain4.gif
+      frame	data/chars/mpower/pain4.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	95 120
+      bbox	40 85 100 35
+	frame	data/chars/mpower/fall08.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	95 120
+	frame	data/chars/mpower/fall08.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/mpower/pain4.gif
+      offset	72 170
+	frame	data/chars/mpower/pain4.gif
+      offset	68 170
+	frame	data/chars/mpower/pain4.gif
+      offset	72 170
+      frame	data/chars/mpower/pain4.gif
+      offset	70 170
+      frame	data/chars/mpower/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      move -4
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/mpower/bpain04.gif
+      offset	72 170
+	frame	data/chars/mpower/bpain04.gif
+      offset	68 170
+	frame	data/chars/mpower/bpain4.gif
+      offset	72 170
+      frame	data/chars/mpower/bpain4.gif
+      offset	70 170
+      frame	data/chars/mpower/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/mpower/bpain02.gif
+      frame	data/chars/mpower/bpain02.gif
+      frame	data/chars/mpower/bpain2.gif
+      frame	data/chars/mpower/bpain2.gif
+      frame	data/chars/mpower/bpain02.gif
+      frame	data/chars/mpower/bpain02.gif
+      frame	data/chars/mpower/bpain2.gif
+      frame	data/chars/mpower/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	70 170
+	frame	data/chars/mpower/pain2.gif
+      offset	72 170
+	frame	data/chars/mpower/pain2.gif
+      offset	69 170
+	frame	data/chars/mpower/pain2.gif
+      offset	71 170
+      frame	data/chars/mpower/pain2.gif
+      offset	70 170
+      frame	data/chars/mpower/pain2.gif
+      frame	data/chars/mpower/pain4.gif
+      frame	data/chars/mpower/pain4.gif
+      frame	data/chars/mpower/pain4.gif
+      frame	data/chars/mpower/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/mpower/fall01.gif 
+	frame	data/chars/mpower/fall01.gif
+      attack  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      bbox	55 78 80 57
+	frame	data/chars/mpower/fall02.gif
+	frame	data/chars/mpower/fall02.gif
+      delay   20
+      bbox	55 78 70 57
+	frame	data/chars/mpower/fall03.gif
+	frame	data/chars/mpower/fall03.gif
+      delay   10
+      offset	95 120
+      bbox	40 90 55 30
+      @cmd    degravity 0
+	frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/mpower/fall04.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	70 170
+      move -4
+      frame	data/chars/mpower/pain5.gif
+      frame	data/chars/mpower/pain5.gif
+      frame	data/chars/mpower/pain5.gif
+      delay   2
+      move -5
+      offset	110 128
+      sound	data/sounds/fall.wav
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu4.gif
+      frame	data/chars/mpower/ruu4.gif
+      frame	data/chars/mpower/ruu4.gif
+      move -4
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu3.gif
+      bbox	52 60 60 70
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu4.gif
+      frame	data/chars/mpower/ruu4.gif
+      frame	data/chars/mpower/ruu4.gif
+      move -3
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      @cmd    degravity 0
+      offset	95 120
+      bbox	40 90 55 30
+      frame	data/chars/mpower/fall08.gif
+      frame	data/chars/mpower/fall08.gif
+      frame	data/chars/mpower/fall08.gif
+      frame	data/chars/mpower/fall08.gif
+      attack10  0 0 0 0 0 0
+	frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      move -3
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      move 0
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      move 0
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      frame	data/chars/mpower/dsla1.gif
+	frame	data/chars/mpower/dsla2.gif
+	frame	data/chars/mpower/dsla3.gif
+      frame	data/chars/mpower/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/mpower/sla3.gif
+      offset	125 120
+      frame	data/chars/mpower/sla2.gif
+      offset	75 170
+      frame	data/chars/mpower/pain4.gif
+      offset	83 140
+      frame	data/chars/mpower/sla1.gif
+      frame	data/chars/mpower/sla2.gif
+      frame	data/chars/mpower/rjsla3.gif
+      offset	75 150
+      frame	data/chars/mpower/rjsla4.gif
+      frame	data/chars/mpower/rjsla5.gif
+      offset	95 170
+      frame	data/chars/mpower/ffall01.gif
+      offset	95 120
+      frame	data/chars/mpower/fall08.gif
+      offset	95 170
+      frame	data/chars/mpower/ffall04.gif
+      offset	90 170
+      frame	data/chars/mpower/rj0.gif
+      offset	110 170
+      frame	data/chars/mpower/rj00.gif
+      offset	118 152
+      frame	data/chars/mpower/gsla2.gif
+      offset	115 115
+      frame	data/chars/mpower/gfall08.gif
+      offset	115 165
+      frame	data/chars/mpower/gfall04.gif
+      offset	128 175
+      frame	data/chars/mpower/pain41.gif
+      offset	115 170
+      frame	data/chars/mpower/dsla22.gif
+      offset	124 170
+	frame	data/chars/mpower/dsla33.gif
+      offset	75 150
+      frame	data/chars/mpower/rjsla7.gif
+      offset	70 170
+      frame	data/chars/mpower/pain2.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/mpower/sla1.gif
+      offset	112 145
+	frame	data/chars/mpower/sla2.gif
+      offset	90 145
+	frame	data/chars/mpower/sla3.gif
+      frame	data/chars/mpower/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/mpower/ffall04.gif
+      offset	85 145
+      frame	data/chars/mpower/sla1.gif
+      frame	data/chars/mpower/sla1.gif
+      offset	98 138
+      frame	data/chars/mpower/ssla3.gif
+      frame	data/chars/mpower/rjsla3.gif
+      frame	data/chars/mpower/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/mpower/rjsla4.gif
+      frame	data/chars/mpower/rjsla5.gif
+      frame	data/chars/mpower/rjsla6.gif
+      frame	data/chars/mpower/sla1.gif
+      frame	data/chars/mpower/sla1.gif
+      frame	data/chars/mpower/ssla3.gif
+      frame	data/chars/mpower/sla2.gif
+      offset	123 170
+      frame	data/chars/mpower/sla3.gif
+      offset	98 138
+      frame	data/chars/mpower/hsla1.gif
+      frame	data/chars/mpower/hsla2.gif
+      frame	data/chars/mpower/hsla3.gif
+      frame	data/chars/mpower/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/mpower/hsla2.gif
+      frame	data/chars/mpower/hsla4.gif
+      frame	data/chars/mpower/rj1.gif
+      frame	data/chars/mpower/gsla3.gif
+      frame	data/chars/mpower/rj3.gif
+      frame	data/chars/mpower/hsla4.gif
+      offset	98 148
+      frame	data/chars/mpower/hsla4.gif
+      offset	123 170
+      frame	data/chars/mpower/pain41.gif
+      offset	123 169
+      frame	data/chars/mpower/pain21.gif
+      offset	70 170
+      frame	data/chars/mpower/pain4.gif
+      offset	125 170
+      frame	data/chars/mpower/pain41.gif
+      frame	data/chars/mpower/pain55.gif
+      offset	100 140
+      frame	data/chars/mpower/fall066.gif
+      offset	70 170
+      frame	data/chars/mpower/pain5.gif
+      offset	105 85
+      frame	data/chars/mpower/dsla3.gif
+      offset	70 170
+      frame	data/chars/mpower/pain4.gif
+      offset	75 170
+      frame	data/chars/mpower/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/mpower/gsla1.gif
+      offset	112 145
+	frame	data/chars/mpower/gsla2.gif
+      offset	90 145
+	frame	data/chars/mpower/gsla3.gif
+      frame	data/chars/mpower/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/mpower/gsla6.gif
+      offset	115 170
+      frame	data/chars/mpower/dsla1.gif
+      offset	115 145
+	frame	data/chars/mpower/gsla3.gif
+      offset	70 170
+      frame	data/chars/mpower/pain4.gif
+      offset	105 170
+      frame	data/chars/mpower/gfall04.gif
+      offset	75 148
+      frame	data/chars/mpower/rjsla4.gif
+      frame	data/chars/mpower/rjsla5.gif
+      offset	95 170
+      frame	data/chars/mpower/ffall04.gif
+      offset	75 143
+      frame	data/chars/mpower/hsla2.gif
+      frame	data/chars/mpower/hsla4.gif
+      offset	129 170
+      frame	data/chars/mpower/pain4.gif
+      offset	95 170
+      frame	data/chars/mpower/ffall01.gif
+      frame	data/chars/mpower/ffall02.gif
+      frame	data/chars/mpower/ffall03.gif
+      frame	data/chars/mpower/ffall04.gif
+      frame	data/chars/mpower/ffall04.gif
+      offset	104 170
+      frame	data/chars/mpower/gsla2.gif
+      frame	data/chars/mpower/gsla3.gif
+      frame	data/chars/mpower/gsla4.gif
+      frame	data/chars/mpower/gfall04.gif
+      frame	data/chars/mpower/gfall04.gif
+      offset	70 165
+      frame	data/chars/mpower/pain5.gif
+      offset	75 165
+      frame	data/chars/mpower/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	110 138
+      bbox	55 78 70 57
+      landframe 3
+      @cmd    degravity -0.27
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/mpower/fall03.gif
+      frame	data/chars/mpower/fall03.gif
+      offset	95 120
+      bbox	40 90 55 30
+      delay   100
+      frame	data/chars/mpower/fall04.gif
+      delay   2
+      @cmd    degravity 0
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/mpower/fall04.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	110 138
+      bbox	55 78 70 57
+      landframe 3
+      @cmd    degravity -0.27
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/mpower/fall03.gif
+      frame	data/chars/mpower/fall03.gif
+      offset	95 120
+      bbox	40 90 55 30
+      delay   100
+      frame	data/chars/mpower/fall04.gif
+      delay   2
+      @cmd    degravity 0
+	frame	data/chars/mpower/fall04.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity -0.27
+      frame	data/chars/mpower/sla3.gif
+      frame	data/chars/mpower/sla3.gif
+      delay   10
+      offset	113 138
+      bbox	55 78 80 57
+      frame	data/chars/mpower/fall02.gif
+      frame	data/chars/mpower/fall02.gif
+      delay   20
+      bbox	55 78 70 57
+	frame	data/chars/mpower/fall03.gif
+      delay   500
+      frame	data/chars/mpower/fall03.gif
+      offset	95 120
+      delay   10
+      bbox	40 90 55 30
+      @cmd    degravity 0
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/mpower/fall04.gif
+
+
+anim fall10
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      attack  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/mpower/fall01.gif
+	frame	data/chars/mpower/fall01.gif
+	frame	data/chars/mpower/fall02.gif
+	frame	data/chars/mpower/fall02.gif
+      delay   20
+	frame	data/chars/mpower/fall03.gif
+	frame	data/chars/mpower/fall03.gif
+      delay   10
+      offset	95 120
+	frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/mpower/fall04.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 120
+      bbox	40 85 100 35
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+	frame	data/chars/mpower/fall08.gif
+      frame	data/chars/mpower/fall04.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 120
+      bbox	40 85 100 35
+      @cmd    degravity 0
+	frame	data/chars/mpower/fall04.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/mpower/fall01.gif
+	attack  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/mpower/fall01.gif
+	frame	data/chars/mpower/fall02.gif
+	frame	data/chars/mpower/fall02.gif
+      delay   20
+	frame	data/chars/mpower/fall03.gif
+	frame	data/chars/mpower/fall03.gif
+      delay   10
+      offset	95 120
+      @cmd    degravity 0
+	frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/mpower/fall04.gif
+
+anim fall16
+	loop	0
+      delay   4
+      offset	70 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+	frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif 
+	frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif
+      frame	data/chars/mpower/ppain2.gif
+      frame	data/chars/mpower/ppain22.gif
+      frame	data/chars/mpower/ppain2.gif
+	delay   40
+	frame	data/chars/mpower/ppain22.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/mpower/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/mpower/fall04.gif
+	delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/mpower/fall04.gif
+
+anim burn
+	loop	0
+      delay   6
+	offset	110 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    degravity -0.27
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/mpower/burn01.gif
+	frame	data/chars/mpower/burn1.gif
+      frame	data/chars/mpower/burn01.gif
+	frame	data/chars/mpower/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/mpower/burn02.gif
+	frame	data/chars/mpower/burn2.gif
+      frame	data/chars/mpower/burn02.gif
+	frame	data/chars/mpower/burn2.gif
+      frame	data/chars/mpower/burn03.gif
+      frame	data/chars/mpower/burn3.gif
+	frame	data/chars/mpower/burn03.gif
+      frame	data/chars/mpower/burn3.gif
+      frame	data/chars/mpower/burn03.gif
+      frame	data/chars/mpower/burn3.gif
+      delay   40
+	frame	data/chars/mpower/burn03.gif
+      offset	95 120
+      delay   7
+      @cmd    degravity 0
+      bbox	55 90 45 30
+	frame	data/chars/mpower/burn4.gif
+      bbox	0 0 0 0
+      frame	data/chars/mpower/burn04.gif
+      frame	data/chars/mpower/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/mpower/fall04.gif
+
+anim rise
+	loop	0
+	offset	95 120
+      delay   15
+	frame	data/chars/mpower/fall04.gif
+	delay	9
+	frame	data/chars/mpower/rise1.gif
+	frame	data/chars/mpower/rise2.gif
+	frame	data/chars/mpower/rise3.gif
+	frame	data/chars/mpower/rise4.gif
+	
+anim attack1
+	loop	0
+      range 80 280
+      rangez 10 50
+      delay	9
+      offset	70 170
+      bbox	50 78 47 80
+      followcond 1
+      followanim 4
+      jumpframe 7 0 5
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/mpower/at77.wav
+      frame	data/chars/mpower/fsp1.gif
+      frame	data/chars/mpower/fsp2.gif
+      frame	data/chars/mpower/fsp3.gif
+      frame	data/chars/mpower/fsp2.gif
+      frame	data/chars/mpower/fsp3.gif
+      frame	data/chars/mpower/fsp2.gif
+      delay	11
+      frame	data/chars/mpower/fsp1.gif
+      sound	data/chars/mpower/at12.wav
+      delay	2
+      movez 1
+	frame	data/chars/mpower/fsp4.gif
+	frame	data/chars/mpower/fsp4.gif
+     	frame	data/chars/mpower/fsp5.gif
+      frame	data/chars/mpower/fsp5.gif
+      frame	data/chars/mpower/fsp5.gif
+      attack12 70 75 55 40 25 1 0 0 45
+      dropv 2 3.5
+      forcedirection -1
+	frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+	frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+	frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+	frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+      attack12 0 0 0 0 0 0
+	frame	data/chars/mpower/fsp6.gif
+      @cmd    anichange "ANI_FOLLOW5"
+      frame	data/chars/mpower/fsp6.gif
+	frame	data/chars/mpower/fsp6.gif
+
+anim follow4
+      loop	0
+	delay	5
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      quakeframe 1 4 4
+      attack  70 75 65 40 25 1 0 0 30
+      dropv 2 3.5
+      movez 1
+      frame	data/chars/mpower/fsp7.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+	frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/aa3.gif
+      frame	data/chars/mpower/aa3.gif
+      movez 0
+      @cmd    stop
+      delay	10
+      frame	data/chars/mpower/idle.gif
+      frame	data/chars/mpower/idle2.gif
+      delay	13
+      frame	data/chars/mpower/spawn1.gif
+      frame	data/chars/mpower/spawn2.gif
+      sound	data/chars/mpower/select.wav
+      frame	data/chars/mpower/spawn3.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn5.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn5.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn3.gif
+      delay	10
+      frame	data/chars/mpower/spawn1.gif
+
+anim follow5
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      movez 1
+      frame	data/chars/mpower/fsp6.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/mpower/fsp6.gif
+      delay	2
+      attack  70 75 65 40 25 1 0 0 45
+      dropv 2 3.5
+	frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/aa3.gif
+      frame	data/chars/mpower/aa3.gif
+      frame	data/chars/mpower/aa3.gif
+      frame	data/chars/mpower/aa3.gif
+
+anim attack2
+	loop	0
+      range 80 280
+      rangez -50 -10
+      delay	9
+      offset	70 170
+      bbox	50 78 47 80
+      followcond 1
+      followanim 6
+      jumpframe 7 0 5
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/mpower/at77.wav
+      frame	data/chars/mpower/fsp1.gif
+      frame	data/chars/mpower/fsp2.gif
+      frame	data/chars/mpower/fsp3.gif
+      frame	data/chars/mpower/fsp2.gif
+      frame	data/chars/mpower/fsp3.gif
+      frame	data/chars/mpower/fsp2.gif
+      delay	11
+      frame	data/chars/mpower/fsp1.gif
+      sound	data/chars/mpower/at12.wav
+      delay	2
+      movez -1
+	frame	data/chars/mpower/fsp4.gif
+	frame	data/chars/mpower/fsp4.gif
+     	frame	data/chars/mpower/fsp5.gif
+      frame	data/chars/mpower/fsp5.gif
+      frame	data/chars/mpower/fsp5.gif
+      attack12 70 75 55 40 25 1 0 0 45
+      dropv 2 3.5
+      forcedirection -1
+	frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+	frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+	frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+	frame	data/chars/mpower/fsp6.gif
+      frame	data/chars/mpower/fsp6.gif
+      attack12 0 0 0 0 0 0
+	frame	data/chars/mpower/fsp6.gif
+      @cmd    anichange "ANI_FOLLOW7"
+      frame	data/chars/mpower/fsp6.gif
+	frame	data/chars/mpower/fsp6.gif
+
+anim follow6
+      loop	0
+	delay	5
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      quakeframe 1 4 4
+      attack  70 75 65 40 25 1 0 0 30
+      dropv 2 3.5
+      movez -1
+      frame	data/chars/mpower/fsp7.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+	frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/aa3.gif
+      frame	data/chars/mpower/aa3.gif
+      movez 0
+      @cmd    stop
+      delay	10
+      frame	data/chars/mpower/idle.gif
+      frame	data/chars/mpower/idle2.gif
+      delay	13
+      frame	data/chars/mpower/spawn1.gif
+      frame	data/chars/mpower/spawn2.gif
+      sound	data/chars/mpower/select.wav
+      frame	data/chars/mpower/spawn3.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn5.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn5.gif
+      frame	data/chars/mpower/spawn4.gif
+      frame	data/chars/mpower/spawn3.gif
+      delay	10
+      frame	data/chars/mpower/spawn1.gif
+
+anim follow7
+      loop	0
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat2.wav
+      jumpframe 0 0 2
+      movez -1
+      frame	data/chars/mpower/fsp6.gif
+      sound	data/sounds/air3.wav
+	frame	data/chars/mpower/fsp6.gif
+      delay	2
+      attack  70 75 65 40 25 1 0 0 45
+      dropv 2 3.5
+	frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      frame	data/chars/mpower/fsp7.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/fsp8.gif
+      frame	data/chars/mpower/aa3.gif
+      frame	data/chars/mpower/aa3.gif
+      frame	data/chars/mpower/aa3.gif
+      frame	data/chars/mpower/aa3.gif
+
+anim attack3
+	loop	0
+      range 110 280
+	delay	15
+      offset	70 170
+      followcond 1
+      followanim 9
+      jumpframe 3 2 5 0 dus
+      landframe 25 dus
+      hitfx   data/sounds/beat2.wav
+      bbox	50 78 47 80
+      sound	data/chars/mpower/at4.wav
+      frame	data/chars/mpower/j1.gif
+      frame	data/chars/mpower/jl3.gif
+      frame	data/chars/mpower/j1.gif
+      sound	data/chars/mpower/at1.wav
+      @cmd    degravity -0.27
+      bbox	0 0 0 0
+      delay	3
+      frame	data/chars/mpower/j2.gif
+      frame	data/chars/mpower/j2.gif
+      bbox	50 80 45 50
+      delay	2
+      frame	data/chars/mpower/ja1.gif
+      frame	data/chars/mpower/ja1.gif
+      sound	data/sounds/air3.wav
+      attack  70 85 80 45 25 1 0 0 50
+      frame	data/chars/mpower/ja2.gif
+      delay	2
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      attack  0 0 0 0 0 0
+      delay	40
+      frame	data/chars/mpower/ja1.gif
+      bbox	50 78 47 80
+      @cmd    degravity 0
+      delay	2
+      move 4
+      sound	data/sounds/step.wav
+      frame	data/chars/mpower/j1.gif
+      frame	data/chars/mpower/j1.gif
+      frame	data/chars/mpower/jl3.gif
+      frame	data/chars/mpower/jl3.gif
+      frame	data/chars/mpower/jl3.gif
+      frame	data/chars/mpower/jl3.gif
+      frame	data/chars/mpower/jl3.gif
+      frame	data/chars/mpower/jl3.gif
+      move 2
+      frame	data/chars/mpower/jl3.gif
+      frame	data/chars/mpower/jl3.gif
+      move 0
+      frame	data/chars/mpower/jl3.gif
+      frame	data/chars/mpower/jl3.gif
+
+anim  follow9
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 110);
+    }
+@end_script
+      loop	0
+	delay	11
+      offset	70 170
+      jumpframe 2 3 -1.5
+      landframe 10 dus
+      quakeframe 1 3 4
+      attack  70 85 80 45 25 1 0 0 20
+      @cmd    degravity -0.27
+      frame	data/chars/mpower/ja2.gif
+      frame	data/chars/mpower/ja2.gif
+      attack  0 0 0 0 0 0
+      delay	8
+      offset	70 170
+      frame	data/chars/mpower/jback1.gif
+      frame	data/chars/mpower/jback2.gif
+      frame	data/chars/mpower/jback3.gif
+      frame	data/chars/mpower/j2.gif
+      frame	data/chars/mpower/j2.gif
+      frame	data/chars/mpower/j2.gif
+      frame	data/chars/mpower/j2.gif
+      delay	40
+      frame	data/chars/mpower/j2.gif
+      delay	14
+      bbox	50 78 47 80
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/mpower/j1.gif
+      frame	data/chars/mpower/idle.gif
+      frame	data/chars/mpower/spawn1.gif
+      sound	data/chars/mpower/at2.wav
+      frame	data/chars/mpower/spawn3.gif
+      frame	data/chars/mpower/spawn7.gif
+      sound	data/chars/mpower/at2.wav
+      frame	data/chars/mpower/spawn6.gif
+      frame	data/chars/mpower/spawn7.gif
+      frame	data/chars/mpower/spawn7.gif
+      frame	data/chars/mpower/spawn1.gif
+
+anim attack4
+	loop	0
+      range 65 85
+	delay	11
+      offset	70 170
+      bbox	50 78 47 80
+      followcond 2
+      followanim 10
+      attackone 1
+      hitfx   data/sounds/go.wav
+      frame	data/chars/mpower/bl3.gif
+      frame	data/chars/mpower/grab10.gif
+      frame	data/chars/mpower/grab11.gif
+      attack12  100 90 50 40 0 0 1 1 20
+      nokill 1
+      frame	data/chars/mpower/grab12.gif
+      frame	data/chars/mpower/j1.gif
+
+anim follow10
+      loop	0
+	delay	12
+      offset	70 170
+      quakeframe 5 4 7
+      sound	data/chars/mpower/at5.wav
+      @cmd    slamstart4
+      @cmd    position 1 34 0 -1 0
+      frame	data/chars/mpower/tth1.gif
+      frame	data/chars/mpower/tth2.gif
+      @cmd    position 1 34 30 0 0
+      frame	data/chars/mpower/tth3.gif
+      @cmd    position 3 -12 100 0 0
+      delay	18
+      frame	data/chars/mpower/th2.gif
+      @cmd    position 0 5 58 0 1
+      delay	10
+      frame	data/chars/mpower/th3.gif
+      delay	8
+      @cmd    position 4 69 -25 0 1
+      frame	data/chars/mpower/th4.gif
+      @cmd    position 5 64 1 0 1
+      frame	data/chars/mpower/th4.gif
+      frame	data/chars/mpower/th4.gif
+      @cmd    depost 0
+      @cmd    finish 30 2 2 2 0 1
+      frame	data/chars/mpower/th4.gif
+
+anim attack5
+      loop	0
+      range 0 60
+	delay	11
+      offset	70 170
+      bbox	50 78 47 80
+      followcond 2
+      followanim 11
+      attackone 1
+      hitfx   data/sounds/go.wav
+      frame	data/chars/mpower/bl3.gif
+      frame	data/chars/mpower/grab10.gif
+      frame	data/chars/mpower/grab11.gif
+      attack12  100 90 50 40 0 0 1 1 20
+      nokill 1
+      frame	data/chars/mpower/grab12.gif
+      frame	data/chars/mpower/j1.gif
+
+anim follow11
+      loop	0
+	delay	12
+      offset	70 170
+      attackone 0
+      quakeframe 5 5 7
+      flipframe 5
+      sound	data/chars/mpower/at2.wav
+      @cmd    slamstart4
+      @cmd    position 1 34 0 -1 0
+      frame	data/chars/mpower/tth1.gif
+      frame	data/chars/mpower/tth2.gif
+      @cmd    position 1 34 30 0 0
+      frame	data/chars/mpower/tth3.gif
+      @cmd    position 2 -7 107 0 0
+      delay	18
+      frame	data/chars/mpower/tth4.gif
+      @cmd    position 0 -132 35 0 1
+      offset	135 170
+      delay	10
+      @cmd    antiwall -30 70 -1
+      @cmd    antiwall -50 50 -1
+      @cmd    antiwall -70 30 -1
+      frame	data/chars/mpower/tth5.gif
+      delay	8
+      offset	62 170
+      @cmd    position 3 130 0 0 1
+      @cmd    antiwall 30 -70 -1
+      @cmd    antiwall 50 -50 -1
+      @cmd    antiwall 70 -30 -1
+      frame	data/chars/mpower/tth7.gif
+      @cmd    antiwall 30 -70 -1
+      @cmd    antiwall 50 -50 -1
+      @cmd    antiwall 70 -30 -1
+      frame	data/chars/mpower/tth7.gif
+      @cmd    depost 0
+      @cmd    finish 30 2 2 2 0 0
+      @cmd    antiwall 30 -70 -1
+      @cmd    antiwall 50 -50 -1
+      @cmd    antiwall 70 -30 -1
+      frame	data/chars/mpower/tth7.gif
+      frame	data/chars/mpower/tth7.gif
+      offset	104 120
+	delay	9
+	frame	data/chars/mpower/rise11.gif
+	frame	data/chars/mpower/rise22.gif
+	frame	data/chars/mpower/rise33.gif
+	frame	data/chars/mpower/rise44.gif
+
+anim attack6
+      loop	0
+      range 90 100
+      delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      move 4
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/mpower/ra1.gif
+      frame	data/chars/mpower/ra1.gif
+      frame	data/chars/mpower/ra2.gif
+      frame	data/chars/mpower/ra2.gif
+      sound	data/chars/mpower/at6.wav
+      frame	data/chars/mpower/ra2.gif
+      frame	data/chars/mpower/ra2.gif
+      delay	2
+      move 3
+	frame	data/chars/mpower/ra3.gif
+      frame	data/chars/mpower/ra3.gif
+      attack 85 110 65 40 20 1 0 0 35 
+      dropv 2 3.5
+      frame	data/chars/mpower/ra4.gif
+      frame	data/chars/mpower/ra4.gif
+	frame	data/chars/mpower/ra4.gif
+	delay	3
+      frame	data/chars/mpower/ra4.gif
+      move 2
+      attack 0 0 0 0 0 0
+      frame	data/chars/mpower/ra4.gif
+      frame	data/chars/mpower/ra4.gif
+      frame	data/chars/mpower/ra4.gif
+      frame	data/chars/mpower/ra4.gif
+      move 1
+      frame	data/chars/mpower/ra4.gif
+      frame	data/chars/mpower/ra4.gif
+      move 0
+      delay	8
+      frame	data/chars/mpower/jl1.gif
+
+anim special
+	loop	0
+	delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      followcond 2
+      followanim 11
+      attackone 1
+      hitfx   data/sounds/go.wav
+      frame	data/chars/mpower/bl3.gif
+      frame	data/chars/mpower/grab10.gif
+      frame	data/chars/mpower/grab11.gif
+      attack12  100 90 50 40 0 0 1 1 20
+      nokill 1
+      frame	data/chars/mpower/grab12.gif
+      frame	data/chars/mpower/j1.gif
+
+anim special2
+      loop	0
+	delay	4
+      offset	70 170
+      frame	data/chars/mpower/sp1.gif
+      sound	data/chars/mpower/at3.wav
+      frame	data/chars/mpower/sp1.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/mpower/sp3.gif
+      frame	data/chars/mpower/sp3.gif
+      attack15  15 65 130 60 20 1 0 0 25
+      frame	data/chars/mpower/sp4.gif
+      frame	data/chars/mpower/sp4.gif
+      attack15	0 0 0 0 0 0 
+      frame	data/chars/mpower/sp5.gif
+      frame	data/chars/mpower/sp5.gif
+      attack15  15 65 130 60 20 1 0 0 25
+      frame	data/chars/mpower/sp6.gif
+      frame	data/chars/mpower/sp6.gif
+      attack15	0 0 0 0 0 0
+      sound	data/sounds/air5.wav
+      frame	data/chars/mpower/sp3.gif
+      frame	data/chars/mpower/sp3.gif
+      attack15  15 65 130 60 20 1 0 0 25
+      frame	data/chars/mpower/sp4.gif
+      frame	data/chars/mpower/sp4.gif
+      attack15	0 0 0 0 0 0
+      frame	data/chars/mpower/sp5.gif
+      frame	data/chars/mpower/sp5.gif
+
+anim grab
+	loop	0
+	delay	4
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/mpower/grab1.gif
+      frame	data/chars/mpower/grab1.gif
+      frame	data/chars/mpower/grab1.gif
+      frame	data/chars/mpower/grab1.gif
+
+anim grabattack
+	loop	0
+      delay	15
+      offset	70 170
+      quakeframe 2 2 2
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/mpower/grat1.gif
+      delay	13
+      attack  90 90 35 25 10 0 
+      frame	data/chars/mpower/grat2.gif
+      attack  0 0 0 0 0 0
+      delay	10
+      frame	data/chars/mpower/grat2.gif
+      delay	6
+      frame	data/chars/mpower/grat2.gif
+
+anim grabattack2
+	loop	0
+      delay	15
+      offset	70 170
+      quakeframe 2 2 4
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/mpower/grat1.gif
+      attack  90 90 35 25 15 1
+      frame	data/chars/mpower/grat2.gif
+      attack  0 0 0 0 0 0
+      delay	13
+      frame	data/chars/mpower/grat2.gif
+      delay	6
+      frame	data/chars/mpower/a1.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	95 120
+      frame	data/chars/mpower/fall04.gif
+
+
+anim death3
+	loop	0
+      delay   9
+	offset	95 120
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/mpower/fall08.gif
+      delay   20
+      frame	data/chars/mpower/fall04.gif
+
+anim death4
+	loop	0
+      delay   2
+	offset	110 128
+      move -5
+      sound	data/sounds/fall.wav
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu4.gif
+      frame	data/chars/mpower/ruu4.gif
+      frame	data/chars/mpower/ruu4.gif
+      move -4
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu3.gif
+      bbox	52 60 60 70
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu4.gif
+      frame	data/chars/mpower/ruu4.gif
+      frame	data/chars/mpower/ruu4.gif
+      move -3
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu3.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu2.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      frame	data/chars/mpower/ruu1.gif
+      offset	95 120
+      frame	data/chars/mpower/fall08.gif
+      frame	data/chars/mpower/fall08.gif
+      frame	data/chars/mpower/fall08.gif
+      frame	data/chars/mpower/fall08.gif
+      attack10  0 0 0 0 0 0
+      bbox	40 85 100 35
+	frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      move -3
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      move 0
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      move 0
+      frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+      move 0
+      delay   40
+	frame	data/chars/mpower/fall04.gif
+      frame	data/chars/mpower/fall04.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	95 120
+      frame	data/chars/mpower/fall04.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	95 120
+      frame	data/chars/mpower/fall04.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	95 120
+      frame	data/chars/mpower/fall04.gif
+
+
+
+
+

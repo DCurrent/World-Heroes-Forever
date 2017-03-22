@@ -1,0 +1,17 @@
+name    peop
+type	none
+facing 1
+
+anim idle
+	loop	1
+        delay   12
+	  offset	92 170
+        frame   data/levels/guinea2/peop01.gif
+        frame   data/levels/guinea2/peop02.gif
+        frame   data/levels/guinea2/peop03.gif
+        frame   data/levels/guinea2/peop04.gif
+
+
+
+
+

@@ -1,0 +1,31 @@
+name	huma
+health	120
+type	item
+shadow	0
+nolife   1
+facing 1
+setlayer	-1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	31 37
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/huma.gif
+      delay	50
+      frame	data/sprites/aniback/huma.gif
+      delay	5
+      frame	data/sprites/aniback/huma.gif
+      offset	31 38
+      frame	data/sprites/aniback/huma.gif
+
+anim idle
+	loop	1
+	delay	8
+	offset	31 37
+	bbox	10 17 46 20
+	frame	data/sprites/aniback/huma.gif
+	
+
+

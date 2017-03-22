@@ -1,0 +1,115 @@
+name	 kb
+health   0
+type     NPC
+speed    23
+nolife   1
+grabdistance 44
+candamage enemy obstacle pshot
+shadow 0
+
+load	kshifl
+
+anim idle
+	loop	0
+	delay	2
+	offset	161 131
+      followcond 1
+      followanim 1
+      jumpframe 0 0 10
+      hitfx  data/sounds/beat2.wav
+      hitflash  maxfl
+	frame	data/chars/misc/kb1.gif
+	frame	data/chars/misc/kb2.gif
+      frame	data/chars/misc/kb3.gif
+      attack 160 70 81 62 20 1 0 0 30
+      dropv 1.5 2.5
+      forcedirection -1
+	frame	data/chars/misc/kb4.gif
+      frame	data/chars/misc/kb5.gif
+	frame	data/chars/misc/kb6.gif
+	frame	data/chars/misc/kb7.gif
+	frame	data/chars/misc/kb8.gif
+      frame	data/chars/misc/kb9.gif
+	frame	data/chars/misc/kb10.gif
+	frame	data/chars/misc/kb11.gif
+	frame	data/chars/misc/kb12.gif
+      frame	data/chars/misc/kb13.gif
+	frame	data/chars/misc/kb14.gif
+	frame	data/chars/misc/kb15.gif
+	frame	data/chars/misc/kb16.gif
+      frame	data/chars/misc/kb17.gif
+      frame	data/chars/misc/kb6.gif
+	frame	data/chars/misc/kb7.gif
+	frame	data/chars/misc/kb8.gif
+      frame	data/chars/misc/kb9.gif
+	frame	data/chars/misc/kb10.gif
+	frame	data/chars/misc/kb11.gif
+	frame	data/chars/misc/kb12.gif
+      frame	data/chars/misc/kb13.gif
+	frame	data/chars/misc/kb14.gif
+	frame	data/chars/misc/kb15.gif
+	frame	data/chars/misc/kb16.gif
+      frame	data/chars/misc/kb17.gif
+	frame	data/chars/misc/kb6.gif
+	frame	data/chars/misc/kb7.gif
+	frame	data/chars/misc/kb8.gif
+      frame	data/chars/misc/kb9.gif
+	frame	data/chars/misc/kb10.gif
+	frame	data/chars/misc/kb11.gif
+	frame	data/chars/misc/kb12.gif
+      frame	data/chars/misc/kb13.gif
+	frame	data/chars/misc/kb14.gif
+	frame	data/chars/misc/kb15.gif
+	frame	data/chars/misc/kb16.gif
+      frame	data/chars/misc/kb17.gif
+	frame	data/chars/misc/kb6.gif
+	frame	data/chars/misc/kb7.gif
+	frame	data/chars/misc/kb8.gif
+      frame	data/chars/misc/kb9.gif
+	frame	data/chars/misc/kb10.gif
+	frame	data/chars/misc/kb11.gif
+	frame	data/chars/misc/kb12.gif
+      frame	data/chars/misc/kb13.gif
+	frame	data/chars/misc/kb14.gif
+	frame	data/chars/misc/kb15.gif
+	frame	data/chars/misc/kb16.gif
+      frame	data/chars/misc/kb17.gif
+	frame	data/chars/misc/kb6.gif
+	frame	data/chars/misc/kb7.gif
+	frame	data/chars/misc/kb8.gif
+      frame	data/chars/misc/kb9.gif
+	frame	data/chars/misc/kb10.gif
+	frame	data/chars/misc/kb11.gif
+	frame	data/chars/misc/kb12.gif
+      frame	data/chars/misc/kb13.gif
+	frame	data/chars/misc/kb14.gif
+	frame	data/chars/misc/kb15.gif
+	frame	data/chars/misc/kb16.gif
+      frame	data/chars/misc/kb17.gif
+      frame	data/chars/misc/kb6.gif
+	frame	data/chars/misc/kb7.gif
+	frame	data/chars/misc/kb8.gif
+      frame	data/chars/misc/kb9.gif
+	frame	data/chars/misc/kb10.gif
+	frame	data/chars/misc/kb11.gif
+	frame	data/chars/misc/kb12.gif
+      frame	data/chars/misc/kb13.gif
+	frame	data/chars/misc/kb14.gif
+	frame	data/chars/misc/kb15.gif
+	frame	data/chars/misc/kb16.gif
+      frame	data/chars/misc/kb17.gif
+      frame	data/chars/misc/kb18.gif
+      
+anim follow1
+	loop	0
+	delay	2
+	offset	161 131
+      subentity kshifl
+      spawnframe 0 0 5 0 0
+	frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/empty.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/misc/empty.gif
+
+
+

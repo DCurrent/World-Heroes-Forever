@@ -1,0 +1,50 @@
+name	 kbb2
+health   0
+speed    23
+type     pshot
+counter  9999
+shootnum 9999
+nolife   1
+remove   1
+grabdistance 44
+candamage player obstacle
+shadow 0
+
+palette   data/chars/misc/kbb1.gif
+
+anim idle
+	loop	1
+	delay	2.5
+	offset	60 182
+      otg 1
+      hitfx  data/sounds/beat2.wav
+      hitflash  kbfl
+      attack3 125 100 40 35 15 0 0 0 60
+      forcedirection -1
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kbb1.gif
+      frame	data/chars/misc/kbb1.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kbb2.gif
+      frame	data/chars/misc/kbb2.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kbb3.gif
+      frame	data/chars/misc/kbb3.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kbb4.gif
+      frame	data/chars/misc/kbb4.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kbb5.gif
+      frame	data/chars/misc/kbb5.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/kbb6.gif
+	frame	data/chars/misc/kbb6.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kbb7.gif
+      frame	data/chars/misc/kbb7.gif
+      frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/kbb8.gif
+      frame	data/chars/misc/kbb8.gif 
+
+
+

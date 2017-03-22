@@ -1,0 +1,17 @@
+name    work2
+type	none
+facing 1
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   15
+	  offset	67 170
+        frame   data/levels/usa/work03.png
+        frame   data/levels/usa/work04.png
+        
+
+
+
+
+

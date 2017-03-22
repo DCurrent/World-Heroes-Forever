@@ -1,0 +1,33 @@
+name	pizza
+health	50
+type	item
+shadow	0
+nolife   1
+facing 1
+setlayer	-1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	16 17
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/pizza.gif
+      delay	50
+      frame	data/sprites/aniback/pizza.gif
+      delay	5
+      frame	data/sprites/aniback/pizza.gif
+      offset	16 18
+      frame	data/sprites/aniback/pizza.gif
+
+anim idle
+	loop	1
+	delay	8
+	offset	16 17
+	bbox	1 1 32 18
+	frame	data/sprites/aniback/pizza.gif
+	
+
+
+
+

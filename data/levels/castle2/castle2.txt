@@ -1,0 +1,148 @@
+music		data/music/castle2.bor
+background	data/levels/castle2/back.gif
+panel	      data/levels/castle2/n03.gif
+order           a
+direction both
+
+spawn1 120 20
+spawn2 120 40
+
+#----------pickups
+
+spawn	fg2
+coords	10 255
+at	0
+
+spawn	obstacb
+item  menuu
+coords	25 250
+at	0
+
+spawn	obstacb
+flip 1
+coords	599 250
+at	0
+
+spawn	obstacc
+item  goldkat
+coords	135 192
+at	0
+
+spawn	obstacc
+flip 1
+item  huma
+coords	487 192
+at	0
+
+spawn	pouli
+coords	310 121
+at	0
+
+spawn	tig
+coords	310 178
+at	0
+
+Group	4 4
+at	0
+
+
+spawn	zeus
+boss 1
+coords	300 205
+at	0
+
+spawn   delay
+health   60
+coords   160 200
+at   0
+
+spawn   delay
+health   60
+coords   161 200
+at   0
+
+spawn   delay
+health   80
+coords   162 200
+at   0
+
+spawn	ninja2
+flip 1
+map 4
+coords	-100 207
+at	0
+
+spawn	ninja2
+map 4
+item  susi
+coords	420 207
+at	0
+
+spawn	ninjasw2
+flip 1
+map 1
+item  time
+coords	-100 220
+at	0
+
+spawn	ninja2
+item  diamond
+coords	420 230
+at	0
+
+spawn	ninja2
+item  time
+coords	420 210
+at	0
+
+spawn	ninjasw2
+map 2
+flip 1
+item  milk
+coords	-100 215
+at	0
+
+spawn	ninjasw2
+map 3
+item  time
+coords	420 240
+at	0
+
+spawn	ninja2
+map 4
+flip 1
+item  susi
+coords	-100 225
+at	0
+
+spawn	ninjasw2
+map 1
+flip 1
+coords	-100 220
+at	0
+
+spawn	ninja2
+map 3
+item  diamond
+itemmap 1
+coords	420 230
+at	0
+
+spawn	ninjasw2
+map 1
+coords	420 210
+at	0
+
+spawn	ninja2
+map 3
+flip 1
+item  time
+coords	-100 235
+at	0
+
+spawn	ninja2
+item  susi
+coords	420 215
+at	0
+
+

@@ -1,0 +1,44 @@
+music		data/music/practice.bor
+background	data/levels/practice/back0.gif
+panel	      data/levels/practice/n06.gif
+order           a
+settime         0
+notime          1
+type            1 0 1
+direction both
+
+spawn1 110 20 
+spawn2 120 40
+
+#----------pickups
+
+spawn	bam
+coords	10 145
+at	0
+
+spawn	barel
+item  1up
+coords	650 300
+at	0
+
+
+Group	1 1
+at	0
+
+spawn	mizogu
+Health 9999
+coords	300 215
+at	0
+
+spawn	mizogu2
+Health 9999
+flip 1
+coords	0 215 135
+at	0
+
+spawn	mizogu2
+Health 9999
+coords	320 215 135
+at	0
+
+

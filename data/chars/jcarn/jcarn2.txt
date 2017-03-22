@@ -1,0 +1,1577 @@
+name	jcarn2
+health	300
+speed	10
+type	enemy
+shadow  0
+grabdistance	55
+paingrab 1
+grabfinish 1
+gfxshadow  1
+falldie 2
+nodieblink      1
+dust du
+aggression      50
+diesound	data/chars/jcarn/die.wav
+aimove chase
+aimove wander
+thold 35
+blockodds 1
+escapehits 2
+bflash bflash
+projectilehit enemy obstacle trap
+icon	data/chars/jcarn/icon2.gif
+hostile player 
+candamage player obstacle
+subject_to_wall 0
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/jcarn/idle.gif
+
+load	trap2
+load	trap3
+
+anim spawn
+	loop	0
+      offset	75 170
+      jumpframe 0 0 2
+      landframe 7 dus
+      delay   4
+      @cmd    degravity -0.27
+      sound	data/sounds/jump.wav
+      frame	data/chars/jcarn/j3.gif
+      frame	data/chars/jcarn/j3.gif
+      frame	data/chars/jcarn/j4.gif
+      frame	data/chars/jcarn/j5.gif
+      frame	data/chars/jcarn/j6.gif
+      frame	data/chars/jcarn/j7.gif
+      delay   40
+      frame	data/chars/jcarn/j8.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/j1.gif
+      frame	data/chars/jcarn/j1.gif
+      delay	8
+      offset	68 181
+      sound	data/sounds/air5.wav
+      frame	data/chars/jcarn/spawn8.gif
+      frame	data/chars/jcarn/spawn9.gif
+      sound	data/sounds/beat3.wav
+      delay	9
+      frame	data/chars/jcarn/spawn10.gif
+      frame	data/chars/jcarn/spawn9.gif
+      sound	data/sounds/air5.wav
+      delay	8
+      frame	data/chars/jcarn/spawn8.gif
+      frame	data/chars/jcarn/spawn9.gif
+      delay	16
+      sound	data/sounds/beat3.wav
+      frame	data/chars/jcarn/spawn10.gif
+      delay	14
+      offset	75 170
+      frame	data/chars/jcarn/idle2.gif
+      frame	data/chars/jcarn/idle1.gif
+
+anim idle
+	loop	1
+	delay	14
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd    clearL
+      frame	data/chars/jcarn/idle.gif
+      frame	data/chars/jcarn/idle1.gif
+      frame	data/chars/jcarn/idle2.gif
+      frame	data/chars/jcarn/idle1.gif
+      
+anim walk
+	loop	1
+      delay   12
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/jcarn/w1.gif
+	frame	data/chars/jcarn/w2.gif
+	frame	data/chars/jcarn/w3.gif
+	frame	data/chars/jcarn/w4.gif
+	frame	data/chars/jcarn/w5.gif
+      frame	data/chars/jcarn/w6.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	75 170
+	bbox	55 78 47 80
+	frame	data/chars/jcarn/bl1.gif
+      frame	data/chars/jcarn/bl2.gif
+      delay	2
+      offset	78 170
+	frame	data/chars/jcarn/bl2.gif
+      offset	75 170
+      frame	data/chars/jcarn/bl2.gif
+      offset	72 170
+      frame	data/chars/jcarn/bl2.gif
+      offset	75 170
+      frame	data/chars/jcarn/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/jcarn/bl2.gif
+      frame	data/chars/jcarn/bl2.gif
+      frame	data/chars/jcarn/bl1.gif
+      frame	data/chars/jcarn/bl1.gif
+      frame	data/chars/jcarn/bl1.gif
+
+anim grab
+	loop	0
+	delay	10
+	offset	75 170
+      sound	data/sounds/air5.wav
+      frame	data/chars/jcarn/a0.gif
+      delay	16
+      frame	data/chars/jcarn/grab.gif
+      @cmd    anichange "ANI_FOLLOW3"
+      frame	data/chars/jcarn/grab.gif
+
+anim grabattack
+	loop	0
+	delay	2
+      offset	118 170
+      frame	data/chars/jcarn/grab3.gif
+      frame	data/chars/jcarn/grab3.gif
+
+anim follow3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      }
+    }
+@end_script
+      loop	0
+      delay	14
+      offset	75 170
+      flipframe 1
+      @cmd    slamstart4
+      @cmd    position 9 56 92 -1 0
+      frame	data/chars/jcarn/grab1.gif
+      sound	data/chars/jcarn/at4.wav
+      @cmd    position 10 87 30 -1 0
+      offset	124 170
+      frame	data/chars/jcarn/grab22.gif
+      delay	10
+      offset	81 170
+      @cmd    depost 0
+      @cmd    throw 30 1 5 2 0 0
+      frame	data/chars/jcarn/grab33.gif
+      frame	data/chars/jcarn/grab33.gif
+      frame	data/chars/jcarn/grab33.gif
+
+anim follow4
+      loop	0
+      delay	10
+      offset	75 170
+      @cmd    slamstart4
+      @cmd    position 12 56 92 -1 1
+      sound	data/chars/jcarn/at12.wav
+      frame	data/chars/jcarn/grab1.gif
+      delay	18
+      @cmd    position 11 82 30 -1 1
+      frame	data/chars/jcarn/grab222.gif
+      delay	10
+      @cmd    depost 0
+      @cmd    throw 30 1 5 2 0 0
+      frame	data/chars/jcarn/grab333.gif
+      frame	data/chars/jcarn/grab333.gif
+      frame	data/chars/jcarn/grab333.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	75 170
+      frame	data/chars/jcarn/pain4.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	66 191
+      frame	data/chars/jcarn/pain2.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	75 170
+      bbox	0 0 0 0
+      frame	data/chars/jcarn/pain4.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	75 170
+      frame	data/chars/jcarn/pain4.gif
+
+
+anim pain
+	loop	0
+	delay	4
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	74 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	76 170
+      frame	data/chars/jcarn/pain2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+	frame	data/chars/jcarn/pain2.gif
+      sound	data/chars/jcarn/pain.wav
+      offset	73 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+      frame	data/chars/jcarn/pain2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+      delay	45
+      frame	data/chars/jcarn/pain4.gif
+      frame	data/chars/jcarn/pain4.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	75 170
+      bbox	25 145 100 30
+	frame	data/chars/jcarn/fall04.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	75 170
+	frame	data/chars/jcarn/fall04.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/jcarn/pain4.gif
+      offset	77 170
+	frame	data/chars/jcarn/pain4.gif
+      offset	73 170
+	frame	data/chars/jcarn/pain4.gif
+      offset	77 170
+      frame	data/chars/jcarn/pain4.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      move -4
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/jcarn/bpain04.gif
+      offset	77 170
+	frame	data/chars/jcarn/bpain04.gif
+      offset	73 170
+	frame	data/chars/jcarn/bpain4.gif
+      offset	77 170
+      frame	data/chars/jcarn/bpain4.gif
+      offset	75 170
+      frame	data/chars/jcarn/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/jcarn/bpain02.gif
+      frame	data/chars/jcarn/bpain02.gif
+      frame	data/chars/jcarn/bpain2.gif
+      frame	data/chars/jcarn/bpain2.gif
+      frame	data/chars/jcarn/bpain02.gif
+      frame	data/chars/jcarn/bpain02.gif
+      frame	data/chars/jcarn/bpain2.gif
+      frame	data/chars/jcarn/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	75 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	77 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	74 170
+	frame	data/chars/jcarn/pain2.gif
+      offset	76 170
+      frame	data/chars/jcarn/pain2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+      frame	data/chars/jcarn/pain4.gif
+      frame	data/chars/jcarn/pain4.gif
+      frame	data/chars/jcarn/pain4.gif
+      frame	data/chars/jcarn/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      bouncefactor 3.5
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/jcarn/fall01.gif
+	frame	data/chars/jcarn/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jcarn/fall02.gif
+	frame	data/chars/jcarn/fall02.gif
+      delay   20
+      bbox	45 90 85 45
+	frame	data/chars/jcarn/fall03.gif
+      delay   40
+	frame	data/chars/jcarn/fall03.gif
+      @cmd    degravity 0
+      delay   8
+      bbox	55 140 45 30
+	frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jcarn/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	75 170
+      attack10  50 90 60 70 5 1 1 1
+      dropv 2 1.5
+      move -4
+      @cmd    degravity -0.27
+      frame	data/chars/jcarn/pain5.gif
+      frame	data/chars/jcarn/pain5.gif
+      frame	data/chars/jcarn/pain5.gif
+      delay   2
+      move -5
+      offset	95 155
+      sound	data/sounds/fall.wav
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall02.gif
+      frame	data/chars/jcarn/ffall02.gif
+      frame	data/chars/jcarn/ffall02.gif
+      move -4
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall02.gif
+      frame	data/chars/jcarn/ffall02.gif
+      frame	data/chars/jcarn/ffall02.gif
+      move -3
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      offset	95 175
+      frame	data/chars/jcarn/ffall05.gif
+      frame	data/chars/jcarn/ffall05.gif
+      frame	data/chars/jcarn/ffall05.gif
+      frame	data/chars/jcarn/ffall05.gif
+      @cmd    degravity 0
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	55 140 45 30
+	frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      move -3
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      move 0
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      move 0
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      @cmd    degravity 0
+      frame	data/chars/jcarn/dsla1.gif
+	frame	data/chars/jcarn/dsla2.gif
+	frame	data/chars/jcarn/dsla3.gif
+      frame	data/chars/jcarn/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/jcarn/sla3.gif
+      offset	125 120
+      frame	data/chars/jcarn/sla2.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain4.gif
+      offset	83 140
+      frame	data/chars/jcarn/sla1.gif
+      frame	data/chars/jcarn/sla2.gif
+      frame	data/chars/jcarn/rjsla3.gif
+      offset	75 150
+      frame	data/chars/jcarn/rjsla4.gif
+      frame	data/chars/jcarn/rjsla5.gif
+      offset	95 170
+      frame	data/chars/jcarn/fall01.gif
+      frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall05.gif
+      offset	95 162
+      frame	data/chars/jcarn/rj0.gif
+      offset	104 170
+      frame	data/chars/jcarn/rj00.gif
+      offset	112 164
+      frame	data/chars/jcarn/gsla2.gif
+      offset	104 165
+      frame	data/chars/jcarn/gfall04.gif
+      frame	data/chars/jcarn/gfall05.gif
+      offset	124 177
+      frame	data/chars/jcarn/pain41.gif
+      offset	124 170
+      frame	data/chars/jcarn/dsla22.gif
+	frame	data/chars/jcarn/dsla33.gif
+      offset	75 150
+      frame	data/chars/jcarn/rjsla7.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain2.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      @cmd    degravity 0
+      frame	data/chars/jcarn/sla1.gif
+      offset	112 145
+	frame	data/chars/jcarn/sla2.gif
+      offset	90 145
+	frame	data/chars/jcarn/sla3.gif
+      frame	data/chars/jcarn/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/jcarn/fall04.gif
+      offset	85 145
+      frame	data/chars/jcarn/sla1.gif
+      frame	data/chars/jcarn/sla1.gif
+      offset	98 138
+      frame	data/chars/jcarn/ssla3.gif
+      frame	data/chars/jcarn/rjsla3.gif
+      frame	data/chars/jcarn/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jcarn/rjsla4.gif
+      frame	data/chars/jcarn/rjsla5.gif
+      frame	data/chars/jcarn/rjsla6.gif
+      frame	data/chars/jcarn/sla1.gif
+      frame	data/chars/jcarn/sla1.gif
+      frame	data/chars/jcarn/ssla3.gif
+      frame	data/chars/jcarn/sla2.gif
+      offset	123 170
+      frame	data/chars/jcarn/sla3.gif
+      offset	98 138
+      frame	data/chars/jcarn/hsla1.gif
+      frame	data/chars/jcarn/hsla2.gif
+      frame	data/chars/jcarn/hsla3.gif
+      frame	data/chars/jcarn/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jcarn/hsla2.gif
+      frame	data/chars/jcarn/hsla4.gif
+      frame	data/chars/jcarn/rj1.gif
+      frame	data/chars/jcarn/gsla3.gif
+      frame	data/chars/jcarn/rj3.gif
+      frame	data/chars/jcarn/hsla4.gif
+      offset	98 148
+      frame	data/chars/jcarn/hsla4.gif
+      offset	113 170
+      frame	data/chars/jcarn/pain41.gif
+      frame	data/chars/jcarn/pain21.gif
+      offset	82 170
+      frame	data/chars/jcarn/pain4.gif
+      offset	122 170
+      frame	data/chars/jcarn/pain41.gif
+      frame	data/chars/jcarn/pain55.gif
+      offset	100 140
+      frame	data/chars/jcarn/fall066.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain5.gif
+      offset	105 85
+      frame	data/chars/jcarn/dsla3.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain4.gif
+      frame	data/chars/jcarn/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      @cmd    degravity 0
+      frame	data/chars/jcarn/gsla1.gif
+      offset	112 145
+	frame	data/chars/jcarn/gsla2.gif
+      offset	90 145
+	frame	data/chars/jcarn/gsla3.gif
+      frame	data/chars/jcarn/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jcarn/gsla6.gif
+      offset	115 170
+      frame	data/chars/jcarn/dsla1.gif
+      offset	115 145
+	frame	data/chars/jcarn/gsla3.gif
+      offset	75 170
+      frame	data/chars/jcarn/pain4.gif
+      offset	105 170
+      frame	data/chars/jcarn/gfall04.gif
+      offset	75 148
+      frame	data/chars/jcarn/rjsla4.gif
+      frame	data/chars/jcarn/rjsla5.gif
+      offset	95 170
+      frame	data/chars/jcarn/fall04.gif
+      offset	75 143
+      frame	data/chars/jcarn/hsla2.gif
+      frame	data/chars/jcarn/hsla4.gif
+      offset	124 170
+      frame	data/chars/jcarn/pain4.gif
+      offset	95 170
+      frame	data/chars/jcarn/fall01.gif
+      frame	data/chars/jcarn/fall02.gif
+      frame	data/chars/jcarn/fall03.gif
+      frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall05.gif
+      offset	104 170
+      frame	data/chars/jcarn/gsla2.gif
+      frame	data/chars/jcarn/gsla3.gif
+      frame	data/chars/jcarn/gsla4.gif
+      frame	data/chars/jcarn/gfall04.gif
+      frame	data/chars/jcarn/gfall05.gif
+      offset	75 165
+      frame	data/chars/jcarn/pain5.gif
+      frame	data/chars/jcarn/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	45 90 85 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity -0.27
+	frame	data/chars/jcarn/fall03.gif
+      frame	data/chars/jcarn/fall03.gif
+      offset	95 170
+      bbox	55 140 45 30
+      delay   100
+      frame	data/chars/jcarn/fall04.gif
+      @cmd    degravity 0
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jcarn/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	45 90 85 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity -0.27
+	frame	data/chars/jcarn/fall03.gif
+      frame	data/chars/jcarn/fall03.gif
+      offset	95 170
+      bbox	55 140 45 30
+      delay   100
+      frame	data/chars/jcarn/fall04.gif
+      @cmd    degravity 0
+      delay   2
+	frame	data/chars/jcarn/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity -0.27
+      frame	data/chars/jcarn/sla3.gif
+      frame	data/chars/jcarn/sla3.gif
+      delay   10
+      offset	98 138
+      bbox	55 78 80 57
+      frame	data/chars/jcarn/fall02.gif
+      frame	data/chars/jcarn/fall02.gif
+      delay   20
+      bbox	45 90 85 45
+	frame	data/chars/jcarn/fall03.gif
+      delay   500
+      frame	data/chars/jcarn/fall03.gif
+      offset	95 170
+      delay   8
+      bbox	55 140 45 30
+      @cmd    degravity 0
+      frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jcarn/fall05.gif
+
+
+anim fall10
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+      frame	data/chars/jcarn/fall01.gif
+	frame	data/chars/jcarn/fall01.gif
+	frame	data/chars/jcarn/fall02.gif
+	frame	data/chars/jcarn/fall02.gif
+      delay   20
+	frame	data/chars/jcarn/fall03.gif
+      delay   40
+	frame	data/chars/jcarn/fall03.gif
+      @cmd    degravity 0
+      delay   8
+	frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jcarn/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 170
+      bbox	25 145 100 30
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/jcarn/fall04.gif
+	frame	data/chars/jcarn/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/jcarn/fall01.gif
+	frame	data/chars/jcarn/fall01.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jcarn/fall02.gif
+	frame	data/chars/jcarn/fall02.gif
+      delay   20
+	frame	data/chars/jcarn/fall03.gif
+      delay   40
+	frame	data/chars/jcarn/fall03.gif
+      @cmd    degravity 0
+      delay   8
+	frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jcarn/fall05.gif
+
+anim fall16
+	loop	0
+      delay   4
+	offset	75 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+	frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+	frame	data/chars/jcarn/pain6.gif
+      frame	data/chars/jcarn/shock1.gif
+      frame	data/chars/jcarn/pain6.gif
+      delay   40
+	frame	data/chars/jcarn/shock1.gif
+      offset	95 170
+      delay   8
+      bbox	55 140 45 30
+	frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jcarn/fall05.gif
+
+anim burn
+	loop	0
+      delay   7
+	offset	95 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    degravity -0.27
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/jcarn/burn01.gif
+	frame	data/chars/jcarn/burn1.gif
+      frame	data/chars/jcarn/burn01.gif
+	frame	data/chars/jcarn/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jcarn/burn02.gif
+	frame	data/chars/jcarn/burn2.gif
+      frame	data/chars/jcarn/burn02.gif
+	frame	data/chars/jcarn/burn2.gif
+	frame	data/chars/jcarn/burn03.gif
+	frame	data/chars/jcarn/burn3.gif
+      frame	data/chars/jcarn/burn03.gif
+      frame	data/chars/jcarn/burn3.gif
+	frame	data/chars/jcarn/burn03.gif
+      frame	data/chars/jcarn/burn3.gif
+      delay   40
+	frame	data/chars/jcarn/burn03.gif
+      delay   7
+      @cmd    degravity 0
+      bbox	55 140 45 30
+	frame	data/chars/jcarn/burn4.gif
+      frame	data/chars/jcarn/burn04.gif
+      frame	data/chars/jcarn/burn4.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jcarn/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 170
+      bbox	25 145 100 30
+      @cmd    degravity 0
+      frame	data/chars/jcarn/fall05.gif
+
+anim rise
+	loop	0
+      offset	95 170
+	delay	8
+	frame	data/chars/jcarn/rise1.gif
+      @cmd    riseattack 120 40 "ANI_FOLLOW15"
+	frame	data/chars/jcarn/rise2.gif
+      offset	75 170
+	frame	data/chars/jcarn/rise3.gif
+	frame	data/chars/jcarn/jl1.gif
+	
+anim attack1
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%25;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW5"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      } else if( r < 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
+      }
+    }
+@end_script
+	loop	0
+      range 10 90
+	delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/jcarn/at3.wav
+      frame	data/chars/jcarn/a1.gif
+      frame	data/chars/jcarn/a2.gif
+      sound	data/sounds/air3.wav
+      delay	9
+      frame	data/chars/jcarn/a3.gif
+      attack  90 98 57 32 15 1 0 0 25
+      frame	data/chars/jcarn/a4.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jcarn/a5.gif
+      delay	8
+      frame	data/chars/jcarn/a0.gif
+
+anim follow5
+      loop	0
+	delay	8
+      offset	75 170
+      bbox	55 78 47 80
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/jcarn/at6.wav
+      frame	data/chars/jcarn/aa1.gif
+      frame	data/chars/jcarn/aa2.gif
+      sound	data/sounds/air3.wav
+      delay	9
+      attack  90 98 57 32 15 1 0 0 25
+      dropv 3 3.5
+      frame	data/chars/jcarn/aa3.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jcarn/aa3.gif
+      delay	8
+      frame	data/chars/jcarn/aa2.gif
+      frame	data/chars/jcarn/aa1.gif
+
+anim special
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW6"));
+      }
+    }
+@end_script
+      loop	0
+      delay   6
+      offset	75 170
+      jumpframe 2 0 -2.5 -1 dus
+      sound	data/chars/jcarn/at7.wav
+      frame	data/chars/jcarn/ru1.gif 
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru4.gif
+      frame	data/chars/jcarn/ru4.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru3.gif
+      frame	data/chars/jcarn/ru3.gif
+      sound	data/sounds/step.wav
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/ru2.gif
+      frame	data/chars/jcarn/ru2.gif
+      sound	data/sounds/step.wav
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+
+anim follow6
+      loop	0
+      delay   6
+      offset	75 170
+      jumpframe 2 0 -2.5 1 dus
+      sound	data/chars/jcarn/at7.wav
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru4.gif
+      frame	data/chars/jcarn/ru4.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru3.gif
+      frame	data/chars/jcarn/ru3.gif
+      sound	data/sounds/step.wav
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/ru2.gif
+      frame	data/chars/jcarn/ru2.gif
+      sound	data/sounds/step.wav
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+
+anim follow7
+      loop	0
+      delay   6
+      offset	75 170
+      jumpframe 2 0 -2 1 dus
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/jcarn/ru4.gif
+      frame	data/chars/jcarn/ru4.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru3.gif
+      frame	data/chars/jcarn/ru3.gif
+      sound	data/sounds/step.wav
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/ru2.gif
+      frame	data/chars/jcarn/ru2.gif
+      sound	data/sounds/step.wav
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+
+anim follow9
+      loop	0
+      delay   6
+      offset	75 170
+      jumpframe 2 0 -2 -1 dus
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/jcarn/ru4.gif
+      frame	data/chars/jcarn/ru4.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru3.gif
+      frame	data/chars/jcarn/ru3.gif
+      sound	data/sounds/step.wav
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/ru2.gif
+      frame	data/chars/jcarn/ru2.gif
+      sound	data/sounds/step.wav
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+
+anim attack2
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW11"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW12"));
+      }
+    }
+@end_script
+      loop	0
+      range 110 280
+      delay   10
+      offset	75 170
+      followcond 1
+      followanim 10
+      jumpframe 3 0 5 0 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/jcarn/at1.wav
+      frame	data/chars/jcarn/aaa1.gif
+      frame	data/chars/jcarn/aaa2.gif
+      frame	data/chars/jcarn/aaa3.gif
+      delay   2
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      attack 75 95 55 55 25 1 0 0 45
+      dropv 3 3.5
+      forcedirection -1
+      frame	data/chars/jcarn/aaa4.gif
+      bbox	55 78 4 80
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jcarn/j3.gif
+      frame	data/chars/jcarn/j3.gif
+      frame	data/chars/jcarn/j3.gif
+      delay	1
+      sound	data/sounds/step.wav
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/jcarn/j1.gif
+      delay	2
+      move 4
+      frame	data/chars/jcarn/j1.gif
+      frame	data/chars/jcarn/j1.gif
+      frame	data/chars/jcarn/j1.gif
+      frame	data/chars/jcarn/j1.gif
+      move 3
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim follow10
+      loop	0
+      delay   10
+      offset	75 170
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      jumpframe 2 2.5 -2.5
+      landframe 10 dus
+      quakeframe 0 4 4
+      @cmd    stop
+      attack 75 95 55 55 25 1 0 0 45
+      dropv 3 3.5
+      forcedirection -1
+      frame	data/chars/jcarn/aaa4.gif
+      frame	data/chars/jcarn/aaa4.gif
+      attack 0 0 0 0 0 0
+      delay   6
+      frame	data/chars/jcarn/j7.gif
+      frame	data/chars/jcarn/j6.gif
+      frame	data/chars/jcarn/j5.gif
+      frame	data/chars/jcarn/j3.gif
+      frame	data/chars/jcarn/j7.gif
+      frame	data/chars/jcarn/j6.gif
+      frame	data/chars/jcarn/j5.gif
+      delay	40
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/j4.gif
+      delay   3
+      sound	data/sounds/step.wav
+      move -3
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim follow11
+      loop	0
+      delay   11
+      offset	75 170
+      jumpframe 1 4 2 -0.5 dus
+      landframe 11 dus
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/j1.gif
+      @cmd    degravity -0.27
+      sound	data/chars/jcarn/at4.wav
+      delay   4
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      sound	data/sounds/jumpp.wav
+      @cmd    riseattack2 90 20 "ANI_FOLLOW16"
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j4.gif
+      frame	data/chars/jcarn/j5.gif
+      frame	data/chars/jcarn/j6.gif
+      frame	data/chars/jcarn/j7.gif
+      frame	data/chars/jcarn/j8.gif
+      @cmd    riseattack2 145 20 "ANI_FOLLOW16"
+      frame	data/chars/jcarn/j8.gif
+      delay   40
+      frame	data/chars/jcarn/j8.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim follow12
+      loop	0
+      delay   11
+      offset	75 170
+      jumpframe 1 4 2 0.5 dus
+      landframe 11 dus
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/j1.gif
+      @cmd    degravity -0.27
+      sound	data/chars/jcarn/at4.wav
+      delay   4
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      sound	data/sounds/jumpp.wav
+      @cmd    riseattack2 90 20 "ANI_FOLLOW16"
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j4.gif
+      frame	data/chars/jcarn/j5.gif
+      frame	data/chars/jcarn/j6.gif
+      frame	data/chars/jcarn/j7.gif
+      frame	data/chars/jcarn/j8.gif
+      @cmd    riseattack2 145 20 "ANI_FOLLOW16"
+      frame	data/chars/jcarn/j8.gif
+      delay   40
+      frame	data/chars/jcarn/j8.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim attack3
+      loop	0
+      range 110 290
+      rangez -50 -20
+      followcond 1
+      followanim 13
+      delay   11
+      offset	75 170
+      jumpframe 1 6 4 -1 dus
+      landframe 20 dus
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jcarn/j1.gif
+      sound	data/chars/jcarn/at5.wav
+      delay   4
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      offset	95 150
+      delay   2
+      @cmd    degravity -0.27
+      frame	data/chars/jcarn/aaaa1.gif
+      frame	data/chars/jcarn/aaaa2.gif
+      frame	data/chars/jcarn/aaaa3.gif
+      @cmd    dasher 4 -3 -1
+      frame	data/chars/jcarn/aaaa4.gif
+      sound	data/sounds/air5.wav
+      attack  65 65 65 70 5 0 0 0 60
+      frame	data/chars/jcarn/aaaa5.gif
+      frame	data/chars/jcarn/aaaa6.gif
+      frame	data/chars/jcarn/aaaa7.gif
+      frame	data/chars/jcarn/aaaa8.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/jcarn/aaaa1.gif
+      frame	data/chars/jcarn/aaaa2.gif
+      frame	data/chars/jcarn/aaaa3.gif
+      frame	data/chars/jcarn/aaaa4.gif
+      delay   40
+      frame	data/chars/jcarn/aaaa5.gif
+      offset	75 170
+      bbox	55 78 47 80
+      attack  0 0 0 0 0 0
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim attack4
+      loop	0
+      range 110 290
+      rangez 20 50
+      followcond 1
+      followanim 13
+      delay   11
+      offset	75 170
+      jumpframe 1 6 4 1 dus
+      landframe 20 dus
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jcarn/j1.gif
+      sound	data/chars/jcarn/at5.wav
+      delay   4
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      frame	data/chars/jcarn/j2.gif
+      offset	95 150
+      delay   2
+      @cmd    degravity -0.27
+      frame	data/chars/jcarn/aaaa1.gif
+      frame	data/chars/jcarn/aaaa2.gif
+      frame	data/chars/jcarn/aaaa3.gif
+      @cmd    dasher 4 -3 1
+      frame	data/chars/jcarn/aaaa4.gif
+      sound	data/sounds/air5.wav
+      attack  65 65 65 70 5 0 0 0 60
+      frame	data/chars/jcarn/aaaa5.gif
+      frame	data/chars/jcarn/aaaa6.gif
+      frame	data/chars/jcarn/aaaa7.gif
+      frame	data/chars/jcarn/aaaa8.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/jcarn/aaaa1.gif
+      frame	data/chars/jcarn/aaaa2.gif
+      frame	data/chars/jcarn/aaaa3.gif
+      frame	data/chars/jcarn/aaaa4.gif
+      delay   40
+      frame	data/chars/jcarn/aaaa5.gif
+      offset	75 170
+      bbox	55 78 47 80
+      attack  0 0 0 0 0 0
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim follow13
+      loop	0
+      offset	95 150
+      jumpframe 0 0 1 0
+      landframe 13 dus
+      delay   5
+      @cmd    degravity 0
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/jcarn/aaaa7.gif
+      frame	data/chars/jcarn/aaaa8.gif
+      attack  65 65 65 80 5 0 0 0 55
+      frame	data/chars/jcarn/aaaa1.gif
+      delay   3
+      attack  0 0 0 0 0 0
+      frame	data/chars/jcarn/aaaa2.gif
+      attack  65 65 65 80 5 0 0 0 55
+      sound	data/sounds/air5.wav
+      frame	data/chars/jcarn/aaaa3.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jcarn/aaaa4.gif
+      attack  65 65 65 80 5 0 0 0 55
+      frame	data/chars/jcarn/aaaa5.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jcarn/aaaa6.gif
+      attack  65 65 65 80 5 0 0 0 55
+      sound	data/sounds/air5.wav
+      frame	data/chars/jcarn/aaaa7.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jcarn/aaaa8.gif
+      attack  65 65 65 80 5 1 0 0 55
+      frame	data/chars/jcarn/aaaa1.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jcarn/aaaa2.gif
+      offset	75 170
+      bbox	55 78 47 80
+      delay   40
+      frame	data/chars/jcarn/j8.gif
+      delay   10
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/a0.gif
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim follow15
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW14"));
+      }
+    }
+@end_script
+      loop	0
+      delay   6
+      offset	75 170
+      jumpframe 2 0 -2.5 1 dus
+      flipframe 0
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/jcarn/ru4.gif
+      frame	data/chars/jcarn/ru4.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru3.gif
+      frame	data/chars/jcarn/ru3.gif
+      sound	data/sounds/step.wav
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/ru2.gif
+      frame	data/chars/jcarn/ru2.gif
+      sound	data/sounds/step.wav
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+
+anim follow14
+      loop	0
+      delay   6
+      offset	75 170
+      jumpframe 2 0 -2.5  -1 dus
+      flipframe 0
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/jcarn/ru4.gif
+      frame	data/chars/jcarn/ru4.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru3.gif
+      frame	data/chars/jcarn/ru3.gif
+      sound	data/sounds/step.wav
+      bbox	55 78 47 75
+      frame	data/chars/jcarn/ru2.gif
+      frame	data/chars/jcarn/ru2.gif
+      sound	data/sounds/step.wav
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru5.gif
+      frame	data/chars/jcarn/ru1.gif
+      frame	data/chars/jcarn/ru1.gif
+
+anim follow16
+      loop	0
+	delay	10
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 0 0 2
+      landframe 5 dus
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/jcarn/at12.wav
+      @cmd    degravity -0.27
+      frame	data/chars/jcarn/ja2.gif
+      delay	10
+      attack  85 102 65 33 12 1 0 0 35
+      frame	data/chars/jcarn/ja3.gif
+      frame	data/chars/jcarn/ja3.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/jcarn/ja1.gif
+      delay   40
+      frame	data/chars/jcarn/ja1.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/jcarn/a0.gif
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim special2
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
+      }
+    }
+@end_script
+      loop	0
+      delay   9
+      quakeframe 3 5 7
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      offset	109 181
+      sound	data/chars/jcarn/at5.wav
+      frame	data/chars/jcarn/sp0.gif
+      frame	data/chars/jcarn/sp1.gif
+      frame	data/chars/jcarn/sp2.gif
+      sound	data/sounds/beat3.wav
+      frame	data/chars/jcarn/sp3.gif
+      delay   4
+      frame	data/chars/jcarn/sp4.gif
+      sound	data/sounds/indirect.wav
+      frame	data/chars/jcarn/sp5.gif
+      burn  55 100 105 60 20 1 1
+      dropv 3 2
+      frame	data/chars/jcarn/sp6.gif
+      frame	data/chars/jcarn/sp7.gif
+      sound	data/sounds/indirect.wav
+      frame	data/chars/jcarn/sp8.gif
+      frame	data/chars/jcarn/sp9.gif
+      frame	data/chars/jcarn/sp10.gif
+      frame	data/chars/jcarn/sp11.gif
+      burn  0 0 0 0 0 0
+      frame	data/chars/jcarn/sp12.gif
+      offset	75 170
+      delay   9
+      frame	data/chars/jcarn/jl1.gif
+      frame	data/chars/jcarn/a0.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jcarn/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   9
+	offset	95 170
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/jcarn/fall04.gif
+      delay   20
+      frame	data/chars/jcarn/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+	offset	95 155
+      move -5
+      sound	data/sounds/fall.wav
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall02.gif
+      frame	data/chars/jcarn/ffall02.gif
+      frame	data/chars/jcarn/ffall02.gif
+      move -4
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall02.gif
+      frame	data/chars/jcarn/ffall02.gif
+      frame	data/chars/jcarn/ffall02.gif
+      move -3
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall03.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall04.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      frame	data/chars/jcarn/ffall01.gif
+      offset	95 175
+      frame	data/chars/jcarn/ffall05.gif
+      frame	data/chars/jcarn/ffall05.gif
+      frame	data/chars/jcarn/ffall05.gif
+      frame	data/chars/jcarn/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+      @cmd    degravity 0
+	frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      frame	data/chars/jcarn/fall04.gif
+      move -3
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      move 0
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      move 0
+      frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+      move 0
+      delay   80
+	frame	data/chars/jcarn/fall05.gif
+      frame	data/chars/jcarn/fall05.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jcarn/fall05.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jcarn/fall05.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/jcarn/fall05.gif
+
+

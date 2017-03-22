@@ -1,0 +1,21 @@
+name	rockfl
+type	none
+shadow	0
+toflip 1
+
+anim idle
+	loop	0
+	delay	5
+	offset	105 122
+	frame	data/chars/misc/rockfl1.gif
+	frame	data/chars/misc/rockfl2.gif
+	frame	data/chars/misc/rockfl3.gif
+	frame	data/chars/misc/rockfl4.gif
+      frame	data/chars/misc/rockfl5.gif
+	frame	data/chars/misc/rockfl6.gif
+
+
+
+
+
+

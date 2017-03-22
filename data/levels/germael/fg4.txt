@@ -1,0 +1,12 @@
+name    fg4
+type	none
+facing 1
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   12
+	  offset	10 268
+        frame   data/levels/germael/fg1.gif
+
+

@@ -1,0 +1,41 @@
+name	surf2
+health   0
+type	none
+nolife 1
+shadow 0
+antigravity     100
+nomove  	1
+toflip 1
+lifespan  	6
+      
+
+anim idle
+	loop	1
+	delay	3
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/gokuu/surf/s1.gif
+      frame	data/chars/gokuu/surf/s1.gif
+      frame	data/chars/gokuu/surf/s1.gif
+      frame	data/chars/gokuu/surf/s1.gif
+      frame	data/chars/gokuu/surf/s2.gif
+      frame	data/chars/gokuu/surf/s2.gif
+      frame	data/chars/gokuu/surf/s2.gif
+      frame	data/chars/gokuu/surf/s2.gif
+      frame	data/chars/gokuu/surf/s3.gif
+      frame	data/chars/gokuu/surf/s3.gif
+      frame	data/chars/gokuu/surf/s3.gif
+      frame	data/chars/gokuu/surf/s3.gif
+      frame	data/chars/gokuu/surf/s2.gif
+      frame	data/chars/gokuu/surf/s2.gif
+      frame	data/chars/gokuu/surf/s2.gif
+      frame	data/chars/gokuu/surf/s2.gif
+
+
+
+      
+
+
+
+
+

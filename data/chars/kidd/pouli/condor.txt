@@ -1,0 +1,142 @@
+name	condor
+type	TRAP
+nolife 1
+shadow  4
+antigravity -27
+candamage enemy obstacle
+offscreenkill  500
+
+anim spawn
+	loop	0
+      offset	105 170
+      delay   2
+      hitflash  blo
+      hitfx   data/sounds/knife2.wav
+      move 8
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      sound	data/sounds/air33.wav
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle.gif
+      delay   2
+      move 8
+      attack  80 75 40 45 15 1 1 0 15 20
+      forcedirection 1
+      frame	data/chars/kidd/pouli/idle1.gif
+      offset	105 165
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+
+
+anim idle
+      loop	0
+      delay	2
+	offset	105 165
+      flipframe 36
+      hitflash  blo
+      hitfx   data/sounds/knife2.wav
+      attack  80 75 40 45 15 1 1 0 15 20
+      move 8
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      sound	data/sounds/air0.wav
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      move 6
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      movea 2
+      frame	data/chars/kidd/pouli/idle3.gif
+      move 2
+      frame	data/chars/kidd/pouli/turn1.gif
+      frame	data/chars/kidd/pouli/turn1.gif
+      frame	data/chars/kidd/pouli/turn1.gif
+      frame	data/chars/kidd/pouli/turn1.gif
+      move 0
+      frame	data/chars/kidd/pouli/turn2.gif
+      frame	data/chars/kidd/pouli/turn2.gif
+      frame	data/chars/kidd/pouli/turn2.gif
+      frame	data/chars/kidd/pouli/turn2.gif
+      move -2
+      frame	data/chars/kidd/pouli/turn3.gif
+      frame	data/chars/kidd/pouli/turn3.gif
+      frame	data/chars/kidd/pouli/turn3.gif
+      frame	data/chars/kidd/pouli/turn3.gif
+      move 3
+      movea 3
+      sound	data/sounds/air0.wav
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+      attack  0 0 0 0 0 0
+      move 5
+      movea 5
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      move 6
+      movea 6
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      sound	data/sounds/air0.wav
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle1.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle2.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      frame	data/chars/kidd/pouli/idle3.gif
+      @cmd killentity getlocalvar("self")
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle4.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/kidd/pouli/idle5.gif
+      frame	data/chars/misc/empty.gif
+      
+
+
+

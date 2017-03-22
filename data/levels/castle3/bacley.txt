@@ -1,0 +1,49 @@
+name		bacley
+speed		6
+type		panel
+facing		1
+setlayer	-10
+
+
+anim idle
+      loop 1
+	delay	10
+	offset	10 145
+	frame	data/levels/castle3/b01.gif
+      frame	data/levels/castle3/b02.gif
+      frame	data/levels/castle3/b03.gif
+      frame	data/levels/castle3/b04.gif
+      frame	data/levels/castle3/b05.gif
+      frame	data/levels/castle3/b06.gif
+      frame	data/levels/castle3/b07.gif
+      frame	data/levels/castle3/b08.gif
+      frame	data/levels/castle3/b09.gif
+      frame	data/levels/castle3/b10.gif
+      frame	data/levels/castle3/b11.gif
+      frame	data/levels/castle3/b12.gif
+      frame	data/levels/castle3/b13.gif
+      frame	data/levels/castle3/b14.gif
+      frame	data/levels/castle3/b15.gif
+      frame	data/levels/castle3/b16.gif
+      frame	data/levels/castle3/b17.gif
+      frame	data/levels/castle3/b18.gif
+      frame	data/levels/castle3/b19.gif
+      frame	data/levels/castle3/b20.gif
+      frame	data/levels/castle3/b21.gif
+      frame	data/levels/castle3/b22.gif
+      frame	data/levels/castle3/b23.gif
+      frame	data/levels/castle3/b24.gif
+      frame	data/levels/castle3/b25.gif
+      frame	data/levels/castle3/b26.gif
+      frame	data/levels/castle3/b27.gif
+      frame	data/levels/castle3/b28.gif
+      frame	data/levels/castle3/b29.gif
+      frame	data/levels/castle3/b30.gif
+      frame	data/levels/castle3/b31.gif
+      frame	data/levels/castle3/b32.gif
+      frame	data/levels/castle3/b33.gif
+      frame	data/levels/castle3/b34.gif
+
+
+
+

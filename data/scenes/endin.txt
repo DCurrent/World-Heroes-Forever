@@ -1,0 +1,7 @@
+music           data/music/endd.bor
+animation	data/scenes/endin.gif 0 0 0 1
+animation	data/scenes/en1.gif 0 0 0 1
+animation	data/scenes/en2.gif 0 0 0 1
+animation	data/scenes/en3.gif 0 0 0 1
+animation	data/scenes/cre.gif 0 0 0 1
+

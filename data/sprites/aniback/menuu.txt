@@ -1,0 +1,31 @@
+name	menuu
+health	70
+type	item
+shadow	0
+nolife   1
+facing 1
+
+anim spawn
+	loop	0
+      delay	40
+      offset	20 25
+      jumpframe 0 3.5 0
+      landframe 2
+      frame	data/sprites/aniback/menuu.gif
+      delay	50
+      frame	data/sprites/aniback/menuu.gif
+      delay	5
+      frame	data/sprites/aniback/menuu.gif
+      offset	20 26
+      frame	data/sprites/aniback/menuu.gif
+
+anim idle
+	loop	1
+	delay	8
+	offset	20 25
+	bbox	5 5 31 22
+	frame	data/sprites/aniback/menuu.gif
+	
+
+
+

@@ -1,0 +1,16 @@
+# Hit flash
+
+name	EFlash
+type	none
+shadow	0
+
+
+
+anim idle
+	loop	0
+	delay	4
+	offset	2 2
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/misc/empty.gif
+		
+

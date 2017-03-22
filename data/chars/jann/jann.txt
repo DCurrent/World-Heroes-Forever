@@ -1,0 +1,1493 @@
+name	jann
+health	300
+speed	12
+type	enemy
+shadow  0
+throw         5 2
+paingrab 1
+grabfinish 1
+grabdistance	40
+running 30	4.5	2	1	0
+gfxshadow  1
+jumpheight 4.5
+jumpspeed 14
+falldie 2
+nodieblink      1
+dust du
+diesound	data/chars/jann/die.wav
+aimove chase
+thold 25
+blockodds 1
+bflash bflash
+projectilehit   enemy obstacle trap
+icon	data/chars/jann/icon2.gif
+hostile player 
+candamage player obstacle
+subject_to_wall 0
+
+load	jab2
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/jann/idle.gif
+
+anim spawn
+	loop	0
+      offset	70 170
+      jumpframe 0 0 2
+      landframe 7 dus
+      delay   4
+      @cmd    degravity -0.27
+      sound	data/sounds/jump.wav
+      frame	data/chars/jann/j4.gif
+      frame	data/chars/jann/j5.gif
+      frame	data/chars/jann/j6.gif
+      frame	data/chars/jann/j7.gif
+      frame	data/chars/jann/j8.gif
+      frame	data/chars/jann/j9.gif
+      delay   40
+      frame	data/chars/jann/j10.gif
+      delay   10
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/get00.gif
+      frame	data/chars/jann/j1.gif
+
+anim idle
+	loop	1
+	delay	13
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd    clearL
+      frame	data/chars/jann/idle.gif
+      frame	data/chars/jann/idle1.gif
+      frame	data/chars/jann/idle2.gif
+      frame	data/chars/jann/idle1.gif
+
+anim walk
+	loop	1
+      delay   8
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/jann/w1.gif
+	frame	data/chars/jann/w2.gif
+	frame	data/chars/jann/w3.gif
+	frame	data/chars/jann/w4.gif
+	frame	data/chars/jann/w3.gif
+	frame	data/chars/jann/w2.gif
+
+anim grab
+	loop	0
+	delay	11
+	offset	75 170
+      sound	data/sounds/air5.wav
+      frame	data/chars/jann/aaa1.gif
+      sound	data/chars/jann/at11.wav
+      frame	data/chars/jann/grab.gif
+      @cmd    anichange "ANI_FOLLOW3"
+      frame	data/chars/jann/grab.gif
+
+anim run
+	loop	1
+      delay	9
+      offset	70 170
+	bbox	50 78 47 80
+      frame	data/chars/jann/ru4.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/jann/ru1.gif
+	frame	data/chars/jann/ru2.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/jann/ru3.gif
+
+anim RUNATTACK
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW6"));
+      }
+    }
+@end_script
+      range	110 140
+      rangez -15 15
+      loop	0
+	delay	3
+      offset	70 170
+      hitflash  ffla
+      jumpframe 0 2 2.5 0 dus
+      landframe 13 dus
+      hitfx   data/sounds/beat2.wav
+      @cmd    degravity -0.27
+      frame	data/chars/jann/ra1.gif
+      frame	data/chars/jann/ra1.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jann/ra22.gif
+      frame	data/chars/jann/ra22.gif
+      sound	data/chars/jann/select.wav
+     	frame	data/chars/jann/ra3.gif
+      frame	data/chars/jann/ra3.gif
+      attack 75 114 55 35 15 1 0 0 23
+      dropv 2.5 3.5
+      forcedirection -1
+      bbox	50 78 47 80
+      frame	data/chars/jann/ra4.gif
+      frame	data/chars/jann/ra4.gif
+      frame	data/chars/jann/ra4.gif
+      frame	data/chars/jann/ra4.gif
+      attack  0 0 0 0 0 0
+	delay	3
+	frame	data/chars/jann/ra5.gif
+      frame	data/chars/jann/ra5.gif
+      delay	20
+      frame	data/chars/jann/j10.gif
+      delay	3
+	move 4
+      @cmd    degravity 0
+	frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/j1.gif
+
+anim follow6
+      loop	0
+      delay	3
+      offset	94 170
+      hitflash  blood
+      move 5
+      hitfx  data/sounds/sword3.wav
+      sound	data/chars/jann/at2.wav
+      frame	data/chars/jann/fsp1.gif
+      frame	data/chars/jann/fsp2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jann/fsp1.gif
+      offset	107 170
+      frame	data/chars/jann/fsp3.gif
+      frame	data/chars/jann/fsp3.gif
+      delay	2
+      move 4
+	frame	data/chars/jann/fsp3.gif
+      offset	70 170
+      bbox	50 78 47 80
+      attack 75 108 107 40 20 1 0 0 23
+      dropv 3 3.5
+      forcedirection -1
+      frame	data/chars/jann/fsp4.gif
+      frame	data/chars/jann/fsp4.gif
+      frame	data/chars/jann/fsp4.gif
+	frame	data/chars/jann/fsp4.gif
+	delay	3
+      frame	data/chars/jann/fsp5.gif
+      attack 0 0 0 0 0 0
+      move 3
+      frame	data/chars/jann/fsp6.gif
+      frame	data/chars/jann/fsp7.gif
+      frame	data/chars/jann/fsp8.gif
+      frame	data/chars/jann/fsp9.gif
+      frame	data/chars/jann/fsp10.gif
+      frame	data/chars/jann/fsp11.gif
+      move 0
+      delay	5
+	frame	data/chars/jann/aa1.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/jann/bl1.gif
+      frame	data/chars/jann/bl2.gif
+      delay	2
+      offset	73 170
+	frame	data/chars/jann/bl2.gif
+      offset	70 170
+      frame	data/chars/jann/bl2.gif
+      offset	67 170
+      frame	data/chars/jann/bl2.gif
+      offset	70 170
+      frame	data/chars/jann/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/jann/bl2.gif
+      frame	data/chars/jann/bl2.gif
+      frame	data/chars/jann/bl2.gif
+      frame	data/chars/jann/bl2.gif
+      frame	data/chars/jann/bl2.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	70 170
+      frame	data/chars/jann/pain1.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	65 186
+      frame	data/chars/jann/ppain1.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	70 170
+      bbox	0 0 0 0
+      frame	data/chars/jann/pain1.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	70 170
+      frame	data/chars/jann/pain1.gif
+
+anim pain
+	loop	0
+	delay	4
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/jann/ppain1.gif
+      offset	72 170
+	frame	data/chars/jann/ppain1.gif
+      offset	69 170
+	frame	data/chars/jann/ppain1.gif
+      offset	71 170
+      frame	data/chars/jann/ppain1.gif
+      offset	70 170
+      frame	data/chars/jann/ppain1.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/jann/ppain1.gif
+      offset	72 170
+	frame	data/chars/jann/ppain1.gif
+      offset	68 170
+	frame	data/chars/jann/ppain1.gif
+      offset	72 170
+      frame	data/chars/jann/ppain1.gif
+      offset	70 170
+      frame	data/chars/jann/ppain1.gif
+      delay	45
+      frame	data/chars/jann/pain1.gif
+      frame	data/chars/jann/pain1.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	95 120
+      bbox	40 85 100 35
+	frame	data/chars/jann/fall04.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	95 120
+	frame	data/chars/jann/fall04.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/jann/pain1.gif
+      offset	72 170
+	frame	data/chars/jann/pain1.gif
+      offset	68 170
+	frame	data/chars/jann/pain1.gif
+      offset	72 170
+      frame	data/chars/jann/pain1.gif
+      offset	70 170
+      frame	data/chars/jann/pain1.gif
+      delay	3
+      move -4
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      move -4
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/ppain1.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/jann/bpain04.gif
+      offset	72 170
+	frame	data/chars/jann/bpain04.gif
+      offset	68 170
+	frame	data/chars/jann/bpain4.gif
+      offset	72 170
+      frame	data/chars/jann/bpain4.gif
+      offset	70 170
+      frame	data/chars/jann/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/jann/bpain02.gif
+      frame	data/chars/jann/bpain02.gif
+      frame	data/chars/jann/bpain2.gif
+      frame	data/chars/jann/bpain2.gif
+      frame	data/chars/jann/bpain02.gif
+      frame	data/chars/jann/bpain02.gif
+      frame	data/chars/jann/bpain2.gif
+      frame	data/chars/jann/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	70 170
+	frame	data/chars/jann/ppain1.gif
+      offset	72 170
+	frame	data/chars/jann/ppain1.gif
+      offset	69 170
+	frame	data/chars/jann/ppain1.gif
+      offset	71 170
+      frame	data/chars/jann/ppain1.gif
+      offset	70 170
+      frame	data/chars/jann/ppain1.gif
+      frame	data/chars/jann/pain1.gif
+      frame	data/chars/jann/pain1.gif
+      frame	data/chars/jann/pain1.gif
+      frame	data/chars/jann/pain1.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/jann/fall01.gif 
+	frame	data/chars/jann/fall01.gif
+      attack  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      bbox	55 78 80 57
+	frame	data/chars/jann/fall02.gif
+	frame	data/chars/jann/fall02.gif
+      delay   20
+      bbox	65 90 70 40
+	frame	data/chars/jann/fall03.gif
+	frame	data/chars/jann/fall03.gif
+      delay   10
+      offset	95 120
+      bbox	40 90 55 30
+      @cmd    degravity 0
+	frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jann/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	70 170
+      move -4
+      @cmd    degravity -0.27
+      frame	data/chars/jann/pain2.gif
+      frame	data/chars/jann/pain2.gif
+      frame	data/chars/jann/pain2.gif
+      delay   2
+      move -5
+      offset	110 121
+      sound	data/sounds/fall.wav
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu4.gif
+      frame	data/chars/jann/ruu4.gif
+      frame	data/chars/jann/ruu4.gif
+      move -4
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu3.gif
+      bbox	62 75 60 45
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu4.gif
+      frame	data/chars/jann/ruu4.gif
+      frame	data/chars/jann/ruu4.gif
+      move -3
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      @cmd    degravity 0
+      offset	95 120
+      bbox	40 90 55 30
+      frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      attack10  0 0 0 0 0 0
+	frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      move -3
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      move 0
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      move 0
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      @cmd    degravity 0
+      frame	data/chars/jann/dsla1.gif
+	frame	data/chars/jann/dsla2.gif
+	frame	data/chars/jann/dsla3.gif
+      frame	data/chars/jann/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/jann/sla3.gif
+      offset	125 120
+      frame	data/chars/jann/sla2.gif
+      offset	70 170
+      frame	data/chars/jann/pain1.gif
+      offset	83 140
+      frame	data/chars/jann/sla1.gif
+      frame	data/chars/jann/sla2.gif
+      frame	data/chars/jann/rjsla3.gif
+      offset	75 150
+      frame	data/chars/jann/rjsla4.gif
+      frame	data/chars/jann/rjsla5.gif
+      offset	95 170
+      frame	data/chars/jann/ffall01.gif
+      frame	data/chars/jann/ffall04.gif
+      frame	data/chars/jann/ffall05.gif
+      frame	data/chars/jann/rj0.gif
+      offset	108 173
+      frame	data/chars/jann/rj00.gif
+      offset	108 166
+      frame	data/chars/jann/gsla2.gif
+      offset	104 170
+      frame	data/chars/jann/gfall04.gif
+      frame	data/chars/jann/gfall05.gif
+      offset	128 181
+      frame	data/chars/jann/pain11.gif
+      offset	124 170
+      frame	data/chars/jann/dsla22.gif
+	frame	data/chars/jann/dsla33.gif
+      offset	75 150
+      frame	data/chars/jann/rjsla7.gif
+      offset	70 170
+      frame	data/chars/jann/ppain1.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      @cmd    degravity 0
+      frame	data/chars/jann/sla1.gif
+      offset	112 145
+	frame	data/chars/jann/sla2.gif
+      offset	90 145
+	frame	data/chars/jann/sla3.gif
+      frame	data/chars/jann/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/jann/ffall04.gif
+      offset	85 145
+      frame	data/chars/jann/sla1.gif
+      frame	data/chars/jann/sla1.gif
+      offset	98 138
+      frame	data/chars/jann/ssla3.gif
+      frame	data/chars/jann/rjsla3.gif
+      frame	data/chars/jann/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jann/rjsla4.gif
+      frame	data/chars/jann/rjsla5.gif
+      frame	data/chars/jann/rjsla6.gif
+      frame	data/chars/jann/sla1.gif
+      frame	data/chars/jann/sla1.gif
+      frame	data/chars/jann/ssla3.gif
+      frame	data/chars/jann/sla2.gif
+      offset	123 170
+      frame	data/chars/jann/sla3.gif
+      offset	98 138
+      frame	data/chars/jann/hsla1.gif
+      frame	data/chars/jann/hsla2.gif
+      frame	data/chars/jann/hsla3.gif
+      frame	data/chars/jann/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jann/hsla2.gif
+      frame	data/chars/jann/hsla4.gif
+      frame	data/chars/jann/rj1.gif
+      frame	data/chars/jann/gsla3.gif
+      frame	data/chars/jann/rj3.gif
+      frame	data/chars/jann/hsla4.gif
+      offset	98 148
+      frame	data/chars/jann/hsla4.gif
+      offset	124 170
+      frame	data/chars/jann/pain11.gif
+      frame	data/chars/jann/ppain11.gif
+      offset	70 170
+      frame	data/chars/jann/pain1.gif
+      offset	125 170
+      frame	data/chars/jann/pain11.gif
+      frame	data/chars/jann/pain22.gif
+      offset	100 140
+      frame	data/chars/jann/fall066.gif
+      offset	70 170
+      frame	data/chars/jann/pain2.gif
+      offset	105 85
+      frame	data/chars/jann/dsla3.gif
+      offset	70 170
+      frame	data/chars/jann/pain1.gif
+      offset	75 170
+      frame	data/chars/jann/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      @cmd    degravity 0
+      frame	data/chars/jann/gsla1.gif
+      offset	112 145
+	frame	data/chars/jann/gsla2.gif
+      offset	90 145
+	frame	data/chars/jann/gsla3.gif
+      frame	data/chars/jann/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/jann/gsla6.gif
+      offset	115 170
+      frame	data/chars/jann/dsla1.gif
+      offset	115 145
+	frame	data/chars/jann/gsla3.gif
+      offset	70 170
+      frame	data/chars/jann/pain1.gif
+      offset	105 170
+      frame	data/chars/jann/gfall04.gif
+      offset	75 148
+      frame	data/chars/jann/rjsla4.gif
+      frame	data/chars/jann/rjsla5.gif
+      offset	95 170
+      frame	data/chars/jann/ffall04.gif
+      offset	75 143
+      frame	data/chars/jann/hsla2.gif
+      frame	data/chars/jann/hsla4.gif
+      offset	129 170
+      frame	data/chars/jann/pain1.gif
+      offset	95 170
+      frame	data/chars/jann/ffall01.gif
+      frame	data/chars/jann/ffall02.gif
+      frame	data/chars/jann/ffall03.gif
+      frame	data/chars/jann/ffall04.gif
+      frame	data/chars/jann/ffall05.gif
+      offset	104 170
+      frame	data/chars/jann/gsla2.gif
+      frame	data/chars/jann/gsla3.gif
+      frame	data/chars/jann/gsla4.gif
+      frame	data/chars/jann/gfall04.gif
+      frame	data/chars/jann/gfall05.gif
+      offset	70 165
+      frame	data/chars/jann/pain2.gif
+      offset	75 165
+      frame	data/chars/jann/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	110 138
+      bbox	65 90 70 40
+      landframe 3
+      @cmd    degravity -0.27
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jann/fall03.gif
+      frame	data/chars/jann/fall03.gif
+      offset	95 120
+      bbox	40 90 55 30
+      delay   100
+      frame	data/chars/jann/fall04.gif
+      delay   2
+      @cmd    degravity 0
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jann/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	110 138
+      bbox	65 90 70 40
+      landframe 3
+      @cmd    degravity -0.27
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jann/fall03.gif
+      frame	data/chars/jann/fall03.gif
+      offset	95 120
+      bbox	40 90 55 30
+      delay   100
+      frame	data/chars/jann/fall04.gif
+      delay   2
+      @cmd    degravity 0
+	frame	data/chars/jann/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity -0.27
+      frame	data/chars/jann/sla3.gif
+      frame	data/chars/jann/sla3.gif
+      delay   10
+      offset	113 138
+      bbox	55 78 80 57
+      frame	data/chars/jann/fall02.gif
+      frame	data/chars/jann/fall02.gif
+      delay   20
+      bbox	65 90 70 40
+	frame	data/chars/jann/fall03.gif
+      delay   500
+      frame	data/chars/jann/fall03.gif
+      offset	95 120
+      delay   10
+      bbox	40 90 55 30
+      @cmd    degravity 0
+      frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jann/fall05.gif
+
+
+anim fall10
+      loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/jann/fall01.gif
+	frame	data/chars/jann/fall01.gif
+	frame	data/chars/jann/fall02.gif
+	frame	data/chars/jann/fall02.gif
+      delay   20
+	frame	data/chars/jann/fall03.gif
+	frame	data/chars/jann/fall03.gif
+      delay   10
+      offset	95 120
+      @cmd    degravity 0
+	frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jann/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 120
+      bbox	40 90 100 35
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+	frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 120
+      bbox	40 90 100 35
+      @cmd    degravity 0
+	frame	data/chars/jann/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/jann/fall01.gif
+	attack  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jann/fall01.gif
+	frame	data/chars/jann/fall02.gif
+	frame	data/chars/jann/fall02.gif
+      delay   20
+	frame	data/chars/jann/fall03.gif
+	frame	data/chars/jann/fall03.gif
+      delay   10
+      offset	95 120
+      @cmd    degravity 0
+	frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jann/fall05.gif
+
+anim fall16
+	loop	0
+      delay   4
+      offset	70 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+	frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif 
+	frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif
+      frame	data/chars/jann/ppain2.gif
+      frame	data/chars/jann/ppain22.gif
+      frame	data/chars/jann/ppain2.gif
+	delay   40
+	frame	data/chars/jann/ppain22.gif
+      delay   10
+      offset	95 120
+	bbox	40 90 55 30
+	frame	data/chars/jann/fall04.gif
+	frame	data/chars/jann/fall04.gif
+	delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jann/fall04.gif
+
+anim burn
+	loop	0
+      delay   6
+	offset	110 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    degravity -0.27
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/jann/burn01.gif
+	frame	data/chars/jann/burn1.gif
+      frame	data/chars/jann/burn01.gif
+	frame	data/chars/jann/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/jann/burn02.gif
+	frame	data/chars/jann/burn2.gif
+      frame	data/chars/jann/burn02.gif
+	frame	data/chars/jann/burn2.gif
+      frame	data/chars/jann/burn03.gif
+      frame	data/chars/jann/burn3.gif
+	frame	data/chars/jann/burn03.gif
+      frame	data/chars/jann/burn3.gif
+      frame	data/chars/jann/burn03.gif
+      frame	data/chars/jann/burn3.gif
+      delay   40
+	frame	data/chars/jann/burn03.gif
+      offset	95 120
+      delay   7
+      @cmd    degravity 0
+      bbox	40 90 55 30
+	frame	data/chars/jann/burn4.gif
+      frame	data/chars/jann/burn04.gif
+      frame	data/chars/jann/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/jann/fall05.gif
+
+anim rise
+	loop	0
+      offset	95 120
+      delay	15
+      frame	data/chars/jann/fall05.gif
+      delay	9
+	offset	61 187
+	frame	data/chars/jann/rise1.gif
+	frame	data/chars/jann/rise2.gif
+	frame	data/chars/jann/rise3.gif
+	
+anim attack1
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_SPECIAL"));
+      }
+    }
+@end_script
+      loop	0
+      range 0 45
+	delay	6
+      offset	70 170
+      jumpframe 1 4.5 -2.5 0 dus
+      landframe 14 dus
+      bbox	50 78 47 80
+      frame	data/chars/jann/j1.gif
+      delay	4
+      @cmd    degravity -0.27
+      frame	data/chars/jann/j9.gif
+      frame	data/chars/jann/j9.gif
+      frame	data/chars/jann/j9.gif
+      delay	6
+      frame	data/chars/jann/j9.gif
+      frame	data/chars/jann/j8.gif
+      frame	data/chars/jann/j7.gif
+      bbox	50 68 47 70
+      frame	data/chars/jann/j6.gif
+      frame	data/chars/jann/j5.gif
+      @cmd    riseattack2 100 20 "ANI_FOLLOW14"
+      frame	data/chars/jann/j4.gif
+      frame	data/chars/jann/j3.gif
+      delay	4
+      frame	data/chars/jann/j2.gif
+      @cmd    riseattack2 145 20 "ANI_FOLLOW13"
+      frame	data/chars/jann/j2.gif
+      @cmd    degravity -0.5
+      delay	40
+      frame	data/chars/jann/j2.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/get00.gif
+      frame	data/chars/jann/j1.gif
+
+anim attack2
+      loop	0
+      range 60 100
+	delay	5
+      offset	70 170
+      followcond 1
+      followanim 7
+      bbox	50 78 47 80
+      hitflash  bloo
+      hitfx  data/sounds/knife3.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/jann/aa1.gif
+	frame	data/chars/jann/aa2.gif
+      sound	data/chars/jann/at7.wav
+      attack  75 98 90 40 5 0
+	frame	data/chars/jann/aa3.gif
+      attack  0 0 0 0 0 0
+      delay	4
+      frame	data/chars/jann/aa4.gif
+	frame	data/chars/jann/aa5.gif
+      frame	data/chars/jann/aa6.gif
+      frame	data/chars/jann/aa7.gif
+
+anim follow7
+      loop	0
+	delay	5
+      offset	70 170
+      followcond 1
+      followanim 9
+      bbox	50 78 47 80
+      hitflash  blood
+      hitfx  data/sounds/knife3.wav
+      frame	data/chars/jann/aa3.gif
+      delay	4
+      frame	data/chars/jann/aa4.gif
+	frame	data/chars/jann/aa5.gif
+      frame	data/chars/jann/aa6.gif
+      frame	data/chars/jann/aa7.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jann/aaa2.gif
+      delay	4
+      frame	data/chars/jann/aaa3.gif
+      frame	data/chars/jann/aaa4.gif
+      sound	data/chars/jann/at8.wav
+      frame	data/chars/jann/aaa5.gif
+      attack  75 90 90 40 10 0
+	frame	data/chars/jann/aaa6.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/jann/aaa7.gif
+      frame	data/chars/jann/aaa8.gif
+      delay	5
+      frame	data/chars/jann/aaa9.gif
+
+anim follow9
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  blood
+      jumpframe 6 2 2 0 dus
+      landframe 15 dus
+      hitfx  data/sounds/knife3.wav
+      frame	data/chars/janne/aaa6.gif
+      frame	data/chars/janne/aaa7.gif
+      frame	data/chars/janne/aaa8.gif
+      delay	5
+      frame	data/chars/janne/aaa9.gif
+      delay	6
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/aaaa0.gif
+      delay	5
+      frame	data/chars/janne/aaaa1.gif
+      sound	data/chars/janne/select.wav
+      @cmd    degravity -0.27
+      frame	data/chars/janne/aaaa2.gif
+      delay	4
+      attack  80 130 52 40 10 0 0 0 20
+      frame	data/chars/janne/aaaa3.gif
+      frame	data/chars/janne/aaaa4.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/janne/aaaa5.gif
+      frame	data/chars/janne/aaaa6.gif
+      attack  75 54 57 70 10 1 0 0 25
+      frame	data/chars/janne/aaaa7.gif
+      frame	data/chars/janne/aaaa8.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/janne/aaaa9.gif
+      delay	20
+      frame	data/chars/janne/aaaa10.gif
+      delay	7
+      @cmd    degravity 0
+      frame	data/chars/janne/aaaa0.gif
+
+anim attack3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW5"));
+      }
+    }
+@end_script
+	loop	0
+      range 210 310
+	delay	13
+      offset	70 170
+      bbox	50 78 47 80
+      custknife jab2
+	throwframe 2 61
+      frame	data/chars/jann/fsb1.gif
+      sound	data/sounds/air5.wav
+      delay	6
+      frame	data/chars/jann/fsb2.gif
+      sound	data/chars/jann/at1.wav
+      frame	data/chars/jann/fsb3.gif
+      delay	25
+      frame	data/chars/jann/fsb4.gif
+      delay	8
+      frame	data/chars/jann/aa1.gif
+
+anim follow5
+      loop	0
+	delay	14
+      offset	70 170
+      otg 1
+      hitflash  blood
+      hitfx  data/sounds/sword3.wav
+      jumpframe 1 3.5 3.5 0 dus
+      landframe 21 dus
+      frame	data/chars/jann/j1.gif
+      sound	data/chars/jann/at3.wav
+      delay	6
+      @cmd    degravity -0.27
+      frame	data/chars/jann/fspu1.gif
+      frame	data/chars/jann/fspu2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/jann/fspu3.gif
+      delay	2
+      attack  80 50 82 105 15 1 0 0 40
+      dropv 2 3.5
+      forcedirection -1
+      frame	data/chars/jann/fspu4.gif
+      frame	data/chars/jann/fspu5.gif
+      frame	data/chars/jann/fspu6.gif
+      frame	data/chars/jann/fspu7.gif
+      attack 0 0 0 0 0 0
+      delay	4
+      frame	data/chars/jann/j4.gif
+      frame	data/chars/jann/j5.gif
+      frame	data/chars/jann/j6.gif
+      frame	data/chars/jann/j7.gif
+      frame	data/chars/jann/j8.gif
+      delay	6
+      sound	data/sounds/air3.wav
+      frame	data/chars/jann/fspu11.gif
+      bbox	50 78 47 80
+      frame	data/chars/jann/ja01.gif
+      frame	data/chars/jann/ja01.gif
+      frame	data/chars/jann/ja01.gif
+      frame	data/chars/jann/ja01.gif
+      frame	data/chars/jann/ja01.gif
+      frame	data/chars/jann/ja01.gif
+      delay	20
+      frame	data/chars/jann/ja01.gif
+      bbox	0 0 0 0
+      offset	70 170
+      delay	6
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/jann/ja02.gif
+      delay	4
+      attack  80 120 95 50 15 1 0 0 25
+      dropv 2 1.5
+      frame	data/chars/jann/ja03.gif
+      frame	data/chars/jann/ja04.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/jann/ja05.gif
+      bbox	50 78 47 80
+      frame	data/chars/jann/ja06.gif
+      delay	12
+      frame	data/chars/jann/ja07.gif
+      delay	7
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/aa1.gif
+      
+anim upper
+      loop	0
+	delay	6
+      offset	70 170
+      jumpframe 1 4.5 2.5 0 dus
+      landframe 14 dus
+      bbox	50 78 47 80
+      frame	data/chars/jann/j1.gif
+      delay	4
+      @cmd    degravity -0.27
+      frame	data/chars/jann/j2.gif
+      frame	data/chars/jann/j2.gif
+      frame	data/chars/jann/j2.gif
+      @cmd    riseattack 120 20 "ANI_FOLLOW10"
+      bbox	50 68 47 70
+      delay	6
+      frame	data/chars/jann/j2.gif
+      frame	data/chars/jann/j3.gif
+      @cmd    riseattack2 90 20 "ANI_FOLLOW12"
+      frame	data/chars/jann/j4.gif
+      frame	data/chars/jann/j5.gif
+      frame	data/chars/jann/j6.gif
+      @cmd    riseattack2 100 20 "ANI_FOLLOW12"
+      frame	data/chars/jann/j7.gif
+      frame	data/chars/jann/j8.gif
+      delay	4
+      frame	data/chars/jann/j9.gif
+      @cmd    riseattack2 145 20 "ANI_FOLLOW11"
+      frame	data/chars/jann/j9.gif
+      @cmd    degravity -0.5
+      delay	40
+      frame	data/chars/jann/j10.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/get00.gif
+      frame	data/chars/jann/j1.gif
+
+anim follow10
+      loop	0
+	delay	4
+      offset	70 170
+      jumpframe 0 0 2.5
+      landframe 7 dus
+      bbox	50 75 47 65
+      hitflash  blood
+      hitfx   data/sounds/knife2.wav
+      sound	data/chars/jann/at7.wav
+      @cmd    degravity -0.27
+      frame	data/chars/jann/jp1.gif
+      frame	data/chars/jann/jp1.gif
+      delay	4
+      attack  70 105 70 45 12 1 0 0 35
+      frame	data/chars/jann/jp2.gif
+      delay	3
+      frame	data/chars/jann/jp3.gif
+      attack  0 0 0 0 0 0
+      delay	2
+      frame	data/chars/jann/jp4.gif
+      delay	9
+      frame	data/chars/jann/jp5.gif
+      delay	40
+      @cmd    degravity -0.7
+      frame	data/chars/jann/j10.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/get00.gif
+      frame	data/chars/jann/j1.gif
+
+anim follow11
+      loop	0
+	delay	5
+      offset	70 170
+      jumpframe 0 0 2.5
+      landframe 9 dus
+      bbox	50 75 47 65
+      hitflash  blood
+      hitfx   data/sounds/knife2.wav
+      frame	data/chars/jann/j2.gif
+      frame	data/chars/jann/j2.gif
+      sound	data/chars/jann/at7.wav
+      @cmd    degravity -0.27
+      frame	data/chars/jann/jp1.gif
+      frame	data/chars/jann/jp1.gif
+      delay	4
+      attack	70 105 70 45 12 1 0 0 35
+      frame	data/chars/jann/jp2.gif
+      delay	3
+      frame	data/chars/jann/jp3.gif
+      attack  0 0 0 0 0 0
+      delay	2
+      frame	data/chars/jann/jp4.gif
+      delay	9
+      frame	data/chars/jann/jp5.gif
+      delay	40
+      @cmd    degravity -0.7
+      frame	data/chars/jann/j10.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/get00.gif
+      frame	data/chars/jann/j1.gif
+
+anim follow12
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 80 47 35
+      jumpframe 0 0 2.5
+      landframe 5 dus
+      sound	data/chars/janne/at8.wav
+      @cmd    degravity -0.27
+      frame	data/chars/janne/jaf1.gif
+      delay	10
+      attack  75 105 65 33 12 1 0 0 35
+      frame	data/chars/janne/jaf2.gif
+      frame	data/chars/janne/jaf2.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/janne/jaf1.gif
+      delay	40
+      @cmd    degravity -0.5
+      frame	data/chars/janne/j10.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/get00.gif
+      frame	data/chars/jann/j1.gif
+
+anim follow13
+      loop	0
+	delay	5
+      offset	70 170
+      jumpframe 0 0 -2.5
+      landframe 9 dus
+      bbox	50 75 47 65
+      hitflash  blood
+      hitfx   data/sounds/knife2.wav
+      frame	data/chars/jann/j2.gif
+      frame	data/chars/jann/j2.gif
+      sound	data/chars/jann/at7.wav
+      @cmd    degravity -0.27
+      frame	data/chars/jann/jp1.gif
+      frame	data/chars/jann/jp1.gif
+      delay	4
+      attack	70 105 70 45 12 1 0 0 35
+      frame	data/chars/jann/jp2.gif
+      delay	3
+      frame	data/chars/jann/jp3.gif
+      attack  0 0 0 0 0 0
+      delay	2
+      frame	data/chars/jann/jp4.gif
+      delay	9
+      frame	data/chars/jann/jp5.gif
+      delay	40
+      @cmd    degravity -0.7
+      frame	data/chars/jann/j10.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/get00.gif
+      frame	data/chars/jann/j1.gif
+
+anim follow14
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 80 47 35
+      jumpframe 0 0 -2.5
+      landframe 5 dus
+      sound	data/chars/janne/at8.wav
+      @cmd    degravity -0.27
+      frame	data/chars/janne/jaf1.gif
+      delay	10
+      attack  75 105 65 33 12 1 0 0 35
+      frame	data/chars/janne/jaf2.gif
+      frame	data/chars/janne/jaf2.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/janne/jaf1.gif
+      delay	40
+      @cmd    degravity -0.5
+      frame	data/chars/janne/j10.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/jann/j1.gif
+      frame	data/chars/jann/get00.gif
+      frame	data/chars/jann/j1.gif
+
+anim  special
+      loop	0
+	delay	11
+      offset	70 170
+      bbox	50 78 47 80
+      followcond 2
+      followanim 3
+      attackone 1
+      hitfx   data/sounds/go.wav
+      frame	data/chars/jann/aaa1.gif
+      attack  80 90 50 40 0 0 1 1 20
+      nokill 1
+      frame	data/chars/jann/grab.gif
+      frame	data/chars/jann/aaa1.gif
+
+anim follow3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      }
+    }
+@end_script
+      loop	0
+	delay	10
+      offset	70 170
+      attackone 0
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart4
+      @cmd    position 1 40 0 -1 0
+      frame	data/chars/jann/grab.gif
+      sound	data/chars/jann/at7.wav
+      delay	15
+      @cmd    position 1 11 1 -1 1
+      frame	data/chars/jann/th1.gif
+      delay	8
+      @cmd    position 17 19 22 -1 1
+      frame	data/chars/jann/th2.gif
+      @cmd    position 18 74 27 -1 1
+      frame	data/chars/jann/th3.gif
+      @cmd    depost 0
+      @cmd    throw 30 1 3 2 0 0
+      delay	8
+      frame	data/chars/jann/th3.gif
+      frame	data/chars/jann/th3.gif
+      frame	data/chars/jann/th3.gif
+      frame	data/chars/jann/th3.gif
+
+anim follow4
+      loop	0
+	delay	10
+      offset	70 170
+      attackone 0
+      flipframe 2
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart4
+      @cmd    position 1 40 0 -1 0
+      frame	data/chars/jann/grab.gif
+      sound	data/chars/jann/at7.wav
+      delay	15
+      @cmd    position 6 11 1 -1 1
+      frame	data/chars/jann/th1.gif
+      offset	70 170
+      delay	8
+      @cmd    position 17 19 22 -1 1
+      frame	data/chars/jann/th2.gif
+      @cmd    position 18 74 27 -1 1
+      frame	data/chars/jann/th3.gif
+      @cmd    depost 0
+      @cmd    throw 30 1 3 2 0 0
+      delay	8
+      frame	data/chars/jann/th3.gif
+      frame	data/chars/jann/th3.gif
+      frame	data/chars/jann/th3.gif
+      frame	data/chars/jann/th3.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	95 120
+      frame	data/chars/jann/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   9
+	offset	95 120
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/jann/fall04.gif
+      delay   20
+      frame	data/chars/jann/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+      move -5
+      offset	110 121
+      sound	data/sounds/fall.wav
+      @cmd    degravity -0.27
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu4.gif
+      frame	data/chars/jann/ruu4.gif
+      frame	data/chars/jann/ruu4.gif
+      move -4
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu3.gif
+      bbox	62 75 60 45
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu4.gif
+      frame	data/chars/jann/ruu4.gif
+      frame	data/chars/jann/ruu4.gif
+      move -3
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu3.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu2.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      frame	data/chars/jann/ruu1.gif
+      @cmd    degravity 0
+      offset	95 120
+      bbox	40 90 55 30
+      frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      frame	data/chars/jann/fall04.gif
+      attack10  0 0 0 0 0 0
+	frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      move -3
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      move 0
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      move 0
+      frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+      move 0
+      delay   40
+	frame	data/chars/jann/fall05.gif
+      frame	data/chars/jann/fall05.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	95 120
+      frame	data/chars/jann/fall05.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	95 120
+      frame	data/chars/jann/fall05.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	95 120
+      frame	data/chars/jann/fall05.gif
+
+
+
+
+

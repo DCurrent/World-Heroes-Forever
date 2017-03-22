@@ -1,0 +1,20 @@
+name		bam
+speed		5
+type		panel
+facing		1
+setlayer	-10
+
+
+anim idle
+      loop 1
+	delay	24
+	offset	10 145
+	frame	data/levels/practice/back41.gif
+      delay	20
+      frame	data/levels/practice/back42.gif
+      delay	24
+      frame	data/levels/practice/back43.gif
+      delay	20
+      frame	data/levels/practice/back44.gif
+
+

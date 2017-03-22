@@ -1,0 +1,1946 @@
+name	janne
+health	120
+speed	12
+type	player
+shadow  0
+gfxshadow  1
+throw         5 4.2
+grabdistance	40
+running 30	5	2	1	0
+icon	data/chars/janne/icon.gif
+jumpheight 5
+jumpspeed 14
+jumpmove 3 0
+antigravity -27
+blockpain 1
+holdblock 1
+makeinv  0
+atchain       1 2 3 4
+com	A2	freespecial
+com	D U A freespecial2
+com	D F A freespecial3
+com	D F A2 freespecial19
+diesound	data/chars/janne/die.wav
+bflash bflash
+dust du dus dus 
+projectilehit   obstacle
+hostile enemy 
+candamage enemy obstacle
+subject_to_wall 0
+secret  0 2
+
+load	jab
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/janne/idle.gif
+alternatepal data/chars/janne/map10.gif
+alternatepal data/chars/janne/map9.gif
+alternatepal data/chars/janne/map8.gif
+alternatepal data/chars/janne/map7.gif
+alternatepal data/chars/janne/map6.gif
+alternatepal data/chars/janne/map5.gif
+alternatepal data/chars/janne/map4.gif
+alternatepal data/chars/janne/map3.gif
+alternatepal data/chars/janne/map2.gif
+alternatepal data/chars/janne/map1.gif
+
+anim spawn
+	loop	0
+      delay	2
+      offset	70 170
+      frame	data/chars/janne/idle1.gif
+
+anim respawn
+	loop	0
+      delay	3.5
+      offset	58 207
+      frame	data/chars/janne/spawn1.gif
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn1.gif
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn1.gif
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn1.gif
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn1.gif
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn1.gif
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn1.gif
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn1.gif
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn2.gif
+      delay	2.5
+      sound	data/sounds/spaw.wav
+      frame	data/chars/janne/empty.gif
+      frame	data/chars/janne/spawn2.gif
+      frame	data/chars/janne/spawn3.gif
+      frame	data/chars/janne/spawn4.gif
+      frame	data/chars/janne/spawn5.gif
+      frame	data/chars/janne/spawn6.gif
+      frame	data/chars/janne/spawn6.gif
+      frame	data/chars/janne/spawn6.gif
+      frame	data/chars/janne/spawn7.gif
+      frame	data/chars/janne/spawn8.gif
+      frame	data/chars/janne/spawn9.gif
+      frame	data/chars/janne/spawn10.gif
+      frame	data/chars/janne/spawn11.gif
+      frame	data/chars/janne/spawn12.gif
+      frame	data/chars/janne/spawn12.gif
+      frame	data/chars/janne/spawn13.gif
+      frame	data/chars/janne/spawn14.gif
+      frame	data/chars/janne/spawn14.gif
+      frame	data/chars/janne/spawn11.gif
+      frame	data/chars/janne/spawn12.gif
+      frame	data/chars/janne/spawn12.gif
+      frame	data/chars/janne/spawn40.gif
+      frame	data/chars/janne/spawn10.gif
+      frame	data/chars/janne/spawn40.gif
+      frame	data/chars/janne/spawn12.gif
+      frame	data/chars/janne/spawn11.gif
+      frame	data/chars/janne/spawn12.gif
+      frame	data/chars/janne/spawn13.gif
+      frame	data/chars/janne/spawn14.gif
+      frame	data/chars/janne/spawn13.gif
+      frame	data/chars/janne/spawn11.gif
+      frame	data/chars/janne/spawn11.gif
+      delay	7
+      frame	data/chars/janne/spawn41.gif
+      delay	10
+      frame	data/chars/janne/spawn42.gif
+
+anim waiting
+      loop	1
+	delay	13
+	offset	0 0
+      frame	data/chars/janne/waii1.gif
+      frame	data/chars/janne/waii2.gif
+      frame	data/chars/janne/waii3.gif
+      frame	data/chars/janne/waii2.gif
+
+anim SELECT
+	loop	0
+      delay	10
+	offset	0 0
+      sound	data/chars/janne/janne.wav
+      frame	data/chars/janne/wai1.gif
+      frame	data/chars/janne/wai1.gif
+      frame	data/chars/janne/wai1.gif
+      frame	data/chars/janne/wai1.gif
+      frame	data/chars/janne/wai1.gif
+      delay	15
+      frame	data/chars/janne/wai2.gif
+      sound	data/chars/janne/select.wav
+      delay	6
+      frame	data/chars/janne/wai3.gif
+      frame	data/chars/janne/wai4.gif
+      delay	8
+      frame	data/chars/janne/wai5.gif
+      frame	data/chars/janne/wai5.gif
+      frame	data/chars/janne/wai5.gif
+      frame	data/chars/janne/wai5.gif
+      frame	data/chars/janne/wai5.gif
+      frame	data/chars/janne/wai5.gif
+      frame	data/chars/janne/wai5.gif
+
+anim idle
+	loop	1
+	delay	13
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd    clearL
+      frame	data/chars/janne/idle.gif
+      frame	data/chars/janne/idle1.gif
+      frame	data/chars/janne/idle2.gif
+      frame	data/chars/janne/idle1.gif
+
+anim get
+      loop	0
+	delay	6
+      offset	70 170
+      frame	data/chars/janne/get00.gif
+      frame	data/chars/janne/get0.gif
+      delay	7
+      frame	data/chars/janne/get0.gif
+      frame	data/chars/janne/get00.gif
+
+anim walk
+	loop	1
+      delay   8
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/janne/w1.gif
+	frame	data/chars/janne/w2.gif
+	frame	data/chars/janne/w3.gif
+	frame	data/chars/janne/w4.gif
+	frame	data/chars/janne/w3.gif
+	frame	data/chars/janne/w2.gif
+
+anim run
+	loop	1
+      delay	9
+      offset	70 170
+	bbox	50 78 47 80
+      #include "data/scripts/run0001.h"
+      cancel 1 9 0 A2 freespecial7
+      frame	data/chars/janne/ru4.gif
+	frame	data/chars/janne/ru1.gif
+	frame	data/chars/janne/ru2.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/janne/ru3.gif
+      frame	data/chars/janne/ru2.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/janne/ru1.gif
+	frame	data/chars/janne/ru2.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/janne/ru3.gif
+      frame	data/chars/janne/ru2.gif
+      sound	data/sounds/step.wav
+      @cmd run0001
+	frame	data/chars/janne/ru4.gif
+
+anim ATTACKUP
+	loop	0
+      delay	2
+      offset	70 170
+	bbox	50 78 47 80
+      movez -3
+      cancel 1 21 0 A2 freespecial9
+      cancel 1 21 0 A freespecial10
+      frame	data/chars/janne/ru4.gif
+      frame	data/chars/janne/ru4.gif
+	frame	data/chars/janne/ru4.gif
+      frame	data/chars/janne/ru4.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/janne/ru1.gif
+      frame	data/chars/janne/ru1.gif
+	frame	data/chars/janne/ru1.gif
+      frame	data/chars/janne/ru1.gif
+	frame	data/chars/janne/ru2.gif
+	frame	data/chars/janne/ru2.gif
+	frame	data/chars/janne/ru2.gif
+      frame	data/chars/janne/ru2.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/janne/ru3.gif
+      frame	data/chars/janne/ru3.gif
+	frame	data/chars/janne/ru3.gif
+      frame	data/chars/janne/ru3.gif
+	frame	data/chars/janne/ru2.gif
+      frame	data/chars/janne/ru2.gif
+	frame	data/chars/janne/ru2.gif
+      sound	data/sounds/step.wav
+      movez -1
+	frame	data/chars/janne/ru4.gif
+      frame	data/chars/janne/ru4.gif
+      movez 0
+      frame	data/chars/janne/ru4.gif
+      
+
+anim ATTACKDOWN 
+	loop	0
+      delay	2
+      offset	70 170
+	bbox	50 78 47 80
+      movez 3
+      cancel 1 21 0 A2 freespecial11
+      cancel 1 21 0 A freespecial12
+      frame	data/chars/janne/ru4.gif
+      frame	data/chars/janne/ru4.gif
+	frame	data/chars/janne/ru4.gif
+      frame	data/chars/janne/ru4.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/janne/ru1.gif
+      frame	data/chars/janne/ru1.gif
+	frame	data/chars/janne/ru1.gif
+      frame	data/chars/janne/ru1.gif
+	frame	data/chars/janne/ru2.gif
+	frame	data/chars/janne/ru2.gif
+	frame	data/chars/janne/ru2.gif
+      frame	data/chars/janne/ru2.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/janne/ru3.gif
+      frame	data/chars/janne/ru3.gif
+	frame	data/chars/janne/ru3.gif
+      frame	data/chars/janne/ru3.gif
+	frame	data/chars/janne/ru2.gif
+      frame	data/chars/janne/ru2.gif
+	frame	data/chars/janne/ru2.gif
+      sound	data/sounds/step.wav
+      movez 1
+	frame	data/chars/janne/ru4.gif
+      frame	data/chars/janne/ru4.gif
+      movez 0
+      frame	data/chars/janne/ru4.gif
+
+anim RUNATTACK
+	loop	0
+      delay	3
+      offset	94 170
+      hitflash  blood
+      move 5
+      hitfx  data/sounds/sword3.wav
+      sound	data/chars/janne/at2.wav
+      frame	data/chars/janne/fsp1.gif
+      frame	data/chars/janne/fsp2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/fsp1.gif
+      offset	107 170
+      frame	data/chars/janne/fsp3.gif
+      frame	data/chars/janne/fsp3.gif
+      delay	2
+      move 4
+	frame	data/chars/janne/fsp3.gif
+      offset	70 170
+      bbox	50 78 47 80
+      attack 75 108 107 40 20 1 0 0 23
+      dropv 3 3.5
+      forcedirection -1
+      frame	data/chars/janne/fsp4.gif
+      frame	data/chars/janne/fsp4.gif
+      frame	data/chars/janne/fsp4.gif
+	frame	data/chars/janne/fsp4.gif
+	delay	3
+      frame	data/chars/janne/fsp5.gif
+      attack 0 0 0 0 0 0
+      move 3
+      frame	data/chars/janne/fsp6.gif
+      frame	data/chars/janne/fsp7.gif
+      frame	data/chars/janne/fsp8.gif
+      frame	data/chars/janne/fsp9.gif
+      frame	data/chars/janne/fsp10.gif
+      frame	data/chars/janne/fsp11.gif
+      move 0
+      delay	5
+	frame	data/chars/janne/aa1.gif
+
+
+anim pain
+	loop	0
+	delay	6
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/janne/pain1.gif
+	frame	data/chars/janne/pain2.gif
+	frame	data/chars/janne/pain1.gif
+
+anim pain3
+	loop	0
+	delay	2
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/janne/pain1.gif
+      offset	72 170
+	frame	data/chars/janne/pain1.gif
+      offset	68 170
+      sound	data/chars/janne/pain2.wav
+	frame	data/chars/janne/pain1.gif
+      offset	72 170
+      frame	data/chars/janne/pain1.gif
+      offset	70 170
+      frame	data/chars/janne/pain1.gif
+      delay	3
+      move -4
+      frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain1.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/janne/bpain04.gif
+      offset	72 170
+	frame	data/chars/janne/bpain04.gif
+      offset	68 170
+	frame	data/chars/janne/bpain4.gif
+      offset	72 170
+      frame	data/chars/janne/bpain4.gif
+      offset	70 170
+      frame	data/chars/janne/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/janne/bpain02.gif
+      frame	data/chars/janne/bpain02.gif
+      frame	data/chars/janne/bpain2.gif
+      frame	data/chars/janne/bpain2.gif
+      frame	data/chars/janne/bpain02.gif
+      frame	data/chars/janne/bpain02.gif
+      frame	data/chars/janne/bpain2.gif
+      frame	data/chars/janne/bpain2.gif
+
+anim grabbed
+	loop	0
+	delay	6
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/janne/pain1.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	110 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/janne/fall01.gif 
+	frame	data/chars/janne/fall01.gif
+      attack  54 85 72 50 5 1 1 1
+      bbox	55 78 80 57
+	frame	data/chars/janne/fall02.gif
+      bbox	0 0 0 0
+	frame	data/chars/janne/fall02.gif
+      delay   20
+	frame	data/chars/janne/fall03.gif
+	frame	data/chars/janne/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/janne/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/janne/fall04.gif
+	delay   20
+	frame	data/chars/janne/fall05.gif
+
+anim fall5
+	loop	0
+      delay   10
+	offset	85 170
+      bbox	55 78 70 80
+      bouncefactor 2.7
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/janne/rjsla4.gif
+      attack  54 85 72 50 20 1 1 1
+	frame	data/chars/janne/rjsla4.gif
+      offset	113 133
+      bbox	55 78 80 57
+	frame	data/chars/janne/fall02.gif
+      bbox	0 0 0 0
+	frame	data/chars/janne/fall02.gif
+      delay   20
+	frame	data/chars/janne/fall03.gif
+	frame	data/chars/janne/fall03.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/janne/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/janne/fall04.gif
+	delay   20
+	frame	data/chars/janne/fall05.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	90 145
+      @cmd    degravity -0.27
+	frame	data/chars/janne/gsla3.gif
+      offset	70 170
+      frame	data/chars/janne/pain1.gif
+      offset	75 148
+      frame	data/chars/janne/rjsla4.gif
+      offset	95 170
+      frame	data/chars/janne/ffall04.gif
+      offset	75 143
+      frame	data/chars/janne/hsla2.gif
+      frame	data/chars/janne/hsla4.gif
+      offset	124 170
+      frame	data/chars/janne/pain11.gif
+      frame	data/chars/janne/pain22.gif
+      offset	100 140
+      frame	data/chars/janne/fall066.gif
+      offset	80 80
+      frame	data/chars/janne/dsla1.gif
+      offset	185 170
+      frame	data/chars/janne/dsla2.gif
+      offset	195 170
+      frame	data/chars/janne/dsla2.gif
+      offset	117 80
+      frame	data/chars/janne/dsla11.gif
+      offset	165 198
+      frame	data/chars/janne/pain22.gif
+      offset	124 170
+      frame	data/chars/janne/ppain11.gif
+      offset	105 170
+      frame	data/chars/janne/gfall01.gif
+      offset	105 120
+      frame	data/chars/janne/gfall04.gif
+      offset	112 145
+	frame	data/chars/janne/sla2.gif
+      offset	123 170
+      frame	data/chars/janne/sla3.gif
+      offset	70 170
+      frame	data/chars/janne/pain2.gif
+      
+      
+anim fall9
+	loop	0
+      delay   20
+	offset	110 138
+      landframe 3
+      @cmd    degravity -0.27
+	frame	data/chars/janne/fall03.gif
+      bbox	60 100 50 30
+      frame	data/chars/janne/fall03.gif
+      bbox	0 0 0 0
+      offset	95 120
+      delay   100
+      frame	data/chars/janne/fall04.gif
+      delay   40
+      bbox	55 90 45 30
+	frame	data/chars/janne/fall05.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      sound	data/chars/janne/pain.wav
+      @cmd    degravity -0.27
+	frame	data/chars/janne/fall06.gif 
+	frame	data/chars/janne/fall06.gif
+     	frame	data/chars/janne/fall07.gif
+	frame	data/chars/janne/fall07.gif
+      delay   20
+	frame	data/chars/janne/fall07.gif
+	frame	data/chars/janne/fall07.gif
+      delay   10
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/janne/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/janne/fall04.gif
+	delay   20
+	frame	data/chars/janne/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      sound	data/chars/janne/pain.wav
+      @cmd    degravity -0.27
+	frame	data/chars/janne/fall01.gif 
+	frame	data/chars/janne/fall01.gif
+     	frame	data/chars/janne/fall02.gif
+	frame	data/chars/janne/fall02.gif
+      delay   20
+	frame	data/chars/janne/fall03.gif
+	frame	data/chars/janne/fall03.gif
+      delay   10
+      offset	95 120
+	frame	data/chars/janne/fall04.gif
+	frame	data/chars/janne/fall04.gif
+	delay   20
+	frame	data/chars/janne/fall05.gif
+
+anim fall16
+	loop	0
+      delay   4
+      offset	70 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+	frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif 
+	frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif
+      frame	data/chars/janne/ppain1.gif
+      frame	data/chars/janne/ppain22.gif
+      frame	data/chars/janne/ppain1.gif
+	delay   40
+	frame	data/chars/janne/ppain22.gif
+      delay   10
+      @cmd    degravity -0.27
+      offset	95 120
+	bbox	55 90 45 30
+	frame	data/chars/janne/fall04.gif
+      bbox	0 0 0 0
+	frame	data/chars/janne/fall04.gif
+	delay   20
+	frame	data/chars/janne/fall05.gif
+      
+
+anim burn
+	loop	0
+      delay   6
+	offset	110 170
+      landframe 15
+      @cmd    degravity 0
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/janne/burn01.gif
+      sound	data/sounds/bur.wav
+	frame	data/chars/janne/burn1.gif
+      frame	data/chars/janne/burn01.gif
+	frame	data/chars/janne/burn1.gif
+	frame	data/chars/janne/burn02.gif
+	frame	data/chars/janne/burn2.gif
+      frame	data/chars/janne/burn02.gif
+	frame	data/chars/janne/burn2.gif
+      frame	data/chars/janne/burn03.gif
+      frame	data/chars/janne/burn3.gif
+	frame	data/chars/janne/burn03.gif
+      frame	data/chars/janne/burn3.gif
+      frame	data/chars/janne/burn03.gif
+      frame	data/chars/janne/burn3.gif
+      delay   40
+	frame	data/chars/janne/burn03.gif
+      @cmd    degravity -0.27
+      offset	95 120
+      delay   7
+	bbox	55 90 45 30
+	frame	data/chars/janne/burn4.gif
+      bbox	0 0 0 0
+      frame	data/chars/janne/burn04.gif
+      frame	data/chars/janne/burn4.gif
+	frame	data/chars/janne/fall05.gif
+
+anim rise
+	loop	0
+      offset	95 120
+      delay	15
+      frame	data/chars/janne/fall05.gif
+      delay	9
+	offset	61 187
+	frame	data/chars/janne/rise1.gif
+	frame	data/chars/janne/rise2.gif
+	frame	data/chars/janne/rise3.gif
+
+anim RISEB
+	loop	0
+	offset	95 120
+      delay	25
+      frame	data/chars/janne/fall05.gif
+      offset	61 187
+	delay	9
+	frame	data/chars/janne/rise1.gif
+	frame	data/chars/janne/rise2.gif
+	frame	data/chars/janne/rise3.gif
+	
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/janne/bl1.gif
+      frame	data/chars/janne/bl2.gif
+
+
+anim BLOCKPAIN
+      loop	0
+	delay	2
+	bbox	50 78 47 80
+      offset	73 170
+	frame	data/chars/janne/bl2.gif
+      offset	70 170
+      frame	data/chars/janne/bl2.gif
+      offset	67 170
+      frame	data/chars/janne/bl2.gif
+      offset	70 170
+      frame	data/chars/janne/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/janne/bl2.gif
+      frame	data/chars/janne/bl2.gif
+      frame	data/chars/janne/bl2.gif
+      frame	data/chars/janne/bl2.gif
+      frame	data/chars/janne/bl2.gif
+      
+
+anim attack1
+      loop	0
+	delay	1
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd ani0020 openborconstant("ANI_FOLLOW2") openborconstant("ANI_PAIN2")
+      @cmd ani0020 openborconstant("ANI_FOLLOW3") openborconstant("ANI_FOLLOW8")
+      hitflash  blo
+      hitfx  data/sounds/knife2.wav
+      sound	data/sounds/air6.wav
+      frame	data/chars/janne/a1.gif
+	frame	data/chars/janne/a2.gif
+      delay	7
+      attack  75 103 90 27 5 0
+	frame	data/chars/janne/a3.gif
+      delay	6
+      attack  0 0 0 0 0 0
+	frame	data/chars/janne/a3.gif
+      frame	data/chars/janne/a2.gif
+
+anim attack2
+	loop	0
+	delay	5
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  bloo
+      hitfx  data/sounds/knife3.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/aa1.gif
+	frame	data/chars/janne/aa2.gif
+      sound	data/chars/janne/at7.wav
+      attack  75 98 90 40 5 0
+	frame	data/chars/janne/aa3.gif
+      attack  0 0 0 0 0 0
+      delay	4
+      frame	data/chars/janne/aa4.gif
+	frame	data/chars/janne/aa5.gif
+      frame	data/chars/janne/aa6.gif
+      frame	data/chars/janne/aa7.gif
+
+anim attack3
+	loop	0
+	delay	4
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  blood
+      hitfx  data/sounds/knife3.wav
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/aaa2.gif
+      delay	4
+      frame	data/chars/janne/aaa3.gif
+      frame	data/chars/janne/aaa4.gif
+      sound	data/chars/janne/at8.wav
+      frame	data/chars/janne/aaa5.gif
+      attack2  75 90 90 40 10 0
+	frame	data/chars/janne/aaa6.gif
+      attack2  0 0 0 0 0 0
+      frame	data/chars/janne/aaa7.gif
+      frame	data/chars/janne/aaa8.gif
+      delay	5
+      frame	data/chars/janne/aaa9.gif
+
+anim attack4
+	loop	0
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  blood
+      jumpframe 2 2 2 0 dus
+      landframe 11 dus
+      hitfx  data/sounds/knife3.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/aaaa0.gif
+      delay	5
+      frame	data/chars/janne/aaaa1.gif
+      sound	data/chars/janne/select.wav
+      frame	data/chars/janne/aaaa2.gif
+      delay	4
+      attack  80 130 52 40 10 0 0 0 20
+      frame	data/chars/janne/aaaa3.gif
+      frame	data/chars/janne/aaaa4.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/janne/aaaa5.gif
+      frame	data/chars/janne/aaaa6.gif
+      attack  75 54 57 70 10 1 0 0 25
+      frame	data/chars/janne/aaaa7.gif
+      frame	data/chars/janne/aaaa8.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/janne/aaaa9.gif
+      delay	20
+      frame	data/chars/janne/aaaa10.gif
+      delay	7
+      frame	data/chars/janne/aaaa0.gif
+      
+
+anim  special
+      loop	0
+	delay	8
+      otg 1
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      offset	85 183
+      sound	data/chars/janne/at10.wav
+      frame	data/chars/janne/sp2.gif
+      sound	data/chars/janne/at12.wav
+      delay	6
+      frame	data/chars/janne/sp3.gif
+      frame	data/chars/janne/sp4.gif
+      frame	data/chars/janne/sp5.gif
+      delay	4
+      frame	data/chars/janne/sp6.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/sp7.gif
+      attack2  80 100 75 70 5 0 1
+      frame	data/chars/janne/sp8.gif
+      frame	data/chars/janne/sp9.gif
+      attack2  0 0 0 0 0 0
+      frame	data/chars/janne/sp10.gif
+      frame	data/chars/janne/sp11.gif
+      attack2  52 55 53 90 5 0 1
+      offset	145 183
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/sp18.gif
+      attack2  0 0 0 0 0 0
+      offset	85 183
+      delay	2
+      frame	data/chars/janne/sp12.gif
+      attack2  80 130 80 40 5 0 1
+      frame	data/chars/janne/sp12.gif
+      delay	4
+      frame	data/chars/janne/sp13.gif
+      attack2  0 0 0 0 0 0
+      frame	data/chars/janne/sp14.gif
+      frame	data/chars/janne/sp6.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/sp7.gif
+      attack2  80 100 75 70 5 0 1
+      frame	data/chars/janne/sp8.gif
+      frame	data/chars/janne/sp9.gif
+      attack2  0 0 0 0 0 0
+      frame	data/chars/janne/sp10.gif
+      frame	data/chars/janne/sp11.gif
+      attack  52 55 53 90 20 1 1 0 25
+      offset	145 183
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/sp18.gif
+      attack  0 0 0 0 0 0
+      offset	85 183
+      delay	2
+      frame	data/chars/janne/sp12.gif
+      attack  80 130 80 40 20 1 1 0 25
+      frame	data/chars/janne/sp12.gif
+      delay	4
+      frame	data/chars/janne/sp13.gif
+      attack  0 0 0 0 0 0
+      delay	7
+      frame	data/chars/janne/sp14.gif
+      frame	data/chars/janne/sp15.gif
+      frame	data/chars/janne/sp16.gif
+      frame	data/chars/janne/sp17.gif
+
+anim JUMPDELAY
+      loop	0
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd    degravity -0.27
+      frame	data/chars/janne/j1.gif
+
+anim JUMPLAND
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/get00.gif
+      frame	data/chars/janne/j1.gif
+      
+
+anim jump
+	loop	0
+	delay	4
+      offset	70 170
+      bbox	50 68 47 80
+      cancel 0 13 0 A2 freespecial4
+      cancel 0 13 0 D A freespecial20
+      @cmd    degravity -0.5
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j2.gif
+      bbox	50 68 47 70
+      delay	6
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j3.gif
+      frame	data/chars/janne/j4.gif
+      frame	data/chars/janne/j5.gif
+      frame	data/chars/janne/j6.gif
+      frame	data/chars/janne/j7.gif
+      frame	data/chars/janne/j8.gif
+      delay	4
+      frame	data/chars/janne/j9.gif
+      frame	data/chars/janne/j9.gif
+      frame	data/chars/janne/j10.gif
+      frame	data/chars/janne/j10.gif
+
+anim FORWARDJUMP
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 68 47 80
+      cancel 0 12 0 A2 freespecial5
+      cancel 0 12 0 D A freespecial21
+      @cmd    degravity -0.5
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j2.gif
+      bbox	50 68 47 70
+      delay	6
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j3.gif
+      frame	data/chars/janne/j4.gif
+      frame	data/chars/janne/j5.gif
+      frame	data/chars/janne/j6.gif
+      frame	data/chars/janne/j7.gif
+      frame	data/chars/janne/j8.gif
+      delay	4
+      frame	data/chars/janne/j9.gif
+      frame	data/chars/janne/j9.gif
+      frame	data/chars/janne/j10.gif
+
+anim RUNJUMP
+      loop	0
+	delay	4
+      offset	70 170
+      bbox	50 68 47 80
+      cancel 0 12 0 A2 freespecial6
+      cancel 0 12 0 D A freespecial22
+      @cmd    degravity -0.5
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j2.gif
+      bbox	50 68 47 70
+      delay	6
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j3.gif
+      frame	data/chars/janne/j4.gif
+      frame	data/chars/janne/j5.gif
+      frame	data/chars/janne/j6.gif
+      frame	data/chars/janne/j7.gif
+      frame	data/chars/janne/j8.gif
+      delay	4
+      frame	data/chars/janne/j9.gif
+      frame	data/chars/janne/j9.gif
+      frame	data/chars/janne/j10.gif
+
+anim jumpattack
+	loop	0
+	delay	9
+      offset	70 170
+      bbox	50 75 47 65
+      hitflash  blood
+      hitfx  data/sounds/knife2.wav
+      sound	data/chars/janne/at7.wav
+      @cmd    degravity -0.5
+      frame	data/chars/janne/jp1.gif
+      delay	4
+      attack	70 105 70 45 12 1 0 0 35
+      frame	data/chars/janne/jp2.gif
+      delay	3
+      frame	data/chars/janne/jp3.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      frame	data/chars/janne/jp4.gif
+      delay	9
+      frame	data/chars/janne/jp5.gif
+      frame	data/chars/janne/j10.gif
+
+
+anim JUMPFORWARD
+      loop	0
+	delay	9
+      offset	70 170
+      bbox	50 75 47 65
+      hitflash  blood
+      hitfx  data/sounds/knife2.wav
+      sound	data/chars/janne/at7.wav
+      @cmd    degravity -0.5
+      frame	data/chars/janne/jp1.gif
+      delay	4
+      attack	70 105 70 45 12 1 0 0 35
+      frame	data/chars/janne/jp2.gif
+      delay	3
+      frame	data/chars/janne/jp3.gif
+      attack 0 0 0 0 0 0
+      delay	2
+      frame	data/chars/janne/jp4.gif
+      delay	9
+      frame	data/chars/janne/jp5.gif
+      frame	data/chars/janne/j10.gif
+
+anim grab
+	loop	0
+	delay	8
+      offset	70 170
+      bbox	50 78 47 80
+      cancel 0 3 0 A2 freespecial13
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+
+anim grabattack
+	loop	0
+	delay	10
+      offset	70 170
+      attackone 0
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart 
+      @cmd    position 37 40 0 -1 0
+      frame	data/chars/janne/grab.gif
+      sound	data/chars/janne/at7.wav
+      delay	15
+      @cmd    position 37 11 1 -1 1
+      frame	data/chars/janne/th1.gif
+      delay	8
+      @cmd    position 1 19 22 -1 1
+      frame	data/chars/janne/th2.gif
+      @cmd    hurt 25
+      @cmd    position 17 74 27 -1 1
+      frame	data/chars/janne/th3.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 3 2 0 0
+      delay	8
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+
+anim  grabbackward
+      loop	0
+	delay	10
+      offset	70 170
+      attackone 0
+      flipframe 2
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart 
+      @cmd    position 37 40 0 -1 0
+      frame	data/chars/janne/grab.gif
+      sound	data/chars/janne/at7.wav
+      delay	15
+      @cmd    position 32 11 1 -1 1
+      frame	data/chars/janne/th1.gif
+      offset	70 170
+      delay	8
+      @cmd    position 1 19 22 -1 1
+      frame	data/chars/janne/th2.gif
+      @cmd    hurt 25
+      @cmd    position 17 74 27 -1 1
+      frame	data/chars/janne/th3.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 3 2 0 0
+      delay	8
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+
+anim grabattack2
+	loop	0
+	delay	7
+      offset	53 183
+      @cmd    slamstart
+      @cmd    position 29 36 0 -1 1
+      frame	data/chars/janne/aaaaaa0.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/ga1.gif
+      sound	data/chars/janne/at8.wav
+      frame	data/chars/janne/ga2.gif
+      sound	data/sounds/beat2.wav
+      delay	2
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 70 20 1
+      frame	data/chars/janne/ga3.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 2.5 3 0 1
+      delay	10
+      frame	data/chars/janne/ga3.gif
+      delay	7
+      frame	data/chars/janne/ga4.gif
+      frame	data/chars/janne/ga5.gif
+      frame	data/chars/janne/ga6.gif
+      frame	data/chars/janne/aaaaaa0.gif
+
+
+anim  freespecial
+	loop	0
+	delay	5
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat3.wav
+      @cmd ani0020 openborconstant("ANI_FOLLOW1") openborconstant("ANI_PAIN2")
+      cancel 6 7 1 A2 freespecial23
+      cancel 6 7 1 A freespecial24
+      sound	data/chars/janne/at11.wav
+      frame	data/chars/janne/aaaaa1.gif
+	frame	data/chars/janne/aaaaa2.gif
+      sound	data/sounds/air5.wav
+      delay	8
+      attack2  75 115 65 40 5 0
+	frame	data/chars/janne/aaaaa3.gif
+      delay	6
+      attack2  0 0 0 0 0 0
+      frame	data/chars/janne/aaaaa3.gif
+	frame	data/chars/janne/aaaaa2.gif
+      frame	data/chars/janne/aa1.gif
+      delay	1
+      frame	data/chars/janne/aa1.gif
+
+anim  freespecial2
+	loop	0
+	delay	15
+      offset	70 170
+      jumpframe 1 4 5 0 du
+      landframe 24 du
+      hitfx   data/sounds/sword3.wav
+      frame	data/chars/janne/fsk1.gif
+      offset	108 170
+      sound	data/chars/janne/at4.wav
+      delay	2
+      frame	data/chars/janne/fsk2.gif
+      frame	data/chars/janne/fsk2.gif
+      burn   75 65 85 85 25 1 0 0 40
+      dropv 3 1.5
+      frame	data/chars/janne/fsk3.gif
+      frame	data/chars/janne/fsk4.gif
+      frame	data/chars/janne/fsk5.gif
+      frame	data/chars/janne/fsk3.gif
+      frame	data/chars/janne/fsk4.gif
+      frame	data/chars/janne/fsk5.gif
+      frame	data/chars/janne/fsk3.gif
+      frame	data/chars/janne/fsk4.gif
+      frame	data/chars/janne/fsk5.gif
+      frame	data/chars/janne/fsk3.gif
+      frame	data/chars/janne/fsk4.gif
+      frame	data/chars/janne/fsk5.gif
+      frame	data/chars/janne/fsk3.gif
+      frame	data/chars/janne/fsk4.gif
+      frame	data/chars/janne/fsk5.gif
+      frame	data/chars/janne/fsk3.gif
+      frame	data/chars/janne/fsk4.gif
+      delay	3
+      frame	data/chars/janne/fsk5.gif
+      burn   0 0 0 0 0 0
+      frame	data/chars/janne/fsk2.gif
+      frame	data/chars/janne/fsk2.gif
+      delay	80
+      offset	70 170
+      frame	data/chars/janne/j10.gif
+      delay	6
+      sound data/sounds/step.wav
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/get00.gif
+      frame	data/chars/janne/j1.gif
+
+anim  freespecial3
+	loop	0
+	delay	13
+      offset	70 170
+      bbox	50 78 47 80
+      custknife jab
+	throwframe 2 61
+      frame	data/chars/janne/fsb1.gif
+      sound	data/sounds/air5.wav
+      delay	6
+      frame	data/chars/janne/fsb2.gif
+      sound	data/chars/janne/at1.wav
+      frame	data/chars/janne/fsb3.gif
+      delay	25
+      frame	data/chars/janne/fsb4.gif
+      delay	8
+      frame	data/chars/janne/aa1.gif
+
+anim follow1
+      loop	0
+	delay	8
+      offset	53 183
+      bbox	33 91 47 80
+      range -45 180
+      rangez -45 45
+      hitflash  ffla
+      sound	data/sounds/air5.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/janne/aaaaaa1.gif
+      delay	7
+	frame	data/chars/janne/aaaaaa2.gif
+      blast  58 85 75 45 15 0 0 12
+      sound	data/chars/janne/at7.wav
+	frame	data/chars/janne/aaaaaa3.gif
+      blast	0 0 0 0 0 0
+	frame	data/chars/janne/aaaaaa4.gif
+      frame	data/chars/janne/aaaaaa5.gif
+      frame	data/chars/janne/aaaaaa0.gif
+
+anim follow2
+      loop	0
+      range -10 115
+      rangez -40 40
+      delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  blood
+      jumpframe 2 2 2 0 dus
+      landframe 11 dus
+      hitfx  data/sounds/knife3.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/aaaa0.gif
+      delay	5
+      frame	data/chars/janne/aaaa1.gif
+      sound	data/chars/janne/select.wav
+      frame	data/chars/janne/aaaa2.gif
+      delay	4
+      attack  80 130 52 40 10 0 0 0 20
+      frame	data/chars/janne/aaaa3.gif
+      frame	data/chars/janne/aaaa4.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/janne/aaaa5.gif
+      frame	data/chars/janne/aaaa6.gif
+      attack  75 54 57 70 10 1 0 0 25
+      frame	data/chars/janne/aaaa7.gif
+      frame	data/chars/janne/aaaa8.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/janne/aaaa9.gif
+      delay	20
+      frame	data/chars/janne/aaaa10.gif
+      delay	7
+      frame	data/chars/janne/aaaa0.gif
+
+anim follow3
+      loop	0
+      range 0 70
+      rangez -3 18
+      delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      attackone 1
+      otg 2
+      hitflash  blood
+      hitfx  data/sounds/knife2.wav
+      cancel 6 8 1 A freespecial8
+      frame	data/chars/janne/aaa1.gif
+      frame	data/chars/janne/get1.gif
+      sound	data/sounds/air5.wav
+      delay	8
+      frame	data/chars/janne/get2.gif
+      delay	7
+      frame	data/chars/janne/get3.gif
+      attack3  72 150 48 21 10 1 0 0 0 21
+      forcedirection 99
+      frame	data/chars/janne/get4.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/janne/get4.gif
+      frame	data/chars/janne/get4.gif
+      frame	data/chars/janne/get3.gif
+      frame	data/chars/janne/get5.gif
+      
+anim  freespecial4
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 80 47 35
+      sound	data/chars/janne/at8.wav
+      @cmd    degravity -0.5
+      frame	data/chars/janne/jaf1.gif
+      delay	10
+      attack	75 105 65 33 12 1 0 0 35
+      frame	data/chars/janne/jaf2.gif
+      frame	data/chars/janne/jaf2.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/janne/jaf1.gif
+      frame	data/chars/janne/j10.gif
+      
+
+anim  freespecial5
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 80 47 35
+      jumpframe 0 0 1.5
+      sound	data/chars/janne/at8.wav
+      @cmd    degravity -0.5
+      frame	data/chars/janne/jaf1.gif
+      delay	10
+      attack	75 105 65 33 12 1 0 0 35
+      frame	data/chars/janne/jaf2.gif
+      frame	data/chars/janne/jaf2.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/janne/jaf1.gif
+      frame	data/chars/janne/j10.gif
+
+
+anim  freespecial6
+      loop	0
+	delay	8
+      offset	70 170
+      bbox	50 80 47 35
+      jumpframe 0 0 3
+      sound	data/chars/janne/at8.wav
+      @cmd    degravity -0.5
+      frame	data/chars/janne/jaf1.gif
+      delay	10
+      attack	75 105 65 33 12 1 0 0 35
+      frame	data/chars/janne/jaf2.gif
+      frame	data/chars/janne/jaf2.gif
+      delay	8
+      attack 0 0 0 0 0 0
+      frame	data/chars/janne/jaf1.gif
+      frame	data/chars/janne/j10.gif
+
+
+anim  freespecial7
+      loop	0
+	delay	3
+      offset	70 170
+      hitflash  ffla
+      jumpframe 0 2 2.5 0 dus
+      landframe 13 dus
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/janne/ra1.gif
+      frame	data/chars/janne/ra1.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/ra22.gif
+      frame	data/chars/janne/ra22.gif
+      sound	data/chars/janne/select.wav
+     	frame	data/chars/janne/ra3.gif
+      frame	data/chars/janne/ra3.gif
+      attack4 75 114 55 35 15 1 0 0 23
+      dropv 1 1
+      forcedirection -1
+      staydown 150 150
+      bbox	50 78 47 80
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      attack4 0 0 0 0 0 0
+	delay	3
+	frame	data/chars/janne/ra5.gif
+      frame	data/chars/janne/ra5.gif
+      delay	20
+      frame	data/chars/janne/j10.gif
+      delay	3
+	move 4
+	frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+
+anim  freespecial8
+      loop	0
+      delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      attackone 1
+      otg 2
+      hitflash  blood
+      hitfx  data/sounds/knife2.wav
+      frame	data/chars/janne/get3.gif
+      delay	10
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/get2.gif
+      delay	8
+      frame	data/chars/janne/get3.gif
+      attack3  72 150 48 21 10 0 0 0 0 21
+      forcedirection 99
+      frame	data/chars/janne/get4.gif
+      attack3  0 0 0 0 0 0
+      frame	data/chars/janne/get4.gif
+      frame	data/chars/janne/get4.gif
+      frame	data/chars/janne/get4.gif
+      frame	data/chars/janne/get3.gif
+      frame	data/chars/janne/get5.gif
+
+anim  freespecial9
+      loop	0
+	delay	3
+      offset	70 170
+      hitflash  ffla
+      jumpframe 0 2 0 -0.7 dus
+      landframe 13 dus
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/janne/ra1.gif
+      frame	data/chars/janne/ra1.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/ra22.gif
+      frame	data/chars/janne/ra22.gif
+      sound	data/chars/janne/select.wav
+     	frame	data/chars/janne/ra3.gif
+      frame	data/chars/janne/ra3.gif
+      attack4 75 114 55 35 15 1 0 0 23
+      dropv 1 1
+      forcedirection -1
+      staydown 150 150
+      bbox	50 78 47 80
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      attack4 0 0 0 0 0 0
+	delay	3
+	frame	data/chars/janne/ra5.gif
+      frame	data/chars/janne/ra5.gif
+      delay	20
+      frame	data/chars/janne/j10.gif
+      delay	3
+	movez -1
+	frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+
+
+anim  freespecial10
+      loop	0
+      delay	3
+      offset	94 170
+      bbox	74 78 47 80
+      hitflash  blood
+      movez -3
+      hitfx  data/sounds/sword3.wav
+      sound	data/chars/janne/at2.wav
+      frame	data/chars/janne/fsp1.gif
+      frame	data/chars/janne/fsp2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/fsp1.gif
+      offset	107 170
+      bbox	87 78 47 80
+      frame	data/chars/janne/fsp3.gif
+      frame	data/chars/janne/fsp3.gif
+      delay	2
+      movez -1
+	frame	data/chars/janne/fsp3.gif
+      offset	70 170
+      bbox	50 78 47 80
+      attack 75 108 107 40 20 1 0 0 23
+      dropv 3 3.5
+      forcedirection -1
+      frame	data/chars/janne/fsp4.gif
+      frame	data/chars/janne/fsp4.gif
+      frame	data/chars/janne/fsp4.gif
+	frame	data/chars/janne/fsp4.gif
+	delay	3
+      frame	data/chars/janne/fsp5.gif
+      attack 0 0 0 0 0 0
+      movez -1
+      frame	data/chars/janne/fsp6.gif
+      frame	data/chars/janne/fsp7.gif
+      frame	data/chars/janne/fsp8.gif
+      frame	data/chars/janne/fsp9.gif
+      frame	data/chars/janne/fsp10.gif
+      movez 0
+      frame	data/chars/janne/fsp11.gif
+      delay	5
+	frame	data/chars/janne/aa1.gif
+
+anim  freespecial11
+      loop	0
+	delay	3
+      offset	70 170
+      hitflash  ffla
+      jumpframe 0 2 0 0.7 dus
+      landframe 13 dus
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/janne/ra1.gif
+      frame	data/chars/janne/ra1.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/ra22.gif
+      frame	data/chars/janne/ra22.gif
+      sound	data/chars/janne/select.wav
+     	frame	data/chars/janne/ra3.gif
+      frame	data/chars/janne/ra3.gif
+      attack4 75 114 55 35 15 1 0 0 23
+      dropv 1 1
+      forcedirection -1
+      staydown 150 150
+      bbox	50 78 47 80
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      frame	data/chars/janne/ra4.gif
+      attack4 0 0 0 0 0 0
+	delay	3
+	frame	data/chars/janne/ra5.gif
+      frame	data/chars/janne/ra5.gif
+      delay	20
+      frame	data/chars/janne/j10.gif
+      delay	3
+	movez 1
+	frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/j1.gif
+
+
+anim  freespecial12
+      loop	0
+      delay	3
+      offset	94 170
+      bbox	74 78 47 80
+      hitflash  blood
+      movez 3
+      hitfx  data/sounds/sword3.wav
+      sound	data/chars/janne/at2.wav
+      frame	data/chars/janne/fsp1.gif
+      frame	data/chars/janne/fsp2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/fsp1.gif
+      offset	107 170
+      bbox	87 78 47 80
+      frame	data/chars/janne/fsp3.gif
+      frame	data/chars/janne/fsp3.gif
+      delay	2
+      movez 1
+	frame	data/chars/janne/fsp3.gif
+      offset	70 170
+      bbox	50 78 47 80
+      attack 75 108 107 40 20 1 0 0 23
+      dropv 3 3.5
+      forcedirection -1
+      frame	data/chars/janne/fsp4.gif
+      frame	data/chars/janne/fsp4.gif
+      frame	data/chars/janne/fsp4.gif
+	frame	data/chars/janne/fsp4.gif
+	delay	3
+      frame	data/chars/janne/fsp5.gif
+      attack 0 0 0 0 0 0
+      movez 1
+      frame	data/chars/janne/fsp6.gif
+      frame	data/chars/janne/fsp7.gif
+      frame	data/chars/janne/fsp8.gif
+      frame	data/chars/janne/fsp9.gif
+      frame	data/chars/janne/fsp10.gif
+      movez 0
+      frame	data/chars/janne/fsp11.gif
+      delay	5
+	frame	data/chars/janne/aa1.gif
+
+anim freespecial13
+	loop	0
+	delay	6
+      offset	70 170
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      @cmd bind 1 40 -1 0 -1
+      frame	data/chars/janne/grat1.gif
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 60 0 1
+      @cmd    hurt2 5 
+      frame	data/chars/janne/grat3.gif
+      delay	12
+      frame	data/chars/janne/grat3.gif
+      delay	6
+      frame	data/chars/janne/grat2.gif
+      @cmd    anichange "ANI_FOLLOW4"
+      frame	data/chars/janne/grat2.gif
+
+anim freespecial14
+	loop	0
+	delay	6
+      offset	70 170
+      @cmd bind 0 40 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      frame	data/chars/janne/grat1.gif
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 60 0 1 
+      @cmd    hurt2 5
+      frame	data/chars/janne/grat3.gif
+      delay	13
+      frame	data/chars/janne/grat3.gif
+      delay	6
+      frame	data/chars/janne/grat2.gif
+      @cmd    anichange "ANI_FOLLOW5"
+      frame	data/chars/janne/grat2.gif
+
+
+anim freespecial15
+	loop	0
+	delay	7
+      offset	53 183
+      @cmd    slamstart2
+      @cmd    position 29 36 0 -1 1
+      frame	data/chars/janne/aaaaaa0.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/ga1.gif
+      sound	data/chars/janne/at8.wav
+      frame	data/chars/janne/ga2.gif
+      sound	data/sounds/beat2.wav
+      delay	2
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 70 20 1
+      frame	data/chars/janne/ga3.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 2.5 3 0 1
+      delay	10
+      frame	data/chars/janne/ga3.gif
+      delay	7
+      frame	data/chars/janne/ga4.gif
+      frame	data/chars/janne/ga5.gif
+      frame	data/chars/janne/ga6.gif
+      frame	data/chars/janne/aaaaaa0.gif
+
+anim follow4
+      loop	1
+	delay	5
+      offset	70 170
+      cancel 1 3 0 A2 freespecial14
+      @cmd bind 1 40 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 J freespecial17
+      cancel 0 3 0 B A freespecial18
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+
+
+anim follow5
+      loop	1
+	delay	5
+      offset	70 170
+      cancel 1 3 0 A2 freespecial15
+      @cmd bind 1 40 -1 0 -1
+      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      cancel 0 3 0 A freespecial16
+      cancel 0 3 0 J freespecial17
+      cancel 0 3 0 B A freespecial18
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+      frame	data/chars/janne/grab.gif
+
+anim freespecial16
+      loop	0
+	delay	10
+      offset	70 170
+      attackone 0
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart2
+      @cmd    position 37 40 0 -1 0
+      frame	data/chars/janne/grab.gif
+      sound	data/chars/janne/at7.wav
+      delay	15
+      @cmd    position 37 11 1 -1 1
+      frame	data/chars/janne/th1.gif
+      delay	8
+      @cmd    position 1 19 22 -1 1
+      frame	data/chars/janne/th2.gif
+      @cmd    hurt 25
+      @cmd    position 17 74 27 -1 1
+      frame	data/chars/janne/th3.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 3 2 0 0
+      delay	8
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+
+anim freespecial17
+      loop	0
+	delay	6.5
+      offset	53 183
+      @cmd    slamstart2
+      @cmd    position 29 36 0 -1 1
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/ga1.gif
+      sound	data/chars/janne/at8.wav
+      frame	data/chars/janne/ga2.gif
+      sound	data/sounds/beat2.wav
+      delay	2
+      @cmd    hurt 10
+      @cmd    spawn01 "flas" 70 20 1
+      frame	data/chars/janne/ga3.gif
+      @cmd    depost 0
+      @cmd    finish 5 1 2.5 3 0 1
+      delay	10
+      frame	data/chars/janne/ga3.gif
+      delay	7
+      frame	data/chars/janne/ga4.gif
+      frame	data/chars/janne/ga5.gif
+      frame	data/chars/janne/ga6.gif
+      frame	data/chars/janne/aaaaaa0.gif
+
+anim  freespecial18
+      loop	0
+	delay	10
+      offset	70 170
+      attackone 0
+      flipframe 2
+      hitfx   data/sounds/indirect.wav
+      @cmd    slamstart2
+      @cmd    position 37 40 0 -1 0
+      frame	data/chars/janne/grab.gif
+      sound	data/chars/janne/at7.wav
+      delay	15
+      @cmd    position 32 11 1 -1 1
+      frame	data/chars/janne/th1.gif
+      offset	70 170
+      delay	8
+      @cmd    position 1 19 22 -1 1
+      frame	data/chars/janne/th2.gif
+      @cmd    hurt 25
+      @cmd    position 17 74 27 -1 1
+      frame	data/chars/janne/th3.gif
+      @cmd    depost 0
+      @cmd    throw 5 1 3 2 0 0
+      delay	8
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+      frame	data/chars/janne/th3.gif
+
+anim freespecial19
+      loop	0
+	delay	14
+      offset	70 170
+      otg 1
+      hitflash  blood
+      hitfx  data/sounds/sword3.wav
+      jumpframe 1 3.5 3.5 0 dus
+      landframe 21 dus
+      frame	data/chars/janne/j1.gif
+      sound	data/chars/janne/at3.wav
+      delay	6
+      frame	data/chars/janne/fspu1.gif
+      frame	data/chars/janne/fspu2.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/fspu3.gif
+      delay	2
+      attack  80 50 82 105 15 1 0 0 40
+      dropv 2 3.5
+      forcedirection -1
+      frame	data/chars/janne/fspu4.gif
+      frame	data/chars/janne/fspu5.gif
+      frame	data/chars/janne/fspu6.gif
+      frame	data/chars/janne/fspu7.gif
+      attack 0 0 0 0 0 0
+      delay	4
+      frame	data/chars/janne/j4.gif
+      frame	data/chars/janne/j5.gif
+      frame	data/chars/janne/j6.gif
+      frame	data/chars/janne/j7.gif
+      frame	data/chars/janne/j8.gif
+      delay	6
+      sound	data/sounds/air3.wav
+      frame	data/chars/janne/fspu11.gif
+      frame	data/chars/janne/ja01.gif
+      frame	data/chars/janne/ja01.gif
+      frame	data/chars/janne/ja01.gif
+      frame	data/chars/janne/ja01.gif
+      frame	data/chars/janne/ja01.gif
+      frame	data/chars/janne/ja01.gif
+      delay	20
+      frame	data/chars/janne/ja01.gif
+      offset	70 170
+      delay	6
+      sound	data/sounds/step.wav
+      frame	data/chars/janne/ja02.gif
+      delay	4
+      attack  80 120 95 50 15 1 0 0 25
+      dropv 2 1.5
+      frame	data/chars/janne/ja03.gif
+      frame	data/chars/janne/ja04.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/janne/ja05.gif
+      frame	data/chars/janne/ja06.gif
+      delay	12
+      frame	data/chars/janne/ja07.gif
+      delay	7
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/aa1.gif
+
+
+anim  freespecial20
+      loop	0
+	delay	8
+      offset	70 170
+      otg 1
+      followcond 1
+      followanim 6
+      landframe 6 dus
+      hitflash  blood
+      hitfx   data/sounds/knife3.wav
+      sound	data/chars/janne/at11.wav
+      @cmd    degravity -0.5
+      frame	data/chars/janne/fsj1.gif
+      attack12  70 140 23 20 10 0 0 0 25
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      delay	500
+      frame	data/chars/janne/fsj2.gif
+      attack12 0 0 0 0 0 0
+      delay	6
+      offset	70 170
+      sound data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/get00.gif
+      frame	data/chars/janne/j1.gif
+
+anim  freespecial21
+      loop	0
+	delay	8
+      offset	70 170
+      otg 1
+      followcond 1
+      followanim 6
+      jumpframe 0 0 1.5
+      landframe 6 dus
+      hitflash  blood
+      hitfx   data/sounds/knife3.wav
+      sound	data/chars/janne/at11.wav
+      @cmd    degravity -0.5
+      frame	data/chars/janne/fsj1.gif
+      attack12  70 140 23 20 10 0 0 0 25
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      delay	500
+      frame	data/chars/janne/fsj1.gif
+      attack12 0 0 0 0 0 0
+      delay	6
+      offset	70 170
+      sound data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/get00.gif
+      frame	data/chars/janne/j1.gif
+
+anim  freespecial22
+      loop	0
+	delay	8
+      offset	70 170
+      otg 1
+      followcond 1
+      followanim 6
+      jumpframe 0 0 3
+      landframe 6 dus
+      hitflash  blood
+      hitfx   data/sounds/knife3.wav
+      sound	data/chars/janne/at11.wav
+      @cmd    degravity -0.5
+      frame	data/chars/janne/fsj1.gif
+      attack12  70 140 23 20 10 0 0 0 25
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      delay	500
+      frame	data/chars/janne/fsj2.gif
+      attack12 0 0 0 0 0 0
+      delay	6
+      offset	70 170
+      sound data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/get00.gif
+      frame	data/chars/janne/j1.gif
+
+
+anim follow6
+      loop	0
+	delay	8
+      offset	70 170
+      jumpframe 1 5 1.5
+      landframe 15 dus
+      cancel 0 14 0 A2 freespecial5
+      cancel 0 14 0 D A freespecial21
+      @cmd    degravity -0.5
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      delay	4
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj2.gif
+      frame	data/chars/janne/fsj1.gif
+      frame	data/chars/janne/fsj1.gif
+      frame	data/chars/janne/fsj1.gif
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j2.gif
+      frame	data/chars/janne/j10.gif
+      frame	data/chars/janne/j10.gif
+      delay	500
+      frame	data/chars/janne/j10.gif
+      delay	6
+      offset	70 170
+      sound data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/janne/j1.gif
+      frame	data/chars/janne/get00.gif
+      frame	data/chars/janne/j1.gif
+
+
+anim freespecial23
+      loop	0
+	delay	8
+      offset	53 183
+      bbox	33 91 47 80
+      hitflash  ffla
+      sound	data/sounds/air5.wav
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/janne/aaaaaa1.gif
+      delay	7
+	frame	data/chars/janne/aaaaaa2.gif
+      blast  58 85 75 45 15 0 0 12
+      sound	data/chars/janne/at7.wav
+	frame	data/chars/janne/aaaaaa3.gif
+      blast	0 0 0 0 0 0
+	frame	data/chars/janne/aaaaaa4.gif
+      frame	data/chars/janne/aaaaaa5.gif
+      frame	data/chars/janne/aaaaaa0.gif
+
+anim freespecial24
+      loop	0
+      delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  blood
+      jumpframe 2 2 2 0 dus
+      landframe 11 dus
+      hitfx  data/sounds/knife3.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/janne/aaaa0.gif
+      delay	5
+      frame	data/chars/janne/aaaa1.gif
+      sound	data/chars/janne/select.wav
+      frame	data/chars/janne/aaaa2.gif
+      delay	4
+      attack  80 130 52 40 10 0 0 0 20
+      frame	data/chars/janne/aaaa3.gif
+      frame	data/chars/janne/aaaa4.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/janne/aaaa5.gif
+      frame	data/chars/janne/aaaa6.gif
+      attack  75 54 57 70 10 1 0 0 25
+      frame	data/chars/janne/aaaa7.gif
+      frame	data/chars/janne/aaaa8.gif
+      attack	0 0 0 0 0 0
+      frame	data/chars/janne/aaaa9.gif
+      delay	20
+      frame	data/chars/janne/aaaa10.gif
+      delay	7
+      frame	data/chars/janne/aaaa0.gif
+
+
+

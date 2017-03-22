@@ -1,0 +1,17 @@
+name    guar
+health  1
+type	none
+facing 1
+setlayer	1
+offscreenkill  1000
+
+anim idle
+	loop	1
+        delay   12
+	  offset	2 176
+        frame   data/levels/japan2/guar01.gif
+        frame   data/levels/japan2/guar02.gif
+        frame   data/levels/japan2/guar03.gif
+        frame   data/levels/japan2/guar04.gif
+
+

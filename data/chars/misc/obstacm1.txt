@@ -1,0 +1,28 @@
+name	obstacm1
+type    obstacle
+shadow  0
+health  9999
+diesound  data/sounds/obsta.wav
+nolife  1
+flash   obfla
+noatflash 1
+subject_to_wall 0
+
+
+anim idle
+	loop	0
+	delay	5
+	offset	100 178
+      platform   42 185 0 0 127 127 35 999
+	frame	data/chars/misc/empty.gif
+	
+anim fall
+	loop	0
+	delay	5
+	offset	100 178
+	frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/empty.gif
+      frame	data/chars/misc/empty.gif
+
+
+

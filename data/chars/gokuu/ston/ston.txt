@@ -1,0 +1,93 @@
+name	ston
+type	none
+shadow	0
+lifespan 6
+nolife          1
+antigravity -200
+
+anim idle
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 35);
+    }
+@end_script
+     	loop	0
+	delay	2.5
+	offset	148 110 
+      landframe 28
+	frame	data/chars/gokuu/ston/jst2.gif
+      sound	data/sounds/ston2.wav
+	frame	data/chars/gokuu/ston/jst3.gif
+	frame	data/chars/gokuu/ston/jst4.gif
+	frame	data/chars/gokuu/ston/jst5.gif
+	frame	data/chars/gokuu/ston/jst6.gif
+	frame	data/chars/gokuu/ston/jst7.gif
+	frame	data/chars/gokuu/ston/jst8.gif
+	frame	data/chars/gokuu/ston/jst9.gif
+      delay	2
+      frame	data/chars/gokuu/ston/jst10.gif
+      frame	data/chars/gokuu/ston/jst11.gif
+	frame	data/chars/gokuu/ston/jst12.gif
+	frame	data/chars/gokuu/ston/jst13.gif
+	frame	data/chars/gokuu/ston/jst14.gif
+	frame	data/chars/gokuu/ston/jst15.gif
+	frame	data/chars/gokuu/ston/jst16.gif
+	frame	data/chars/gokuu/ston/jst17.gif
+	frame	data/chars/gokuu/ston/jst18.gif
+      frame	data/chars/gokuu/ston/jst19.gif
+	frame	data/chars/gokuu/ston/jst20.gif
+	frame	data/chars/gokuu/ston/jst21.gif
+	frame	data/chars/gokuu/ston/jst22.gif
+	frame	data/chars/gokuu/ston/jst23.gif
+	frame	data/chars/gokuu/ston/jst24.gif
+	frame	data/chars/gokuu/ston/jst25.gif
+	frame	data/chars/gokuu/ston/jst26.gif
+	frame	data/chars/gokuu/ston/jst27.gif
+      frame	data/chars/gokuu/ston/jst28.gif
+      delay	30
+	frame	data/chars/gokuu/ston/jst29.gif
+      delay	3
+      offset	148 114
+	frame	data/chars/gokuu/ston/jst30.gif
+      offset	148 118
+	frame	data/chars/gokuu/ston/jst31.gif
+      offset	148 122
+	frame	data/chars/gokuu/ston/jst32.gif
+      offset	148 126
+	frame	data/chars/gokuu/ston/jst33.gif
+      offset	148 128
+	frame	data/chars/gokuu/ston/jst34.gif
+      offset	148 126
+	frame	data/chars/gokuu/ston/jst35.gif
+      offset	148 122
+	frame	data/chars/gokuu/ston/jst36.gif
+      offset	148 118
+      frame	data/chars/gokuu/ston/jst37.gif
+      offset	148 114
+      frame	data/chars/gokuu/ston/jst38.gif
+      offset	148 110
+      delay	2.5
+	frame	data/chars/gokuu/ston/jst39.gif
+	frame	data/chars/misc/empty.gif
+	frame	data/chars/gokuu/ston/jst39.gif
+	frame	data/chars/misc/empty.gif
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+

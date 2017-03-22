@@ -1,0 +1,213 @@
+music		data/music/Korea1.bor
+background	data/levels/Korea/back9.gif
+panel	      data/levels/Korea/n07.gif
+order           a
+direction both
+cameraoffset 0 -100
+
+spawn1 100 20 
+spawn2 110 40
+
+#----------pickups
+
+spawn	fg6
+coords	10 300
+at	0
+
+spawn	bus
+coords	2 100
+at	0
+
+spawn	flag
+coords	381 170
+at	0
+
+spawn	girl
+coords	335 170
+at	0
+
+spawn	girl2
+coords	700 170
+at	0
+
+spawn	girl3
+coords	1210 170
+at	0
+
+spawn	phone
+flip 1
+item  goldkat
+coords	270 193
+at	0
+
+spawn	phone
+flip 1
+item  menuu
+coords	1550 286
+at	0
+
+spawn	obstacn
+flip 1
+item  pizza
+coords	657 195
+at	0
+
+spawn	obstacn
+flip 1
+coords	1324 195
+at	0
+
+spawn	obstacn
+flip 1
+item  diamond
+coords	1370 195
+at	0
+
+spawn	obstaa
+item  gold
+coords	964 245
+at	0
+
+blockade 80
+at	80
+
+spawn	ray
+Health 100
+coords	380 230
+at	80
+
+spawn	ray
+Health 100
+map 2
+coords	400 200
+at	80
+
+wait
+at 240
+
+Group	3 3
+at	240
+
+blockade 240
+at	240
+
+spawn	yungmie
+Health 100
+item  ring
+map 3
+coords	420 220
+at	240
+
+spawn	matlock
+Health 100
+map 1
+coords	400 200
+at	240
+
+spawn	yungmie
+Health 70
+flip 1
+coords	-100 245
+at	240
+
+Group	100 100
+at	570
+
+blockade 570
+at	570
+
+spawn	matlock
+Health 100
+map 2
+flip 1
+coords	-70 215
+at	570
+
+spawn	matlock
+Health 100
+map 6
+flip 1
+coords	-60 240
+at	570
+
+spawn	ray
+Health 50
+map 1
+coords	400 250
+at	570
+
+spawn	yungmie
+Health 70
+coords	380 220
+at	570
+
+wait
+at 870
+
+spawn	ray
+Health 70
+map 2
+flip 1
+coords	-100 200
+at	870
+
+spawn	matlock
+Health 70
+map 5
+coords	360 220
+at	870
+
+blockade 870
+at	870
+
+Group	4 4
+at	1200
+
+blockade 1240
+at	1200
+
+spawn	yungmie
+Health 80
+map 3
+item  ring
+coords	500 240
+at 1200
+
+spawn	matlock
+Health 80
+flip 1
+coords	-100 230
+at	1200
+
+spawn	ray
+Health 80
+map 3
+coords	-80 250
+at	1200
+
+spawn	ray
+Health 80
+map 3
+coords	380 220
+at	1200
+
+spawn	yungmie
+Health 70
+map 1
+coords	390 235
+at 1200
+
+spawn	yungmie
+Health 70
+flip 1
+map 2
+coords	-60 210
+at 1200
+
+spawn	matlock
+Health 60
+map 3
+coords	380 220
+at	1200
+
+

@@ -1,0 +1,4 @@
+music           data/music/neo2.bor
+animation	data/scenes/neo.gif 0 0 0 1
+
+

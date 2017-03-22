@@ -1,0 +1,59 @@
+name	trapde
+type trap
+shadow  5
+facing 1
+offscreenkill  2000
+candamage player enemy
+
+palette   data/chars/misc/trapde1.gif
+
+anim idle
+	loop	1
+      delay  200
+	offset	99 287
+      otg 1
+      hitfx   data/sounds/go.wav
+      frame   data/chars/misc/empty.gif
+      delay  7
+      frame   data/chars/misc/trapde1a.gif
+      frame   data/chars/misc/trapde1b.gif
+      frame   data/chars/misc/trapde1c.gif
+      frame   data/chars/misc/trapde1d.gif
+      frame   data/chars/misc/trapde2.gif
+      frame   data/chars/misc/trapde3.gif
+      frame   data/chars/misc/trapde4.gif
+      sound   data/sounds/elat1.wav
+      delay  6
+      frame   data/chars/misc/trapde5.gif
+      frame   data/chars/misc/trapde6.gif
+      frame   data/chars/misc/trapde7.gif
+      frame   data/chars/misc/trapde8.gif
+      frame   data/chars/misc/trapde9.gif
+      frame   data/chars/misc/trapde10.gif
+      frame   data/chars/misc/trapde11.gif
+      frame   data/chars/misc/trapde12.gif
+      frame   data/chars/misc/trapde13.gif
+      frame   data/chars/misc/trapde14.gif
+      frame   data/chars/misc/trapde15.gif
+      frame   data/chars/misc/trapde16.gif
+      frame   data/chars/misc/trapde17.gif
+      frame   data/chars/misc/trapde18.gif
+      sound   data/sounds/elat3.wav
+      frame   data/chars/misc/trapde19.gif
+      attack16  70 155 60 132 10 1 1 1 50
+      dropv 4 1
+      frame   data/chars/misc/trapde20.gif
+      frame   data/chars/misc/trapde21.gif
+      frame   data/chars/misc/trapde22.gif
+      attack16  0 0 0 0 0 0
+      frame   data/chars/misc/trapde23.gif
+      delay  6
+      frame   data/chars/misc/trapde24.gif
+      frame   data/chars/misc/trapde25.gif
+      frame   data/chars/misc/trapde26.gif
+      frame   data/chars/misc/trapde27.gif
+
+      
+
+
+

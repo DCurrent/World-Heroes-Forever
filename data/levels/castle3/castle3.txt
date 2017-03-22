@@ -1,0 +1,49 @@
+music		data/music/castle3.bor
+background	data/levels/castle3/back.gif
+panel	      data/levels/castle3/n04.gif
+order           a
+direction both
+settime 0
+notime 1
+
+spawn1 110 20 
+spawn2 120 40 
+
+#----------pickups
+
+spawn	bacley
+coords	10 145
+at	0
+
+spawn	bacley
+coords	170 145
+at	0
+
+spawn	obstace
+flip 1
+item  meat
+coords	500 192
+at	0
+
+spawn	obstacf
+flip 1
+item  menuu
+coords	43 246
+at	0
+
+Group	1 1
+at	0
+
+
+spawn	neodio
+boss 1
+coords	295 215
+at	0
+
+
+
+
+
+
+
+

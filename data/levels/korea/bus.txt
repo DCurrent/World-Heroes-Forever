@@ -1,0 +1,15 @@
+name    bus
+type	none
+facing 1
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   13
+	  offset	2 100
+        frame   data/levels/Korea/bus01.gif
+        frame   data/levels/Korea/bus02.gif
+        frame   data/levels/Korea/bus03.gif
+        frame   data/levels/Korea/bus04.gif
+
+

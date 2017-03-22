@@ -1,0 +1,61 @@
+name	inv
+health	5
+speed	0
+type	enemy
+shadow  0
+nolife   1
+nodrop 2
+nopain 1
+nomove 1 1
+noatflash 1
+flash   eflash
+cantgrab 1
+lifespan 8
+icon	data/chars/inv/empty.gif
+
+
+anim spawn
+	loop	0
+      delay	6
+	offset	1 1
+      frame	data/chars/inv/empty.gif
+      frame	data/chars/inv/empty.gif
+
+anim idle
+	loop	1
+	delay	10
+	offset	1 1
+      frame	data/chars/inv/empty.gif
+      frame	data/chars/inv/empty.gif
+
+anim walk
+	loop	1
+	delay	9
+      offset	1 1
+      frame	data/chars/inv/empty.gif
+      frame	data/chars/inv/empty.gif
+
+anim pain
+	loop	0
+	delay	6
+      offset	1 1
+      frame	data/chars/inv/empty.gif
+      frame	data/chars/inv/empty.gif
+
+anim fall
+	loop	0
+      delay	6
+      offset	1 1
+      frame	data/chars/inv/empty.gif
+      frame	data/chars/inv/empty.gif
+
+anim rise
+      loop	0
+      offset	1 1
+      frame	data/chars/inv/empty.gif
+      frame	data/chars/inv/empty.gif
+
+
+
+
+

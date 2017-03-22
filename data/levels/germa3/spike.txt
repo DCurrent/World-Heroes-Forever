@@ -1,0 +1,100 @@
+name    spike
+type	none
+shadow  0
+
+
+anim idle
+	loop	0
+        delay	2
+	  offset	4 172
+        quakeframe 77 7 6
+        move 1
+        frame   data/levels/germa3/spike1.gif
+        sound	data/levels/germa3/Elec.wav
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        move 0
+        delay	4
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+        frame   data/levels/germa3/spike1.gif
+
+

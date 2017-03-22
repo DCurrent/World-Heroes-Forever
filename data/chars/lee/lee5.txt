@@ -1,0 +1,1180 @@
+name	lee5
+health	150
+speed	9
+type	enemy
+shadow  0
+nolife        1
+throw         5 2
+paingrab 1
+grabback 1
+grabdistance 40
+gfxshadow  1
+falldie 2
+nodieblink      1
+dust du
+aggression      20
+thold 12
+blockodds 1
+bflash bflash
+diesound	data/chars/lee/die.wav
+aimove Chasez
+projectilehit   enemy obstacle trap
+subject_to_wall 0
+hostile player 
+candamage player obstacle
+
+animationscript 	data/scripts/ani0020.h
+
+palette   data/chars/lee/idle.gif
+alternatepal data/chars/lee/map1.gif
+alternatepal data/chars/lee/map2.gif
+alternatepal data/chars/lee/map3.gif
+alternatepal data/chars/lee/map4.gif
+alternatepal data/chars/lee/map5.gif
+
+anim spawn
+	loop	0
+      delay   250
+      offset	75 170
+      frame	data/chars/lee/spawn1.gif
+      delay   12
+      frame	data/chars/lee/spawn2.gif
+      frame	data/chars/lee/idle1.gif
+
+anim idle
+	loop	1
+	delay	15
+      offset	75 170
+      bbox	55 78 47 80
+      @cmd    clearL
+      frame	data/chars/lee/idle.gif
+      frame	data/chars/lee/idle1.gif
+      frame	data/chars/lee/idle2.gif
+      frame	data/chars/lee/idle3.gif
+      frame	data/chars/lee/idle2.gif
+      frame	data/chars/lee/idle1.gif
+
+anim walk
+	loop	1
+      delay   10
+	offset	75 170
+	bbox	55 78 50 80
+	frame	data/chars/lee/w1.gif
+	frame	data/chars/lee/w2.gif
+	frame	data/chars/lee/w3.gif
+	frame	data/chars/lee/w4.gif
+	frame	data/chars/lee/w5.gif
+      frame	data/chars/lee/w6.gif
+	frame	data/chars/lee/w7.gif
+	frame	data/chars/lee/w8.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	75 170
+	bbox	55 78 47 80
+	frame	data/chars/lee/bl1.gif
+      frame	data/chars/lee/bl2.gif
+      delay	2
+      offset	78 170
+	frame	data/chars/lee/bl2.gif
+      offset	75 170
+      frame	data/chars/lee/bl2.gif
+      offset	72 170
+      frame	data/chars/lee/bl2.gif
+      offset	75 170
+      frame	data/chars/lee/bl2.gif
+      delay	3
+      move -4
+      frame	data/chars/lee/bl2.gif
+      frame	data/chars/lee/bl2.gif
+      frame	data/chars/lee/bl1.gif
+      frame	data/chars/lee/bl1.gif
+      frame	data/chars/lee/bl1.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	75 170
+      frame	data/chars/lee/pain4.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	66 191
+      frame	data/chars/lee/pain2.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	75 170
+      bbox	0 0 0 0
+      frame	data/chars/lee/pain4.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	75 170
+      frame	data/chars/lee/pain4.gif
+
+anim pain
+	loop	0
+	delay	4
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/lee/pain2.gif
+      offset	77 170
+	frame	data/chars/lee/pain2.gif
+      offset	74 170
+	frame	data/chars/lee/pain2.gif
+      offset	76 170
+      frame	data/chars/lee/pain2.gif
+      offset	75 170
+      frame	data/chars/lee/pain2.gif
+      delay	12
+      frame	data/chars/lee/idle1.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/lee/pain2.gif
+      offset	77 170
+	frame	data/chars/lee/pain2.gif
+      sound	data/chars/lee/pain.wav
+      offset	73 170
+	frame	data/chars/lee/pain2.gif
+      offset	77 170
+      frame	data/chars/lee/pain2.gif
+      offset	75 170
+      frame	data/chars/lee/pain2.gif
+      delay	45
+      frame	data/chars/lee/pain4.gif
+      frame	data/chars/lee/pain4.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	75 170
+      bbox	25 145 100 30
+	frame	data/chars/lee/ffall05.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	75 170
+	frame	data/chars/lee/ffall05.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+	frame	data/chars/lee/pain4.gif
+      offset	77 170
+	frame	data/chars/lee/pain4.gif
+      offset	73 170
+	frame	data/chars/lee/pain4.gif
+      offset	77 170
+      frame	data/chars/lee/pain4.gif
+      offset	75 170
+      frame	data/chars/lee/pain4.gif
+      delay	3
+      move -4
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      move -4
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain2.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	75 170
+      bbox	49 80 50 70
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/lee/bpain04.gif
+      offset	77 170
+	frame	data/chars/lee/bpain04.gif
+      offset	73 170
+	frame	data/chars/lee/bpain4.gif
+      offset	77 170
+      frame	data/chars/lee/bpain4.gif
+      offset	75 170
+      frame	data/chars/lee/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/lee/bpain02.gif
+      frame	data/chars/lee/bpain02.gif
+      frame	data/chars/lee/bpain2.gif
+      frame	data/chars/lee/bpain2.gif
+      frame	data/chars/lee/bpain02.gif
+      frame	data/chars/lee/bpain02.gif
+      frame	data/chars/lee/bpain2.gif
+      frame	data/chars/lee/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	75 170
+	frame	data/chars/lee/pain2.gif
+      offset	77 170
+	frame	data/chars/lee/pain2.gif
+      offset	74 170
+	frame	data/chars/lee/pain2.gif
+      offset	76 170
+      frame	data/chars/lee/pain2.gif
+      offset	75 170
+      frame	data/chars/lee/pain2.gif
+      frame	data/chars/lee/pain4.gif
+      frame	data/chars/lee/pain4.gif
+      frame	data/chars/lee/pain4.gif
+      frame	data/chars/lee/pain4.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	95 170
+      bouncefactor 3.5
+      landframe 6
+      @cmd    degravity 0
+      frame	data/chars/lee/fall01.gif
+	frame	data/chars/lee/fall01.gif
+      bbox	55 78 80 57
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/lee/fall02.gif
+	frame	data/chars/lee/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/lee/fall03.gif
+      delay   40
+	frame	data/chars/lee/fall03.gif
+      delay   8
+      bbox	25 145 100 30
+	frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	75 170
+      attack10  50 90 60 70 5 1 1 1
+      dropv 2 1.5
+      move -4
+      @cmd    degravity 0
+      frame	data/chars/lee/pain5.gif
+      frame	data/chars/lee/pain5.gif
+      frame	data/chars/lee/pain5.gif
+      delay   2
+      move -5
+      offset	95 155
+      sound	data/sounds/fall.wav
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall02.gif
+      frame	data/chars/lee/ffall02.gif
+      frame	data/chars/lee/ffall02.gif
+      move -4
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall03.gif
+      bbox	50 90 60 70
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall02.gif
+      frame	data/chars/lee/ffall02.gif
+      frame	data/chars/lee/ffall02.gif
+      move -3
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      offset	95 175
+      frame	data/chars/lee/ffall05.gif
+      frame	data/chars/lee/ffall05.gif
+      frame	data/chars/lee/ffall05.gif
+      frame	data/chars/lee/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      move -3
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      move 0
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      move 0
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      frame	data/chars/lee/dsla1.gif
+	frame	data/chars/lee/dsla2.gif
+	frame	data/chars/lee/dsla3.gif
+      frame	data/chars/lee/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/lee/sla3.gif
+      offset	125 120
+      frame	data/chars/lee/sla2.gif
+      offset	75 170
+      frame	data/chars/lee/pain4.gif
+      offset	83 140
+      frame	data/chars/lee/sla1.gif
+      frame	data/chars/lee/sla2.gif
+      frame	data/chars/lee/rjsla3.gif
+      offset	75 150
+      frame	data/chars/lee/rjsla4.gif
+      frame	data/chars/lee/rjsla5.gif
+      offset	95 170
+      frame	data/chars/lee/fall01.gif
+      frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/rj0.gif
+      offset	108 173
+      frame	data/chars/lee/rj00.gif
+      offset	108 166
+      frame	data/chars/lee/gsla2.gif
+      offset	104 170
+      frame	data/chars/lee/gfall04.gif
+      frame	data/chars/lee/gfall05.gif
+      offset	124 181
+      frame	data/chars/lee/pain41.gif
+      offset	124 170
+      frame	data/chars/lee/dsla22.gif
+	frame	data/chars/lee/dsla33.gif
+      offset	75 150
+      frame	data/chars/lee/rjsla7.gif
+      offset	75 170
+      frame	data/chars/lee/pain2.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/lee/sla1.gif
+      offset	112 145
+	frame	data/chars/lee/sla2.gif
+      offset	90 145
+	frame	data/chars/lee/sla3.gif
+      frame	data/chars/lee/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/lee/fall04.gif
+      offset	85 145
+      frame	data/chars/lee/sla1.gif
+      frame	data/chars/lee/sla1.gif
+      offset	98 138
+      frame	data/chars/lee/ssla3.gif
+      frame	data/chars/lee/rjsla3.gif
+      frame	data/chars/lee/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/lee/rjsla4.gif
+      frame	data/chars/lee/rjsla5.gif
+      frame	data/chars/lee/rjsla6.gif
+      frame	data/chars/lee/sla1.gif
+      frame	data/chars/lee/sla1.gif
+      frame	data/chars/lee/ssla3.gif
+      frame	data/chars/lee/sla2.gif
+      offset	123 170
+      frame	data/chars/lee/sla3.gif
+      offset	98 138
+      frame	data/chars/lee/hsla1.gif
+      frame	data/chars/lee/hsla2.gif
+      frame	data/chars/lee/hsla3.gif
+      frame	data/chars/lee/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/lee/hsla2.gif
+      frame	data/chars/lee/hsla4.gif
+      frame	data/chars/lee/rj1.gif
+      frame	data/chars/lee/gsla3.gif
+      frame	data/chars/lee/rj3.gif
+      frame	data/chars/lee/hsla4.gif
+      offset	98 148
+      frame	data/chars/lee/hsla4.gif
+      offset	120 170
+      frame	data/chars/lee/pain41.gif
+      frame	data/chars/lee/pain21.gif
+      offset	75 170
+      frame	data/chars/lee/pain4.gif
+      offset	122 170
+      frame	data/chars/lee/pain41.gif
+      frame	data/chars/lee/pain55.gif
+      offset	100 140
+      frame	data/chars/lee/fall066.gif
+      offset	75 170
+      frame	data/chars/lee/pain5.gif
+      offset	105 85
+      frame	data/chars/lee/dsla3.gif
+      offset	75 170
+      frame	data/chars/lee/pain4.gif
+      frame	data/chars/lee/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+	offset	85 145
+      frame	data/chars/lee/gsla1.gif
+      offset	112 145
+	frame	data/chars/lee/gsla2.gif
+      offset	90 145
+	frame	data/chars/lee/gsla3.gif
+      frame	data/chars/lee/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/lee/gsla6.gif
+      offset	115 170
+      frame	data/chars/lee/dsla1.gif
+      offset	115 145
+	frame	data/chars/lee/gsla3.gif
+      offset	75 170
+      frame	data/chars/lee/pain4.gif
+      offset	105 170
+      frame	data/chars/lee/gfall04.gif
+      offset	75 148
+      frame	data/chars/lee/rjsla4.gif
+      frame	data/chars/lee/rjsla5.gif
+      offset	95 170
+      frame	data/chars/lee/fall04.gif
+      offset	75 143
+      frame	data/chars/lee/hsla2.gif
+      frame	data/chars/lee/hsla4.gif
+      offset	124 170
+      frame	data/chars/lee/pain4.gif
+      offset	95 170
+      frame	data/chars/lee/fall01.gif
+      frame	data/chars/lee/fall02.gif
+      frame	data/chars/lee/fall03.gif
+      frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall05.gif
+      offset	104 170
+      frame	data/chars/lee/gsla2.gif
+      frame	data/chars/lee/gsla3.gif
+      frame	data/chars/lee/gsla4.gif
+      frame	data/chars/lee/gfall04.gif
+      frame	data/chars/lee/gfall05.gif
+      offset	75 165
+      frame	data/chars/lee/pain5.gif
+      frame	data/chars/lee/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/lee/fall03.gif
+      frame	data/chars/lee/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/lee/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	98 138
+      landframe 3
+      bbox	30 90 95 45
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/lee/fall03.gif
+      frame	data/chars/lee/fall03.gif
+      offset	95 170
+      bbox	25 145 100 30
+      delay   100
+      frame	data/chars/lee/fall04.gif
+      delay   2
+	frame	data/chars/lee/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity 0
+      frame	data/chars/lee/sla3.gif
+      frame	data/chars/lee/sla3.gif
+      delay   10
+      offset	98 138
+      bbox	55 78 80 57
+      frame	data/chars/lee/fall02.gif
+      frame	data/chars/lee/fall02.gif
+      delay   20
+      bbox	30 90 95 45
+	frame	data/chars/lee/fall03.gif
+      delay   500
+      frame	data/chars/lee/fall03.gif
+      offset	95 170
+      delay   8
+      bbox	25 145 100 30
+      frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+
+
+anim fall10
+      loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      attack10  60 100 60 30 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+      frame	data/chars/lee/fall01.gif
+	frame	data/chars/lee/fall01.gif
+	frame	data/chars/lee/fall02.gif
+	frame	data/chars/lee/fall02.gif
+      delay   20
+	frame	data/chars/lee/fall03.gif
+      delay   40
+	frame	data/chars/lee/fall03.gif
+      delay   8
+	frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	95 170
+      bbox	25 145 100 30
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/lee/fall04.gif
+      @cmd    degravity 0
+	frame	data/chars/lee/fall05.gif
+
+anim fall14
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity -0.27
+      frame	data/chars/lee/fall08.gif
+	frame	data/chars/lee/fall08.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/lee/fall09.gif
+	frame	data/chars/lee/fall09.gif
+      delay   20
+	frame	data/chars/lee/fall09.gif
+      delay   40
+	frame	data/chars/lee/fall09.gif
+      delay   8
+      @cmd    degravity 0
+	frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	95 170
+      landframe 6
+      @cmd    degravity 0
+      frame	data/chars/lee/fall01.gif
+	frame	data/chars/lee/fall01.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/lee/fall02.gif
+	frame	data/chars/lee/fall02.gif
+      delay   20
+	frame	data/chars/lee/fall03.gif
+      delay   40
+	frame	data/chars/lee/fall03.gif
+      delay   8
+	frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+
+anim fall16
+	loop	0
+      delay   4
+	offset	75 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+	frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+	frame	data/chars/lee/pain6.gif
+      frame	data/chars/lee/shock1.gif
+      frame	data/chars/lee/pain6.gif
+      delay   40
+	frame	data/chars/lee/shock1.gif
+      offset	95 170
+      delay   8
+	frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+
+anim burn
+	loop	0
+      delay   7
+	offset	95 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    degravity 0
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/lee/burn01.gif
+	frame	data/chars/lee/burn1.gif
+      frame	data/chars/lee/burn01.gif
+	frame	data/chars/lee/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/lee/burn02.gif
+	frame	data/chars/lee/burn2.gif
+      frame	data/chars/lee/burn02.gif
+	frame	data/chars/lee/burn2.gif
+	frame	data/chars/lee/burn03.gif
+	frame	data/chars/lee/burn3.gif
+      frame	data/chars/lee/burn03.gif
+      frame	data/chars/lee/burn3.gif
+	frame	data/chars/lee/burn03.gif
+      frame	data/chars/lee/burn3.gif
+      delay   40
+	frame	data/chars/lee/burn03.gif
+      delay   7
+      bbox	25 145 100 30
+	frame	data/chars/lee/burn4.gif
+      frame	data/chars/lee/burn04.gif
+      frame	data/chars/lee/burn4.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/lee/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	95 170
+      bbox	25 145 100 30
+      frame	data/chars/lee/fall05.gif
+
+anim rise
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/lee/fall05.gif
+	offset	95 120
+	delay	8
+	frame	data/chars/lee/rise1.gif
+	frame	data/chars/lee/rise2.gif
+	frame	data/chars/lee/rise3.gif
+	frame	data/chars/lee/rise4.gif
+	
+anim attack1
+	@script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
+      }
+    }
+@end_script
+      range	0 70
+	loop	0
+      delay   8
+      followcond 1
+      followanim 10
+	offset	75 170
+      bbox	55 78 50 80
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/lee/aa4.gif
+      frame	data/chars/lee/aa1.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/lee/aa2.gif
+      frame	data/chars/lee/aa3.gif
+      delay   7
+      attack  75 85 50 35 5 0 0 0 18
+      frame	data/chars/lee/aa3.gif
+      attack 0 0 0 0 0 0
+      delay   8
+      frame	data/chars/lee/aa3.gif
+      frame	data/chars/lee/aa2.gif
+      frame	data/chars/lee/aa4.gif
+      
+anim follow10
+      loop	0
+      delay   10
+	offset	75 170
+      bbox	55 78 50 80
+      hitfx   data/sounds/beat3.wav
+      frame	data/chars/lee/aa3.gif
+      delay   8
+      frame	data/chars/lee/aa2.gif
+      frame	data/chars/lee/aa4.gif
+      delay   10
+      sound	data/sounds/air5.wav
+      frame	data/chars/lee/a1.gif
+      sound	data/chars/lee/at1.wav
+      delay   7
+      frame	data/chars/lee/a2.gif
+      delay   9
+      attack  75 85 50 35 5 1 0 0 20
+      dropv 2 2.5
+      frame	data/chars/lee/a3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/lee/a3.gif
+      frame	data/chars/lee/a4.gif
+
+anim follow3
+      loop	0
+      delay   6
+      offset	75 170
+      bbox	55 78 50 80
+      jumpframe 2 0 -3 0 dus
+      frame	data/chars/lee/bl1.gif
+      frame	data/chars/lee/bl1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/lee/rub2.gif
+      frame	data/chars/lee/rub2.gif
+      frame	data/chars/lee/rub2.gif
+      frame	data/chars/lee/rub2.gif
+      frame	data/chars/lee/bl1.gif
+      @cmd    stop
+      @cmd    spawn01 "dus" 0 0 1
+      sound	data/sounds/step.wav
+      frame	data/chars/lee/bl1.gif
+      frame	data/chars/lee/bl1.gif
+
+anim attack2
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%25;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      } else if( r < 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
+      }
+    }
+@end_script
+      range	140 180
+      loop	0
+      delay   6
+      offset	75 170
+      bbox	55 78 50 80
+      jumpframe 2 1.5 2.5 0 dus
+      landframe 7 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/lee/ru1.gif
+      frame	data/chars/lee/ru1.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/lee/ru2.gif
+      frame	data/chars/lee/ru2.gif
+      sound	data/chars/lee/at2.wav
+      frame	data/chars/lee/ru3.gif
+      frame	data/chars/lee/ru3.gif
+      delay   20
+      sound	data/sounds/air3.wav
+      frame	data/chars/lee/ru3.gif
+      sound	data/sounds/step.wav
+      delay   6
+      attack  115 95 55 35 10 1 0 0 20
+      frame	data/chars/lee/ru4.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/lee/ru4.gif
+      frame	data/chars/lee/ru4.gif
+      delay   9
+      frame	data/chars/lee/a4.gif
+
+anim follow4
+      loop	0
+      delay   12
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 1 3.5 2.5 0 dus
+      landframe 14 dus
+      frame	data/chars/lee/j1.gif
+      delay   4
+      frame	data/chars/lee/j2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/lee/j2.gif
+      frame	data/chars/lee/j2.gif
+      frame	data/chars/lee/j3.gif
+      frame	data/chars/lee/j3.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j5.gif
+      @cmd    riseattack2 125 20 "ANI_FOLLOW5"
+      frame	data/chars/lee/j5.gif
+      frame	data/chars/lee/j6.gif
+      frame	data/chars/lee/j6.gif
+      delay   40
+      frame	data/chars/lee/j6.gif
+      delay   12
+      sound	data/sounds/step.wav
+      frame	data/chars/lee/j1.gif
+      frame	data/chars/lee/jl1.gif
+      frame	data/chars/lee/j1.gif
+
+anim follow5
+      loop	0
+	delay	5
+      offset	75 170
+      bbox	55 78 47 75
+      followcond 1
+      followanim 6
+      jumpframe 0 0 2.5
+      landframe 7 dus
+      hitfx   data/sounds/beat2.wav
+      @cmd    degravity -0.27
+      frame	data/chars/lee/j5.gif
+      sound	data/sounds/air5.wav
+      frame	data/chars/lee/ja1.gif
+      sound	data/chars/lee/at3.wav
+      frame	data/chars/lee/ja1.gif
+      attack  75 115 50 35 10 1 0 0 50
+      frame	data/chars/lee/ja2.gif
+      frame	data/chars/lee/ja2.gif
+      attack  0 0 0 0 0 0
+      frame	data/chars/lee/ja1.gif
+      delay	40
+      frame	data/chars/lee/j5.gif
+      delay   9
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/lee/j1.gif
+      frame	data/chars/lee/jl1.gif
+      frame	data/chars/lee/j1.gif
+
+anim follow6
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 110);
+    }
+@end_script
+      loop	0
+	delay	11
+      offset	75 170
+      jumpframe 2 3 -1.5
+      landframe 10 dus
+      frame	data/chars/lee/ja2.gif
+      frame	data/chars/lee/ja2.gif
+      delay	8
+      bbox	55 78 50 60
+      frame	data/chars/lee/ja1.gif
+      frame	data/chars/lee/j10.gif
+      frame	data/chars/lee/j9.gif
+      frame	data/chars/lee/j8.gif
+      frame	data/chars/lee/j7.gif
+      frame	data/chars/lee/j5.gif
+      frame	data/chars/lee/j5.gif
+      delay	40
+      bbox	55 78 50 80
+      frame	data/chars/lee/j6.gif
+      delay	9
+      sound	data/sounds/step.wav
+      frame	data/chars/lee/j1.gif
+      frame	data/chars/lee/jl1.gif
+      frame	data/chars/lee/j1.gif
+
+anim follow7
+      loop	0
+      delay   12
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 1 3.5 3 0.7 dus
+      landframe 14 dus
+      frame	data/chars/lee/j1.gif
+      delay   4
+      @cmd    degravity -0.27
+      frame	data/chars/lee/j2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/lee/j2.gif
+      frame	data/chars/lee/j2.gif
+      frame	data/chars/lee/j3.gif
+      frame	data/chars/lee/j3.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j5.gif
+      frame	data/chars/lee/j5.gif
+      frame	data/chars/lee/j6.gif
+      frame	data/chars/lee/j6.gif
+      delay   40
+      frame	data/chars/lee/j6.gif
+      delay   12
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/lee/j1.gif
+      frame	data/chars/lee/jl1.gif
+      frame	data/chars/lee/j1.gif
+
+anim follow9
+      loop	0
+      delay   12
+      offset	75 170
+      bbox	55 78 47 75
+      jumpframe 1 3.5 3 -0.7 dus
+      landframe 14 dus
+      frame	data/chars/lee/j1.gif
+      delay   4
+      @cmd    degravity -0.27
+      frame	data/chars/lee/j2.gif
+      sound	data/sounds/jumpp.wav
+      frame	data/chars/lee/j2.gif
+      frame	data/chars/lee/j2.gif
+      frame	data/chars/lee/j3.gif
+      frame	data/chars/lee/j3.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j4.gif
+      frame	data/chars/lee/j5.gif
+      frame	data/chars/lee/j5.gif
+      frame	data/chars/lee/j6.gif
+      frame	data/chars/lee/j6.gif
+      delay   40
+      frame	data/chars/lee/j6.gif
+      delay   12
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/lee/j1.gif
+      frame	data/chars/lee/jl1.gif
+      frame	data/chars/lee/j1.gif
+
+anim special
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
+      }
+    }
+@end_script
+      range	0 70
+	loop	0
+      delay   10
+	offset	75 170
+      bbox	55 78 50 80
+      hitfx   data/sounds/beat3.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/lee/a1.gif
+      delay   7
+      sound	data/chars/lee/at1.wav
+      frame	data/chars/lee/a2.gif
+      delay   9
+      attack  75 85 50 35 5 1 0 0 20
+      dropv 2 2.5
+      frame	data/chars/lee/a3.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/lee/a3.gif
+      frame	data/chars/lee/a4.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/lee/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   20
+	offset	95 170
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/lee/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+	offset	95 155
+      move -5
+      sound	data/sounds/fall.wav
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall02.gif
+      frame	data/chars/lee/ffall02.gif
+      frame	data/chars/lee/ffall02.gif
+      move -4
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall02.gif
+      frame	data/chars/lee/ffall02.gif
+      frame	data/chars/lee/ffall02.gif
+      move -3
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall03.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall04.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      frame	data/chars/lee/ffall01.gif
+      offset	95 175
+      frame	data/chars/lee/ffall05.gif
+      frame	data/chars/lee/ffall05.gif
+      frame	data/chars/lee/ffall05.gif
+      frame	data/chars/lee/ffall05.gif
+      offset	95 170
+      attack10  0 0 0 0 0 0
+      bbox	25 145 100 30
+	frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      frame	data/chars/lee/fall04.gif
+      move -3
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      move 0
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      move 0
+      frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+      move 0
+      delay   40
+	frame	data/chars/lee/fall05.gif
+      frame	data/chars/lee/fall05.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/lee/fall05.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/lee/fall05.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	95 170
+      frame	data/chars/lee/fall05.gif
+
+
+
+

@@ -1,0 +1,17 @@
+name    fire
+health  1
+type	none
+subtype noskip
+facing 1
+offscreenkill  2000
+
+anim idle
+	loop	1
+        delay   12
+	  offset	88 222
+        frame   data/levels/Korea3/fire01.gif
+        frame   data/levels/Korea3/fire02.gif
+        frame   data/levels/Korea3/fire03.gif
+        frame   data/levels/Korea3/fire04.gif
+
+

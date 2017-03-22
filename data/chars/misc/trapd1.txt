@@ -1,0 +1,125 @@
+name	trapd1
+type	NPC
+speed	0
+lifespan 14
+shadow  0
+gfxshadow  1
+falldie 1
+nodieblink      3
+nolife   1
+nodrop 2
+nopain 1
+nomove 1 1
+noatflash 1
+flash   eflash
+cantgrab 1
+facing 2
+offscreenkill  2000
+candamage player enemy
+
+load trapd2
+
+anim spawn
+	loop	0
+      delay	3
+      offset	100 113
+      jumpframe 0 0 0.4
+      frame   data/chars/misc/trpdd12.gif
+      frame   data/chars/misc/trpdd11.gif
+      frame   data/chars/misc/trpdd10.gif
+      frame   data/chars/misc/trpdd9.gif
+      frame   data/chars/misc/trpdd8.gif
+      frame   data/chars/misc/trpdd7.gif
+      frame   data/chars/misc/trpdd6.gif
+      frame   data/chars/misc/trpdd5.gif
+      frame   data/chars/misc/trpdd4.gif
+      frame   data/chars/misc/trpdd3.gif
+      frame   data/chars/misc/trpdd2.gif
+      frame   data/chars/misc/trpdd1.gif
+
+anim idle
+	loop	1
+      delay  2
+	offset	100 113
+      otg 1
+      hitflash  obfla
+      hitfx   data/sounds/knife3.wav
+      attack14  75 96 46 1 5 1 1 0 50
+      forcedirection -1
+      dropv 3 1.5
+      sound   data/sounds/Elec.wav
+      jumpframe 0 0 -0.6
+      frame   data/chars/misc/trapd1.gif
+      frame   data/chars/misc/trapd2.gif
+      frame   data/chars/misc/trapd3.gif
+      frame   data/chars/misc/trapd4.gif
+      frame   data/chars/misc/trapd5.gif
+      frame   data/chars/misc/trapd6.gif
+      frame   data/chars/misc/trapd1.gif
+      frame   data/chars/misc/trapd2.gif
+      frame   data/chars/misc/trapd3.gif
+      frame   data/chars/misc/trapd4.gif
+      attack14 0 0 0 0 0 0
+      frame   data/chars/misc/trapd5.gif
+      frame   data/chars/misc/trapd6.gif
+
+anim walk
+	loop	0
+      delay	1
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+
+anim pain
+	loop	0
+      delay	1
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+
+anim fall
+	loop	0
+      delay	1
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+
+anim rise
+      loop	0
+      delay	1
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+
+
+anim fall
+	loop	0
+      delay	2
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+      
+anim death
+      loop	0
+	delay	3
+      offset	100 113
+      custentity trapd2
+	spawnframe 13 0 -34 0 0
+      jumpframe 0 0 -0.4
+      frame   data/chars/misc/trapdd1.gif
+      frame   data/chars/misc/trapdd2.gif
+      frame   data/chars/misc/trapdd3.gif
+      frame   data/chars/misc/trapdd4.gif
+      frame   data/chars/misc/trapdd5.gif
+      frame   data/chars/misc/trapdd6.gif
+      frame   data/chars/misc/trapdd7.gif
+      frame   data/chars/misc/trapdd8.gif
+      frame   data/chars/misc/trapdd9.gif
+      frame   data/chars/misc/trapdd10.gif
+      frame   data/chars/misc/trapdd11.gif
+      frame   data/chars/misc/trapdd12.gif
+      delay	100
+      frame   data/chars/misc/empty.gif
+      frame   data/chars/misc/empty.gif
+      frame   data/chars/misc/empty.gif
+
+
+      
+      
+
+

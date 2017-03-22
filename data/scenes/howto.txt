@@ -1,0 +1,6 @@
+music       data/music/ho3.bor
+animation	data/scenes/h1.gif 0 0 1 0
+animation	data/scenes/ho2.gif 0 0 1 0
+animation	data/scenes/h3.gif 0 0 1 0
+
+

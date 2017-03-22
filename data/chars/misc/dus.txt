@@ -1,0 +1,37 @@
+name	dus
+type	none
+shadow	0
+toflip 1
+lifespan 6
+
+anim idle
+	loop	0
+	delay	2
+	offset	122 185
+	frame	data/chars/misc/du01.gif
+	frame	data/chars/misc/du02.gif
+	frame	data/chars/misc/du03.gif
+	frame	data/chars/misc/du04.gif
+	frame	data/chars/misc/du05.gif
+	frame	data/chars/misc/du06.gif
+	frame	data/chars/misc/du07.gif
+	frame	data/chars/misc/du08.gif
+      frame	data/chars/misc/du09.gif
+	frame	data/chars/misc/du10.gif
+	frame	data/chars/misc/du11.gif
+	frame	data/chars/misc/du12.gif
+	frame	data/chars/misc/du13.gif
+	frame	data/chars/misc/ddu14.gif
+	frame	data/chars/misc/ddu15.gif
+	frame	data/chars/misc/ddu16.gif
+      frame	data/chars/misc/empty.gif
+
+
+
+
+
+
+
+
+
+

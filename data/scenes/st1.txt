@@ -1,0 +1,10 @@
+music           data/music/dr.bor
+animation	data/scenes/pr1.gif 0 0 1 0
+music           data/music/usasc.bor
+animation	data/scenes/st1.gif 0 0 0 1
+music           data/music/sst.bor
+animation	data/scenes/sst1.gif 0 0 0 1
+
+
+
+

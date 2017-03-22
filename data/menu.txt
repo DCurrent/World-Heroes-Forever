@@ -1,0 +1,12 @@
+renamekey   moveup    Up
+renamekey   movedown  Down
+renamekey   moveleft  Left
+renamekey   moveright Right
+renamekey attack Punch
+renamekey attack2 Kick
+renamekey special Block
+renamekey jump Jump
+#disablekey attack3
+#disablekey attack4
+
+

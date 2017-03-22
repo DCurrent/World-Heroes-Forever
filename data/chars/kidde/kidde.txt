@@ -1,0 +1,2360 @@
+name	kidde
+health	550
+speed	15
+type	enemy
+shadow  0
+throw         5 2
+paingrab 1
+grabfinish 1
+grabdistance 50
+running 30	5.2	2	1	0
+gfxshadow  1
+jumpheight 5.2
+height 70
+jumpspeed 14
+falldie 2
+nodieblink      1
+dust du
+diesound	data/chars/kidde/die.wav
+aimove chase
+thold 25
+blockodds 1
+escapehits 2
+bflash bflash
+projectilehit   enemy obstacle npc
+icon	data/chars/kidde/icon2.gif
+hostile player npc
+candamage player obstacle npc
+
+load	kb2
+load	kbb2
+load	kbu2
+load	bbflash
+
+animationscript 	data/scripts/ani0020.h
+onfallscript data/scripts/release.c
+
+palette   data/chars/kidde/idle.gif
+
+anim spawn
+      @script
+   if(frame == 65){
+      playmusic("DATA/music/brance.BOR", 1);
+   }
+   @end_script
+	loop	0
+      delay	14
+      offset	70 170
+      jumpframe 44 2 0 0 dus
+      landframe 49 dus
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/kidde/bl2.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      sound	data/sounds/block.wav
+      @cmd    spawn01 "bbflash" 0 57 1
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl2.gif
+      frame	data/chars/kidde/idle1.gif
+      delay	6
+      sound	data/sounds/air6.wav
+      frame	data/chars/kidde/aa1.gif
+      delay	7
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 90 20 1
+	frame	data/chars/kidde/aa2.gif
+      delay	6
+      frame	data/chars/kidde/aa2.gif
+	frame	data/chars/kidde/aa1.gif
+      frame	data/chars/kidde/a1.gif
+      delay	5
+      sound	data/sounds/air5.wav
+      frame	data/chars/kidde/aaa1.gif
+      delay	6
+      frame	data/chars/kidde/aaa2.gif
+      sound	data/chars/kidde/at7.wav
+      @cmd    spawn01 "flas" 90 20 1
+	frame	data/chars/kidde/aaa3.gif
+      sound	data/sounds/beat2.wav
+      delay	7
+      frame	data/chars/kidde/aaa3.gif
+      delay	5
+      frame	data/chars/kidde/aaa2.gif
+      frame	data/chars/kidde/a1.gif
+      frame	data/chars/kidde/idle.gif
+      delay	12
+      frame	data/chars/kidde/idle1.gif
+      delay	5
+	frame	data/chars/kidde/bl2.gif
+      frame	data/chars/kidde/bl3.gif
+      sound	data/sounds/block.wav
+      delay	2
+      offset	73 170
+      @cmd    spawn01 "bbflash" 0 57 1
+	frame	data/chars/kidde/bl3.gif
+      offset	70 170
+      frame	data/chars/kidde/bl3.gif
+      offset	67 170
+      frame	data/chars/kidde/bl3.gif
+      offset	70 170
+      frame	data/chars/kidde/bl3.gif
+      delay	3
+      move -3
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      move 0
+      delay	6
+      offset	70 170
+      sound	data/sounds/air6.wav
+      frame	data/chars/kidde/aa1.gif
+      delay	7
+      sound	data/sounds/beat1.wav
+      @cmd    spawn01 "flas" 94 20 1
+	frame	data/chars/kidde/aa2.gif
+      delay	6
+      frame	data/chars/kidde/aa2.gif
+	frame	data/chars/kidde/aa1.gif
+      frame	data/chars/kidde/a1.gif
+      delay	5
+      sound	data/sounds/air5.wav
+      frame	data/chars/kidde/aaa1.gif
+      delay	6
+      frame	data/chars/kidde/aaa2.gif
+      sound	data/chars/kidde/at7.wav
+      @cmd    spawn01 "flas" 94 20 1
+	frame	data/chars/kidde/aaa3.gif
+      sound	data/sounds/beat3.wav
+      delay	7
+      frame	data/chars/kidde/aaa3.gif
+      delay	5
+      frame	data/chars/kidde/aaa2.gif
+      frame	data/chars/kidde/a1.gif
+      delay	4
+      frame	data/chars/kidde/aaaaaa1.gif
+      delay	6
+      sound	data/sounds/air3.wav
+      @cmd    degravity -0.5
+	frame	data/chars/kidde/aaaaaa2.gif
+      sound	data/chars/kidde/at6.wav
+      frame	data/chars/kidde/aaaaaa3.gif
+      delay	8
+      blast  75 95 75 45 15 0 0 12
+	frame	data/chars/kidde/aaaaaa4.gif
+      blast	0 0 0 0 0 0
+      delay	7
+	frame	data/chars/kidde/aaaaaa5.gif
+      delay	40
+      frame	data/chars/kidde/aaaaaa6.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/kidde/aaaaaa7.gif
+      frame	data/chars/kidde/jl1.gif
+      delay	8
+      frame	data/chars/kidde/a1.gif
+      delay	15
+      frame	data/chars/kidde/idle1.gif
+      delay	12
+      sound	data/chars/kidde/at8.wav
+      frame	data/chars/kidde/spa0.gif
+      frame	data/chars/kidde/spa1.gif
+      frame	data/chars/kidde/spa2.gif
+      frame	data/chars/kidde/spa3.gif
+      sound	data/sounds/bea111.wav
+      frame	data/chars/kidde/spa4.gif
+      frame	data/chars/kidde/spa2.gif
+      frame	data/chars/kidde/spa3.gif
+      delay	13
+      sound	data/sounds/bea111.wav
+      frame	data/chars/kidde/spa4.gif
+      frame	data/chars/kidde/spa5.gif
+      frame	data/chars/kidde/spa4.gif
+      frame	data/chars/kidde/spa6.gif
+      delay	15
+      frame	data/chars/kidde/spa4.gif
+      delay	13
+      frame	data/chars/kidde/spa1.gif
+      delay	15
+      bbox	50 78 47 80
+      frame	data/chars/kidde/idle1.gif
+
+anim idle
+	loop	1
+	delay	15
+      offset	70 170
+      bbox	50 78 47 80
+      @cmd    clearL
+      frame	data/chars/kidde/idle.gif
+      frame	data/chars/kidde/idle1.gif
+      frame	data/chars/kidde/idle2.gif
+      frame	data/chars/kidde/idle1.gif
+
+anim walk
+	loop	1
+      delay 9
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/kidde/w1.gif
+	frame	data/chars/kidde/w2.gif
+	frame	data/chars/kidde/w3.gif
+	frame	data/chars/kidde/w4.gif
+	frame	data/chars/kidde/w5.gif
+
+anim grab
+	loop	0
+	delay	10
+	offset	75 170
+      sound	data/sounds/air5.wav
+      frame	data/chars/kidde/a1.gif
+      delay	16
+      sound	data/chars/kidde/at7.wav
+      frame	data/chars/kidde/grab1.gif
+      @cmd    anichange "ANI_FOLLOW22"
+      frame	data/chars/kidde/grab1.gif
+
+anim run
+      loop	1
+      delay	10
+      offset	70 170
+	bbox	50 78 47 80
+      frame	data/chars/kidde/ru1.gif
+      sound	data/sounds/step.wav
+	frame	data/chars/kidde/ru2.gif
+	frame	data/chars/kidde/ru3.gif
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/ru4.gif
+
+anim RUNATTACK
+      range	100 140
+      rangez -15 15
+      loop	0
+	delay	3
+      offset	70 170
+      hitflash  ffla
+      jumpframe 0 2 2.5 0 dus
+      landframe 13 dus
+      hitfx   data/sounds/beat2.wav
+      @cmd    degravity -0.27
+      frame	data/chars/kidde/aaaaaa1.gif
+      frame	data/chars/kidde/aaaaaa1.gif
+      sound	data/sounds/air3.wav
+      frame	data/chars/kidde/aaaaaa2.gif
+      frame	data/chars/kidde/aaaaaa2.gif
+      sound	data/chars/kidde/at6.wav
+     	frame	data/chars/kidde/aaaaaa3.gif
+      frame	data/chars/kidde/aaaaaa3.gif
+      blast  75 95 75 45 15 0 0 23
+      forcedirection -1
+      bbox	50 78 47 80
+      frame	data/chars/kidde/aaaaaa4.gif
+      frame	data/chars/kidde/aaaaaa4.gif
+      frame	data/chars/kidde/aaaaaa4.gif
+      frame	data/chars/kidde/aaaaaa4.gif
+      blast 0 0 0 0 0 0
+	delay	3
+	frame	data/chars/kidde/aaaaaa5.gif
+      frame	data/chars/kidde/aaaaaa5.gif
+      delay	20
+      frame	data/chars/kidde/aaaaaa6.gif
+      delay	3
+	move 4
+      @cmd    degravity 0
+	frame	data/chars/kidde/aaaaaa7.gif
+      frame	data/chars/kidde/aaaaaa7.gif
+      frame	data/chars/kidde/aaaaaa7.gif
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim BLOCK
+      loop	0
+	delay	5
+	offset	70 170
+	bbox	50 78 47 80
+	frame	data/chars/kidde/bl2.gif
+      frame	data/chars/kidde/bl3.gif
+      delay	2
+      offset	73 170
+	frame	data/chars/kidde/bl3.gif
+      offset	70 170
+      frame	data/chars/kidde/bl3.gif
+      offset	67 170
+      frame	data/chars/kidde/bl3.gif
+      offset	70 170
+      frame	data/chars/kidde/bl3.gif
+      delay	3
+      move -4
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+      frame	data/chars/kidde/bl3.gif
+
+anim grabbed
+      loop	0
+	delay	5
+	offset	70 170
+      frame	data/chars/kidde/pain1.gif
+
+anim GRABBEDWALK
+      loop	0
+	delay	5
+	offset	65 186
+      frame	data/chars/kidde/ppain1.gif
+
+anim follow1
+      loop	1
+	delay	1
+	offset	70 170
+      bbox	0 0 0 0
+      frame	data/chars/kidde/pain1.gif
+
+anim follow2
+      loop	1
+	delay	5
+	offset	70 170
+      frame	data/chars/kidde/pain1.gif
+
+anim pain
+	loop	0
+	delay	4
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/kidde/ppain1.gif
+      offset	72 170
+	frame	data/chars/kidde/ppain1.gif
+      offset	69 170
+	frame	data/chars/kidde/ppain1.gif
+      offset	71 170
+      frame	data/chars/kidde/ppain1.gif
+      offset	70 170
+      frame	data/chars/kidde/ppain1.gif
+
+anim pain2
+	loop	0
+	delay	3
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/kidde/ppain1.gif
+      offset	72 170
+	frame	data/chars/kidde/ppain1.gif
+      offset	68 170
+	frame	data/chars/kidde/ppain1.gif
+      offset	72 170
+      frame	data/chars/kidde/ppain1.gif
+      offset	70 170
+      frame	data/chars/kidde/ppain1.gif
+      delay	45
+      frame	data/chars/kidde/pain1.gif
+      frame	data/chars/kidde/pain1.gif
+
+anim pain3
+	loop	0
+      delay	5
+      offset	95 120
+      bbox	40 85 100 35
+	frame	data/chars/kidde/fall04.gif
+
+anim pain4
+	loop	0
+      delay	5
+      offset	95 120
+	frame	data/chars/kidde/fall04.gif
+
+anim pain12
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+	frame	data/chars/kidde/pain1.gif
+      offset	72 170
+	frame	data/chars/kidde/pain1.gif
+      offset	68 170
+	frame	data/chars/kidde/pain1.gif
+      offset	72 170
+      frame	data/chars/kidde/pain1.gif
+      offset	70 170
+      frame	data/chars/kidde/pain1.gif
+      delay	3
+      move -4
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+
+anim pain13
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      move -4
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/ppain1.gif
+
+anim bpain
+	loop	0
+	delay	2
+	offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/bur.wav
+      @cmd    spawnbind "EEFlame" -12 41 1
+	frame	data/chars/kidde/bpain04.gif
+      offset	72 170
+	frame	data/chars/kidde/bpain04.gif
+      offset	68 170
+	frame	data/chars/kidde/bpain4.gif
+      offset	72 170
+      frame	data/chars/kidde/bpain4.gif
+      offset	70 170
+      frame	data/chars/kidde/bpain4.gif
+      delay	3
+      move -4
+      frame	data/chars/kidde/bpain02.gif
+      frame	data/chars/kidde/bpain02.gif
+      frame	data/chars/kidde/bpain2.gif
+      frame	data/chars/kidde/bpain2.gif
+      frame	data/chars/kidde/bpain02.gif
+      frame	data/chars/kidde/bpain02.gif
+      frame	data/chars/kidde/bpain2.gif
+      frame	data/chars/kidde/bpain2.gif
+
+anim pain7
+	loop	0
+	delay	4
+	offset	70 170
+	frame	data/chars/kidde/ppain1.gif
+      offset	72 170
+	frame	data/chars/kidde/ppain1.gif
+      offset	69 170
+	frame	data/chars/kidde/ppain1.gif
+      offset	71 170
+      frame	data/chars/kidde/ppain1.gif
+      offset	70 170
+      frame	data/chars/kidde/ppain1.gif
+      frame	data/chars/kidde/pain1.gif
+      frame	data/chars/kidde/pain1.gif
+      frame	data/chars/kidde/pain1.gif
+      frame	data/chars/kidde/pain1.gif
+
+anim fall
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/kidde/fall01.gif 
+	frame	data/chars/kidde/fall01.gif
+      attack  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      bbox	55 78 80 57
+	frame	data/chars/kidde/fall02.gif
+	frame	data/chars/kidde/fall02.gif
+      delay   20
+      bbox	65 90 70 40
+	frame	data/chars/kidde/fall03.gif
+	frame	data/chars/kidde/fall03.gif
+      delay   10
+      offset	100 120
+      bbox	40 90 55 30
+      @cmd    degravity 0
+	frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/kidde/fall05.gif
+
+anim fall4
+      loop	0
+      delay   2
+	offset	70 170
+      move -4
+      @cmd    degravity -0.27
+      frame	data/chars/kidde/pain2.gif
+      frame	data/chars/kidde/pain2.gif
+      frame	data/chars/kidde/pain2.gif
+      delay   2
+      move -5
+      offset	110 128
+      sound	data/sounds/fall.wav
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu4.gif
+      frame	data/chars/kidde/ruu4.gif
+      frame	data/chars/kidde/ruu4.gif
+      move -4
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu3.gif
+      bbox	62 75 60 45
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu4.gif
+      frame	data/chars/kidde/ruu4.gif
+      frame	data/chars/kidde/ruu4.gif
+      move -3
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      @cmd    degravity 0
+      offset	100 120
+      bbox	40 90 55 30
+      frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      attack10  0 0 0 0 0 0
+	frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      move -3
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      move 0
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      move 0
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      move 0
+      delay   80
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      
+
+anim fall6
+      loop	0
+      delay   1000
+	offset	75 170
+      @cmd    degravity 0
+      frame	data/chars/kidde/dsla1.gif
+	frame	data/chars/kidde/dsla2.gif
+	frame	data/chars/kidde/dsla3.gif
+      frame	data/chars/kidde/sla2.gif
+      offset	123 140
+      sound	data/sounds/fall.wav
+      frame	data/chars/kidde/sla3.gif
+      offset	125 120
+      frame	data/chars/kidde/sla2.gif
+      offset	70 170
+      frame	data/chars/kidde/pain1.gif
+      offset	83 140
+      frame	data/chars/kidde/sla1.gif
+      frame	data/chars/kidde/sla2.gif
+      frame	data/chars/kidde/rjsla3.gif
+      offset	75 150
+      frame	data/chars/kidde/rjsla4.gif
+      frame	data/chars/kidde/rjsla5.gif
+      offset	95 170
+      frame	data/chars/kidde/ffall01.gif
+      frame	data/chars/kidde/ffall04.gif
+      frame	data/chars/kidde/ffall05.gif
+      frame	data/chars/kidde/rj0.gif
+      offset	108 173
+      frame	data/chars/kidde/rj00.gif
+      offset	108 166
+      frame	data/chars/kidde/gsla2.gif
+      offset	104 170
+      frame	data/chars/kidde/gfall04.gif
+      frame	data/chars/kidde/gfall05.gif
+      offset	128 181
+      frame	data/chars/kidde/pain11.gif
+      offset	124 170
+      frame	data/chars/kidde/dsla22.gif
+	frame	data/chars/kidde/dsla33.gif
+      offset	75 150
+      frame	data/chars/kidde/rjsla7.gif
+      offset	70 170
+      frame	data/chars/kidde/ppain1.gif
+
+anim fall7
+      loop	0
+      delay   1000
+	offset	85 145
+      @cmd    degravity 0
+      frame	data/chars/kidde/sla1.gif
+      offset	112 145
+	frame	data/chars/kidde/sla2.gif
+      offset	90 145
+	frame	data/chars/kidde/sla3.gif
+      frame	data/chars/kidde/sla4.gif
+      sound	data/sounds/fall.wav
+      offset	75 170
+      frame	data/chars/kidde/ffall04.gif
+      offset	85 145
+      frame	data/chars/kidde/sla1.gif
+      frame	data/chars/kidde/sla1.gif
+      offset	98 138
+      frame	data/chars/kidde/ssla3.gif
+      frame	data/chars/kidde/rjsla3.gif
+      frame	data/chars/kidde/rjsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/kidde/rjsla4.gif
+      frame	data/chars/kidde/rjsla5.gif
+      frame	data/chars/kidde/rjsla6.gif
+      frame	data/chars/kidde/sla1.gif
+      frame	data/chars/kidde/sla1.gif
+      frame	data/chars/kidde/ssla3.gif
+      frame	data/chars/kidde/sla2.gif
+      offset	123 170
+      frame	data/chars/kidde/sla3.gif
+      offset	98 138
+      frame	data/chars/kidde/hsla1.gif
+      frame	data/chars/kidde/hsla2.gif
+      frame	data/chars/kidde/hsla3.gif
+      frame	data/chars/kidde/hsla2.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/kidde/hsla2.gif
+      frame	data/chars/kidde/hsla4.gif
+      frame	data/chars/kidde/rj1.gif
+      frame	data/chars/kidde/gsla3.gif
+      frame	data/chars/kidde/rj3.gif
+      frame	data/chars/kidde/hsla4.gif
+      offset	98 148
+      frame	data/chars/kidde/hsla4.gif
+      offset	124 170
+      frame	data/chars/kidde/pain11.gif
+      frame	data/chars/kidde/ppain11.gif
+      offset	70 170
+      frame	data/chars/kidde/pain1.gif
+      offset	125 170
+      frame	data/chars/kidde/pain11.gif
+      frame	data/chars/kidde/pain22.gif
+      offset	100 140
+      frame	data/chars/kidde/fall066.gif
+      offset	70 170
+      frame	data/chars/kidde/pain2.gif
+      offset	105 85
+      frame	data/chars/kidde/dsla3.gif
+      offset	70 170
+      frame	data/chars/kidde/pain1.gif
+      offset	75 170
+      frame	data/chars/kidde/sla5.gif
+
+anim fall8
+      loop	0
+      delay   1000
+      @cmd    degravity 0
+	offset	85 145
+      frame	data/chars/kidde/gsla1.gif
+      offset	112 145
+	frame	data/chars/kidde/gsla2.gif
+      offset	90 145
+	frame	data/chars/kidde/gsla3.gif
+      frame	data/chars/kidde/gsla4.gif
+      sound	data/sounds/fall.wav
+      frame	data/chars/kidde/gsla6.gif
+      offset	115 170
+      frame	data/chars/kidde/dsla1.gif
+      offset	115 145
+	frame	data/chars/kidde/gsla3.gif
+      offset	70 170
+      frame	data/chars/kidde/pain1.gif
+      offset	105 170
+      frame	data/chars/kidde/gfall04.gif
+      offset	75 148
+      frame	data/chars/kidde/rjsla4.gif
+      frame	data/chars/kidde/rjsla5.gif
+      offset	95 170
+      frame	data/chars/kidde/ffall04.gif
+      offset	75 143
+      frame	data/chars/kidde/hsla2.gif
+      frame	data/chars/kidde/hsla4.gif
+      offset	129 170
+      frame	data/chars/kidde/pain1.gif
+      offset	95 170
+      frame	data/chars/kidde/ffall01.gif
+      frame	data/chars/kidde/ffall02.gif
+      frame	data/chars/kidde/ffall03.gif
+      frame	data/chars/kidde/ffall04.gif
+      frame	data/chars/kidde/ffall05.gif
+      offset	104 170
+      frame	data/chars/kidde/gsla2.gif
+      frame	data/chars/kidde/gsla3.gif
+      frame	data/chars/kidde/gsla4.gif
+      frame	data/chars/kidde/gfall04.gif
+      frame	data/chars/kidde/gfall05.gif
+      offset	70 165
+      frame	data/chars/kidde/pain2.gif
+      offset	75 165
+      frame	data/chars/kidde/dsla2.gif
+
+anim fall9
+	loop	0
+      delay   20
+	offset	110 138
+      bbox	65 90 70 40
+      landframe 3
+      @cmd    degravity -0.27
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/kidde/fall03.gif
+      frame	data/chars/kidde/fall03.gif
+      offset	100 120
+      bbox	40 90 55 30
+      delay   100
+      frame	data/chars/kidde/fall04.gif
+      delay   2
+      @cmd    degravity 0
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/kidde/fall05.gif
+
+anim fall17
+	loop	0
+      delay   20
+	offset	110 138
+      bbox	65 90 70 40
+      landframe 3
+      @cmd    degravity -0.27
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/kidde/fall03.gif
+      frame	data/chars/kidde/fall03.gif
+      offset	100 120
+      bbox	40 90 55 30
+      delay   100
+      frame	data/chars/kidde/fall04.gif
+      delay   2
+      @cmd    degravity 0
+	frame	data/chars/kidde/fall05.gif
+
+anim fall5
+	loop	0
+      delay   8
+      bbox	55 78 47 80
+      landframe 6
+      offset	123 170
+      attack10  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      forcedirection -1
+      @cmd    degravity -0.27
+      frame	data/chars/kidde/sla3.gif
+      frame	data/chars/kidde/sla3.gif
+      delay   10
+      offset	113 138
+      bbox	55 78 80 57
+      frame	data/chars/kidde/fall02.gif
+      frame	data/chars/kidde/fall02.gif
+      delay   20
+      bbox	65 90 70 40
+	frame	data/chars/kidde/fall03.gif
+      delay   500
+      frame	data/chars/kidde/fall03.gif
+      offset	100 120
+      delay   10
+      bbox	40 90 55 30
+      @cmd    degravity 0
+      frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/kidde/fall05.gif
+
+
+anim fall10
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      attack  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+      @cmd    degravity 0
+	frame	data/chars/kidde/fall01.gif
+	frame	data/chars/kidde/fall01.gif
+	frame	data/chars/kidde/fall02.gif
+	frame	data/chars/kidde/fall02.gif
+      delay   20
+	frame	data/chars/kidde/fall03.gif
+	frame	data/chars/kidde/fall03.gif
+      delay   10
+      offset	100 120
+	frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/kidde/fall05.gif
+
+anim fall3
+	loop	0
+      delay	9
+      offset	100 120
+      bbox	40 90 100 35
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+	frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall05.gif
+
+anim follow8
+	loop	0
+      delay   80
+	offset	100 120
+      bbox	40 90 100 35
+      @cmd    degravity 0
+	frame	data/chars/kidde/fall05.gif
+
+anim fall15
+	loop	0
+      delay   10
+	offset	110 170
+      landframe 6
+      @cmd    degravity -0.27
+	frame	data/chars/kidde/fall01.gif
+	attack  35 85 50 50 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/kidde/fall01.gif
+	frame	data/chars/kidde/fall02.gif
+	frame	data/chars/kidde/fall02.gif
+      delay   20
+	frame	data/chars/kidde/fall03.gif
+	frame	data/chars/kidde/fall03.gif
+      delay   10
+      offset	100 120
+      @cmd    degravity 0
+	frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/kidde/fall05.gif
+
+anim fall16
+	loop	0
+      delay   4
+      offset	70 170
+      landframe 25
+      @cmd    degravity 0
+      @cmd    spawnbind "elect" 0 0 1
+	frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif 
+	frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif
+      frame	data/chars/kidde/ppain2.gif
+      frame	data/chars/kidde/ppain22.gif
+      frame	data/chars/kidde/ppain2.gif
+	delay   40
+	frame	data/chars/kidde/ppain22.gif
+      delay   10
+      offset	100 120
+	bbox	40 90 55 30
+	frame	data/chars/kidde/fall04.gif
+	frame	data/chars/kidde/fall04.gif
+	delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/kidde/fall04.gif
+
+anim burn
+	loop	0
+      delay   6
+	offset	110 170
+      landframe 15
+      sound	data/sounds/bur.wav
+      @cmd    degravity -0.27
+      @cmd    spawnbind "EFlame" -16 47 1
+      frame	data/chars/kidde/burn01.gif
+	frame	data/chars/kidde/burn1.gif
+      frame	data/chars/kidde/burn01.gif
+	frame	data/chars/kidde/burn1.gif
+	attack  45 100 20 30 5 1 1 1
+      dropv 2 1.5
+	frame	data/chars/kidde/burn02.gif
+	frame	data/chars/kidde/burn2.gif
+      frame	data/chars/kidde/burn02.gif
+	frame	data/chars/kidde/burn2.gif
+      frame	data/chars/kidde/burn03.gif
+      frame	data/chars/kidde/burn3.gif
+	frame	data/chars/kidde/burn03.gif
+      frame	data/chars/kidde/burn3.gif
+      frame	data/chars/kidde/burn03.gif
+      frame	data/chars/kidde/burn3.gif
+      delay   40
+	frame	data/chars/kidde/burn03.gif
+      offset	100 120
+      delay   7
+      @cmd    degravity 0
+      bbox	40 90 55 30
+	frame	data/chars/kidde/burn4.gif
+      frame	data/chars/kidde/burn04.gif
+      frame	data/chars/kidde/fall04.gif
+      delay   2
+      @cmd    anichange "ANI_FOLLOW8"
+	frame	data/chars/kidde/fall05.gif
+
+anim rise
+	loop	0
+	offset	100 120
+      delay	15
+      frame	data/chars/kidde/fall05.gif
+      delay	8
+      offset	100 170
+	frame	data/chars/kidde/rise1.gif
+	frame	data/chars/kidde/rise2.gif
+      delay	4
+	frame	data/chars/kidde/rise3.gif
+	frame	data/chars/kidde/rise4.gif
+      delay	7
+      offset	70 170
+      frame	data/chars/kidde/j1.gif
+	
+anim  follow21
+      loop	0
+      delay	11
+      offset	70 170
+      bbox	50 78 47 80
+      followcond 2
+      followanim 22
+      attackone 1
+      hitfx   data/sounds/go.wav
+      frame	data/chars/kidde/a1.gif
+      attack  80 90 50 40 0 0 1 1 20
+      forcedirection -1
+      nokill 1
+      frame	data/chars/kidde/grab1.gif
+      delay	8
+      frame	data/chars/kidde/aa1.gif
+      frame	data/chars/kidde/a1.gif
+
+anim  follow22
+      loop	0
+	delay	10
+      offset	70 170
+      attackone 0
+      @cmd    slamstart4
+      @cmd    position 1 50 0 -1 0
+      frame	data/chars/kidde/grab1.gif
+      @cmd    position 1 37 10 -1 0
+      frame	data/chars/kidde/th0.gif
+      @cmd    position 1 20 41 -1 0
+      frame	data/chars/kidde/thu1.gif
+      delay	8
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      frame	data/chars/kidde/thu2.gif
+      delay	2
+      @cmd    hurt 4
+      @cmd    position 19 20 37 -1 0
+      frame	data/chars/kidde/thu3.gif
+      sound	data/sounds/bea111.wav
+      frame	data/chars/kidde/thu3.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    hurt 4
+      @cmd    position 19 20 37 -1 0
+      frame	data/chars/kidde/thu3.gif
+      sound	data/sounds/bea111.wav
+      frame	data/chars/kidde/thu3.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    hurt 4
+      @cmd    position 19 20 37 -1 0
+      frame	data/chars/kidde/thu3.gif
+      sound	data/sounds/bea111.wav
+      frame	data/chars/kidde/thu3.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    hurt 4
+      @cmd    position 19 20 37 -1 0
+      frame	data/chars/kidde/thu3.gif
+      sound	data/sounds/bea111.wav
+      frame	data/chars/kidde/thu3.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    hurt 4
+      @cmd    position 19 20 37 -1 0
+      frame	data/chars/kidde/thu3.gif
+      sound	data/sounds/bea111.wav
+      frame	data/chars/kidde/thu3.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu4.gif
+      @cmd    hurt 4
+      @cmd    position 19 20 37 -1 0
+      frame	data/chars/kidde/thu3.gif
+      sound	data/sounds/bea111.wav
+      frame	data/chars/kidde/thu3.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 20 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      @cmd    position 1 24 35 -1 0
+      frame	data/chars/kidde/thu2.gif
+      delay	4
+      @cmd    depost 0
+      @cmd    finish 1 1 -1.5 1.5 0 0
+      frame	data/chars/kidde/thu2.gif
+      frame	data/chars/kidde/thu2.gif
+
+anim attack1
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
+      }
+    }
+@end_script
+      loop	0
+      range 10 90
+	delay	6
+      followcond 1
+      followanim 7
+      offset	70 170
+      bbox	50 78 47 80
+      sound	data/sounds/air6.wav
+      frame	data/chars/kidde/aa1.gif
+      delay	7
+      attack  75 85 79 40 5 0
+	frame	data/chars/kidde/aa2.gif
+      attack  0 0 0 0 0 0
+      delay	6
+      frame	data/chars/kidde/aa2.gif
+	frame	data/chars/kidde/aa1.gif
+      frame	data/chars/kidde/a1.gif
+
+anim  follow7   
+      loop	0
+	delay	6
+      followcond 1
+      followanim 15
+      offset	70 170
+      bbox	50 78 47 80
+      hitfx   data/sounds/beat3.wav
+      frame	data/chars/kidde/aa2.gif
+      frame	data/chars/kidde/aa2.gif
+	frame	data/chars/kidde/aa1.gif
+      frame	data/chars/kidde/a1.gif
+      delay	5
+      sound	data/sounds/air5.wav
+      frame	data/chars/kidde/aaa1.gif
+      delay	6
+      frame	data/chars/kidde/aaa2.gif
+      sound	data/chars/kidde/at7.wav
+      attack  75 85 89 40 10 0
+	frame	data/chars/kidde/aaa3.gif
+      delay	7
+      attack  0 0 0 0 0 0
+      frame	data/chars/kidde/aaa3.gif
+      delay	5
+      frame	data/chars/kidde/aaa2.gif
+      frame	data/chars/kidde/a1.gif
+
+anim follow15
+      loop	0
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      hitflash  ffla
+      jumpframe 5 2 0 0 dus
+      landframe 10 dus
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/kidde/aaa3.gif
+      delay	7
+      frame	data/chars/kidde/aaa3.gif
+      delay	5
+      frame	data/chars/kidde/aaa2.gif
+      frame	data/chars/kidde/a1.gif
+      delay	4
+      frame	data/chars/kidde/aaaaaa1.gif
+      delay	6
+      sound	data/sounds/air3.wav
+      @cmd    degravity -0.5
+	frame	data/chars/kidde/aaaaaa2.gif
+      sound	data/chars/kidde/at6.wav
+      frame	data/chars/kidde/aaaaaa3.gif
+      delay	8
+      blast  75 95 75 45 15 0 0 12
+	frame	data/chars/kidde/aaaaaa4.gif
+      blast	0 0 0 0 0 0
+      delay	7
+	frame	data/chars/kidde/aaaaaa5.gif
+      delay	40
+      frame	data/chars/kidde/aaaaaa6.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity 0
+      frame	data/chars/kidde/aaaaaa7.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim follow9
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW23"));
+      }
+    }
+@end_script
+      loop	0
+      delay   8
+      offset	70 170
+      jumpframe 1 5.2 -2 1 dus
+      landframe 14 dus
+      frame	data/chars/kidde/j1.gif
+      @cmd    degravity -0.5
+      delay   5
+      sound	data/sounds/jump.wav
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      bbox	55 75 40 40
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf4.gif
+      frame	data/chars/kidde/jf3.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf2.gif
+      @cmd    riseattack2 140 20 "ANI_FOLLOW10"
+      frame	data/chars/kidde/jf1.gif
+      delay   40
+      frame	data/chars/kidde/jf1.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim follow23
+      loop	0
+      delay   8
+      offset	70 170
+      jumpframe 1 5.2 -2 -1 dus
+      landframe 14 dus
+      frame	data/chars/kidde/j1.gif
+      @cmd    degravity -0.5
+      delay   5
+      sound	data/sounds/jump.wav
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      bbox	55 75 40 40
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf4.gif
+      frame	data/chars/kidde/jf3.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf2.gif
+      @cmd    riseattack2 140 20 "ANI_FOLLOW10"
+      frame	data/chars/kidde/jf1.gif
+      delay   40
+      frame	data/chars/kidde/jf1.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim follow10
+      loop	0
+	delay	6
+      offset	70 170
+      bbox	50 68 47 52
+      jumpframe 0 0 -1.5
+      landframe 10 dus
+      @cmd    degravity -0.5
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/kidde/jf6.gif
+      delay	4
+      sound	data/chars/kidde/at6.wav
+      frame	data/chars/kidde/jaf1.gif
+      frame	data/chars/kidde/jaf1.gif
+      attack  75 103 68 32 12 1 0 0 35
+      frame	data/chars/kidde/jaf2.gif
+      frame	data/chars/kidde/jaf2.gif
+      frame	data/chars/kidde/jaf2.gif
+      frame	data/chars/kidde/jaf2.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/kidde/jaf1.gif
+      delay	40
+      bbox	50 68 47 62
+      frame	data/chars/kidde/j7.gif
+      delay   4
+      bbox	50 68 47 80
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim attack2
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%20;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW13"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW14"));
+      }
+    }
+@end_script
+      loop	0
+      range 120 150
+      loop	0
+	delay	8
+      offset	70 170
+      followcond 1
+      followanim 11
+      otg 1
+      hitfx   data/sounds/go.wav
+      landframe 18 du
+      sound	data/chars/kidde/at4.wav
+      frame	data/chars/kidde/fsk1.gif
+      delay	7
+      frame	data/chars/kidde/fsk2.gif
+      delay	2
+      move 7
+      sound	data/sounds/air3.wav
+      frame	data/chars/kidde/fsk3.gif
+      offset	70 171
+      attack  80 70 25 100 2 0 1 1
+      noreflect 1
+      nokill 1
+      frame	data/chars/kidde/fsk3.gif
+      offset	70 172
+      frame	data/chars/kidde/fsk3.gif
+      attack  0 0 0 0 0 0
+      offset	70 173
+      frame	data/chars/kidde/fsk3.gif
+      offset	70 174
+      frame	data/chars/kidde/fsk4.gif
+      offset	70 175
+      frame	data/chars/kidde/fsk4.gif
+      offset	70 176
+      frame	data/chars/kidde/fsk4.gif
+      frame	data/chars/kidde/fsk4.gif
+      offset	127 176
+      frame	data/chars/kidde/fsk5.gif
+      offset	127 175
+      frame	data/chars/kidde/fsk5.gif
+      @cmd    anichange "ANI_FOLLOW12"
+      offset	127 174
+      frame	data/chars/kidde/fsk5.gif
+      move 5
+      offset	127 172
+      attack3 95 60 70 65 14 0 0 0 45
+      dropv 2 2.5
+      forcedirection -1
+      frame	data/chars/kidde/fsk6.gif
+      attack3  0 0 0 0 0 0
+      offset	75 170
+      move 2
+      frame	data/chars/kidde/fsk7.gif
+      attack  75 105 60 60 21 1 0 0 40
+      dropv 1.5 2.5
+      forcedirection -1
+      move 0
+      @cmd    spawn01 "du" 10 0 1
+      frame	data/chars/kidde/fsk7.gif
+      delay	3
+      frame	data/chars/kidde/fsk8.gif
+      frame	data/chars/kidde/fsk9.gif
+      attack  0 0 0 0 0 0
+      delay	10
+      frame	data/chars/kidde/fsk10.gif
+      frame	data/chars/kidde/fall055.gif
+      delay	7
+      offset	100 170
+	frame	data/chars/kidde/rise1.gif
+	frame	data/chars/kidde/rise2.gif
+      delay	3.5
+	frame	data/chars/kidde/rise3.gif
+	frame	data/chars/kidde/rise4.gif
+      delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/kidde/j1.gif
+
+anim follow11
+      loop	0
+      otg 1
+      quakeframe 12 3 4
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      delay	3
+      move 3
+      offset	70 172
+      frame	data/chars/kidde/fsk3.gif
+      delay	2
+      offset	70 173
+      frame	data/chars/kidde/fsk3.gif
+      offset	70 174
+      frame	data/chars/kidde/fsk4.gif
+      offset	70 175
+      frame	data/chars/kidde/fsk4.gif
+      offset	70 176
+      frame	data/chars/kidde/fsk4.gif
+      frame	data/chars/kidde/fsk4.gif
+      offset	127 176
+      frame	data/chars/kidde/fsk5.gif
+      offset	127 175
+      frame	data/chars/kidde/fsk5.gif
+      @cmd    anichange "ANI_FOLLOW10"
+      offset	127 174
+      frame	data/chars/kidde/fsk5.gif
+      move 2
+      offset	127 172
+      attack3 90 60 75 85 14 0 0 0 45
+      dropv 2 2.5
+      forcedirection -1
+      frame	data/chars/kidde/fsk6.gif
+      attack3  0 0 0 0 0 0
+      offset	75 170
+      move 2
+      sound	data/sounds/indirect.wav
+      frame	data/chars/kidde/fsk7.gif
+      attack  75 105 60 60 21 1 0 0 40
+      dropv 1.5 2.5
+      forcedirection -1
+      move 0
+      @cmd    spawn01 "du" 10 0 1
+      frame	data/chars/kidde/fsk7.gif
+      delay	3
+      frame	data/chars/kidde/fsk8.gif
+      frame	data/chars/kidde/fsk9.gif
+      attack  0 0 0 0 0 0
+      delay	10
+      frame	data/chars/kidde/fsk10.gif
+      frame	data/chars/kidde/fall055.gif
+      delay	7
+      offset	100 170
+	frame	data/chars/kidde/rise1.gif
+	frame	data/chars/kidde/rise2.gif
+      delay	3.5
+	frame	data/chars/kidde/rise3.gif
+	frame	data/chars/kidde/rise4.gif
+      delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/kidde/j1.gif
+
+anim follow12
+      loop	0
+      offset	127 174
+      otg 1
+      quakeframe 4 3 4
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      delay	2
+      move 7
+      frame	data/chars/kidde/fsk5.gif
+      move 5
+      offset	127 172
+      attack3 95 60 70 65 14 0 0 0 45
+      dropv 2 2.5
+      forcedirection -1
+      frame	data/chars/kidde/fsk6.gif
+      attack3  0 0 0 0 0 0
+      offset	75 170
+      move 2
+      sound	data/sounds/indirect.wav
+      frame	data/chars/kidde/fsk7.gif
+      attack  75 105 60 60 21 1 0 0 40
+      dropv 1.5 2.5
+      forcedirection -1
+      move 0
+      @cmd    spawn01 "du" 10 0 1
+      frame	data/chars/kidde/fsk7.gif
+      delay	3
+      frame	data/chars/kidde/fsk8.gif
+      frame	data/chars/kidde/fsk9.gif
+      attack  0 0 0 0 0 0
+      delay	10
+      frame	data/chars/kidde/fsk10.gif
+      frame	data/chars/kidde/fall055.gif
+      delay	7
+      offset	100 170
+	frame	data/chars/kidde/rise1.gif
+	frame	data/chars/kidde/rise2.gif
+      delay	3.5
+	frame	data/chars/kidde/rise3.gif
+	frame	data/chars/kidde/rise4.gif
+      delay	7
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/kidde/j1.gif
+
+anim  follow13
+      loop	0
+      delay   8
+      offset	70 170
+      jumpframe 1 5.2 2 -0.5 dus
+      landframe 14 dus
+      bbox	50 68 47 80
+      frame	data/chars/kidde/j1.gif
+      @cmd    degravity -0.5
+      delay   5
+      sound	data/sounds/jump.wav
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      bbox	55 75 40 40
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf3.gif
+      frame	data/chars/kidde/jf4.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf5.gif
+      @cmd    riseattack2 140 20 "ANI_FOLLOW6"
+      frame	data/chars/kidde/jf6.gif
+      delay   40
+      frame	data/chars/kidde/jf6.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim  follow14
+      loop	0
+      delay   8
+      offset	70 170
+      jumpframe 1 5.2 2 0.5 dus
+      landframe 14 dus
+      bbox	50 68 47 80
+      frame	data/chars/kidde/j1.gif
+      @cmd    degravity -0.5
+      delay   5
+      sound	data/sounds/jump.wav
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      bbox	55 75 40 40
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf3.gif
+      frame	data/chars/kidde/jf4.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf5.gif
+      @cmd    riseattack2 140 20 "ANI_FOLLOW6"
+      frame	data/chars/kidde/jf6.gif
+      delay   40
+      frame	data/chars/kidde/jf6.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim attack3
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+      if( r > 10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW5"));
+      }
+    }
+@end_script
+	loop	0
+      range 210 300
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/kidde/fsp2.gif
+      delay	2.5
+      sound	data/chars/kidde/at1.wav
+      frame	data/chars/kidde/fsp3.gif
+      frame	data/chars/kidde/fsp5.gif
+      frame	data/chars/kidde/fsp6.gif
+      frame	data/chars/kidde/fsp4.gif
+      frame	data/chars/kidde/fsp6.gif
+      frame	data/chars/kidde/fsp4.gif
+      frame	data/chars/kidde/fsp6.gif
+      delay	5
+      frame	data/chars/kidde/fsp7.gif
+      delay	2.5
+      frame	data/chars/kidde/fsp8.gif
+      frame	data/chars/kidde/fsp9.gif
+      delay	6
+      @cmd  shoot "kbb2" 0 1 -1
+      frame	data/chars/kidde/fsp10.gif
+      delay	19
+      frame	data/chars/kidde/fsp10.gif
+
+anim  follow4
+	loop	0
+	delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      custknife kb2
+	throwframe 3 1
+      frame	data/chars/kidde/fsp1.gif
+      delay	18
+      sound	data/chars/kidde/at3.wav
+      frame	data/chars/kidde/fsp4.gif
+      delay	5
+      frame	data/chars/kidde/fspp5.gif
+      frame	data/chars/kidde/fspp6.gif
+      delay	25
+      frame	data/chars/kidde/fsp10.gif
+
+anim  follow5
+      loop	0
+      delay   8
+      offset	70 170
+      jumpframe 1 5.2 2 0 dus
+      landframe 14 dus
+      bbox	50 68 47 80
+      frame	data/chars/kidde/j1.gif
+      @cmd    degravity -0.5
+      delay   5
+      sound	data/sounds/jump.wav
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      bbox	55 75 40 40
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf1.gif
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf3.gif
+      frame	data/chars/kidde/jf4.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf5.gif
+      @cmd    riseattack2 140 20 "ANI_FOLLOW6"
+      frame	data/chars/kidde/jf6.gif
+      delay   40
+      frame	data/chars/kidde/jf6.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim follow6
+      loop	0
+	delay	6
+      offset	70 170
+      bbox	50 68 47 52
+      jumpframe 0 0 2
+      landframe 10 dus
+      @cmd    degravity -0.5
+      hitfx   data/sounds/beat2.wav
+      sound	data/sounds/air5.wav
+      frame	data/chars/kidde/jf6.gif
+      delay	4
+      sound	data/chars/kidde/at6.wav
+      frame	data/chars/kidde/jaf1.gif
+      frame	data/chars/kidde/jaf1.gif
+      attack  75 103 68 32 12 1 0 0 35
+      frame	data/chars/kidde/jaf2.gif
+      frame	data/chars/kidde/jaf2.gif
+      frame	data/chars/kidde/jaf2.gif
+      frame	data/chars/kidde/jaf2.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/kidde/jaf1.gif
+      delay	40
+      bbox	50 68 47 62
+      frame	data/chars/kidde/j7.gif
+      delay   4
+      bbox	50 68 47 80
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim attack4
+      loop	0
+      range 160 180
+      rangez -50 -10
+	delay	6
+      offset	70 170
+      bbox	50 68 47 80
+      jumpframe 1 6.2 0 0 dus
+      landframe 16 dus
+      frame	data/chars/kidde/j1.gif
+      delay	4
+      @cmd    degravity -0.5
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j3.gif
+      frame	data/chars/kidde/j3.gif
+      frame	data/chars/kidde/j4.gif
+      frame	data/chars/kidde/j4.gif
+      @cmd    anichange "ANI_FOLLOW18"
+      frame	data/chars/kidde/j5.gif
+      frame	data/chars/kidde/j6.gif
+      frame	data/chars/kidde/j6.gif
+      frame	data/chars/kidde/j7.gif
+      frame	data/chars/kidde/j8.gif
+      delay   40
+      frame	data/chars/kidde/j8.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim follow18
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 22);
+    }
+@end_script
+      loop	0
+	delay	10
+      offset	70 170
+      otg 1
+      followcond 2
+      followanim 19
+      jumpframe 2 0 5 -1.5
+      landframe 33
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/kidde/at99.wav
+      frame	data/chars/kidde/fskk1.gif
+      delay	12
+      frame	data/chars/kidde/fskk2.gif
+      bbox	50 68 47 52
+      delay	2
+      attack	80 121 58 26 20 1 0 0 28
+      @cmd    degravity -4.5
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      bbox	0 0 0 0
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/kidde/fskk3.gif
+      delay	10
+      frame	data/chars/kidde/fskk3.gif
+      bbox	0 0 0 0
+      delay	2
+      move 5
+      @cmd    degravity -0.27
+      attack9 85 150 53 20 20 1 0 0 28
+      dropv 1 0
+      frame	data/chars/kidde/fskk9.gif
+      attack9 0 0 0 0 0 0
+      frame	data/chars/kidde/fskk8.gif
+      move 5
+      sound	data/sounds/step.wav
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/kidde/j1.gif
+      move 4
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      bbox	50 78 47 80
+      frame	data/chars/kidde/j1.gif
+      move 3
+      frame	data/chars/kidde/j1.gif
+      move 0
+      delay	4
+      frame	data/chars/kidde/jl1.gif
+
+anim follow19
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 110);
+    }
+@end_script
+      loop	0
+	delay	14
+      offset	70 170
+      jumpframe 2 3 -1.5
+      landframe 10 dus
+      quakeframe 1 3 4
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      attack	75 111 63 32 20 1 0 0 28
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk5.gif
+      attack  0 0 0 0 0 0
+      delay	5
+      offset	70 170
+      @cmd    degravity -0.27
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf4.gif
+      frame	data/chars/kidde/jf3.gif
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf1.gif
+      delay	40
+      frame	data/chars/kidde/jf1.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/kidde/jl1.gif
+      bbox	50 78 47 80
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+
+anim attack5
+      loop	0
+      range 160 180
+      rangez 10 50
+      delay	6
+      offset	70 170
+      bbox	50 68 47 80
+      jumpframe 1 6.2 0 0 dus
+      landframe 16 dus
+      frame	data/chars/kidde/j1.gif
+      delay	4
+      @cmd    degravity -0.5
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j2.gif
+      frame	data/chars/kidde/j3.gif
+      frame	data/chars/kidde/j3.gif
+      frame	data/chars/kidde/j4.gif
+      frame	data/chars/kidde/j4.gif
+      @cmd    anichange "ANI_FOLLOW20"
+      frame	data/chars/kidde/j5.gif
+      frame	data/chars/kidde/j6.gif
+      frame	data/chars/kidde/j6.gif
+      frame	data/chars/kidde/j7.gif
+      frame	data/chars/kidde/j8.gif
+      delay   40
+      frame	data/chars/kidde/j8.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim follow20
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 22);
+    }
+@end_script
+      loop	0
+	delay	10
+      offset	70 170
+      otg 1
+      followcond 2
+      followanim 19
+      jumpframe 2 0 5 1.5
+      landframe 33
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/kidde/at99.wav
+      frame	data/chars/kidde/fskk1.gif
+      delay	12
+      frame	data/chars/kidde/fskk2.gif
+      bbox	50 68 47 52
+      delay	2
+      attack	80 121 58 26 20 1 0 0 28
+      @cmd    degravity -4.5
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      bbox	0 0 0 0
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/kidde/fskk3.gif
+      delay	10
+      frame	data/chars/kidde/fskk3.gif
+      bbox	0 0 0 0
+      delay	2
+      move 5
+      @cmd    degravity -0.27
+      attack9 85 150 53 20 20 1 0 0 28
+      dropv 1 0
+      frame	data/chars/kidde/fskk9.gif
+      attack9 0 0 0 0 0 0
+      frame	data/chars/kidde/fskk8.gif
+      move 5
+      sound	data/sounds/step.wav
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/kidde/j1.gif
+      move 4
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      bbox	50 78 47 80
+      frame	data/chars/kidde/j1.gif
+      move 3
+      frame	data/chars/kidde/j1.gif
+      move 0
+      delay	4
+      frame	data/chars/kidde/jl1.gif
+
+anim  special
+      @script
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW21"));
+      }
+    }
+@end_script
+      loop	0
+      delay   8
+      offset	70 170
+      jumpframe 1 5.2 -1.5 0 dus
+      landframe 14 dus
+      frame	data/chars/kidde/j1.gif
+      @cmd    degravity -0.5
+      delay   5
+      sound	data/sounds/jump.wav
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      bbox	55 75 40 40
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf4.gif
+      @cmd    anichange "ANI_FOLLOW16"
+      frame	data/chars/kidde/jf3.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf1.gif
+      delay   40
+      frame	data/chars/kidde/jf1.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim  special2
+      loop	0
+      delay   8
+      offset	70 170
+      jumpframe 1 5.2 -1.5 0 dus
+      landframe 14 dus
+      frame	data/chars/kidde/j1.gif
+      @cmd    degravity -0.5
+      delay   5
+      sound	data/sounds/jump.wav
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      bbox	55 75 40 40
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf4.gif
+      @cmd    anichange "ANI_FOLLOW16"
+      frame	data/chars/kidde/jf3.gif
+      bbox	50 68 47 80
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf1.gif
+      delay   40
+      frame	data/chars/kidde/jf1.gif
+      delay   4
+      @cmd    degravity 0
+      sound	data/sounds/step.wav
+      frame	data/chars/kidde/jl1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim follow16
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 22);
+    }
+@end_script
+      loop	0
+	delay	10
+      offset	70 170
+      otg 1
+      followcond 2
+      followanim 17
+      jumpframe 2 0 5
+      landframe 33
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      sound	data/chars/kidde/at99.wav
+      frame	data/chars/kidde/fskk1.gif
+      delay	12
+      frame	data/chars/kidde/fskk2.gif
+      bbox	50 68 47 52
+      delay	2
+      attack	80 121 58 26 20 1 0 0 28
+      @cmd    degravity -4.5
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      bbox	0 0 0 0
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk3.gif
+      frame	data/chars/kidde/fskk5.gif
+      frame	data/chars/kidde/fskk5.gif
+      attack 0 0 0 0 0 0
+      frame	data/chars/kidde/fskk3.gif
+      delay	10
+      frame	data/chars/kidde/fskk3.gif
+      bbox	0 0 0 0
+      delay	2
+      move 5
+      @cmd    degravity -0.27
+      attack9 85 150 53 20 20 1 0 0 28
+      dropv 1 0
+      frame	data/chars/kidde/fskk9.gif
+      attack9 0 0 0 0 0 0
+      frame	data/chars/kidde/fskk8.gif
+      move 5
+      sound	data/sounds/step.wav
+      @cmd    spawn01 "dus" 0 0 1
+      frame	data/chars/kidde/j1.gif
+      move 4
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/j1.gif
+      bbox	50 78 47 80
+      frame	data/chars/kidde/j1.gif
+      move 3
+      frame	data/chars/kidde/j1.gif
+      move 0
+      delay	4
+      frame	data/chars/kidde/jl1.gif
+
+anim follow17
+      @script
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 110);
+    }
+@end_script
+      loop	0
+	delay	14
+      offset	70 170
+      jumpframe 2 3 -1.5
+      landframe 10 dus
+      quakeframe 1 3 4
+      hitflash  ffla
+      hitfx   data/sounds/beat2.wav
+      attack	75 111 63 32 20 1 0 0 28
+      frame	data/chars/kidde/fskk4.gif
+      frame	data/chars/kidde/fskk5.gif
+      attack  0 0 0 0 0 0
+      delay	5
+      offset	70 170
+      @cmd    degravity -0.27
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf6.gif
+      frame	data/chars/kidde/jf5.gif
+      frame	data/chars/kidde/jf4.gif
+      frame	data/chars/kidde/jf3.gif
+      frame	data/chars/kidde/jf2.gif
+      frame	data/chars/kidde/jf1.gif
+      delay	40
+      frame	data/chars/kidde/jf1.gif
+      delay	4
+      sound	data/sounds/step.wav
+      @cmd    degravity -0.27
+      frame	data/chars/kidde/jl1.gif
+      bbox	50 78 47 80
+      frame	data/chars/kidde/j1.gif
+      frame	data/chars/kidde/jl1.gif
+
+anim upper
+      loop	0
+	delay	6
+      offset	70 170
+      hitfx   data/sounds/beat2.wav
+      frame	data/chars/kidde/j1.gif
+      delay	8
+      sound	data/chars/kidde/at2.wav
+      delay	2
+      offset	74 170
+      move 4
+      frame	data/chars/kidde/fspu1.gif
+      offset	78 170
+      frame	data/chars/kidde/fspu1.gif
+      offset	82 170
+      frame	data/chars/kidde/fspu1.gif
+      offset	86 170
+      frame	data/chars/kidde/fspu1.gif
+      offset	90 170
+      frame	data/chars/kidde/fspu1.gif
+      offset	94 170
+      frame	data/chars/kidde/fspu1.gif
+      offset	110 170
+      move 16
+      frame	data/chars/kidde/fspu1.gif
+      move 3
+      frame	data/chars/kidde/fspu2.gif
+      frame	data/chars/kidde/fspu2.gif
+      frame	data/chars/kidde/fspu2.gif
+      move 0
+      attack3 100 95 30 50 10 0 0 0 30
+      dropv 1.5 1.5
+      forcedirection -1
+      frame	data/chars/kidde/fspu3.gif
+      frame	data/chars/kidde/fspu3.gif
+      attack3 0 0 0 0 0 0
+      @cmd    anichange "ANI_FOLLOW3"
+      frame	data/chars/kidde/fspu3.gif
+      delay	6
+      attack  130 90 33 45 20 1 0 0 35
+      dropv 4 1
+      frame	data/chars/kidde/fspu4.gif
+      attack  0 0 0 0 0 0
+      delay	26
+      frame	data/chars/kidde/fspu5.gif
+      delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/kidde/a1.gif
+
+anim follow3
+      loop	0
+      delay	2
+      offset	110 170
+      hitflash  fffla
+      hitfx   data/sounds/beat2.wav
+      spawnframe 2 33 0 10 0
+      custentity kbu2
+      frame	data/chars/kidde/fspu3.gif
+      delay	6
+      attack  130 90 33 45 20 1 0 0 35
+      dropv 4 1
+      frame	data/chars/kidde/fspu4.gif
+      attack  0 0 0 0 0 0
+      delay	26
+      frame	data/chars/kidde/fspu5.gif
+      delay	6
+      offset	70 170
+      bbox	50 78 47 80
+      frame	data/chars/kidde/a1.gif
+
+anim death
+	loop	0
+      delay   20
+	offset	100 120
+      frame	data/chars/kidde/fall05.gif
+
+
+anim death3
+	loop	0
+      delay   9
+	offset	100 120
+      @script
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+@end_script
+      frame	data/chars/kidde/fall04.gif
+      delay   20
+      frame	data/chars/kidde/fall05.gif
+
+anim death4
+	loop	0
+      delay   2
+      move -5
+      offset	110 128
+      sound	data/sounds/fall.wav
+      @cmd    degravity -0.27
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu4.gif
+      frame	data/chars/kidde/ruu4.gif
+      frame	data/chars/kidde/ruu4.gif
+      move -4
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu3.gif
+      bbox	62 75 60 45
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu4.gif
+      frame	data/chars/kidde/ruu4.gif
+      frame	data/chars/kidde/ruu4.gif
+      move -3
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu3.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu2.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      frame	data/chars/kidde/ruu1.gif
+      @cmd    degravity 0
+      offset	95 120
+      bbox	40 90 55 30
+      frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      frame	data/chars/kidde/fall04.gif
+      attack10  0 0 0 0 0 0
+	frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      move -3
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      move 0
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      move 0
+      frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+      move 0
+      delay   40
+	frame	data/chars/kidde/fall05.gif
+      frame	data/chars/kidde/fall05.gif
+
+anim death9
+	loop	0
+      delay   20
+	offset	100 120
+      frame	data/chars/kidde/fall05.gif
+
+anim death15
+	loop	0
+      delay   20
+	offset	100 120
+      frame	data/chars/kidde/fall05.gif
+
+anim bdie
+	loop	0
+      delay   20
+	offset	100 120
+      frame	data/chars/kidde/fall05.gif
+
+
+
+
+
+

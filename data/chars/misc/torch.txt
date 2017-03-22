@@ -1,0 +1,17 @@
+name    TORCH
+health  1
+type	none
+subtype noskip
+offscreenkill  2000
+setlayer	1
+
+anim idle
+	loop	1
+        delay   13
+	offset	70 120
+        frame   data/chars/misc/TORCH01.gif
+        frame   data/chars/misc/TORCH02.gif
+        frame   data/chars/misc/TORCH03.gif
+        frame   data/chars/misc/TORCH04.gif
+
+

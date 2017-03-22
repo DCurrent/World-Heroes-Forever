@@ -1,0 +1,208 @@
+music		data/music/Korea2.bor
+background	data/levels/Korea2/back1.gif
+panel	      data/levels/Korea2/n010.gif
+order           a
+direction both
+cameraoffset 0 -100
+
+spawn1 110 20 
+spawn2 120 40
+
+#----------pickups
+
+
+spawn	trapde1
+coords	300 260
+at	0
+
+spawn	trapde1
+coords	100 220
+at	0
+
+spawn	obstach
+item  huma
+flip 1
+coords	500 192
+at	0
+
+spawn	obstach
+item  menuu
+flip 1
+coords	1160 280
+at	0
+
+spawn	bar
+item  diamond
+itemmap 2
+flip 1
+coords	558 192
+at	0
+
+spawn	bar
+flip 1
+coords	856 215
+at	0
+
+spawn	bar
+item  diamond
+flip 1
+coords	824 235
+at	0
+
+spawn	bare
+item  pizza
+flip 1
+coords	792 255
+at	0
+
+spawn	bar
+item  menuu
+flip 1
+coords	1777 191
+at	0
+
+blockade 100
+at	100
+
+spawn	matlock2
+Health 100
+flip 1
+map 2
+coords	-80 225
+at	100
+
+spawn	matlock2
+Health 100
+flip 1
+map 6
+coords	-80 255
+at	100
+
+spawn	lee
+Health 100
+map 1
+coords	380 230
+at	100
+
+wait
+at 350
+
+Group	3 4
+at 350
+
+blockade 350
+at	350
+
+spawn	lee
+Health 100
+map 2
+coords	400 260
+at	350
+
+spawn	assassin
+coords	80 260
+at	350
+
+spawn	assassin
+flip 1
+item  gold
+coords	240 260
+at	350
+
+spawn	matlock
+Health 100
+map 4
+coords	380 245
+at	350
+
+Group	100 100
+at	680
+
+blockade 680
+at	680
+
+spawn	assass2
+Health 150
+flip 1
+coords	284 215
+at	680
+
+spawn	assassin
+Health 150
+flip 1
+coords	252 235
+at	680
+
+spawn	assass2
+Health 150
+item  time
+flip 1
+coords	220 255
+at	680
+
+wait
+at 920
+
+spawn	ninja2
+Health 100
+item  susi
+flip 1
+map 1
+coords	-100 235
+at	920
+
+spawn	ninja2
+Health 100
+item  diamond
+map 1
+coords	420 235
+at	920
+
+blockade 920
+at	920
+
+Group	4 4
+at	1290
+
+blockade 1290
+at	1290
+
+spawn	matlock
+Health 100
+map 3
+coords	400 215
+at	1290
+
+spawn	matlock
+Health 100
+map 9
+coords	380 230
+at	1290
+
+spawn	ssassin2
+flip 1
+coords	175 210
+at	1350
+
+spawn	zazie
+map 1
+item  milk
+coords	380 265
+at	1495
+
+spawn	assassi
+coords	200 230
+at	1495
+
+spawn	matlock
+Health 100
+flip 1
+coords	-60 215
+at	1495
+
+spawn	lee
+Health 100
+map 2
+coords	380 240
+at	1495
+

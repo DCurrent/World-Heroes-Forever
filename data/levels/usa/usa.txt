@@ -1,13 +1,15 @@
 music		data/music/1-1.bor
 
-background	data/levels/usa/bg_3.png
-#bglayer 	{path} 			{xratio} {zratio} {xposition} {zposition} {xspacing} {zspacing} {xrepeat} {zrepeat} {transparency} {alpha} {watermode} {amplitude} {wavelength} {wavespeed} {bgspeedratio}
-bglayer 	data/levels/usa/bg_2.png        0.4     0.4      0           0           0          0      -1        1        1
-bglayer 	data/levels/usa/bg_1.png        0.2     0.2      0           10          0         0       -1        1        1
-fglayer		data/levels/usa/bg_0_b.png -150 0       0        0           -4          0        0        1         1        6              1
-panel	        data/levels/usa/bg_0.png
+background	data/levels/usa/clouds.png
+bglayer 	data/levels/usa/city_b.png      	0.3     0.3      0           0           0          0       -1        1        1
+bglayer 	data/levels/usa/city_a.png      	0.2     0.2      0           0           0          0       -1        1        1
+bglayer 	data/levels/usa/construction.png	0.1	0.1      0           10          0          0       -1        1        1
+panel	        data/levels/usa/path.png none data/levels/usa/windshield.png
+
+
+
 order           a
-bgspeed	    	1
+bgspeed	    	0.75
 
 direction both
 cameraoffset 0 -100

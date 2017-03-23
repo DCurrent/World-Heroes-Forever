@@ -4,11 +4,11 @@ World Heroes Forever is a remake in progress of World Heroes Supreme Justice, an
 
 WH Supreme Justice is an excellent piece of craftsmanship and I recommend you try it out right now. Sign up at www.chronocrash.com and you can get it here: http://www.chronocrash.com/forum/index.php?action=tpmod;dl=item107 
 
-My finished version will for all intents and purposes be an entirely new game. I’m using Supreme Justice as a starting off point, but all assets will be new - even the ones that look similar are all being remastered to take advantage of OpenBOR’s palette swapping features, .png image format (SJ was built with .gif assets), transparences, and a larger playfield (472*272 vs. 320*240). Existing stages will be split into additional scrolling layers whenever possible.
+My finished version will for all intents and purposes be an entirely new game. I’m using Supreme Justice as a starting off point, but all assets will be new - even the ones that look similar are all being remastered to take advantage of OpenBOR’s palette swapping features, .png image format in place of .gif, transparences, and a larger playfield (472x272 vs. 320x240). Existing stages will be split into additional scrolling layers whenever possible.
 
-Gameplay will have a different control scheme and feel. The Punch, Kick, Jump, Block control scheme of Supreme Justice will be replaced with a simpler Attack, Jump, Defense setup. Auto combos will now differ based on proximity and other in game factors. 
+Gameplay will have a different control scheme and feel. The Punch, Kick, Jump, and Block control scheme of Supreme Justice will be replaced with a simpler Attack, Jump, and Defense layout. Auto combos will now differ based on proximity and other in game factors. 
 
-Most of the character liberties taken by Supreme justice will be removed. Instead, all effort will focus on bringing their various unique abilities from the original series into the beat em’ up genre. For example, the generic Final Fight Style breakaway special shared by all characters in Supreme Justice will be replaced with a character specific “ABC Special” from World Heroes perfect (Hanzou’s attack cancel, Ryoko’s counter throws, etc.). In general, all character move sets will be expanded to reflect their original renditions. 
+Most of the character design liberties taken by Supreme Justice will be removed. Instead, all effort will focus on bringing the characters' various unique abilities from the original series into the beat em’ up genre. For example, the generic Final Fight Style breakaway special shared by every fighter in Supreme Justice will be replaced with a character specific “ABC Special” from World Heroes Perfect (Hanzou’s attack cancel, Ryoko’s counter throws, etc.). In general, all character move sets will be expanded to reflect their original renditions. 
 
 Below is the progress made prior to Github:
 

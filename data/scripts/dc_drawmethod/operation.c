@@ -101,33 +101,6 @@ void dc_drawmethod_auto_tint(void ent)
     // work at all.
     dc_drawmethod_set_enabled(ent, DC_DRAWMETHOD_FLAG_ON);
 
-    // Manual settings. If the user has some debug controls set,
-    // we'll implement them here.
-    debug = dc_vars_get_global_int(DC_DRAWMETHOD_VAR_KEY_DEBUG_FLAG);
-
-    if(debug == DC_DRAWMETHOD_FLAG_ON)
-    {
-        tint_mode   = dc_vars_get_global_int(DC_DRAWMETHOD_VAR_KEY_DEBUG_TINT_MODE);
-        rgb_b       = dc_vars_get_global_int(DC_DRAWMETHOD_VAR_KEY_DEBUG_RGB_BLUE);
-        rgb_g       = dc_vars_get_global_int(DC_DRAWMETHOD_VAR_KEY_DEBUG_RGB_GREEN);
-        rgb_r       = dc_vars_get_global_int(DC_DRAWMETHOD_VAR_KEY_DEBUG_RGB_RED);
-
-        changedrawmethod(NULL(), "tintmode", 3);
-
-        dc_drawmethod_set_tint_mode(ent, tint_mode);
-        dc_drawmethod_set_tint_color(ent, rgb_r, rgb_g, rgb_b);
-
-        alpha = get_drawmethod_alpha();
-
-        settextobj(4, 10, 60, 2, -1, "Mode: "   +	tint_mode);
-        settextobj(5, 10, 70, 2, -1, "RGB: "    +	rgb_r   +   ", "	+	rgb_g	+	", " +	rgb_b);
-        settextobj(5, 10, 80, 2, -1, "Alpha: "  +	alpha);
-
-
-        // No reason to do anything else, so exit the function.
-        return;
-    }
-
     // For time controlled effects, we need to know
     // current time and the time an effect was first
     // applied.

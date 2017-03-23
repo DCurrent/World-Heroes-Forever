@@ -43,7 +43,6 @@ load	kbb	   data/chars/misc/kbb.txt
 load	kbb2	   data/chars/misc/kbb2.txt
 load	kbfl	   data/chars/misc/kbfl.txt
 load	elect	   data/chars/misc/elect.txt
-load	ston	   data/chars/gokuu/ston/ston.txt
 
 # Players must also be loaded.
 load	HANZOU data/chars/hanzou/hanzou.txt

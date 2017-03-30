@@ -89,11 +89,24 @@ anim GRABBEDWALK
 
 anim pain
 	loop	0
-	delay	7
+	delay	8
 	offset	75 170
       bbox	49 80 50 70
 
 	frame	data/chars/ray/R_PAIN_0.png
+	frame	data/chars/ray/R_PAIN_1.png
+	frame	data/chars/ray/R_PAIN_0.png
+
+anim pain2
+	loop	0
+	delay	8
+	offset	75 170
+      bbox	49 80 50 70
+
+	frame	data/chars/ray/R_PAIN_0.png
+	frame	data/chars/ray/R_PAIN_1.png
+	delay	12
+	frame	data/chars/ray/R_PAIN_2.png
 	frame	data/chars/ray/R_PAIN_1.png
 	frame	data/chars/ray/R_PAIN_0.png
 

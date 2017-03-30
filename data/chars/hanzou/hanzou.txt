@@ -16,7 +16,7 @@ blockpain 1
 holdblock 1
 makeinv  0
 combostyle    1
-atchain       1 2 3 4 0 2 3 5 6
+atchain       1 2 3 4 0 3 5 6
 com	A2	freespecial
 com	D B A2 freespecial2
 com	D F A freespecial3

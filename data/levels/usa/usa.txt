@@ -1,9 +1,12 @@
 music		data/music/1-1.bor
 
 background	data/levels/usa/clouds.png
-bglayer 	data/levels/usa/city_b.png      	0.3     0.3      0           0           0          0       -1        1        1
+bglayer 	data/levels/usa/city_b.png      	0.3     0.3      0           0           0          0       -1        1        1 
 bglayer 	data/levels/usa/city_a.png      	0.2     0.2      0           0           0          0       -1        1        1
-bglayer 	data/levels/usa/construction.png	0.1	0.1      0           10          0          0       -1        1        1
+bglayer 	data/levels/usa/construction.png	0.1	0.1      0           10          0          0       -1        1        1 0 0 0 0 0 0 1 
+
+
+
 panel	        data/levels/usa/path.png none data/levels/usa/windshield.png
 
 

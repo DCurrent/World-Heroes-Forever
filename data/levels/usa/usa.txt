@@ -1,13 +1,13 @@
 music		data/music/1-1.bor
-
 background	data/levels/usa/clouds.png
-bglayer 	data/levels/usa/city_b.png      	0.3     0.3      0           0           0          0       -1        1        1 
-bglayer 	data/levels/usa/city_a.png      	0.2     0.2      0           0           0          0       -1        1        1
-bglayer 	data/levels/usa/construction.png	0.1	0.1      0           10          0          0       -1        1        1 0 0 0 0 0 0 1 
 
+#lol spreadsheet				        xratio	zratio	xoffset	zoffset	xspace	zspace	xrepeat	zrepeat	trans 	alpha	w-mode	amp	wl	ws	move	quake	neon	  
+bglayer 	data/levels/usa/city_b.png      	0.3     0.3     0       0       0       0       -1      1       1 
+bglayer 	data/levels/usa/city_a.png      	0.2     0.2     0       0       0       0       -1      1       1
+bglayer 	data/levels/usa/construction.png	0.1	0.1     0       10      0       0       -1      1       1        
+bglayer 	data/levels/usa/road.png		0	0      	0       198     0       0       -1      1       1       0       3       1      1.25      1       0     	1 	0
 
-
-panel	        data/levels/usa/path.png none data/levels/usa/windshield.png
+panel	        data/levels/usa/fence.png none data/levels/usa/windshield.png
 
 
 

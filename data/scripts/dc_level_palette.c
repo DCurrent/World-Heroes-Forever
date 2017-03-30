@@ -19,13 +19,13 @@ dc_level_palette(int time_interval, int pallette_cap)
     elapsed_current = openborvariant("elapsed_time");
     elapsed_last    = getlocalvar(DC_LEVEL_PALETTE_KEY_ELAPSED_LAST);
 
-    // Validate elapsed time and reset 0 if nessesary.
+    // Validate elapsed time and reset if nessesary.
     if(!elapsed_last)
     {
-        elapsed_last = 0;
+        elapsed_last = elapsed_current;
     }
 
-    if(elapsed_last >= time_interval)
+    if((elapsed_current - elapsed_last)  >= time_interval)
     {
         if(palette_current < palette_cap)
         {

@@ -39,6 +39,17 @@ e2name	1000 1000
 
 showcomplete 999 999 999 999 999 999
 
+set  Test:_Construction_Site
+equalairpause 0
+noslowfx 1
+maxplayers 2
+credits 8
+cansave 2
+nosame    1
+completebg      1
+z 192 268
+file	data/levels/usa/usa.txt
+
 set  Test:_Metal_Mesh
 equalairpause 0
 noslowfx 1
@@ -50,6 +61,27 @@ completebg      1
 z 224 270
 file	data/levels/usa2/usa2.txt
 
+set  Test:_New_York_Arena_(old)
+equalairpause 0
+noslowfx 1
+maxplayers 2
+credits 8
+cansave 2
+nosame    1
+completebg      1
+z 187 244
+file	data/levels/usa3/usa3.txt
+
+set  Test:_New_York_Arena
+equalairpause 0
+noslowfx 1
+maxplayers 2
+credits 8
+cansave 2
+nosame    1
+completebg      1
+z 187 272
+file	data/levels/usa4/usa4.txt
 
 set  STORY_MODE
 equalairpause 0

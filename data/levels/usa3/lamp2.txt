@@ -1,0 +1,14 @@
+name    lamp2
+type	none
+
+anim idle
+	loop	1
+      delay   400
+	offset	106 152
+      frame   data/levels/usa3/lamp2.gif
+      frame   data/levels/usa3/lamp1.gif
+
+
+
+
+

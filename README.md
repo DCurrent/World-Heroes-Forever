@@ -2,7 +2,7 @@
 
 World Heroes Forever is a remake in progress of World Heroes Supreme Justice, an OpenBOR module originally crafted by magggas (Final Fight style beat em’ take on the World Heroes series of fighting games). I am also a fan of the World Heroes series and had planned to produce a module myself, but magggas beat me to the punch. :)
 
-WH Supreme Justice is an excellent piece of craftsmanship and I recommend you try it out right now. Sign up at www.chronocrash.com and you can get it here: http://www.chronocrash.com/forum/index.php?action=tpmod;dl=item107 
+WH Supreme Justice is an excellent piece of craftsmanship and I recommend you try it out right now. Sign up at www.chronocrash.com and you can get it [here](http://www.chronocrash.com/forum/index.php?action=tpmod;dl=item107).
 
 My finished version will for all intents and purposes be an entirely new game. I’m using Supreme Justice as a starting off point, but all assets will be new - even the ones that look similar are all being remastered to take advantage of OpenBOR’s palette swapping features, .png image format in place of .gif, transparences, and a larger playfield (472x272 vs. 320x240). Existing stages will be split into additional scrolling layers whenever possible.
 

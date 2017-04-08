@@ -6,8 +6,9 @@ bglayer 	data/levels/usa4/water.png			0.5	0.5     0       30      0       0     
 bglayer 	data/levels/usa4/city.png			0.5	0.5     0       30      0       0       -1       1       1       0       0       0      0       0       0     	0 	0
 fglayer 	data/levels/usa4/fence.png		-185	0	0      	0       44      0       0       -1       1       1       0       0       0      0       0       0     	1 	0
 bglayer 	data/levels/usa4/floor1.png			0	0      	0       187     0       0       -1       1       1       0       3       1      2       1       0     	1 	0
+bglayer 	data/levels/usa4/floor_lights.png		0	0      	0       187     0       0       -1       1       1       0       3       1      2       1       0     	1 	1
 
-panel	      data/levels/usa4/ropes.png
+panel	      data/levels/usa4/ropes.png data/levels/usa4/ropes_neon.png none
 order 	aaaa
 direction both
 

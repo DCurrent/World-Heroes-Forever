@@ -293,34 +293,6 @@ int dc_move_set_velocity_x(void entity, float velocity)
             vel_y,
             vel_z;
 
-    // Set function name for possible error trapping.
-    dc_error_set_function("dc_move_set_velocity_x(void entity, float velocity)");
-
-    // Validate the entity. We want to make sure the pointer
-    // is both valid and refers to an entity that actually exists.
-    is_entity = dc_vars_is_entity(entity);
-
-    if(is_entity == DC_VARS_FLAG_FALSE)
-    {
-        dc_error_set_message("{entity} must be a valid pointer for a currently existing entity.");
-        dc_error_set_argument(entity);
-        dc_error_alert();
-
-        return DC_VARS_FLAG_FALSE;
-    }
-
-    // Validate velocity value.
-    is_float = dc_vars_is_float(velocity);
-
-    if(is_float == DC_VARS_FLAG_FALSE)
-    {
-        dc_error_set_message("{velocity} must be a valid floating point decimal.");
-        dc_error_set_argument(velocity);
-        dc_error_alert();
-
-        return DC_VARS_DEFAULT_FLOAT;
-    }
-
     // Get velocities values to apply. OpenBOR script does not
     // allow setting just one velocity axis at a time, so we'll
     // get all current velocity values here and apply them along
@@ -346,34 +318,6 @@ int dc_move_set_velocity_y(void entity, float velocity)
     float   vel_x,
             vel_y,
             vel_z;
-
-    // Set function name for possible error trapping.
-    dc_error_set_function("dc_move_set_velocity_y(void entity, float velocity)");
-
-    // Validate the entity. We want to make sure the pointer
-    // is both valid and refers to an entity that actually exists.
-    is_entity = dc_vars_is_entity(entity);
-
-    if(is_entity == DC_VARS_FLAG_FALSE)
-    {
-        dc_error_set_message("{entity} must be a valid pointer for a currently existing entity.");
-        dc_error_set_argument(entity);
-        dc_error_alert();
-
-        return DC_VARS_FLAG_FALSE;
-    }
-
-    // Validate velocity value.
-    is_float = dc_vars_is_float(velocity);
-
-    if(is_float == DC_VARS_FLAG_FALSE)
-    {
-        dc_error_set_message("{velocity} must be a valid floating point decimal.");
-        dc_error_set_argument(velocity);
-        dc_error_alert();
-
-        return DC_VARS_DEFAULT_FLOAT;
-    }
 
     // Get velocities values to apply. OpenBOR script does not
     // allow setting just one velocity axis at a time, so we'll

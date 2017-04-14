@@ -1,5 +1,5 @@
 name    fly
-type  NPC
+type  npc
 speed	0
 lifespan 77
 shadow  0
@@ -16,7 +16,11 @@ cantgrab 1
 offscreenkill  2000
 subject_to_minz 1
 subject_to_maxz 1
-setlayer	-10
+setlayer	-100
+antigravity	100
+
+ondrawscript 	data/levels/usa4/display.c
+animationscript	data/levels/usa4/blimp.c
 
 load fly2
 
@@ -33,7 +37,37 @@ anim idle
 	loop	1
         delay   16
 	  offset	100 230
-        jumpframe 0 0 0.1
+        #jumpframe 0 0 0.1
+	
+        frame   data/levels/usa3/fly01.gif
+	@cmd dc_move_set_velocity_x getlocalvar("self") -0.1
+        frame   data/levels/usa3/fly02.gif
+        frame   data/levels/usa3/fly03.gif
+        frame   data/levels/usa3/fly04.gif
+        frame   data/levels/usa3/fly05.gif
+        frame   data/levels/usa3/fly06.gif
+        frame   data/levels/usa3/fly07.gif
+        frame   data/levels/usa3/fly08.gif
+        @cmd dc_move_set_velocity_y getlocalvar("self") 0.1
+        frame   data/levels/usa3/fly01.gif
+        frame   data/levels/usa3/fly02.gif
+        frame   data/levels/usa3/fly03.gif
+        frame   data/levels/usa3/fly04.gif
+        @cmd dc_move_set_velocity_y getlocalvar("self") 0
+        frame   data/levels/usa3/fly05.gif
+        frame   data/levels/usa3/fly06.gif
+        frame   data/levels/usa3/fly07.gif
+        frame   data/levels/usa3/fly08.gif
+        frame   data/levels/usa3/fly01.gif
+        frame   data/levels/usa3/fly02.gif
+        frame   data/levels/usa3/fly03.gif
+        frame   data/levels/usa3/fly04.gif
+        @cmd dc_move_set_velocity_y getlocalvar("self") -0.1
+        frame   data/levels/usa3/fly05.gif
+        frame   data/levels/usa3/fly06.gif
+        frame   data/levels/usa3/fly07.gif
+        frame   data/levels/usa3/fly08.gif
+        @cmd dc_move_set_velocity_y getlocalvar("self") 0
         frame   data/levels/usa3/fly01.gif
         frame   data/levels/usa3/fly02.gif
         frame   data/levels/usa3/fly03.gif
@@ -42,38 +76,10 @@ anim idle
         frame   data/levels/usa3/fly06.gif
         frame   data/levels/usa3/fly07.gif
         frame   data/levels/usa3/fly08.gif
-        movez 2
+        @cmd dc_move_set_velocity_y getlocalvar("self") 0.1
         frame   data/levels/usa3/fly01.gif
         frame   data/levels/usa3/fly02.gif
-        frame   data/levels/usa3/fly03.gif
-        frame   data/levels/usa3/fly04.gif
-        movez 0
-        frame   data/levels/usa3/fly05.gif
-        frame   data/levels/usa3/fly06.gif
-        frame   data/levels/usa3/fly07.gif
-        frame   data/levels/usa3/fly08.gif
-        frame   data/levels/usa3/fly01.gif
-        frame   data/levels/usa3/fly02.gif
-        frame   data/levels/usa3/fly03.gif
-        frame   data/levels/usa3/fly04.gif
-        movez -2
-        frame   data/levels/usa3/fly05.gif
-        frame   data/levels/usa3/fly06.gif
-        frame   data/levels/usa3/fly07.gif
-        frame   data/levels/usa3/fly08.gif
-        movez 0
-        frame   data/levels/usa3/fly01.gif
-        frame   data/levels/usa3/fly02.gif
-        frame   data/levels/usa3/fly03.gif
-        frame   data/levels/usa3/fly04.gif
-        frame   data/levels/usa3/fly05.gif
-        frame   data/levels/usa3/fly06.gif
-        frame   data/levels/usa3/fly07.gif
-        frame   data/levels/usa3/fly08.gif
-        movez 2
-        frame   data/levels/usa3/fly01.gif
-        frame   data/levels/usa3/fly02.gif
-        movez 0
+        @cmd dc_move_set_velocity_y getlocalvar("self") 0
         frame   data/levels/usa3/fly03.gif
         frame   data/levels/usa3/fly04.gif
         frame   data/levels/usa3/fly05.gif

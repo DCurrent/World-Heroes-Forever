@@ -36,6 +36,17 @@ void main()
     player_key_hold     = getplayerproperty(player_index, "keys");
     player_key_press    = getplayerproperty(player_index, "newkeys");
 
+    if(player_key_press & openborconstant("FLAG_START"))
+    {
+        if(!openborvariant("pause"))
+        {
+            setglobalvar("game_paused", 1);
+        }
+        else
+        {
+            setglobalvar("game_paused", NULL());
+        }
+    }
 
     // Here is where we will set up and execute the auxiliary jumping system.
 

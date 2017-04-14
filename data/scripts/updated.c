@@ -18,7 +18,7 @@ void main(){
 		ent = getentity(i);
 
 		// Execute tint effect on entity.
-        dc_drawmethod_auto_tint(ent);
+        //dc_drawmethod_auto_tint(ent);
     }
 
     // If you have any screen controlling functions, such

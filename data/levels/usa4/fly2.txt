@@ -18,7 +18,6 @@ subject_to_minz 1
 subject_to_maxz 1
 setlayer	-10
 
-
 load fly
 
 anim spawn

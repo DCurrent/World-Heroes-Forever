@@ -36,6 +36,7 @@ anim idle
       bbox	55 78 47 80
       @cmd    clearL
       frame	data/chars/ray/0_0.png
+
       frame	data/chars/ray/0_1.png
       frame	data/chars/ray/0_2.png
       frame	data/chars/ray/0_3.png

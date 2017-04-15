@@ -192,8 +192,8 @@ Know	peo     data/levels/guinea2/peo.txt
 Know	peop    data/levels/guinea2/peop.txt
 Know	to      data/levels/guinea2/to.txt
 Know	tor     data/levels/guinea2/tor.txt
-Know	fly     data/levels/usa4/fly.txt
-Know	fly2     data/levels/usa4/fly2.txt
+Know	airship data/levels/usa4/airship/airship.txt
+#Know	fly2     data/levels/usa4/fly2.txt
 Know	lamp     data/levels/usa4/lamp.txt
 Know	lamp2     data/levels/usa4/lamp2.txt
 Know	fg1      data/levels/castle/fg1.txt

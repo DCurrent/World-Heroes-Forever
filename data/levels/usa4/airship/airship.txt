@@ -1,0 +1,91 @@
+name    airship
+type  npc
+speed	0
+lifespan 77
+shadow  0
+falldie 1
+nodieblink      3
+nolife   1
+nopain 1
+nodrop 2
+nomove 1 1
+noatflash 1
+flash   eflash
+facing 2
+cantgrab 1
+offscreenkill  2000
+subject_to_minz 1
+subject_to_maxz 1
+setlayer	-100
+antigravity	100
+
+ondrawscript 	data/levels/usa4/airship/display.c
+animationscript	data/levels/usa4/airship/blimp.c
+
+anim spawn
+	loop	0
+      offset	100 100
+      delay	2
+       frame   data/levels/usa4/airship/0_0.png
+      delay	100
+       frame   data/levels/usa4/airship/0_0.png
+
+
+anim idle
+	loop	1
+        delay   4
+	  offset	100 180
+        #jumpframe 0 0 0.1
+	
+        frame   data/levels/usa4/airship/0_0.png
+	@cmd dc_move_set_velocity_x getlocalvar("self") -0.1
+        frame   data/levels/usa4/airship/0_1.png
+        frame   data/levels/usa4/airship/0_2.png
+        frame   data/levels/usa4/airship/0_3.png
+        
+anim walk
+	loop	0
+      delay	1
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+
+anim pain
+	loop	0
+      loop	0
+      delay	1
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+
+anim fall
+	loop	0
+      loop	0
+      delay	1
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+
+anim rise
+      loop	0
+      loop	0
+      delay	1
+      offset	100 113
+      frame   data/chars/misc/empty.gif
+
+anim death
+      loop	0
+	delay	3
+      offset	100 230
+      custentity fly2
+	spawnframe 2 0 0 0 0
+      frame   data/chars/misc/empty.gif
+      delay	200
+      frame   data/chars/misc/empty.gif
+      frame   data/chars/misc/empty.gif
+      frame   data/chars/misc/empty.gif
+
+
+
+
+
+
+
+

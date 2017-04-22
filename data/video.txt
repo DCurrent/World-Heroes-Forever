@@ -1,5 +1,4 @@
 video	1
-ColourDepth 16bit
 
 
 

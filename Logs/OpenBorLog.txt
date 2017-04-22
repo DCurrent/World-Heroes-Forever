@@ -1,0 +1,663 @@
+Total Ram: 2147483647 Bytes
+ Free Ram: 2147483647 Bytes
+ Used Ram: 5910528 Bytes
+
+debug:nativeWidth, nativeHeight, bpp, Hz  1536, 864, 24, 60
+
+0 joystick(s) found!
+OpenBoR v3.0 Build , Compile Date: Apr 20 2017
+
+Game Selected: ./Paks/WHF.pak
+
+FileCaching System Init......	Disabled
+Initializing video............
+Reading video settings from 'data/video.txt'.
+
+Colordepth is depreciated. All modules are displayed with a 32bit color screen.
+
+Initialized video.............	480x272 (Mode: 1, Depth: 8 Bit)
+
+Loading menu.txt.............	Done!
+Loading fonts................	1 2 3 4 5 6 7 8 Done!
+Timer init...................	Done!
+Initialize Sound..............	Done!
+Loading sprites..............	Done!
+Loading level order..........	Done!
+Loading model constants......	Done!
+Loading script settings......	Done!
+Loading scripts..............	Done!
+Loading models...............
+
+Cacheing 'flash' from data/chars/misc/flash.txt
+Cacheing 'flas' from data/chars/misc/flas.txt
+Cacheing 'eflash' from data/chars/misc/eflash.txt
+Cacheing 'blood' from data/chars/misc/blood.txt
+Cacheing 'bloo' from data/chars/misc/bloo.txt
+Cacheing 'blo' from data/chars/misc/blo.txt
+Cacheing 'obfla' from data/chars/misc/obfla.txt
+Cacheing 'ffla' from data/chars/misc/ffla.txt
+Cacheing 'fffla' from data/chars/misc/fffla.txt
+Cacheing 'hbfla' from data/chars/misc/hbfla.txt
+Cacheing 'fbfla' from data/chars/misc/fbfla.txt
+Cacheing 'bflash' from data/chars/misc/bflash.txt
+Cacheing 'rockfl' from data/chars/misc/rockfl.txt
+Cacheing 'du' from data/chars/misc/du.txt
+Cacheing 'dus' from data/chars/misc/dus.txt
+Cacheing 'hab' from data/chars/misc/hab.txt
+Cacheing 'fub' from data/chars/misc/fub.txt
+Cacheing 'rocket' from data/chars/misc/rocket.txt
+Cacheing 'rocket2' from data/chars/misc/rocket2.txt
+Cacheing 'kna' from data/chars/misc/kna.txt
+Cacheing 'mudb' from data/chars/misc/mudb.txt
+Cacheing 'maxb' from data/chars/misc/maxb.txt
+Cacheing 'jab' from data/chars/misc/jab.txt
+Cacheing 'jab2' from data/chars/misc/jab2.txt
+Cacheing 'maxa' from data/chars/misc/maxa.txt
+Cacheing 'maxfl' from data/chars/misc/maxfl.txt
+Cacheing 'jabfl' from data/chars/misc/jabfl.txt
+Cacheing 'EFlame' from data/chars/misc/eflame.txt
+Cacheing 'EEFlame' from data/chars/misc/eeflame.txt
+Cacheing 'kbb' from data/chars/misc/kbb.txt
+Cacheing 'kbb2' from data/chars/misc/kbb2.txt
+Cacheing 'kbfl' from data/chars/misc/kbfl.txt
+Cacheing 'elect' from data/chars/misc/elect.txt
+Cacheing 'HANZOU' from data/chars/hanzou/hanzou.txt
+Cacheing 'FUUMA' from data/chars/fuuma/fuuma.txt
+Cacheing '1up' from data/sprites/aniback/1up.txt
+Cacheing 'time' from data/sprites/aniback/time.txt
+Cacheing 'diamond' from data/sprites/aniback/diamond.txt
+Cacheing 'gold' from data/sprites/aniback/gold.txt
+Cacheing 'goldkat' from data/sprites/aniback/goldkat.txt
+Cacheing 'ring' from data/sprites/aniback/ring.txt
+Cacheing 'meat' from data/sprites/aniback/meat.txt
+Cacheing 'huma' from data/sprites/aniback/huma.txt
+Cacheing 'menuu' from data/sprites/aniback/menuu.txt
+Cacheing 'pizza' from data/sprites/aniback/pizza.txt
+Cacheing 'susi' from data/sprites/aniback/susi.txt
+Cacheing 'milk' from data/sprites/aniback/milk.txt
+Cacheing 'delay' from data/chars/misc/delay.txt
+Cacheing 'assassin' from data/chars/assassin/assassin.txt
+Cacheing 'ssassin' from data/chars/assassin/ssassin.txt
+Cacheing 'ssassin2' from data/chars/assassin/ssassin2.txt
+Cacheing 'assassi' from data/chars/assassin/assassi.txt
+Cacheing 'assass' from data/chars/assassin/assass.txt
+Cacheing 'assass2' from data/chars/assassin/assass2.txt
+Cacheing 'ninja' from data/chars/ninja/ninja.txt
+Cacheing 'ninja2' from data/chars/ninja/ninja2.txt
+Cacheing 'ninja3' from data/chars/ninja/ninja3.txt
+Cacheing 'ninja4' from data/chars/ninja/ninja4.txt
+Cacheing 'ninjasw' from data/chars/ninjasw/ninjasw.txt
+Cacheing 'ninjasw2' from data/chars/ninjasw/ninjasw2.txt
+Cacheing 'ninjasw3' from data/chars/ninjasw/ninjasw3.txt
+Cacheing 'ninjasw4' from data/chars/ninjasw/ninjasw4.txt
+Cacheing 'lee' from data/chars/lee/lee.txt
+Cacheing 'lee2' from data/chars/lee/lee2.txt
+Cacheing 'lee3' from data/chars/lee/lee3.txt
+Cacheing 'lee4' from data/chars/lee/lee4.txt
+Cacheing 'lee5' from data/chars/lee/lee5.txt
+Cacheing 'ray' from data/chars/ray/ray.txt
+Cacheing 'ray3' from data/chars/ray/ray3.txt
+Cacheing 'ray2' from data/chars/ray/ray2.txt
+Cacheing 'ray4' from data/chars/ray/ray4.txt
+Cacheing 'matlock' from data/chars/matlock/matlock.txt
+Cacheing 'matlock2' from data/chars/matlock/matlock2.txt
+Cacheing 'matlock3' from data/chars/matlock/matlock3.txt
+Cacheing 'matlock4' from data/chars/matlock/matlock4.txt
+Cacheing 'mizogu' from data/chars/mizogu/mizogu.txt
+Cacheing 'mizogu2' from data/chars/mizogu/mizogu2.txt
+Cacheing 'zazie' from data/chars/zazie/zazie.txt
+Cacheing 'zazie2' from data/chars/zazie/zazie2.txt
+Cacheing 'yungmie' from data/chars/yungmie/yungmie.txt
+Cacheing 'yungmie2' from data/chars/yungmie/yungmie2.txt
+Cacheing 'yungmie3' from data/chars/yungmie/yungmie3.txt
+Cacheing 'yungmie4' from data/chars/yungmie/yungmie4.txt
+Cacheing 'mpowere' from data/chars/mpower/mpowere.txt
+Cacheing 'mpowere2' from data/chars/mpower/mpowere2.txt
+Cacheing 'brocken' from data/chars/brocken/brocken.txt
+Cacheing 'brocken2' from data/chars/brocken/brocken2.txt
+Cacheing 'mudman' from data/chars/mudman/mudman.txt
+Cacheing 'mudman2' from data/chars/mudman/mudman2.txt
+Cacheing 'jann' from data/chars/jann/jann.txt
+Cacheing 'jmax' from data/chars/jmax/jmax.txt
+Cacheing 'jmax2' from data/chars/jmax/jmax2.txt
+Cacheing 'jca' from data/chars/jcarn/jca.txt
+Cacheing 'jcarn' from data/chars/jcarn/jcarn.txt
+Cacheing 'jcarn2' from data/chars/jcarn/jcarn2.txt
+Cacheing 'jack' from data/chars/jack/jack.txt
+Cacheing 'jack2' from data/chars/jack/jack2.txt
+Cacheing 'kidde' from data/chars/kidde/kidde.txt
+Cacheing 'kidde2' from data/chars/kidde/kidde2.txt
+Cacheing 'ryofu' from data/chars/ryofu/ryofu.txt
+Cacheing 'ryofu2' from data/chars/ryofu/ryofu2.txt
+Cacheing 'zeus' from data/chars/zeus/zeus.txt
+Cacheing 'zeus2' from data/chars/zeus/zeus2.txt
+Cacheing 'neodio' from data/chars/neodio/neodio.txt
+Cacheing 'neodio2' from data/chars/neodio/neodio2.txt
+Cacheing 'bine' from data/chars/gokuu/bine.txt
+Cacheing 'bine2' from data/chars/gokuu/bine2.txt
+Cacheing 'coul' from data/chars/misc/coul.txt
+Cacheing 'could' from data/chars/misc/could.txt
+Cacheing 'surf' from data/chars/gokuu/surf/surf.txt
+Cacheing 'surf1' from data/chars/gokuu/surf/surf1.txt
+Cacheing 'surf2' from data/chars/gokuu/surf/surf2.txt
+Cacheing 'condor' from data/chars/kidd/pouli/condor.txt
+Cacheing 'kbu' from data/chars/misc/kbu.txt
+Cacheing 'kbu2' from data/chars/misc/kbu2.txt
+Cacheing 'kb' from data/chars/misc/kb.txt
+Cacheing 'kb2' from data/chars/misc/kb2.txt
+Cacheing 'kshifl' from data/chars/misc/kshifl.txt
+Cacheing 'inv' from data/chars/inv/inv.txt
+Cacheing 'flasss' from data/chars/misc/flasss.txt
+Cacheing 'bbflash' from data/chars/misc/bbflash.txt
+Cacheing 'rockfl1' from data/chars/misc/rockfl1.txt
+Cacheing 'torch' from data/chars/misc/torch.txt
+Cacheing 'torchb' from data/chars/misc/torchb.txt
+Cacheing 'torchc' from data/chars/misc/torchc.txt
+Cacheing 'torchd' from data/chars/misc/torchd.txt
+Cacheing 'bacley' from data/levels/castle3/bacley.txt
+Cacheing 'fila' from data/levels/japan/fila.txt
+Cacheing 'fg5' from data/levels/japan/fg5.txt
+Cacheing 'guar' from data/levels/japan2/guar.txt
+Cacheing 'enddd' from data/levels/japan2/enddd.txt
+Cacheing 'noct' from data/levels/japan2/noct.txt
+Cacheing 'aru' from data/levels/japan2/aru.txt
+Cacheing 'arf' from data/levels/japan2/arf.txt
+Cacheing 'wfall' from data/levels/japan3/wfall.txt
+Cacheing 'bus' from data/levels/Korea/bus.txt
+Cacheing 'fg6' from data/levels/Korea/fg6.txt
+Cacheing 'flag' from data/levels/Korea/flag.txt
+Cacheing 'girl' from data/levels/Korea/girl.txt
+Cacheing 'girl2' from data/levels/Korea/girl2.txt
+Cacheing 'girl3' from data/levels/Korea/girl3.txt
+Cacheing 'fire' from data/levels/Korea3/fire.txt
+Cacheing 'wat' from data/levels/Korea3/wat.txt
+Cacheing 'fg7' from data/levels/Korea3/fg7.txt
+Cacheing 'work' from data/levels/usa/work.txt
+Cacheing 'work2' from data/levels/usa/work2.txt
+Cacheing 'work3' from data/levels/usa/work3.txt
+Cacheing 'work4' from data/levels/usa/work4.txt
+Cacheing 'ca' from data/levels/germa3/ca.txt
+Cacheing 'spike' from data/levels/germa3/spike.txt
+Cacheing 'ob' from data/levels/germa3/ob.txt
+Cacheing 'ob2' from data/levels/germa3/ob2.txt
+Cacheing 'fi' from data/levels/guinea/fi.txt
+Cacheing 'ba' from data/levels/guinea2/ba.txt
+Cacheing 'fg' from data/levels/guinea2/fg.txt
+Cacheing 'fir' from data/levels/guinea2/fir.txt
+Cacheing 'fir2' from data/levels/guinea2/fir2.txt
+Cacheing 'pe' from data/levels/guinea2/pe.txt
+Cacheing 'peo' from data/levels/guinea2/peo.txt
+Cacheing 'peop' from data/levels/guinea2/peop.txt
+Cacheing 'to' from data/levels/guinea2/to.txt
+Cacheing 'tor' from data/levels/guinea2/tor.txt
+Cacheing 'airship' from data/levels/usa4/airship/airship.txt
+Cacheing 'lamp' from data/levels/usa4/lamp.txt
+Cacheing 'lamp2' from data/levels/usa4/lamp2.txt
+Cacheing 'fg1' from data/levels/castle/fg1.txt
+Cacheing 'fg2' from data/levels/castle2/fg2.txt
+Cacheing 'fg3' from data/levels/germa2/fg3.txt
+Cacheing 'fg4' from data/levels/germael/fg4.txt
+Cacheing 'tig' from data/levels/castle2/tig.txt
+Cacheing 'pouli' from data/levels/castle2/pouli.txt
+Cacheing 'brani' from data/levels/brance/brani.txt
+Cacheing 'bam' from data/levels/practice/bam.txt
+Cacheing 'elrin' from data/levels/survival/elrin.txt
+Cacheing 'firerin' from data/levels/survival/firerin.txt
+Cacheing 'ob3' from data/levels/survival/ob3.txt
+Cacheing 'ob4' from data/levels/survival/ob4.txt
+Cacheing 'backpe' from data/levels/survival/backpe.txt
+Cacheing 'phot' from data/levels/survival/phot.txt
+Cacheing 'spa' from data/chars/misc/spa.txt
+Cacheing 'elbac' from data/bgs/elbac/elbac.txt
+Cacheing 'empspa' from data/chars/misc/empspa.txt
+Cacheing 'empspa1' from data/chars/misc/empspa1.txt
+Cacheing 'empspa2' from data/chars/misc/empspa2.txt
+Cacheing 'empspa3' from data/chars/misc/empspa3.txt
+Cacheing 'empspa4' from data/chars/misc/empspa4.txt
+Cacheing 'empspa5' from data/chars/misc/empspa5.txt
+Cacheing 'empspa6' from data/chars/misc/empspa6.txt
+Cacheing 'empspa7' from data/chars/misc/empspa7.txt
+Cacheing 'endd' from data/chars/misc/endd.txt
+Cacheing 'endddd' from data/chars/misc/endddd.txt
+Cacheing 'obst' from data/chars/misc/obst.txt
+Cacheing 'obsta' from data/chars/misc/obsta.txt
+Cacheing 'obstaa' from data/chars/misc/obstaa.txt
+Cacheing 'obstaca' from data/chars/misc/obstaca.txt
+Cacheing 'obstacb' from data/chars/misc/obstacb.txt
+Cacheing 'obstacc' from data/chars/misc/obstacc.txt
+Cacheing 'obstace' from data/chars/misc/obstace.txt
+Cacheing 'obstacf' from data/chars/misc/obstacf.txt
+Cacheing 'obstacg' from data/chars/misc/obstacg.txt
+Cacheing 'obstach' from data/chars/misc/obstach.txt
+Cacheing 'obstaci' from data/chars/misc/obstaci.txt
+Cacheing 'obstack' from data/chars/misc/obstack.txt
+Cacheing 'obstacm' from data/chars/misc/obstacm.txt
+Cacheing 'obstacm1' from data/chars/misc/obstacm1.txt
+Cacheing 'obstacn' from data/chars/misc/obstacn.txt
+Cacheing 'phone' from data/chars/misc/phone.txt
+Cacheing 'bar' from data/chars/misc/bar.txt
+Cacheing 'bare' from data/chars/misc/bare.txt
+Cacheing 'barel' from data/chars/misc/barel.txt
+Cacheing 'barelex' from data/chars/misc/barelex.txt
+Cacheing 'barelex1' from data/chars/misc/barelex1.txt
+Cacheing 'expl' from data/chars/misc/expl.txt
+Cacheing 'trap1' from data/chars/misc/trap1.txt
+Cacheing 'trap2' from data/chars/misc/trap2.txt
+Cacheing 'trap3' from data/chars/misc/trap3.txt
+Cacheing 'trap4' from data/chars/misc/trap4.txt
+Cacheing 'trap5' from data/chars/misc/trap5.txt
+Cacheing 'trap6' from data/chars/misc/trap6.txt
+Cacheing 'trap7' from data/chars/misc/trap7.txt
+Cacheing 'trap8' from data/chars/misc/trap8.txt
+Cacheing 'trap9' from data/chars/misc/trap9.txt
+Cacheing 'trape' from data/chars/misc/trape.txt
+Cacheing 'trapd' from data/chars/misc/trapd.txt
+Cacheing 'trapd1' from data/chars/misc/trapd1.txt
+Cacheing 'trapd2' from data/chars/misc/trapd2.txt
+Cacheing 'trapde1' from data/chars/misc/trapde1.txt
+Cacheing 'mesh_neon' from data/levels/usa2/pal/mesh_neon.txt
+
+Loading 'flash' from data/chars/misc/flash.txt
+Loading 'flas' from data/chars/misc/flas.txt
+Loading 'EFlash' from data/chars/misc/eflash.txt
+Loading 'blood' from data/chars/misc/blood.txt
+Loading 'bloo' from data/chars/misc/bloo.txt
+Loading 'blo' from data/chars/misc/blo.txt
+Loading 'obfla' from data/chars/misc/obfla.txt
+Loading 'ffla' from data/chars/misc/ffla.txt
+Loading 'fffla' from data/chars/misc/fffla.txt
+Loading 'hbfla' from data/chars/misc/hbfla.txt
+Loading 'fbfla' from data/chars/misc/fbfla.txt
+Loading 'bflash' from data/chars/misc/bflash.txt
+Loading 'rockfl' from data/chars/misc/rockfl.txt
+Loading 'du' from data/chars/misc/du.txt
+Loading 'dus' from data/chars/misc/dus.txt
+Loading 'hab' from data/chars/misc/hab.txt
+Loading 'fub' from data/chars/misc/fub.txt
+Loading 'rockfl1' from data/chars/misc/rockfl1.txt
+Loading 'rocket' from data/chars/misc/rocket.txt
+Loading 'rocket2' from data/chars/misc/rocket2.txt
+Loading 'kna' from data/chars/misc/kna.txt
+Loading 'mudb' from data/chars/misc/mudb.txt
+Loading 'maxb' from data/chars/misc/maxb.txt
+Loading 'jab' from data/chars/misc/jab.txt
+Loading 'jab2' from data/chars/misc/jab2.txt
+Loading 'maxa' from data/chars/misc/maxa.txt
+Loading 'maxfl' from data/chars/misc/maxfl.txt
+Loading 'jabfl' from data/chars/misc/jabfl.txt
+Loading 'EFlame' from data/chars/misc/eflame.txt
+Loading 'EEFlame' from data/chars/misc/eeflame.txt
+Loading 'kbb' from data/chars/misc/kbb.txt
+Loading 'kbb2' from data/chars/misc/kbb2.txt
+Loading 'kbfl' from data/chars/misc/kbfl.txt
+Loading 'elect' from data/chars/misc/elect.txt
+Loading 'HANZOU' from data/chars/hanzou/hanzou.txt
+Loading 'FUUMA' from data/chars/fuuma/fuuma.txt
+
+Loading models...............	Done!
+Object engine init...........	Done!
+Input init...................	No Joystick(s) Found!
+Done!
+Create blending tables.......	Done!
+Save settings so far........	Done!
+
+
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+
+
+Error:dc_move_set_entity(void value)
+{value} must be a valid pointer for a currently existing entity.
+Level Loading:   'data/levels/usa/usa.txt'
+Total Ram: 2147483647 Bytes
+ Free Ram: 2147483647 Bytes
+ Used Ram: 55136256 Bytes
+
+Loading 'work2' from data/levels/usa/work2.txt
+Loading 'work3' from data/levels/usa/work3.txt
+Loading 'work4' from data/levels/usa/work4.txt
+Loading 'bare' from data/chars/misc/bare.txt
+Loading 'ring' from data/sprites/aniback/ring.txt
+Loading 'obstach' from data/chars/misc/obstach.txt
+Loading 'obstacg' from data/chars/misc/obstacg.txt
+Loading 'susi' from data/sprites/aniback/susi.txt
+Loading 'bar' from data/chars/misc/bar.txt
+Loading 'pizza' from data/sprites/aniback/pizza.txt
+Loading 'diamond' from data/sprites/aniback/diamond.txt
+Command '10' not understood in file 'data/chars/ray/ray.txt'!
+Loading 'ray' from data/chars/ray/ray.txt
+Loading 'matlock' from data/chars/matlock/matlock.txt
+Loading 'yungmie' from data/chars/yungmie/yungmie.txt
+
+Level Loaded:    'data/levels/usa/usa.txt'
+Total Ram: 2147483647 Bytes
+ Free Ram: 2147483647 Bytes
+ Used Ram: 58519552 Bytes
+Total sprites mapped: 1279
+
+
+************ Shutting Down ************
+
+OpenBOR v3.0 Build , Compile Date: Apr 20 2017
+Presented by the OpenBOR Team.
+www.chronocrash.com
+OpenBOR is the open source continuation of Beats of Rage by Senile Team.
+
+Special thanks to SEGA and SNK.
+
+Total Ram: 2147483647 Bytes
+ Free Ram: 2147483647 Bytes
+ Used Ram: 58716160 Bytes
+
+Release level data...........
+Level Unloading: 'data/levels/usa/usa.txt'
+Total Ram: 2147483647 Bytes
+ Free Ram: 2147483647 Bytes
+ Used Ram: 58716160 Bytes
+
+RAM Status:
+Total Ram: 2147483647 Bytes
+ Free Ram: 2147483647 Bytes
+ Used Ram: 58716160 Bytes
+
+Done!
+
+Release graphics data........	Done!
+Release game data............
+
+Unload 'flash' ............Done.
+Unload 'flas' ............Done.
+Unload 'EFlash' ............Done.
+Unload 'blood' ............Done.
+Unload 'bloo' ............Done.
+Unload 'blo' ............Done.
+Unload 'obfla' ............Done.
+Unload 'ffla' ............Done.
+Unload 'fffla' ............Done.
+Unload 'hbfla' ............Done.
+Unload 'fbfla' ............Done.
+Unload 'bflash' ............Done.
+Unload 'rockfl' ............Done.
+Unload 'du' ............Done.
+Unload 'dus' ............Done.
+Unload 'hab' ............Done.
+Unload 'fub' ............Done.
+Unload 'rocket' ............Done.
+Unload 'rockfl1' ............Done.
+Unload 'rocket2' ............Done.
+Unload 'kna' ............Done.
+Unload 'mudb' ............Done.
+Unload 'maxb' ............Done.
+Unload 'jab' ............Done.
+Unload 'jab2' ............Done.
+Unload 'maxa' ............Done.
+Unload 'maxfl' ............Done.
+Unload 'jabfl' ............Done.
+Unload 'EFlame' ............Done.
+Unload 'EEFlame' ............Done.
+Unload 'kbb' ............Done.
+Unload 'kbb2' ............Done.
+Unload 'kbfl' ............Done.
+Unload 'elect' ............Done.
+Unload 'HANZOU' ............Done.
+Unload 'FUUMA' ............Done.
+Unload 'work2' ............Done.
+Unload 'work3' ............Done.
+Unload 'work4' ............Done.
+Unload 'bare' ............Done.
+Unload 'ring' ............Done.
+Unload 'obstach' ............Done.
+Unload 'obstacg' ............Done.
+Unload 'susi' ............Done.
+Unload 'bar' ............Done.
+Unload 'pizza' ............Done.
+Unload 'diamond' ............Done.
+Unload 'ray' ............Done.
+Unload 'matlock' ............Done.
+Unload 'yungmie' ............Done.
+
+Release game data............	Done!
+Release timer................	Done!
+Release input hardware.......	Done!
+Release sound system.........	Done!
+Release FileCaching System...	Done!
+
+**************** Done *****************
+
+OpenBOR v3.0 Build , Compile Date: Apr 20 2017
+Presented by the OpenBOR Team.
+www.chronocrash.com
+OpenBOR is the open source continuation of Beats of Rage by Senile Team.
+
+Special thanks to SEGA and SNK.
+

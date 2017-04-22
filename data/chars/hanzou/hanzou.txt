@@ -36,11 +36,12 @@ load	hab
 animationscript 	data/scripts/ani0020.h
 onfallscript data/scripts/release.c
 
-palette   data/chars/hanzou/idle.gif
-alternatepal data/chars/hanzou/map5.gif
-alternatepal data/chars/hanzou/map3.gif
-alternatepal data/chars/hanzou/map6.gif
-alternatepal data/chars/hanzou/map2.gif
+palette   data/chars/hanzou/pal_orginal.act
+alternatepal data/chars/hanzou/pal_red.act
+alternatepal data/chars/hanzou/pal_light_violet.act
+alternatepal data/chars/hanzou/pal_slate_blue.act
+alternatepal data/chars/hanzou/pal_black.act
+alternatepal data/chars/hanzou/pal_yellow.act
 
 anim spawn
 	loop	0

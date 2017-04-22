@@ -1,0 +1,2262 @@
+
+#### animationscript function main #####
+# data/chars/hanzou/hanzou.txt
+########################################
+void main()
+{
+    int frame = getlocalvar("frame");
+    int animhandle = getlocalvar("animhandle");
+    if(animhandle==37)
+    {
+        if(frame==56)
+        {
+            spawn01("dus", 0, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==40)
+    {
+        if(frame==0)
+        {
+            clearL();
+        }
+        return;
+    }
+    if(animhandle==43)
+    {
+        if(frame==11)
+        {
+            run0001();
+        }
+        return;
+    }
+    if(animhandle==49)
+    {
+        if(frame==0)
+        {
+            spawnbind("EEFlame", -12, 41, 1);
+        }
+        return;
+    }
+    if(animhandle==51)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==52)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==53)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==54)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==55)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==56)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==57)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("elect", 0, 0, 1);
+        }
+        if(frame==25)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==58)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("EFlame", -16, 47, 1);
+        }
+        if(frame==15)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==70)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==71)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==72)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==73)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==74)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==75)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==76)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==77)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==79)
+    {
+        if(frame==0)
+        {
+            slamstart();
+        }
+        if(frame==0)
+        {
+            position(18, 60, 30, 0, 1);
+        }
+        if(frame==1)
+        {
+            position(19, 55, 15, 0, 1);
+        }
+        if(frame==2)
+        {
+            position(20, 65, 50, 0, 1);
+        }
+        if(frame==6)
+        {
+            position(21, 80, 20, 0, 1);
+        }
+        if(frame==7)
+        {
+            dasher(2, -3, 0);
+        }
+        if(frame==8)
+        {
+            position(21, 80, -20, 0, 1);
+        }
+        if(frame==9)
+        {
+            position(22, 80, -20, 0, 1);
+        }
+        if(frame==9)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==10)
+        {
+            hurt(25);
+        }
+        if(frame==10)
+        {
+            position(23, 75, 15, 0, 1);
+        }
+        if(frame==10)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==10)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==14)
+        {
+            depost(0);
+        }
+        if(frame==14)
+        {
+            finish(5, 2, 2, 2, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==80)
+    {
+        if(frame==0)
+        {
+            slamstart();
+        }
+        if(frame==0)
+        {
+            position(6, 38, 0, -1, 0);
+        }
+        if(frame==1)
+        {
+            position(6, 38, -10, -1, 0);
+        }
+        if(frame==2)
+        {
+            position(24, -7, 50, 0, 1);
+        }
+        if(frame==5)
+        {
+            position(25, 5, 50, 0, 1);
+        }
+        if(frame==7)
+        {
+            position(26, 70, 50, 0, 1);
+        }
+        if(frame==7)
+        {
+            antiwall2(40, 0, -1);
+        }
+        if(frame==7)
+        {
+            antiwall2(20, 0, -1);
+        }
+        if(frame==7)
+        {
+            antiwall2(0, 0, -1);
+        }
+        if(frame==8)
+        {
+            antiwall2(60, 0, -1);
+        }
+        if(frame==8)
+        {
+            antiwall(40, -40, -1);
+        }
+        if(frame==8)
+        {
+            antiwall(20, -60, -1);
+        }
+        if(frame==8)
+        {
+            antiwall(0, -80, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(40, -40, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(20, -60, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(0, -80, -1);
+        }
+        if(frame==10)
+        {
+            position(27, 70, 30, 0, 1);
+        }
+        if(frame==10)
+        {
+            antiwall(40, -40, -1);
+        }
+        if(frame==10)
+        {
+            antiwall(20, -60, -1);
+        }
+        if(frame==10)
+        {
+            antiwall(0, -80, -1);
+        }
+        if(frame==11)
+        {
+            position(27, 70, 25, 0, 1);
+        }
+        if(frame==12)
+        {
+            position(27, 71, 20, 0, 1);
+        }
+        if(frame==13)
+        {
+            position(27, 71, 15, 0, 1);
+        }
+        if(frame==14)
+        {
+            position(27, 72, 10, 0, 1);
+        }
+        if(frame==15)
+        {
+            position(27, 72, 5, 0, 1);
+        }
+        if(frame==16)
+        {
+            position(27, 73, -5, 0, 1);
+        }
+        if(frame==17)
+        {
+            hurt(25);
+        }
+        if(frame==17)
+        {
+            position(28, 73, -14, 0, 1);
+        }
+        if(frame==18)
+        {
+            depost(0);
+        }
+        if(frame==18)
+        {
+            throw(5, 2, 1, 3, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==81)
+    {
+        if(frame==0)
+        {
+            slamstart();
+        }
+        if(frame==0)
+        {
+            position(29, 40, 0, -1, 1);
+        }
+        if(frame==2)
+        {
+            hurt(10);
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 70, 20, 1);
+        }
+        if(frame==3)
+        {
+            depost(0);
+        }
+        if(frame==3)
+        {
+            finish(5, 1, 2.5, 3, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==82)
+    {
+        if(frame==0)
+        {
+            ani0020(openborconstant("ANI_FOLLOW1"), openborconstant("ANI_PAIN2"));
+        }
+        return;
+    }
+    if(animhandle==83)
+    {
+        if(frame==0)
+        {
+            conditionalflip();
+        }
+        return;
+    }
+    if(animhandle==88)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==89)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==90)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==97)
+    {
+        if(frame==0)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        if(frame==0)
+        {
+            bind(1, 40, -1, 0, -1);
+        }
+        if(frame==1)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 60, 0, 1);
+        }
+        if(frame==2)
+        {
+            hurt2(5);
+        }
+        if(frame==5)
+        {
+            anichange("ANI_FOLLOW4");
+        }
+        return;
+    }
+    if(animhandle==98)
+    {
+        if(frame==0)
+        {
+            bind(0, 40, -1, 0, -1);
+        }
+        if(frame==0)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 60, 0, 1);
+        }
+        if(frame==2)
+        {
+            hurt2(5);
+        }
+        if(frame==5)
+        {
+            anichange("ANI_FOLLOW5");
+        }
+        return;
+    }
+    if(animhandle==99)
+    {
+        if(frame==0)
+        {
+            slamstart2();
+        }
+        if(frame==0)
+        {
+            position(29, 36, 0, -1, 1);
+        }
+        if(frame==2)
+        {
+            hurt(10);
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 70, 20, 1);
+        }
+        if(frame==3)
+        {
+            depost(0);
+        }
+        if(frame==3)
+        {
+            finish(5, 1, 2.5, 3, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==100)
+    {
+        if(frame==0)
+        {
+            bind(1, 40, -1, 0, -1);
+        }
+        if(frame==0)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        return;
+    }
+    if(animhandle==101)
+    {
+        if(frame==0)
+        {
+            bind(1, 40, -1, 0, -1);
+        }
+        if(frame==0)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        return;
+    }
+    if(animhandle==102)
+    {
+        if(frame==0)
+        {
+            slamstart2();
+        }
+        if(frame==0)
+        {
+            position(18, 60, 30, 0, 1);
+        }
+        if(frame==1)
+        {
+            position(19, 55, 15, 0, 1);
+        }
+        if(frame==2)
+        {
+            position(20, 65, 50, 0, 1);
+        }
+        if(frame==6)
+        {
+            position(21, 80, 20, 0, 1);
+        }
+        if(frame==7)
+        {
+            dasher(2, -3, 0);
+        }
+        if(frame==8)
+        {
+            position(21, 80, -20, 0, 1);
+        }
+        if(frame==9)
+        {
+            position(22, 80, -20, 0, 1);
+        }
+        if(frame==9)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==10)
+        {
+            hurt(25);
+        }
+        if(frame==10)
+        {
+            position(23, 75, 15, 0, 1);
+        }
+        if(frame==10)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==10)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==14)
+        {
+            depost(0);
+        }
+        if(frame==14)
+        {
+            finish(5, 2, 2, 2, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==103)
+    {
+        if(frame==0)
+        {
+            slamstart2();
+        }
+        if(frame==0)
+        {
+            position(29, 36, 0, -1, 1);
+        }
+        if(frame==2)
+        {
+            hurt(10);
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 70, 20, 1);
+        }
+        if(frame==3)
+        {
+            depost(0);
+        }
+        if(frame==3)
+        {
+            finish(5, 1, 2.5, 3, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==104)
+    {
+        if(frame==0)
+        {
+            slamstart2();
+        }
+        if(frame==0)
+        {
+            position(6, 38, 0, -1, 0);
+        }
+        if(frame==1)
+        {
+            position(6, 38, -10, -1, 0);
+        }
+        if(frame==2)
+        {
+            position(24, -7, 50, 0, 1);
+        }
+        if(frame==5)
+        {
+            position(25, 5, 50, 0, 1);
+        }
+        if(frame==7)
+        {
+            position(26, 70, 50, 0, 1);
+        }
+        if(frame==7)
+        {
+            antiwall2(40, 0, -1);
+        }
+        if(frame==7)
+        {
+            antiwall2(20, 0, -1);
+        }
+        if(frame==7)
+        {
+            antiwall2(0, 0, -1);
+        }
+        if(frame==8)
+        {
+            antiwall2(60, 0, -1);
+        }
+        if(frame==8)
+        {
+            antiwall(40, -40, -1);
+        }
+        if(frame==8)
+        {
+            antiwall(20, -60, -1);
+        }
+        if(frame==8)
+        {
+            antiwall(0, -80, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(40, -40, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(20, -60, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(0, -80, -1);
+        }
+        if(frame==10)
+        {
+            position(27, 70, 30, 0, 1);
+        }
+        if(frame==10)
+        {
+            antiwall(40, -40, -1);
+        }
+        if(frame==10)
+        {
+            antiwall(20, -60, -1);
+        }
+        if(frame==10)
+        {
+            antiwall(0, -80, -1);
+        }
+        if(frame==11)
+        {
+            position(27, 70, 25, 0, 1);
+        }
+        if(frame==12)
+        {
+            position(27, 71, 20, 0, 1);
+        }
+        if(frame==13)
+        {
+            position(27, 71, 15, 0, 1);
+        }
+        if(frame==14)
+        {
+            position(27, 72, 10, 0, 1);
+        }
+        if(frame==15)
+        {
+            position(27, 72, 5, 0, 1);
+        }
+        if(frame==16)
+        {
+            position(27, 73, -5, 0, 1);
+        }
+        if(frame==17)
+        {
+            hurt(25);
+        }
+        if(frame==17)
+        {
+            position(28, 73, -14, 0, 1);
+        }
+        if(frame==18)
+        {
+            depost(0);
+        }
+        if(frame==18)
+        {
+            throw(5, 2, 1, 3, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==106)
+    {
+        if(frame==12)
+        {
+            anichange("ANI_FOLLOW7");
+        }
+        return;
+    }
+
+}
+
+#### animationscript function main #####
+# data/chars/fuuma/fuuma.txt
+########################################
+void main()
+{
+    int frame = getlocalvar("frame");
+    int animhandle = getlocalvar("animhandle");
+    if(animhandle==111)
+    {
+        if(frame==0)
+        {
+            stop();
+        }
+        if(frame==0)
+        {
+            set_toss_time(getlocalvar("self"), 18);
+        }
+        if(frame==3)
+        {
+            anichange(openborconstant("ANI_FOLLOW41"));
+        }
+        return;
+    }
+    if(animhandle==117)
+    {
+        if(frame==56)
+        {
+            spawn01("dus", 0, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==120)
+    {
+        if(frame==0)
+        {
+            clearL();
+        }
+        return;
+    }
+    if(animhandle==123)
+    {
+        if(frame==11)
+        {
+            run0001();
+        }
+        return;
+    }
+    if(animhandle==129)
+    {
+        if(frame==0)
+        {
+            spawnbind("EEFlame", -12, 41, 1);
+        }
+        return;
+    }
+    if(animhandle==131)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==132)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==133)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==134)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==135)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==136)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==137)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("elect", 0, 0, 1);
+        }
+        if(frame==25)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==138)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("EFlame", -16, 47, 1);
+        }
+        if(frame==15)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==143)
+    {
+        if(frame==0)
+        {
+            ani0020(openborconstant("ANI_FOLLOW2"), openborconstant("ANI_PAIN2"));
+        }
+        if(frame==0)
+        {
+            ani0020(openborconstant("ANI_FOLLOW3"), openborconstant("ANI_FOLLOW8"));
+        }
+        return;
+    }
+    if(animhandle==148)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==149)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+    if(animhandle==150)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==151)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==152)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==153)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==154)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==155)
+    {
+        if(frame==1)
+        {
+            anichange("ANI_FOLLOW9");
+        }
+        return;
+    }
+    if(animhandle==157)
+    {
+        if(frame==0)
+        {
+            slamstart();
+        }
+        if(frame==0)
+        {
+            position(18, 60, 30, 0, 1);
+        }
+        if(frame==1)
+        {
+            position(19, 55, 15, 0, 1);
+        }
+        if(frame==2)
+        {
+            position(20, 65, 50, 0, 1);
+        }
+        if(frame==6)
+        {
+            position(21, 80, 20, 0, 1);
+        }
+        if(frame==7)
+        {
+            dasher(2, -3, 0);
+        }
+        if(frame==8)
+        {
+            position(21, 80, -20, 0, 1);
+        }
+        if(frame==9)
+        {
+            position(22, 80, -20, 0, 1);
+        }
+        if(frame==9)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==10)
+        {
+            hurt(25);
+        }
+        if(frame==10)
+        {
+            position(23, 75, 15, 0, 1);
+        }
+        if(frame==10)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==10)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==14)
+        {
+            depost(0);
+        }
+        if(frame==14)
+        {
+            finish(5, 2, 2, 2, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==158)
+    {
+
+    void vSelf = getlocalvar("self");	
+
+    if(frame==26){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 30);
+    }
+        if(frame==0)
+        {
+            slamstart();
+        }
+        if(frame==0)
+        {
+            position(6, 38, 0, -1, 0);
+        }
+        if(frame==1)
+        {
+            position(6, 38, -10, -1, 0);
+        }
+        if(frame==2)
+        {
+            position(24, -7, 50, 0, 1);
+        }
+        if(frame==5)
+        {
+            position(25, 5, 50, 0, 1);
+        }
+        if(frame==7)
+        {
+            position(26, 70, 50, 0, 1);
+        }
+        if(frame==13)
+        {
+            position(27, 70, 30, 0, 1);
+        }
+        if(frame==14)
+        {
+            position(27, 70, 20, 0, 1);
+        }
+        if(frame==15)
+        {
+            position(27, 70, 10, 0, 1);
+        }
+        if(frame==16)
+        {
+            position(27, 71, 0, 0, 1);
+        }
+        if(frame==17)
+        {
+            position(27, 71, -10, 0, 1);
+        }
+        if(frame==18)
+        {
+            position(27, 71, -20, 0, 1);
+        }
+        if(frame==19)
+        {
+            position(27, 72, -30, 0, 1);
+        }
+        if(frame==20)
+        {
+            position(27, 72, -40, 0, 1);
+        }
+        if(frame==20)
+        {
+            antiwall2(60, 0, -1);
+        }
+        if(frame==20)
+        {
+            antiwall2(40, 0, -1);
+        }
+        if(frame==20)
+        {
+            antiwall2(20, 0, -1);
+        }
+        if(frame==20)
+        {
+            antiwall2(0, 0, -1);
+        }
+        if(frame==21)
+        {
+            position(27, 72, -50, 0, 1);
+        }
+        if(frame==21)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==21)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==22)
+        {
+            position(27, 73, -60, 0, 1);
+        }
+        if(frame==22)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==22)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==23)
+        {
+            position(27, 73, -70, 0, 1);
+        }
+        if(frame==23)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==23)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==24)
+        {
+            position(27, 73, -80, 0, 1);
+        }
+        if(frame==24)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==24)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==25)
+        {
+            hurt(25);
+        }
+        if(frame==25)
+        {
+            position(27, 74, -80, 0, 1);
+        }
+        if(frame==26)
+        {
+            depost(0);
+        }
+        if(frame==26)
+        {
+            throw(5, 2, 1, 2, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==159)
+    {
+        if(frame==0)
+        {
+            slamstart();
+        }
+        if(frame==0)
+        {
+            position(29, 40, 0, -1, 1);
+        }
+        if(frame==2)
+        {
+            hurt(10);
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 70, 20, 1);
+        }
+        if(frame==3)
+        {
+            depost(0);
+        }
+        if(frame==3)
+        {
+            finish(5, 1, 2.5, 3, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==160)
+    {
+        if(frame==0)
+        {
+            ani0020(openborconstant("ANI_FOLLOW1"), openborconstant("ANI_PAIN2"));
+        }
+        return;
+    }
+    if(animhandle==161)
+    {
+        if(frame==0)
+        {
+            conditionalflip();
+        }
+        return;
+    }
+    if(animhandle==166)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==167)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==168)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==175)
+    {
+        if(frame==0)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        if(frame==0)
+        {
+            bind(1, 40, -1, 0, -1);
+        }
+        if(frame==1)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 60, 0, 1);
+        }
+        if(frame==2)
+        {
+            hurt2(5);
+        }
+        if(frame==5)
+        {
+            anichange("ANI_FOLLOW4");
+        }
+        return;
+    }
+    if(animhandle==176)
+    {
+        if(frame==0)
+        {
+            bind(0, 40, -1, 0, -1);
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 60, 0, 1);
+        }
+        if(frame==2)
+        {
+            hurt2(5);
+        }
+        if(frame==5)
+        {
+            anichange("ANI_FOLLOW5");
+        }
+        return;
+    }
+    if(animhandle==177)
+    {
+        if(frame==0)
+        {
+            slamstart2();
+        }
+        if(frame==0)
+        {
+            position(29, 36, 0, -1, 1);
+        }
+        if(frame==2)
+        {
+            hurt(10);
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 70, 20, 1);
+        }
+        if(frame==3)
+        {
+            depost(0);
+        }
+        if(frame==3)
+        {
+            finish(5, 1, 3, 2.5, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==178)
+    {
+        if(frame==0)
+        {
+            bind(1, 40, -1, 0, -1);
+        }
+        if(frame==0)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        return;
+    }
+    if(animhandle==179)
+    {
+        if(frame==0)
+        {
+            bind(1, 40, -1, 0, -1);
+        }
+        if(frame==0)
+        {
+            forceanim(openborconstant("ANI_FOLLOW2"));
+        }
+        return;
+    }
+    if(animhandle==180)
+    {
+        if(frame==0)
+        {
+            slamstart2();
+        }
+        if(frame==0)
+        {
+            position(18, 60, 30, 0, 1);
+        }
+        if(frame==1)
+        {
+            position(19, 55, 15, 0, 1);
+        }
+        if(frame==2)
+        {
+            position(20, 65, 50, 0, 1);
+        }
+        if(frame==6)
+        {
+            position(21, 80, 20, 0, 1);
+        }
+        if(frame==7)
+        {
+            dasher(2, -3, 0);
+        }
+        if(frame==8)
+        {
+            position(21, 80, -20, 0, 1);
+        }
+        if(frame==9)
+        {
+            position(22, 80, -20, 0, 1);
+        }
+        if(frame==9)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==9)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==10)
+        {
+            hurt(25);
+        }
+        if(frame==10)
+        {
+            position(23, 75, 15, 0, 1);
+        }
+        if(frame==10)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==10)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==14)
+        {
+            depost(0);
+        }
+        if(frame==14)
+        {
+            finish(5, 2, 2, 2, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==181)
+    {
+        if(frame==0)
+        {
+            slamstart2();
+        }
+        if(frame==0)
+        {
+            position(29, 36, 0, -1, 1);
+        }
+        if(frame==2)
+        {
+            hurt(10);
+        }
+        if(frame==2)
+        {
+            spawn01("flas", 70, 20, 1);
+        }
+        if(frame==3)
+        {
+            depost(0);
+        }
+        if(frame==3)
+        {
+            finish(5, 1, 3, 2.5, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==182)
+    {
+
+    void vSelf = getlocalvar("self");	
+
+    if(frame==26){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 30);
+    }
+        if(frame==0)
+        {
+            slamstart2();
+        }
+        if(frame==0)
+        {
+            position(6, 38, 0, -1, 0);
+        }
+        if(frame==1)
+        {
+            position(6, 38, -10, -1, 0);
+        }
+        if(frame==2)
+        {
+            position(24, -7, 50, 0, 1);
+        }
+        if(frame==5)
+        {
+            position(25, 5, 50, 0, 1);
+        }
+        if(frame==7)
+        {
+            position(26, 70, 50, 0, 1);
+        }
+        if(frame==13)
+        {
+            position(27, 70, 30, 0, 1);
+        }
+        if(frame==14)
+        {
+            position(27, 70, 20, 0, 1);
+        }
+        if(frame==15)
+        {
+            position(27, 70, 10, 0, 1);
+        }
+        if(frame==16)
+        {
+            position(27, 71, 0, 0, 1);
+        }
+        if(frame==17)
+        {
+            position(27, 71, -10, 0, 1);
+        }
+        if(frame==18)
+        {
+            position(27, 71, -20, 0, 1);
+        }
+        if(frame==19)
+        {
+            position(27, 72, -30, 0, 1);
+        }
+        if(frame==20)
+        {
+            position(27, 72, -40, 0, 1);
+        }
+        if(frame==20)
+        {
+            antiwall2(60, 0, -1);
+        }
+        if(frame==20)
+        {
+            antiwall2(40, 0, -1);
+        }
+        if(frame==20)
+        {
+            antiwall2(20, 0, -1);
+        }
+        if(frame==20)
+        {
+            antiwall2(0, 0, -1);
+        }
+        if(frame==21)
+        {
+            position(27, 72, -50, 0, 1);
+        }
+        if(frame==21)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==21)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==22)
+        {
+            position(27, 73, -60, 0, 1);
+        }
+        if(frame==22)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==22)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==23)
+        {
+            position(27, 73, -70, 0, 1);
+        }
+        if(frame==23)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==23)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==24)
+        {
+            position(27, 73, -80, 0, 1);
+        }
+        if(frame==24)
+        {
+            antiwall(20, -20, -1);
+        }
+        if(frame==24)
+        {
+            antiwall(0, -40, -1);
+        }
+        if(frame==25)
+        {
+            hurt(25);
+        }
+        if(frame==25)
+        {
+            position(27, 74, -80, 0, 1);
+        }
+        if(frame==26)
+        {
+            depost(0);
+        }
+        if(frame==26)
+        {
+            throw(5, 2, 1, 2, 0, 1);
+        }
+        return;
+    }
+    if(animhandle==184)
+    {
+        if(frame==11)
+        {
+            anichange("ANI_FOLLOW7");
+        }
+        return;
+    }
+    if(animhandle==190)
+    {
+        if(frame==0)
+        {
+            degravity(-0.5);
+        }
+        return;
+    }
+    if(animhandle==191)
+    {
+        if(frame==1)
+        {
+            grabcheckA("ANI_FOLLOW11", "ANI_FOLLOW9", "ANI_FOLLOW9");
+        }
+        return;
+    }
+    if(animhandle==192)
+    {
+
+    void vSelf = getlocalvar("self");	
+
+    if(frame==1){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 165);
+    }
+        if(frame==1)
+        {
+            entergrab();
+        }
+        if(frame==1)
+        {
+            anti();
+        }
+        if(frame==2)
+        {
+            slamstart2();
+        }
+        if(frame==2)
+        {
+            position(35, -30, 16, -1, 1);
+        }
+        if(frame==3)
+        {
+            position(1, 2, 35, -1, 1);
+        }
+        if(frame==4)
+        {
+            position(17, 35, 13, -1, 1);
+        }
+        if(frame==5)
+        {
+            position(38, -13, -16, -1, 1);
+        }
+        if(frame==6)
+        {
+            position(35, -30, 16, -1, 1);
+        }
+        if(frame==7)
+        {
+            position(1, 2, 35, -1, 1);
+        }
+        if(frame==8)
+        {
+            hurt(30);
+        }
+        if(frame==8)
+        {
+            position(17, 35, 13, -1, 1);
+        }
+        if(frame==9)
+        {
+            depost(0);
+        }
+        if(frame==9)
+        {
+            throw(5, 1, 1.5, -5, 0, 0);
+        }
+        if(frame==12)
+        {
+            degravity(-0.7);
+        }
+        if(frame==19)
+        {
+            degravity(-0.27);
+        }
+        return;
+    }
+
+}
+
+#### animationscript function main #####
+# data/chars/ray/ray.txt
+########################################
+void main()
+{
+    int frame = getlocalvar("frame");
+    int animhandle = getlocalvar("animhandle");
+    if(animhandle==212)
+    {
+        if(frame==0)
+        {
+            clearL();
+        }
+        return;
+    }
+    if(animhandle==224)
+    {
+
+	void ent = getlocalvar("self");
+
+    if(frame == 0)
+    {
+      int combostep = getentityproperty(ent, "combostep");
+      int r = rand()%30;
+
+      if( r > 0 && combostep > 1){
+        changeentityproperty(ent, "animation", openborconstant("ANI_FOLLOW5"));
+      }
+    }
+
+	        return;
+    }
+
+}
+
+#### animationscript function main #####
+# data/chars/matlock/matlock.txt
+########################################
+void main()
+{
+    int frame = getlocalvar("frame");
+    int animhandle = getlocalvar("animhandle");
+    if(animhandle==229)
+    {
+        if(frame==0)
+        {
+            clearL();
+        }
+        return;
+    }
+    if(animhandle==235)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      }
+    }
+        return;
+    }
+    if(animhandle==243)
+    {
+        if(frame==0)
+        {
+            spawnbind("EEFlame", -12, 41, 1);
+        }
+        return;
+    }
+    if(animhandle==245)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==246)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==50)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==250)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==3)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==251)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==252)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==253)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==254)
+    {
+
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+        if(frame==1)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==256)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==6)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==257)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==258)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("elect", 4, 0, 1);
+        }
+        if(frame==27)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==259)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("EFlame", -16, 47, 1);
+        }
+        if(frame==18)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==261)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
+      }
+    }
+        return;
+    }
+    if(animhandle==264)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
+      }
+    }
+        return;
+    }
+    if(animhandle==266)
+    {
+
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+        return;
+    }
+
+}
+
+#### animationscript function main #####
+# data/chars/yungmie/yungmie.txt
+########################################
+void main()
+{
+    int frame = getlocalvar("frame");
+    int animhandle = getlocalvar("animhandle");
+    if(animhandle==271)
+    {
+        if(frame==0)
+        {
+            clearL();
+        }
+        return;
+    }
+    if(animhandle==283)
+    {
+        if(frame==0)
+        {
+            spawnbind("EEFlame", -12, 41, 1);
+        }
+        return;
+    }
+    if(animhandle==285)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==286)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==50)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==290)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==3)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==291)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==292)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==293)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==294)
+    {
+
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+        return;
+    }
+    if(animhandle==295)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==6)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==296)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==297)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("elect", 0, 0, 1);
+        }
+        if(frame==27)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==298)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("EFlame", -16, 47, 1);
+        }
+        if(frame==18)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==301)
+    {
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW3");
+        }
+        return;
+    }
+    if(animhandle==302)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==7)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==303)
+    {
+
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 60);
+    }
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==16)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==304)
+    {
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW5");
+        }
+        return;
+    }
+    if(animhandle==305)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==7)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==306)
+    {
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW6");
+        }
+        return;
+    }
+    if(animhandle==307)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==7)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==308)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+      if( r > 11){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
+      }
+    }
+        return;
+    }
+    if(animhandle==310)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+      }
+    }
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW5");
+        }
+        return;
+    }
+    if(animhandle==311)
+    {
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW6");
+        }
+        return;
+    }
+    if(animhandle==313)
+    {
+
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+        return;
+    }
+
+}

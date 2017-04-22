@@ -1,4 +1,5 @@
 #include "data/scripts/dc_vars/main.c"
+#include "data/scripts/dc_random/main.c"
 #include "data/scripts/dc_drawmethod/main.c"
 
 // You must include the auxiliary jumping system here
@@ -87,7 +88,8 @@ void main()
             //dc_vars_set_random_lower_bound(1);
             //dc_vars_set_random_upper_bound(10);
 
-            rnd = dc_vars_get_random_int();
+            setlocalvar(DC_RANDOM_KEY_UPPER, 10);
+            rnd = dc_random_int();
 
             log("\n\n");
             log("Random: ");

@@ -5,10 +5,10 @@ type		panel
 facing		1
 setlayer	-1
 
-palette 	data/levels/usa2/pal/pal_0.png
-alternatepal	data/levels/usa2/pal/pal_1.png
-alternatepal	data/levels/usa2/pal/pal_2.png
-alternatepal	data/levels/usa2/pal/pal_3.png
+palette 	data/levels/usa2/pal/pal_0.act
+alternatepal	data/levels/usa2/pal/pal_1.act
+alternatepal	data/levels/usa2/pal/pal_2.act
+alternatepal	data/levels/usa2/pal/pal_3.act
 
 animationscript data/scripts/dc_marquee/main.c
 

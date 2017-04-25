@@ -1,9 +1,9 @@
 // Package Files
-#include    "data/scripts/dc_random/config.h"
+#include    "data/scripts/dc_d20/config.h"
 
 // Generate random value between
 // upper and lower boundaries.
-int dc_random_int()
+int dc_d20_int()
 {
     int     result;
     int     lower_bound,
@@ -11,19 +11,19 @@ int dc_random_int()
             mod;
 
     // Get upper and lower bound settings.
-    lower_bound = getlocalvar(DC_RANDOM_KEY_LOWER);
-    upper_bound = getlocalvar(DC_RANDOM_KEY_UPPER);
+    lower_bound = getlocalvar(DC_D20_KEY_LOWER);
+    upper_bound = getlocalvar(DC_D20_KEY_UPPER);
 
     // Default lower and upper bounds if there is no existing
     // setting in place.
     if(typeof(lower_bound) == openborconstant("VT_EMPTY"))
     {
-        lower_bound = DC_RANDOM_DEFAULT_LOWER;
+        lower_bound = DC_D20_DEFAULT_LOWER;
     }
 
     if(typeof(upper_bound) == openborconstant("VT_EMPTY"))
     {
-        upper_bound = DC_RANDOM_DEFAULT_UPPER;
+        upper_bound = DC_D20_DEFAULT_UPPER;
     }
 
     // OpenBOR's random generator is a bit odd,

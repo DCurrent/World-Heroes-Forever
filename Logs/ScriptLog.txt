@@ -1719,67 +1719,13 @@ void main()
 }
 
 #### animationscript function main #####
-# data/levels/usa2/pal/mesh_neon.txt
+# data/chars/ray/ray.txt
 ########################################
 void main()
 {
     int frame = getlocalvar("frame");
     int animhandle = getlocalvar("animhandle");
-    if(animhandle==193)
-    {
-        if(frame==1)
-        {
-            dc_palette_rotate();
-        }
-        return;
-    }
-
-}
-
-#### animationscript function main #####
-# data/chars/misc/delay.txt
-########################################
-void main()
-{
-    int frame = getlocalvar("frame");
-    int animhandle = getlocalvar("animhandle");
-    if(animhandle==202)
-    {
-
-    void self = getlocalvar("self");
-    int  Health = getentityproperty(self, "health");
-
-    if(frame==1){
-      changeentityproperty(self, "health", Health-5);
-      if (Health <= 0){
-        killentity(self);
-      }
-    }
-        return;
-    }
-
-}
-
-#### animationscript function main #####
-# data/chars/matlock/matlock3.txt
-########################################
-void main()
-{
-    int frame = getlocalvar("frame");
-    int animhandle = getlocalvar("animhandle");
-    if(animhandle==203)
-    {
-        if(frame==0)
-        {
-            degravity(-0.27);
-        }
-        if(frame==7)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==204)
+    if(animhandle==212)
     {
         if(frame==0)
         {
@@ -1787,535 +1733,7 @@ void main()
         }
         return;
     }
-    if(animhandle==210)
-    {
-
-    void self = getlocalvar("self");
-
-    if( frame == 0){
-      int r = rand()%50;
-
-      if( r > 0){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
-      }
-    }
-        return;
-    }
-    if(animhandle==218)
-    {
-        if(frame==0)
-        {
-            spawnbind("EEFlame", -12, 41, 1);
-        }
-        return;
-    }
-    if(animhandle==220)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==221)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==50)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==225)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==3)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==226)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==227)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==228)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==229)
-    {
-
-    void self = getlocalvar("self");
-
-    changeentityproperty(self, "velocity", 0, 0, 0);
-        if(frame==1)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==231)
-    {
-        if(frame==0)
-        {
-            degravity(-0.27);
-        }
-        if(frame==6)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==232)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==233)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==0)
-        {
-            spawnbind("elect", 4, 0, 1);
-        }
-        if(frame==27)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==234)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==0)
-        {
-            spawnbind("EFlame", -16, 47, 1);
-        }
-        if(frame==18)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==236)
-    {
-
-    void self = getlocalvar("self");
-
-    if( frame == 0){
-      int r = rand()%30;
-
-      if( r > 0){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
-      }
-    }
-        return;
-    }
-    if(animhandle==239)
-    {
-
-    void self = getlocalvar("self");
-
-    if( frame == 0){
-      int r = rand()%30;
-
-      if( r > 0){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
-      }
-    }
-        return;
-    }
-    if(animhandle==241)
-    {
-
-    void self = getlocalvar("self");
-
-    changeentityproperty(self, "velocity", 0, 0, 0);
-        return;
-    }
-
-}
-
-#### animationscript function main #####
-# data/chars/lee/lee3.txt
-########################################
-void main()
-{
-    int frame = getlocalvar("frame");
-    int animhandle = getlocalvar("animhandle");
-    if(animhandle==246)
-    {
-        if(frame==0)
-        {
-            degravity(-0.27);
-        }
-        if(frame==7)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==247)
-    {
-        if(frame==0)
-        {
-            clearL();
-        }
-        return;
-    }
-    if(animhandle==260)
-    {
-        if(frame==0)
-        {
-            spawnbind("EEFlame", -12, 41, 1);
-        }
-        return;
-    }
-    if(animhandle==262)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==263)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==50)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==267)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==3)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==268)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==269)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==270)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==271)
-    {
-
-    void self = getlocalvar("self");
-
-    changeentityproperty(self, "velocity", 0, 0, 0);
-        if(frame==1)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==272)
-    {
-        if(frame==0)
-        {
-            degravity(-0.27);
-        }
-        if(frame==6)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==273)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==274)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==0)
-        {
-            spawnbind("elect", 0, 0, 1);
-        }
-        if(frame==27)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==275)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==0)
-        {
-            spawnbind("EFlame", -16, 47, 1);
-        }
-        if(frame==18)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==278)
-    {
-
-    void self = getlocalvar("self");
-
-    if( frame == 0){
-      int r = rand()%30;
-
-      if( r > 0){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
-      }
-    }
-        return;
-    }
-    if(animhandle==280)
-    {
-        if(frame==7)
-        {
-            stop();
-        }
-        if(frame==7)
-        {
-            spawn01("dus", 0, 0, 1);
-        }
-        return;
-    }
-    if(animhandle==281)
-    {
-
-    void self = getlocalvar("self");
-
-    if( frame == 0){
-      int r = rand()%25;
-      if( r > 10){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
-      } else if( r < -10){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
-      } else if( r < 0){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
-      }
-    }
-        return;
-    }
-    if(animhandle==282)
-    {
-        if(frame==10)
-        {
-            riseattack2(125, 20, "ANI_FOLLOW5");
-        }
-        return;
-    }
-    if(animhandle==283)
-    {
-        if(frame==0)
-        {
-            degravity(-0.27);
-        }
-        if(frame==7)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==284)
-    {
-
-    void vSelf = getlocalvar("self");	
-
-    if(frame==0){
-      int  iTime = openborvariant("elapsed_time");
-
-      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
-      changeentityproperty(vSelf, "tosstime", iTime + 110);
-    }
-        return;
-    }
-    if(animhandle==285)
-    {
-        if(frame==1)
-        {
-            degravity(-0.27);
-        }
-        if(frame==14)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==286)
-    {
-        if(frame==1)
-        {
-            degravity(-0.27);
-        }
-        if(frame==14)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==287)
-    {
-
-    void self = getlocalvar("self");
-
-    if( frame == 0){
-      int r = rand()%30;
-
-      if( r > 0){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
-      }
-    }
-        return;
-    }
-    if(animhandle==289)
-    {
-
-    void self = getlocalvar("self");
-
-    changeentityproperty(self, "velocity", 0, 0, 0);
-        return;
-    }
-
-}
-
-#### animationscript function main #####
-# data/chars/ray/ray3.txt
-########################################
-void main()
-{
-    int frame = getlocalvar("frame");
-    int animhandle = getlocalvar("animhandle");
-    if(animhandle==294)
-    {
-        if(frame==0)
-        {
-            degravity(-0.27);
-        }
-        if(frame==7)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==295)
-    {
-        if(frame==0)
-        {
-            clearL();
-        }
-        return;
-    }
-    if(animhandle==306)
+    if(animhandle==224)
     {
 
 	void ent = getlocalvar("self");
@@ -2336,25 +1754,13 @@ void main()
 }
 
 #### animationscript function main #####
-# data/chars/assassin/ssassin.txt
+# data/chars/matlock/matlock.txt
 ########################################
 void main()
 {
     int frame = getlocalvar("frame");
     int animhandle = getlocalvar("animhandle");
-    if(animhandle==313)
-    {
-        if(frame==1)
-        {
-            spawn01("dus", 20, 0, 1);
-        }
-        if(frame==5)
-        {
-            spawn01("dus", 20, 0, 1);
-        }
-        return;
-    }
-    if(animhandle==314)
+    if(animhandle==229)
     {
         if(frame==0)
         {
@@ -2362,7 +1768,21 @@ void main()
         }
         return;
     }
-    if(animhandle==326)
+    if(animhandle==235)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      }
+    }
+        return;
+    }
+    if(animhandle==243)
     {
         if(frame==0)
         {
@@ -2370,7 +1790,7 @@ void main()
         }
         return;
     }
-    if(animhandle==328)
+    if(animhandle==245)
     {
         if(frame==0)
         {
@@ -2382,7 +1802,7 @@ void main()
         }
         return;
     }
-    if(animhandle==329)
+    if(animhandle==246)
     {
         if(frame==0)
         {
@@ -2394,15 +1814,19 @@ void main()
         }
         return;
     }
-    if(animhandle==333)
+    if(animhandle==250)
     {
+        if(frame==0)
+        {
+            degravity(0);
+        }
         if(frame==3)
         {
             anichange("ANI_FOLLOW8");
         }
         return;
     }
-    if(animhandle==334)
+    if(animhandle==251)
     {
         if(frame==0)
         {
@@ -2410,19 +1834,7 @@ void main()
         }
         return;
     }
-    if(animhandle==335)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==336)
+    if(animhandle==252)
     {
         if(frame==0)
         {
@@ -2434,7 +1846,19 @@ void main()
         }
         return;
     }
-    if(animhandle==337)
+    if(animhandle==253)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==254)
     {
 
     void self = getlocalvar("self");
@@ -2446,7 +1870,7 @@ void main()
         }
         return;
     }
-    if(animhandle==338)
+    if(animhandle==256)
     {
         if(frame==0)
         {
@@ -2462,7 +1886,7 @@ void main()
         }
         return;
     }
-    if(animhandle==339)
+    if(animhandle==257)
     {
         if(frame==0)
         {
@@ -2474,7 +1898,7 @@ void main()
         }
         return;
     }
-    if(animhandle==340)
+    if(animhandle==258)
     {
         if(frame==0)
         {
@@ -2482,7 +1906,7 @@ void main()
         }
         if(frame==0)
         {
-            spawnbind("elect", 0, 0, 1);
+            spawnbind("elect", 4, 0, 1);
         }
         if(frame==27)
         {
@@ -2490,7 +1914,7 @@ void main()
         }
         return;
     }
-    if(animhandle==341)
+    if(animhandle==259)
     {
         if(frame==0)
         {
@@ -2506,7 +1930,7 @@ void main()
         }
         return;
     }
-    if(animhandle==344)
+    if(animhandle==261)
     {
 
     void self = getlocalvar("self");
@@ -2515,101 +1939,26 @@ void main()
       int r = rand()%30;
 
       if( r > 0){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
       }
     }
         return;
     }
-    if(animhandle==346)
+    if(animhandle==264)
     {
 
     void self = getlocalvar("self");
 
     if( frame == 0){
-      int r = rand()%25;
-      if( r > 10){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW5"));
-      } else if( r < -10){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
-      } else if( r < 0){
-        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW6"));
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
       }
     }
         return;
     }
-    if(animhandle==347)
-    {
-        if(frame==3)
-        {
-            riseattack2(120, 20, "ANI_FOLLOW7");
-        }
-        if(frame==5)
-        {
-            riseattack2(90, 20, "ANI_FOLLOW7");
-        }
-        if(frame==9)
-        {
-            riseattack2(100, 20, "ANI_FOLLOW7");
-        }
-        if(frame==13)
-        {
-            riseattack2(145, 20, "ANI_FOLLOW7");
-        }
-        return;
-    }
-    if(animhandle==348)
-    {
-        if(frame==3)
-        {
-            riseattack2(120, 20, "ANI_FOLLOW7");
-        }
-        if(frame==5)
-        {
-            riseattack2(90, 20, "ANI_FOLLOW7");
-        }
-        if(frame==9)
-        {
-            riseattack2(100, 20, "ANI_FOLLOW7");
-        }
-        if(frame==13)
-        {
-            riseattack2(145, 20, "ANI_FOLLOW7");
-        }
-        return;
-    }
-    if(animhandle==349)
-    {
-        if(frame==3)
-        {
-            riseattack2(120, 20, "ANI_FOLLOW7");
-        }
-        if(frame==5)
-        {
-            riseattack2(90, 20, "ANI_FOLLOW7");
-        }
-        if(frame==9)
-        {
-            riseattack2(100, 20, "ANI_FOLLOW7");
-        }
-        if(frame==13)
-        {
-            riseattack2(145, 20, "ANI_FOLLOW7");
-        }
-        return;
-    }
-    if(animhandle==350)
-    {
-        if(frame==0)
-        {
-            degravity(-0.27);
-        }
-        if(frame==8)
-        {
-            degravity(0);
-        }
-        return;
-    }
-    if(animhandle==353)
+    if(animhandle==266)
     {
 
     void self = getlocalvar("self");
@@ -2621,13 +1970,13 @@ void main()
 }
 
 #### animationscript function main #####
-# data/chars/yungmie/yungmie3.txt
+# data/chars/yungmie/yungmie.txt
 ########################################
 void main()
 {
     int frame = getlocalvar("frame");
     int animhandle = getlocalvar("animhandle");
-    if(animhandle==361)
+    if(animhandle==271)
     {
         if(frame==0)
         {
@@ -2635,7 +1984,7 @@ void main()
         }
         return;
     }
-    if(animhandle==373)
+    if(animhandle==283)
     {
         if(frame==0)
         {
@@ -2643,7 +1992,7 @@ void main()
         }
         return;
     }
-    if(animhandle==375)
+    if(animhandle==285)
     {
         if(frame==0)
         {
@@ -2655,7 +2004,7 @@ void main()
         }
         return;
     }
-    if(animhandle==376)
+    if(animhandle==286)
     {
         if(frame==0)
         {
@@ -2667,7 +2016,7 @@ void main()
         }
         return;
     }
-    if(animhandle==380)
+    if(animhandle==290)
     {
         if(frame==0)
         {
@@ -2679,7 +2028,7 @@ void main()
         }
         return;
     }
-    if(animhandle==381)
+    if(animhandle==291)
     {
         if(frame==0)
         {
@@ -2687,19 +2036,7 @@ void main()
         }
         return;
     }
-    if(animhandle==382)
-    {
-        if(frame==0)
-        {
-            degravity(0);
-        }
-        if(frame==8)
-        {
-            anichange("ANI_FOLLOW8");
-        }
-        return;
-    }
-    if(animhandle==383)
+    if(animhandle==292)
     {
         if(frame==0)
         {
@@ -2711,7 +2048,19 @@ void main()
         }
         return;
     }
-    if(animhandle==384)
+    if(animhandle==293)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==294)
     {
 
     void self = getlocalvar("self");
@@ -2719,7 +2068,7 @@ void main()
     changeentityproperty(self, "velocity", 0, 0, 0);
         return;
     }
-    if(animhandle==385)
+    if(animhandle==295)
     {
         if(frame==0)
         {
@@ -2735,7 +2084,7 @@ void main()
         }
         return;
     }
-    if(animhandle==386)
+    if(animhandle==296)
     {
         if(frame==0)
         {
@@ -2747,7 +2096,7 @@ void main()
         }
         return;
     }
-    if(animhandle==387)
+    if(animhandle==297)
     {
         if(frame==0)
         {
@@ -2763,7 +2112,7 @@ void main()
         }
         return;
     }
-    if(animhandle==388)
+    if(animhandle==298)
     {
         if(frame==0)
         {
@@ -2779,7 +2128,7 @@ void main()
         }
         return;
     }
-    if(animhandle==391)
+    if(animhandle==301)
     {
         if(frame==11)
         {
@@ -2787,7 +2136,7 @@ void main()
         }
         return;
     }
-    if(animhandle==392)
+    if(animhandle==302)
     {
         if(frame==0)
         {
@@ -2799,7 +2148,7 @@ void main()
         }
         return;
     }
-    if(animhandle==393)
+    if(animhandle==303)
     {
 
     void vSelf = getlocalvar("self");	
@@ -2820,7 +2169,7 @@ void main()
         }
         return;
     }
-    if(animhandle==394)
+    if(animhandle==304)
     {
         if(frame==11)
         {
@@ -2828,7 +2177,7 @@ void main()
         }
         return;
     }
-    if(animhandle==395)
+    if(animhandle==305)
     {
         if(frame==0)
         {
@@ -2840,7 +2189,7 @@ void main()
         }
         return;
     }
-    if(animhandle==396)
+    if(animhandle==306)
     {
         if(frame==11)
         {
@@ -2848,7 +2197,7 @@ void main()
         }
         return;
     }
-    if(animhandle==397)
+    if(animhandle==307)
     {
         if(frame==0)
         {
@@ -2860,7 +2209,7 @@ void main()
         }
         return;
     }
-    if(animhandle==398)
+    if(animhandle==308)
     {
 
     void self = getlocalvar("self");
@@ -2875,7 +2224,7 @@ void main()
     }
         return;
     }
-    if(animhandle==400)
+    if(animhandle==310)
     {
 
     void self = getlocalvar("self");
@@ -2893,7 +2242,7 @@ void main()
         }
         return;
     }
-    if(animhandle==401)
+    if(animhandle==311)
     {
         if(frame==11)
         {
@@ -2901,7 +2250,7 @@ void main()
         }
         return;
     }
-    if(animhandle==403)
+    if(animhandle==313)
     {
 
     void self = getlocalvar("self");

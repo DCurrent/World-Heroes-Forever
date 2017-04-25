@@ -1,10 +1,13 @@
-#ifndef DC_SUNDOWN
-#define DC_SUNDOWN 1
 
-#define DC_SUNDOWN_DEFAULT_INTERVAL 2000
+#ifndef DC_LEVEL_PALETTE
+#define DC_LEVEL_PALETTE 1
 
-// Variable keys.
-#define DC_SUNDOWN_LAST     "dc_sundown_0"
-#define DC_SUNDOWN_INTERVAL "dc_sundown_1"
+#define DC_LEVEL_PALETTE_KEY_ELAPSED_LAST "dc_level_palette_elapsed_time_last"
+
+// Variable types
+#define DC_LEVEL_VT_EMPTY                  openborconstant("VT_EMPTY")     // Empty (NULL) variable type.
+#define DC_LEVEL_VT_FLOAT                  openborconstant("VT_DECIMAL")   // Float variable type.
+#define DC_LEVEL_VT_INTEGER                openborconstant("VT_INTEGER")   // Integer variable type.
+#define DC_LEVEL_VT_POINTER                openborconstant("VT_PTR")       // Pointer variable type.
 
 #endif

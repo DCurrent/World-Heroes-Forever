@@ -3,7 +3,7 @@
 
 // Generate random value between
 // upper and lower boundaries.
-int dc_d20_int()
+int dc_d20_random_int()
 {
     int     result;
     int     lower_bound,

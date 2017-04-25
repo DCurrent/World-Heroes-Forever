@@ -14,8 +14,6 @@ bglayer		data/levels/usa2/water_0.png	0.4	0.5	0	160	0	0	-1	1	1	0	3	1	6	2	1
 
 #water data/levels/usa2/water.png 1 
 
-
-#Note: Palette switch is time based. The script is called by "worker" model. 
 palette data/levels/usa2/pal_1.act 1
 palette data/levels/usa2/pal_2.act 1
 palette data/levels/usa2/pal_3.act 1
@@ -32,11 +30,6 @@ spawn2 260 40
 
 #----------pickups
 
-
-#palette control only.
-spawn	work
-coords	-280 170
-at	0
 
 spawn	mesh_neon
 coords	1 100

@@ -1,20 +1,17 @@
 Total Ram: 2147483647 Bytes
  Free Ram: 2147483647 Bytes
- Used Ram: 5910528 Bytes
+ Used Ram: 5902336 Bytes
 
-debug:nativeWidth, nativeHeight, bpp, Hz  1536, 864, 24, 60
+debug:nativeWidth, nativeHeight, bpp, Hz  1920, 1200, 24, 60
 
 0 joystick(s) found!
-OpenBoR v3.0 Build , Compile Date: Apr 20 2017
+OpenBoR v3.0 Build , Compile Date: Apr 25 2017
 
 Game Selected: ./Paks/WHF.pak
 
 FileCaching System Init......	Disabled
 Initializing video............
 Reading video settings from 'data/video.txt'.
-
-Colordepth is depreciated. All modules are displayed with a 32bit color screen.
-
 Initialized video.............	480x272 (Mode: 1, Depth: 8 Bit)
 
 Loading menu.txt.............	Done!
@@ -410,165 +407,36 @@ Error:dc_move_set_entity(void value)
 
 Error:dc_move_set_entity(void value)
 {value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-
-
-Error:dc_move_set_entity(void value)
-{value} must be a valid pointer for a currently existing entity.
-Level Loading:   'data/levels/usa/usa.txt'
+Level Loading:   'data/levels/usa2/usa2.txt'
 Total Ram: 2147483647 Bytes
  Free Ram: 2147483647 Bytes
- Used Ram: 55136256 Bytes
+ Used Ram: 61636608 Bytes
 
-Loading 'work2' from data/levels/usa/work2.txt
-Loading 'work3' from data/levels/usa/work3.txt
-Loading 'work4' from data/levels/usa/work4.txt
+Loading 'mesh_neon' from data/levels/usa2/pal/mesh_neon.txt
 Loading 'bare' from data/chars/misc/bare.txt
-Loading 'ring' from data/sprites/aniback/ring.txt
-Loading 'obstach' from data/chars/misc/obstach.txt
-Loading 'obstacg' from data/chars/misc/obstacg.txt
-Loading 'susi' from data/sprites/aniback/susi.txt
-Loading 'bar' from data/chars/misc/bar.txt
-Loading 'pizza' from data/sprites/aniback/pizza.txt
 Loading 'diamond' from data/sprites/aniback/diamond.txt
-Command '10' not understood in file 'data/chars/ray/ray.txt'!
-Loading 'ray' from data/chars/ray/ray.txt
-Loading 'matlock' from data/chars/matlock/matlock.txt
-Loading 'yungmie' from data/chars/yungmie/yungmie.txt
+Loading 'obstach' from data/chars/misc/obstach.txt
+Loading 'huma' from data/sprites/aniback/huma.txt
+Loading 'delay' from data/chars/misc/delay.txt
+Loading 'matlock3' from data/chars/matlock/matlock3.txt
+Loading 'lee3' from data/chars/lee/lee3.txt
+Command '10' not understood in file 'data/chars/ray/ray3.txt'!
+Loading 'ray3' from data/chars/ray/ray3.txt
+Loading 'spa' from data/chars/misc/spa.txt
+Loading 'ssassin' from data/chars/assassin/ssassin.txt
+Loading 'gold' from data/sprites/aniback/gold.txt
+Loading 'yungmie3' from data/chars/yungmie/yungmie3.txt
 
-Level Loaded:    'data/levels/usa/usa.txt'
+Level Loaded:    'data/levels/usa2/usa2.txt'
 Total Ram: 2147483647 Bytes
  Free Ram: 2147483647 Bytes
- Used Ram: 58519552 Bytes
-Total sprites mapped: 1279
+ Used Ram: 66818048 Bytes
+Total sprites mapped: 1614
 
 
 ************ Shutting Down ************
 
-OpenBOR v3.0 Build , Compile Date: Apr 20 2017
+OpenBOR v3.0 Build , Compile Date: Apr 25 2017
 Presented by the OpenBOR Team.
 www.chronocrash.com
 OpenBOR is the open source continuation of Beats of Rage by Senile Team.
@@ -577,18 +445,18 @@ Special thanks to SEGA and SNK.
 
 Total Ram: 2147483647 Bytes
  Free Ram: 2147483647 Bytes
- Used Ram: 58716160 Bytes
+ Used Ram: 62181376 Bytes
 
 Release level data...........
-Level Unloading: 'data/levels/usa/usa.txt'
+Level Unloading: 'data/levels/usa2/usa2.txt'
 Total Ram: 2147483647 Bytes
  Free Ram: 2147483647 Bytes
- Used Ram: 58716160 Bytes
+ Used Ram: 62181376 Bytes
 
 RAM Status:
 Total Ram: 2147483647 Bytes
  Free Ram: 2147483647 Bytes
- Used Ram: 58716160 Bytes
+ Used Ram: 62181376 Bytes
 
 Done!
 
@@ -631,20 +499,19 @@ Unload 'kbfl' ............Done.
 Unload 'elect' ............Done.
 Unload 'HANZOU' ............Done.
 Unload 'FUUMA' ............Done.
-Unload 'work2' ............Done.
-Unload 'work3' ............Done.
-Unload 'work4' ............Done.
+Unload 'mesh_neon' ............Done.
 Unload 'bare' ............Done.
-Unload 'ring' ............Done.
-Unload 'obstach' ............Done.
-Unload 'obstacg' ............Done.
-Unload 'susi' ............Done.
-Unload 'bar' ............Done.
-Unload 'pizza' ............Done.
 Unload 'diamond' ............Done.
-Unload 'ray' ............Done.
-Unload 'matlock' ............Done.
-Unload 'yungmie' ............Done.
+Unload 'obstach' ............Done.
+Unload 'huma' ............Done.
+Unload 'delay' ............Done.
+Unload 'matlock3' ............Done.
+Unload 'lee3' ............Done.
+Unload 'ray3' ............Done.
+Unload 'ssassin' ............Done.
+Unload 'spa' ............Done.
+Unload 'gold' ............Done.
+Unload 'yungmie3' ............Done.
 
 Release game data............	Done!
 Release timer................	Done!
@@ -654,7 +521,7 @@ Release FileCaching System...	Done!
 
 **************** Done *****************
 
-OpenBOR v3.0 Build , Compile Date: Apr 20 2017
+OpenBOR v3.0 Build , Compile Date: Apr 25 2017
 Presented by the OpenBOR Team.
 www.chronocrash.com
 OpenBOR is the open source continuation of Beats of Rage by Senile Team.

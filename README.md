@@ -1,6 +1,6 @@
-# World-Heroes-Forever
+# World-Heroes-Timeless
 
-World Heroes Forever is a remake in progress of World Heroes Supreme Justice, an OpenBOR module originally crafted by magggas (Final Fight style beat em’ take on the World Heroes series of fighting games). I am also a fan of the World Heroes series and had planned to produce a module myself, but magggas beat me to the punch. :)
+World Heroes Timeless is a remake in progress of World Heroes Supreme Justice, an OpenBOR module originally crafted by magggas (Final Fight style beat em’ take on the World Heroes series of fighting games). I am also a fan of the World Heroes series and had planned to produce a module myself, but magggas beat me to the punch. :)
 
 WH Supreme Justice is an excellent piece of craftsmanship and I recommend you try it out right now. Sign up at www.chronocrash.com and you can get it [here](http://www.chronocrash.com/forum/index.php?action=tpmod;dl=item107).
 

@@ -2911,3 +2911,546 @@ void main()
     }
 
 }
+
+#### animationscript function main #####
+# data/chars/ray/ray.txt
+########################################
+void main()
+{
+    int frame = getlocalvar("frame");
+    int animhandle = getlocalvar("animhandle");
+    if(animhandle==421)
+    {
+        if(frame==0)
+        {
+            clearL();
+        }
+        return;
+    }
+    if(animhandle==433)
+    {
+
+	void ent = getlocalvar("self");
+
+    if(frame == 0)
+    {
+      int combostep = getentityproperty(ent, "combostep");
+      int r = rand()%30;
+
+      if( r > 0 && combostep > 1){
+        changeentityproperty(ent, "animation", openborconstant("ANI_FOLLOW5"));
+      }
+    }
+
+	        return;
+    }
+
+}
+
+#### animationscript function main #####
+# data/chars/matlock/matlock.txt
+########################################
+void main()
+{
+    int frame = getlocalvar("frame");
+    int animhandle = getlocalvar("animhandle");
+    if(animhandle==438)
+    {
+        if(frame==0)
+        {
+            clearL();
+        }
+        return;
+    }
+    if(animhandle==444)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW4"));
+      }
+    }
+        return;
+    }
+    if(animhandle==452)
+    {
+        if(frame==0)
+        {
+            spawnbind("EEFlame", -12, 41, 1);
+        }
+        return;
+    }
+    if(animhandle==454)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==455)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==50)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==459)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==3)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==460)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==461)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==462)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==463)
+    {
+
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+        if(frame==1)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==465)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==6)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==466)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==467)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("elect", 4, 0, 1);
+        }
+        if(frame==27)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==468)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("EFlame", -16, 47, 1);
+        }
+        if(frame==18)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==470)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
+      }
+    }
+        return;
+    }
+    if(animhandle==473)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW3"));
+      }
+    }
+        return;
+    }
+    if(animhandle==475)
+    {
+
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+        return;
+    }
+
+}
+
+#### animationscript function main #####
+# data/chars/yungmie/yungmie.txt
+########################################
+void main()
+{
+    int frame = getlocalvar("frame");
+    int animhandle = getlocalvar("animhandle");
+    if(animhandle==480)
+    {
+        if(frame==0)
+        {
+            clearL();
+        }
+        return;
+    }
+    if(animhandle==492)
+    {
+        if(frame==0)
+        {
+            spawnbind("EEFlame", -12, 41, 1);
+        }
+        return;
+    }
+    if(animhandle==494)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==495)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==50)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==499)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==3)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==500)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==501)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==502)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==503)
+    {
+
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+        return;
+    }
+    if(animhandle==504)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==6)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==505)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==8)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==506)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("elect", 0, 0, 1);
+        }
+        if(frame==27)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==507)
+    {
+        if(frame==0)
+        {
+            degravity(0);
+        }
+        if(frame==0)
+        {
+            spawnbind("EFlame", -16, 47, 1);
+        }
+        if(frame==18)
+        {
+            anichange("ANI_FOLLOW8");
+        }
+        return;
+    }
+    if(animhandle==510)
+    {
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW3");
+        }
+        return;
+    }
+    if(animhandle==511)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==7)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==512)
+    {
+
+    void vSelf = getlocalvar("self");	
+
+    if(frame==0){
+      int  iTime = openborvariant("elapsed_time");
+
+      changeentityproperty(vSelf, "velocity", 0, 0 , 0); // This is to stop entity from moving forward
+      changeentityproperty(vSelf, "tosstime", iTime + 60);
+    }
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==16)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==513)
+    {
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW5");
+        }
+        return;
+    }
+    if(animhandle==514)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==7)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==515)
+    {
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW6");
+        }
+        return;
+    }
+    if(animhandle==516)
+    {
+        if(frame==0)
+        {
+            degravity(-0.27);
+        }
+        if(frame==7)
+        {
+            degravity(0);
+        }
+        return;
+    }
+    if(animhandle==517)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%30;
+      if( r > 11){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW7"));
+      } else if( r < -10){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW9"));
+      }
+    }
+        return;
+    }
+    if(animhandle==519)
+    {
+
+    void self = getlocalvar("self");
+
+    if( frame == 0){
+      int r = rand()%50;
+
+      if( r > 0){
+        changeentityproperty(self, "animation", openborconstant("ANI_FOLLOW10"));
+      }
+    }
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW5");
+        }
+        return;
+    }
+    if(animhandle==520)
+    {
+        if(frame==11)
+        {
+            riseattack2(125, 20, "ANI_FOLLOW6");
+        }
+        return;
+    }
+    if(animhandle==522)
+    {
+
+    void self = getlocalvar("self");
+
+    changeentityproperty(self, "velocity", 0, 0, 0);
+        return;
+    }
+
+}

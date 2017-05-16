@@ -1,15 +1,29 @@
-music		data/music/usa2.bor
-panel	      	data/levels/usa2/p_0.png data/levels/usa2/n_0.png
+music		data/music/usa3.bor
+
+# Blank background with this level's default color table. We do this
+# to make sure the global palette = level's default palette. That's
+# not needed for the most part, but it's nessesary to use the built
+# in neon function.
+background	data/levels/usa2/background.png
+
+panel	      	data/levels/usa2/cage.png
 order           a
 bgspeed	    	1
 rock		1
-direction both
+direction 	both
+updatedscript	data/levels/usa2/updated.c
 
-#lol spreadsheet				xratio	zratio	xoffset	zoffset	xspace	zspace	xrepeat	zrepeat	trans	alpha	w-mode	amp	wl	ws	move
-bglayer		data/levels/usa2/bg_0.png	0.4	0.5	0	0	0	0	-1	-1	0	0	3	2.5	1	1	1
-bglayer		data/levels/usa2/bg_1.png	0.45	0.45	0	103	0	0	-1	1	1	0	0	0	0	0	1
-bglayer		data/levels/usa2/bg_2.png	0.4	0.5	0	120	0	0	-1	1	1	0	0	0	0	0	1
-bglayer		data/levels/usa2/water_0.png	0.4	0.5	0	160	0	0	-1	1	1	0	3	1	6	2	1
+#lol spreadsheet						Z pos xratio	zratio	xoffset	zoffset	xspace	zspace	xrepeat	zrepeat	trans	alpha	w-mode	amp	wl	ws	move	quake	neon
+fglayer		data/levels/usa2/clouds_0.png			-400	0.4	0.4	0	0	0	0	-1	1	0	0	3	2.5	1	0	1
+fglayer		data/levels/usa2/city_0.png			-399	0.45	0.45	0	103	0	0	-1	1	1	0	0	0	0	0	1
+fglayer		data/levels/usa2/city_0_lights.png		-399	0.45	0.45	0	103	0	0	-1	1	1	0	0	0	0	0	1	0	1
+fglayer		data/levels/usa2/city_0_reflect.png		-399	0.45	0.45	10	160	0	0	-1	1	1	0	3	1	1.15	0	1
+fglayer		data/levels/usa2/city_0_reflect_lights.png	-399	0.45	0.45	10	160	0	0	-1	1	1	0	3	1	1.15	0	1	0	1
+fglayer		data/levels/usa2/city_1.png			-398	0.4	0.5	0	120	0	0	-1	1	1	0	0	0	0	0	1
+fglayer		data/levels/usa2/city_1_lights.png		-398	0.4	0.5	0	120	0	0	-1	1	1	0	0	0	0	0	1	0	1
+fglayer		data/levels/usa2/city_1_reflect.png		-398	0.4	0.5	15	160	0	0	-1	1	1	0	3	1	1.15	0	1
+fglayer		data/levels/usa2/city_1_reflect_lights.png	-398	0.4	0.5	15	160	0	0	-1	1	1	0	3	1	1.15	0	1	0	1
+fglayer		data/levels/usa2/water_0.png			-397	0.4	0.5	0	160	0	0	-1	1	1	1	3	1	2.5	0	1
 
 
 #water data/levels/usa2/water.png 1 
@@ -29,7 +43,8 @@ spawn1 250 20
 spawn2 260 40
 
 #----------pickups
-
+light 	15 -50
+at 	0
 
 spawn	mesh_neon
 coords	1 100
@@ -60,7 +75,7 @@ group   1 1
 at   0
 
 spawn   delay
-health   20
+health   200000000
 coords   160 200
 at   0
 

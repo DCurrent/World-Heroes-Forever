@@ -102,6 +102,15 @@ void main()
         {
             target = getentityproperty(player_entity, "opponent");
 
+            int test_loop;
+            for(test_loop=0; test_loop < 3000; test_loop++)
+            {
+                setentityvar(target, "test_loop"+test_loop, test_loop);
+
+                log("\n test_loop(" + test_loop + "): " + getentityvar(target, "test_loop"+test_loop));
+            }
+
+
             model = getentityproperty(target, "model");
             alias = getentityproperty(target, "name");
             name = get_random_argument(model);

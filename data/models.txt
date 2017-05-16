@@ -1,7 +1,7 @@
 maxfreespecials 50
 maxfollows 50
 maxattacks 8
-maxattacktypes 20
+maxattacktypes 200
 ajspecial 1
 nocost 1
 versusdamage 0

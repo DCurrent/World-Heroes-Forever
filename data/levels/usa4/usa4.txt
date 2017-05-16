@@ -1,4 +1,4 @@
-music		data/music/usa3.bor
+music		data/music/guiboss.bor
 background	data/levels/usa4/sky.png
 #updatedscript	data/levels/usa4/ring.c
 

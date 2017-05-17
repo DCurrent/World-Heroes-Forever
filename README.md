@@ -1,6 +1,6 @@
-# World-Heroes-Forever
+# World-Heroes-Timeless
 
-World Heroes Forever is a remake in progress of World Heroes Supreme Justice, an OpenBOR module originally crafted by magggas (Final Fight style beat em’ take on the World Heroes series of fighting games). I am also a fan of the World Heroes series and had planned to produce a module myself, but magggas beat me to the punch. :)
+World Heroes Timeless is a remake in progress of World Heroes Supreme Justice, an OpenBOR module originally crafted by magggas (Final Fight style beat em’ take on the World Heroes series of fighting games). I am also a fan of the World Heroes series and had planned to produce a module myself, but magggas beat me to the punch. :)
 
 WH Supreme Justice is an excellent piece of craftsmanship and I recommend you try it out right now. Sign up at www.chronocrash.com and you can get it [here](http://www.chronocrash.com/forum/index.php?action=tpmod;dl=item107).
 
@@ -10,7 +10,7 @@ Gameplay will have a different control scheme and feel. The Punch, Kick, Jump, a
 
 Most of the character design liberties taken by Supreme Justice will be removed. Instead, all effort will focus on bringing the characters' various unique abilities from the original series into the beat em’ up genre. For example, the generic Final Fight Style breakaway special shared by every fighter in Supreme Justice will be replaced with a character specific “ABC Special” from World Heroes Perfect (Hanzou’s attack cancel, Ryoko’s counter throws, etc.). In general, all character move sets will be expanded to reflect their original renditions. 
 
-Below is the progress made prior to Github:
+Below is the progress made prior to moving this project to Github. Further progress is documented via [commits](https://github.com/DCurrent/World-Heroes-Timeless/commits/master) as normal:
 
 ## General
 

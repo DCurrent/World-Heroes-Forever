@@ -10,7 +10,7 @@ Gameplay will have a different control scheme and feel. The Punch, Kick, Jump, a
 
 Most of the character design liberties taken by Supreme Justice will be removed. Instead, all effort will focus on bringing the characters' various unique abilities from the original series into the beat em’ up genre. For example, the generic Final Fight Style breakaway special shared by every fighter in Supreme Justice will be replaced with a character specific “ABC Special” from World Heroes Perfect (Hanzou’s attack cancel, Ryoko’s counter throws, etc.). In general, all character move sets will be expanded to reflect their original renditions. 
 
-Below is the progress made prior to Github:
+Below is the progress made prior to moving this project to Github. Further progress is documented via commits as normal:
 
 ## General
 

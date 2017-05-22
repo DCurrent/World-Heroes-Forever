@@ -8,7 +8,7 @@ background	data/levels/usa2/background.png
 
 panel	      	data/levels/usa2/cage.png
 order           a
-bgspeed	    	1
+bgspeed	    	0.5 1
 rock		1
 direction 	both
 updatedscript	data/levels/usa2/updated.c

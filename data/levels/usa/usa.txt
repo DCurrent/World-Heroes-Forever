@@ -5,10 +5,12 @@ background	data/levels/usa/clouds.png
 bglayer 	data/levels/usa/city_b.png      		0.3     0.3     0       0       0       0       -1      1       1	0       0       0      0         0       0      0       0 
 bglayer 	data/levels/usa/city_a.png      		0.2     0.2     0       0       0       0       -1      1       1	0       0       0      0         0       0      0       0
 bglayer 	data/levels/usa/construction.png		0.1	0.1     0       10      0       0       -1      1       1       0       0       0      0         0       0      0       0
-bglayer 	data/levels/usa/road.png			0	0      	0       198     0       0       -1      1       1       0       3       1      1.25      1       0     	1 	0
-#fglayer 	data/levels/usa/headlights.png		-150 	0	0      	0       0     	0       0       -1      1       1       1       0       0      0     	 0       0     	1 	1
+#bglayer 	data/levels/usa/road.png			0	0      	0       198     0       0       -1      1       1       0       3       1      1.5      0       0     	1 	0
 
-panel	        data/levels/usa/fence.png data/levels/usa/headlights.png data/levels/usa/windshield.png
+#fglayer 	data/levels/usa/headlights.png		-150 	0	0      	0       0     	0       0       -1      1       1       1       0       0      0     	 0       0     	1 	1
+fglayer 	data/levels/usa/road.png		-200	0	0      	0       144     0       0       -1      1       1       0       3       1      1.5     	1       0     	1 	0
+
+panel	        data/levels/usa/ip_fence.png data/levels/usa/headlights.png data/levels/usa/windshield.png
 
 
 

@@ -47,7 +47,7 @@ credits 8
 cansave 2
 nosame    1
 completebg      1
-z 192 268
+z -192 2268
 file	data/levels/usa/usa.txt
 
 set  Test:_Metal_Mesh

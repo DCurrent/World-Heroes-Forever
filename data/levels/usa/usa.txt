@@ -2,23 +2,26 @@ music		data/music/1-1.bor
 background	data/levels/usa/clouds.png
 
 #lol spreadsheet				        Z (fg)	xratio	zratio	xoffset	zoffset	xspace	zspace	xrepeat	zrepeat	trans 	alpha	w-mode	amp	wl	ws	move	quake	neon	  
+bglayer 	data/levels/usa/city_c.png      		0.4     0.4     500     0       100     0       2       1       0	0       0       0      0         0       0      0       0 
 bglayer 	data/levels/usa/city_b.png      		0.3     0.3     0       0       0       0       -1      1       1	0       0       0      0         0       0      0       0 
 bglayer 	data/levels/usa/city_a.png      		0.2     0.2     0       0       0       0       -1      1       1	0       0       0      0         0       0      0       0
 bglayer 	data/levels/usa/construction.png		0.1	0.1     0       10      0       0       -1      1       1       0       0       0      0         0       0      0       0
-#bglayer 	data/levels/usa/road.png			0	0      	0       198     0       0       -1      1       1       0       3       1      1.5      0       0     	1 	0
+bglayer 	data/levels/usa/road.png			0	0      	0       170     0       0       -1      1       1       0       3       1      1.5       0       0     	1 	0
 
 #fglayer 	data/levels/usa/headlights.png		-150 	0	0      	0       0     	0       0       -1      1       1       1       0       0      0     	 0       0     	1 	1
-fglayer 	data/levels/usa/road.png		-200	0	0      	0       144     0       0       -1      1       1       0       3       1      1.5     	1       0     	1 	0
+#fglayer 	data/levels/usa/road.png		-200	0	0      	0       144     0       0       -1      1       1       0       3       1      1.5     	1       0     	1 	0
 
-panel	        data/levels/usa/ip_fence.png data/levels/usa/headlights.png data/levels/usa/windshield.png
+panel	        data/levels/usa/ip_fence.png none none
 
 
 
 order           a
 bgspeed	    	0.75
 
-direction both
-cameraoffset 0 -100
+#direction both
+cameratype 	1
+cameraoffset 	0 -100
+ 
 
 #Note: Palette switch is time based. The script is called by "worker" model. 
 palette data/levels/usa/usa1_1.act 1

@@ -1,7 +1,9 @@
 ## Folder ignore
 
+ScennShots/
 logs/
 saves/
+*.exe
 
 #################
 ## Eclipse

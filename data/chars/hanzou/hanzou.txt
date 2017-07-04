@@ -36,12 +36,7 @@ load	hab
 animationscript 	data/scripts/ani0020.h
 onfallscript data/scripts/release.c
 
-palette   data/chars/hanzou/pal_orginal.act
-alternatepal data/chars/hanzou/pal_red.act
-alternatepal data/chars/hanzou/pal_light_violet.act
-alternatepal data/chars/hanzou/pal_slate_blue.act
-alternatepal data/chars/hanzou/pal_black.act
-alternatepal data/chars/hanzou/pal_yellow.act
+palette   none 
 
 anim spawn
 	loop	0
@@ -675,10 +670,16 @@ anim attack1
 	frame	data/chars/hanzou/a2.gif
       sound	data/chars/hanzou/at3.wav
       delay	7
-      attack  75 85 60 40 5 0
+		attack.position.x 		75
+		attack.position.y 		85
+		attack.size.x			60
+		attack.size.y			40
+		attack.damage.force		5
+		attack.reaction.fall.force	0.4
+		attack.reaction.pause.time	10
 	frame	data/chars/hanzou/a3.gif
       delay	5
-      attack  0 0 0 0 0 0
+      		attack  0
 	frame	data/chars/hanzou/a3.gif
       frame	data/chars/hanzou/a1.gif
 
@@ -697,9 +698,15 @@ anim attack2
 	frame	data/chars/hanzou/aa2.gif
       sound	data/chars/hanzou/at3.wav
       delay	7
-      attack  75 85 60 40 5 0
+		attack.position.x 		75
+		attack.position.y 		85
+		attack.size.x			60
+		attack.size.y			40
+		attack.damage.force		5
+		attack.reaction.fall.force	0.4
+		attack.reaction.pause.time	10
 	frame	data/chars/hanzou/aa3.gif
-      attack  0 0 0 0 0 0
+      		attack  0
       frame	data/chars/hanzou/aa3.gif
 	frame	data/chars/hanzou/aa4.gif
 
@@ -719,14 +726,21 @@ anim attack3
 #cmd ani0020 openborconstant("ANI_FOLLOW1") openborconstant("ANI_PAIN2")
       #cmd ani0020 openborconstant("ANI_FOLLOW3") openborconstant("ANI_FOLLOW8")
       frame	data/chars/hanzou/aaaa4.gif
-      sound	data/chars/hanzou/at1.wav
-      attack2  75 70 60 40 10 0
+      sound	data/chars/hanzou/at1.wav   		
+		attack.position.x 		75
+		attack.position.y 		70
+		attack.size.x			60
+		attack.size.y			40
+		attack.damage.force		10
+		attack.damage.type		2
+		attack.reaction.fall.force	0.4
+		attack.reaction.pause.time	10
 	frame	data/chars/hanzou/gggg.gif
-      delay	6
-      attack2  0 0 0 0 0 0
-      frame	data/chars/hanzou/ggg.gif
+      	delay	6
+      		attack 0
+      	frame	data/chars/hanzou/ggg.gif
 	delay	2
-      frame	data/chars/hanzou/a1.gif
+      	frame	data/chars/hanzou/a1.gif
 
 anim attack4
 
@@ -747,13 +761,20 @@ anim attack4
       sound	data/chars/hanzou/at2.wav
       frame	data/chars/hanzou/ga5.gif
       frame	data/chars/hanzou/ga5.gif
-      attack  80 70 42 50 15 1 0 0 10
+		attack.position.x 		80
+		attack.position.y 		70
+		attack.size.x			42
+		attack.size.y			50
+		attack.damage.force		15
+		attack.damage.type		1
+		attack.reaction.fall.force	1
+		attack.reaction.pause.time	15
       frame	data/chars/hanzou/ga6.gif
       move 1
       delay	3
       frame	data/chars/hanzou/ga6.gif
       delay	10
-	attack	0 0 0 0 0 0
+		attack	0
       frame	data/chars/hanzou/ga6.gif
       frame	data/chars/hanzou/ga6.gif
       move 0
@@ -774,10 +795,17 @@ anim attack5
       #cmd ani0020 openborconstant("ANI_FOLLOW3") openborconstant("ANI_FOLLOW8")
       frame	data/chars/hanzou/aaaaa1.gif
       sound	data/chars/hanzou/at1.wav
-      attack2  75 70 60 40 10 0
+		attack.position.x 		75
+		attack.position.y 		70
+		attack.size.x			60
+		attack.size.y			40
+		attack.damage.force		10
+		attack.damage.type		1
+		attack.reaction.fall.force	0.4
+		attack.reaction.pause.time	10
 	frame	data/chars/hanzou/aaaaa2.gif
       delay	6
-      attack2  0 0 0 0 0 0
+      		attack	0
       frame	data/chars/hanzou/aaaaa3.gif
       delay	10
       frame	data/chars/hanzou/aaaaa4.gif
@@ -794,11 +822,21 @@ anim attack6
       sound	data/sounds/air5.wav
       hitfx   data/sounds/beat2.wav
       frame	data/chars/hanzou/aaaa1.gif
-      blast  75 95 75 45 15 0 0 10
+		attack.position.x 		75
+		attack.position.y 		95
+		attack.size.x			75
+		attack.size.y			45
+		attack.damage.force		15
+		attack.damage.type		1
+		attack.reaction.fall.force	1
+		attack.reaction.pause.time	20
+		attack.reaction.fall.velocity.x	5
+		attack.reaction.fall.velocity.y 2
+		attack.reaction.fall.velocity.z 0.1
 	frame	data/chars/hanzou/aaaa2.gif
       sound	data/chars/hanzou/at3.wav
 	frame	data/chars/hanzou/aaaa3.gif
-      blast	0 0 0 0 0 0
+      		attack 0
 	frame	data/chars/hanzou/aaaa4.gif
       frame	data/chars/hanzou/aaaa5.gif
       frame	data/chars/hanzou/aaaa6.gif

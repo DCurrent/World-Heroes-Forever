@@ -1,0 +1,26 @@
+#Impact from fall.
+
+name	fall
+type	none
+lifespan 2
+shadow	0
+
+#onspawnscript 	data/scripts/spaw0003.c
+#onkillscript	data/scripts/kill0001.c
+
+palette		data/chars/misc/dust/default.act
+
+anim idle
+
+	delay	5
+	offset	75 40
+		sound	data/chars/misc/dust/fall.wav		
+		frame	data/chars/misc/dust/0_0.png
+		frame	data/chars/misc/dust/0_1.png
+		frame	data/chars/misc/dust/0_2.png
+		frame	data/chars/misc/dust/0_3.png
+		frame	data/chars/misc/dust/0_4.png
+		frame	data/chars/misc/dust/0_5.png
+		frame	data/chars/misc/dust/0_6.png
+
+

@@ -23,6 +23,7 @@ load  hbfla        data/chars/misc/hbfla.txt
 load  fbfla        data/chars/misc/fbfla.txt
 load  bflash        data/chars/misc/bflash.txt
 load  rockfl        data/chars/misc/rockfl.txt
+load  fall 	data/chars/misc/dust/fall.txt
 load  du        data/chars/misc/du.txt
 load  dus        data/chars/misc/dus.txt
 load	hab         data/chars/misc/hab.txt

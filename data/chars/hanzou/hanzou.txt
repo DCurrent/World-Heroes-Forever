@@ -24,7 +24,7 @@ com	D U A freespecial19
 com	D F A2 freespecial20
 diesound	data/chars/hanzou/die.wav
 bflash bflash
-dust du dus dus 
+dust fall dus dus 
 projectilehit   obstacle
 hostile enemy 
 candamage enemy obstacle
@@ -36,7 +36,10 @@ load	hab
 animationscript 	data/scripts/ani0020.h
 onfallscript data/scripts/release.c
 
-palette   none 
+palette   	data/chars/hanzou/pal_orginal.act
+alternatepal 	data/chars/hanzou/pal_black.act
+alternatepal 	data/chars/hanzou/pal_light_violet.act
+
 
 anim spawn
 	loop	0

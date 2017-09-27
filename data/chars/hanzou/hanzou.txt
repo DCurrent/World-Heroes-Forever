@@ -34,7 +34,8 @@ load	hab
 
 
 animationscript 	data/scripts/ani0020.h
-onfallscript data/scripts/release.c
+onfallscript 	data/scripts/release.c
+onspawnscript	data/chars/hanzou/spawn.c
 script data/chars/hanzou/update.c
 
 palette   	data/chars/hanzou/pal_orginal.act

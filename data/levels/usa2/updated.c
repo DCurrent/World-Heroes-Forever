@@ -1,5 +1,5 @@
 #include "data/scripts/dc_eggball/main.c"
-#include "data/scripts/dc_sundown/main.c"
+#include "data/scripts/dc_kanga/main.c"
 
 void main()
 {
@@ -7,7 +7,7 @@ void main()
 
     if (dc_eggball_interval(1))
     {
-        dc_sundown_global_increment();
+        dc_kanga_increment_global_index();
     }
 
     settextobj(2, 10, 70, 1, 999999994, "Palette: " + openborvariant("current_palette") + " of " + openborvariant("numpalettes"));

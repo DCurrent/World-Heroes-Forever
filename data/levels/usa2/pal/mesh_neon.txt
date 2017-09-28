@@ -10,7 +10,7 @@ alternatepal	data/levels/usa2/pal/pal_1.act
 alternatepal	data/levels/usa2/pal/pal_2.act
 alternatepal	data/levels/usa2/pal/pal_3.act
 
-animationscript data/scripts/dc_marquee/main.c
+animationscript data/scripts/dc_kanga/main.c
 
 
 anim	idle
@@ -19,5 +19,6 @@ anim	idle
 	delay	15
 	offset	1 100
 		frame	data/levels/usa2/pal/0_0.png
-	@cmd dc_palette_rotate
+	@cmd setlocalvar DC_KANGA_KEY_TARGET getlocalvar("self")
+	@cmd dc_kanga_rotate_index
 		frame 	data/levels/usa2/pal/0_0.png

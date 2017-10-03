@@ -12,8 +12,8 @@ void main()
     text_z      = 999999994;
     text_font   = 1;
 
-    settextobj(text_index, text_x, text_y += 10, text_font, text_z, "Path: " + path0001(entity));
-    settextobj(++text_index, text_x, text_y += 10, text_font, text_z, "Path: " + path0002(entity));
+    //settextobj(text_index, text_x, text_y += 10, text_font, text_z, "Path: " + path0001(entity));
+    //settextobj(++text_index, text_x, text_y += 10, text_font, text_z, "Path: " + path0002(entity));
 }
 
 char path0002(void vEnt)
@@ -36,7 +36,7 @@ char path0002(void vEnt)
 
     //return strleft(cPath, last);
 
-    log("\n\n" + last);
+    //log("\n\n" + last);
 
 }
 
@@ -66,6 +66,6 @@ char path0001(void vEnt)
 
     return strleft(cPath, i+1);
 
-    log("\n\n done");
+    //log("\n\n done");
 
 }

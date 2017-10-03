@@ -83,6 +83,20 @@ void main()
 
     if(player_key_hold & DC_MOVE_KEY_SPECIAL)
     {
+
+        // Testing random number generator.
+        if(player_key_press & DC_MOVE_KEY_ATTACK_2)
+        {
+            log("\n\n");
+            log("Freeze All!");
+            log("\n");
+
+            // Freeze all entities except caller
+            // for X seconds.
+            dc_freeze_all(2);
+        }
+
+        // Testing random number generator.
         if(player_key_press & DC_MOVE_KEY_ATTACK_3)
         {
             //dc_vars_set_random_lower_bound(1);
@@ -98,6 +112,7 @@ void main()
 
         }
 
+        // Testing arrays and random name.
         if(player_key_press & DC_MOVE_KEY_ATTACK_4)
         {
             target = getentityproperty(player_entity, "opponent");
@@ -145,11 +160,8 @@ void main()
             log("col 2: ");
             log(col);
             log("\n");
-
-
         }
     }
-
 }
 
 // Generate random argument from text database.
@@ -287,7 +299,104 @@ char get_random_argument(void key)
     return result;
 }
 
+// Caskey, Damon V.
+// 2017-09-28
+//
+// Freeze all entities aside from caller for specified duration.
+void dc_freeze_all(float duration)
+{
+    int frame_rate;         // Current frame rate.
+    void entity_caller;     // Entity executing method.
+    int entity_count;       // Number of entities in play.
+    void entity_current;    // Current entity targeted by loop index.
+    int entity_index;       // Entity index cursor.
+    int time_current;       // Engine time to end freeze.
+    int time_freeze;        // Time to add for freeze effect.
+    int time_expire;        // Time freeze effect should expire.
 
+    // Get the basic attributes we need.
+    entity_caller   = getlocalvar("self");
+    entity_count    = openborvariant("ent_max");
+    frame_rate      = dc_frame_rate();
+    time_current    = openborvariant("elapsed_time");
 
+    // We need to convert our desired duration length
+    // from real time seconds into an OpenBOR elapsed time.
+    // This is done by multiplying seconds by frame rate.
+    // Frame rate should be 200 but can vary across platforms
+    // so we'll use the current known frame rate to get
+    // better consistency.
+    time_freeze = duration * frame_rate;
 
+    log("\n duration: " + duration);
+     log("\n frame_rate: " + frame_rate);
+      log("\n time_freeze: " + time_freeze);
 
+    //Enumerate and loop through entity collection.
+    for(entity_index = 0; entity_index < entity_count; entity_index++)
+    {
+        // Get current entity from loop.
+        entity_current = getentity(entity_index);
+
+        if (entity_current != entity_caller)
+        {
+            // Add target's current freeze time (if any) to our set
+            // freeze add time.
+            time_freeze += getentityproperty(entity_current, "freezetime");
+
+            // Add the current time to our freeze duration. This
+            // gives us the OpenBOR time when freeze effect should
+            // expire for current target entity.
+            time_expire = time_freeze + time_current;
+
+            log("\n time_freeze: " + time_freeze);
+
+            // Apply freeze effect and expiration time.
+            changeentityproperty(entity_current, "frozen", 1);
+            changeentityproperty(entity_current, "freezetime", time_expire);
+        }
+    }
+}
+
+int dc_frame_rate()
+{
+    int result;
+    int lasttick;
+    int framerate;
+
+    // Get previous values.
+    lasttick = getglobalvar("dc_frame_rate_0");
+    framerate = getglobalvar("dc_frame_rate_1");
+
+    if(!lasttick) lasttick = 0;
+    if(!framerate) framerate = 0;
+
+    log("\n get vars");
+    log("\n lasttick: " + lasttick);
+    log("\n framerate: " + framerate);
+
+    int curtick = openborvariant("ticks");
+
+    if(lasttick > curtick)
+    {
+        lasttick = curtick;
+    }
+    framerate = (framerate + (curtick - lasttick)) / 2;
+    lasttick = curtick;
+
+    log("\n lasttick: " + lasttick);
+    log("\n framerate: " + framerate);
+
+    // Store for next call.
+    setglobalvar("dc_frame_rate_0", lasttick);
+    setglobalvar("dc_frame_rate_1", framerate);
+
+    if(!framerate)
+    {
+        return 0;
+    }
+
+    result = ((10000000 / framerate) + 9) / 10000;
+
+    return ((10000000 / framerate) + 9) / 10000;
+}

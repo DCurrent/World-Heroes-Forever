@@ -35,18 +35,24 @@ void draw_afterimage()
 
 				//setdrawmethod(NULL(), 1, 256, 256, facing, 0, 0, 6, 0, 0, 0, 0, 0, map);
 
-				setdrawmethod(NULL(), 1, 256, 256, facing);
+
 
 				// Direct draw sprites use the global drawmethod, so
 				// let's set up its attributes here.
 				changedrawmethod(NULL(), "enabled", 1);
 				changedrawmethod(NULL(), "alpha", 1);
 
+				if(facing == openborconstant("DIRECTION_LEFT"))
+                {
+                    changedrawmethod(NULL(), "flipx", 1);
+                }
+
 				// Draw the sprite to screen.
-				drawsprite(spr, x-openborvariant("xpos"), z-a-openborvariant("ypos"), z-i, 0);
+				drawsprite(spr, x-openborvariant("xpos"), z-a-openborvariant("ypos"), (z-1)-i, 0);
 
 				// Reset the global drawmethod.
 				changedrawmethod(NULL(), "enabled", 0);
+				changedrawmethod(NULL(), "flipx", 0);
 				changedrawmethod(NULL(), "alpha", 0);
 			}
 		}

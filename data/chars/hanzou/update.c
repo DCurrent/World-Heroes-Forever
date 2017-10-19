@@ -99,7 +99,7 @@ void afterimage_setup()
             x = getentityproperty(ent, "x");
             z = getentityproperty(ent, "z");
             a = getentityproperty(ent, "a");
-            facing = !getentityproperty(ent, "direction");
+            facing = getentityproperty(ent, "direction");
 
             for(k=1; k<=trailermax; k++) //find an empty trailer slot
             {

@@ -1,12 +1,12 @@
 #include "data/scripts/trailer.h"
 
-void main()
+void afterimage_setup()
 {
 	int i, j, k;
 	void spr;
 	int facing, cd;
 	float a, z, x;
-	
+
 	void ent = getlocalvar("self");
 	int anim = getentityproperty(ent, "animationid");
 	void map;

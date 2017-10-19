@@ -2,6 +2,8 @@
 // Import functions.
 #include "data/scripts/dc_drawmethod/main.c"
 
+#include "data/scripts/traileru.c"
+
 void main(){
 
     void    ent         = NULL();   // Target entity pointer.
@@ -21,7 +23,5 @@ void main(){
         //dc_drawmethod_auto_tint(ent);
     }
 
-    // If you have any screen controlling functions, such
-    // as full screen zooming, place them here.
-
+    draw_afterimage();
   }

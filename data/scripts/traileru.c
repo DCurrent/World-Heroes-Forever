@@ -1,6 +1,6 @@
 #include "data/scripts/trailer.h"
 
-void main()
+void draw_afterimage()
 {
 	int i, j, k;
 	void spr;
@@ -14,7 +14,7 @@ void main()
 		if(spr)
 		{
 			cd = getglobalvar("trailer"+i+".c");
-			if(!cd) 
+			if(!cd)
 			{
 				setglobalvar("trailer"+i+".c", NULL());
 				setglobalvar("trailer"+i+".s", NULL());
@@ -33,9 +33,21 @@ void main()
 				a = getglobalvar("trailer"+i+".a");
 				facing = getglobalvar("trailer"+i+".f");
 
-				setdrawmethod(NULL(), 1, 256, 256, facing, 0, 0, 6, 0, 0, 0, 0, 0, map);
+				//setdrawmethod(NULL(), 1, 256, 256, facing, 0, 0, 6, 0, 0, 0, 0, 0, map);
+
+				setdrawmethod(NULL(), 1, 256, 256, facing);
+
+				// Direct draw sprites use the global drawmethod, so
+				// let's set up its attributes here.
+				changedrawmethod(NULL(), "enabled", 1);
+				changedrawmethod(NULL(), "alpha", 1);
+
+				// Draw the sprite to screen.
 				drawsprite(spr, x-openborvariant("xpos"), z-a-openborvariant("ypos"), z-i, 0);
-				setdrawmethod(NULL(), 0, 256, 256, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+				// Reset the global drawmethod.
+				changedrawmethod(NULL(), "enabled", 0);
+				changedrawmethod(NULL(), "alpha", 0);
 			}
 		}
 	}

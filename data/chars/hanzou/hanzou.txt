@@ -33,7 +33,7 @@ subject_to_wall 0
 load	hab
 
 
-animationscript 	data/scripts/ani0020.h
+animationscript 	data/chars/hanzou/animate.c
 onfallscript 	data/scripts/release.c
 onspawnscript	data/chars/hanzou/spawn.c
 script data/chars/hanzou/update.c

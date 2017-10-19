@@ -303,6 +303,8 @@ char get_random_argument(void key)
 // 2017-09-28
 //
 // Freeze all entities aside from caller for specified duration.
+//
+// *duration: Time in seconds to pause target entities.
 void dc_freeze_all(float duration)
 {
     int frame_rate;         // Current frame rate.
@@ -317,7 +319,7 @@ void dc_freeze_all(float duration)
     // Get the basic attributes we need.
     entity_caller   = getlocalvar("self");
     entity_count    = openborvariant("ent_max");
-    frame_rate      = dc_frame_rate();
+    frame_rate      = openborvariant("fps"); //dc_frame_rate();
     time_current    = openborvariant("elapsed_time");
 
     // We need to convert our desired duration length
@@ -327,10 +329,6 @@ void dc_freeze_all(float duration)
     // so we'll use the current known frame rate to get
     // better consistency.
     time_freeze = duration * frame_rate;
-
-    log("\n duration: " + duration);
-     log("\n frame_rate: " + frame_rate);
-      log("\n time_freeze: " + time_freeze);
 
     //Enumerate and loop through entity collection.
     for(entity_index = 0; entity_index < entity_count; entity_index++)
@@ -349,54 +347,9 @@ void dc_freeze_all(float duration)
             // expire for current target entity.
             time_expire = time_freeze + time_current;
 
-            log("\n time_freeze: " + time_freeze);
-
             // Apply freeze effect and expiration time.
             changeentityproperty(entity_current, "frozen", 1);
             changeentityproperty(entity_current, "freezetime", time_expire);
         }
     }
-}
-
-int dc_frame_rate()
-{
-    int result;
-    int lasttick;
-    int framerate;
-
-    // Get previous values.
-    lasttick = getglobalvar("dc_frame_rate_0");
-    framerate = getglobalvar("dc_frame_rate_1");
-
-    if(!lasttick) lasttick = 0;
-    if(!framerate) framerate = 0;
-
-    log("\n get vars");
-    log("\n lasttick: " + lasttick);
-    log("\n framerate: " + framerate);
-
-    int curtick = openborvariant("ticks");
-
-    if(lasttick > curtick)
-    {
-        lasttick = curtick;
-    }
-    framerate = (framerate + (curtick - lasttick)) / 2;
-    lasttick = curtick;
-
-    log("\n lasttick: " + lasttick);
-    log("\n framerate: " + framerate);
-
-    // Store for next call.
-    setglobalvar("dc_frame_rate_0", lasttick);
-    setglobalvar("dc_frame_rate_1", framerate);
-
-    if(!framerate)
-    {
-        return 0;
-    }
-
-    result = ((10000000 / framerate) + 9) / 10000;
-
-    return ((10000000 / framerate) + 9) / 10000;
 }

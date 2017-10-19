@@ -93,12 +93,12 @@ void afterimage_setup()
 
 	if(elapsed_time%trailerd==0)
 	{
-		if((anim == openborconstant("ANI_WALK")) || (anim == openborconstant("ANI_JUMP")))
+		if((anim == openborconstant("ANI_RUN")) || (anim == openborconstant("ANI_JUMP")))
 		{
             spr = getentityproperty(ent, "sprite");
             x = getentityproperty(ent, "x");
             z = getentityproperty(ent, "z");
-            a = getentityproperty(ent, "a");
+            a = getentityproperty(ent, "y");
             facing = getentityproperty(ent, "direction");
 
             for(k=1; k<=trailermax; k++) //find an empty trailer slot

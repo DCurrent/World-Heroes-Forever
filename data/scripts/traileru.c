@@ -8,6 +8,10 @@ void draw_afterimage()
 	float a, z, x;
 	void map = getglobalvar("blahblah.map");
 
+	float pos_draw_x;
+	float pos_draw_y;
+	float pos_draw_z;
+
 	for(i=1; i<=trailermax; i++)
 	{
 		spr = getglobalvar("trailer"+i+".s");
@@ -33,22 +37,25 @@ void draw_afterimage()
 				a = getglobalvar("trailer"+i+".a");
 				facing = getglobalvar("trailer"+i+".f");
 
-				//setdrawmethod(NULL(), 1, 256, 256, facing, 0, 0, 6, 0, 0, 0, 0, 0, map);
-
-
-
 				// Direct draw sprites use the global drawmethod, so
 				// let's set up its attributes here.
 				changedrawmethod(NULL(), "enabled", 1);
-				changedrawmethod(NULL(), "alpha", 1);
+				changedrawmethod(NULL(), "alpha", 6);
 
+				// If facing left, let's flip the sprite.
 				if(facing == openborconstant("DIRECTION_LEFT"))
                 {
                     changedrawmethod(NULL(), "flipx", 1);
                 }
 
+                // Calculate final draw position for drawn sprite.
+                pos_draw_x = x-openborvariant("xpos");
+                pos_draw_y = (z-a-openborvariant("ypos"))-4;
+                pos_draw_z = (z-1)-i;
+
 				// Draw the sprite to screen.
-				drawsprite(spr, x-openborvariant("xpos"), z-a-openborvariant("ypos"), (z-1)-i, 0);
+				//drawsprite(spr, x-openborvariant("xpos"), z-a-openborvariant("ypos"), (z-1)-i, 0);
+				drawsprite(spr, pos_draw_x, pos_draw_y, pos_draw_z, 0);
 
 				// Reset the global drawmethod.
 				changedrawmethod(NULL(), "enabled", 0);

@@ -189,20 +189,7 @@ anim run
       #include "data/scripts/run0001.h"
       cancel 1 11 0 A2 freespecial7
       frame	data/chars/hanzou/ru0.gif
-	frame	data/chars/hanzou/ru1.gif
-      sound	data/sounds/jumpp.wav
-	frame	data/chars/hanzou/ru2.gif
-	frame	data/chars/hanzou/ru3.gif
-      frame	data/chars/hanzou/ru4.gif
-	frame	data/chars/hanzou/ru5.gif
-      sound	data/sounds/jumpp.wav
-	frame	data/chars/hanzou/ru4.gif
-	frame	data/chars/hanzou/ru3.gif
-      frame	data/chars/hanzou/ru4.gif
-	frame	data/chars/hanzou/ru5.gif
-	frame	data/chars/hanzou/ru6.gif
-      @cmd run0001
-	frame	data/chars/hanzou/ru6.gif
+	
 
 anim ATTACKUP
 	loop	0

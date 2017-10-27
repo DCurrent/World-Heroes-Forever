@@ -52,6 +52,26 @@ void afterimage_setup()
 	}
 }
 
+void dc_afterimage_draw()
+{
+    int array_cursor;
+    int array_size;
+    void animations;
+    void arguments;
+
+    animations = getlocalvar("dc_afterimage_draw_animations");
+
+    array_size = size(animations);
+
+    do
+    {
+        // Get array of arguments, from current
+        // array of animations cursor.
+        arguments = value(animations);
+
+    }while(animations != NULL());
+}
+
 void draw_afterimage()
 {
     // Previous draw method values.

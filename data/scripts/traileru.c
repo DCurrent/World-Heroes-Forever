@@ -2,6 +2,11 @@
 
 void draw_afterimage()
 {
+    // Previous draw method values.
+    int dm_prev_alpha;
+    int dm_prev_enabled;
+    int dm_prev_flipx;
+
 	int i, j, k;
 	void spr;
 	int facing, cd;
@@ -38,7 +43,13 @@ void draw_afterimage()
 				facing = getglobalvar("trailer"+i+".f");
 
 				// Direct draw sprites use the global drawmethod, so
-				// let's set up its attributes here.
+				// let's set up its attributes here. We'll also
+				// need to get the drawmethods already in use
+				// so we can reset them when we're done.
+				dm_prev_alpha   = getdrawmethod(NULL(), "alpha");
+                dm_prev_enabled = getdrawmethod(NULL(), "enabled");
+                dm_prev_flipx   = getdrawmethod(NULL(), "flipx");
+
 				changedrawmethod(NULL(), "enabled", 1);
 				changedrawmethod(NULL(), "alpha", 6);
 
@@ -58,9 +69,9 @@ void draw_afterimage()
 				drawsprite(spr, pos_draw_x, pos_draw_y, pos_draw_z, 0);
 
 				// Reset the global drawmethod.
-				changedrawmethod(NULL(), "enabled", 0);
-				changedrawmethod(NULL(), "flipx", 0);
-				changedrawmethod(NULL(), "alpha", 0);
+				changedrawmethod(NULL(), "enabled", dm_prev_enabled);
+				changedrawmethod(NULL(), "flipx", dm_prev_flipx);
+				changedrawmethod(NULL(), "alpha", dm_prev_alpha);
 			}
 		}
 	}

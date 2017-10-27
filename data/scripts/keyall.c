@@ -142,7 +142,8 @@ void main()
             log("\n");
 
             // Looping 2D arrays test.
-            void array_cols;
+            void array_cols_a;
+            void array_cols_b;
             void array_rows;
             void column_array;
             void column_element;
@@ -152,18 +153,25 @@ void main()
             // Column values. We need to create the array of
             // columns first, since they will be inserted
             // into a row array element.
-            array_cols = array(5);
-            set(array_cols, "A", "A");
-            set(array_cols, "B", "B");
-            set(array_cols, "C", "C");
-            set(array_cols, "D", "D");
-            set(array_cols, "E", "E");
+            array_cols_a = array(5);
+            set(array_cols_a, "A", "A");
+            set(array_cols_a, "B", "B");
+            set(array_cols_a, "C", "C");
+            set(array_cols_a, "D", "D");
+            set(array_cols_a, "E", "E");
+
+            array_cols_b = array(5);
+            set(array_cols_b, "A", "Z");
+            set(array_cols_b, "B", "Y");
+            set(array_cols_b, "C", "X");
+            set(array_cols_b, "D", "W");
+            set(array_cols_b, "E", "V");
 
             // Rows array. Each row element is an array of columns.
             // Create array.
             array_rows = array(2);
-            set(array_rows, "0", array_cols);
-            set(array_rows, "1", array_cols);
+            set(array_rows, "0", array_cols_a);
+            set(array_rows, "1", array_cols_b);
 
             // Reset row cursor.
             reset(array_rows);
@@ -176,7 +184,7 @@ void main()
 
                 log("Row - key: ");
                 log(key(array_rows));
-                log("\n -- ");
+                log("\n");
 
                 // Get current row value, which
                 // will be an array of columns.
@@ -209,7 +217,7 @@ void main()
 
                 }while(!column_last)
 
-                log("\n");
+                log("\n\n");
             }
             while(!row_last);
         }

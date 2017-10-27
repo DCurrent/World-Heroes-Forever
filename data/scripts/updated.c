@@ -2,7 +2,7 @@
 // Import functions.
 #include "data/scripts/dc_drawmethod/main.c"
 
-#include "data/scripts/traileru.c"
+
 
 void main(){
 
@@ -23,5 +23,5 @@ void main(){
         //dc_drawmethod_auto_tint(ent);
     }
 
-    draw_afterimage();
+
   }

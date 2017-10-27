@@ -33,10 +33,11 @@ subject_to_wall 0
 load	hab
 
 
-animationscript 	data/chars/hanzou/animate.c
+animationscript data/chars/hanzou/animate.c
 onfallscript 	data/scripts/release.c
 onspawnscript	data/chars/hanzou/spawn.c
-script data/chars/hanzou/update.c
+script 		data/chars/hanzou/update.c
+ondrawscript	data/chars/hanzou/draw.c
 
 palette   	data/chars/hanzou/pal_orginal.act
 alternatepal 	data/chars/hanzou/pal_black.act

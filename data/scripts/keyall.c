@@ -117,13 +117,13 @@ void main()
         {
             target = getentityproperty(player_entity, "opponent");
 
-            int test_loop;
-            for(test_loop=0; test_loop < 3000; test_loop++)
-            {
-                setentityvar(target, "test_loop"+test_loop, test_loop);
+            //int test_loop;
+            //for(test_loop=0; test_loop < 3000; test_loop++)
+            //{
+            //    setentityvar(target, "test_loop"+test_loop, test_loop);
 
-                log("\n test_loop(" + test_loop + "): " + getentityvar(target, "test_loop"+test_loop));
-            }
+            //    log("\n test_loop(" + test_loop + "): " + getentityvar(target, "test_loop"+test_loop));
+            //}
 
 
             model = getentityproperty(target, "model");
@@ -141,25 +141,77 @@ void main()
             log(name);
             log("\n");
 
+            // Looping 2D arrays test.
+            void array_cols;
+            void array_rows;
+            void column_array;
+            void column_element;
+            int  column_last;
+            int  row_last;
+
+            // Column values. We need to create the array of
+            // columns first, since they will be inserted
+            // into a row array element.
+            array_cols = array(5);
+            set(array_cols, "A", "A");
+            set(array_cols, "B", "B");
+            set(array_cols, "C", "C");
+            set(array_cols, "D", "D");
+            set(array_cols, "E", "E");
+
+            // Rows array. Each row element is an array of columns.
             // Create array.
-            void array_rows = array(2);
-            void array_cols = array(5);
+            array_rows = array(2);
+            set(array_rows, "0", array_cols);
+            set(array_rows, "1", array_cols);
 
-            // Set array element value (this works as our object property).
-            set(array_cols, 0, "A Col 0");
-            set(array_cols, 1, "A Col 1");
-            set(array_cols, 2, "A Col 2");
-            set(array_cols, 3, "A Col 3");
-            set(array_cols, 4, "A Col 4");
+            // Reset row cursor.
+            reset(array_rows);
 
-            set(array_rows, "A", array_cols);
+            // Loop all elements of row array.
+            do
+            {
+                // Is this the last row?
+                row_last = islast(array_rows);
 
-            void row = get(array_rows, "A");
-            char col = get(row, 2);
+                log("Row - key: ");
+                log(key(array_rows));
+                log("\n -- ");
 
-            log("col 2: ");
-            log(col);
-            log("\n");
+                // Get current row value, which
+                // will be an array of columns.
+                column_array = value(array_rows);
+
+                // Move to cursor to next array
+                // element and get cursor value.
+                // Will be 0 if we're already
+                // at last array element.
+                next(array_rows);
+
+
+                // Reset cursor for our current
+                // array of columns.
+                reset(column_array);
+
+                // Loop all elements of column array.
+                do
+                {
+                    column_last = islast(column_array);
+
+                    log("Column - Key: ");
+                    log(key(column_array));
+
+                    column_element = value(column_array);
+                    next(column_array);
+
+                    log(", value: " + column_element);
+                    log("\n");
+
+                }while(!column_last)
+
+                log("\n");
+            }
+            while(!row_last);
         }
     }
 }

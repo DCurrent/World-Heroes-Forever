@@ -51,7 +51,7 @@ void draw_afterimage()
                 dm_prev_flipx   = getdrawmethod(NULL(), "flipx");
 
 				changedrawmethod(NULL(), "enabled", 1);
-				changedrawmethod(NULL(), "alpha", 6);
+				changedrawmethod(NULL(), "alpha", 1);
 
 				// If facing left, let's flip the sprite.
 				if(facing == openborconstant("DIRECTION_LEFT"))

@@ -2,6 +2,8 @@ name	     hanzou_head
 type	     none
 health	     100
 #speed	     10		
+shadow  	0
+gfxshadow 	 1
 
 #*****Alternates*******
 

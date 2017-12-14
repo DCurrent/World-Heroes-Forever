@@ -46,6 +46,7 @@ load	kbfl	   data/chars/misc/kbfl.txt
 load	elect	   data/chars/misc/elect.txt
 
 # Players must also be loaded.
+know 	hanzou_head data/chars/hanzou/hanzou_head.txt
 load	HANZOU data/chars/hanzou/hanzou.txt
 #load	DRAGON data/chars/dragon/dragon.txt
 #load	RYOKO data/chars/ryoko/ryoko.txt

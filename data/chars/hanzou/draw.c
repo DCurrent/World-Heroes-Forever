@@ -72,6 +72,8 @@ void dc_afterimage_draw()
     }while(animations != NULL());
 }
 
+
+
 void draw_afterimage()
 {
     // Previous draw method values.

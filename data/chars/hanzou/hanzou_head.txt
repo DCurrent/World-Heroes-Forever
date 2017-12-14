@@ -1,49 +1,20 @@
-name	HANZOU
-health	120
-mp	100
-speed	12
-type	player
-shadow  0
-gfxshadow  1
-grabdistance	40
-running 30	5	2	1	0
-icon	data/chars/hanzou/icon.png
-jumpheight 5
-height 70
-jumpspeed 14
-antigravity -27
-blockpain 1
-holdblock 1
-makeinv  0
-combostyle    1
-atchain       1 2 3 4 0 3 5 6
-com	A2	freespecial
-com	D B A2 freespecial2
-com	D F A freespecial3
-com	D U A freespecial19
-com	D F A2 freespecial20
-diesound	data/chars/hanzou/die.wav
-bflash bflash
-dust fall dus dus 
-projectilehit   obstacle
-hostile enemy 
-candamage enemy obstacle
-subject_to_wall 0
+name	     hanzou_head
+type	     none
+health	     100
+#speed	     10		
 
-load	hab
-load	hanzou_head
+#*****Alternates*******
 
+palette	 	data/chars/hanzou/hanzou_default.act
 
-animationscript data/chars/hanzou/animate.c
-onfallscript 	data/scripts/release.c
-onspawnscript	data/chars/hanzou/spawn.c
-script 		data/chars/hanzou/update.c
-ondrawscript	data/chars/hanzou/draw.c
-
-palette   	data/chars/hanzou/hanzou_default.act
-#alternatepal 	data/chars/hanzou/pal_black.act
-#alternatepal 	data/chars/hanzou/pal_light_violet.act
-
+anim idle
+	
+      offset	97 144
+      bbox	0     
+      frame	data/chars/hanzou/hanzou/0_0.png
+      frame	data/chars/hanzou/hanzou/0_1.png
+      frame	data/chars/hanzou/hanzou/0_2.png
+      frame	data/chars/hanzou/hanzou/0_1.png
 
 anim spawn
 	loop	0
@@ -113,7 +84,7 @@ anim respawn
       frame	data/chars/hanzou/spawn35.gif
       frame	data/chars/hanzou/spawn36.gif
       frame	data/chars/hanzou/spawn37.gif
-      @cmd    spawn01 "dus" 0 0 1
+      #@cmd    spawn01 "dus" 0 0 1
       frame	data/chars/hanzou/spawn38.gif
       delay	4
       frame	data/chars/hanzou/spawn39.gif
@@ -149,17 +120,6 @@ anim SELECT
       frame	data/chars/hanzou/wai7.gif
       frame	data/chars/hanzou/wai7.gif
       frame	data/chars/hanzou/wai7.gif
-
-anim idle
-	loop	1
-	delay	13
-      offset	97 144
-      bbox	50 78 47 80
-      @cmd    clearL
-      frame	data/chars/hanzou/0_0.png
-      frame	data/chars/hanzou/0_1.png
-      frame	data/chars/hanzou/0_2.png
-      frame	data/chars/hanzou/0_1.png
 
 anim get
       loop	0
@@ -331,7 +291,7 @@ anim bpain
 	offset	70 170
       bbox	50 78 47 80
       sound	data/sounds/bur.wav
-      @cmd    spawnbind "EEFlame" -12 41 1
+      #@cmd    spawnbind "EEFlame" -12 41 1
 	frame	data/chars/hanzou/bpain04.gif
       offset	72 170
 	frame	data/chars/hanzou/bpain04.gif
@@ -367,7 +327,7 @@ anim fall
       bouncefactor 2.7
       landframe 6
       sound	data/chars/hanzou/pain.wav
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
 	frame	data/chars/hanzou/fall01.gif 
 	frame	data/chars/hanzou/fall01.gif
       attack  54 85 72 50 5 1 1 1
@@ -394,7 +354,7 @@ anim fall5
       bbox	55 78 70 80
       bouncefactor 2.7
       landframe 6
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
 	frame	data/chars/hanzou/rjsla4.gif
       attack  54 85 72 50 20 1 1 1
 	frame	data/chars/hanzou/rjsla4.gif
@@ -419,7 +379,7 @@ anim fall8
       loop	0
       delay   1000
 	offset	90 145
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
 	frame	data/chars/hanzou/gsla3.gif
       offset	70 170
       frame	data/chars/hanzou/pain1.gif
@@ -463,7 +423,7 @@ anim fall9
       delay   20
 	offset	110 138
       landframe 3
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
 	frame	data/chars/hanzou/fall03.gif
       bbox	60 100 50 30
       frame	data/chars/hanzou/fall03.gif
@@ -481,7 +441,7 @@ anim fall14
 	offset	110 170
       landframe 6
       sound	data/chars/hanzou/pain.wav
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
 	frame	data/chars/hanzou/fall06.gif 
 	frame	data/chars/hanzou/fall06.gif
      	frame	data/chars/hanzou/fall07.gif
@@ -504,7 +464,7 @@ anim fall15
 	offset	110 170
       landframe 6
       sound	data/chars/hanzou/pain.wav
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
 	frame	data/chars/hanzou/fall01.gif 
 	frame	data/chars/hanzou/fall01.gif
      	frame	data/chars/hanzou/fall02.gif
@@ -524,8 +484,8 @@ anim fall16
       delay   4
       offset	70 170
       landframe 25
-      @cmd    degravity 0
-      @cmd    spawnbind "elect" 0 0 1
+      #@cmd    degravity 0
+      #@cmd    spawnbind "elect" 0 0 1
 	frame	data/chars/hanzou/ppain22.gif 
 	frame	data/chars/hanzou/ppain2.gif
       frame	data/chars/hanzou/ppain22.gif 
@@ -553,7 +513,7 @@ anim fall16
 	delay   40
 	frame	data/chars/hanzou/ppain22.gif
       delay   10
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
       offset	95 120
       bbox	55 90 45 30
 	frame	data/chars/hanzou/fall04.gif
@@ -568,8 +528,8 @@ anim burn
       delay   6
 	offset	110 170
       landframe 15
-      @cmd    degravity 0
-      @cmd    spawnbind "EFlame" -16 47 1
+      #@cmd    degravity 0
+      #@cmd    spawnbind "EFlame" -16 47 1
       frame	data/chars/hanzou/burn01.gif
       sound	data/sounds/bur.wav
 	frame	data/chars/hanzou/burn1.gif
@@ -587,7 +547,7 @@ anim burn
       frame	data/chars/hanzou/burn3.gif
       delay   40
 	frame	data/chars/hanzou/burn03.gif
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
       offset	95 120
       delay   7
       bbox	55 90 45 30
@@ -880,7 +840,7 @@ anim JUMPDELAY
 	delay	6
       offset	70 170
       bbox	50 78 47 80
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
       frame	data/chars/hanzou/j1.gif
 
 anim JUMPLAND
@@ -889,7 +849,7 @@ anim JUMPLAND
       offset	70 170
       bbox	50 78 47 80
       sound	data/sounds/step.wav
-      @cmd    degravity -0.27
+      #@cmd    degravity -0.27
       frame	data/chars/hanzou/jl1.gif
       frame	data/chars/hanzou/jl2.gif
       frame	data/chars/hanzou/jl1.gif
@@ -900,7 +860,7 @@ anim jump
       offset	70 170
       bbox	50 68 47 80
       cancel 0 12 0 A2 freespecial4
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/j2.gif
       frame	data/chars/hanzou/j2.gif
       frame	data/chars/hanzou/j2.gif
@@ -924,7 +884,7 @@ anim FOLLOW40
       offset	70 170
       bbox	50 68 47 80
       cancel 0 11 0 A2 freespecial5
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/j2.gif
       frame	data/chars/hanzou/j2.gif
       frame	data/chars/hanzou/j2.gif
@@ -946,7 +906,7 @@ anim FORWARDJUMP
       offset	70 170
       bbox	50 68 47 80
       cancel 0 11 0 A2 freespecial5
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/j2.gif
       frame	data/chars/hanzou/j2.gif
       frame	data/chars/hanzou/j2.gif
@@ -968,7 +928,7 @@ anim RUNJUMP
       offset	70 170
       bbox	50 68 47 80
       cancel 0 11 0 A2 freespecial6
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/j2.gif
       frame	data/chars/hanzou/j2.gif
       frame	data/chars/hanzou/j2.gif
@@ -990,7 +950,7 @@ anim jumpattack
       offset	70 170
       bbox	55 68 40 40
       sound	data/chars/hanzou/at2.wav
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/jp1.gif
       attack	70 85 70 45 12 1 0 0 35
       frame	data/chars/hanzou/jp2.gif
@@ -1005,7 +965,7 @@ anim JUMPFORWARD
       offset	70 170
       bbox	55 68 40 40
       sound	data/chars/hanzou/at2.wav
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/jpf1.gif
       delay	10
       attack	75 93 55 45 12 1 0 0 35
@@ -1037,44 +997,44 @@ anim grabattack
       quakeframe 9 4 7
       hitfx   data/sounds/indirect.wav
       sound	data/chars/hanzou/at1.wav
-      @cmd    slamstart
-      @cmd    position 18 60 30 0 1
+      #@cmd    slamstart
+      #@cmd    position 18 60 30 0 1
       frame	data/chars/hanzou/th3.gif
-      @cmd    position 19 55 15 0 1
+      #@cmd    position 19 55 15 0 1
       frame	data/chars/hanzou/th4.gif 
-      @cmd    position 20 65 50 0 1
+      #@cmd    position 20 65 50 0 1
       delay	8
       frame	data/chars/hanzou/th5.gif
       frame	data/chars/hanzou/th5.gif
       frame	data/chars/hanzou/th5.gif
       frame	data/chars/hanzou/th5.gif
       delay	7
-      @cmd    position 21 80 20 0 1
+      #@cmd    position 21 80 20 0 1
       frame	data/chars/hanzou/th6.gif
-      @cmd    dasher 2 -3 0
+      #@cmd    dasher 2 -3 0
       frame	data/chars/hanzou/th6.gif
       delay	20
-      @cmd    position 21 80 -20 0 1
+      #@cmd    position 21 80 -20 0 1
       frame	data/chars/hanzou/th7.gif
       attack10 75 110 100 45 5 1 1 1
       dropv 2 1.5
       delay	8
-      @cmd    position 22 80 -20 0 1
-      @cmd    antiwall 20 -20 -1
-      @cmd    antiwall 0 -40 -1
+      #@cmd    position 22 80 -20 0 1
+      #@cmd    antiwall 20 -20 -1
+      #@cmd    antiwall 0 -40 -1
       frame	data/chars/hanzou/th7.gif
-      @cmd    hurt 25
-      @cmd    position 23 75 15 0 1
-      @cmd    antiwall 20 -20 -1
-      @cmd    antiwall 0 -40 -1
+      #@cmd    hurt 25
+      #@cmd    position 23 75 15 0 1
+      #@cmd    antiwall 20 -20 -1
+      #@cmd    antiwall 0 -40 -1
       frame	data/chars/hanzou/th7.gif
       attack10   0 0 0 0 0 0
       delay	2
       frame	data/chars/hanzou/th7.gif
       frame	data/chars/hanzou/th7.gif
       frame	data/chars/hanzou/th7.gif
-      @cmd    depost 0
-      @cmd    finish 5 2 2 2 0 1
+      #@cmd    depost 0
+      #@cmd    finish 5 2 2 2 0 1
       delay	2
       move -4
       offset	70 178
@@ -1144,65 +1104,65 @@ anim grabbackward
       flipframe 2
       hitfx   data/sounds/indirect.wav
       sound	data/chars/hanzou/at1.wav
-      @cmd    slamstart
-      @cmd    position 6 38 0 -1 0
+      #@cmd    slamstart
+      #@cmd    position 6 38 0 -1 0
       frame	data/chars/hanzou/th3.gif
-      @cmd    position 6 38 -10 -1 0 
+      #@cmd    position 6 38 -10 -1 0 
       frame	data/chars/hanzou/th4.gif
-      @cmd    position 24 -7 50 0 1
+      #@cmd    position 24 -7 50 0 1
       delay	9
       frame	data/chars/hanzou/thh5.gif
       frame	data/chars/hanzou/thh5.gif
       frame	data/chars/hanzou/thh5.gif
-      @cmd    position 25 5 50 0 1
+      #@cmd    position 25 5 50 0 1
       delay	9
       frame	data/chars/hanzou/thh6.gif
       frame	data/chars/hanzou/thh6.gif
       delay	3
-      @cmd    position 26 70 50 0 1
+      #@cmd    position 26 70 50 0 1
       sound	data/chars/hanzou/at3.wav
-      @cmd    antiwall2 40 0 -1
-      @cmd    antiwall2 20 0 -1
-      @cmd    antiwall2 0 0 -1
+      #@cmd    antiwall2 40 0 -1
+      #@cmd    antiwall2 20 0 -1
+      #@cmd    antiwall2 0 0 -1
       frame	data/chars/hanzou/thh7.gif
-      @cmd    antiwall2 60 0 -1
-      @cmd    antiwall 40 -40 -1
-      @cmd    antiwall 20 -60 -1
-      @cmd    antiwall 0 -80 -1
+      #@cmd    antiwall2 60 0 -1
+      #@cmd    antiwall 40 -40 -1
+      #@cmd    antiwall 20 -60 -1
+      #@cmd    antiwall 0 -80 -1
       frame	data/chars/hanzou/thh7.gif
-      @cmd    antiwall 40 -40 -1
-      @cmd    antiwall 20 -60 -1
-      @cmd    antiwall 0 -80 -1
+      #@cmd    antiwall 40 -40 -1
+      #@cmd    antiwall 20 -60 -1
+      #@cmd    antiwall 0 -80 -1
       frame	data/chars/hanzou/thh7.gif
       delay	3
-      @cmd    position 27 70 30 0 1
-      @cmd    antiwall 40 -40 -1
-      @cmd    antiwall 20 -60 -1
-      @cmd    antiwall 0 -80 -1
+      #@cmd    position 27 70 30 0 1
+      #@cmd    antiwall 40 -40 -1
+      #@cmd    antiwall 20 -60 -1
+      #@cmd    antiwall 0 -80 -1
       frame	data/chars/hanzou/thh8.gif
-      @cmd    position 27 70 25 0 1
+      #@cmd    position 27 70 25 0 1
       frame	data/chars/hanzou/thh8.gif
-      @cmd    position 27 71 20 0 1
+      #@cmd    position 27 71 20 0 1
       frame	data/chars/hanzou/thh8.gif
       delay	2
-      @cmd    position 27 71 15 0 1
+      #@cmd    position 27 71 15 0 1
       offset	70 170
       frame	data/chars/hanzou/thh8.gif
       attack10 75 110 100 45 5 1 1 1
       dropv 2 1.5
-      @cmd    position 27 72 10 0 1
+      #@cmd    position 27 72 10 0 1
       frame	data/chars/hanzou/j2.gif
-      @cmd    position 27 72 5 0 1
+      #@cmd    position 27 72 5 0 1
       frame	data/chars/hanzou/j2.gif
-      @cmd    position 27 73 -5 0 1
+      #@cmd    position 27 73 -5 0 1
       frame	data/chars/hanzou/j2.gif
       delay	20
-      @cmd    hurt 25
-      @cmd    position 28 73 -14 0 1
+      #@cmd    hurt 25
+      #@cmd    position 28 73 -14 0 1
       frame	data/chars/hanzou/j2.gif
       attack10   0 0 0 0 0 0
-      @cmd    depost 0
-      @cmd    throw 5 2 1 3 0 1
+      #@cmd    depost 0
+      #@cmd    throw 5 2 1 3 0 1
       delay	6
       move 0
       frame	data/chars/hanzou/jl1.gif
@@ -1213,18 +1173,18 @@ anim grabattack2
 	loop	0
 	delay	7
       offset	70 170
-      @cmd    slamstart
-      @cmd    position 29 40 0 -1 1
+      #@cmd    slamstart
+      #@cmd    position 29 40 0 -1 1
       sound	data/sounds/air5.wav
       frame	data/chars/hanzou/aaaaaa5.gif
       sound	data/chars/hanzou/at3.wav
       frame	data/chars/hanzou/aaaaaa4.gif
       sound	data/sounds/beat2.wav
-      @cmd    hurt 10
-      @cmd    spawn01 "flas" 70 20 1
+      #@cmd    hurt 10
+      #@cmd    spawn01 "flas" 70 20 1
       frame	data/chars/hanzou/aaaaaa3.gif
-      @cmd    depost 0
-      @cmd    finish 5 1 2.5 3 0 1
+      #@cmd    depost 0
+      #@cmd    finish 5 1 2.5 3 0 1
       frame	data/chars/hanzou/aaaaaa3.gif
       delay	8
       frame	data/chars/hanzou/aaaaaa2.gif
@@ -1237,7 +1197,7 @@ anim  freespecial
       offset	70 170
       bbox	50 78 47 80
       hitfx   data/sounds/beat3.wav
-      @cmd ani0020 openborconstant("ANI_FOLLOW1") openborconstant("ANI_PAIN2")
+      #@cmd ani0020 openborconstant("ANI_FOLLOW1") openborconstant("ANI_PAIN2")
       cancel 6 7 1 A2 freespecial21
       cancel 6 7 1 A freespecial22
       sound	data/chars/hanzou/at1.wav
@@ -1261,7 +1221,7 @@ anim  freespecial2
 	delay	14
       offset	70 170
       hitfx  data/sounds/knife2.wav
-      @cmd conditionalflip
+      #@cmd conditionalflip
       frame	data/chars/hanzou/fsp1.gif
       sound	data/chars/hanzou/at8.wav
       delay	2
@@ -1551,7 +1511,7 @@ anim  freespecial4
       offset	70 170
       bbox	55 68 40 40
       sound	data/chars/hanzou/at3.wav
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/ja1.gif
       attack	70 85 80 45 12 1 0 0 35
       frame	data/chars/hanzou/ja2.gif
@@ -1568,7 +1528,7 @@ anim  freespecial5
       bbox	55 68 40 40
       jumpframe 0 0 1.5
       sound	data/chars/hanzou/at3.wav
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/jaf1.gif
       delay	10
       attack	75 93 70 45 12 1 0 0 35
@@ -1587,7 +1547,7 @@ anim  freespecial6
       bbox	55 68 40 40
       jumpframe 0 0 3
       sound	data/chars/hanzou/at3.wav
-      @cmd    degravity -0.5
+      #@cmd    degravity -0.5
       frame	data/chars/hanzou/jaf1.gif
       delay	10
       attack	75 93 70 45 12 1 0 0 35
@@ -1803,39 +1763,39 @@ anim freespecial13
 	loop	0
 	delay	5
       offset	70 170
-      @cmd forceanim openborconstant("ANI_FOLLOW2")
-      @cmd bind 1 40 -1 0 -1
+      #@cmd forceanim openborconstant("ANI_FOLLOW2")
+      #@cmd bind 1 40 -1 0 -1
       frame	data/chars/hanzou/ga1.gif
       sound	data/sounds/beat1.wav
-      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      #@cmd forceanim openborconstant("ANI_FOLLOW2")
       frame	data/chars/hanzou/ga2.gif
-      @cmd    spawn01 "flas" 60 0 1
-      @cmd    hurt2 5 
+      #@cmd    spawn01 "flas" 60 0 1
+      #@cmd    hurt2 5 
       frame	data/chars/hanzou/ga3.gif
       delay	12
       frame	data/chars/hanzou/ga3.gif
       delay	6
       frame	data/chars/hanzou/ga2.gif
-      @cmd    anichange "ANI_FOLLOW4"
+      #@cmd    anichange "ANI_FOLLOW4"
       frame	data/chars/hanzou/ga2.gif
 
 anim freespecial14
 	loop	0
 	delay	5
       offset	70 170
-      @cmd bind 0 40 -1 0 -1
-      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      #@cmd bind 0 40 -1 0 -1
+      #@cmd forceanim openborconstant("ANI_FOLLOW2")
       frame	data/chars/hanzou/ga1.gif
       sound	data/sounds/beat1.wav
       frame	data/chars/hanzou/ga2.gif
-      @cmd    spawn01 "flas" 60 0 1 
-      @cmd    hurt2 5
+      #@cmd    spawn01 "flas" 60 0 1 
+      #@cmd    hurt2 5
       frame	data/chars/hanzou/ga3.gif
       delay	13
       frame	data/chars/hanzou/ga3.gif
       delay	5
       frame	data/chars/hanzou/ga2.gif
-      @cmd    anichange "ANI_FOLLOW5"
+      #@cmd    anichange "ANI_FOLLOW5"
       frame	data/chars/hanzou/ga2.gif
 
 
@@ -1843,19 +1803,19 @@ anim freespecial15
 	loop	0
 	delay	6.5
       offset	70 170
-      @cmd    slamstart2
-      @cmd    position 29 36 0 -1 1
+      #@cmd    slamstart2
+      #@cmd    position 29 36 0 -1 1
       sound	data/sounds/air5.wav
       frame	data/chars/hanzou/aaaaaa5.gif
       sound	data/chars/hanzou/at3.wav
       frame	data/chars/hanzou/aaaaaa4.gif
       sound	data/sounds/beat2.wav
       delay	2
-      @cmd    hurt 10
-      @cmd    spawn01 "flas" 70 20 1
+      #@cmd    hurt 10
+      #@cmd    spawn01 "flas" 70 20 1
       frame	data/chars/hanzou/aaaaaa3.gif
-      @cmd    depost 0
-      @cmd    finish 5 1 2.5 3 0 1
+      #@cmd    depost 0
+      #@cmd    finish 5 1 2.5 3 0 1
       delay	10
       frame	data/chars/hanzou/aaaaaa3.gif
       delay	8
@@ -1867,8 +1827,8 @@ anim follow4
 	delay	8
       offset	70 170
       cancel 0 3 0 A2 freespecial14
-      @cmd bind 1 40 -1 0 -1
-      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      #@cmd bind 1 40 -1 0 -1
+      #@cmd forceanim openborconstant("ANI_FOLLOW2")
       cancel 0 3 0 A freespecial16
       cancel 0 3 0 J freespecial17
       cancel 0 3 0 B A freespecial18
@@ -1883,8 +1843,8 @@ anim follow5
 	delay	8
       offset	70 170
       cancel 0 3 0 A2 freespecial15
-      @cmd bind 1 40 -1 0 -1
-      @cmd forceanim openborconstant("ANI_FOLLOW2")
+      #@cmd bind 1 40 -1 0 -1
+      #@cmd forceanim openborconstant("ANI_FOLLOW2")
       cancel 0 3 0 A freespecial16
       cancel 0 3 0 J freespecial17
       cancel 0 3 0 B A freespecial18
@@ -1903,44 +1863,44 @@ anim freespecial16
       quakeframe 9 4 7
       hitfx   data/sounds/indirect.wav
       sound	data/chars/hanzou/at1.wav
-      @cmd    slamstart2
-      @cmd    position 18 60 30 0 1
+      #@cmd    slamstart2
+      #@cmd    position 18 60 30 0 1
       frame	data/chars/hanzou/th3.gif
-      @cmd    position 19 55 15 0 1
+      #@cmd    position 19 55 15 0 1
       frame	data/chars/hanzou/th4.gif 
-      @cmd    position 20 65 50 0 1
+      #@cmd    position 20 65 50 0 1
       delay	8
       frame	data/chars/hanzou/th5.gif
       frame	data/chars/hanzou/th5.gif
       frame	data/chars/hanzou/th5.gif
       frame	data/chars/hanzou/th5.gif
       delay	7
-      @cmd    position 21 80 20 0 1
+      #@cmd    position 21 80 20 0 1
       frame	data/chars/hanzou/th6.gif
-      @cmd    dasher 2 -3 0
+      #@cmd    dasher 2 -3 0
       frame	data/chars/hanzou/th6.gif
       delay	20
-      @cmd    position 21 80 -20 0 1
+      #@cmd    position 21 80 -20 0 1
       frame	data/chars/hanzou/th7.gif
       attack10 75 110 100 45 5 1 1 1
       dropv 2 1.5
       delay	8
-      @cmd    position 22 80 -20 0 1
-      @cmd    antiwall 20 -20 -1
-      @cmd    antiwall 0 -40 -1
+      #@cmd    position 22 80 -20 0 1
+      #@cmd    antiwall 20 -20 -1
+      #@cmd    antiwall 0 -40 -1
       frame	data/chars/hanzou/th7.gif
-      @cmd    hurt 25
-      @cmd    position 23 75 15 0 1
-      @cmd    antiwall 20 -20 -1
-      @cmd    antiwall 0 -40 -1
+      #@cmd    hurt 25
+      #@cmd    position 23 75 15 0 1
+      #@cmd    antiwall 20 -20 -1
+      #@cmd    antiwall 0 -40 -1
       frame	data/chars/hanzou/th7.gif
       attack10   0 0 0 0 0 0
       delay	2
       frame	data/chars/hanzou/th7.gif
       frame	data/chars/hanzou/th7.gif
       frame	data/chars/hanzou/th7.gif
-      @cmd    depost 0
-      @cmd    finish 5 2 2 2 0 1
+      #@cmd    depost 0
+      #@cmd    finish 5 2 2 2 0 1
       delay	2
       move -4
       offset	70 178
@@ -2003,19 +1963,19 @@ anim freespecial17
       loop	0
 	delay	6.5
       offset	70 170
-      @cmd    slamstart2
-      @cmd    position 29 36 0 -1 1
+      #@cmd    slamstart2
+      #@cmd    position 29 36 0 -1 1
       sound	data/sounds/air5.wav
       frame	data/chars/hanzou/aaaaaa5.gif
       sound	data/chars/hanzou/at3.wav
       frame	data/chars/hanzou/aaaaaa4.gif
       sound	data/sounds/beat2.wav
       delay	2
-      @cmd    hurt 10
-      @cmd    spawn01 "flas" 70 20 1
+      #@cmd    hurt 10
+      #@cmd    spawn01 "flas" 70 20 1
       frame	data/chars/hanzou/aaaaaa3.gif
-      @cmd    depost 0
-      @cmd    finish 5 1 2.5 3 0 1
+      #@cmd    depost 0
+      #@cmd    finish 5 1 2.5 3 0 1
       delay	10
       frame	data/chars/hanzou/aaaaaa3.gif
       delay	8
@@ -2033,65 +1993,65 @@ anim freespecial18
       flipframe 2
       hitfx   data/sounds/indirect.wav
       sound	data/chars/hanzou/at1.wav
-      @cmd    slamstart2
-      @cmd    position 6 38 0 -1 0
+      #@cmd    slamstart2
+      #@cmd    position 6 38 0 -1 0
       frame	data/chars/hanzou/th3.gif
-      @cmd    position 6 38 -10 -1 0 
+      #@cmd    position 6 38 -10 -1 0 
       frame	data/chars/hanzou/th4.gif
-      @cmd    position 24 -7 50 0 1
+      #@cmd    position 24 -7 50 0 1
       delay	9
       frame	data/chars/hanzou/thh5.gif
       frame	data/chars/hanzou/thh5.gif
       frame	data/chars/hanzou/thh5.gif
-      @cmd    position 25 5 50 0 1
+      #@cmd    position 25 5 50 0 1
       delay	9
       frame	data/chars/hanzou/thh6.gif
       frame	data/chars/hanzou/thh6.gif
       delay	3
-      @cmd    position 26 70 50 0 1
+      #@cmd    position 26 70 50 0 1
       sound	data/chars/hanzou/at3.wav
-      @cmd    antiwall2 40 0 -1
-      @cmd    antiwall2 20 0 -1
-      @cmd    antiwall2 0 0 -1
+      #@cmd    antiwall2 40 0 -1
+      #@cmd    antiwall2 20 0 -1
+      #@cmd    antiwall2 0 0 -1
       frame	data/chars/hanzou/thh7.gif
-      @cmd    antiwall2 60 0 -1
-      @cmd    antiwall 40 -40 -1
-      @cmd    antiwall 20 -60 -1
-      @cmd    antiwall 0 -80 -1
+      #@cmd    antiwall2 60 0 -1
+      #@cmd    antiwall 40 -40 -1
+      #@cmd    antiwall 20 -60 -1
+      #@cmd    antiwall 0 -80 -1
       frame	data/chars/hanzou/thh7.gif
-      @cmd    antiwall 40 -40 -1
-      @cmd    antiwall 20 -60 -1
-      @cmd    antiwall 0 -80 -1
+      #@cmd    antiwall 40 -40 -1
+      #@cmd    antiwall 20 -60 -1
+      #@cmd    antiwall 0 -80 -1
       frame	data/chars/hanzou/thh7.gif
       delay	3
-      @cmd    position 27 70 30 0 1
-      @cmd    antiwall 40 -40 -1
-      @cmd    antiwall 20 -60 -1
-      @cmd    antiwall 0 -80 -1
+      #@cmd    position 27 70 30 0 1
+      #@cmd    antiwall 40 -40 -1
+      #@cmd    antiwall 20 -60 -1
+      #@cmd    antiwall 0 -80 -1
       frame	data/chars/hanzou/thh8.gif
-      @cmd    position 27 70 25 0 1
+      #@cmd    position 27 70 25 0 1
       frame	data/chars/hanzou/thh8.gif
-      @cmd    position 27 71 20 0 1
+      #@cmd    position 27 71 20 0 1
       frame	data/chars/hanzou/thh8.gif
       delay	2
-      @cmd    position 27 71 15 0 1
+      #@cmd    position 27 71 15 0 1
       offset	70 170
       frame	data/chars/hanzou/thh8.gif
       attack10 75 110 100 45 5 1 1 1
       dropv 2 1.5
-      @cmd    position 27 72 10 0 1
+      #@cmd    position 27 72 10 0 1
       frame	data/chars/hanzou/j2.gif
-      @cmd    position 27 72 5 0 1
+      #@cmd    position 27 72 5 0 1
       frame	data/chars/hanzou/j2.gif
-      @cmd    position 27 73 -5 0 1
+      #@cmd    position 27 73 -5 0 1
       frame	data/chars/hanzou/j2.gif
       delay	20
-      @cmd    hurt 25
-      @cmd    position 28 73 -14 0 1
+      #@cmd    hurt 25
+      #@cmd    position 28 73 -14 0 1
       frame	data/chars/hanzou/j2.gif
       attack10   0 0 0 0 0 0
-      @cmd    depost 0
-      @cmd    throw 5 2 1 3 0 1
+      #@cmd    depost 0
+      #@cmd    throw 5 2 1 3 0 1
       delay	6
       move 0
       frame	data/chars/hanzou/jl1.gif
@@ -2174,7 +2134,7 @@ anim freespecial20
       frame	data/chars/hanzou/fsk4.gif
       frame	data/chars/hanzou/fsk4.gif
       attack12  0 0 0 0 0 0
-      @cmd    anichange "ANI_FOLLOW7"
+      #@cmd    anichange "ANI_FOLLOW7"
       frame	data/chars/hanzou/fsk4.gif
       attack  80 80 40 50 15 1 0 0 30
       frame	data/chars/hanzou/fsk5.gif
@@ -2297,6 +2257,3 @@ anim freespecial22
       move 0
       delay	7
       frame	data/chars/hanzou/ga5.gif
-
-
-
